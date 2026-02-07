@@ -1,0 +1,16 @@
+{
+  "name": "h5games_poki2",
+  "version": "1.0.0",
+  "description": "A lightweight, Poki-style HTML5 game portal. No frameworks, no build step — pure HTML / CSS / JS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^13.0.1",
+    "minimist": "^1.2.8"
+  }
+}
