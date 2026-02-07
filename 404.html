@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>404 — 页面未找到</title>
+  <style>
+    body{font-family:Inter,system-ui,Arial,sans-serif;background:#0f1724;color:#e6eef8;margin:0;display:flex;align-items:center;justify-content:center;height:100vh}
+    .card{max-width:720px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border-radius:12px;padding:28px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    h1{margin:0 0 6px;font-size:28px}
+    p{margin:0 0 14px;color:#bcd0e8}
+    a{color:#9be7ff;text-decoration:none;font-weight:600}
+    .meta{font-size:13px;color:#9fb6d7;margin-top:12px}
+    .actions{margin-top:18px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:#1f6feb;color:white;text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="card" style="text-align:center">
+    <!-- Large illustrative SVG to express 404 visually -->
+    <svg width="320" height="220" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="320" height="220" rx="12" fill="#071029"/>
+      <g transform="translate(40,30)" fill="#9be7ff">
+        <path d="M32 0c17.673 0 32 14.327 32 32s-14.327 32-32 32S0 49.673 0 32 14.327 0 32 0z" fill="#ff7b7b"/>
+        <rect x="56" y="12" width="112" height="72" rx="10" fill="#22334a" />
+        <circle cx="96" cy="48" r="8" fill="#9be7ff" />
+        <path d="M12 92c10 14 28 22 46 22s36-8 46-22" stroke="#9be7ff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="16" y="40" font-family="Inter, Arial, sans-serif" font-size="18" fill="#ffffff">404</text>
+      </g>
+    </svg>
+
+      <div style="margin-top:18px">
+        <a class="btn" href="/">Go Home</a>
+        <a style="margin-left:12px;color:#9fb6d7" href="javascript:history.back()">Go Back</a>
+      </div>
+      <div class="meta">If this was a game resource, please verify the resource exists or contact the site administrator.</div>
+  </div>
+</body>
+</html>

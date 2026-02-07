@@ -1,0 +1,5 @@
+# First, route file-like requests (contain a dot) to custom 404 so missing assets return 404
+/*.*  /404.html  404
+
+# SPA fallback: rewrite all other requests to index.html so client router handles paths
+/*    /index.html   200
