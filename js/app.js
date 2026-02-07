@@ -54,8 +54,41 @@
   const $clearRecent   = $('clear-recent');
   const $overlay       = $('game-overlay');
   const $overlayTitle  = $('overlay-title');
+  const $overlayBar    = $('overlay-bar');
+  const $barTrigger    = $('bar-trigger');
   const $overlayBack   = $('overlay-back');
   const $overlayFs     = $('overlay-fs');
+
+  const BAR_SHOW_DURATION = 3000; // ms before auto-hide
+  let barHideTimer = null;
+
+  function showBar() {
+    $overlayBar.classList.remove('bar-hidden');
+    clearTimeout(barHideTimer);
+    barHideTimer = setTimeout(hideBar, BAR_SHOW_DURATION);
+  }
+  function hideBar() {
+    clearTimeout(barHideTimer);
+    // Don't hide if loading, paused, or orientation hint is showing
+    if ($loadingOverlay.classList.contains('show')) return;
+    if ($pauseOverlay.classList.contains('show')) return;
+    if ($orientHint.classList.contains('show')) return;
+    $overlayBar.classList.add('bar-hidden');
+  }
+  function resetBarTimer() {
+    showBar();
+  }
+
+  // Trigger zone: mouse enter or touch
+  $barTrigger.addEventListener('mouseenter', showBar);
+  $barTrigger.addEventListener('touchstart', showBar, { passive: true });
+
+  // Also show bar on mouse move anywhere in overlay (for desktop)
+  $overlay.addEventListener('mousemove', () => {
+    if ($overlayBar.classList.contains('bar-hidden')) {
+      showBar();
+    }
+  });
   const $iframe        = $('game-iframe');
   const $content       = $('content');
   const $skeleton      = $('loading-skeleton');
@@ -353,6 +386,8 @@
       $loadingOverlay.classList.remove('show');
       // Check orientation on mobile after game loaded
       checkOrientationHint();
+      // Start bar auto-hide timer now that loading is done
+      showBar();
     }, 400);
   }
 
@@ -433,6 +468,9 @@
     $orientHint.classList.remove('show');
     startLoadingProgress();
 
+    // Show bar initially, start auto-hide after load
+    showBar();
+
     $overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
     gamePaused = false;
@@ -461,6 +499,8 @@
     gamePaused = false;
     userExitedFullscreen = false;
     clearInterval(loadingTimer);
+    clearTimeout(barHideTimer);
+    $overlayBar.classList.remove('bar-hidden');
     $loadingOverlay.classList.remove('show');
     $orientHint.classList.remove('show');
     $pauseOverlay.classList.remove('show');
@@ -495,6 +535,7 @@
     gamePaused = false;
     $pauseOverlay.classList.remove('show');
     $overlay.requestFullscreen().catch(() => {});
+    showBar(); // restart auto-hide timer
   }
 
   /* ---------- Fullscreen change → pause ---------- */
@@ -504,9 +545,11 @@
       // Exited fullscreen while game is open → show pause
       gamePaused = true;
       $pauseOverlay.classList.add('show');
+      showBar(); // keep bar visible during pause
     } else {
       gamePaused = false;
       $pauseOverlay.classList.remove('show');
+      showBar(); // restart auto-hide timer after resume
     }
   });
 
