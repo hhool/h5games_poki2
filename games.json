@@ -5,6 +5,10 @@
     "title": "1",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -13,6 +17,9 @@
     "title": "1v1.space",
     "tags": [
       "competitive"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -21,6 +28,10 @@
     "title": "2048",
     "tags": [
       "puzzle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -29,6 +40,10 @@
     "title": "9007199254740992",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -37,6 +52,9 @@
     "title": "Achievement Unlocked",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -45,6 +63,9 @@
     "title": "Adrenaline Challenge",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -53,6 +74,10 @@
     "title": "Among Us",
     "tags": [
       "competitive"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -61,6 +86,10 @@
     "title": "Avalanche",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -69,6 +98,9 @@
     "title": "Backrooms",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -77,6 +109,9 @@
     "title": "Basketball Stars",
     "tags": [
       "sports"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -85,6 +120,10 @@
     "title": "Battle for Gondor",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -93,6 +132,10 @@
     "title": "Big Red Button",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -101,6 +144,9 @@
     "title": "Black Knight",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -109,6 +155,10 @@
     "title": "Bloons TD",
     "tags": [
       "strategy"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -117,6 +167,10 @@
     "title": "Bloons TD 2",
     "tags": [
       "strategy"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -125,6 +179,9 @@
     "title": "Bloxors",
     "tags": [
       "puzzle"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -133,6 +190,9 @@
     "title": "Box Head",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -141,6 +201,10 @@
     "title": "Breaking the Bank",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -149,6 +213,9 @@
     "title": "Big Tower Tiny Square",
     "tags": [
       "strategy"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -157,6 +224,10 @@
     "title": "Cannon Basketball 4",
     "tags": [
       "sports"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -165,6 +236,10 @@
     "title": "Canyon Defense",
     "tags": [
       "strategy"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -173,6 +248,10 @@
     "title": "Cell Machine",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -181,6 +260,10 @@
     "title": "Champion Archer",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -189,6 +272,10 @@
     "title": "Chrome Dino",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -197,6 +284,10 @@
     "title": "circlO",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -205,6 +296,10 @@
     "title": "Connect 3",
     "tags": [
       "puzzle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -213,6 +308,10 @@
     "title": "Cookie Clicker",
     "tags": [
       "idle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -221,6 +320,9 @@
     "title": "CraftMine",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -229,6 +331,10 @@
     "title": "Creative Kill Chamber",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -237,6 +343,10 @@
     "title": "CS:GO Clicker",
     "tags": [
       "idle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -245,6 +355,10 @@
     "title": "Cut the Rope",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -253,6 +367,10 @@
     "title": "Cut the Rope Holiday",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -261,6 +379,10 @@
     "title": "Cut the Rope Time Travel",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -269,6 +391,9 @@
     "title": "Cubefield",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -277,6 +402,10 @@
     "title": "Cupcake 2048",
     "tags": [
       "puzzle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -285,6 +414,10 @@
     "title": "Deal or No Deal",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -293,6 +426,9 @@
     "title": "Death Run 3D",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -301,6 +437,10 @@
     "title": "Defend the Tank",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -309,6 +449,10 @@
     "title": "Doge 2048",
     "tags": [
       "puzzle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -317,6 +461,10 @@
     "title": "Doge Miner",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -325,6 +473,10 @@
     "title": "Doodle Jump",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -333,6 +485,10 @@
     "title": "Double Wires",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -341,6 +497,10 @@
     "title": "Draw the Hill",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -349,6 +509,9 @@
     "title": "Duck Life",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -357,6 +520,9 @@
     "title": "Duck Life 2",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -365,6 +531,9 @@
     "title": "Duck Life 3",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -373,6 +542,10 @@
     "title": "Edge Not Found",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -381,6 +554,10 @@
     "title": "Elastic Man",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -389,6 +566,9 @@
     "title": "Endless War 3",
     "tags": [
       "shooting"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -397,6 +577,10 @@
     "title": "Evil Glitch",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -405,6 +589,9 @@
     "title": "Exo",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -413,6 +600,10 @@
     "title": "Factory Balls Forever",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -421,6 +612,10 @@
     "title": "Fake Virus",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -429,6 +624,10 @@
     "title": "Flappy 2048",
     "tags": [
       "puzzle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -437,6 +636,10 @@
     "title": "Flappy Bird",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -445,6 +648,9 @@
     "title": "Flash Tetris",
     "tags": [
       "puzzle"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -453,6 +659,10 @@
     "title": "Game Inside a Game Inside a Game...",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -461,6 +671,10 @@
     "title": "Geometry Dash (Scratch)",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -469,6 +683,9 @@
     "title": "Getaway Shootout",
     "tags": [
       "shooting"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -477,6 +694,10 @@
     "title": "Gimme the Airpod",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -485,6 +706,9 @@
     "title": "Glass City",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -493,6 +717,9 @@
     "title": "Google Snake",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -501,6 +728,10 @@
     "title": "Grind Craft",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -509,6 +740,10 @@
     "title": "Hacker Typer",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -517,6 +752,9 @@
     "title": "Hover Bot Arena",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -525,6 +763,10 @@
     "title": "Helicopter",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -533,6 +775,10 @@
     "title": "Hex Empire",
     "tags": [
       "strategy"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -541,6 +787,9 @@
     "title": "HexGL",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -549,6 +798,10 @@
     "title": "Hextris",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -557,6 +810,10 @@
     "title": "Idle Breakout",
     "tags": [
       "idle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -565,6 +822,10 @@
     "title": "Idle Shark",
     "tags": [
       "idle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -573,6 +834,10 @@
     "title": "Impossible Quiz",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -581,6 +846,10 @@
     "title": "Interactive Buddy",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -589,6 +858,9 @@
     "title": "Just One Boss",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -597,6 +869,10 @@
     "title": "Kitten Cannon",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -605,6 +881,9 @@
     "title": "Krunker",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -613,6 +892,9 @@
     "title": "Learn To Fly",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -621,6 +903,9 @@
     "title": "Mario",
     "tags": [
       "competitive"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -629,6 +914,9 @@
     "title": "Matrix Rampage",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -637,6 +925,10 @@
     "title": "Meme 2048",
     "tags": [
       "puzzle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -645,6 +937,9 @@
     "title": "Eaglercraft",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -653,6 +948,9 @@
     "title": "Minecraft Classic",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -661,6 +959,10 @@
     "title": "Minesweeper",
     "tags": [
       "puzzle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -669,6 +971,10 @@
     "title": "Mini-putt",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -677,6 +983,10 @@
     "title": "Missiles",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -685,6 +995,9 @@
     "title": "MotoX3M",
     "tags": [
       "racing"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -694,6 +1007,9 @@
     "tags": [
       "racing",
       "sports"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -702,6 +1018,9 @@
     "title": "MotoX3M Spooky",
     "tags": [
       "racing"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -710,6 +1029,9 @@
     "title": "MotoX3M Winter",
     "tags": [
       "racing"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -718,6 +1040,9 @@
     "title": "n-gon",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -726,6 +1051,9 @@
     "title": "NS-Shaft",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -734,6 +1062,10 @@
     "title": "Om Nom Bounce",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -742,6 +1074,10 @@
     "title": "Pandemic 2",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -750,6 +1086,10 @@
     "title": "Papa's Pizzaria",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -758,6 +1098,10 @@
     "title": "Paper.io 2",
     "tags": [
       "competitive"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -766,6 +1110,10 @@
     "title": "Papery Planes",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -774,6 +1122,10 @@
     "title": "Particle Clicker",
     "tags": [
       "idle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -782,6 +1134,10 @@
     "title": "PolyBranch",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -790,6 +1146,9 @@
     "title": "Portal (Flash)",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -798,6 +1157,9 @@
     "title": "Precision Client (Eaglercraft)",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -806,6 +1168,10 @@
     "title": "Push The Square",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -814,6 +1180,10 @@
     "title": "Push Your Luck",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -822,6 +1192,10 @@
     "title": "Retro Bowl",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -830,6 +1204,10 @@
     "title": "Rolly Vortex",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -839,6 +1217,9 @@
     "tags": [
       "competitive",
       "shooting"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -847,6 +1228,10 @@
     "title": "Sand Game",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -855,6 +1240,9 @@
     "title": "Slope",
     "tags": [
       "action"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -863,6 +1251,9 @@
     "title": "Super Mario 64",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -872,6 +1263,9 @@
     "tags": [
       "competitive",
       "racing"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -880,6 +1274,9 @@
     "title": "Smoking Barrels",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -888,6 +1285,9 @@
     "title": "Snowbattle",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -896,6 +1296,9 @@
     "title": "Soilder Legend",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -904,6 +1307,10 @@
     "title": "Solitare",
     "tags": [
       "puzzle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -912,6 +1319,10 @@
     "title": "Sort The Court",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -920,6 +1331,10 @@
     "title": "Soundboard",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -928,6 +1343,10 @@
     "title": "Stack",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -936,6 +1355,10 @@
     "title": "Stack Bump 3D",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -944,6 +1367,10 @@
     "title": "Stealing The Diamond",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -952,6 +1379,10 @@
     "title": "Stick War",
     "tags": [
       "shooting"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -960,6 +1391,9 @@
     "title": "Storm The House 2",
     "tags": [
       "shooting"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -968,6 +1402,9 @@
     "title": "Superhot",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -976,6 +1413,10 @@
     "title": "Swerve",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -984,6 +1425,10 @@
     "title": "Tactical Assassin 2",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -992,6 +1437,9 @@
     "title": "Tank Trouble 2",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1000,6 +1448,9 @@
     "title": "Tanuki Sunset",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1008,6 +1459,10 @@
     "title": "Temple Run 2",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -1016,6 +1471,9 @@
     "title": "The Battle",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1024,6 +1482,10 @@
     "title": "The Final Earth",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -1032,6 +1494,10 @@
     "title": "The Heist",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -1040,6 +1506,10 @@
     "title": "There Is No Game",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -1048,6 +1518,9 @@
     "title": "This Is The Only Level",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1056,6 +1529,10 @@
     "title": "Toss The Turtle",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -1064,6 +1541,9 @@
     "title": "Tube Jumpers",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1072,6 +1552,9 @@
     "title": "Tunnel Rush",
     "tags": [
       "racing"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1080,6 +1563,10 @@
     "title": "TV Static",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -1088,6 +1575,9 @@
     "title": "Vex 3",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1096,6 +1586,9 @@
     "title": "Vex 4",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1104,6 +1597,9 @@
     "title": "Vex 5",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1112,6 +1608,9 @@
     "title": "Vex 6",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1120,6 +1619,9 @@
     "title": "Web Retro Local",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1128,6 +1630,9 @@
     "title": "Wolfenstein 3D",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1136,6 +1641,10 @@
     "title": "Wordle",
     "tags": [
       "puzzle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   },
   {
@@ -1144,6 +1653,9 @@
     "title": "World's Hardest Game",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1152,6 +1664,9 @@
     "title": "World's Hardest Game 2",
     "tags": [
       "other"
+    ],
+    "input": [
+      "keyboard"
     ]
   },
   {
@@ -1160,6 +1675,10 @@
     "title": "You Are Jeff Bezos",
     "tags": [
       "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
     ]
   }
 ]

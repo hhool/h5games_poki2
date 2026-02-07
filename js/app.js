@@ -24,6 +24,17 @@
   const RECENT_KEY = 'poki2_recent';
   const MAX_RECENT = 12;
 
+  /* ---------- Mobile detection ---------- */
+  const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)
+    || ('ontouchstart' in window && window.innerWidth <= 1024);
+
+  /** Return true if this game should be shown on the current device */
+  function canShow(game) {
+    if (!isMobile) return true;
+    const input = game.input || ['keyboard'];
+    return input.includes('touch');
+  }
+
   /* ---------- DOM refs ---------- */
   const $ = id => document.getElementById(id);
   const $sidebar       = $('sidebar');
@@ -99,7 +110,7 @@
   }
   function addRecent(game) {
     let list = getRecent().filter(g => g.link !== game.link);
-    list.unshift({ link: game.link, imgSrc: game.imgSrc, title: game.title, tags: game.tags });
+    list.unshift({ link: game.link, imgSrc: game.imgSrc, title: game.title, tags: game.tags, input: game.input });
     saveRecent(list);
   }
   function clearRecent() {
@@ -118,6 +129,9 @@
         break;
       } catch { /* next */ }
     }
+
+    // On mobile, filter out keyboard-only games
+    allGames = allGames.filter(canShow);
 
     tagMap = {};
     for (const g of allGames) {
@@ -183,7 +197,7 @@
 
   /* ---------- Recently Played ---------- */
   function renderRecentSection() {
-    const list = getRecent();
+    const list = getRecent().filter(canShow);
     if (!list.length) { $recentSection.style.display = 'none'; return; }
     $recentSection.style.display = '';
     $recentGrid.innerHTML = '';
@@ -229,8 +243,10 @@
     currentView = 'search';
     const q = query.toLowerCase();
     const matched = allGames.filter(g =>
-      g.title.toLowerCase().includes(q) ||
-      (g.tags || []).some(t => t.toLowerCase().includes(q))
+      canShow(g) && (
+        g.title.toLowerCase().includes(q) ||
+        (g.tags || []).some(t => t.toLowerCase().includes(q))
+      )
     );
     $hero.style.display = 'none';
     $recentSection.style.display = 'none';
