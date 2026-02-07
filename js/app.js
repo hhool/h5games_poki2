@@ -57,12 +57,17 @@
   const $detailPlay    = $('detail-play');
   const $detailClose   = $('detail-close');
   const $detailBackdrop= $('detail-backdrop');
+  const $pauseOverlay  = $('game-pause');
+  const $pauseResume   = $('pause-resume');
+  const $pauseQuit     = $('pause-quit');
 
   /* ---------- State ---------- */
   let allGames    = [];
   let tagMap      = {};
   let currentView = 'home';
   let pendingGame = null;   // game waiting in detail interstitial
+  let gamePaused  = false;  // true when game is paused (exited fullscreen)
+  let userExitedFullscreen = false; // track intentional exit vs close
 
   /* ---------- Helpers ---------- */
   function normalizeHref(link) {
@@ -303,9 +308,28 @@
     $iframe.src = game.link;
     $overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
+    gamePaused = false;
+    userExitedFullscreen = false;
+    $pauseOverlay.classList.remove('show');
     history.pushState({ view: 'game', link: game.link, title: game.title }, '', '#play-' + normalizeHref(game.link));
+    // Auto-enter fullscreen when opening a game
+    setTimeout(() => {
+      $overlay.requestFullscreen().catch(() => {});
+    }, 100);
   }
   function closeGame() {
+    gamePaused = false;
+    userExitedFullscreen = false;
+    $pauseOverlay.classList.remove('show');
+    if (document.fullscreenElement) {
+      document.exitFullscreen().then(() => {
+        finishCloseGame();
+      }).catch(() => { finishCloseGame(); });
+    } else {
+      finishCloseGame();
+    }
+  }
+  function finishCloseGame() {
     $overlay.classList.remove('open');
     $iframe.src = 'about:blank';
     document.body.style.overflow = '';
@@ -315,11 +339,32 @@
   }
   function toggleFullscreen() {
     if (!document.fullscreenElement) {
+      gamePaused = false;
+      $pauseOverlay.classList.remove('show');
       $overlay.requestFullscreen().catch(() => {});
     } else {
+      userExitedFullscreen = true;
       document.exitFullscreen();
     }
   }
+  function resumeFullscreen() {
+    gamePaused = false;
+    $pauseOverlay.classList.remove('show');
+    $overlay.requestFullscreen().catch(() => {});
+  }
+
+  /* ---------- Fullscreen change → pause ---------- */
+  document.addEventListener('fullscreenchange', () => {
+    if (!$overlay.classList.contains('open')) return;
+    if (!document.fullscreenElement) {
+      // Exited fullscreen while game is open → show pause
+      gamePaused = true;
+      $pauseOverlay.classList.add('show');
+    } else {
+      gamePaused = false;
+      $pauseOverlay.classList.remove('show');
+    }
+  });
 
   /* ---------- Back to top ---------- */
   function handleScroll() {
@@ -332,6 +377,8 @@
   $sidebarOverlay.addEventListener('click', closeSidebar);
   $overlayBack.addEventListener('click', closeGame);
   $overlayFs.addEventListener('click', toggleFullscreen);
+  $pauseResume.addEventListener('click', resumeFullscreen);
+  $pauseQuit.addEventListener('click', closeGame);
   $clearRecent.addEventListener('click', clearRecent);
   $backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   $shuffleBtn.addEventListener('click', () => {
@@ -347,6 +394,7 @@
 
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
+      if (gamePaused && $pauseOverlay.classList.contains('show')) { closeGame(); return; }
       if ($overlay.classList.contains('open')) { closeGame(); return; }
       if ($detail.classList.contains('open'))  { hideDetail(); return; }
       if ($sidebar.classList.contains('open')) { closeSidebar(); return; }

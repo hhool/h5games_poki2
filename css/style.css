@@ -341,6 +341,81 @@ input{font:inherit}
   flex:1;border:none;width:100%;background:#000;
 }
 
+/* ---------- Pause overlay ---------- */
+.game-pause-overlay{
+  display:none;
+  position:absolute;inset:0;
+  z-index:10;
+  background:rgba(0,0,0,.85);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  align-items:center;justify-content:center;
+  flex-direction:column;
+}
+.game-pause-overlay.show{
+  display:flex;
+}
+.pause-content{
+  text-align:center;
+  color:#fff;
+  animation:pauseFadeIn .3s ease;
+}
+.pause-icon{
+  font-size:64px;
+  margin-bottom:12px;
+}
+.pause-title{
+  font-size:1.8rem;
+  font-weight:700;
+  margin-bottom:6px;
+}
+.pause-sub{
+  font-size:.95rem;
+  color:#aaa;
+  margin-bottom:28px;
+}
+.pause-resume-btn{
+  display:block;
+  width:220px;
+  margin:0 auto 12px;
+  padding:14px 24px;
+  font-size:1.05rem;
+  font-weight:700;
+  border:none;
+  border-radius:12px;
+  background:var(--brand);
+  color:#fff;
+  cursor:pointer;
+  transition:background .2s, transform .15s;
+}
+.pause-resume-btn:hover{
+  background:var(--brand-dark);
+  transform:scale(1.04);
+}
+.pause-quit-btn{
+  display:block;
+  width:220px;
+  margin:0 auto;
+  padding:10px 24px;
+  font-size:.9rem;
+  font-weight:600;
+  border:2px solid rgba(255,255,255,.25);
+  border-radius:12px;
+  background:transparent;
+  color:#ccc;
+  cursor:pointer;
+  transition:background .2s, border-color .2s;
+}
+.pause-quit-btn:hover{
+  background:rgba(255,255,255,.08);
+  border-color:rgba(255,255,255,.5);
+  color:#fff;
+}
+@keyframes pauseFadeIn{
+  from{opacity:0;transform:scale(.92)}
+  to{opacity:1;transform:scale(1)}
+}
+
 /* ---------- Skeleton loading ---------- */
 .skeleton{
   background:linear-gradient(90deg,var(--surface-2) 25%,#f3f3f3 37%,var(--surface-2) 63%);

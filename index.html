@@ -134,6 +134,16 @@
             </button>
         </div>
         <iframe id="game-iframe" class="game-iframe" allowfullscreen allow="autoplay; fullscreen; gamepad"></iframe>
+        <!-- Pause overlay (shown when exiting fullscreen) -->
+        <div class="game-pause-overlay" id="game-pause">
+            <div class="pause-content">
+                <div class="pause-icon">⏸️</div>
+                <h2 class="pause-title">Game Paused</h2>
+                <p class="pause-sub">Exited fullscreen</p>
+                <button class="pause-resume-btn" id="pause-resume">▶ Resume Fullscreen</button>
+                <button class="pause-quit-btn" id="pause-quit">✕ Quit Game</button>
+            </div>
+        </div>
     </div>
 
     <!-- Back to top -->
