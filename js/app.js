@@ -625,6 +625,8 @@
     } else {
       showHome();
     }
+    // Remove early-hide class now that the correct view is rendered
+    document.documentElement.classList.remove('route-loading');
   });
 
 })();

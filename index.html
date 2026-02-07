@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Poki2 — Free Online Games</title>
     <meta name="description" content="Play the best free online games! Action, puzzle, racing, sports and more. No downloads, instant play in your browser.">
-    <link rel="stylesheet" href="css/style.css?v=20260207h">
+    <link rel="stylesheet" href="css/style.css?v=20260207i">
     <link rel="icon" type="image/png" href="favicon.png">
+    <script>
+      // Prevent flash of Home content when refreshing on a non-Home page
+      if (location.hash && location.hash.length > 1) {
+        document.documentElement.classList.add('route-loading');
+      }
+    </script>
+    <style>
+      .route-loading #hero,
+      .route-loading #loading-skeleton { display: none !important; }
+    </style>
 </head>
 <body>
     <!-- ===== SIDEBAR ===== -->
@@ -188,6 +198,6 @@
         </div>
     </div>
 
-    <script src="js/app.js?v=20260207h"></script>
+    <script src="js/app.js?v=20260207i"></script>
 </body>
 </html>
