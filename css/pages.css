@@ -1,0 +1,110 @@
+/* ============================================================
+   Poki2 — Static pages (About / Privacy / Terms)
+   ============================================================ */
+
+.page-wrap{
+  max-width:780px;
+  margin:0 auto;
+  min-height:100dvh;
+  display:flex;flex-direction:column;
+}
+
+/* ---- Header ---- */
+.page-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 24px;
+  border-bottom:1px solid var(--surface-2);
+  position:sticky;top:0;
+  background:var(--surface);
+  z-index:100;
+}
+.page-logo{
+  font-size:1.2rem;font-weight:700;color:var(--brand);
+}
+.page-nav{
+  display:flex;gap:6px;
+}
+.page-nav a{
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:.85rem;font-weight:500;
+  color:var(--text-muted);
+  transition:background .15s, color .15s;
+}
+.page-nav a:hover{background:var(--surface-2);color:var(--text)}
+.page-nav a.active{background:var(--brand);color:#fff;font-weight:600}
+
+/* ---- Content ---- */
+.page-content{
+  flex:1;
+  padding:36px 24px 48px;
+}
+.page-content h1{
+  font-size:1.8rem;font-weight:800;
+  margin-bottom:8px;
+  color:var(--text);
+}
+.page-content .last-updated{
+  font-size:.85rem;color:var(--text-muted);
+  margin-bottom:28px;
+}
+.page-content section{
+  margin-bottom:28px;
+}
+.page-content h2{
+  font-size:1.15rem;font-weight:700;
+  margin-bottom:10px;
+  color:var(--text);
+}
+.page-content h3{
+  font-size:1rem;font-weight:600;
+  margin:14px 0 6px;
+  color:var(--text);
+}
+.page-content p{
+  line-height:1.7;
+  color:var(--text);
+  margin-bottom:10px;
+}
+.page-content ul{
+  padding-left:22px;
+  margin-bottom:12px;
+}
+.page-content li{
+  line-height:1.7;
+  margin-bottom:4px;
+  color:var(--text);
+}
+.page-content a{
+  color:var(--brand);
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+.page-content a:hover{color:var(--brand-dark)}
+
+/* ---- Footer ---- */
+.page-footer{
+  padding:20px 24px;
+  border-top:1px solid var(--surface-2);
+  text-align:center;
+}
+.page-footer .footer-links{
+  display:flex;justify-content:center;gap:16px;
+  margin-bottom:8px;
+}
+.page-footer .footer-links a{
+  font-size:.85rem;color:var(--text-muted);
+  transition:color .15s;
+}
+.page-footer .footer-links a:hover{color:var(--text)}
+.page-footer .footer-copy{
+  font-size:.75rem;color:var(--text-muted);opacity:.6;
+}
+
+/* ---- Responsive ---- */
+@media(max-width:600px){
+  .page-header{padding:12px 16px}
+  .page-content{padding:24px 16px 36px}
+  .page-content h1{font-size:1.4rem}
+  .page-nav a{padding:5px 10px;font-size:.8rem}
+}
