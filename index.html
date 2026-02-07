@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Poki2 — Free Online Games</title>
     <meta name="description" content="Play the best free online games! Action, puzzle, racing, sports and more. No downloads, instant play in your browser.">
-    <link rel="stylesheet" href="css/style.css?v=20260207e">
+    <link rel="stylesheet" href="css/style.css?v=20260207f">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
@@ -148,8 +148,12 @@
         <!-- Orientation hint (shown on mobile after load) -->
         <div class="orient-hint" id="orient-hint">
             <div class="orient-hint-inner">
-                <div class="orient-hint-icon" id="orient-hint-icon">📱</div>
-                <p class="orient-hint-text" id="orient-hint-text">Please rotate your device</p>
+                <div class="orient-hint-phone" id="orient-hint-phone">
+                    <svg viewBox="0 0 60 100" width="60" height="100"><rect x="5" y="2" width="50" height="96" rx="8" fill="none" stroke="#fff" stroke-width="3"/><circle cx="30" cy="90" r="4" fill="#fff" opacity=".4"/><rect x="20" y="6" width="20" height="3" rx="1.5" fill="#fff" opacity=".3"/></svg>
+                </div>
+                <p class="orient-hint-text" id="orient-hint-text">Please rotate to landscape mode</p>
+                <button class="orient-rotate-btn" id="orient-rotate-btn">🔄 Rotate Screen</button>
+                <button class="orient-skip-btn" id="orient-skip-btn">Continue anyway →</button>
             </div>
         </div>
         <!-- Pause overlay (shown when exiting fullscreen) -->
@@ -183,6 +187,6 @@
         </div>
     </div>
 
-    <script src="js/app.js?v=20260207e"></script>
+    <script src="js/app.js?v=20260207f"></script>
 </body>
 </html>

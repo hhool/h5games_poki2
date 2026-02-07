@@ -323,8 +323,9 @@
   const $loadingBar     = $('loading-bar-fill');
   const $loadingPercent = $('loading-percent');
   const $orientHint     = $('orient-hint');
-  const $orientIcon     = $('orient-hint-icon');
   const $orientText     = $('orient-hint-text');
+  const $orientRotateBtn= $('orient-rotate-btn');
+  const $orientSkipBtn  = $('orient-skip-btn');
 
   let loadingTimer = null;
   let currentGameOrientation = 'both';
@@ -360,26 +361,59 @@
     if (!isMobile) return;
     if (currentGameOrientation === 'both') return;
     const isPortrait = window.innerHeight > window.innerWidth;
-    const needsPortrait = currentGameOrientation === 'portrait';
     const needsLandscape = currentGameOrientation === 'landscape';
-    if ((needsPortrait && !isPortrait) || (needsLandscape && isPortrait)) {
-      $orientIcon.textContent = needsLandscape ? '📱↔️' : '📱↕️';
+    const needsPortrait = currentGameOrientation === 'portrait';
+    if ((needsLandscape && isPortrait) || (needsPortrait && !isPortrait)) {
+      $orientHint.classList.remove('landscape', 'portrait');
+      $orientHint.classList.add('show', currentGameOrientation);
       $orientText.textContent = needsLandscape
-        ? 'Please rotate to landscape mode'
-        : 'Please rotate to portrait mode';
-      $orientHint.classList.add('show');
+        ? 'This game is best in landscape mode'
+        : 'This game is best in portrait mode';
     } else {
       $orientHint.classList.remove('show');
     }
   }
 
-  // Auto-dismiss orientation hint when user rotates
+  /** Try to lock screen orientation via API */
+  async function lockOrientation(orient) {
+    // orient: 'landscape' or 'portrait'
+    const lockType = orient === 'landscape' ? 'landscape-primary' : 'portrait-primary';
+    try {
+      // Some browsers require fullscreen first
+      if (!document.fullscreenElement) {
+        await $overlay.requestFullscreen().catch(() => {});
+      }
+      if (screen.orientation && screen.orientation.lock) {
+        await screen.orientation.lock(lockType);
+      }
+    } catch (e) {
+      // Fallback: just show a tip if API not supported
+      console.warn('Orientation lock not supported:', e);
+    }
+    $orientHint.classList.remove('show');
+  }
+
+  /** Unlock orientation back to natural */
+  function unlockOrientation() {
+    try {
+      if (screen.orientation && screen.orientation.unlock) {
+        screen.orientation.unlock();
+      }
+    } catch { /* ignore */ }
+  }
+
+  // Auto-dismiss orientation hint when user rotates correctly
   window.addEventListener('resize', () => {
     if (!$orientHint.classList.contains('show')) return;
     checkOrientationHint();
   });
-  // Tap to dismiss
-  $orientHint.addEventListener('click', () => {
+
+  // Rotate button: lock screen orientation
+  $orientRotateBtn.addEventListener('click', () => {
+    lockOrientation(currentGameOrientation);
+  });
+  // Skip button: dismiss hint
+  $orientSkipBtn.addEventListener('click', () => {
     $orientHint.classList.remove('show');
   });
 
@@ -430,6 +464,7 @@
     $loadingOverlay.classList.remove('show');
     $orientHint.classList.remove('show');
     $pauseOverlay.classList.remove('show');
+    unlockOrientation();
     if (document.fullscreenElement) {
       document.exitFullscreen().then(() => {
         finishCloseGame();

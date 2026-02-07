@@ -404,9 +404,9 @@ input{font:inherit}
   display:none;
   position:absolute;inset:0;
   z-index:6;
-  background:rgba(0,0,0,.88);
-  backdrop-filter:blur(4px);
-  -webkit-backdrop-filter:blur(4px);
+  background:rgba(0,0,0,.92);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
   align-items:center;justify-content:center;
   flex-direction:column;
 }
@@ -415,21 +415,74 @@ input{font:inherit}
 }
 .orient-hint-inner{
   text-align:center;
-  animation:orientPulse 2s ease-in-out infinite;
+  padding:24px;
 }
-.orient-hint-icon{
-  font-size:64px;
-  margin-bottom:12px;
+.orient-hint-phone{
+  margin:0 auto 20px;
+  width:60px;height:100px;
+  animation:orientRotate 2.5s ease-in-out infinite;
+  transform-origin:center center;
+}
+.orient-hint.landscape .orient-hint-phone{
+  animation-name:orientToLandscape;
+}
+.orient-hint.portrait .orient-hint-phone{
+  animation-name:orientToPortrait;
 }
 .orient-hint-text{
   color:#fff;
-  font-size:1.05rem;
+  font-size:1.1rem;
   font-weight:600;
+  margin-bottom:24px;
+  line-height:1.4;
 }
-@keyframes orientPulse{
-  0%,100%{transform:rotate(0deg)}
-  25%{transform:rotate(-20deg)}
-  75%{transform:rotate(20deg)}
+.orient-rotate-btn{
+  display:block;
+  width:220px;
+  margin:0 auto 12px;
+  padding:14px 24px;
+  font-size:1rem;
+  font-weight:700;
+  border:none;
+  border-radius:12px;
+  background:var(--brand);
+  color:#fff;
+  cursor:pointer;
+  transition:background .2s, transform .15s;
+}
+.orient-rotate-btn:hover{
+  background:var(--brand-dark);
+  transform:scale(1.04);
+}
+.orient-rotate-btn:active{
+  transform:scale(.97);
+}
+.orient-skip-btn{
+  display:block;
+  width:220px;
+  margin:0 auto;
+  padding:10px 24px;
+  font-size:.85rem;
+  font-weight:500;
+  border:none;
+  border-radius:12px;
+  background:transparent;
+  color:rgba(255,255,255,.5);
+  cursor:pointer;
+  transition:color .2s;
+}
+.orient-skip-btn:hover{
+  color:#fff;
+}
+@keyframes orientToLandscape{
+  0%,15%{transform:rotate(0deg)}
+  35%,65%{transform:rotate(90deg)}
+  85%,100%{transform:rotate(0deg)}
+}
+@keyframes orientToPortrait{
+  0%,15%{transform:rotate(90deg)}
+  35%,65%{transform:rotate(0deg)}
+  85%,100%{transform:rotate(90deg)}
 }
 
 /* ---------- Pause overlay ---------- */
