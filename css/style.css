@@ -155,6 +155,18 @@ input{font:inherit}
 }
 .search-input:focus{border-color:var(--brand)}
 
+/* ---- Shuffle button ---- */
+.shuffle-btn{
+  display:flex;align-items:center;justify-content:center;
+  width:38px;height:38px;
+  border-radius:50%;
+  color:var(--text-muted);
+  transition:background .15s, color .15s, transform .3s;
+  flex-shrink:0;
+}
+.shuffle-btn:hover{background:var(--brand-light);color:var(--brand)}
+.shuffle-btn:active{transform:rotate(180deg)}
+
 /* ---------- Hero ---------- */
 .hero{
   background:linear-gradient(135deg,#009cff 0%,#6c3bff 100%);
@@ -164,7 +176,31 @@ input{font:inherit}
   text-align:center;
 }
 .hero-title{font-size:1.8rem;font-weight:800;margin-bottom:8px}
-.hero-sub{font-size:1rem;opacity:.85}
+.hero-sub{font-size:1rem;opacity:.85;margin-bottom:18px}
+
+/* Hero featured games row */
+.hero-featured{
+  display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
+  margin-top:8px;
+}
+.hero-card{
+  width:90px;height:90px;
+  border-radius:14px;overflow:hidden;
+  cursor:pointer;
+  transition:transform .2s var(--ease), box-shadow .2s var(--ease);
+  box-shadow:0 4px 16px rgba(0,0,0,.25);
+  flex-shrink:0;
+}
+.hero-card:hover{transform:scale(1.1);box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.hero-card img{width:100%;height:100%;object-fit:cover}
+
+/* ---- Recently Played ---- */
+.recently-played .clear-recent{
+  font-size:.8rem;color:var(--text-muted);
+  padding:4px 10px;border-radius:14px;
+  transition:background .15s, color .15s;
+}
+.recently-played .clear-recent:hover{background:var(--surface-2);color:var(--text)}
 
 /* ---------- Content ---------- */
 .content{
@@ -190,6 +226,17 @@ input{font:inherit}
   transition:background .15s;
 }
 .see-all:hover{background:var(--brand-light)}
+
+/* ---- Sidebar badge ---- */
+.nav-badge{
+  margin-left:auto;
+  font-size:.7rem;font-weight:600;
+  background:rgba(255,255,255,.12);
+  color:var(--sidebar-text);
+  padding:2px 7px;border-radius:10px;
+  min-width:22px;text-align:center;
+}
+.nav-item.active .nav-badge{background:rgba(255,255,255,.25);color:#fff}
 
 /* ---- Game grid ---- */
 .game-grid{
@@ -235,6 +282,13 @@ input{font:inherit}
 
 /* ---------- Search results ---------- */
 .search-results{padding:20px}
+
+/* ---- Empty state ---- */
+.empty-state{
+  text-align:center;padding:60px 20px;
+}
+.empty-icon{font-size:3rem;margin-bottom:12px}
+.empty-text{color:var(--text-muted);font-size:1rem}
 
 /* ---------- Footer ---------- */
 .site-footer{
@@ -295,7 +349,83 @@ input{font:inherit}
   border-radius:var(--card-radius);
 }
 .skeleton-card{aspect-ratio:1/1}
+.skeleton-text{display:inline-block;border-radius:6px}
 @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* ---------- Back to top ---------- */
+.back-to-top{
+  position:fixed;bottom:24px;right:24px;
+  width:44px;height:44px;
+  border-radius:50%;
+  background:var(--brand);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(0,156,255,.35);
+  opacity:0;pointer-events:none;
+  transform:translateY(12px);
+  transition:opacity .25s, transform .25s;
+  z-index:850;
+}
+.back-to-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.back-to-top:hover{background:var(--brand-dark)}
+
+/* ---------- Game detail interstitial ---------- */
+.game-detail{
+  position:fixed;inset:0;
+  z-index:950;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;
+  transition:opacity .25s var(--ease);
+}
+.game-detail.open{opacity:1;pointer-events:auto}
+.detail-backdrop{
+  position:absolute;inset:0;
+  background:rgba(0,0,0,.55);
+}
+.detail-card{
+  position:relative;
+  background:var(--surface);
+  border-radius:20px;
+  overflow:hidden;
+  width:340px;max-width:90vw;
+  box-shadow:0 16px 48px rgba(0,0,0,.25);
+  transform:scale(.92);
+  transition:transform .3s var(--ease);
+}
+.game-detail.open .detail-card{transform:scale(1)}
+.detail-img{
+  width:100%;aspect-ratio:1/1;object-fit:cover;
+  background:var(--surface-2);
+}
+.detail-body{padding:18px 20px 22px;text-align:center}
+.detail-title{font-size:1.2rem;font-weight:700;margin-bottom:8px}
+.detail-tags{
+  display:flex;gap:6px;justify-content:center;flex-wrap:wrap;
+  margin-bottom:16px;
+}
+.detail-tag{
+  font-size:.75rem;font-weight:600;
+  padding:3px 10px;border-radius:12px;
+  background:var(--brand-light);color:var(--brand-dark);
+}
+.detail-play-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:12px 36px;
+  border-radius:28px;
+  background:var(--brand);color:#fff;
+  font-size:1rem;font-weight:700;
+  box-shadow:0 4px 16px rgba(0,156,255,.3);
+  transition:background .15s, transform .15s;
+}
+.detail-play-btn:hover{background:var(--brand-dark);transform:scale(1.04)}
+.detail-close{
+  position:absolute;top:10px;right:10px;
+  width:32px;height:32px;border-radius:50%;
+  background:rgba(0,0,0,.4);color:#fff;
+  font-size:1rem;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .15s;
+}
+.detail-close:hover{background:rgba(0,0,0,.6)}
 
 /* ---------- Responsive ---------- */
 @media(max-width:900px){
@@ -305,6 +435,7 @@ input{font:inherit}
   .menu-btn{display:flex}
   .topbar-logo{display:block}
   .hero-title{font-size:1.4rem}
+  .hero-card{width:70px;height:70px;border-radius:10px}
 }
 @media(max-width:600px){
   .game-grid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px}
