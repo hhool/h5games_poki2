@@ -485,7 +485,11 @@
 
     // Auto-enter fullscreen when opening a game
     setTimeout(() => {
-      $overlay.requestFullscreen().catch(() => {});
+      $overlay.requestFullscreen().then(() => {
+        if (isMobile && currentGameOrientation !== 'both') {
+          lockOrientation(currentGameOrientation);
+        }
+      }).catch(() => {});
     }, 100);
   }
 
@@ -525,7 +529,11 @@
     if (!document.fullscreenElement) {
       gamePaused = false;
       $pauseOverlay.classList.remove('show');
-      $overlay.requestFullscreen().catch(() => {});
+      $overlay.requestFullscreen().then(() => {
+        if (isMobile && currentGameOrientation !== 'both') {
+          lockOrientation(currentGameOrientation);
+        }
+      }).catch(() => {});
     } else {
       userExitedFullscreen = true;
       document.exitFullscreen();
@@ -534,7 +542,12 @@
   function resumeFullscreen() {
     gamePaused = false;
     $pauseOverlay.classList.remove('show');
-    $overlay.requestFullscreen().catch(() => {});
+    $overlay.requestFullscreen().then(() => {
+      // Re-lock orientation if the game requires landscape/portrait
+      if (isMobile && currentGameOrientation !== 'both') {
+        lockOrientation(currentGameOrientation);
+      }
+    }).catch(() => {});
     showBar(); // restart auto-hide timer
   }
 
