@@ -317,22 +317,41 @@
   }
 
   /* ---------- Game overlay ---------- */
+  const $loadingOverlay = $('game-loading');
+
   function openGame(game) {
     hideDetail();
     addRecent(game);
     $overlayTitle.textContent = game.title;
-    $iframe.src = game.link;
+
+    // Clear old game and show loading
+    $iframe.src = 'about:blank';
+    $loadingOverlay.classList.add('show');
+
     $overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
     gamePaused = false;
     userExitedFullscreen = false;
     $pauseOverlay.classList.remove('show');
     history.pushState({ view: 'game', link: game.link, title: game.title }, '', '#play-' + normalizeHref(game.link));
+
+    // Load new game after a tick (ensures blank is rendered first)
+    requestAnimationFrame(() => {
+      $iframe.src = game.link;
+    });
+
     // Auto-enter fullscreen when opening a game
     setTimeout(() => {
       $overlay.requestFullscreen().catch(() => {});
     }, 100);
   }
+
+  // Hide loading overlay once iframe finishes loading
+  $iframe.addEventListener('load', () => {
+    if ($iframe.src !== 'about:blank') {
+      $loadingOverlay.classList.remove('show');
+    }
+  });
   function closeGame() {
     gamePaused = false;
     userExitedFullscreen = false;

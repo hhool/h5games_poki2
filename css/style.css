@@ -346,6 +346,32 @@ input{font:inherit}
   flex:1;border:none;width:100%;background:#000;
 }
 
+/* ---------- Loading overlay ---------- */
+.game-loading-overlay{
+  display:none;
+  position:absolute;inset:0;
+  z-index:5;
+  background:#000;
+  align-items:center;justify-content:center;
+  flex-direction:column;
+}
+.game-loading-overlay.show{
+  display:flex;
+}
+.loading-spinner{
+  width:48px;height:48px;
+  border:4px solid rgba(255,255,255,.15);
+  border-top-color:var(--brand);
+  border-radius:50%;
+  animation:spin .8s linear infinite;
+  margin-bottom:16px;
+}
+.loading-text{
+  color:#aaa;
+  font-size:.9rem;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
 /* ---------- Pause overlay ---------- */
 .game-pause-overlay{
   display:none;
