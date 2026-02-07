@@ -110,7 +110,7 @@
   }
   function addRecent(game) {
     let list = getRecent().filter(g => g.link !== game.link);
-    list.unshift({ link: game.link, imgSrc: game.imgSrc, title: game.title, tags: game.tags, input: game.input });
+    list.unshift({ link: game.link, imgSrc: game.imgSrc, title: game.title, tags: game.tags, input: game.input, orientation: game.orientation });
     saveRecent(list);
   }
   function clearRecent() {
@@ -318,15 +318,86 @@
 
   /* ---------- Game overlay ---------- */
   const $loadingOverlay = $('game-loading');
+  const $loadingIcon    = $('loading-game-icon');
+  const $loadingTitle   = $('loading-game-title');
+  const $loadingBar     = $('loading-bar-fill');
+  const $loadingPercent = $('loading-percent');
+  const $orientHint     = $('orient-hint');
+  const $orientIcon     = $('orient-hint-icon');
+  const $orientText     = $('orient-hint-text');
+
+  let loadingTimer = null;
+  let currentGameOrientation = 'both';
+
+  function startLoadingProgress() {
+    let progress = 0;
+    $loadingBar.style.width = '0%';
+    $loadingPercent.textContent = '0%';
+    clearInterval(loadingTimer);
+    loadingTimer = setInterval(() => {
+      // Simulate progress: fast at start, slows down near 90%
+      const remaining = 90 - progress;
+      progress += Math.max(0.5, remaining * 0.08);
+      if (progress >= 90) progress = 90;
+      $loadingBar.style.width = Math.round(progress) + '%';
+      $loadingPercent.textContent = Math.round(progress) + '%';
+    }, 200);
+  }
+
+  function finishLoadingProgress() {
+    clearInterval(loadingTimer);
+    $loadingBar.style.width = '100%';
+    $loadingPercent.textContent = '100%';
+    setTimeout(() => {
+      $loadingOverlay.classList.remove('show');
+      // Check orientation on mobile after game loaded
+      checkOrientationHint();
+    }, 400);
+  }
+
+  /* ---------- Orientation hint ---------- */
+  function checkOrientationHint() {
+    if (!isMobile) return;
+    if (currentGameOrientation === 'both') return;
+    const isPortrait = window.innerHeight > window.innerWidth;
+    const needsPortrait = currentGameOrientation === 'portrait';
+    const needsLandscape = currentGameOrientation === 'landscape';
+    if ((needsPortrait && !isPortrait) || (needsLandscape && isPortrait)) {
+      $orientIcon.textContent = needsLandscape ? '📱↔️' : '📱↕️';
+      $orientText.textContent = needsLandscape
+        ? 'Please rotate to landscape mode'
+        : 'Please rotate to portrait mode';
+      $orientHint.classList.add('show');
+    } else {
+      $orientHint.classList.remove('show');
+    }
+  }
+
+  // Auto-dismiss orientation hint when user rotates
+  window.addEventListener('resize', () => {
+    if (!$orientHint.classList.contains('show')) return;
+    checkOrientationHint();
+  });
+  // Tap to dismiss
+  $orientHint.addEventListener('click', () => {
+    $orientHint.classList.remove('show');
+  });
 
   function openGame(game) {
     hideDetail();
     addRecent(game);
     $overlayTitle.textContent = game.title;
+    currentGameOrientation = game.orientation || 'both';
+
+    // Show loading with game info
+    $loadingIcon.innerHTML = `<img src="${game.imgSrc}" alt="">`;
+    $loadingTitle.textContent = game.title;
 
     // Clear old game and show loading
     $iframe.src = 'about:blank';
     $loadingOverlay.classList.add('show');
+    $orientHint.classList.remove('show');
+    startLoadingProgress();
 
     $overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -346,15 +417,18 @@
     }, 100);
   }
 
-  // Hide loading overlay once iframe finishes loading
+  // Finish progress when iframe loads
   $iframe.addEventListener('load', () => {
     if ($iframe.src !== 'about:blank') {
-      $loadingOverlay.classList.remove('show');
+      finishLoadingProgress();
     }
   });
   function closeGame() {
     gamePaused = false;
     userExitedFullscreen = false;
+    clearInterval(loadingTimer);
+    $loadingOverlay.classList.remove('show');
+    $orientHint.classList.remove('show');
     $pauseOverlay.classList.remove('show');
     if (document.fullscreenElement) {
       document.exitFullscreen().then(() => {

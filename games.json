@@ -9,7 +9,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://1.poki2.online/1v1space/",
@@ -20,7 +21,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://2.poki2.online/2048/",
@@ -32,7 +34,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://9.poki2.online/9007199254740992/",
@@ -44,7 +47,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://a.poki2.online/achievementunlocked/",
@@ -55,7 +59,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://a.poki2.online/adrenalinechallenge/",
@@ -66,7 +71,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://a.poki2.online/among-us/",
@@ -78,7 +84,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://a.poki2.online/avalanche/",
@@ -90,7 +97,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://b.poki2.online/backrooms/",
@@ -101,7 +109,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/basketball-stars/",
@@ -112,7 +121,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/battleforgondor/",
@@ -124,7 +134,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/bigredbutton/",
@@ -136,7 +147,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://b.poki2.online/blackknight/",
@@ -147,7 +159,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/bloonstd/",
@@ -159,7 +172,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/bloonstd2/",
@@ -171,7 +185,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/bloxors/",
@@ -182,7 +197,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/boxhead2play/",
@@ -193,7 +209,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/breakingthebank/",
@@ -205,7 +222,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/btts/",
@@ -216,7 +234,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://c.poki2.online/cannon-basketball-4/",
@@ -228,7 +247,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/canyondefense/",
@@ -240,7 +260,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/cell-machine/",
@@ -252,7 +273,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/championarcher/",
@@ -264,7 +286,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/chrome-dino/",
@@ -276,7 +299,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/circlo/",
@@ -288,7 +312,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://c.poki2.online/connect3/",
@@ -300,7 +325,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://c.poki2.online/cookie-clicker/",
@@ -312,7 +338,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://c.poki2.online/craftmine/",
@@ -323,7 +350,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/creativekillchamber/",
@@ -335,7 +363,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/csgo-clicker/",
@@ -347,7 +376,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://c.poki2.online/ctr/",
@@ -359,7 +389,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://c.poki2.online/ctr-holiday/",
@@ -371,7 +402,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://c.poki2.online/ctr-tr/",
@@ -383,7 +415,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://c.poki2.online/cubefield/",
@@ -394,7 +427,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/cupcake2048/",
@@ -406,7 +440,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://d.poki2.online/deal-or-no-deal/",
@@ -418,7 +453,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://d.poki2.online/death-run-3d/",
@@ -429,7 +465,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://d.poki2.online/defend-the-tank/",
@@ -441,7 +478,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://d.poki2.online/doge2048/",
@@ -453,7 +491,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://d.poki2.online/DogeMiner/",
@@ -465,7 +504,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://d.poki2.online/doodle-jump/",
@@ -477,7 +517,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://d.poki2.online/doublewires/",
@@ -489,7 +530,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://d.poki2.online/draw-the-hill/",
@@ -501,7 +543,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://d.poki2.online/ducklife1/",
@@ -512,7 +555,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://d.poki2.online/ducklife2/",
@@ -523,7 +567,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://d.poki2.online/ducklife3/",
@@ -534,7 +579,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://e.poki2.online/edgenotfound/",
@@ -546,7 +592,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://e.poki2.online/elasticman/",
@@ -558,7 +605,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://e.poki2.online/endlesswar3/",
@@ -569,7 +617,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://e.poki2.online/evil-glitch/",
@@ -581,7 +630,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://e.poki2.online/exo/",
@@ -592,7 +642,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://f.poki2.online/factoryballs/",
@@ -604,7 +655,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://f.poki2.online/fake-virus/",
@@ -616,7 +668,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://f.poki2.online/flappy-2048/",
@@ -628,7 +681,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://f.poki2.online/flappy-bird/",
@@ -640,7 +694,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://f.poki2.online/flashtetris/",
@@ -651,7 +706,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://g.poki2.online/game-inside/",
@@ -663,7 +719,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://g.poki2.online/geodash/",
@@ -675,7 +732,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://g.poki2.online/getaway-shootout/",
@@ -686,7 +744,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://g.poki2.online/gimme-the-airpod/",
@@ -698,7 +757,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://g.poki2.online/glass-city/",
@@ -709,7 +769,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://g.poki2.online/google-snake/",
@@ -720,7 +781,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://g.poki2.online/grindcraft/",
@@ -732,7 +794,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://h.poki2.online/hackertype/",
@@ -744,7 +807,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://h.poki2.online/hba/",
@@ -755,7 +819,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://h.poki2.online/helicopter/",
@@ -767,7 +832,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://h.poki2.online/hexempire/",
@@ -779,7 +845,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://h.poki2.online/HexGL/",
@@ -790,7 +857,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://h.poki2.online/hextris/",
@@ -802,7 +870,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://i.poki2.online/idle-breakout/",
@@ -814,7 +883,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://i.poki2.online/idle-shark/",
@@ -826,7 +896,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://i.poki2.online/impossiblequiz/",
@@ -838,7 +909,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://i.poki2.online/interactivebuddy/",
@@ -850,7 +922,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://j.poki2.online/just-one-boss/",
@@ -861,7 +934,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://k.poki2.online/kittencannon/",
@@ -873,7 +947,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://k.poki2.online/krunker/",
@@ -884,7 +959,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://l.poki2.online/learntofly/",
@@ -895,7 +971,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/mario/",
@@ -906,7 +983,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/matrixrampage/",
@@ -917,7 +995,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/meme2048/",
@@ -929,7 +1008,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://m.poki2.online/minecraft/",
@@ -940,7 +1020,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/minecraft-classic/",
@@ -951,7 +1032,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/minesweeper/",
@@ -963,7 +1045,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://m.poki2.online/miniputt/",
@@ -975,7 +1058,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/missiles/",
@@ -987,7 +1071,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://m.poki2.online/motox3m/",
@@ -998,7 +1083,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/motox3m-pool/",
@@ -1010,7 +1096,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/motox3m-spooky/",
@@ -1021,7 +1108,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/motox3m-winter/",
@@ -1032,7 +1120,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://n.poki2.online/n-gon/",
@@ -1043,7 +1132,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://n.poki2.online/ns-shaft/",
@@ -1054,7 +1144,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://o.poki2.online/om-bounce/",
@@ -1066,7 +1157,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://p.poki2.online/pandemic2/",
@@ -1078,7 +1170,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://p.poki2.online/papaspizzaria/",
@@ -1090,7 +1183,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://p.poki2.online/paperio2/",
@@ -1102,7 +1196,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://p.poki2.online/papery-planes/",
@@ -1114,7 +1209,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://p.poki2.online/particle-clicker/",
@@ -1126,7 +1222,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://p.poki2.online/polybranch/",
@@ -1138,7 +1235,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://p.poki2.online/portalflash/",
@@ -1149,7 +1247,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://p.poki2.online/precision-client/",
@@ -1160,7 +1259,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://p.poki2.online/push-the-square/",
@@ -1172,7 +1272,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://p.poki2.online/push-your-luck/",
@@ -1184,7 +1285,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://r.poki2.online/retro-bowl/",
@@ -1196,7 +1298,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://r.poki2.online/rolly-vortex/",
@@ -1208,7 +1311,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://r.poki2.online/rooftop-snipers/",
@@ -1220,7 +1324,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/sand-game/",
@@ -1232,7 +1337,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://s.poki2.online/slope/",
@@ -1243,7 +1349,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/sm64/",
@@ -1254,7 +1361,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/smashkarts/",
@@ -1266,7 +1374,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/smokingbarrels/",
@@ -1277,7 +1386,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/snowbattle/",
@@ -1288,7 +1398,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/soldier-legend/",
@@ -1299,7 +1410,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/solitaire/",
@@ -1311,7 +1423,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/sort-the-court/",
@@ -1323,7 +1436,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://s.poki2.online/soundboard/",
@@ -1335,7 +1449,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://s.poki2.online/stack/",
@@ -1347,7 +1462,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://s.poki2.online/stack-bump-3d/",
@@ -1359,7 +1475,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://s.poki2.online/stealingthediamond/",
@@ -1371,7 +1488,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/stickwar/",
@@ -1383,7 +1501,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/stormthehouse2/",
@@ -1394,7 +1513,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/superhot/",
@@ -1405,7 +1525,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/swerve/",
@@ -1417,7 +1538,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://t.poki2.online/tacticalassasin2/",
@@ -1429,7 +1551,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/tank-trouble-2/",
@@ -1440,7 +1563,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/tanuki-sunset/",
@@ -1451,7 +1575,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/temple-run-2/",
@@ -1463,7 +1588,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://t.poki2.online/thebattle/",
@@ -1474,7 +1600,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/the-final-earth/",
@@ -1486,7 +1613,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/theheist/",
@@ -1498,7 +1626,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/there-is-no-game/",
@@ -1510,7 +1639,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/thisistheonlylevel/",
@@ -1521,7 +1651,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/tosstheturtle/",
@@ -1533,7 +1664,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/tube-jumpers/",
@@ -1544,7 +1676,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/tunnel-rush/",
@@ -1555,7 +1688,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/tv-static/",
@@ -1567,7 +1701,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   },
   {
     "link": "https://v.poki2.online/vex3/",
@@ -1578,7 +1713,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://v.poki2.online/vex4/",
@@ -1589,7 +1725,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://v.poki2.online/vex5/",
@@ -1600,7 +1737,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://v.poki2.online/vex6/",
@@ -1611,7 +1749,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://w.poki2.online/webretro-local/",
@@ -1622,7 +1761,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://w.poki2.online/wolf3d/",
@@ -1633,7 +1773,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://w.poki2.online/wordle/",
@@ -1645,7 +1786,8 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "link": "https://w.poki2.online/worlds-hardest-game/",
@@ -1656,7 +1798,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://w.poki2.online/worlds-hardest-game-2/",
@@ -1667,7 +1810,8 @@
     ],
     "input": [
       "keyboard"
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "link": "https://y.poki2.online/you-are-bezos/",
@@ -1679,6 +1823,7 @@
     "input": [
       "touch",
       "keyboard"
-    ]
+    ],
+    "orientation": "both"
   }
 ]

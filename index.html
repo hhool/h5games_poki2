@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Poki2 — Free Online Games</title>
     <meta name="description" content="Play the best free online games! Action, puzzle, racing, sports and more. No downloads, instant play in your browser.">
-    <link rel="stylesheet" href="css/style.css?v=20260207d">
+    <link rel="stylesheet" href="css/style.css?v=20260207e">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
@@ -136,8 +136,21 @@
         <iframe id="game-iframe" class="game-iframe" allowfullscreen allow="autoplay; fullscreen; gamepad"></iframe>
         <!-- Loading overlay (shown while game loads) -->
         <div class="game-loading-overlay" id="game-loading">
-            <div class="loading-spinner"></div>
-            <p class="loading-text">Loading...</p>
+            <div class="loading-content">
+                <div class="loading-game-icon" id="loading-game-icon"></div>
+                <p class="loading-game-title" id="loading-game-title"></p>
+                <div class="loading-bar-track">
+                    <div class="loading-bar-fill" id="loading-bar-fill"></div>
+                </div>
+                <p class="loading-percent" id="loading-percent">0%</p>
+            </div>
+        </div>
+        <!-- Orientation hint (shown on mobile after load) -->
+        <div class="orient-hint" id="orient-hint">
+            <div class="orient-hint-inner">
+                <div class="orient-hint-icon" id="orient-hint-icon">📱</div>
+                <p class="orient-hint-text" id="orient-hint-text">Please rotate your device</p>
+            </div>
         </div>
         <!-- Pause overlay (shown when exiting fullscreen) -->
         <div class="game-pause-overlay" id="game-pause">
@@ -170,6 +183,6 @@
         </div>
     </div>
 
-    <script src="js/app.js?v=20260207d"></script>
+    <script src="js/app.js?v=20260207e"></script>
 </body>
 </html>
