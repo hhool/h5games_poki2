@@ -3,1827 +3,1264 @@
     "link": "https://1.poki2.online/1/",
     "imgSrc": "https://1.poki2.online/1/icon.png",
     "title": "1",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://1.poki2.online/1v1space/",
     "imgSrc": "https://1.poki2.online/1v1space/icon.png",
     "title": "1v1.space",
-    "tags": [
-      "competitive"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://2.poki2.online/2048/",
     "imgSrc": "https://2.poki2.online/2048/icon.png",
     "title": "2048",
-    "tags": [
-      "puzzle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://9.poki2.online/9007199254740992/",
     "imgSrc": "https://9.poki2.online/9007199254740992/icon.png",
     "title": "9007199254740992",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://a.poki2.online/achievementunlocked/",
     "imgSrc": "https://a.poki2.online/achievementunlocked/icon.png",
     "title": "Achievement Unlocked",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://a.poki2.online/adrenalinechallenge/",
     "imgSrc": "https://a.poki2.online/adrenalinechallenge/icon.png",
     "title": "Adrenaline Challenge",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://a.poki2.online/among-us/",
     "imgSrc": "https://a.poki2.online/among-us/icon.png",
     "title": "Among Us",
-    "tags": [
-      "competitive"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["competitive"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://a.poki2.online/avalanche/",
     "imgSrc": "https://a.poki2.online/avalanche/icon.png",
     "title": "Avalanche",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://b.poki2.online/backrooms/",
     "imgSrc": "https://b.poki2.online/backrooms/icon.png",
     "title": "Backrooms",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/basketball-stars/",
     "imgSrc": "https://b.poki2.online/basketball-stars/icon.png",
     "title": "Basketball Stars",
-    "tags": [
-      "sports"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["sports"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/battleforgondor/",
     "imgSrc": "https://b.poki2.online/battleforgondor/icon.png",
     "title": "Battle for Gondor",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/bigredbutton/",
     "imgSrc": "https://b.poki2.online/bigredbutton/icon.png",
     "title": "Big Red Button",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://b.poki2.online/blackknight/",
     "imgSrc": "https://b.poki2.online/blackknight/icon.png",
     "title": "Black Knight",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/bloonstd/",
     "imgSrc": "https://b.poki2.online/bloonstd/icon.png",
     "title": "Bloons TD",
-    "tags": [
-      "strategy"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["strategy"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/bloonstd2/",
     "imgSrc": "https://b.poki2.online/bloonstd2/icon.png",
     "title": "Bloons TD 2",
-    "tags": [
-      "strategy"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["strategy"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/bloxors/",
     "imgSrc": "https://b.poki2.online/bloxors/icon.png",
     "title": "Bloxors",
-    "tags": [
-      "puzzle"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["puzzle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/boxhead2play/",
     "imgSrc": "https://b.poki2.online/boxhead2play/icon.png",
     "title": "Box Head",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/breakingthebank/",
     "imgSrc": "https://b.poki2.online/breakingthebank/icon.png",
     "title": "Breaking the Bank",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://b.poki2.online/btts/",
     "imgSrc": "https://b.poki2.online/btts/icon.png",
     "title": "Big Tower Tiny Square",
-    "tags": [
-      "strategy"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["strategy"],
+    "input": ["keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://c.poki2.online/cannon-basketball-4/",
     "imgSrc": "https://c.poki2.online/cannon-basketball-4/icon.png",
     "title": "Cannon Basketball 4",
-    "tags": [
-      "sports"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["sports"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/canyondefense/",
     "imgSrc": "https://c.poki2.online/canyondefense/icon.png",
     "title": "Canyon Defense",
-    "tags": [
-      "strategy"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["strategy"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/cell-machine/",
     "imgSrc": "https://c.poki2.online/cell-machine/icon.png",
     "title": "Cell Machine",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/championarcher/",
     "imgSrc": "https://c.poki2.online/championarcher/icon.png",
     "title": "Champion Archer",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/chrome-dino/",
     "imgSrc": "https://c.poki2.online/chrome-dino/icon.png",
     "title": "Chrome Dino",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/circlo/",
     "imgSrc": "https://c.poki2.online/circlo/icon.png",
     "title": "circlO",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://c.poki2.online/connect3/",
     "imgSrc": "https://c.poki2.online/connect3/icon.png",
     "title": "Connect 3",
-    "tags": [
-      "puzzle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://c.poki2.online/cookie-clicker/",
     "imgSrc": "https://c.poki2.online/cookie-clicker/icon.png",
     "title": "Cookie Clicker",
-    "tags": [
-      "idle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://c.poki2.online/craftmine/",
     "imgSrc": "https://c.poki2.online/craftmine/icon.png",
     "title": "CraftMine",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/creativekillchamber/",
     "imgSrc": "https://c.poki2.online/creativekillchamber/icon.png",
     "title": "Creative Kill Chamber",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/csgo-clicker/",
     "imgSrc": "https://c.poki2.online/csgo-clicker/icon.png",
     "title": "CS:GO Clicker",
-    "tags": [
-      "idle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://c.poki2.online/ctr/",
     "imgSrc": "https://c.poki2.online/ctr/icon.png",
     "title": "Cut the Rope",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["racing", "strategy  "],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://c.poki2.online/ctr-holiday/",
     "imgSrc": "https://c.poki2.online/ctr-holiday/icon.png",
     "title": "Cut the Rope Holiday",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "strategy"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://c.poki2.online/ctr-tr/",
     "imgSrc": "https://c.poki2.online/ctr-tr/icon.png",
     "title": "Cut the Rope Time Travel",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "strategy"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://c.poki2.online/cubefield/",
     "imgSrc": "https://c.poki2.online/cubefield/icon.png",
     "title": "Cubefield",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing", "strategy"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://c.poki2.online/cupcake2048/",
     "imgSrc": "https://c.poki2.online/cupcake2048/icon.png",
     "title": "Cupcake 2048",
-    "tags": [
-      "puzzle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "strategy"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://d.poki2.online/deal-or-no-deal/",
     "imgSrc": "https://d.poki2.online/deal-or-no-deal/icon.png",
     "title": "Deal or No Deal",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://d.poki2.online/death-run-3d/",
     "imgSrc": "https://d.poki2.online/death-run-3d/icon.png",
     "title": "Death Run 3D",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://d.poki2.online/defend-the-tank/",
     "imgSrc": "https://d.poki2.online/defend-the-tank/icon.png",
     "title": "Defend the Tank",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "shooting", "strategy"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://d.poki2.online/doge2048/",
     "imgSrc": "https://d.poki2.online/doge2048/icon.png",
     "title": "Doge 2048",
-    "tags": [
-      "puzzle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "puzzle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://d.poki2.online/DogeMiner/",
     "imgSrc": "https://d.poki2.online/DogeMiner/icon.png",
     "title": "Doge Miner",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://d.poki2.online/doodle-jump/",
     "imgSrc": "https://d.poki2.online/doodle-jump/icon.png",
     "title": "Doodle Jump",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://d.poki2.online/doublewires/",
     "imgSrc": "https://d.poki2.online/doublewires/icon.png",
     "title": "Double Wires",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://d.poki2.online/draw-the-hill/",
     "imgSrc": "https://d.poki2.online/draw-the-hill/icon.png",
     "title": "Draw the Hill",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "action", "puzzle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://d.poki2.online/ducklife1/",
     "imgSrc": "https://d.poki2.online/ducklife1/icon.png",
     "title": "Duck Life",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["idle", "puzzle", "racing", "strategy"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://d.poki2.online/ducklife2/",
     "imgSrc": "https://d.poki2.online/ducklife2/icon.png",
     "title": "Duck Life 2",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["idle", "puzzle", "racing", "strategy"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://d.poki2.online/ducklife3/",
     "imgSrc": "https://d.poki2.online/ducklife3/icon.png",
     "title": "Duck Life 3",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["idle", "puzzle", "racing", "strategy"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://e.poki2.online/edgenotfound/",
     "imgSrc": "https://e.poki2.online/edgenotfound/icon.png",
     "title": "Edge Not Found",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle", "racing", "strategy"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://e.poki2.online/elasticman/",
     "imgSrc": "https://e.poki2.online/elasticman/icon.png",
     "title": "Elastic Man",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://e.poki2.online/endlesswar3/",
     "imgSrc": "https://e.poki2.online/endlesswar3/icon.png",
     "title": "Endless War 3",
-    "tags": [
-      "shooting"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["shooting"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://e.poki2.online/evil-glitch/",
     "imgSrc": "https://e.poki2.online/evil-glitch/icon.png",
     "title": "Evil Glitch",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "shooting", "racing", "strategy"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://e.poki2.online/exo/",
     "imgSrc": "https://e.poki2.online/exo/icon.png",
     "title": "Exo",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://f.poki2.online/factoryballs/",
     "imgSrc": "https://f.poki2.online/factoryballs/icon.png",
     "title": "Factory Balls Forever",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://f.poki2.online/fake-virus/",
     "imgSrc": "https://f.poki2.online/fake-virus/icon.png",
     "title": "Fake Virus",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://f.poki2.online/flappy-2048/",
     "imgSrc": "https://f.poki2.online/flappy-2048/icon.png",
     "title": "Flappy 2048",
-    "tags": [
-      "puzzle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["racing", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://f.poki2.online/flappy-bird/",
     "imgSrc": "https://f.poki2.online/flappy-bird/icon.png",
     "title": "Flappy Bird",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://f.poki2.online/flashtetris/",
     "imgSrc": "https://f.poki2.online/flashtetris/icon.png",
     "title": "Flash Tetris",
-    "tags": [
-      "puzzle"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["idle", "puzzle"],
+    "input": ["keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://g.poki2.online/game-inside/",
     "imgSrc": "https://g.poki2.online/game-inside/icon.png",
     "title": "Game Inside a Game Inside a Game...",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle", "other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://g.poki2.online/geodash/",
     "imgSrc": "https://g.poki2.online/geodash/icon.png",
     "title": "Geometry Dash (Scratch)",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["racing", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://g.poki2.online/getaway-shootout/",
     "imgSrc": "https://g.poki2.online/getaway-shootout/icon.png",
     "title": "Getaway Shootout",
-    "tags": [
-      "shooting"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["shooting"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://g.poki2.online/gimme-the-airpod/",
     "imgSrc": "https://g.poki2.online/gimme-the-airpod/icon.png",
     "title": "Gimme the Airpod",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://g.poki2.online/glass-city/",
     "imgSrc": "https://g.poki2.online/glass-city/icon.png",
     "title": "Glass City",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://g.poki2.online/google-snake/",
     "imgSrc": "https://g.poki2.online/google-snake/icon.png",
     "title": "Google Snake",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://g.poki2.online/grindcraft/",
     "imgSrc": "https://g.poki2.online/grindcraft/icon.png",
     "title": "Grind Craft",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://h.poki2.online/hackertype/",
     "imgSrc": "https://h.poki2.online/hackertype/icon.png",
     "title": "Hacker Typer",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://h.poki2.online/hba/",
     "imgSrc": "https://h.poki2.online/hba/icon.png",
     "title": "Hover Bot Arena",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://h.poki2.online/helicopter/",
     "imgSrc": "https://h.poki2.online/helicopter/icon.png",
     "title": "Helicopter",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "racing"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://h.poki2.online/hexempire/",
     "imgSrc": "https://h.poki2.online/hexempire/icon.png",
     "title": "Hex Empire",
-    "tags": [
-      "strategy"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["strategy", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://h.poki2.online/HexGL/",
     "imgSrc": "https://h.poki2.online/HexGL/icon.png",
     "title": "HexGL",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["competitive", "racing", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://h.poki2.online/hextris/",
     "imgSrc": "https://h.poki2.online/hextris/icon.png",
     "title": "Hextris",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "competitive"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://i.poki2.online/idle-breakout/",
     "imgSrc": "https://i.poki2.online/idle-breakout/icon.png",
     "title": "Idle Breakout",
-    "tags": [
-      "idle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://i.poki2.online/idle-shark/",
     "imgSrc": "https://i.poki2.online/idle-shark/icon.png",
     "title": "Idle Shark",
-    "tags": [
-      "idle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://i.poki2.online/impossiblequiz/",
     "imgSrc": "https://i.poki2.online/impossiblequiz/icon.png",
     "title": "Impossible Quiz",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://i.poki2.online/interactivebuddy/",
     "imgSrc": "https://i.poki2.online/interactivebuddy/icon.png",
     "title": "Interactive Buddy",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://j.poki2.online/just-one-boss/",
     "imgSrc": "https://j.poki2.online/just-one-boss/icon.png",
     "title": "Just One Boss",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://k.poki2.online/kittencannon/",
     "imgSrc": "https://k.poki2.online/kittencannon/icon.png",
     "title": "Kitten Cannon",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["shooting", "competitive"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://k.poki2.online/krunker/",
     "imgSrc": "https://k.poki2.online/krunker/icon.png",
     "title": "Krunker",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["strategy", "shooting", "competitive"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://l.poki2.online/learntofly/",
     "imgSrc": "https://l.poki2.online/learntofly/icon.png",
     "title": "Learn To Fly",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["action", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/mario/",
     "imgSrc": "https://m.poki2.online/mario/icon.png",
     "title": "Mario",
-    "tags": [
-      "competitive"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["competitive"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/matrixrampage/",
     "imgSrc": "https://m.poki2.online/matrixrampage/icon.png",
     "title": "Matrix Rampage",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle", "other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/meme2048/",
     "imgSrc": "https://m.poki2.online/meme2048/icon.png",
     "title": "Meme 2048",
-    "tags": [
-      "puzzle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://m.poki2.online/minecraft/",
     "imgSrc": "https://m.poki2.online/minecraft/icon.png",
     "title": "Eaglercraft",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["strategy", "shooting", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/minecraft-classic/",
     "imgSrc": "https://m.poki2.online/minecraft-classic/icon.png",
     "title": "Minecraft Classic",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["strategy", "shooting", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/minesweeper/",
     "imgSrc": "https://m.poki2.online/minesweeper/icon.png",
-    "title": "Minesweeper",
-    "tags": [
-      "puzzle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+      "title": "Minesweeper",
+      "tags": ["puzzle", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://m.poki2.online/miniputt/",
     "imgSrc": "https://m.poki2.online/miniputt/icon.png",
     "title": "Mini-putt",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/missiles/",
     "imgSrc": "https://m.poki2.online/missiles/icon.png",
     "title": "Missiles",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://m.poki2.online/motox3m/",
     "imgSrc": "https://m.poki2.online/motox3m/icon.png",
     "title": "MotoX3M",
-    "tags": [
-      "racing"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing", "sports"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/motox3m-pool/",
     "imgSrc": "https://m.poki2.online/motox3m-pool/icon.png",
     "title": "MotoX3M Pool",
-    "tags": [
-      "racing",
-      "sports"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing", "sports"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/motox3m-spooky/",
     "imgSrc": "https://m.poki2.online/motox3m-spooky/icon.png",
     "title": "MotoX3M Spooky",
-    "tags": [
-      "racing"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing", "sports"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://m.poki2.online/motox3m-winter/",
     "imgSrc": "https://m.poki2.online/motox3m-winter/icon.png",
     "title": "MotoX3M Winter",
-    "tags": [
-      "racing"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing", "sports"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://n.poki2.online/n-gon/",
     "imgSrc": "https://n.poki2.online/n-gon/icon.png",
     "title": "n-gon",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["puzzle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://n.poki2.online/ns-shaft/",
     "imgSrc": "https://n.poki2.online/ns-shaft/icon.png",
     "title": "NS-Shaft",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["puzzle"],
+    "input": ["keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://o.poki2.online/om-bounce/",
     "imgSrc": "https://o.poki2.online/om-bounce/icon.png",
     "title": "Om Nom Bounce",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["racing", "puzzle", "strategy"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://p.poki2.online/pandemic2/",
     "imgSrc": "https://p.poki2.online/pandemic2/icon.png",
     "title": "Pandemic 2",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["racing", "strategy"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://p.poki2.online/papaspizzaria/",
     "imgSrc": "https://p.poki2.online/papaspizzaria/icon.png",
     "title": "Papa's Pizzaria",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://p.poki2.online/paperio2/",
     "imgSrc": "https://p.poki2.online/paperio2/icon.png",
     "title": "Paper.io 2",
-    "tags": [
-      "competitive"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["competitive"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://p.poki2.online/papery-planes/",
     "imgSrc": "https://p.poki2.online/papery-planes/icon.png",
     "title": "Papery Planes",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://p.poki2.online/particle-clicker/",
     "imgSrc": "https://p.poki2.online/particle-clicker/icon.png",
     "title": "Particle Clicker",
-    "tags": [
-      "idle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://p.poki2.online/polybranch/",
     "imgSrc": "https://p.poki2.online/polybranch/icon.png",
     "title": "PolyBranch",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://p.poki2.online/portalflash/",
     "imgSrc": "https://p.poki2.online/portalflash/icon.png",
     "title": "Portal (Flash)",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://p.poki2.online/precision-client/",
     "imgSrc": "https://p.poki2.online/precision-client/icon.png",
     "title": "Precision Client (Eaglercraft)",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://p.poki2.online/push-the-square/",
     "imgSrc": "https://p.poki2.online/push-the-square/icon.png",
     "title": "Push The Square",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://p.poki2.online/push-your-luck/",
     "imgSrc": "https://p.poki2.online/push-your-luck/icon.png",
     "title": "Push Your Luck",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["strategy", "shooting", "competitive", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://r.poki2.online/retro-bowl/",
     "imgSrc": "https://r.poki2.online/retro-bowl/icon.png",
     "title": "Retro Bowl",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["racing", "idle", "sports"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://r.poki2.online/rolly-vortex/",
     "imgSrc": "https://r.poki2.online/rolly-vortex/icon.png",
     "title": "Rolly Vortex",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["racing", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://r.poki2.online/rooftop-snipers/",
     "imgSrc": "https://r.poki2.online/rooftop-snipers/icon.png",
     "title": "Rooftop Snipers",
-    "tags": [
-      "competitive",
-      "shooting"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["competitive", "shooting"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/sand-game/",
     "imgSrc": "https://s.poki2.online/sand-game/icon.png",
     "title": "Sand Game",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://s.poki2.online/slope/",
     "imgSrc": "https://s.poki2.online/slope/icon.png",
     "title": "Slope",
-    "tags": [
-      "action"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["action"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/sm64/",
     "imgSrc": "https://s.poki2.online/sm64/icon.png",
     "title": "Super Mario 64",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["competitive", "arcade"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/smashkarts/",
     "imgSrc": "https://s.poki2.online/smashkarts/icon.png",
     "title": "Smash Carts",
-    "tags": [
-      "competitive",
-      "racing"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["competitive", "racing"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/smokingbarrels/",
     "imgSrc": "https://s.poki2.online/smokingbarrels/icon.png",
     "title": "Smoking Barrels",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["competitive", "shooting"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/snowbattle/",
     "imgSrc": "https://s.poki2.online/snowbattle/icon.png",
     "title": "Snowbattle",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing", "sports"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/soldier-legend/",
     "imgSrc": "https://s.poki2.online/soldier-legend/icon.png",
     "title": "Soilder Legend",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["competitive", "shooting"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/solitaire/",
     "imgSrc": "https://s.poki2.online/solitaire/icon.png",
     "title": "Solitare",
-    "tags": [
-      "puzzle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/sort-the-court/",
     "imgSrc": "https://s.poki2.online/sort-the-court/icon.png",
     "title": "Sort The Court",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://s.poki2.online/soundboard/",
     "imgSrc": "https://s.poki2.online/soundboard/icon.png",
     "title": "Soundboard",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://s.poki2.online/stack/",
     "imgSrc": "https://s.poki2.online/stack/icon.png",
     "title": "Stack",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://s.poki2.online/stack-bump-3d/",
     "imgSrc": "https://s.poki2.online/stack-bump-3d/icon.png",
     "title": "Stack Bump 3D",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://s.poki2.online/stealingthediamond/",
     "imgSrc": "https://s.poki2.online/stealingthediamond/icon.png",
     "title": "Stealing The Diamond",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/stickwar/",
     "imgSrc": "https://s.poki2.online/stickwar/icon.png",
     "title": "Stick War",
-    "tags": [
-      "shooting"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["shooting", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/stormthehouse2/",
     "imgSrc": "https://s.poki2.online/stormthehouse2/icon.png",
     "title": "Storm The House 2",
-    "tags": [
-      "shooting"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["shooting", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/superhot/",
     "imgSrc": "https://s.poki2.online/superhot/icon.png",
     "title": "Superhot",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["puzzle", "shooting", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://s.poki2.online/swerve/",
     "imgSrc": "https://s.poki2.online/swerve/icon.png",
     "title": "Swerve",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://t.poki2.online/tacticalassasin2/",
     "imgSrc": "https://t.poki2.online/tacticalassasin2/icon.png",
     "title": "Tactical Assassin 2",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["shooting", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/tank-trouble-2/",
     "imgSrc": "https://t.poki2.online/tank-trouble-2/icon.png",
     "title": "Tank Trouble 2",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["shooting", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/tanuki-sunset/",
     "imgSrc": "https://t.poki2.online/tanuki-sunset/icon.png",
     "title": "Tanuki Sunset",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing", "sports", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/temple-run-2/",
     "imgSrc": "https://t.poki2.online/temple-run-2/icon.png",
     "title": "Temple Run 2",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["racing", "sports", "idle", "arcade"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://t.poki2.online/thebattle/",
     "imgSrc": "https://t.poki2.online/thebattle/icon.png",
     "title": "The Battle",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["competitive", "arcade"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/the-final-earth/",
     "imgSrc": "https://t.poki2.online/the-final-earth/icon.png",
     "title": "The Final Earth",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/theheist/",
     "imgSrc": "https://t.poki2.online/theheist/icon.png",
     "title": "The Heist",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/there-is-no-game/",
     "imgSrc": "https://t.poki2.online/there-is-no-game/icon.png",
     "title": "There Is No Game",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "other"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/thisistheonlylevel/",
     "imgSrc": "https://t.poki2.online/thisistheonlylevel/icon.png",
     "title": "This Is The Only Level",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["puzzle", "other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/tosstheturtle/",
     "imgSrc": "https://t.poki2.online/tosstheturtle/icon.png",
     "title": "Toss The Turtle",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["shooting", "competitive", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/tube-jumpers/",
     "imgSrc": "https://t.poki2.online/tube-jumpers/icon.png",
     "title": "Tube Jumpers",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/tunnel-rush/",
     "imgSrc": "https://t.poki2.online/tunnel-rush/icon.png",
     "title": "Tunnel Rush",
-    "tags": [
-      "racing"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://t.poki2.online/tv-static/",
     "imgSrc": "https://t.poki2.online/tv-static/icon.png",
     "title": "TV Static",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
   },
   {
     "link": "https://v.poki2.online/vex3/",
     "imgSrc": "https://v.poki2.online/vex3/icon.png",
     "title": "Vex 3",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://v.poki2.online/vex4/",
     "imgSrc": "https://v.poki2.online/vex4/icon.png",
     "title": "Vex 4",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://v.poki2.online/vex5/",
     "imgSrc": "https://v.poki2.online/vex5/icon.png",
     "title": "Vex 5",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://v.poki2.online/vex6/",
     "imgSrc": "https://v.poki2.online/vex6/icon.png",
     "title": "Vex 6",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["racing", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://w.poki2.online/webretro-local/",
     "imgSrc": "https://w.poki2.online/webretro-local/icon.png",
     "title": "Web Retro Local",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://w.poki2.online/wolf3d/",
     "imgSrc": "https://w.poki2.online/wolf3d/icon.png",
     "title": "Wolfenstein 3D",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["idle", "other"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://w.poki2.online/wordle/",
     "imgSrc": "https://w.poki2.online/wordle/icon.png",
     "title": "Wordle",
-    "tags": [
-      "puzzle"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["puzzle", "idle"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait"
   },
   {
     "link": "https://w.poki2.online/worlds-hardest-game/",
     "imgSrc": "https://w.poki2.online/worlds-hardest-game/icon.png",
     "title": "World's Hardest Game",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["puzzle", "arcade", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://w.poki2.online/worlds-hardest-game-2/",
     "imgSrc": "https://w.poki2.online/worlds-hardest-game-2/icon.png",
     "title": "World's Hardest Game 2",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "keyboard"
-    ],
+    "tags": ["puzzle", "arcade", "idle"],
+    "input": ["keyboard"],
     "orientation": "landscape"
   },
   {
     "link": "https://y.poki2.online/you-are-bezos/",
     "imgSrc": "https://y.poki2.online/you-are-bezos/icon.png",
     "title": "You Are Jeff Bezos",
-    "tags": [
-      "other"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
+    "tags": ["other"],
+    "input": ["touch", "keyboard"],
     "orientation": "both"
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/trashndash",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/trashndash/res/bg_title.png",
+    "title": "Troll Boxing",
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
+    "orientation": "landscape"
+  },
+  {
+    "link": "https://y.poki2.online/you-have-to-win-the-game/",
+    "imgSrc": "https://y.poki2.online/you-have-to-win-the-game/icon.png",
+    "title": "You Have To Win The Game",
+    "tags": ["idle"],
+    "input": ["keyboard"],
+    "orientation": "landscape"
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/trollboxing",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/trollboxing/images/money-sheet0.png",
+    "title": "Troll Boxing",
+    "tags": ["racing", "idle"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait"
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/uforun",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/uforun/icon-256.png",
+    "title": "Ufo Run",
+    "tags": ["racing", "competitive"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait"
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/veggirabbit",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/veggirabbit/images/gametitle-sheet0.png",
+    "title": "Veggi Rabbit",
+    "tags": ["strategy"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait"
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/woodblock",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/woodblock/icon-128.png",
+    "title": "Wood Block",
+    "tags": ["strategy"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait"
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/xtypesky",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/xtypesky/phobos.png",
+    "title": "X Type Sky",
+    "tags": ["shooting"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait"
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/zapaliens",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/zapaliens/icon.png",
+    "title": "Zapaliens",
+    "tags": ["action"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait"
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/zcj2",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/zcj2/zcj2/icon.png",
+    "title": "Zombies Can't Jump 2",
+    "tags": ["action"],
+    "input": ["touch", "keyboard"],
+    "orientation": "landscape"
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/zombienight",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/zombienight/icon-128.png",
+    "title": "Zombie Night",
+    "tags": ["action"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait"
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/zombiescantjump",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/zombiescantjump/zombiescantjump/icon.png",
+    "title": "Zombies Can't Jump",
+    "tags": ["action"],
+    "input": ["touch", "keyboard"],
+    "orientation": "landscape"
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/zombieworld",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/zombieworld/icon-128.png",
+    "title": "Zombie World",
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait"
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/zoostuner",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/zoostuner/icon-128.png",
+    "title": "Zoon Stuner",
+    "tags": ["idle"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait"
   }
 ]
