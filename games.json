@@ -5,7 +5,9 @@
     "title": "1",
     "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://1.poki2.online/1v1space/",
@@ -13,7 +15,9 @@
     "title": "1v1.space",
     "tags": ["puzzle", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://2.poki2.online/2048/",
@@ -21,7 +25,9 @@
     "title": "2048",
     "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://9.poki2.online/9007199254740992/",
@@ -29,7 +35,9 @@
     "title": "9007199254740992",
     "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://a.poki2.online/achievementunlocked/",
@@ -37,7 +45,9 @@
     "title": "Achievement Unlocked",
     "tags": ["puzzle", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://a.poki2.online/adrenalinechallenge/",
@@ -45,7 +55,9 @@
     "title": "Adrenaline Challenge",
     "tags": ["other"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://a.poki2.online/among-us/",
@@ -53,7 +65,9 @@
     "title": "Among Us",
     "tags": ["competitive"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://a.poki2.online/avalanche/",
@@ -61,7 +75,9 @@
     "title": "Avalanche",
     "tags": ["other"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://b.poki2.online/backrooms/",
@@ -69,7 +85,9 @@
     "title": "Backrooms",
     "tags": ["other"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://b.poki2.online/basketball-stars/",
@@ -77,15 +95,19 @@
     "title": "Basketball Stars",
     "tags": ["sports"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://b.poki2.online/battleforgondor/",
     "imgSrc": "https://b.poki2.online/battleforgondor/icon.png",
     "title": "Battle for Gondor",
-    "tags": ["other"],
+    "tags": ["strategy"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://b.poki2.online/bigredbutton/",
@@ -93,7 +115,9 @@
     "title": "Big Red Button",
     "tags": ["other"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://b.poki2.online/blackknight/",
@@ -101,7 +125,9 @@
     "title": "Black Knight",
     "tags": ["other"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://b.poki2.online/bloonstd/",
@@ -109,7 +135,9 @@
     "title": "Bloons TD",
     "tags": ["strategy"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://b.poki2.online/bloonstd2/",
@@ -117,7 +145,9 @@
     "title": "Bloons TD 2",
     "tags": ["strategy"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://b.poki2.online/bloxors/",
@@ -125,7 +155,9 @@
     "title": "Bloxors",
     "tags": ["puzzle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://b.poki2.online/boxhead2play/",
@@ -133,15 +165,19 @@
     "title": "Box Head",
     "tags": ["other"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://b.poki2.online/breakingthebank/",
     "imgSrc": "https://b.poki2.online/breakingthebank/icon.png",
     "title": "Breaking the Bank",
-    "tags": ["other"],
+    "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://b.poki2.online/btts/",
@@ -149,63 +185,79 @@
     "title": "Big Tower Tiny Square",
     "tags": ["strategy"],
     "input": ["keyboard"],
-    "orientation": "portrait"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/cannon-basketball-4/",
     "imgSrc": "https://c.poki2.online/cannon-basketball-4/icon.png",
     "title": "Cannon Basketball 4",
-    "tags": ["sports"],
+    "tags": ["achievement", "idle", "cannon"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/canyondefense/",
     "imgSrc": "https://c.poki2.online/canyondefense/icon.png",
     "title": "Canyon Defense",
-    "tags": ["strategy"],
+    "tags": ["strategy", "shooting", "cannon"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/cell-machine/",
     "imgSrc": "https://c.poki2.online/cell-machine/icon.png",
     "title": "Cell Machine",
-    "tags": ["other"],
+    "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/championarcher/",
     "imgSrc": "https://c.poki2.online/championarcher/icon.png",
     "title": "Champion Archer",
-    "tags": ["other"],
+    "tags": ["shooting"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/chrome-dino/",
     "imgSrc": "https://c.poki2.online/chrome-dino/icon.png",
     "title": "Chrome Dino",
-    "tags": ["other"],
+    "tags": ["idle", "competitive", "chrome"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/circlo/",
     "imgSrc": "https://c.poki2.online/circlo/icon.png",
     "title": "circlO",
-    "tags": ["other"],
+    "tags": ["idle", "other"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "portrait",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/connect3/",
     "imgSrc": "https://c.poki2.online/connect3/icon.png",
     "title": "Connect 3",
-    "tags": ["puzzle"],
+    "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/cookie-clicker/",
@@ -213,71 +265,89 @@
     "title": "Cookie Clicker",
     "tags": ["idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/craftmine/",
     "imgSrc": "https://c.poki2.online/craftmine/icon.png",
     "title": "CraftMine",
-    "tags": ["other"],
+    "tags": ["racing", "arcade"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/creativekillchamber/",
     "imgSrc": "https://c.poki2.online/creativekillchamber/icon.png",
     "title": "Creative Kill Chamber",
-    "tags": ["other"],
+    "tags": ["shooting", "competitive"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/csgo-clicker/",
     "imgSrc": "https://c.poki2.online/csgo-clicker/icon.png",
     "title": "CS:GO Clicker",
-    "tags": ["idle"],
+    "tags": ["shooting", "competitive"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/ctr/",
     "imgSrc": "https://c.poki2.online/ctr/icon.png",
     "title": "Cut the Rope",
-    "tags": ["racing", "strategy  "],
+    "tags": ["achievement", "strategy"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/ctr-holiday/",
     "imgSrc": "https://c.poki2.online/ctr-holiday/icon.png",
     "title": "Cut the Rope Holiday",
-    "tags": ["puzzle", "strategy"],
+    "tags": ["achievement", "strategy"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/ctr-tr/",
     "imgSrc": "https://c.poki2.online/ctr-tr/icon.png",
     "title": "Cut the Rope Time Travel",
-    "tags": ["puzzle", "strategy"],
+    "tags": ["achievement", "strategy"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/cubefield/",
     "imgSrc": "https://c.poki2.online/cubefield/icon.png",
     "title": "Cubefield",
-    "tags": ["racing", "strategy"],
+    "tags": ["achievement", "strategy"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://c.poki2.online/cupcake2048/",
     "imgSrc": "https://c.poki2.online/cupcake2048/icon.png",
     "title": "Cupcake 2048",
-    "tags": ["puzzle", "strategy"],
+    "tags": ["puzzle", "strategy", "2048"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://d.poki2.online/deal-or-no-deal/",
@@ -285,7 +355,9 @@
     "title": "Deal or No Deal",
     "tags": ["idle", "other"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://d.poki2.online/death-run-3d/",
@@ -293,7 +365,9 @@
     "title": "Death Run 3D",
     "tags": ["idle", "other"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://d.poki2.online/defend-the-tank/",
@@ -301,15 +375,19 @@
     "title": "Defend the Tank",
     "tags": ["idle", "shooting", "strategy"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://d.poki2.online/doge2048/",
     "imgSrc": "https://d.poki2.online/doge2048/icon.png",
     "title": "Doge 2048",
-    "tags": ["idle", "puzzle"],
+    "tags": ["idle", "puzzle", "2048"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://d.poki2.online/DogeMiner/",
@@ -317,15 +395,19 @@
     "title": "Doge Miner",
     "tags": ["idle", "other"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://d.poki2.online/doodle-jump/",
     "imgSrc": "https://d.poki2.online/doodle-jump/icon.png",
     "title": "Doodle Jump",
-    "tags": ["idle", "other"],
+    "tags": ["idle", "racing"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://d.poki2.online/doublewires/",
@@ -333,7 +415,9 @@
     "title": "Double Wires",
     "tags": ["other"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://d.poki2.online/draw-the-hill/",
@@ -341,39 +425,49 @@
     "title": "Draw the Hill",
     "tags": ["idle", "action", "puzzle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://d.poki2.online/ducklife1/",
     "imgSrc": "https://d.poki2.online/ducklife1/icon.png",
     "title": "Duck Life",
-    "tags": ["idle", "puzzle", "racing", "strategy"],
+    "tags": ["idle", "puzzle", "strategy"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://d.poki2.online/ducklife2/",
     "imgSrc": "https://d.poki2.online/ducklife2/icon.png",
     "title": "Duck Life 2",
-    "tags": ["idle", "puzzle", "racing", "strategy"],
+    "tags": ["idle", "puzzle", "strategy"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://d.poki2.online/ducklife3/",
     "imgSrc": "https://d.poki2.online/ducklife3/icon.png",
     "title": "Duck Life 3",
-    "tags": ["idle", "puzzle", "racing", "strategy"],
+    "tags": ["idle", "puzzle", "strategy"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://e.poki2.online/edgenotfound/",
     "imgSrc": "https://e.poki2.online/edgenotfound/icon.png",
     "title": "Edge Not Found",
-    "tags": ["puzzle", "idle", "racing", "strategy"],
+    "tags": ["puzzle", "idle", "strategy"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://e.poki2.online/elasticman/",
@@ -381,7 +475,9 @@
     "title": "Elastic Man",
     "tags": ["idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://e.poki2.online/endlesswar3/",
@@ -389,15 +485,19 @@
     "title": "Endless War 3",
     "tags": ["shooting"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://e.poki2.online/evil-glitch/",
     "imgSrc": "https://e.poki2.online/evil-glitch/icon.png",
     "title": "Evil Glitch",
-    "tags": ["idle", "shooting", "racing", "strategy"],
+    "tags": ["idle", "shooting", "strategy"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://e.poki2.online/exo/",
@@ -405,7 +505,9 @@
     "title": "Exo",
     "tags": ["idle", "other"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://f.poki2.online/factoryballs/",
@@ -413,7 +515,9 @@
     "title": "Factory Balls Forever",
     "tags": ["other"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://f.poki2.online/fake-virus/",
@@ -421,31 +525,39 @@
     "title": "Fake Virus",
     "tags": ["other"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://f.poki2.online/flappy-2048/",
     "imgSrc": "https://f.poki2.online/flappy-2048/icon.png",
     "title": "Flappy 2048",
-    "tags": ["racing", "idle"],
+    "tags": ["competitive", "idle", "2048"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://f.poki2.online/flappy-bird/",
     "imgSrc": "https://f.poki2.online/flappy-bird/icon.png",
     "title": "Flappy Bird",
-    "tags": ["idle", "other"],
+    "tags": ["idle", "competitive"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://f.poki2.online/flashtetris/",
     "imgSrc": "https://f.poki2.online/flashtetris/icon.png",
     "title": "Flash Tetris",
-    "tags": ["idle", "puzzle"],
+    "tags": ["idle", "puzzle", "tetris"],
     "input": ["keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://g.poki2.online/game-inside/",
@@ -453,15 +565,19 @@
     "title": "Game Inside a Game Inside a Game...",
     "tags": ["puzzle", "idle", "other"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://g.poki2.online/geodash/",
     "imgSrc": "https://g.poki2.online/geodash/icon.png",
     "title": "Geometry Dash (Scratch)",
-    "tags": ["racing", "idle"],
+    "tags": ["achievement", "dash", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://g.poki2.online/getaway-shootout/",
@@ -469,39 +585,49 @@
     "title": "Getaway Shootout",
     "tags": ["shooting"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://g.poki2.online/gimme-the-airpod/",
     "imgSrc": "https://g.poki2.online/gimme-the-airpod/icon.png",
     "title": "Gimme the Airpod",
-    "tags": ["other"],
-    "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "tags": ["idle"],
+    "input": ["keyboard"],
+    "orientation": "both",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://g.poki2.online/glass-city/",
     "imgSrc": "https://g.poki2.online/glass-city/icon.png",
     "title": "Glass City",
-    "tags": ["other"],
+    "tags": ["shooting", "competitive", "arcade"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://g.poki2.online/google-snake/",
     "imgSrc": "https://g.poki2.online/google-snake/icon.png",
     "title": "Google Snake",
-    "tags": ["racing", "idle"],
+    "tags": ["idle", "snake"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://g.poki2.online/grindcraft/",
     "imgSrc": "https://g.poki2.online/grindcraft/icon.png",
     "title": "Grind Craft",
-    "tags": ["idle", "other"],
+    "tags": ["idle", "strategy"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://h.poki2.online/hackertype/",
@@ -509,7 +635,9 @@
     "title": "Hacker Typer",
     "tags": ["idle", "other"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://h.poki2.online/hba/",
@@ -517,7 +645,9 @@
     "title": "Hover Bot Arena",
     "tags": ["idle", "other"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://h.poki2.online/helicopter/",
@@ -525,7 +655,9 @@
     "title": "Helicopter",
     "tags": ["idle", "racing"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": false
   },
   {
     "link": "https://h.poki2.online/hexempire/",
@@ -533,7 +665,9 @@
     "title": "Hex Empire",
     "tags": ["strategy", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": false
   },
   {
     "link": "https://h.poki2.online/HexGL/",
@@ -541,7 +675,9 @@
     "title": "HexGL",
     "tags": ["competitive", "racing", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": false
   },
   {
     "link": "https://h.poki2.online/hextris/",
@@ -549,7 +685,9 @@
     "title": "Hextris",
     "tags": ["idle", "competitive"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
   },
   {
     "link": "https://i.poki2.online/idle-breakout/",
@@ -557,7 +695,9 @@
     "title": "Idle Breakout",
     "tags": ["idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://i.poki2.online/idle-shark/",
@@ -565,7 +705,9 @@
     "title": "Idle Shark",
     "tags": ["idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://i.poki2.online/impossiblequiz/",
@@ -573,7 +715,9 @@
     "title": "Impossible Quiz",
     "tags": ["idle", "other"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://i.poki2.online/interactivebuddy/",
@@ -581,7 +725,9 @@
     "title": "Interactive Buddy",
     "tags": ["other"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://j.poki2.online/just-one-boss/",
@@ -589,23 +735,29 @@
     "title": "Just One Boss",
     "tags": ["other"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://k.poki2.online/kittencannon/",
     "imgSrc": "https://k.poki2.online/kittencannon/icon.png",
     "title": "Kitten Cannon",
-    "tags": ["shooting", "competitive"],
+    "tags": ["shooting", "competitive", "cannon"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://k.poki2.online/krunker/",
     "imgSrc": "https://k.poki2.online/krunker/icon.png",
     "title": "Krunker",
-    "tags": ["strategy", "shooting", "competitive"],
+    "tags": ["strategy", "shooting", "IO", "multiplayer"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://l.poki2.online/learntofly/",
@@ -613,15 +765,19 @@
     "title": "Learn To Fly",
     "tags": ["action", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://m.poki2.online/mario/",
     "imgSrc": "https://m.poki2.online/mario/icon.png",
     "title": "Mario",
-    "tags": ["competitive"],
+    "tags": ["competitive", "mario", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://m.poki2.online/matrixrampage/",
@@ -629,7 +785,9 @@
     "title": "Matrix Rampage",
     "tags": ["puzzle", "idle", "other"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://m.poki2.online/meme2048/",
@@ -637,7 +795,9 @@
     "title": "Meme 2048",
     "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://m.poki2.online/minecraft/",
@@ -645,7 +805,9 @@
     "title": "Eaglercraft",
     "tags": ["strategy", "shooting", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://m.poki2.online/minecraft-classic/",
@@ -653,15 +815,19 @@
     "title": "Minecraft Classic",
     "tags": ["strategy", "shooting", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://m.poki2.online/minesweeper/",
     "imgSrc": "https://m.poki2.online/minesweeper/icon.png",
-      "title": "Minesweeper",
-      "tags": ["puzzle", "idle"],
+    "title": "Minesweeper",
+    "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://m.poki2.online/miniputt/",
@@ -669,7 +835,9 @@
     "title": "Mini-putt",
     "tags": ["idle", "other"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://m.poki2.online/missiles/",
@@ -677,7 +845,9 @@
     "title": "Missiles",
     "tags": ["idle", "other"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://m.poki2.online/motox3m/",
@@ -685,7 +855,9 @@
     "title": "MotoX3M",
     "tags": ["racing", "sports"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://m.poki2.online/motox3m-pool/",
@@ -693,7 +865,9 @@
     "title": "MotoX3M Pool",
     "tags": ["racing", "sports"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://m.poki2.online/motox3m-spooky/",
@@ -701,7 +875,9 @@
     "title": "MotoX3M Spooky",
     "tags": ["racing", "sports"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://m.poki2.online/motox3m-winter/",
@@ -709,7 +885,9 @@
     "title": "MotoX3M Winter",
     "tags": ["racing", "sports"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://n.poki2.online/n-gon/",
@@ -717,7 +895,9 @@
     "title": "n-gon",
     "tags": ["puzzle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://n.poki2.online/ns-shaft/",
@@ -725,15 +905,19 @@
     "title": "NS-Shaft",
     "tags": ["puzzle"],
     "input": ["keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://o.poki2.online/om-bounce/",
     "imgSrc": "https://o.poki2.online/om-bounce/icon.png",
     "title": "Om Nom Bounce",
-    "tags": ["racing", "puzzle", "strategy"],
+    "tags": ["achievement", "strategy"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://p.poki2.online/pandemic2/",
@@ -741,7 +925,9 @@
     "title": "Pandemic 2",
     "tags": ["racing", "strategy"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://p.poki2.online/papaspizzaria/",
@@ -749,7 +935,9 @@
     "title": "Papa's Pizzaria",
     "tags": ["other"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://p.poki2.online/paperio2/",
@@ -757,7 +945,9 @@
     "title": "Paper.io 2",
     "tags": ["competitive"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://p.poki2.online/papery-planes/",
@@ -765,7 +955,9 @@
     "title": "Papery Planes",
     "tags": ["idle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://p.poki2.online/particle-clicker/",
@@ -773,7 +965,9 @@
     "title": "Particle Clicker",
     "tags": ["idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://p.poki2.online/polybranch/",
@@ -781,7 +975,9 @@
     "title": "PolyBranch",
     "tags": ["idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://p.poki2.online/portalflash/",
@@ -789,7 +985,9 @@
     "title": "Portal (Flash)",
     "tags": ["puzzle", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://p.poki2.online/precision-client/",
@@ -797,7 +995,9 @@
     "title": "Precision Client (Eaglercraft)",
     "tags": ["racing", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://p.poki2.online/push-the-square/",
@@ -805,7 +1005,9 @@
     "title": "Push The Square",
     "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://p.poki2.online/push-your-luck/",
@@ -813,23 +1015,29 @@
     "title": "Push Your Luck",
     "tags": ["strategy", "shooting", "competitive", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "landscape",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://r.poki2.online/retro-bowl/",
     "imgSrc": "https://r.poki2.online/retro-bowl/icon.png",
     "title": "Retro Bowl",
-    "tags": ["racing", "idle", "sports"],
+    "tags": ["pixel", "idle", "sports"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://r.poki2.online/rolly-vortex/",
     "imgSrc": "https://r.poki2.online/rolly-vortex/icon.png",
     "title": "Rolly Vortex",
-    "tags": ["racing", "idle"],
+    "tags": ["action", "singleplayer", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://r.poki2.online/rooftop-snipers/",
@@ -837,15 +1045,9 @@
     "title": "Rooftop Snipers",
     "tags": ["competitive", "shooting"],
     "input": ["keyboard"],
-    "orientation": "landscape"
-  },
-  {
-    "link": "https://s.poki2.online/sand-game/",
-    "imgSrc": "https://s.poki2.online/sand-game/icon.png",
-    "title": "Sand Game",
-    "tags": ["idle"],
-    "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/slope/",
@@ -853,7 +1055,9 @@
     "title": "Slope",
     "tags": ["action"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/sm64/",
@@ -861,7 +1065,9 @@
     "title": "Super Mario 64",
     "tags": ["competitive", "arcade"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/smashkarts/",
@@ -869,7 +1075,9 @@
     "title": "Smash Carts",
     "tags": ["competitive", "racing"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/smokingbarrels/",
@@ -877,7 +1085,9 @@
     "title": "Smoking Barrels",
     "tags": ["competitive", "shooting"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/snowbattle/",
@@ -885,7 +1095,9 @@
     "title": "Snowbattle",
     "tags": ["racing", "sports"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/soldier-legend/",
@@ -893,7 +1105,9 @@
     "title": "Soilder Legend",
     "tags": ["competitive", "shooting"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/solitaire/",
@@ -901,7 +1115,9 @@
     "title": "Solitare",
     "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/sort-the-court/",
@@ -909,7 +1125,9 @@
     "title": "Sort The Court",
     "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/soundboard/",
@@ -917,7 +1135,9 @@
     "title": "Soundboard",
     "tags": ["idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/stack/",
@@ -925,15 +1145,19 @@
     "title": "Stack",
     "tags": ["idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/stack-bump-3d/",
     "imgSrc": "https://s.poki2.online/stack-bump-3d/icon.png",
     "title": "Stack Bump 3D",
-    "tags": ["idle"],
+    "tags": ["stack", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/stealingthediamond/",
@@ -941,7 +1165,9 @@
     "title": "Stealing The Diamond",
     "tags": ["idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/stickwar/",
@@ -949,7 +1175,9 @@
     "title": "Stick War",
     "tags": ["shooting", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/stormthehouse2/",
@@ -957,7 +1185,9 @@
     "title": "Storm The House 2",
     "tags": ["shooting", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/superhot/",
@@ -965,7 +1195,9 @@
     "title": "Superhot",
     "tags": ["puzzle", "shooting", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://s.poki2.online/swerve/",
@@ -973,7 +1205,9 @@
     "title": "Swerve",
     "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://t.poki2.online/tacticalassasin2/",
@@ -981,7 +1215,9 @@
     "title": "Tactical Assassin 2",
     "tags": ["shooting", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://t.poki2.online/tank-trouble-2/",
@@ -989,7 +1225,9 @@
     "title": "Tank Trouble 2",
     "tags": ["shooting", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://t.poki2.online/tanuki-sunset/",
@@ -997,7 +1235,9 @@
     "title": "Tanuki Sunset",
     "tags": ["racing", "sports", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://t.poki2.online/temple-run-2/",
@@ -1005,7 +1245,9 @@
     "title": "Temple Run 2",
     "tags": ["racing", "sports", "idle", "arcade"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://t.poki2.online/thebattle/",
@@ -1013,7 +1255,9 @@
     "title": "The Battle",
     "tags": ["competitive", "arcade"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://t.poki2.online/the-final-earth/",
@@ -1021,7 +1265,9 @@
     "title": "The Final Earth",
     "tags": ["idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://t.poki2.online/theheist/",
@@ -1029,7 +1275,9 @@
     "title": "The Heist",
     "tags": ["other"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://t.poki2.online/there-is-no-game/",
@@ -1037,15 +1285,19 @@
     "title": "There Is No Game",
     "tags": ["puzzle", "other"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://t.poki2.online/thisistheonlylevel/",
     "imgSrc": "https://t.poki2.online/thisistheonlylevel/icon.png",
     "title": "This Is The Only Level",
-    "tags": ["puzzle", "other"],
+    "tags": ["shooting", "competitive", "arcade"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://t.poki2.online/tosstheturtle/",
@@ -1053,7 +1305,9 @@
     "title": "Toss The Turtle",
     "tags": ["shooting", "competitive", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://t.poki2.online/tube-jumpers/",
@@ -1061,7 +1315,9 @@
     "title": "Tube Jumpers",
     "tags": ["other"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://t.poki2.online/tunnel-rush/",
@@ -1069,7 +1325,9 @@
     "title": "Tunnel Rush",
     "tags": ["racing"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://t.poki2.online/tv-static/",
@@ -1077,15 +1335,19 @@
     "title": "TV Static",
     "tags": ["other"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
+    "orientation": "both",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://v.poki2.online/vex3/",
     "imgSrc": "https://v.poki2.online/vex3/icon.png",
     "title": "Vex 3",
-    "tags": ["racing", "idle"],
+    "tags": ["achievement", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://v.poki2.online/vex4/",
@@ -1093,7 +1355,9 @@
     "title": "Vex 4",
     "tags": ["racing", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://v.poki2.online/vex5/",
@@ -1101,7 +1365,9 @@
     "title": "Vex 5",
     "tags": ["racing", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://v.poki2.online/vex6/",
@@ -1109,7 +1375,9 @@
     "title": "Vex 6",
     "tags": ["racing", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://w.poki2.online/webretro-local/",
@@ -1117,7 +1385,9 @@
     "title": "Web Retro Local",
     "tags": ["idle", "other"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://w.poki2.online/wolf3d/",
@@ -1125,7 +1395,9 @@
     "title": "Wolfenstein 3D",
     "tags": ["idle", "other"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://w.poki2.online/wordle/",
@@ -1133,7 +1405,9 @@
     "title": "Wordle",
     "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://w.poki2.online/worlds-hardest-game/",
@@ -1141,7 +1415,9 @@
     "title": "World's Hardest Game",
     "tags": ["puzzle", "arcade", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://w.poki2.online/worlds-hardest-game-2/",
@@ -1149,7 +1425,9 @@
     "title": "World's Hardest Game 2",
     "tags": ["puzzle", "arcade", "idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["desktop"],
+    "show": true
   },
   {
     "link": "https://y.poki2.online/you-are-bezos/",
@@ -1157,15 +1435,9 @@
     "title": "You Are Jeff Bezos",
     "tags": ["other"],
     "input": ["touch", "keyboard"],
-    "orientation": "both"
-  },
-  {
-    "link": "https://mobileapp.poki2.online/mobile/trashndash",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/trashndash/res/bg_title.png",
-    "title": "Troll Boxing",
-    "tags": ["idle"],
-    "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "both",
+    "avalid": [],
+    "show": true
   },
   {
     "link": "https://y.poki2.online/you-have-to-win-the-game/",
@@ -1173,94 +1445,1698 @@
     "title": "You Have To Win The Game",
     "tags": ["idle"],
     "input": ["keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/trashndash",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/trashndash/res/bg_title.png",
+    "title": "Troll Boxing",
+    "tags": ["idle", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
+  },
+  {
+    "title": "2048",
+    "link": "https://mobileapp.poki2.online/mobile/2048/",
+    "imgSrc": "https://2.poki2.online/2048/icon.png",
+    "tags": ["puzzle", "idle"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
+  },
+  {
+    "title": "3dtetris",
+    "link": "https://mobileapp.poki2.online/mobile/3dtetris/",
+    "imgSrc": "https://mobileapp.poki2.online/3dtetris/icon.png",
+    "tags": ["puzzle", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": [],
+    "show": false
+  },
+  {
+    "title": "alienattack",
+    "link": "https://mobileapp.poki2.online/mobile/alienattack/",
+    "imgSrc": "https://mobileapp.poki2.online/alienattack/icon-256.png",
+    "tags": ["action", "casual", "shooting", "singleplayer", "2d", "adventure"],
+    "input": ["touch", "keyboard"],
+    "orientation": "landscape",
+    "avalid": ["mobile"],
+    "show": false
+  },
+  {
+    "title": "balanceball",
+    "link": "https://mobileapp.poki2.online/mobile/balanceball/",
+    "imgSrc": "https://mobileapp.poki2.online/balanceball/icon.png",
+    "tags": ["idle", "casual", "skill", "singleplayer", "physics"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "battleday",
+    "link": "https://mobileapp.poki2.online/mobile/battleday/",
+    "imgSrc": "https://mobileapp.poki2.online/battleday/icon.png",
+    "tags": ["other", "action", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "bdot",
+    "link": "https://mobileapp.poki2.online/mobile/bdot/",
+    "imgSrc": "https://mobileapp.poki2.online/bdot/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "birgly",
+    "link": "https://mobileapp.poki2.online/mobile/birgly/",
+    "imgSrc": "https://mobileapp.poki2.online/birgly/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "blackbats",
+    "link": "https://mobileapp.poki2.online/mobile/blackbats/",
+    "imgSrc": "https://mobileapp.poki2.online/blackbats/icon.png",
+    "tags": ["multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "bloxslider",
+    "link": "https://mobileapp.poki2.online/mobile/bloxslider/",
+    "imgSrc": "https://mobileapp.poki2.online/bloxslider/icon.png",
+    "tags": ["other", "physics", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "bottomtight",
+    "link": "https://mobileapp.poki2.online/mobile/bottomtight/",
+    "imgSrc": "https://mobileapp.poki2.online/bottomtight/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "bravebird",
+    "link": "https://mobileapp.poki2.online/mobile/bravebird/",
+    "imgSrc": "https://mobileapp.poki2.online/bravebird/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "brokenhorn",
+    "link": "https://mobileapp.poki2.online/mobile/brokenhorn/",
+    "imgSrc": "https://mobileapp.poki2.online/brokenhorn/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "bubblecn",
+    "link": "https://mobileapp.poki2.online/mobile/bubblecn/",
+    "imgSrc": "https://mobileapp.poki2.online/bubblecn/icon.png",
+    "tags": ["other", "physics", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "bubblefish",
+    "link": "https://mobileapp.poki2.online/mobile/bubblefish/",
+    "imgSrc": "https://mobileapp.poki2.online/bubblefish/icon.png",
+    "tags": ["other", "fishing", "physics", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "burningrubber",
+    "link": "https://mobileapp.poki2.online/mobile/burningrubber/",
+    "imgSrc": "https://mobileapp.poki2.online/burningrubber/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "candyfusion",
+    "link": "https://mobileapp.poki2.online/mobile/candyfusion/",
+    "imgSrc": "https://mobileapp.poki2.online/candyfusion/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "candypig",
+    "link": "https://mobileapp.poki2.online/mobile/candypig/",
+    "imgSrc": "https://mobileapp.poki2.online/candypig/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "captainroger",
+    "link": "https://mobileapp.poki2.online/mobile/captainroger/",
+    "imgSrc": "https://mobileapp.poki2.online/captainroger/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "captainwar",
+    "link": "https://mobileapp.poki2.online/mobile/captainwar/",
+    "imgSrc": "https://mobileapp.poki2.online/captainwar/icon.png",
+    "tags": ["other", "sports", "action", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "catonfire",
+    "link": "https://mobileapp.poki2.online/mobile/catonfire/",
+    "imgSrc": "https://mobileapp.poki2.online/catonfire/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "cavejumper",
+    "link": "https://mobileapp.poki2.online/mobile/cavejumper/",
+    "imgSrc": "https://mobileapp.poki2.online/cavejumper/icon.png",
+    "tags": ["other", "platformer", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "cboxes",
+    "link": "https://mobileapp.poki2.online/mobile/cboxes/",
+    "imgSrc": "https://mobileapp.poki2.online/cboxes/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "cheeselab",
+    "link": "https://mobileapp.poki2.online/mobile/cheeselab/",
+    "imgSrc": "https://mobileapp.poki2.online/cheeselab/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "chipman",
+    "link": "https://mobileapp.poki2.online/mobile/chipman/",
+    "imgSrc": "https://mobileapp.poki2.online/chipman/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "christmasballs",
+    "link": "https://mobileapp.poki2.online/mobile/christmasballs/",
+    "imgSrc": "https://mobileapp.poki2.online/christmasballs/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "circleball",
+    "link": "https://mobileapp.poki2.online/mobile/circleball/",
+    "imgSrc": "https://mobileapp.poki2.online/circleball/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "circlepong",
+    "link": "https://mobileapp.poki2.online/mobile/circlepong/",
+    "imgSrc": "https://mobileapp.poki2.online/circlepong/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "circletris",
+    "link": "https://mobileapp.poki2.online/mobile/circletris/",
+    "imgSrc": "https://mobileapp.poki2.online/circletris/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "cninjas",
+    "link": "https://mobileapp.poki2.online/mobile/cninjas/",
+    "imgSrc": "https://mobileapp.poki2.online/cninjas/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "cowboyrun",
+    "link": "https://mobileapp.poki2.online/mobile/cowboyrun/",
+    "imgSrc": "https://mobileapp.poki2.online/cowboyrun/icon.png",
+    "tags": ["other", "racing", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "cowboyshot",
+    "link": "https://mobileapp.poki2.online/mobile/cowboyshot/",
+    "imgSrc": "https://mobileapp.poki2.online/cowboyshot/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "craigenstone",
+    "link": "https://mobileapp.poki2.online/mobile/craigenstone/",
+    "imgSrc": "https://mobileapp.poki2.online/craigenstone/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "creedyrabbit",
+    "link": "https://mobileapp.poki2.online/mobile/creedyrabbit/",
+    "imgSrc": "https://mobileapp.poki2.online/creedyrabbit/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "crkarmax",
+    "link": "https://mobileapp.poki2.online/mobile/crkarmax/",
+    "imgSrc": "https://mobileapp.poki2.online/crkarmax/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "cubeninja",
+    "link": "https://mobileapp.poki2.online/mobile/cubeninja/",
+    "imgSrc": "https://mobileapp.poki2.online/cubeninja/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "dangermouse",
+    "link": "https://mobileapp.poki2.online/mobile/dangermouse/",
+    "imgSrc": "https://mobileapp.poki2.online/dangermouse/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "dangerous",
+    "link": "https://mobileapp.poki2.online/mobile/dangerous/",
+    "imgSrc": "https://mobileapp.poki2.online/dangerous/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "darkninja",
+    "link": "https://mobileapp.poki2.online/mobile/darkninja/",
+    "imgSrc": "https://mobileapp.poki2.online/darkninja/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "deathsoul",
+    "link": "https://mobileapp.poki2.online/mobile/deathsoul/",
+    "imgSrc": "https://mobileapp.poki2.online/deathsoul/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "donteattrash",
+    "link": "https://mobileapp.poki2.online/mobile/donteattrash/",
+    "imgSrc": "https://mobileapp.poki2.online/donteattrash/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "dotgame",
+    "link": "https://mobileapp.poki2.online/mobile/dotgame/",
+    "imgSrc": "https://mobileapp.poki2.online/dotgame/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "dronewars",
+    "link": "https://mobileapp.poki2.online/mobile/dronewars/",
+    "imgSrc": "https://mobileapp.poki2.online/dronewars/icon.png",
+    "tags": ["other", "action", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "dropcircle",
+    "link": "https://mobileapp.poki2.online/mobile/dropcircle/",
+    "imgSrc": "https://mobileapp.poki2.online/dropcircle/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "duckwater",
+    "link": "https://mobileapp.poki2.online/mobile/duckwater/",
+    "imgSrc": "https://mobileapp.poki2.online/duckwater/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "elmore",
+    "link": "https://mobileapp.poki2.online/mobile/elmore/",
+    "imgSrc": "https://mobileapp.poki2.online/elmore/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "escape",
+    "link": "https://mobileapp.poki2.online/mobile/escape/",
+    "imgSrc": "https://mobileapp.poki2.online/escape/icon.png",
+    "tags": ["other", "adventure", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "evilrobot",
+    "link": "https://mobileapp.poki2.online/mobile/evilrobot/",
+    "imgSrc": "https://mobileapp.poki2.online/evilrobot/icon.png",
+    "tags": ["other", "action", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "evilwyrm",
+    "link": "https://mobileapp.poki2.online/mobile/evilwyrm/",
+    "imgSrc": "https://mobileapp.poki2.online/evilwyrm/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "fastgame",
+    "link": "https://mobileapp.poki2.online/mobile/fastgame/",
+    "imgSrc": "https://mobileapp.poki2.online/fastgame/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "firebrigade",
+    "link": "https://mobileapp.poki2.online/mobile/firebrigade/",
+    "imgSrc": "https://mobileapp.poki2.online/firebrigade/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "fishingfrenzy",
+    "link": "https://mobileapp.poki2.online/mobile/fishingfrenzy/",
+    "imgSrc": "https://mobileapp.poki2.online/fishingfrenzy/icon.png",
+    "tags": ["other", "fishing", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "fishshot",
+    "link": "https://mobileapp.poki2.online/mobile/fishshot/",
+    "imgSrc": "https://mobileapp.poki2.online/fishshot/icon.png",
+    "tags": ["other", "fishing", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "flapcatcopters",
+    "link": "https://mobileapp.poki2.online/mobile/flapcatcopters/",
+    "imgSrc": "https://mobileapp.poki2.online/flapcatcopters/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "flapcatxmas",
+    "link": "https://mobileapp.poki2.online/mobile/flapcatxmas/",
+    "imgSrc": "https://mobileapp.poki2.online/flapcatxmas/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "flappydog",
+    "link": "https://mobileapp.poki2.online/mobile/flappydog/",
+    "imgSrc": "https://mobileapp.poki2.online/flappydog/icon.png",
+    "tags": ["other", "platformer", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "flyingschool",
+    "link": "https://mobileapp.poki2.online/mobile/flyingschool/",
+    "imgSrc": "https://mobileapp.poki2.online/flyingschool/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "foofoo",
+    "link": "https://mobileapp.poki2.online/mobile/foofoo/",
+    "imgSrc": "https://mobileapp.poki2.online/foofoo/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "foxfury",
+    "link": "https://mobileapp.poki2.online/mobile/foxfury/",
+    "imgSrc": "https://mobileapp.poki2.online/foxfury/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "freedomroad",
+    "link": "https://mobileapp.poki2.online/mobile/freedomroad/",
+    "imgSrc": "https://mobileapp.poki2.online/freedomroad/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "frog",
+    "link": "https://mobileapp.poki2.online/mobile/frog/",
+    "imgSrc": "https://mobileapp.poki2.online/frog/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "fullimmersion",
+    "link": "https://mobileapp.poki2.online/mobile/fullimmersion/",
+    "imgSrc": "https://mobileapp.poki2.online/fullimmersion/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "funnysoccer",
+    "link": "https://mobileapp.poki2.online/mobile/funnysoccer/",
+    "imgSrc": "https://mobileapp.poki2.online/funnysoccer/icon.png",
+    "tags": ["other", "sports", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "gettwelve",
+    "link": "https://mobileapp.poki2.online/mobile/gettwelve/",
+    "imgSrc": "https://mobileapp.poki2.online/gettwelve/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "goblinmachine",
+    "link": "https://mobileapp.poki2.online/mobile/goblinmachine/",
+    "imgSrc": "https://mobileapp.poki2.online/goblinmachine/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "gofishing",
+    "link": "https://mobileapp.poki2.online/mobile/gofishing/",
+    "imgSrc": "https://mobileapp.poki2.online/gofishing/icon.png",
+    "tags": ["other", "fishing", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "goingnuts",
+    "link": "https://mobileapp.poki2.online/mobile/goingnuts/",
+    "imgSrc": "https://mobileapp.poki2.online/goingnuts/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "greedygnomes",
+    "link": "https://mobileapp.poki2.online/mobile/greedygnomes/",
+    "imgSrc": "https://mobileapp.poki2.online/greedygnomes/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "greenwings",
+    "link": "https://mobileapp.poki2.online/mobile/greenwings/",
+    "imgSrc": "https://mobileapp.poki2.online/greenwings/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "groovyski",
+    "link": "https://mobileapp.poki2.online/mobile/groovyski/",
+    "imgSrc": "https://mobileapp.poki2.online/groovyski/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "grubhub",
+    "link": "https://mobileapp.poki2.online/mobile/grubhub/",
+    "imgSrc": "https://mobileapp.poki2.online/grubhub/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "gumballrace",
+    "link": "https://mobileapp.poki2.online/mobile/gumballrace/",
+    "imgSrc": "https://mobileapp.poki2.online/gumballrace/icon.png",
+    "tags": ["other", "racing", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "gunmach",
+    "link": "https://mobileapp.poki2.online/mobile/gunmach/",
+    "imgSrc": "https://mobileapp.poki2.online/gunmach/icon.png",
+    "tags": ["other", "shooting", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "hanselandgretel",
+    "link": "https://mobileapp.poki2.online/mobile/hanselandgretel/",
+    "imgSrc": "https://mobileapp.poki2.online/hanselandgretel/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "herojump",
+    "link": "https://mobileapp.poki2.online/mobile/herojump/",
+    "imgSrc": "https://mobileapp.poki2.online/herojump/icon.png",
+    "tags": ["other", "platformer", "multiplayer", "rpg"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "hidden",
+    "link": "https://mobileapp.poki2.online/mobile/hidden/",
+    "imgSrc": "https://mobileapp.poki2.online/hidden/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "hungrybob",
+    "link": "https://mobileapp.poki2.online/mobile/hungrybob/",
+    "imgSrc": "https://mobileapp.poki2.online/hungrybob/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "hyperminer",
+    "link": "https://mobileapp.poki2.online/mobile/hyperminer/",
+    "imgSrc": "https://mobileapp.poki2.online/hyperminer/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "icecream",
+    "link": "https://mobileapp.poki2.online/mobile/icecream/",
+    "imgSrc": "https://mobileapp.poki2.online/icecream/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "Sand Game",
+    "link": "https://s.poki2.online/sand-game/",
+    "imgSrc": "https://s.poki2.online/sand-game/icon.png",
+    "tags": ["other", "idle"],
+    "input": ["touch", "keyboard"],
+    "orientation": "both",
+    "avalid": ["desktop"],
+    "show": false
+  },
+  {
+    "title": "jellydoods",
+    "link": "https://mobileapp.poki2.online/mobile/jellydoods/",
+    "imgSrc": "https://mobileapp.poki2.online/jellydoods/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "jellyslice",
+    "link": "https://mobileapp.poki2.online/mobile/jellyslice/",
+    "imgSrc": "https://mobileapp.poki2.online/jellyslice/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "jomjom",
+    "link": "https://mobileapp.poki2.online/mobile/jomjom/",
+    "imgSrc": "https://mobileapp.poki2.online/jomjom/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "jump2048",
+    "link": "https://mobileapp.poki2.online/mobile/jump2048/",
+    "imgSrc": "https://mobileapp.poki2.online/jump2048/icon.png",
+    "tags": ["other", "puzzle", "platformer", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "jumpkitty",
+    "link": "https://mobileapp.poki2.online/mobile/jumpkitty/",
+    "imgSrc": "https://mobileapp.poki2.online/jumpkitty/icon.png",
+    "tags": ["other", "platformer", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "jumpman",
+    "link": "https://mobileapp.poki2.online/mobile/jumpman/",
+    "imgSrc": "https://mobileapp.poki2.online/jumpman/icon.png",
+    "tags": ["other", "platformer", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "jumppydog",
+    "link": "https://mobileapp.poki2.online/mobile/jumppydog/",
+    "imgSrc": "https://mobileapp.poki2.online/jumppydog/icon.png",
+    "tags": ["other", "platformer", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "jumppydragon",
+    "link": "https://mobileapp.poki2.online/mobile/jumppydragon/",
+    "imgSrc": "https://mobileapp.poki2.online/jumppydragon/icon.png",
+    "tags": ["other", "platformer", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "knightnday",
+    "link": "https://mobileapp.poki2.online/mobile/knightnday/",
+    "imgSrc": "https://mobileapp.poki2.online/knightnday/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "lizardrocket",
+    "link": "https://mobileapp.poki2.online/mobile/lizardrocket/",
+    "imgSrc": "https://mobileapp.poki2.online/lizardrocket/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "looneyroonks",
+    "link": "https://mobileapp.poki2.online/mobile/looneyroonks/",
+    "imgSrc": "https://mobileapp.poki2.online/looneyroonks/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "luxahoy",
+    "link": "https://mobileapp.poki2.online/mobile/luxahoy/",
+    "imgSrc": "https://mobileapp.poki2.online/luxahoy/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "manic",
+    "link": "https://mobileapp.poki2.online/mobile/manic/",
+    "imgSrc": "https://mobileapp.poki2.online/manic/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "matchtime",
+    "link": "https://mobileapp.poki2.online/mobile/matchtime/",
+    "imgSrc": "https://mobileapp.poki2.online/matchtime/icon.png",
+    "tags": ["other", "puzzle", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "mathgame",
+    "link": "https://mobileapp.poki2.online/mobile/mathgame/",
+    "imgSrc": "https://mobileapp.poki2.online/mathgame/icon.png",
+    "tags": ["other", "multiplayer", "educational"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "mixthesquare",
+    "link": "https://mobileapp.poki2.online/mobile/mixthesquare/",
+    "imgSrc": "https://mobileapp.poki2.online/mixthesquare/icon.png",
+    "tags": ["other", "puzzle", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "monstercandy",
+    "link": "https://mobileapp.poki2.online/mobile/monstercandy/",
+    "imgSrc": "https://mobileapp.poki2.online/monstercandy/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "monstereater",
+    "link": "https://mobileapp.poki2.online/mobile/monstereater/",
+    "imgSrc": "https://mobileapp.poki2.online/monstereater/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "mousejump",
+    "link": "https://mobileapp.poki2.online/mobile/mousejump/",
+    "imgSrc": "https://mobileapp.poki2.online/mousejump/icon.png",
+    "tags": ["other", "platformer", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "mypuki",
+    "link": "https://mobileapp.poki2.online/mobile/mypuki/",
+    "imgSrc": "https://mobileapp.poki2.online/mypuki/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "nest",
+    "link": "https://mobileapp.poki2.online/mobile/nest/",
+    "imgSrc": "https://mobileapp.poki2.online/nest/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "ninjablade",
+    "link": "https://mobileapp.poki2.online/mobile/ninjablade/",
+    "imgSrc": "https://mobileapp.poki2.online/ninjablade/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "ninjablock",
+    "link": "https://mobileapp.poki2.online/mobile/ninjablock/",
+    "imgSrc": "https://mobileapp.poki2.online/ninjablock/icon.png",
+    "tags": ["other", "skill", "physics", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "ninjakidvszb",
+    "link": "https://mobileapp.poki2.online/mobile/ninjakidvszb/",
+    "imgSrc": "https://mobileapp.poki2.online/ninjakidvszb/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "ninjarun",
+    "link": "https://mobileapp.poki2.online/mobile/ninjarun/",
+    "imgSrc": "https://mobileapp.poki2.online/ninjarun/icon.png",
+    "tags": ["other", "racing", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "ninjaway",
+    "link": "https://mobileapp.poki2.online/mobile/ninjaway/",
+    "imgSrc": "https://mobileapp.poki2.online/ninjaway/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "nugget_seeker",
+    "link": "https://mobileapp.poki2.online/mobile/nuggetseeker/",
+    "imgSrc": "https://mobileapp.poki2.online/nuggetseeker/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "ojelloonline",
+    "link": "https://mobileapp.poki2.online/mobile/ojelloonline/",
+    "imgSrc": "https://mobileapp.poki2.online/ojelloonline/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "pacman",
+    "link": "https://mobileapp.poki2.online/mobile/pacman/",
+    "imgSrc": "https://mobileapp.poki2.online/pacman/icon.png",
+    "tags": ["other", "arcade", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "pancakeboss",
+    "link": "https://mobileapp.poki2.online/mobile/pancakeboss/",
+    "imgSrc": "https://mobileapp.poki2.online/pancakeboss/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "pandaflash",
+    "link": "https://mobileapp.poki2.online/mobile/pandaflash/",
+    "imgSrc": "https://mobileapp.poki2.online/pandaflash/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "pebbleboy",
+    "link": "https://mobileapp.poki2.online/mobile/pebbleboy/",
+    "imgSrc": "https://mobileapp.poki2.online/pebbleboy/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "penguin",
+    "link": "https://mobileapp.poki2.online/mobile/penguin/",
+    "imgSrc": "https://mobileapp.poki2.online/penguin/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "periperi",
+    "link": "https://mobileapp.poki2.online/mobile/periperi/",
+    "imgSrc": "https://mobileapp.poki2.online/periperi/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "pieattack",
+    "link": "https://mobileapp.poki2.online/mobile/pieattack/",
+    "imgSrc": "https://mobileapp.poki2.online/pieattack/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "pigeon",
+    "link": "https://mobileapp.poki2.online/mobile/pigeon/",
+    "imgSrc": "https://mobileapp.poki2.online/pigeon/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "piggyroll",
+    "link": "https://mobileapp.poki2.online/mobile/piggyroll/",
+    "imgSrc": "https://mobileapp.poki2.online/piggyroll/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "piratekid",
+    "link": "https://mobileapp.poki2.online/mobile/piratekid/",
+    "imgSrc": "https://mobileapp.poki2.online/piratekid/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "pitana",
+    "link": "https://mobileapp.poki2.online/mobile/pitana/",
+    "imgSrc": "https://mobileapp.poki2.online/pitana/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "popup",
+    "link": "https://mobileapp.poki2.online/mobile/popup/",
+    "imgSrc": "https://mobileapp.poki2.online/popup/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "portalrunner",
+    "link": "https://mobileapp.poki2.online/mobile/portalrunner/",
+    "imgSrc": "https://mobileapp.poki2.online/portalrunner/icon.png",
+    "tags": ["other", "racing", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "pyramidjump",
+    "link": "https://mobileapp.poki2.online/mobile/pyramidjump/",
+    "imgSrc": "https://mobileapp.poki2.online/pyramidjump/icon.png",
+    "tags": ["other", "platformer", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "raccoonrun",
+    "link": "https://mobileapp.poki2.online/mobile/raccoonrun/",
+    "imgSrc": "https://mobileapp.poki2.online/raccoonrun/icon.png",
+    "tags": ["other", "racing", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "rainbox",
+    "link": "https://mobileapp.poki2.online/mobile/rainbox/",
+    "imgSrc": "https://mobileapp.poki2.online/rainbox/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "rapunzel",
+    "link": "https://mobileapp.poki2.online/mobile/rapunzel/",
+    "imgSrc": "https://mobileapp.poki2.online/rapunzel/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "rectangzings",
+    "link": "https://mobileapp.poki2.online/mobile/rectangzings/",
+    "imgSrc": "https://mobileapp.poki2.online/rectangzings/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "reflector",
+    "link": "https://mobileapp.poki2.online/mobile/reflector/",
+    "imgSrc": "https://mobileapp.poki2.online/reflector/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "robotion",
+    "link": "https://mobileapp.poki2.online/mobile/robotion/",
+    "imgSrc": "https://mobileapp.poki2.online/robotion/icon.png",
+    "tags": ["other", "action", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "rocketpop",
+    "link": "https://mobileapp.poki2.online/mobile/rocketpop/",
+    "imgSrc": "https://mobileapp.poki2.online/rocketpop/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "ropeninja",
+    "link": "https://mobileapp.poki2.online/mobile/ropeninja/",
+    "imgSrc": "https://mobileapp.poki2.online/ropeninja/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "runneryodas",
+    "link": "https://mobileapp.poki2.online/mobile/runneryodas/",
+    "imgSrc": "https://mobileapp.poki2.online/runneryodas/icon.png",
+    "tags": ["other", "racing", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "runpixierun",
+    "link": "https://mobileapp.poki2.online/mobile/runpixierun/",
+    "imgSrc": "https://mobileapp.poki2.online/runpixierun/icon.png",
+    "tags": ["other", "racing", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "sallybbq",
+    "link": "https://mobileapp.poki2.online/mobile/sallybbq/",
+    "imgSrc": "https://mobileapp.poki2.online/sallybbq/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "sambogart",
+    "link": "https://mobileapp.poki2.online/mobile/sambogart/",
+    "imgSrc": "https://mobileapp.poki2.online/sambogart/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "silverarrow",
+    "link": "https://mobileapp.poki2.online/mobile/silverarrow/",
+    "imgSrc": "https://mobileapp.poki2.online/silverarrow/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "skylands",
+    "link": "https://mobileapp.poki2.online/mobile/skylands/",
+    "imgSrc": "https://mobileapp.poki2.online/skylands/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "skyrace",
+    "link": "https://mobileapp.poki2.online/mobile/skyrace/",
+    "imgSrc": "https://mobileapp.poki2.online/skyrace/icon.png",
+    "tags": ["other", "racing", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "skytte",
+    "link": "https://mobileapp.poki2.online/mobile/skytte/",
+    "imgSrc": "https://mobileapp.poki2.online/skytte/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "skywire",
+    "link": "https://mobileapp.poki2.online/mobile/skywire/",
+    "imgSrc": "https://mobileapp.poki2.online/skywire/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "slotchicken",
+    "link": "https://mobileapp.poki2.online/mobile/slotchicken/",
+    "imgSrc": "https://mobileapp.poki2.online/slotchicken/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "sortbird",
+    "link": "https://mobileapp.poki2.online/mobile/sortbird/",
+    "imgSrc": "https://mobileapp.poki2.online/sortbird/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "spacecowboy",
+    "link": "https://mobileapp.poki2.online/mobile/spacecowboy/",
+    "imgSrc": "https://mobileapp.poki2.online/spacecowboy/icon.png",
+    "tags": ["other", "shooting", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "spicy",
+    "link": "https://mobileapp.poki2.online/mobile/spicy/",
+    "imgSrc": "https://mobileapp.poki2.online/spicy/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "springninja",
+    "link": "https://mobileapp.poki2.online/mobile/springninja/",
+    "imgSrc": "https://mobileapp.poki2.online/springninja/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "squarecrush",
+    "link": "https://mobileapp.poki2.online/mobile/squarecrush/",
+    "imgSrc": "https://mobileapp.poki2.online/squarecrush/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "stevenkash",
+    "link": "https://mobileapp.poki2.online/mobile/stevenkash/",
+    "imgSrc": "https://mobileapp.poki2.online/stevenkash/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "stickpanda",
+    "link": "https://mobileapp.poki2.online/mobile/stickpanda/",
+    "imgSrc": "https://mobileapp.poki2.online/stickpanda/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "stickpandaxmas",
+    "link": "https://mobileapp.poki2.online/mobile/stickpandaxmas/",
+    "imgSrc": "https://mobileapp.poki2.online/stickpandaxmas/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "sticksamurai",
+    "link": "https://mobileapp.poki2.online/mobile/sticksamurai/",
+    "imgSrc": "https://mobileapp.poki2.online/sticksamurai/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "stickygoo",
+    "link": "https://mobileapp.poki2.online/mobile/stickygoo/",
+    "imgSrc": "https://mobileapp.poki2.online/stickygoo/icon.png",
+    "tags": ["other", "skill", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "strangespace",
+    "link": "https://mobileapp.poki2.online/mobile/strangespace/",
+    "imgSrc": "https://mobileapp.poki2.online/strangespace/icon.png",
+    "tags": ["other", "shooting", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "taptapsubmarine",
+    "link": "https://mobileapp.poki2.online/mobile/taptapsubmarine/",
+    "imgSrc": "https://mobileapp.poki2.online/taptapsubmarine/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "targetap",
+    "link": "https://mobileapp.poki2.online/mobile/targetap/",
+    "imgSrc": "https://mobileapp.poki2.online/targetap/icon.png",
+    "tags": ["other", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "tetrisclassic",
+    "link": "https://mobileapp.poki2.online/mobile/tetrisclassic/",
+    "imgSrc": "https://mobileapp.poki2.online/tetrisclassic/icon.png",
+    "tags": ["other", "puzzle", "arcade", "multiplayer", "retro"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "title": "titanrunner",
+    "link": "https://mobileapp.poki2.online/mobile/titanrunner/",
+    "imgSrc": "https://mobileapp.poki2.online/titanrunner/icon.png",
+    "tags": ["racing", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/tooncup",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/tooncup/assets/img/localisation/logo.png",
+    "title": "tooncup",
+    "tags": ["idle", "multiplayer", "football", "singleplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/trailblazer",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/trailblazer/assets/images/hd/splash.png",
+    "title": "Trailblazer",
+    "tags": ["idle", "multiplayer", "singleplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": false
+  },
+  {
+    "link": "https://mobileapp.poki2.online/mobile/trashndash",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/trashndash/res/bg_title.png",
+    "title": "Trash Dash",
+    "tags": ["idle", "multiplayer", "singleplayer", "dash"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/trollboxing",
     "imgSrc": "https://mobileapp.poki2.online/mobile/trollboxing/images/money-sheet0.png",
     "title": "Troll Boxing",
-    "tags": ["racing", "idle"],
+    "tags": ["racing", "idle", "multiplayer"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/uforun",
     "imgSrc": "https://mobileapp.poki2.online/mobile/uforun/icon-256.png",
     "title": "Ufo Run",
-    "tags": ["racing", "competitive"],
+    "tags": ["racing", "multiplayer", "competitive"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/veggirabbit",
     "imgSrc": "https://mobileapp.poki2.online/mobile/veggirabbit/images/gametitle-sheet0.png",
     "title": "Veggi Rabbit",
-    "tags": ["strategy"],
+    "tags": ["strategy", "singleplayer"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/woodblock",
     "imgSrc": "https://mobileapp.poki2.online/mobile/woodblock/icon-128.png",
     "title": "Wood Block",
-    "tags": ["strategy"],
+    "tags": ["strategy", "singleplayer"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/xtypesky",
     "imgSrc": "https://mobileapp.poki2.online/mobile/xtypesky/phobos.png",
     "title": "X Type Sky",
-    "tags": ["shooting"],
+    "tags": ["shooting", "multiplayer"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/zapaliens",
     "imgSrc": "https://mobileapp.poki2.online/mobile/zapaliens/icon.png",
     "title": "Zapaliens",
-    "tags": ["action"],
+    "tags": ["shooting", "action", "multiplayer"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/zcj2",
     "imgSrc": "https://mobileapp.poki2.online/mobile/zcj2/zcj2/icon.png",
     "title": "Zombies Can't Jump 2",
-    "tags": ["action"],
+    "tags": ["platformer", "action", "multiplayer"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/zombienight",
     "imgSrc": "https://mobileapp.poki2.online/mobile/zombienight/icon-128.png",
     "title": "Zombie Night",
-    "tags": ["action"],
+    "tags": ["action", "multiplayer"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/zombiescantjump",
     "imgSrc": "https://mobileapp.poki2.online/mobile/zombiescantjump/zombiescantjump/icon.png",
     "title": "Zombies Can't Jump",
-    "tags": ["action"],
+    "tags": ["platformer", "action", "multiplayer"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/zombieworld",
     "imgSrc": "https://mobileapp.poki2.online/mobile/zombieworld/icon-128.png",
     "title": "Zombie World",
-    "tags": ["idle"],
+    "tags": ["idle", "multiplayer"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/zoostuner",
     "imgSrc": "https://mobileapp.poki2.online/mobile/zoostuner/icon-128.png",
     "title": "Zoon Stuner",
-    "tags": ["idle"],
+    "tags": ["idle", "multiplayer"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": false
   }
 ]

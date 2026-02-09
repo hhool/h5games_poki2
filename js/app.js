@@ -3,130 +3,229 @@
    ============================================================ */
 
 (() => {
-  'use strict';
+  "use strict";
 
   /* ---------- Category metadata ---------- */
   const TAG_META = {
-    action:      { emoji: '💥', label: 'Action' },
-    competitive: { emoji: '🏆', label: 'Competitive' },
-    idle:        { emoji: '🕹️', label: 'Idle' },
-    puzzle:      { emoji: '🧩', label: 'Puzzle' },
-    racing:      { emoji: '🏎️', label: 'Racing' },
-    shooting:    { emoji: '🔫', label: 'Shooting' },
-    sports:      { emoji: '⚽', label: 'Sports' },
-    strategy:    { emoji: '♟️', label: 'Strategy' },
-    other:       { emoji: '🎲', label: 'Other' },
+    action: { emoji: "💥", label: "Action" },
+    competitive: { emoji: "🏆", label: "Competitive" },
+    idle: { emoji: "🕹️", label: "Idle" },
+    puzzle: { emoji: "🧩", label: "Puzzle" },
+    racing: { emoji: "🏎️", label: "Racing" },
+    shooting: { emoji: "🔫", label: "Shooting" },
+    sports: { emoji: "⚽", label: "Sports" },
+    strategy: { emoji: "♟️", label: "Strategy" },
+    other: { emoji: "🎲", label: "Other" },
   };
 
-  const TAG_ORDER = ['action','puzzle','racing','shooting','sports','competitive','strategy','idle','other'];
+  const TAG_ORDER = [
+    "action",
+    "puzzle",
+    "racing",
+    "shooting",
+    "sports",
+    "competitive",
+    "strategy",
+    "idle",
+    "other",
+  ];
   const SECTION_LIMIT = 12;
   const HERO_FEATURED_COUNT = 6;
-  const RECENT_KEY = 'poki2_recent';
+  const RECENT_KEY = "poki2_recent";
   const MAX_RECENT = 12;
 
   /* ---------- Mobile detection ---------- */
-  const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)
-    || ('ontouchstart' in window && window.innerWidth <= 1024);
+  const isMobile =
+    /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) ||
+    ("ontouchstart" in window && window.innerWidth <= 1024);
 
   /** Return true if this game should be shown on the current device */
   function canShow(game) {
-    if (!isMobile) return true;
-    const input = game.input || ['keyboard'];
-    return input.includes('touch');
+    // Prefer explicit `avalid` field when present: only show if it includes current platform
+    const platform = isMobile ? "mobile" : "desktop";
+    if (game.show === undefined || game.show === null || game.show === false) {
+      if (
+        typeof process !== "undefined" &&
+        process &&
+        process.env &&
+        process.env.NODE_ENV === "development"
+      ) {
+        console.warn(
+          `Game "${game.title}" does not have an explicit "show" field. Please add "show": true to display this game. Defaulting to hide on all platforms until "show" is explicitly set to true.`,
+          game,
+        );
+      }
+      return false; // explicit hide
+    }
+    // check game.avalid first, if it's an array, use it to determine
+    //  if the game is valid for the current platform
+    if (game.avalid === undefined || game.avalid === null) {
+      // out put a warning in dev if avalid is not defined, to encourage explicit declaration
+      if (
+        typeof process !== "undefined" &&
+        process &&
+        process.env &&
+        process.env.NODE_ENV === "development"
+      ) {
+        console.warn(
+          `Game "${game.title}" does not have an "avalid" field. Please add one to specify which platforms it is valid for (e.g. ["desktop"], ["mobile"], or ["desktop", "mobile"]). Defaulting to hide on all platforms until "avalid" is defined.`,
+          game,
+        );
+      }
+      return false; // default to hide if avalid is not defined (strict opt-in)
+    }
+    if (Array.isArray(game.avalid)) {
+      return game.avalid.includes(platform);
+    }
+    // Fallback to previous heuristic (input contains touch for mobile)
+    if (isMobile) {
+      const input = game.input || ["keyboard"];
+      return input.includes("touch");
+    }
+    return true;
   }
 
   /* ---------- DOM refs ---------- */
-  const $ = id => document.getElementById(id);
-  const $sidebar       = $('sidebar');
-  const $sidebarOverlay= $('sidebar-overlay');
-  const $menuBtn       = $('menu-btn');
-  const $sidebarNav    = $('sidebar-nav');
-  const $gameSections  = $('game-sections');
-  const $searchInput   = $('search');
-  const $searchResults = $('search-results');
-  const $searchGrid    = $('search-grid');
-  const $searchTitle   = $('search-results-title');
-  const $searchEmpty   = $('search-empty');
-  const $hero          = $('hero');
-  const $heroFeatured  = $('hero-featured');
-  const $recentSection = $('recently-played');
-  const $recentGrid    = $('recent-grid');
-  const $clearRecent   = $('clear-recent');
-  const $overlay       = $('game-overlay');
-  const $overlayTitle  = $('overlay-title');
-  const $overlayBar    = $('overlay-bar');
-  const $barTrigger    = $('bar-trigger');
-  const $overlayBack   = $('overlay-back');
-  const $overlayFs     = $('overlay-fs');
+  const $ = (id) => document.getElementById(id);
+  const $sidebar = $("sidebar");
+  const $sidebarOverlay = $("sidebar-overlay");
+  const $menuBtn = $("menu-btn");
+  const $sidebarNav = $("sidebar-nav");
+  const $gameSections = $("game-sections");
+  const $searchInput = $("search");
+  const $searchResults = $("search-results");
+  const $searchGrid = $("search-grid");
+  const $searchTitle = $("search-results-title");
+  const $searchEmpty = $("search-empty");
+  const $hero = $("hero");
+  const $heroFeatured = $("hero-featured");
+  const $recentSection = $("recently-played");
+  const $recentGrid = $("recent-grid");
+  const $clearRecent = $("clear-recent");
+  const $overlay = $("game-overlay");
+  const $overlayTitle = $("overlay-title");
+  const $overlayBar = $("overlay-bar");
+  const $barTrigger = $("bar-trigger");
+  const $overlayBack = $("overlay-back");
+  const $overlayFs = $("overlay-fs");
 
   const BAR_SHOW_DURATION = 3000; // ms before auto-hide
   let barHideTimer = null;
 
   function showBar() {
-    $overlayBar.classList.remove('bar-hidden');
+    $overlayBar.classList.remove("bar-hidden");
     clearTimeout(barHideTimer);
     barHideTimer = setTimeout(hideBar, BAR_SHOW_DURATION);
   }
   function hideBar() {
     clearTimeout(barHideTimer);
     // Don't hide if loading, paused, or orientation hint is showing
-    if ($loadingOverlay.classList.contains('show')) return;
-    if ($pauseOverlay.classList.contains('show')) return;
-    if ($orientHint.classList.contains('show')) return;
-    $overlayBar.classList.add('bar-hidden');
+    if ($loadingOverlay.classList.contains("show")) return;
+    if ($pauseOverlay.classList.contains("show")) return;
+    if ($orientHint.classList.contains("show")) return;
+    $overlayBar.classList.add("bar-hidden");
   }
   function resetBarTimer() {
     showBar();
   }
 
   // Trigger zone: mouse enter or touch
-  $barTrigger.addEventListener('mouseenter', showBar);
-  $barTrigger.addEventListener('touchstart', showBar, { passive: true });
+  $barTrigger.addEventListener("mouseenter", showBar);
+  $barTrigger.addEventListener("touchstart", showBar, { passive: true });
 
   // Also show bar on mouse move anywhere in overlay (for desktop)
-  $overlay.addEventListener('mousemove', () => {
-    if ($overlayBar.classList.contains('bar-hidden')) {
+  $overlay.addEventListener("mousemove", () => {
+    if ($overlayBar.classList.contains("bar-hidden")) {
       showBar();
     }
   });
-  const $iframe        = $('game-iframe');
-  const $content       = $('content');
-  const $skeleton      = $('loading-skeleton');
-  const $backToTop     = $('back-to-top');
-  const $shuffleBtn    = $('shuffle-btn');
-  const $detail        = $('game-detail');
-  const $detailImg     = $('detail-img');
-  const $detailTitle   = $('detail-title');
-  const $detailTags    = $('detail-tags');
-  const $detailPlay    = $('detail-play');
-  const $detailClose   = $('detail-close');
-  const $detailBackdrop= $('detail-backdrop');
-  const $pauseOverlay  = $('game-pause');
-  const $pauseResume   = $('pause-resume');
-  const $pauseQuit     = $('pause-quit');
+  const $iframe = $("game-iframe");
+  const $content = $("content");
+  const $skeleton = $("loading-skeleton");
+  const $backToTop = $("back-to-top");
+  const $shuffleBtn = $("shuffle-btn");
+  const $detail = $("game-detail");
+  const $detailImg = $("detail-img");
+  const $detailTitle = $("detail-title");
+  const $detailTags = $("detail-tags");
+  const $detailPlay = $("detail-play");
+  const $detailClose = $("detail-close");
+  const $detailBackdrop = $("detail-backdrop");
+  const $pauseOverlay = $("game-pause");
+  const $pauseResume = $("pause-resume");
+  const $pauseQuit = $("pause-quit");
 
   /* ---------- State ---------- */
-  let allGames    = [];
-  let tagMap      = {};
-  let currentView = 'home';
-  let pendingGame = null;   // game waiting in detail interstitial
-  let gamePaused  = false;  // true when game is paused (exited fullscreen)
+  let allGames = [];
+  let tagMap = {};
+  let currentView = "home";
+  let pendingGame = null; // game waiting in detail interstitial
+  let gamePaused = false; // true when game is paused (exited fullscreen)
   let userExitedFullscreen = false; // track intentional exit vs close
 
   /* ---------- Helpers ---------- */
   function normalizeHref(link) {
     try {
       const u = new URL(link);
-      let p = u.pathname.replace(/\/+$/, '');
-      if (!p) p = u.hostname.split('.')[0];
-      return p.split('/').pop() || link;
-    } catch { return link; }
+      let p = u.pathname.replace(/\/+$/, "");
+      if (!p) p = u.hostname.split(".")[0];
+      return p.split("/").pop() || link;
+    } catch {
+      return link;
+    }
+  }
+
+  /** Return an ordered list of favicon candidates for a game's link */
+  function getFaviconCandidates(link) {
+    const fallbackSvg =
+      "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22><rect fill=%22%23334%22 width=%221%22 height=%221%22/></svg>";
+    try {
+      const u = new URL(link);
+      const origin = u.origin.replace(/\/+$/, "");
+      // Common candidate paths (ordered by preference)
+      return [
+        origin + "/favicon.png",
+        origin + "/favicon-32x32.png",
+        origin + "/favicon.ico",
+        origin + "/favicon.svg",
+        // Useful site-wide fallback
+        "https://poki2.online/favicon.png",
+        fallbackSvg,
+      ];
+    } catch {
+      return ["https://poki2.online/favicon.png"];
+    }
+  }
+
+  /** Attach an onerror chain to `img` that cycles through favicon candidates when loading fails. */
+  function attachFaviconFallback(img, link) {
+    const candidates = getFaviconCandidates(link);
+    let idx = 0;
+
+    function next() {
+      if (idx >= candidates.length) return;
+      const url = candidates[idx++];
+      img.src = url;
+    }
+
+    // If the current src is one of the candidates, start from the next one
+    const current = (img.src || "").toString();
+    const start = candidates.findIndex((c) => c === current);
+    if (start >= 0) idx = start + 1;
+
+    img.onerror = function () {
+      // avoid infinite loops
+      this.onerror = null;
+      next();
+      // reattach handler for subsequent failures (if any)
+      setTimeout(() => attachFaviconFallback(img, link), 0);
+    };
   }
 
   function shuffle(arr) {
     const a = [...arr];
     for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.random() * (i + 1) | 0;
+      const j = (Math.random() * (i + 1)) | 0;
       [a[i], a[j]] = [a[j], a[i]];
     }
     return a;
@@ -134,16 +233,32 @@
 
   /* ---------- Recently Played (localStorage) ---------- */
   function getRecent() {
-    try { return JSON.parse(localStorage.getItem(RECENT_KEY)) || []; }
-    catch { return []; }
+    try {
+      return JSON.parse(localStorage.getItem(RECENT_KEY)) || [];
+    } catch {
+      return [];
+    }
   }
   function saveRecent(list) {
-    try { localStorage.setItem(RECENT_KEY, JSON.stringify(list.slice(0, MAX_RECENT))); }
-    catch { /* quota */ }
+    try {
+      localStorage.setItem(
+        RECENT_KEY,
+        JSON.stringify(list.slice(0, MAX_RECENT)),
+      );
+    } catch {
+      /* quota */
+    }
   }
   function addRecent(game) {
-    let list = getRecent().filter(g => g.link !== game.link);
-    list.unshift({ link: game.link, imgSrc: game.imgSrc, title: game.title, tags: game.tags, input: game.input, orientation: game.orientation });
+    let list = getRecent().filter((g) => g.link !== game.link);
+    list.unshift({
+      link: game.link,
+      imgSrc: game.imgSrc,
+      title: game.title,
+      tags: game.tags,
+      input: game.input,
+      orientation: game.orientation,
+    });
     saveRecent(list);
   }
   function clearRecent() {
@@ -153,14 +268,17 @@
 
   /* ---------- Data ---------- */
   async function loadGames() {
-    const urls = ['games.json', '../h5games_web/poki2.online/games.json'];
+    // Prefer local manifest; remove legacy fallback that caused 404s.
+    const urls = ["games.json"];
     for (const url of urls) {
       try {
         const r = await fetch(url);
         if (!r.ok) continue;
         allGames = await r.json();
         break;
-      } catch { /* next */ }
+      } catch {
+        /* next */
+      }
     }
 
     // On mobile, filter out keyboard-only games
@@ -168,7 +286,7 @@
 
     tagMap = {};
     for (const g of allGames) {
-      for (const t of (g.tags || ['other'])) {
+      for (const t of g.tags || ["other"]) {
         (tagMap[t] = tagMap[t] || []).push(g);
       }
     }
@@ -176,54 +294,71 @@
 
   /* ---------- Render helpers ---------- */
   function createCard(game) {
-    const el = document.createElement('div');
-    el.className = 'game-card';
-    el.innerHTML = `
-      <img class="game-card-img" src="${game.imgSrc}" alt="${game.title}" loading="lazy"
-           onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1 1%22><rect fill=%22%23334%22 width=%221%22 height=%221%22/></svg>'">
-      <div class="game-card-info">
-        <div class="game-card-title">${game.title}</div>
-      </div>`;
-    el.addEventListener('click', () => showDetail(game));
+    const el = document.createElement("div");
+    el.className = "game-card";
+
+    const img = document.createElement("img");
+    img.className = "game-card-img";
+    img.src = game.imgSrc || getFaviconUrl(game.link);
+    img.alt = game.title || "";
+    img.loading = "lazy";
+    // attach a favicon fallback chain so missing icons resolve to site favicons
+    attachFaviconFallback(img, game.link);
+
+    const info = document.createElement("div");
+    info.className = "game-card-info";
+    const title = document.createElement("div");
+    title.className = "game-card-title";
+    title.textContent = game.title || "";
+    info.appendChild(title);
+
+    el.appendChild(img);
+    el.appendChild(info);
+    el.addEventListener("click", () => showDetail(game));
     return el;
   }
 
   function renderSection(tag, limit) {
-    const meta = TAG_META[tag] || { emoji: '🎲', label: tag };
+    const meta = TAG_META[tag] || { emoji: "🎲", label: tag };
     const games = tagMap[tag] || [];
     if (!games.length) return null;
 
-    const section = document.createElement('section');
-    section.className = 'category-section';
-    section.id = 'section-' + tag;
+    const section = document.createElement("section");
+    section.className = "category-section";
+    section.id = "section-" + tag;
 
     const showAll = limit && games.length > limit;
     section.innerHTML = `
       <div class="section-header">
         <h2 class="section-title"><span class="emoji">${meta.emoji}</span> ${meta.label}</h2>
-        ${showAll ? `<button class="see-all" data-tag="${tag}">See all (${games.length})</button>` : ''}
+        ${showAll ? `<button class="see-all" data-tag="${tag}">See all (${games.length})</button>` : ""}
       </div>`;
 
-    const grid = document.createElement('div');
-    grid.className = 'game-grid';
+    const grid = document.createElement("div");
+    grid.className = "game-grid";
     const list = limit ? games.slice(0, limit) : games;
     for (const g of list) grid.appendChild(createCard(g));
     section.appendChild(grid);
 
-    const btn = section.querySelector('.see-all');
-    if (btn) btn.addEventListener('click', () => showCategory(tag));
+    const btn = section.querySelector(".see-all");
+    if (btn) btn.addEventListener("click", () => showCategory(tag));
     return section;
   }
 
   /* ---------- Hero featured ---------- */
   function renderHeroFeatured() {
-    $heroFeatured.innerHTML = '';
+    $heroFeatured.innerHTML = "";
     const picks = shuffle(allGames).slice(0, HERO_FEATURED_COUNT);
     for (const g of picks) {
-      const card = document.createElement('div');
-      card.className = 'hero-card';
-      card.innerHTML = `<img src="${g.imgSrc}" alt="${g.title}" loading="lazy">`;
-      card.addEventListener('click', () => showDetail(g));
+      const card = document.createElement("div");
+      card.className = "hero-card";
+      const himg = document.createElement("img");
+      himg.src = g.imgSrc || getFaviconUrl(g.link);
+      himg.alt = g.title || "";
+      himg.loading = "lazy";
+      attachFaviconFallback(himg, g.link);
+      card.appendChild(himg);
+      card.addEventListener("click", () => showDetail(g));
       $heroFeatured.appendChild(card);
     }
   }
@@ -231,159 +366,177 @@
   /* ---------- Recently Played ---------- */
   function renderRecentSection() {
     const list = getRecent().filter(canShow);
-    if (!list.length) { $recentSection.style.display = 'none'; return; }
-    $recentSection.style.display = '';
-    $recentGrid.innerHTML = '';
+    if (!list.length) {
+      $recentSection.style.display = "none";
+      return;
+    }
+    $recentSection.style.display = "";
+    $recentGrid.innerHTML = "";
     for (const g of list) $recentGrid.appendChild(createCard(g));
   }
 
   /* ---------- Views ---------- */
   function showHome() {
-    currentView = 'home';
-    $hero.style.display = '';
-    $searchResults.style.display = 'none';
-    $gameSections.innerHTML = '';
-    $gameSections.style.display = '';
-    $skeleton.style.display = 'none';
+    currentView = "home";
+    $hero.style.display = "";
+    $searchResults.style.display = "none";
+    $gameSections.innerHTML = "";
+    $gameSections.style.display = "";
+    $skeleton.style.display = "none";
     renderRecentSection();
     for (const tag of TAG_ORDER) {
       const sec = renderSection(tag, SECTION_LIMIT);
       if (sec) $gameSections.appendChild(sec);
     }
     highlightSidebarItem(null);
-    $searchInput.value = '';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    history.replaceState({ view: 'home' }, '', location.pathname);
+    $searchInput.value = "";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    history.replaceState({ view: "home" }, "", location.pathname);
   }
 
   function showCategory(tag) {
-    currentView = 'category';
-    $hero.style.display = 'none';
-    $recentSection.style.display = 'none';
-    $searchResults.style.display = 'none';
-    $gameSections.innerHTML = '';
-    $gameSections.style.display = '';
-    $skeleton.style.display = 'none';
+    currentView = "category";
+    $hero.style.display = "none";
+    $recentSection.style.display = "none";
+    $searchResults.style.display = "none";
+    $gameSections.innerHTML = "";
+    $gameSections.style.display = "";
+    $skeleton.style.display = "none";
     const sec = renderSection(tag, 0);
     if (sec) $gameSections.appendChild(sec);
     highlightSidebarItem(tag);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    history.pushState({ view: 'category', tag }, '', '#' + tag);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    history.pushState({ view: "category", tag }, "", "#" + tag);
   }
 
   function showSearch(query) {
-    if (!query.trim()) { showHome(); return; }
-    currentView = 'search';
+    if (!query.trim()) {
+      showHome();
+      return;
+    }
+    currentView = "search";
     const q = query.toLowerCase();
-    const matched = allGames.filter(g =>
-      canShow(g) && (
-        g.title.toLowerCase().includes(q) ||
-        (g.tags || []).some(t => t.toLowerCase().includes(q))
-      )
+    const matched = allGames.filter(
+      (g) =>
+        canShow(g) &&
+        (g.title.toLowerCase().includes(q) ||
+          (g.tags || []).some((t) => t.toLowerCase().includes(q))),
     );
-    $hero.style.display = 'none';
-    $recentSection.style.display = 'none';
-    $gameSections.style.display = 'none';
-    $skeleton.style.display = 'none';
-    $searchResults.style.display = '';
+    $hero.style.display = "none";
+    $recentSection.style.display = "none";
+    $gameSections.style.display = "none";
+    $skeleton.style.display = "none";
+    $searchResults.style.display = "";
     $searchTitle.textContent = `Results for "${query}" (${matched.length})`;
-    $searchGrid.innerHTML = '';
-    $searchEmpty.style.display = matched.length ? 'none' : '';
+    $searchGrid.innerHTML = "";
+    $searchEmpty.style.display = matched.length ? "none" : "";
     for (const g of matched) $searchGrid.appendChild(createCard(g));
     highlightSidebarItem(null);
   }
 
   /* ---------- Sidebar ---------- */
   function buildSidebar() {
-    $sidebarNav.innerHTML = '';
-    const homeItem = document.createElement('div');
-    homeItem.className = 'nav-item active';
-    homeItem.dataset.tag = '__home';
+    $sidebarNav.innerHTML = "";
+    const homeItem = document.createElement("div");
+    homeItem.className = "nav-item active";
+    homeItem.dataset.tag = "__home";
     homeItem.innerHTML = `<span class="nav-emoji">🏠</span> Home <span class="nav-badge">${allGames.length}</span>`;
-    homeItem.addEventListener('click', () => { closeSidebar(); showHome(); });
+    homeItem.addEventListener("click", () => {
+      closeSidebar();
+      showHome();
+    });
     $sidebarNav.appendChild(homeItem);
 
     for (const tag of TAG_ORDER) {
-      const meta = TAG_META[tag] || { emoji: '🎲', label: tag };
+      const meta = TAG_META[tag] || { emoji: "🎲", label: tag };
       const count = (tagMap[tag] || []).length;
       if (!count) continue;
-      const item = document.createElement('div');
-      item.className = 'nav-item';
+      const item = document.createElement("div");
+      item.className = "nav-item";
       item.dataset.tag = tag;
       item.innerHTML = `<span class="nav-emoji">${meta.emoji}</span> ${meta.label} <span class="nav-badge">${count}</span>`;
-      item.addEventListener('click', () => { closeSidebar(); showCategory(tag); });
+      item.addEventListener("click", () => {
+        closeSidebar();
+        showCategory(tag);
+      });
       $sidebarNav.appendChild(item);
     }
   }
 
   function highlightSidebarItem(tag) {
-    for (const el of $sidebarNav.querySelectorAll('.nav-item')) {
-      el.classList.toggle('active',
-        tag ? el.dataset.tag === tag : el.dataset.tag === '__home');
+    for (const el of $sidebarNav.querySelectorAll(".nav-item")) {
+      el.classList.toggle(
+        "active",
+        tag ? el.dataset.tag === tag : el.dataset.tag === "__home",
+      );
     }
   }
 
   function openSidebar() {
-    $sidebar.classList.add('open');
-    $sidebarOverlay.classList.add('show');
-    document.body.style.overflow = 'hidden';
+    $sidebar.classList.add("open");
+    $sidebarOverlay.classList.add("show");
+    document.body.style.overflow = "hidden";
   }
   function closeSidebar() {
-    $sidebar.classList.remove('open');
-    $sidebarOverlay.classList.remove('show');
-    document.body.style.overflow = '';
+    $sidebar.classList.remove("open");
+    $sidebarOverlay.classList.remove("show");
+    document.body.style.overflow = "";
   }
 
   /* ---------- Game detail interstitial ---------- */
   function showDetail(game) {
     pendingGame = game;
-    $detailImg.src = game.imgSrc;
+    $detailImg.src = game.imgSrc || getFaviconCandidates(game.link)[0];
+    attachFaviconFallback($detailImg, game.link);
     $detailTitle.textContent = game.title;
     $detailTags.innerHTML = (game.tags || [])
-      .map(t => `<span class="detail-tag">${(TAG_META[t] || {}).emoji || '🎲'} ${(TAG_META[t] || {}).label || t}</span>`)
-      .join('');
-    $detail.classList.add('open');
+      .map(
+        (t) =>
+          `<span class="detail-tag">${(TAG_META[t] || {}).emoji || "🎲"} ${(TAG_META[t] || {}).label || t}</span>`,
+      )
+      .join("");
+    $detail.classList.add("open");
   }
   function hideDetail() {
-    $detail.classList.remove('open');
+    $detail.classList.remove("open");
     pendingGame = null;
   }
 
   /* ---------- Game overlay ---------- */
-  const $loadingOverlay = $('game-loading');
-  const $loadingIcon    = $('loading-game-icon');
-  const $loadingTitle   = $('loading-game-title');
-  const $loadingBar     = $('loading-bar-fill');
-  const $loadingPercent = $('loading-percent');
-  const $orientHint     = $('orient-hint');
-  const $orientText     = $('orient-hint-text');
-  const $orientRotateBtn= $('orient-rotate-btn');
-  const $orientSkipBtn  = $('orient-skip-btn');
+  const $loadingOverlay = $("game-loading");
+  const $loadingIcon = $("loading-game-icon");
+  const $loadingTitle = $("loading-game-title");
+  const $loadingBar = $("loading-bar-fill");
+  const $loadingPercent = $("loading-percent");
+  const $orientHint = $("orient-hint");
+  const $orientText = $("orient-hint-text");
+  const $orientRotateBtn = $("orient-rotate-btn");
+  const $orientSkipBtn = $("orient-skip-btn");
 
   let loadingTimer = null;
-  let currentGameOrientation = 'both';
+  let currentGameOrientation = "both";
 
   function startLoadingProgress() {
     let progress = 0;
-    $loadingBar.style.width = '0%';
-    $loadingPercent.textContent = '0%';
+    $loadingBar.style.width = "0%";
+    $loadingPercent.textContent = "0%";
     clearInterval(loadingTimer);
     loadingTimer = setInterval(() => {
       // Simulate progress: fast at start, slows down near 90%
       const remaining = 90 - progress;
       progress += Math.max(0.5, remaining * 0.08);
       if (progress >= 90) progress = 90;
-      $loadingBar.style.width = Math.round(progress) + '%';
-      $loadingPercent.textContent = Math.round(progress) + '%';
+      $loadingBar.style.width = Math.round(progress) + "%";
+      $loadingPercent.textContent = Math.round(progress) + "%";
     }, 200);
   }
 
   function finishLoadingProgress() {
     clearInterval(loadingTimer);
-    $loadingBar.style.width = '100%';
-    $loadingPercent.textContent = '100%';
+    $loadingBar.style.width = "100%";
+    $loadingPercent.textContent = "100%";
     setTimeout(() => {
-      $loadingOverlay.classList.remove('show');
+      $loadingOverlay.classList.remove("show");
       // Check orientation on mobile after game loaded
       checkOrientationHint();
       // Start bar auto-hide timer now that loading is done
@@ -394,25 +547,26 @@
   /* ---------- Orientation hint ---------- */
   function checkOrientationHint() {
     if (!isMobile) return;
-    if (currentGameOrientation === 'both') return;
+    if (currentGameOrientation === "both") return;
     const isPortrait = window.innerHeight > window.innerWidth;
-    const needsLandscape = currentGameOrientation === 'landscape';
-    const needsPortrait = currentGameOrientation === 'portrait';
+    const needsLandscape = currentGameOrientation === "landscape";
+    const needsPortrait = currentGameOrientation === "portrait";
     if ((needsLandscape && isPortrait) || (needsPortrait && !isPortrait)) {
-      $orientHint.classList.remove('landscape', 'portrait');
-      $orientHint.classList.add('show', currentGameOrientation);
+      $orientHint.classList.remove("landscape", "portrait");
+      $orientHint.classList.add("show", currentGameOrientation);
       $orientText.textContent = needsLandscape
-        ? 'This game is best in landscape mode'
-        : 'This game is best in portrait mode';
+        ? "This game is best in landscape mode"
+        : "This game is best in portrait mode";
     } else {
-      $orientHint.classList.remove('show');
+      $orientHint.classList.remove("show");
     }
   }
 
   /** Try to lock screen orientation via API */
   async function lockOrientation(orient) {
     // orient: 'landscape' or 'portrait'
-    const lockType = orient === 'landscape' ? 'landscape-primary' : 'portrait-primary';
+    const lockType =
+      orient === "landscape" ? "landscape-primary" : "portrait-primary";
     try {
       // Some browsers require fullscreen first
       if (!document.fullscreenElement) {
@@ -423,9 +577,9 @@
       }
     } catch (e) {
       // Fallback: just show a tip if API not supported
-      console.warn('Orientation lock not supported:', e);
+      console.warn("Orientation lock not supported:", e);
     }
-    $orientHint.classList.remove('show');
+    $orientHint.classList.remove("show");
   }
 
   /** Unlock orientation back to natural */
@@ -434,49 +588,60 @@
       if (screen.orientation && screen.orientation.unlock) {
         screen.orientation.unlock();
       }
-    } catch { /* ignore */ }
+    } catch {
+      /* ignore */
+    }
   }
 
   // Auto-dismiss orientation hint when user rotates correctly
-  window.addEventListener('resize', () => {
-    if (!$orientHint.classList.contains('show')) return;
+  window.addEventListener("resize", () => {
+    if (!$orientHint.classList.contains("show")) return;
     checkOrientationHint();
   });
 
   // Rotate button: lock screen orientation
-  $orientRotateBtn.addEventListener('click', () => {
+  $orientRotateBtn.addEventListener("click", () => {
     lockOrientation(currentGameOrientation);
   });
   // Skip button: dismiss hint
-  $orientSkipBtn.addEventListener('click', () => {
-    $orientHint.classList.remove('show');
+  $orientSkipBtn.addEventListener("click", () => {
+    $orientHint.classList.remove("show");
   });
 
   function openGame(game) {
     hideDetail();
     addRecent(game);
     $overlayTitle.textContent = game.title;
-    currentGameOrientation = game.orientation || 'both';
+    currentGameOrientation = game.orientation || "both";
 
     // Show loading with game info
-    $loadingIcon.innerHTML = `<img src="${game.imgSrc}" alt="">`;
+    $loadingIcon.innerHTML = "";
+    const limg = document.createElement("img");
+    limg.src = game.imgSrc || getFaviconCandidates(game.link)[0];
+    limg.alt = game.title || "";
+    attachFaviconFallback(limg, game.link);
+    $loadingIcon.appendChild(limg);
     $loadingTitle.textContent = game.title;
 
     // Clear old game and show loading
-    $iframe.src = 'about:blank';
-    $loadingOverlay.classList.add('show');
-    $orientHint.classList.remove('show');
+    $iframe.src = "about:blank";
+    $loadingOverlay.classList.add("show");
+    $orientHint.classList.remove("show");
     startLoadingProgress();
 
     // Show bar initially, start auto-hide after load
     showBar();
 
-    $overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
+    $overlay.classList.add("open");
+    document.body.style.overflow = "hidden";
     gamePaused = false;
     userExitedFullscreen = false;
-    $pauseOverlay.classList.remove('show');
-    history.pushState({ view: 'game', link: game.link, title: game.title }, '', '#play-' + normalizeHref(game.link));
+    $pauseOverlay.classList.remove("show");
+    history.pushState(
+      { view: "game", link: game.link, title: game.title },
+      "",
+      "#play-" + normalizeHref(game.link),
+    );
 
     // Load new game after a tick (ensures blank is rendered first)
     requestAnimationFrame(() => {
@@ -485,17 +650,20 @@
 
     // Auto-enter fullscreen when opening a game
     setTimeout(() => {
-      $overlay.requestFullscreen().then(() => {
-        if (isMobile && currentGameOrientation !== 'both') {
-          lockOrientation(currentGameOrientation);
-        }
-      }).catch(() => {});
+      $overlay
+        .requestFullscreen()
+        .then(() => {
+          if (isMobile && currentGameOrientation !== "both") {
+            lockOrientation(currentGameOrientation);
+          }
+        })
+        .catch(() => {});
     }, 100);
   }
 
   // Finish progress when iframe loads
-  $iframe.addEventListener('load', () => {
-    if ($iframe.src !== 'about:blank') {
+  $iframe.addEventListener("load", () => {
+    if ($iframe.src !== "about:blank") {
       finishLoadingProgress();
     }
   });
@@ -504,36 +672,44 @@
     userExitedFullscreen = false;
     clearInterval(loadingTimer);
     clearTimeout(barHideTimer);
-    $overlayBar.classList.remove('bar-hidden');
-    $loadingOverlay.classList.remove('show');
-    $orientHint.classList.remove('show');
-    $pauseOverlay.classList.remove('show');
+    $overlayBar.classList.remove("bar-hidden");
+    $loadingOverlay.classList.remove("show");
+    $orientHint.classList.remove("show");
+    $pauseOverlay.classList.remove("show");
     unlockOrientation();
     if (document.fullscreenElement) {
-      document.exitFullscreen().then(() => {
-        finishCloseGame();
-      }).catch(() => { finishCloseGame(); });
+      document
+        .exitFullscreen()
+        .then(() => {
+          finishCloseGame();
+        })
+        .catch(() => {
+          finishCloseGame();
+        });
     } else {
       finishCloseGame();
     }
   }
   function finishCloseGame() {
-    $overlay.classList.remove('open');
-    $iframe.src = 'about:blank';
-    document.body.style.overflow = '';
-    if (history.state && history.state.view === 'game') history.back();
+    $overlay.classList.remove("open");
+    $iframe.src = "about:blank";
+    document.body.style.overflow = "";
+    if (history.state && history.state.view === "game") history.back();
     /* refresh recent row */
-    if (currentView === 'home') renderRecentSection();
+    if (currentView === "home") renderRecentSection();
   }
   function toggleFullscreen() {
     if (!document.fullscreenElement) {
       gamePaused = false;
-      $pauseOverlay.classList.remove('show');
-      $overlay.requestFullscreen().then(() => {
-        if (isMobile && currentGameOrientation !== 'both') {
-          lockOrientation(currentGameOrientation);
-        }
-      }).catch(() => {});
+      $pauseOverlay.classList.remove("show");
+      $overlay
+        .requestFullscreen()
+        .then(() => {
+          if (isMobile && currentGameOrientation !== "both") {
+            lockOrientation(currentGameOrientation);
+          }
+        })
+        .catch(() => {});
     } else {
       userExitedFullscreen = true;
       document.exitFullscreen();
@@ -541,27 +717,30 @@
   }
   function resumeFullscreen() {
     gamePaused = false;
-    $pauseOverlay.classList.remove('show');
-    $overlay.requestFullscreen().then(() => {
-      // Re-lock orientation if the game requires landscape/portrait
-      if (isMobile && currentGameOrientation !== 'both') {
-        lockOrientation(currentGameOrientation);
-      }
-    }).catch(() => {});
+    $pauseOverlay.classList.remove("show");
+    $overlay
+      .requestFullscreen()
+      .then(() => {
+        // Re-lock orientation if the game requires landscape/portrait
+        if (isMobile && currentGameOrientation !== "both") {
+          lockOrientation(currentGameOrientation);
+        }
+      })
+      .catch(() => {});
     showBar(); // restart auto-hide timer
   }
 
   /* ---------- Fullscreen change → pause ---------- */
-  document.addEventListener('fullscreenchange', () => {
-    if (!$overlay.classList.contains('open')) return;
+  document.addEventListener("fullscreenchange", () => {
+    if (!$overlay.classList.contains("open")) return;
     if (!document.fullscreenElement) {
       // Exited fullscreen while game is open → show pause
       gamePaused = true;
-      $pauseOverlay.classList.add('show');
+      $pauseOverlay.classList.add("show");
       showBar(); // keep bar visible during pause
     } else {
       gamePaused = false;
-      $pauseOverlay.classList.remove('show');
+      $pauseOverlay.classList.remove("show");
       showBar(); // restart auto-hide timer after resume
     }
   });
@@ -569,77 +748,94 @@
   /* ---------- Back to top ---------- */
   function handleScroll() {
     const scrollY = $content.scrollTop || window.scrollY;
-    $backToTop.classList.toggle('show', scrollY > 400);
+    $backToTop.classList.toggle("show", scrollY > 400);
   }
 
   /* ---------- Events ---------- */
-  $menuBtn.addEventListener('click', () => $sidebar.classList.contains('open') ? closeSidebar() : openSidebar());
-  $sidebarOverlay.addEventListener('click', closeSidebar);
-  $overlayBack.addEventListener('click', closeGame);
-  $overlayFs.addEventListener('click', toggleFullscreen);
-  $pauseResume.addEventListener('click', resumeFullscreen);
-  $pauseQuit.addEventListener('click', closeGame);
-  $clearRecent.addEventListener('click', clearRecent);
-  $backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  $shuffleBtn.addEventListener('click', () => {
+  $menuBtn.addEventListener("click", () =>
+    $sidebar.classList.contains("open") ? closeSidebar() : openSidebar(),
+  );
+  $sidebarOverlay.addEventListener("click", closeSidebar);
+  $overlayBack.addEventListener("click", closeGame);
+  $overlayFs.addEventListener("click", toggleFullscreen);
+  $pauseResume.addEventListener("click", resumeFullscreen);
+  $pauseQuit.addEventListener("click", closeGame);
+  $clearRecent.addEventListener("click", clearRecent);
+  $backToTop.addEventListener("click", () =>
+    window.scrollTo({ top: 0, behavior: "smooth" }),
+  );
+  $shuffleBtn.addEventListener("click", () => {
     if (!allGames.length) return;
-    const g = allGames[Math.random() * allGames.length | 0];
+    const g = allGames[(Math.random() * allGames.length) | 0];
     showDetail(g);
   });
 
   /* detail interstitial */
-  $detailPlay.addEventListener('click', () => { if (pendingGame) openGame(pendingGame); });
-  $detailClose.addEventListener('click', hideDetail);
-  $detailBackdrop.addEventListener('click', hideDetail);
+  $detailPlay.addEventListener("click", () => {
+    if (pendingGame) openGame(pendingGame);
+  });
+  $detailClose.addEventListener("click", hideDetail);
+  $detailBackdrop.addEventListener("click", hideDetail);
 
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      if (gamePaused && $pauseOverlay.classList.contains('show')) { closeGame(); return; }
-      if ($overlay.classList.contains('open')) { closeGame(); return; }
-      if ($detail.classList.contains('open'))  { hideDetail(); return; }
-      if ($sidebar.classList.contains('open')) { closeSidebar(); return; }
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      if (gamePaused && $pauseOverlay.classList.contains("show")) {
+        closeGame();
+        return;
+      }
+      if ($overlay.classList.contains("open")) {
+        closeGame();
+        return;
+      }
+      if ($detail.classList.contains("open")) {
+        hideDetail();
+        return;
+      }
+      if ($sidebar.classList.contains("open")) {
+        closeSidebar();
+        return;
+      }
     }
   });
 
   /* search */
   let searchTimer;
-  $searchInput.addEventListener('input', () => {
+  $searchInput.addEventListener("input", () => {
     clearTimeout(searchTimer);
     searchTimer = setTimeout(() => showSearch($searchInput.value), 250);
   });
 
   /* scroll */
-  window.addEventListener('scroll', handleScroll, { passive: true });
+  window.addEventListener("scroll", handleScroll, { passive: true });
 
   /* popstate */
-  window.addEventListener('popstate', e => {
-    if ($overlay.classList.contains('open')) {
-      $overlay.classList.remove('open');
-      $iframe.src = 'about:blank';
-      document.body.style.overflow = '';
-      if (currentView === 'home') renderRecentSection();
+  window.addEventListener("popstate", (e) => {
+    if ($overlay.classList.contains("open")) {
+      $overlay.classList.remove("open");
+      $iframe.src = "about:blank";
+      document.body.style.overflow = "";
+      if (currentView === "home") renderRecentSection();
       return;
     }
     const st = e.state;
-    if (st && st.view === 'category') showCategory(st.tag);
+    if (st && st.view === "category") showCategory(st.tag);
     else showHome();
   });
 
   /* ---------- Init ---------- */
-  document.addEventListener('DOMContentLoaded', async () => {
+  document.addEventListener("DOMContentLoaded", async () => {
     await loadGames();
-    $skeleton.style.display = 'none';
+    $skeleton.style.display = "none";
     buildSidebar();
     renderHeroFeatured();
 
-    const hash = location.hash.replace('#', '');
+    const hash = location.hash.replace("#", "");
     if (hash && TAG_META[hash]) {
       showCategory(hash);
     } else {
       showHome();
     }
     // Remove early-hide class now that the correct view is rendered
-    document.documentElement.classList.remove('route-loading');
+    document.documentElement.classList.remove("route-loading");
   });
-
 })();
