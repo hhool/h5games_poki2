@@ -4,7 +4,12 @@
   "description": "A lightweight, Poki-style HTML5 game portal. No frameworks, no build step — pure HTML / CSS / JS.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss css/style.css css/pages.css -o dist/css/styles.css",
+    "build:js": "rollup -c",
+    "generate:og": "node scripts/generate-og.js",
+    "hash:assets": "node scripts/hash-assets.js",
+    "build": "npm run generate:og && npm run build:css && npm run build:js && npm run hash:assets"
   },
   "keywords": [],
   "author": "",
