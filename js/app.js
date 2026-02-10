@@ -437,9 +437,11 @@
   /* ---------- Sidebar ---------- */
   function buildSidebar() {
     $sidebarNav.innerHTML = "";
-    const homeItem = document.createElement("div");
+    const homeItem = document.createElement("button");
+    homeItem.type = "button";
     homeItem.className = "nav-item active";
     homeItem.dataset.tag = "__home";
+    homeItem.setAttribute('aria-current', 'page');
     homeItem.innerHTML = `<span class="nav-emoji">🏠</span> Home <span class="nav-badge">${allGames.length}</span>`;
     homeItem.addEventListener("click", () => {
       closeSidebar();
@@ -451,7 +453,8 @@
       const meta = TAG_META[tag] || { emoji: "🎲", label: tag };
       const count = (tagMap[tag] || []).length;
       if (!count) continue;
-      const item = document.createElement("div");
+      const item = document.createElement("button");
+      item.type = "button";
       item.className = "nav-item";
       item.dataset.tag = tag;
       item.innerHTML = `<span class="nav-emoji">${meta.emoji}</span> ${meta.label} <span class="nav-badge">${count}</span>`;
@@ -465,10 +468,10 @@
 
   function highlightSidebarItem(tag) {
     for (const el of $sidebarNav.querySelectorAll(".nav-item")) {
-      el.classList.toggle(
-        "active",
-        tag ? el.dataset.tag === tag : el.dataset.tag === "__home",
-      );
+      const isActive = tag ? el.dataset.tag === tag : el.dataset.tag === "__home";
+      el.classList.toggle("active", isActive);
+      if (isActive) el.setAttribute('aria-current', 'page');
+      else el.removeAttribute('aria-current');
     }
   }
 
@@ -477,12 +480,19 @@
     $sidebarOverlay.classList.add("show");
     document.body.style.overflow = "hidden";
     if ($menuBtn) $menuBtn.setAttribute('aria-expanded', 'true');
+    // Move keyboard focus into the sidebar for keyboard users
+    setTimeout(() => {
+      const first = $sidebarNav.querySelector('.nav-item');
+      if (first && typeof first.focus === 'function') first.focus();
+    }, 50);
   }
   function closeSidebar() {
     $sidebar.classList.remove("open");
     $sidebarOverlay.classList.remove("show");
     document.body.style.overflow = "";
     if ($menuBtn) $menuBtn.setAttribute('aria-expanded', 'false');
+    // Return focus to the menu button
+    if ($menuBtn && typeof $menuBtn.focus === 'function') $menuBtn.focus();
   }
 
   /* ---------- Game detail interstitial ---------- */
