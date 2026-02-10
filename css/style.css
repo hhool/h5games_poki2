@@ -140,9 +140,9 @@ input{font:inherit}
   border-radius:8px;
 }
 .menu-btn:hover{background:var(--surface-2)}
-/* Focus styles for keyboard users */
-.menu-btn:focus,
-.nav-item:focus {
+/* Focus-visible styles for keyboard users — avoids focus ring on mouse/programmatic focus */
+.menu-btn:focus-visible,
+.nav-item:focus-visible {
   outline: 3px solid var(--brand);
   outline-offset: 2px;
   border-radius:8px;
