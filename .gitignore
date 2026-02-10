@@ -17,12 +17,6 @@ build/
 
 # Python virtualenv and caches
 .venv/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.pytest_cache/
-.mypy_cache/
 pip-wheel-metadata/
 
 # Environment files
@@ -38,6 +32,7 @@ coverage/
 *.temp
 *.bak
 *.swp
+.history/
 *.swo
 .history/
 .vscode/
