@@ -1,64 +1,63 @@
-# Ignore Mac system files and Windows thumbnail cache
+# macOS / Windows system files
 .DS_Store
 Thumbs.db
-node_modules/
-*.log
 
-# Ignore build artifacts
+# Node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Build artifacts
 dist/
 build/
 *.o
 *.so
 *.dll
 
-# Ignore environment files
+# Python virtualenv and caches
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+pip-wheel-metadata/
+
+# Environment files
 .env
 .env.local
 .env.*.local
 
-# Ignore IDE and editor files
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# Ignore coverage reports
+# Coverage and reports
 coverage/
 
-# Ignore temporary files
+# Temporary and editor files
 *.tmp
 *.temp
 *.bak
 *.swp
 *.swo
+.history/
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# Ignore compiled Python files
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Ignore log fileslogs/
+# Logs
 *.log
 
-# Ignore Docker files
+# Docker
 docker-compose.override.yml
 Dockerfile.dev
 
-# Ignore sensitive files
+# Sensitive files (keep out of repo)
 credentials.json
 secret.key
 
-# Ignore Cloudflare configuration files
+# Cloudflare configuration
 cloudflare/
 
-# Ignore VS Code settings
-.history/
-
-# Ignore nodejs specific files
-npm-debug.log
-yarn-debug.log
-yarn-error.log
-node_modules/
 
 
