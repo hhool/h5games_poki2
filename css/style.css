@@ -7,9 +7,9 @@
 
 :root{
   /* brand */
-  --brand:        #009cff;
-  --brand-dark:   #007acc;
-  --brand-light:  #e0f3ff;
+  --brand:        #006bb3;
+  --brand-dark:   #005499;
+  --brand-light:  #d8ecff;
 
   /* surfaces */
   --bg:           #f0f2f5;
@@ -18,7 +18,7 @@
 
   /* text */
   --text:         #1e1e2e;
-  --text-muted:   #6e7781;
+  --text-muted:   #505662;
 
   /* sidebar */
   --sidebar-bg:   #002b49;
@@ -48,6 +48,10 @@ body{
   overflow-x:hidden;
   min-height:100dvh;
 }
+/* Accessibility helpers */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:12px;top:12px;background:#fff;color:var(--text);padding:8px 12px;border-radius:6px;z-index:1100;transform:translateY(-120%);transition:transform .18s ease}
+.skip-link:focus{transform:translateY(0);outline:3px solid var(--brand)}
 a{color:inherit;text-decoration:none}
 button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
 img{display:block;max-width:100%}

@@ -476,11 +476,13 @@
     $sidebar.classList.add("open");
     $sidebarOverlay.classList.add("show");
     document.body.style.overflow = "hidden";
+    if ($menuBtn) $menuBtn.setAttribute('aria-expanded', 'true');
   }
   function closeSidebar() {
     $sidebar.classList.remove("open");
     $sidebarOverlay.classList.remove("show");
     document.body.style.overflow = "";
+    if ($menuBtn) $menuBtn.setAttribute('aria-expanded', 'false');
   }
 
   /* ---------- Game detail interstitial ---------- */
