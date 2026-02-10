@@ -40,6 +40,9 @@ coverage/
 *.sublime-project
 *.sublime-workspace
 
+# Wrangler local state
+.wrangler/
+
 # Logs
 *.log
 

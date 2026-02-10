@@ -9,7 +9,7 @@
     "build:js": "rollup -c",
     "generate:og": "node scripts/generate-og.js",
     "hash:assets": "node scripts/hash-assets.js",
-    "build:copy": "mkdir -p dist && rsync -a --exclude=node_modules --exclude=.git --exclude=scripts --exclude=tools --exclude=env --exclude=.venv --exclude=.history --exclude=dist ./ dist/",
+    "build:copy": "mkdir -p dist && rsync -a --exclude=node_modules --exclude=.git --exclude=scripts --exclude=tools --exclude=env --exclude=.venv --exclude=.history --exclude=.wrangler --exclude=dist ./ dist/",
     "build": "npm run generate:og && npm run build:css && npm run build:js && npm run hash:assets && npm run build:copy",
     "publish:pages": "wrangler pages publish ./dist --project-name \"${CF_PAGES_PROJECT:-h5games-poki2}\""
   },
