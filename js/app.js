@@ -491,8 +491,22 @@
     $sidebarOverlay.classList.remove("show");
     document.body.style.overflow = "";
     if ($menuBtn) $menuBtn.setAttribute('aria-expanded', 'false');
-    // Return focus to the menu button
-    if ($menuBtn && typeof $menuBtn.focus === 'function') $menuBtn.focus();
+    // Return focus to the menu button if it's visible; otherwise move focus to main content
+    try {
+      if ($menuBtn) {
+        const s = window.getComputedStyle($menuBtn);
+        if (s && s.display !== 'none' && $menuBtn.offsetParent !== null) {
+          if (typeof $menuBtn.focus === 'function') $menuBtn.focus();
+          return;
+        }
+      }
+      if ($content) {
+        $content.tabIndex = -1;
+        if (typeof $content.focus === 'function') $content.focus();
+      }
+    } catch (e) {
+      // ignore focus errors
+    }
   }
 
   /* ---------- Game detail interstitial ---------- */
