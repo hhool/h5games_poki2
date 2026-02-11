@@ -20,6 +20,18 @@ findings = {
     'obfuscated_strings': []
 }
 
+img_re = re.compile(r'<img[^>]+>', re.I)
+src_attr_re = re.compile(r'src\s*=\s*["\']([^"\']+)["\']', re.I)
+alt_attr_re = re.compile(r'alt\s*=\s*["\']([^"\']*)["\']', re.I)
+from difflib import SequenceMatcher
+
+page_texts = {}
+duplicate_groups = {}
+image_hosts = {}
+images_missing_alt = []
+
+known_stock_hosts = ['unsplash.com','images.unsplash.com','pexels.com','pixabay.com','shutterstock.com']
+
 def is_ignored(path):
     parts = set(path.split(os.sep))
     return bool(parts & IGNORE_DIRS)
@@ -57,6 +69,29 @@ def scan_file(path):
     # obfuscated/base64 long strings
     for b64 in base64_re.findall(txt):
         findings['obfuscated_strings'].append((path, b64[:120]))
+    # images: find <img> tags
+    for tag in img_re.findall(txt):
+        srcm = src_attr_re.search(tag)
+        altm = alt_attr_re.search(tag)
+        if srcm:
+            src = srcm.group(1)
+            if src.startswith('http://') or src.startswith('https://'):
+                host = re.sub(r'^https?://','',src).split('/')[0]
+                image_hosts.setdefault(host,0)
+                image_hosts[host]+=1
+                # flag known stock hosts
+                for kh in known_stock_hosts:
+                    if kh in host:
+                        findings.setdefault('stock_images',[]).append((path,src))
+        # missing alt
+        if not altm:
+            images_missing_alt.append((path, tag[:120]))
+    # capture normalized page text for duplicate detection
+    text_only = re.sub(r'<script[^>]*>.*?</script>','',txt,flags=re.S)
+    text_only = re.sub(r'<style[^>]*>.*?</style>','',text_only,flags=re.S)
+    text_only = re.sub(r'<[^>]+>',' ',text_only)
+    text_only = re.sub(r'\s+',' ',text_only).strip()
+    page_texts[path] = text_only
 
 def main():
     files_scanned=0
@@ -86,6 +121,47 @@ def main():
     out.append("\nPotential obfuscated/base64 strings found: %d\n" % len(findings['obfuscated_strings']))
     for p,s in findings['obfuscated_strings'][:20]:
         out.append(f"- {p}: {s}...\n")
+
+    # report image findings
+    out.append(f"\nImages missing alt attribute: {len(images_missing_alt)}\n")
+    for p,t in images_missing_alt[:50]:
+        out.append(f"- {p}: {t}\n")
+    out.append(f"\nImage hosts (top 50):\n")
+    for host,count in sorted(image_hosts.items(), key=lambda x:-x[1])[:50]:
+        out.append(f"- {host}: {count}\n")
+    if findings.get('stock_images'):
+        out.append(f"\nDetected stock image hosts (examples): {len(findings['stock_images'])}\n")
+        for p,src in findings['stock_images'][:50]:
+            out.append(f"- {p}: {src}\n")
+
+    # duplicate/near-duplicate detection
+    hashes = {}
+    for p,t in page_texts.items():
+        h = hash(t)
+        hashes.setdefault(h,[]).append(p)
+    # exact duplicates
+    dup_count = 0
+    for h,files in hashes.items():
+        if len(files)>1:
+            dup_count += len(files)
+            out.append(f"\nExact duplicate pages (content hash): {len(files)}\n")
+            for f in files:
+                out.append(f"- {f}\n")
+    # near duplicates via SequenceMatcher
+    near_dups = []
+    paths = list(page_texts.keys())
+    for i in range(len(paths)):
+        for j in range(i+1,len(paths)):
+            a = page_texts[paths[i]]
+            b = page_texts[paths[j]]
+            if not a or not b:
+                continue
+            ratio = SequenceMatcher(None,a,b).ratio()
+            if ratio>0.90 and (paths[i],paths[j],ratio) not in near_dups:
+                near_dups.append((paths[i],paths[j],ratio))
+    out.append(f"\nNear-duplicate page pairs (>0.90): {len(near_dups)}\n")
+    for a,b,r in near_dups[:100]:
+        out.append(f"- {a} <=> {b}: similarity={r:.2f}\n")
 
     report = ''.join(out)
     print(report)
