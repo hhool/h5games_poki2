@@ -123,42 +123,57 @@ No `npm install` is required for simple local viewing.
 
 ## 🛠 Build & Deploy (optional)
 
-The project includes an optional build pipeline that generates optimized assets and a `dist/` folder suitable for static hosting (Cloudflare Pages).
+This project can be used as a zero-build static site (open `index.html`), or you can run an optional build pipeline to produce an optimized `dist/` folder for deployment.
 
-Prerequisites:
+Prerequisites
 - Node.js (LTS)
 - `npm` or `pnpm`
-- `wrangler` (for direct Pages publishes) — optional
+- Optional: `wrangler` (for Cloudflare Pages)
 
-Key scripts (in `package.json`):
-
+Common scripts (see `package.json`)
 - `npm run build` — generate OG images, build CSS/JS, hash assets, and copy site files into `dist/`.
-- `npm run publish:pages` — publish `./dist` to Cloudflare Pages using `wrangler` (requires `wrangler` and authentication).
+- `npm run publish:pages` — publish `./dist` to Cloudflare Pages using `wrangler`.
 
-Typical flow to build and publish from your machine:
-
+Local build example
 ```bash
-# install dependencies (CI-friendly)
+cd h5games_poki2
+# install dependencies (use npm ci in CI)
 npm ci
 
-# build assets into ./dist
+# run full build -> ./dist
 npm run build
-
-# publish to Cloudflare Pages (interactive login)
-npm run publish:pages
 ```
 
-Environment overrides:
-- `CF_PAGES_PROJECT` — override the default Pages project name when running `npm run publish:pages`.
+Deploy examples
+- Cloudflare Pages (recommended)
+```bash
+# ensure you are logged in with wrangler
+npm run publish:pages
+# optionally override project name
+CF_PAGES_PROJECT=my-pages-project npm run publish:pages
+```
+- Rsync to a remote server (example)
+```bash
+# sync local ./dist to remote host (replace user@host and /var/www/site)
+rsync -azh --delete ./dist/ user@host:/var/www/site/
+```
+- Netlify: upload `dist/` via the Netlify UI, or configure CI to run `npm ci && npm run build` and publish `dist/`.
 
-Notes about native image tooling:
-- The OG/image generator uses `sharp` which depends on `libvips`. On macOS, if `sharp` fails to install, run:
-
+macOS notes
+- The OG generator uses `sharp`, which depends on the `libvips` system library. If `sharp` fails to install on macOS, install `vips` with:
 ```bash
 brew install vips
 ```
+- If native dependency issues persist, run the build in CI (many CI images include required native libs), or skip OG generation and run only the asset build steps:
+```bash
+npm run build:css && npm run build:js
+```
 
-Alternatively run the build in CI where `sharp` is available or skip OG generation.
+Troubleshooting
+- If `npm run build` fails, run `npm run build:css` and `npm run build:js` separately to isolate the failing step.
+- To prepare a deployable copy without image generation/hashing, run `npm run build:copy` after building assets.
+
+Note: This README includes both the simple "open and play" usage (no build) and the optional build/deploy workflow above.
 
 ## 🔧 Customisation
 
