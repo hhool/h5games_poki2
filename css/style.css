@@ -25,7 +25,7 @@
   --sidebar-text: #c4d6e8;
   --sidebar-hover:#003d66;
   --sidebar-active:#009cff;
-  --sidebar-w:    220px;
+  --sidebar-w:    260px;
 
   /* topbar */
   --topbar-h:     56px;
@@ -82,9 +82,9 @@ input{font:inherit}
 
 .sidebar-nav{flex:1;padding:8px 0}
 .sidebar-nav .nav-item{
-  display:flex;align-items:center;gap:10px;
-  padding:10px 20px;
-  font-size:.9rem;
+  display:flex;align-items:center;gap:8px;
+  padding:8px 16px;
+  font-size:.86rem;
   border-radius:0 24px 24px 0;
   margin-right:12px;
   transition:background .15s, color .15s;
@@ -99,6 +99,9 @@ input{font:inherit}
   font-size:.75rem;
   display:flex;gap:12px;
   border-top:1px solid rgba(255,255,255,.1);
+  justify-content:center; /* center footer content */
+  align-items:center;
+  text-align:center;
 }
 .sidebar-footer a:hover{color:#fff}
 
