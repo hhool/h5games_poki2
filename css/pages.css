@@ -5,20 +5,23 @@
 .page-wrap{
   max-width:780px;
   margin:0 auto;
-  min-height:100dvh;
   display:flex;flex-direction:column;
+  /* avoid forcing an extra min-height that combines with body padding and causes overflow */
 }
 
-/* ---- Header ---- */
 .page-header{
+  /* Fixed header so it's identical between pages regardless of content height */
   display:flex;align-items:center;justify-content:space-between;
-  padding:16px 24px;
+  padding:12px 20px;
   border-bottom:1px solid var(--surface-2);
-  position:sticky;top:0;
-  background:rgba(255,255,255,.85);
+  position:fixed;top:0;left:50%;transform:translateX(-50%);
+  width:calc(100% - 24px);max-width:780px;
+  background:rgba(255,255,255,.95);
   -webkit-backdrop-filter:saturate(180%) blur(12px);
   backdrop-filter:saturate(180%) blur(12px);
-  z-index:100;
+  z-index:1100;
+  box-shadow:0 1px 0 rgba(0,0,0,0.04);
+  height:var(--page-header-height,72px);
 }
 .page-logo{
   font-size:1.2rem;font-weight:700;color:var(--brand);
@@ -44,7 +47,7 @@
 /* ---- Content ---- */
 .page-content{
   flex:1;
-  padding:36px 24px 48px;
+  padding:12px 24px 48px;
 }
 .page-content h1{
   font-size:1.8rem;font-weight:800;
@@ -117,3 +120,29 @@
   /* Stack footer links vertically on small screens for readability */
   .page-footer .footer-links{flex-direction:column;gap:8px}
 }
+
+/* ------------------------------------------------------------------
+   Overflow & layout stability helpers
+   - Prevent long words/URLs and media from breaking layout
+   - Ensure page shell doesn't overflow horizontally
+-------------------------------------------------------------------*/
+html,body{box-sizing:border-box;min-height:100%}
+*,*::before,*::after{box-sizing:inherit}
+.page-wrap{padding-left:12px;padding-right:12px}
+/* always show a vertical scrollbar gutter to avoid layout shift when pages differ in height */
+html{overflow-y:scroll;scrollbar-gutter:stable}
+/* ensure header spacing is consistent across pages */
+body{padding-top:var(--page-header-height,72px)}
+/* header height variables for different breakpoints */
+:root{--page-header-height:72px}
+@media(max-width:600px){:root{--page-header-height:64px}}
+@media(max-width:420px){:root{--page-header-height:56px}}
+.page-content{overflow-wrap:break-word;word-break:break-word;max-width:100%}
+.page-content img,.page-content iframe,.page-content video{max-width:100%;height:auto;display:block}
+.page-footer{flex-shrink:0}
+/* small screens: reduce horizontal padding if content is tight */
+@media(max-width:420px){
+  .page-wrap{padding-left:10px;padding-right:10px}
+  .page-content{padding-left:8px;padding-right:8px}
+}
+
