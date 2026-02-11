@@ -1,17 +1,18 @@
-Scanned 48 files
+Scanned 50 files
 Adult-keyword hits: 0
 
 Copyright/Download-related hits: 5
 - ./about.html: 'copyright'
 - ./contact.html: 'copyright'
-- ./dcma.html: 'copyright'
 - ./terms.html: 'copyright'
+- ./dmca.html: 'copyright'
 - ./privacy.html: 'copyright'
 
 Suspicious links (exe/msi/apk or IP hosts): 0
 
 External script/asset hosts (top 50):
-- pagead2.googlesyndication.com: 8
+- pagead2.googlesyndication.com: 9
+- hhool.github.io: 2
 
 Potential obfuscated/base64 strings found: 0
 
@@ -23,7 +24,7 @@ Exact duplicate pages (content hash): 2
 - ./privacy/stickman/privacy.html
 - ./privacy/fishshot/privacy.html
 
-Near-duplicate page pairs (>0.90): 409
+Near-duplicate page pairs (>0.90): 407
 - ./privacy/cannon.basketball/privacy.html <=> ./privacy/craigenstone/privacy.html: similarity=0.90
 - ./privacy/cannon.basketball/privacy.html <=> ./privacy/slithersnake/privacy.html: similarity=0.91
 - ./privacy/cannon.basketball/privacy.html <=> ./privacy/stevenkash/privacy.html: similarity=0.90
@@ -37,7 +38,6 @@ Near-duplicate page pairs (>0.90): 409
 - ./privacy/cannon.basketball/privacy.html <=> ./privacy/tooncub/privacy.html: similarity=0.90
 - ./privacy/cannon.basketball/privacy.html <=> ./privacy/xtrialracing/privacy.html: similarity=0.90
 - ./privacy/cannon.basketball/privacy.html <=> ./privacy/sudoku/privacy.html: similarity=0.90
-- ./privacy/cannon.basketball/privacy.html <=> ./privacy/ropeninja/privacy.html: similarity=0.90
 - ./privacy/cannon.basketball/privacy.html <=> ./privacy/paperio2/privacy.html: similarity=0.91
 - ./privacy/craigenstone/privacy.html <=> ./privacy/pebbleboy/privacy.html: similarity=0.97
 - ./privacy/craigenstone/privacy.html <=> ./privacy/crossyroad/privacy.html: similarity=0.97
@@ -62,7 +62,7 @@ Near-duplicate page pairs (>0.90): 409
 - ./privacy/craigenstone/privacy.html <=> ./privacy/trailblazer/privacy.html: similarity=0.97
 - ./privacy/craigenstone/privacy.html <=> ./privacy/zcj2/privacy.html: similarity=0.96
 - ./privacy/craigenstone/privacy.html <=> ./privacy/amongus/privacy.html: similarity=0.96
-- ./privacy/craigenstone/privacy.html <=> ./privacy/ropeninja/privacy.html: similarity=0.98
+- ./privacy/craigenstone/privacy.html <=> ./privacy/ropeninja/privacy.html: similarity=0.97
 - ./privacy/craigenstone/privacy.html <=> ./privacy/nest/privacy.html: similarity=0.97
 - ./privacy/craigenstone/privacy.html <=> ./privacy/paperio2/privacy.html: similarity=0.97
 - ./privacy/templ.run.2/privacy.html <=> ./privacy/snakebird/privacy.html: similarity=0.98
@@ -91,7 +91,7 @@ Near-duplicate page pairs (>0.90): 409
 - ./privacy/pebbleboy/privacy.html <=> ./privacy/trailblazer/privacy.html: similarity=0.97
 - ./privacy/pebbleboy/privacy.html <=> ./privacy/zcj2/privacy.html: similarity=0.97
 - ./privacy/pebbleboy/privacy.html <=> ./privacy/amongus/privacy.html: similarity=0.96
-- ./privacy/pebbleboy/privacy.html <=> ./privacy/ropeninja/privacy.html: similarity=0.98
+- ./privacy/pebbleboy/privacy.html <=> ./privacy/ropeninja/privacy.html: similarity=0.97
 - ./privacy/pebbleboy/privacy.html <=> ./privacy/nest/privacy.html: similarity=0.98
 - ./privacy/pebbleboy/privacy.html <=> ./privacy/paperio2/privacy.html: similarity=0.98
 - ./privacy/crossyroad/privacy.html <=> ./privacy/slithersnake/privacy.html: similarity=0.97
@@ -115,7 +115,7 @@ Near-duplicate page pairs (>0.90): 409
 - ./privacy/crossyroad/privacy.html <=> ./privacy/trailblazer/privacy.html: similarity=0.97
 - ./privacy/crossyroad/privacy.html <=> ./privacy/zcj2/privacy.html: similarity=0.96
 - ./privacy/crossyroad/privacy.html <=> ./privacy/amongus/privacy.html: similarity=0.95
-- ./privacy/crossyroad/privacy.html <=> ./privacy/ropeninja/privacy.html: similarity=0.97
+- ./privacy/crossyroad/privacy.html <=> ./privacy/ropeninja/privacy.html: similarity=0.96
 - ./privacy/crossyroad/privacy.html <=> ./privacy/nest/privacy.html: similarity=0.97
 - ./privacy/crossyroad/privacy.html <=> ./privacy/paperio2/privacy.html: similarity=0.97
 - ./privacy/slithersnake/privacy.html <=> ./privacy/stevenkash/privacy.html: similarity=0.97
@@ -124,4 +124,4 @@ Near-duplicate page pairs (>0.90): 409
 - ./privacy/slithersnake/privacy.html <=> ./privacy/hopperrun/privacy.html: similarity=0.97
 - ./privacy/slithersnake/privacy.html <=> ./privacy/sambogart/privacy.html: similarity=0.98
 - ./privacy/slithersnake/privacy.html <=> ./privacy/slicemaster/privacy.html: similarity=0.97
-
+- ./privacy/slithersnake/privacy.html <=> ./privacy/backcountry/privacy.html: similarity=0.97
