@@ -1,0 +1,17 @@
+Scanned 48 files
+Adult-keyword hits: 0
+
+Copyright/Download-related hits: 5
+- ./about.html: 'copyright'
+- ./contact.html: 'copyright'
+- ./dcma.html: 'copyright'
+- ./terms.html: 'copyright'
+- ./privacy.html: 'copyright'
+
+Suspicious links (exe/msi/apk or IP hosts): 0
+
+External script/asset hosts (top 50):
+- pagead2.googlesyndication.com: 8
+
+Potential obfuscated/base64 strings found: 0
+
