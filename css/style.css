@@ -326,6 +326,11 @@ input{font:inherit}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:.75rem;opacity:.6}
 
+/* Responsive: stack footer links on narrow screens */
+@media (max-width:600px){
+  .footer-links{flex-direction:column;gap:8px}
+}
+
 /* ---------- Game overlay ---------- */
 .game-overlay{
   position:fixed;inset:0;

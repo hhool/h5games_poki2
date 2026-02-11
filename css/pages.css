@@ -114,4 +114,6 @@
   .page-content{padding:24px 16px 36px}
   .page-content h1{font-size:1.4rem}
   .page-nav a{padding:4px 8px;font-size:.8rem}
+  /* Stack footer links vertically on small screens for readability */
+  .page-footer .footer-links{flex-direction:column;gap:8px}
 }
