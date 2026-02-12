@@ -1,3 +1,23 @@
+/* ===== Added: game-card inset + safe background, and detail-img landscape behavior ===== */
+.game-card {
+  box-sizing: border-box;
+  padding: 1px; /* inset effective drawing area by 1px */
+}
+.game-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #f3f4f6; /* neutral fallback while images load */
+}
+
+@media (orientation: landscape) {
+  .detail-card .detail-img {
+    object-fit: contain;
+    object-position: bottom center;
+    max-height: 70vh;
+  }
+}
+
 /* ============================================================
    Poki2 — Poki-style game portal
    ============================================================ */
