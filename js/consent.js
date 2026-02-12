@@ -60,7 +60,59 @@ function renderAdFallback(container, opts){
   container.innerHTML = '';
   const box = document.createElement('div');
   box.className = 'ad-fallback';
-  box.innerHTML = opts && opts.fallbackHTML ? opts.fallbackHTML : '<div style="padding:12px;text-align:center;color:var(--text-muted)">Ads are disabled</div>';
+
+  // Priority: explicit fallbackHTML > fallbackImage > fallbackEndpoint(fetch) > default message
+  if(opts && opts.fallbackHTML){
+    box.innerHTML = opts.fallbackHTML;
+    container.appendChild(box);
+    return;
+  }
+
+  if(opts && opts.fallbackImage){
+    const a = document.createElement('a');
+    a.href = opts.fallbackLink || '#';
+    a.rel = 'noopener noreferrer';
+    const img = document.createElement('img');
+    img.src = opts.fallbackImage;
+    img.alt = opts.fallbackAlt || 'Sponsored content';
+    img.style.maxWidth = '100%';
+    img.style.height = 'auto';
+    a.appendChild(img);
+    box.appendChild(a);
+    container.appendChild(box);
+    return;
+  }
+
+  if(opts && opts.fallbackEndpoint){
+    // fetch server-provided non-personalized ad HTML (with timeout)
+    const timeout = opts.fetchTimeout || 2500;
+    let done = false;
+    const timer = setTimeout(()=>{
+      if(done) return;
+      done = true;
+      box.innerHTML = '<div style="padding:12px;text-align:center;color:var(--text-muted)">Ads are disabled</div>';
+      container.appendChild(box);
+    }, timeout);
+
+    fetch(opts.fallbackEndpoint, {credentials: 'omit', mode: 'cors'})
+      .then(r=> r.ok ? r.text() : Promise.reject(new Error('bad status')))
+      .then(html=>{
+        if(done) return;
+        done = true;
+        clearTimeout(timer);
+        box.innerHTML = html || '<div style="padding:12px;text-align:center;color:var(--text-muted)">Ads are disabled</div>';
+        container.appendChild(box);
+      }).catch(()=>{
+        if(done) return;
+        done = true;
+        clearTimeout(timer);
+        box.innerHTML = '<div style="padding:12px;text-align:center;color:var(--text-muted)">Ads are disabled</div>';
+        container.appendChild(box);
+      });
+    return;
+  }
+
+  box.innerHTML = '<div style="padding:12px;text-align:center;color:var(--text-muted)">Ads are disabled</div>';
   container.appendChild(box);
 }
 
@@ -205,6 +257,13 @@ window.poki2RenderAd = {
       'data-ad-slot': el.getAttribute('data-ad-slot'),
       'data-ad-format': el.getAttribute('data-ad-format') || 'auto',
       style: 'display:block;width:100%;height:auto;'
+      // enhanced fallback config
+      fallbackHTML: el.getAttribute('data-fallback-html') || null,
+      fallbackImage: el.getAttribute('data-fallback-image') || null,
+      fallbackLink: el.getAttribute('data-fallback-link') || null,
+      fallbackAlt: el.getAttribute('data-fallback-alt') || null,
+      fallbackEndpoint: el.getAttribute('data-fallback-endpoint') || null,
+      fetchTimeout: el.getAttribute('data-fallback-timeout') ? parseInt(el.getAttribute('data-fallback-timeout'),10) : undefined
     };
     renderAdSlot(el, opts);
   }
