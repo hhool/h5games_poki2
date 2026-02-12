@@ -12,9 +12,11 @@
 
 @media (orientation: landscape) {
   .detail-card .detail-img {
-    object-fit: contain;
-    object-position: bottom center;
-    max-height: 70vh;
+    /* In landscape interstitial prefer filling the left area so image feels immersive.
+       Use cover to fill the media column while keeping important subject centered. */
+    object-fit: cover;
+    object-position: center center;
+    max-height: 90vh;
   }
 }
 
@@ -775,7 +777,8 @@ input{font:inherit}
     align-items:stretch;
     gap:0;
     /* ensure card doesn't exceed viewport height */
-    max-height:calc(100vh - 48px);
+    /* slightly larger safe area and consistent cap for better scrolling on mobile landscape */
+    max-height:calc(100vh - 64px);
     min-height:0;
   }
   .detail-img{
@@ -783,7 +786,8 @@ input{font:inherit}
     width:52%;
     /* show the full image, consistent with the main grid cards */
     height:100%;
-    object-fit:contain !important;
+    /* prefer cover in landscape so image fills the left column; fall back to contain if needed */
+    object-fit:cover !important;
     object-position:center center !important;
     background:transparent;
     display:block;
