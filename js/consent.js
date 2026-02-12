@@ -42,6 +42,18 @@ function createBanner(){
   const banner = document.createElement('div');
   banner.id = 'consent-banner';
   banner.className = 'consent-banner';
+  // Inject minimal inline CSS to guarantee styling in headless snapshots
+  if(!document.getElementById('consent-inline-style')){
+    const s = document.createElement('style');
+    s.id = 'consent-inline-style';
+    s.textContent = `
+      .consent-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:1300;display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:10px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 8px 20px rgba(2,6,23,0.08);font-size:14px;color:#0b1220;max-width:1100px;margin:0 auto}
+      .consent-banner .consent-actions{display:flex;gap:8px;margin-left:12px}
+      .consent-accept{background:#1f6feb;color:#fff;padding:8px 12px;border-radius:8px;border:0}
+      .consent-decline{background:transparent;color:#0b1220;padding:8px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
+    `;
+    document.head.appendChild(s);
+  }
   banner.innerHTML = `
     <div class="consent-body">
       <p><strong>Poki2 uses ads</strong> — we display advertising to support the site. By clicking "Accept" you consent to loading advertising scripts and personalized ads. You can read more in our <a href="/privacy.html">Privacy Policy</a>.</p>
@@ -53,16 +65,33 @@ function createBanner(){
   `.trim();
 
   document.body.appendChild(banner);
+  // expose height to CSS and prevent footer overlap
+  const setHeight = ()=>{
+    try{
+      const h = banner.offsetHeight;
+      document.documentElement.style.setProperty('--consent-height', h + 'px');
+      document.body.classList.add('consent-visible');
+    }catch(e){}
+  };
+  setHeight();
+  window.addEventListener('resize', setHeight);
   const accept = banner.querySelector('.consent-accept');
   const decline = banner.querySelector('.consent-decline');
   accept.addEventListener('click', ()=>{
     setConsent('granted');
     banner.remove();
+    // cleanup visual state then init ads
+    document.body.classList.remove('consent-visible');
+    document.documentElement.style.removeProperty('--consent-height');
+    window.removeEventListener('resize', setHeight);
     initAds();
   });
   decline.addEventListener('click', ()=>{
     setConsent('denied');
     banner.remove();
+    document.body.classList.remove('consent-visible');
+    document.documentElement.style.removeProperty('--consent-height');
+    window.removeEventListener('resize', setHeight);
   });
   // focus accept for keyboard users
   accept.focus();

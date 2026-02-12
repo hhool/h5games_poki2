@@ -216,26 +216,43 @@ body.about-page .site-footer .footer-inner{
   padding-right:12px;
 }
 
-/* Consent banner for GDPR/consent handling
-   - Visible until user accepts or declines
-   - When accepted, `js/consent.js` will inject ad scripts
+/* Consent banner — improved visual treatment
+   - Sits above the footer and pushes page content by setting a CSS var
+   - Responsive layout with clear actions and accessible contrast
 */
 .consent-banner{
-  position:fixed;left:0;right:0;bottom:0;z-index:1200;
-  display:flex;align-items:center;gap:12px;padding:12px 16px;
-  background:linear-gradient(90deg, #ffffff, #f7f7f9);
-  border-top:1px solid rgba(0,0,0,0.06);
-  box-shadow:0 -6px 24px rgba(12,12,15,0.06);
+  position:fixed;
+  left:16px;
+  right:16px;
+  bottom:16px;
+  z-index:1300;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:14px 18px;
+  background:linear-gradient(180deg,#ffffff, #fbfdff);
+  border-radius:12px;
+  border:1px solid rgba(15,23,42,0.06);
+  box-shadow:0 8px 30px rgba(12,20,40,0.12);
   font-size:.95rem;color:var(--text);
+  max-width:1100px;
+  margin:0 auto;
 }
 .consent-banner .consent-body{flex:1;min-width:0}
-.consent-banner p{margin:0;line-height:1.4}
-.consent-banner .consent-actions{display:flex;gap:8px;margin-left:12px}
-.consent-banner button{border:0;padding:8px 12px;border-radius:8px;font-weight:600;cursor:pointer}
-.consent-accept{background:var(--brand);color:#fff}
-.consent-decline{background:transparent;border:1px solid var(--surface-2);color:var(--text)}
-@media(max-width:560px){
-  .consent-banner{flex-direction:column;align-items:stretch;padding:12px}
+.consent-banner p{margin:0;line-height:1.45;color:var(--text-muted)}
+.consent-banner p strong{color:var(--text)}
+.consent-banner a{color:var(--brand);text-decoration:underline}
+.consent-banner .consent-actions{display:flex;gap:10px;margin-left:12px}
+.consent-banner button{border:0;padding:8px 14px;border-radius:10px;font-weight:700;cursor:pointer}
+.consent-accept{background:var(--brand);color:#fff;box-shadow:0 6px 14px rgba(31,111,235,0.18)}
+.consent-decline{background:transparent;border:1px solid rgba(15,23,42,0.06);color:var(--text)}
+
+/* When consent banner is visible we add bottom padding to the page to avoid overlap */
+body.consent-visible{padding-bottom:calc(var(--consent-height,96px) + 24px)}
+
+@media(max-width:720px){
+  .consent-banner{left:12px;right:12px;flex-direction:column;align-items:stretch;gap:10px;padding:12px}
   .consent-banner .consent-actions{justify-content:flex-end}
+  .consent-banner button{width:48%;}
 }
 
