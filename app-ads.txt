@@ -1,0 +1,3 @@
+# app-ads.txt for mobile apps — list authorized ad sources for apps
+# Replace or extend entries below with app-specific package identifiers if needed
+google.com, pub-6199549323873133, DIRECT, f08c47fec0942fa0
