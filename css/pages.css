@@ -256,3 +256,11 @@ body.consent-visible{padding-bottom:calc(var(--consent-height,96px) + 24px)}
   .consent-banner button{width:48%;}
 }
 
+/* Ad placeholder and fallback styles */
+.ad-slot{display:block;max-width:100%;margin:18px auto;text-align:center}
+.ad-placeholder{display:flex;align-items:center;justify-content:center;gap:10px;padding:12px;border-radius:8px;border:1px dashed rgba(0,0,0,0.06);background:linear-gradient(180deg,#fff,#fbfdff)}
+.ad-placeholder-inner{font-weight:600;color:var(--text-muted)}
+.ad-placeholder-accept{margin-left:12px;padding:6px 10px;border-radius:8px;border:0;background:var(--brand);color:#fff;cursor:pointer}
+.ad-fallback{padding:12px;border-radius:8px;background:linear-gradient(180deg,#f8f9fb,#ffffff);border:1px solid rgba(0,0,0,0.03);color:var(--text-muted)}
+
+

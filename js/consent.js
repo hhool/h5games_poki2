@@ -38,6 +38,85 @@ function initAds(){
   document.head.appendChild(s);
 }
 
+function ensureAdsLoaded(){
+  return new Promise((resolve)=>{
+    if(window._poki2_ads_inited && window.adsbygoogle){
+      return resolve();
+    }
+    const check = ()=>{
+      if(window._poki2_ads_inited && window.adsbygoogle){
+        resolve();
+      }else{
+        setTimeout(check, 80);
+      }
+    };
+    // ensure script injected
+    initAds();
+    check();
+  });
+}
+
+function renderAdFallback(container, opts){
+  container.innerHTML = '';
+  const box = document.createElement('div');
+  box.className = 'ad-fallback';
+  box.innerHTML = opts && opts.fallbackHTML ? opts.fallbackHTML : '<div style="padding:12px;text-align:center;color:var(--text-muted)">Ads are disabled</div>';
+  container.appendChild(box);
+}
+
+function renderAdPlaceholder(container, opts){
+  container.innerHTML = '';
+  const box = document.createElement('div');
+  box.className = 'ad-placeholder';
+  box.innerHTML = `<div class="ad-placeholder-inner">Advertisement</div>`;
+  // allow quick accept button inside placeholder
+  const btn = document.createElement('button');
+  btn.className = 'ad-placeholder-accept';
+  btn.textContent = 'Accept ads';
+  btn.addEventListener('click', ()=>{
+    // grant consent and render real ad
+    setConsent('granted');
+    initAds();
+    renderAdSlotElement(container, opts);
+  });
+  box.appendChild(btn);
+  container.appendChild(box);
+}
+
+function renderAdSlotElement(container, opts){
+  container.innerHTML = '';
+  // create ins.adsbygoogle
+  const ins = document.createElement('ins');
+  ins.className = 'adsbygoogle';
+  if(opts['data-ad-client']) ins.setAttribute('data-ad-client', opts['data-ad-client']);
+  if(opts['data-ad-slot']) ins.setAttribute('data-ad-slot', opts['data-ad-slot']);
+  if(opts['data-ad-format']) ins.setAttribute('data-ad-format', opts['data-ad-format']);
+  if(opts['style']) ins.setAttribute('style', opts['style']);
+  container.appendChild(ins);
+  try{ (window.adsbygoogle = window.adsbygoogle || []).push({}); }catch(e){ }
+}
+
+/**
+ * Public helper to render an ad slot controlled by consent
+ * selector: element selector or element
+ * opts: {data-ad-client, data-ad-slot, data-ad-format, fallbackHTML}
+ */
+function renderAdSlot(selector, opts){
+  const container = (typeof selector === 'string') ? document.querySelector(selector) : selector;
+  if(!container) return;
+  const status = getConsent();
+  if(status === 'granted'){
+    ensureAdsLoaded().then(()=> renderAdSlotElement(container, opts));
+    return;
+  }
+  if(status === 'denied'){
+    renderAdFallback(container, opts);
+    return;
+  }
+  // undecided
+  renderAdPlaceholder(container, opts);
+}
+
 function createBanner(){
   const banner = document.createElement('div');
   banner.id = 'consent-banner';
@@ -114,6 +193,21 @@ window.poki2Consent = {
   status: getConsent(),
   grant(){ setConsent('granted'); initAds(); },
   deny(){ setConsent('denied'); }
+};
+
+// Expose ad-slot helper
+window.poki2RenderAd = {
+  render(selectorOrEl){
+    const el = (typeof selectorOrEl === 'string') ? document.querySelector(selectorOrEl) : selectorOrEl;
+    if(!el) return;
+    const opts = {
+      'data-ad-client': el.getAttribute('data-ad-client'),
+      'data-ad-slot': el.getAttribute('data-ad-slot'),
+      'data-ad-format': el.getAttribute('data-ad-format') || 'auto',
+      style: 'display:block;width:100%;height:auto;'
+    };
+    renderAdSlot(el, opts);
+  }
 };
 
 if(document.readyState === 'loading'){
