@@ -12,10 +12,10 @@
 .page-header{
   /* Fixed header so it's identical between pages regardless of content height */
   display:flex;align-items:center;justify-content:space-between;
-  padding:12px 20px;
+  padding:1px 20px;
   border-bottom:1px solid var(--surface-2);
-  position:fixed;top:0;left:50%;transform:translateX(-50%);
-  width:calc(100% - 24px);max-width:780px;
+  position:fixed;top:0;left:0;
+  width:calc(100% - 2px);max-width:100%px;
   background:rgba(255,255,255,.95);
   -webkit-backdrop-filter:saturate(180%) blur(12px);
   backdrop-filter:saturate(180%) blur(12px);
@@ -99,12 +99,12 @@
   text-align:center;
 }
 .page-footer .footer-links{
-  display:flex;justify-content:center;gap:16px;
+  display:flex;justify-content:center;gap:16px;align-items:center;flex-wrap:wrap;
   margin-bottom:8px;
 }
 .page-footer .footer-links a{
   font-size:.85rem;color:var(--text-muted);
-  transition:color .15s;
+  transition:color .15s;white-space:nowrap;
 }
 .page-footer .footer-links a:hover{color:var(--text)}
 .page-footer .footer-copy{
@@ -117,8 +117,8 @@
   .page-content{padding:24px 16px 36px}
   .page-content h1{font-size:1.4rem}
   .page-nav a{padding:4px 8px;font-size:.8rem}
-  /* Stack footer links vertically on small screens for readability */
-  .page-footer .footer-links{flex-direction:column;gap:8px}
+  /* Keep footer links horizontal but allow wrapping on small screens */
+  .page-footer .footer-links{flex-direction:row;gap:8px;justify-content:center;flex-wrap:wrap}
 }
 
 /* ------------------------------------------------------------------
@@ -144,5 +144,56 @@ body{padding-top:var(--page-header-height,72px)}
 @media(max-width:420px){
   .page-wrap{padding-left:10px;padding-right:10px}
   .page-content{padding-left:8px;padding-right:8px}
+}
+
+/* Contact page: make footer absolute at bottom of viewport when content is short */
+body.contact-page{
+  position:relative;
+  min-height:100vh;
+}
+body.contact-page .site-footer{
+  position:absolute;
+  /* reset full-bleed offsets applied globally so footer starts at viewport left */
+  left:0 !important;
+  right:0 !important;
+  bottom:0;
+  width:100% !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+  transform:none !important;
+  box-sizing:border-box;
+}
+body.contact-page .content,
+body.contact-page .page-content{
+  /* ensure content doesn't get hidden behind absolute footer */
+  padding-bottom:160px;
+}
+
+/* About page: footer absolute and centered to page width */
+body.about-page{position:relative;min-height:100vh}
+/* remove local positioning so footer absolute will position relative to the document/viewport */
+body.about-page .page-wrap{position:static !important}
+/* Position footer relative to the body so it full-bleeds to the document edges */
+body.about-page .site-footer{
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  /* ensure any global negative margins are reset so background hugs viewport */
+  margin-left:0 !important;
+  margin-right:0 !important;
+  width:100vw !important;
+  box-sizing:border-box !important;
+  border-radius:0 !important;
+  transform:none !important;
+}
+body.about-page .page-content{padding-bottom:160px}
+/* make footer inner content align with page-wrap width */
+body.about-page .site-footer .footer-inner{
+  max-width:780px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:12px;
+  padding-right:12px;
 }
 

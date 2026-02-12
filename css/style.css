@@ -269,6 +269,8 @@ input{font:inherit}
   border-radius:var(--card-radius);
   overflow:hidden;
   background:var(--surface);
+  /* inset the effective drawing area by 1px on all sides */
+  padding:1px;
   box-shadow:0 2px 8px rgba(0,0,0,.06);
   cursor:pointer;
   transition:transform .2s var(--ease), box-shadow .2s var(--ease);
@@ -280,14 +282,20 @@ input{font:inherit}
 .game-card-img{
   width:100%;
   aspect-ratio:4 / 3;
-  object-fit:cover;
-  background:var(--surface-2);
+  /* show the entire game image (no cropping) */
+  object-fit:contain;
+  object-position:center center;
+  /* use the card's default background (inherit from .game-card) */
+  background:transparent;
+  /* round inner image corners to match inset area */
+  border-radius:calc(var(--card-radius) - 1px);
 }
 .game-card-info{
   padding:8px 10px;
 }
 .game-card-title{
   font-size:.82rem;font-weight:600;
+  display:block;width:100%;text-align:center;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 
@@ -316,19 +324,38 @@ input{font:inherit}
   padding:28px 20px;
   margin-top:auto;
   border-radius:20px 20px 0 0;
+  /* make footer full-bleed so background spans the viewport edges even inside centered containers */
+  position:relative;
+  left:50%;
+  right:50%;
+  margin-left:-50vw;
+  margin-right:-50vw;
+  width:100vw;
+  box-sizing:border-box;
 }
 .footer-inner{
-  max-width:800px;margin:auto;text-align:center;
+  /* allow footer background to fill the container while keeping inner content centered */
+  max-width:100%;
+  padding:0 12px;
+  box-sizing:border-box;
+  text-align:center;
+}
+.footer-inner > .footer-brand,
+.footer-inner > .footer-links,
+.footer-inner > .footer-copy{
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
 }
 .footer-brand{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:10px}
-.footer-links{display:flex;justify-content:center;gap:16px;margin-bottom:10px}
-.footer-links a{font-size:.85rem;transition:color .15s}
+.footer-links{display:flex;justify-content:center;align-items:center;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+.footer-links a{font-size:.85rem;transition:color .15s;white-space:nowrap}
 .footer-links a:hover{color:#fff}
 .footer-copy{font-size:.75rem;opacity:.6}
 
 /* Responsive: stack footer links on narrow screens */
 @media (max-width:600px){
-  .footer-links{flex-direction:column;gap:8px}
+  .footer-links{gap:8px}
 }
 
 /* ---------- Game overlay ---------- */
@@ -637,6 +664,8 @@ input{font:inherit}
   position:relative;
   background:var(--surface);
   border-radius:20px;
+  /* inset effective drawing area by 1px */
+  padding:1px;
   overflow:hidden;
   width:340px;max-width:90vw;
   box-shadow:0 16px 48px rgba(0,0,0,.25);
@@ -645,8 +674,15 @@ input{font:inherit}
 }
 .game-detail.open .detail-card{transform:scale(1)}
 .detail-img{
-  width:100%;aspect-ratio:1/1;object-fit:cover;
-  background:var(--surface-2);
+  width:100%;
+  aspect-ratio:4/3;
+  /* display full image like game-card-img: no cropping, centered */
+  object-fit:contain;
+  object-position:center center;
+  background:transparent;
+  display:block;
+  /* reduce corner radius by 1px to match inset padding */
+  border-radius:calc(20px - 1px) calc(20px - 1px) 0 0;
 }
 .detail-body{padding:18px 20px 22px;text-align:center}
 .detail-title{font-size:1.2rem;font-weight:700;margin-bottom:8px}
@@ -703,4 +739,51 @@ input{font:inherit}
   .section-title{font-size:1rem}
   .see-all{font-size:.75rem;padding:3px 8px}
   .search-input{padding:7px 12px 7px 36px;font-size:.85rem}
+}
+
+/* Landscape / wide: show image and body side-by-side for the detail card
+   - cap card height to viewport so image can fill vertically
+   - make image cover the full card height (object-fit:cover)
+   - make body scrollable if content exceeds available height
+*/
+@media (orientation: landscape) and (min-width:700px) {
+  .detail-card{
+    width:min(1100px,92vw);
+    max-width:1100px;
+    display:flex;
+    flex-direction:row;
+    align-items:stretch;
+    gap:0;
+    /* ensure card doesn't exceed viewport height */
+    max-height:calc(100vh - 48px);
+    min-height:0;
+  }
+  .detail-img{
+    flex:0 0 52%;
+    width:52%;
+    /* show the full image, consistent with the main grid cards */
+    height:100%;
+    object-fit:contain !important;
+    object-position:center center !important;
+    background:transparent;
+    display:block;
+    max-height:100%;
+    /* left-side image: round left corners matching inset */
+    border-radius:calc(20px - 1px) 0 0 calc(20px - 1px);
+  }
+  .detail-body{
+    flex:1 1 48%;
+    padding:28px 28px 32px;
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    overflow:auto; /* allow scrolling when content is tall */
+    min-height:0; /* allow flex child to shrink on small heights */
+  }
+  /* right-side body: round right corners matching inset */
+  .detail-body{border-radius:0 calc(20px - 1px) calc(20px - 1px) 0}
+  .detail-tags{justify-content:flex-start}
+  .detail-play-btn{align-self:flex-start}
+  .detail-close{top:12px;right:12px}
 }
