@@ -9,7 +9,7 @@ yarn-debug.log
 yarn-error.log
 
 # Build artifacts
-dist/
+# dist/ removed so production HTML can be versioned when needed
 build/
 *.o
 *.so
