@@ -60,6 +60,8 @@
 
   /* overlay */
   --overlay-bar-h: 48px;
+  /* footer spacing to prevent overlap with content and overlays */
+  --footer-h: 120px;
 }
 
 html{font-size:16px;scroll-behavior:smooth}
@@ -143,6 +145,8 @@ input{font:inherit}
   display:flex;
   flex-direction:column;
   transition:margin-left .3s var(--ease);
+  /* ensure page content doesn't sit beneath the footer */
+  padding-bottom:var(--footer-h);
 }
 
 /* ---------- Topbar ---------- */
@@ -341,19 +345,18 @@ input{font:inherit}
 
 /* ---------- Footer ---------- */
 .site-footer{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:900;
   background:var(--sidebar-bg);
   color:var(--sidebar-text);
-  padding:28px 20px;
-  margin-top:auto;
-  border-radius:20px 20px 0 0;
-  /* make footer full-bleed so background spans the viewport edges even inside centered containers */
-  position:relative;
-  left:50%;
-  right:50%;
-  margin-left:-50vw;
-  margin-right:-50vw;
-  width:100vw;
+  padding:20px 18px;
   box-sizing:border-box;
+  /* give a subtle rounded top to match site aesthetic */
+  border-top-left-radius:12px;
+  border-top-right-radius:12px;
 }
 .footer-inner{
   /* allow footer background to fill the container while keeping inner content centered */

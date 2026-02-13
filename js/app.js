@@ -282,12 +282,29 @@
       }
     }
 
+    // Deduplicate entries by `link` (preferred) or normalized title to avoid
+    // duplicate game objects causing repeated cards in category grids.
+    const seen = new Set();
+    allGames = (allGames || []).filter((g) => {
+      const key = (g.link || g.title || "").toString().toLowerCase().trim();
+      if (!key) return false;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+
     // On mobile, filter out keyboard-only games
     allGames = allGames.filter(canShow);
 
     tagMap = {};
     for (const g of allGames) {
-      for (const t of g.tags || ["other"]) {
+      // Normalize tags: ensure an array, lowercase canonicalization where appropriate,
+      // and remove duplicate tag entries so a game isn't inserted multiple times
+      // into the same category grid.
+      const rawTags = Array.isArray(g.tags) ? g.tags : ["other"];
+      const uniqueTags = Array.from(new Set(rawTags.map((t) => String(t).trim())));
+      g.tags = uniqueTags.length ? uniqueTags : ["other"];
+      for (const t of g.tags) {
         (tagMap[t] = tagMap[t] || []).push(g);
       }
     }

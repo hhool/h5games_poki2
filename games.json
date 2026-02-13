@@ -530,16 +530,6 @@
     "show": true
   },
   {
-    "link": "https://p.poki2.online/pandemic2/",
-    "imgSrc": "https://p.poki2.online/pandemic2/icon.png",
-    "title": "Pandemic 2",
-    "tags": ["racing", "strategy"],
-    "input": ["touch", "keyboard"],
-    "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
-    "show": false
-  },
-  {
     "title": "Paper.io 2",
     "link": "https://p.poki2.online/paperio2/",
     "imgSrc": "https://p.poki2.online/paperio2/icon.png",
@@ -557,16 +547,6 @@
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
     "avalid": ["desktop"],
-    "show": true
-  },
-  {
-    "title": "PolyBranch",
-    "link": "https://p.poki2.online/polybranch/",
-    "imgSrc": "https://p.poki2.online/polybranch/icon.png",
-    "tags": ["idle"],
-    "input": ["touch", "keyboard"],
-    "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
     "show": true
   },
   {
@@ -773,9 +753,9 @@
     "title": "Vex 3",
     "link": "https://v.poki2.online/vex3/",
     "imgSrc": "https://v.poki2.online/vex3/icon.png",
-    "tags": ["achievement", "racing", "platformer"],
+    "tags": ["achievement", "racing", "vex3", "stickman", "platformer"],
     "input": ["keyboard"],
-    "orientation": "landscape",
+    "orientation": "both",
     "avalid": ["mobile", "desktop"],
     "show": true
   },
@@ -783,9 +763,9 @@
     "title": "Vex 4",
     "link": "https://v.poki2.online/vex4/",
     "imgSrc": "https://v.poki2.online/vex4/icon.png",
-    "tags": ["racing", "racing", "platformer"],
+    "tags": ["racing", "racing", "vex4", "stickman", "platformer"],
     "input": ["keyboard"],
-    "orientation": "landscape",
+    "orientation": "both",
     "avalid": ["mobile", "desktop"],
     "show": true
   },
@@ -793,9 +773,9 @@
     "title": "Vex 5",
     "link": "https://v.poki2.online/vex5/",
     "imgSrc": "https://v.poki2.online/vex5/icon.png",
-    "tags": ["racing", "racing", "platformer"],
+    "tags": ["racing", "racing", "vex5", "stickman", "platformer"],
     "input": ["keyboard"],
-    "orientation": "landscape",
+    "orientation": "both",
     "avalid": ["desktop"],
     "show": true
   },
@@ -803,9 +783,9 @@
     "title": "Vex 6",
     "link": "https://v.poki2.online/vex6/",
     "imgSrc": "https://v.poki2.online/vex6/icon.png",
-    "tags": ["racing", "racing", "platformer"],
+    "tags": ["racing", "racing", "vex6", "stickman", "platformer"],
     "input": ["keyboard"],
-    "orientation": "landscape",
+    "orientation": "both",
     "avalid": ["mobile", "desktop"],
     "show": true
   },
@@ -840,26 +820,6 @@
     "show": true
   },
   {
-    "title": "3dtetris",
-    "link": "https://mobileapp.poki2.online/mobile/3dtetris/",
-    "imgSrc": "https://mobileapp.poki2.online/3dtetris/icon.png",
-    "tags": ["puzzle", "multiplayer"],
-    "input": ["touch", "keyboard"],
-    "orientation": "portrait",
-    "avalid": [],
-    "show": false
-  },
-  {
-    "title": "alienattack",
-    "link": "https://mobileapp.poki2.online/mobile/alienattack/",
-    "imgSrc": "https://mobileapp.poki2.online/alienattack/icon-256.png",
-    "tags": ["action", "casual", "shooting", "singleplayer", "2d", "adventure"],
-    "input": ["touch", "keyboard"],
-    "orientation": "landscape",
-    "avalid": ["mobile"],
-    "show": false
-  },
-  {
     "title": "Balance Ball",
     "link": "https://mobileapp.poki2.online/mobile/balanceball/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/balanceball/assets/conMain.png",
@@ -888,16 +848,6 @@
     "orientation": "portrait",
     "avalid": ["mobile", "desktop"],
     "show": true
-  },
-  {
-    "title": "Birgly",
-    "link": "https://mobileapp.poki2.online/mobile/birgly/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/birgly/icon-256.png",
-    "tags": ["idle", "singleplayer", "skill"],
-    "input": ["touch", "keyboard"],
-    "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
-    "show": false
   },
   {
     "title": "Black Bats",
@@ -968,16 +918,6 @@
     "orientation": "portrait",
     "avalid": ["mobile", "desktop"],
     "show": true
-  },
-  {
-    "title": "burningrubber",
-    "link": "https://mobileapp.poki2.online/mobile/burningrubber/",
-    "imgSrc": "https://mobileapp.poki2.online/burningrubber/icon.png",
-    "tags": ["other", "multiplayer"],
-    "input": ["touch", "keyboard"],
-    "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
-    "show": false
   },
   {
     "title": "Candy Fusion",
@@ -1974,7 +1914,7 @@
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
     "avalid": ["mobile", "desktop"],
-    "show": true
+    "show": false
   },
   {
     "title": "Pirate Kid",
@@ -2572,7 +2512,7 @@
     "title": "Wood Block",
     "tags": ["puzzle", "singleplayer"],
     "input": ["touch", "keyboard", "wood", "block"],
-    "orientation": "portrait",
+    "orientation": "both",
     "avalid": ["mobile", "desktop"],
     "show": true
   },
