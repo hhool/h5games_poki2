@@ -1,0 +1,30 @@
+{
+  "home": {
+    "title": "Poki2 — Free Online Games",
+    "description": "Play the best free browser games: action, puzzle, racing and more — instant play on desktop and mobile."
+  },
+  "privacy": {
+    "title": "Privacy — Poki2",
+    "description": "Privacy policy for Poki2 — how we collect and use data when you play HTML5 games on our site."
+  },
+  "about": {
+    "title": "About — Poki2",
+    "description": "About Poki2 — discover how we curate and deliver free HTML5 games, updated frequently for instant play."
+  },
+  "terms": {
+    "title": "Terms — Poki2",
+    "description": "Terms of service for Poki2 — rules and conditions for using the platform."
+  },
+  "contact": {
+    "title": "Contact — Poki2",
+    "description": "Contact Poki2 for support, partnerships, or DMCA inquiries. We're here to help."
+  },
+  "dmca": {
+    "title": "DMCA — Poki2",
+    "description": "DMCA takedown information and reporting procedure for Poki2."
+  },
+  "404": {
+    "title": "Page Not Found — Poki2",
+    "description": "The page you requested cannot be found. Return to Poki2 to discover more free online games."
+  }
+}
