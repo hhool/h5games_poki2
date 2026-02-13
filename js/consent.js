@@ -136,10 +136,15 @@ function renderAdPlaceholder(container, opts){
   container.innerHTML = '';
   const box = document.createElement('div');
   box.className = 'ad-placeholder';
-  // ensure placeholder takes reasonable space so it doesn't collapse into a
-  // tiny text node inside surrounding grids
+  // ensure placeholder takes reasonable space but avoid large fixed heights
+  // allow per-slot override via opts.minHeight (or data-min-height attribute)
   box.style.width = '100%';
-  box.style.minHeight = (opts && opts.minHeight) || '88px';
+  if(opts && opts.minHeight){
+    box.style.minHeight = opts.minHeight;
+  }else{
+    // default to no forced min-height so CSS can collapse empty placeholders
+    box.style.minHeight = '0';
+  }
   box.setAttribute('role', 'region');
   box.setAttribute('aria-label', 'Advertisement placeholder');
   // Render a visually-empty placeholder block so the layout reserves space
@@ -162,6 +167,93 @@ function renderAdSlotElement(container, opts){
   try{ (window.adsbygoogle = window.adsbygoogle || []).push({}); }catch(e){ }
 }
 
+// Collapse any ad-slot that appears oversized but contains no meaningful ad content
+function collapseEmptyAdSlot(container){
+  try{
+    // give ad scripts multiple chances to populate
+    const checkAndCollapse = ()=>{
+      if(!container || !(container instanceof Element)) return;
+      const h = container.offsetHeight || 0;
+      const hasMedia = !!container.querySelector('iframe, img, video');
+      const text = (container.textContent||'').trim();
+      if(container.classList.contains('ad-collapsed')) return;
+      // Collapse if very tall and no media, or has ins but no media and moderate height
+      if(h > 300 || (h > 100 && !hasMedia && text.length === 0)){
+        console.log('Collapsing ad slot, height:', h, 'hasMedia:', hasMedia);
+        // Also force hide any ins.adsbygoogle if no media
+        const ins = container.querySelector('ins.adsbygoogle');
+        if(ins && !hasMedia){
+          ins.style.display = 'none';
+          ins.style.height = '0';
+          ins.style.minHeight = '0';
+        }
+        container.style.transition = 'height .2s, opacity .2s';
+        container.style.opacity = '0';
+        container.style.height = '6px';
+        container.style.minHeight = '6px';
+        container.style.padding = '0';
+        container.style.margin = '0';
+        container.style.overflow = 'hidden';
+        container.classList.add('ad-collapsed');
+        setTimeout(()=>{ container.style.display = 'none'; }, 240);
+      }
+    };
+    setTimeout(checkAndCollapse, 500);
+    setTimeout(checkAndCollapse, 1500); // check again later
+  }catch(e){}
+}
+
+// Watch for DOM changes (ad scripts or other third-party code) and
+// re-run collapseEmptyAdSlot on affected ad-slot elements.
+function setupAdSlotMutationObserver(){
+  if(window._poki2_ad_observer_setup) return;
+  window._poki2_ad_observer_setup = true;
+
+  const scheduled = new WeakMap();
+  const scheduleCollapse = (el)=>{
+    if(!el) return;
+    if(scheduled.has(el)) clearTimeout(scheduled.get(el));
+    const t = setTimeout(()=>{
+      try{ collapseEmptyAdSlot(el); }catch(e){}
+      scheduled.delete(el);
+    }, 180);
+    scheduled.set(el, t);
+  };
+
+  const obs = new MutationObserver((mutations)=>{
+    try{
+      for(const m of mutations){
+        // if nodes are added/removed, try to find any ad-slot parents
+        if(m.addedNodes && m.addedNodes.length){
+          m.addedNodes.forEach(n=>{
+            if(n && n.nodeType===1){
+              const s = n.classList && n.classList.contains('ad-slot') ? n : n.closest && n.closest('.ad-slot');
+              if(s) scheduleCollapse(s);
+            }
+          });
+        }
+        // attribute changes on elements (style/class) may affect layout
+        const tgt = m.target && (m.target.nodeType===1 ? m.target : null);
+        if(tgt){
+          const slot = tgt.classList && tgt.classList.contains('ad-slot') ? tgt : tgt.closest && tgt.closest('.ad-slot');
+          if(slot) scheduleCollapse(slot);
+        }
+      }
+    }catch(e){}
+  });
+
+  try{
+    obs.observe(document.documentElement || document.body, {childList:true, subtree:true, attributes:true, attributeFilter:['style','class']});
+  }catch(e){
+    try{ obs.observe(document.body, {childList:true, subtree:true, attributes:true, attributeFilter:['style','class']}); }catch(e){}
+  }
+
+  // initial pass for existing slots
+  setTimeout(()=>{
+    try{ document.querySelectorAll('.ad-slot').forEach(el=> collapseEmptyAdSlot(el)); }catch(e){}
+  }, 350);
+}
+
 /**
  * Public helper to render an ad slot controlled by consent
  * selector: element selector or element
@@ -173,14 +265,18 @@ function renderAdSlot(selector, opts){
   const status = getConsent();
   if(status === 'granted'){
     ensureAdsLoaded().then(()=> renderAdSlotElement(container, opts));
+    // allow ad script to run then collapse if it left an empty large container
+    collapseEmptyAdSlot(container);
     return;
   }
   if(status === 'denied'){
     renderAdFallback(container, opts);
+    collapseEmptyAdSlot(container);
     return;
   }
   // undecided
   renderAdPlaceholder(container, opts);
+  collapseEmptyAdSlot(container);
 }
 
 function createBanner(){
@@ -252,6 +348,8 @@ function ensureConsent(){
   removeExistingAdScripts();
   // show banner if not decided
   if(!status) createBanner();
+  // setup observer to handle ad slot changes
+  setupAdSlotMutationObserver();
 }
 
 // Expose API

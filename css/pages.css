@@ -262,5 +262,6 @@ body.consent-visible{padding-bottom:calc(var(--consent-height,96px) + 24px)}
 .ad-placeholder-inner{font-weight:600;color:var(--text-muted)}
 .ad-placeholder-accept{margin-left:12px;padding:6px 10px;border-radius:8px;border:0;background:var(--brand);color:#fff;cursor:pointer}
 .ad-fallback{padding:12px;border-radius:8px;background:linear-gradient(180deg,#f8f9fb,#ffffff);border:1px solid rgba(0,0,0,0.03);color:var(--text-muted)}
+.ad-collapsed{display:none!important;height:6px!important;margin:0!important;min-height:0!important;overflow:hidden!important;padding:0!important}
 
 
