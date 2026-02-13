@@ -972,7 +972,7 @@
   {
     "title": "Broken Horn",
     "link": "https://mobileapp.poki2.online/mobile/brokenhorn/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/brokenhorn/images/menuBack_img",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/brokenhorn/img/menuBack_img.jpg",
     "tags": ["skill", "singleplayer", "adventure"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
