@@ -21,7 +21,23 @@ function removeExistingAdScripts(){
 function initAds(){
   if(window._poki2_ads_inited) return;
   window._poki2_ads_inited = true;
-  // Inject Google ads script
+  // In local/dev environments we don't want to load Google ad scripts
+  // (they often fail with 400 on localhost). Use a harmless mock so
+  // calls to (adsbygoogle = []).push() are no-ops during development.
+  const host = (typeof location !== 'undefined' && location.hostname) ? location.hostname : '';
+  const isLocalDev = host === 'localhost' || host === '127.0.0.1' || location.protocol === 'file:';
+  if(isLocalDev){
+    window.adsbygoogle = window.adsbygoogle || [];
+    // ensure a push() exists so renderAdSlotElement calls are safe
+    if(typeof window.adsbygoogle.push !== 'function'){
+      window.adsbygoogle.push = function(){ /* noop for local testing */ };
+    }
+    // nothing to inject for local dev
+    console.info('poki2Consent: running in local dev mode — skipping Google ads script');
+    return;
+  }
+
+  // Inject Google ads script for production-like environments
   const s = document.createElement('script');
   s.src = ADS_SRC;
   s.async = true;
@@ -120,18 +136,16 @@ function renderAdPlaceholder(container, opts){
   container.innerHTML = '';
   const box = document.createElement('div');
   box.className = 'ad-placeholder';
-  box.innerHTML = `<div class="ad-placeholder-inner">Advertisement</div>`;
-  // allow quick accept button inside placeholder
-  const btn = document.createElement('button');
-  btn.className = 'ad-placeholder-accept';
-  btn.textContent = 'Accept ads';
-  btn.addEventListener('click', ()=>{
-    // grant consent and render real ad
-    setConsent('granted');
-    initAds();
-    renderAdSlotElement(container, opts);
-  });
-  box.appendChild(btn);
+  // ensure placeholder takes reasonable space so it doesn't collapse into a
+  // tiny text node inside surrounding grids
+  box.style.width = '100%';
+  box.style.minHeight = (opts && opts.minHeight) || '88px';
+  box.setAttribute('role', 'region');
+  box.setAttribute('aria-label', 'Advertisement placeholder');
+  // Render a visually-empty placeholder block so the layout reserves space
+  // but no text is shown. Screen readers should ignore this region.
+  box.innerHTML = `<div class="ad-placeholder-inner" aria-hidden="true"></div>`;
+  box.setAttribute('aria-hidden', 'true');
   container.appendChild(box);
 }
 
