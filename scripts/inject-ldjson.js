@@ -75,6 +75,39 @@ const org = cfg.organization;
       };
     }
 
+    // Attempt to load games list from DIR (dist/games.json) and detect if this page is a game page
+    let gameLd = null;
+    try {
+      const gamesPath = path.join(dirPath, 'games.json');
+      if (fs.existsSync(gamesPath)) {
+        const games = JSON.parse(fs.readFileSync(gamesPath, 'utf8'));
+        for (const g of games) {
+          // derive slug from game link (last path segment)
+          try {
+            const urlObj = new URL(g.link);
+            let p = urlObj.pathname.replace(/\/$/, '');
+            const parts = p.split('/').filter(Boolean);
+            const gslug = parts.length ? parts[parts.length-1] : '';
+            if (gslug && gslug === slug) {
+              gameLd = {
+                "@context": "https://schema.org",
+                "@type": "VideoGame",
+                "name": g.title,
+                "url": g.link,
+                "image": g.imgSrc,
+                "genre": Array.isArray(g.tags) ? g.tags.join(', ') : g.tags || undefined,
+                "gamePlatform": "Web Browser",
+                "inLanguage": "en"
+              };
+              break;
+            }
+          } catch (e) {}
+        }
+      }
+    } catch (e) {
+      // ignore games.json parse errors
+    }
+
     // Remove existing injected LD+JSON blocks we added earlier (by looking for our site URL or Organization name)
     $('head script[type="application/ld+json"]').each((i, el) => {
       const txt = $(el).html() || '';
@@ -86,6 +119,7 @@ const org = cfg.organization;
     // Append new LD+JSON scripts
     const toInsert = [orgLd, siteLd, pageLd];
     if (breadcrumbLd) toInsert.push(breadcrumbLd);
+    if (gameLd) toInsert.push(gameLd);
 
     toInsert.forEach(obj => {
       const script = `<script type="application/ld+json">${JSON.stringify(obj)}</script>`;
