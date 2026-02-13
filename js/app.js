@@ -38,6 +38,7 @@
   const isMobile =
     /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) ||
     ("ontouchstart" in window && window.innerWidth <= 1024);
+  const isWeChat = /MicroMessenger/i.test(navigator.userAgent);
 
   /** Return true if this game should be shown on the current device */
   function canShow(game) {
@@ -441,7 +442,7 @@
     homeItem.type = "button";
     homeItem.className = "nav-item active";
     homeItem.dataset.tag = "__home";
-    homeItem.setAttribute('aria-current', 'page');
+    homeItem.setAttribute("aria-current", "page");
     homeItem.innerHTML = `<span class="nav-emoji">🏠</span> Home <span class="nav-badge">${allGames.length}</span>`;
     homeItem.addEventListener("click", () => {
       closeSidebar();
@@ -468,10 +469,12 @@
 
   function highlightSidebarItem(tag) {
     for (const el of $sidebarNav.querySelectorAll(".nav-item")) {
-      const isActive = tag ? el.dataset.tag === tag : el.dataset.tag === "__home";
+      const isActive = tag
+        ? el.dataset.tag === tag
+        : el.dataset.tag === "__home";
       el.classList.toggle("active", isActive);
-      if (isActive) el.setAttribute('aria-current', 'page');
-      else el.removeAttribute('aria-current');
+      if (isActive) el.setAttribute("aria-current", "page");
+      else el.removeAttribute("aria-current");
     }
   }
 
@@ -479,30 +482,30 @@
     $sidebar.classList.add("open");
     $sidebarOverlay.classList.add("show");
     document.body.style.overflow = "hidden";
-    if ($menuBtn) $menuBtn.setAttribute('aria-expanded', 'true');
+    if ($menuBtn) $menuBtn.setAttribute("aria-expanded", "true");
     // Move keyboard focus into the sidebar for keyboard users
     setTimeout(() => {
-      const first = $sidebarNav.querySelector('.nav-item');
-      if (first && typeof first.focus === 'function') first.focus();
+      const first = $sidebarNav.querySelector(".nav-item");
+      if (first && typeof first.focus === "function") first.focus();
     }, 50);
   }
   function closeSidebar() {
     $sidebar.classList.remove("open");
     $sidebarOverlay.classList.remove("show");
     document.body.style.overflow = "";
-    if ($menuBtn) $menuBtn.setAttribute('aria-expanded', 'false');
+    if ($menuBtn) $menuBtn.setAttribute("aria-expanded", "false");
     // Return focus to the menu button if it's visible; otherwise move focus to main content
     try {
       if ($menuBtn) {
         const s = window.getComputedStyle($menuBtn);
-        if (s && s.display !== 'none' && $menuBtn.offsetParent !== null) {
-          if (typeof $menuBtn.focus === 'function') $menuBtn.focus();
+        if (s && s.display !== "none" && $menuBtn.offsetParent !== null) {
+          if (typeof $menuBtn.focus === "function") $menuBtn.focus();
           return;
         }
       }
       if ($content) {
         $content.tabIndex = -1;
-        if (typeof $content.focus === 'function') $content.focus();
+        if (typeof $content.focus === "function") $content.focus();
       }
     } catch (e) {
       // ignore focus errors
@@ -574,6 +577,17 @@
   function checkOrientationHint() {
     if (!isMobile) return;
     if (currentGameOrientation === "both") return;
+    // WeChat's in-app webview commonly disables fullscreen/orientation APIs.
+    // Provide a clearer, manual fallback message for WeChat users.
+    if (isWeChat) {
+      $orientHint.classList.remove("landscape", "portrait");
+      $orientHint.classList.add("show");
+      $orientText.textContent =
+        "The WeChat in-app browser may not automatically rotate or enter fullscreen.\n" +
+        "Please manually rotate your device to the correct orientation, or copy the link" +
+        "and open it in your system browser for a better experience.";
+      return;
+    }
     const isPortrait = window.innerHeight > window.innerWidth;
     const needsLandscape = currentGameOrientation === "landscape";
     const needsPortrait = currentGameOrientation === "portrait";
@@ -627,6 +641,27 @@
 
   // Rotate button: lock screen orientation
   $orientRotateBtn.addEventListener("click", () => {
+    // If we're inside WeChat or the API is unavailable, offer a fallback:
+    // copy link to clipboard so user can open in system browser.
+    if (isWeChat || !(screen.orientation && screen.orientation.lock)) {
+      const text = location.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            $orientText.textContent =
+              "已复制页面链接，请在系统浏览器中打开以获得横屏/全屏体验。";
+          })
+          .catch(() => {
+            $orientText.textContent =
+              "请长按页面并选择在浏览器中打开，或手动复制链接打开。";
+          });
+      } else {
+        $orientText.textContent =
+          "请长按页面并选择在浏览器中打开，或手动复制链接打开。";
+      }
+      return;
+    }
     lockOrientation(currentGameOrientation);
   });
   // Skip button: dismiss hint
