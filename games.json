@@ -1784,7 +1784,7 @@
   {
     "title": "Monster Candy",
     "link": "https://mobileapp.poki2.online/mobile/monstercandy/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/monstercandy/icon-128.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/monstercandy/img/title.png",
     "tags": ["puzzle", "singleplayer", "monster", "candy"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
