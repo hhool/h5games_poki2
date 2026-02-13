@@ -57,5 +57,5 @@ secret.key
 # Cloudflare configuration
 cloudflare/
 
-
-
+# dist
+dist/

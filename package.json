@@ -11,7 +11,10 @@
     "build:copy": "mkdir -p dist && rsync -a --exclude=node_modules --exclude=.git --exclude=scripts --exclude=tools --exclude=env --exclude=.venv --exclude=.history --exclude=.wrangler --exclude=dist ./ dist/",
     "copy:ads": "mkdir -p dist && cp -f ads.txt dist/ || true && cp -f app-ads.txt dist/ || true",
     "build": "npm run build:css && npm run build:js && npm run hash:assets && npm run build:copy && npm run copy:ads",
-    "publish:pages": "wrangler pages publish ./dist --project-name \"${CF_PAGES_PROJECT:-h5games-poki2}\""
+    "publish:pages": "wrangler pages publish ./dist --project-name \"${CF_PAGES_PROJECT:-h5games-poki2}\"",
+    "inject-ldjson": "node scripts/inject-ldjson.js --dir=dist --config=scripts/ldconfig.json",
+    "inject-ldjson:src": "node scripts/inject-ldjson.js --dir=. --config=scripts/ldconfig.json",
+    "build:with-inject": "npm run build && npm run inject-ldjson"
   },
   "keywords": [],
   "author": "",
