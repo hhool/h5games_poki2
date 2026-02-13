@@ -256,7 +256,7 @@ window.poki2RenderAd = {
       'data-ad-client': el.getAttribute('data-ad-client'),
       'data-ad-slot': el.getAttribute('data-ad-slot'),
       'data-ad-format': el.getAttribute('data-ad-format') || 'auto',
-      style: 'display:block;width:100%;height:auto;'
+      style: 'display:block;width:100%;height:auto;',
       // enhanced fallback config
       fallbackHTML: el.getAttribute('data-fallback-html') || null,
       fallbackImage: el.getAttribute('data-fallback-image') || null,
