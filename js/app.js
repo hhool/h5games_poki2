@@ -112,8 +112,10 @@
 
   const BAR_SHOW_DURATION = 3000; // ms before auto-hide
   let barHideTimer = null;
+  let currentGame = null;
 
   function showBar() {
+    if (!currentGame || currentGame.use_overlay_title === false) return;
     $overlayBar.classList.remove("bar-hidden");
     clearTimeout(barHideTimer);
     barHideTimer = setTimeout(hideBar, BAR_SHOW_DURATION);
@@ -136,7 +138,7 @@
 
   // Also show bar on mouse move anywhere in overlay (for desktop)
   $overlay.addEventListener("mousemove", () => {
-    if ($overlayBar.classList.contains("bar-hidden")) {
+    if ($overlayBar.classList.contains("bar-hidden") && currentGame && currentGame.use_overlay_title !== false) {
       showBar();
     }
   });
@@ -691,6 +693,7 @@
     addRecent(game);
     $overlayTitle.textContent = game.title;
     currentGameOrientation = game.orientation || "both";
+    currentGame = game;
 
     // Show loading with game info
     $loadingIcon.innerHTML = "";
@@ -707,8 +710,11 @@
     $orientHint.classList.remove("show");
     startLoadingProgress();
 
-    // Show bar initially, start auto-hide after load
-    showBar();
+    // Hide bar by default, show only if enabled
+    $overlayBar.classList.add("bar-hidden");
+    if (game.use_overlay_title !== false) {
+      showBar();
+    }
 
     $overlay.classList.add("open");
     document.body.style.overflow = "hidden";
@@ -746,6 +752,7 @@
     }
   });
   function closeGame() {
+    currentGame = null;
     gamePaused = false;
     userExitedFullscreen = false;
     clearInterval(loadingTimer);
