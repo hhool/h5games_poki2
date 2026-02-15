@@ -64,21 +64,21 @@ async function optimizeImage(inputPath, outputPath) {
 /**
  * 处理目录中的所有图像
  */
-async function processImages(srcDir, destDir, excludePatterns = []) {
+async function processImages(srcDir, destDir) {
   const patterns = ['**/*.png', '**/*.jpg', '**/*.jpeg'];
 
   for (const pattern of patterns) {
     const files = glob.sync(pattern, { cwd: srcDir });
 
     for (const file of files) {
-      // 检查是否应该排除此文件
-      const shouldExclude = excludePatterns.some(exclude => file.startsWith(exclude + '/'));
-      if (shouldExclude) {
-        continue;
-      }
-
       const inputPath = path.join(srcDir, file);
       const outputPath = path.join(destDir, file);
+
+      // 如果输入和输出路径相同，跳过（避免覆盖源文件）
+      if (path.resolve(inputPath) === path.resolve(outputPath)) {
+        console.log(`⏭️  Skipping ${path.relative(process.cwd(), inputPath)} (same input/output path)`);
+        continue;
+      }
 
       // 确保输出目录存在
       const outputDir = path.dirname(outputPath);
@@ -117,26 +117,14 @@ document.documentElement.classList.add(supportsWebP() ? 'webp' : 'no-webp');
 async function main() {
   const args = process.argv.slice(2);
   const srcDir = args[0] || '.';
-  let destDir = args[1] || 'dist';
-  let excludePatterns = [];
-
-  // 解析命令行参数
-  for (let i = 2; i < args.length; i++) {
-    if (args[i] === '--exclude' && args[i + 1]) {
-      excludePatterns.push(args[i + 1]);
-      i++; // 跳过下一个参数
-    }
-  }
+  const destDir = args[1] || 'dist';
 
   console.log('🚀 Starting image optimization...');
   console.log(`Source: ${srcDir}`);
   console.log(`Destination: ${destDir}`);
-  if (excludePatterns.length > 0) {
-    console.log(`Excluding: ${excludePatterns.join(', ')}`);
-  }
 
   // 处理图像
-  await processImages(srcDir, destDir, excludePatterns);
+  await processImages(srcDir, destDir);
 
   // 生成 WebP 检测脚本
   const webpScript = generateWebpDetectionScript();
