@@ -8,7 +8,7 @@
     "build:css": "mkdir -p dist/css && cat css/style.css css/pages.css > dist/css/styles.concat.css && postcss dist/css/styles.concat.css -o dist/css/styles.css && rm dist/css/styles.concat.css",
     "build:js": "rollup -c",
     "hash:assets": "node scripts/hash-assets.js",
-    "build:copy": "mkdir -p dist && rsync -a --exclude=node_modules --exclude=.git --exclude=scripts --exclude=tools --exclude=env --exclude=.venv --exclude=.history --exclude=.wrangler --exclude=dist ./ dist/",
+    "build:copy": "mkdir -p dist && rsync -a --exclude=node_modules --exclude=.git --exclude=scripts --exclude=tools --exclude=env --exclude=.venv --exclude=.history --exclude=.wrangler --exclude=dist --exclude=public ./ dist/ && rsync -a public/ dist/ 2>/dev/null || true",
     "copy:ads": "mkdir -p dist && cp -f ads.txt dist/ || true && cp -f app-ads.txt dist/ || true",
     "build:images": "node scripts/optimize-images.js . dist",
     "build": "npm run build:css && npm run build:js && npm run build:images && npm run hash:assets && npm run build:copy && npm run copy:ads",

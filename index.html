@@ -30,6 +30,19 @@
     </noscript>
     <script src="js/webp-detect.js" defer=""></script>
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        // WebP favicon support
+        (function() {
+            if (document.documentElement.classList.contains('webp')) {
+                var link = document.querySelector('link[rel="icon"]');
+                if (link) {
+                    link.href = 'favicon.webp';
+                    link.type = 'image/webp';
+                }
+            }
+        })();
+    </script>
     <script>
         // WebP favicon support
         (function() {

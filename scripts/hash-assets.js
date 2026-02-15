@@ -26,6 +26,9 @@ function revRename(filePath) {
   const files = [
     path.join(dist, 'js', 'app.bundle.js'),
     path.join(dist, 'css', 'styles.css'),
+    // Include PWA files
+    path.join(dist, 'sw.js'),
+    path.join(dist, 'manifest.json'),
     // 包含图像文件
     ...glob.sync('**/*.{png,jpg,jpeg,webp}', { cwd: dist }).map(f => path.join(dist, f))
   ];

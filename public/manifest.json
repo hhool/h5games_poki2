@@ -1,0 +1,26 @@
+{
+  "name": "Poki2 - Free Online Games",
+  "short_name": "Poki2",
+  "description": "Play the best free online games! Action, puzzle, racing, sports and more. No downloads — instant play in your browser on desktop and mobile.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#006bb3",
+  "orientation": "any",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.webp",
+      "sizes": "32x32",
+      "type": "image/webp"
+    }
+  ],
+  "categories": ["games", "entertainment"],
+  "lang": "en",
+  "dir": "ltr"
+}

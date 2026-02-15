@@ -1012,4 +1012,33 @@
     // Remove early-hide class now that the correct view is rendered
     document.documentElement.classList.remove("route-loading");
   });
+
+  // Register Service Worker for PWA functionality
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('[SW] Registered successfully:', registration.scope);
+
+          // Handle updates
+          registration.addEventListener('updatefound', () => {
+            const newWorker = registration.installing;
+            if (newWorker) {
+              newWorker.addEventListener('statechange', () => {
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  // New version available
+                  if (confirm('New version available! Reload to update?')) {
+                    newWorker.postMessage({ type: 'SKIP_WAITING' });
+                    window.location.reload();
+                  }
+                }
+              });
+            }
+          });
+        })
+        .catch(error => {
+          console.error('[SW] Registration failed:', error);
+        });
+    });
+  }
 })();
