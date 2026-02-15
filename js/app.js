@@ -507,11 +507,37 @@
     $hero.style.display = "none";
     $recentSection.style.display = "none";
     $searchResults.style.display = "none";
-    $gameSections.innerHTML = "";
+    $gameSections.innerHTML = `
+      <section class="category-section">
+        <div class="section-header">
+          <h2 class="section-title"><span class="skeleton skeleton-text" style="width:120px;height:22px"></span></h2>
+        </div>
+        <div class="game-grid">
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+        </div>
+      </section>
+    `;
     $gameSections.style.display = "";
     $skeleton.style.display = "none";
-    const sec = renderSection(tag, 0);
-    if (sec) $gameSections.appendChild(sec);
+    
+    // Simulate loading delay for better UX
+    setTimeout(() => {
+      $gameSections.innerHTML = "";
+      const sec = renderSection(tag, 0);
+      if (sec) $gameSections.appendChild(sec);
+    }, 200);
+    
     highlightSidebarItem(tag);
     window.scrollTo({ top: 0, behavior: "smooth" });
     history.pushState({ view: "category", tag }, "", "#" + tag);
@@ -536,9 +562,25 @@
     $skeleton.style.display = "none";
     $searchResults.style.display = "";
     $searchTitle.textContent = `Results for "${query}" (${matched.length})`;
-    $searchGrid.innerHTML = "";
-    $searchEmpty.style.display = matched.length ? "none" : "";
-    for (const g of matched) $searchGrid.appendChild(createCard(g));
+    
+    // Show skeleton while loading
+    $searchGrid.innerHTML = `
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+      <div class="skeleton skeleton-card"></div>
+    `;
+    $searchEmpty.style.display = "none";
+    
+    // Simulate loading delay for better UX (optional)
+    setTimeout(() => {
+      $searchGrid.innerHTML = "";
+      $searchEmpty.style.display = matched.length ? "none" : "";
+      for (const g of matched) $searchGrid.appendChild(createCard(g));
+    }, 300);
+    
     highlightSidebarItem(null);
   }
 

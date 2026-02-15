@@ -662,7 +662,12 @@ input{font:inherit}
 }
 .skeleton-card{aspect-ratio:4/3}
 .skeleton-text{display:inline-block;border-radius:6px}
+.skeleton-pulse{
+  animation:pulse 1.5s infinite ease-in-out;
+  background:var(--surface-2);
+}
 @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
 
 /* ---------- Back to top ---------- */
 .back-to-top{
