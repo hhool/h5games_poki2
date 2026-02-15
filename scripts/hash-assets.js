@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const glob = require('glob');
 
 function hashFile(filePath) {
   const data = fs.readFileSync(filePath);
@@ -24,7 +25,9 @@ function revRename(filePath) {
   const map = {};
   const files = [
     path.join(dist, 'js', 'app.bundle.js'),
-    path.join(dist, 'css', 'styles.css')
+    path.join(dist, 'css', 'styles.css'),
+    // 包含图像文件
+    ...glob.sync('**/*.{png,jpg,jpeg,webp}', { cwd: dist }).map(f => path.join(dist, f))
   ];
   for (const f of files) {
     if (!fs.existsSync(f)) continue;

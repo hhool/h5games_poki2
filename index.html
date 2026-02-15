@@ -28,7 +28,20 @@
     <noscript>
         <link rel="stylesheet" href="css/style.css?v=20260207j">
     </noscript>
+    <script src="js/webp-detect.js" defer=""></script>
     <link rel="icon" type="image/png" href="favicon.png">
+    <script>
+        // WebP favicon support
+        (function() {
+            if (document.documentElement.classList.contains('webp')) {
+                var link = document.querySelector('link[rel="icon"]');
+                if (link) {
+                    link.href = 'favicon.webp';
+                    link.type = 'image/webp';
+                }
+            }
+        })();
+    </script>
     <script>
         // Prevent flash of Home content when refreshing on a non-Home page
         if (location.hash && location.hash.length > 1) {

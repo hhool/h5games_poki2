@@ -10,6 +10,14 @@
   background-color: #f3f4f6; /* neutral fallback while images load */
 }
 
+/* WebP support detection and optimization */
+.webp .game-card-img {
+  /* WebP supported - browser will handle format selection */
+}
+.no-webp .game-card-img {
+  /* Fallback for browsers without WebP support */
+}
+
 @media (orientation: landscape) {
   .detail-card .detail-img {
     /* In landscape interstitial prefer filling the left area so image feels immersive.

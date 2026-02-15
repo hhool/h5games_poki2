@@ -33,6 +33,7 @@
   const HERO_FEATURED_COUNT = 6;
   const RECENT_KEY = "poki2_recent";
   const MAX_RECENT = 12;
+  const INITIAL_SECTIONS = 3; // Number of sections to load initially for lazy loading
 
   /* ---------- Mobile detection ---------- */
   const isMobile =
@@ -113,6 +114,10 @@
   const BAR_SHOW_DURATION = 3000; // ms before auto-hide
   let barHideTimer = null;
   let currentGame = null;
+
+  // Lazy loading state
+  let loadedSections = 0;
+  let lazyObserver = null;
 
   function showBar() {
     if (!currentGame || currentGame.use_overlay_title === false) return;
@@ -225,6 +230,29 @@
     };
   }
 
+  /** Optimize image loading with WebP support detection */
+  function optimizeImageLoading(img, src) {
+    // For local images, try WebP first if supported
+    if (src && src.startsWith('/') && !src.includes('://')) {
+      const webpSupported = document.documentElement.classList.contains('webp');
+      if (webpSupported) {
+        const webpSrc = src.replace(/\.(png|jpg|jpeg)$/i, '.webp');
+        // Check if WebP version exists by trying to load it
+        const testImg = new Image();
+        testImg.onload = () => {
+          img.src = webpSrc;
+        };
+        testImg.onerror = () => {
+          img.src = src; // Fallback to original
+        };
+        testImg.src = webpSrc;
+        return;
+      }
+    }
+    // For external images or when WebP not supported, use original
+    img.src = src;
+  }
+
   function shuffle(arr) {
     const a = [...arr];
     for (let i = a.length - 1; i > 0; i--) {
@@ -319,9 +347,13 @@
 
     const img = document.createElement("img");
     img.className = "game-card-img";
-    img.src = game.imgSrc || getFaviconUrl(game.link);
     img.alt = game.title || "";
     img.loading = "lazy";
+
+    // Use optimized image loading with WebP support
+    const imgSrc = game.imgSrc || getFaviconUrl(game.link);
+    optimizeImageLoading(img, imgSrc);
+
     // attach a favicon fallback chain so missing icons resolve to site favicons
     attachFaviconFallback(img, game.link);
 
@@ -373,9 +405,13 @@
       const card = document.createElement("div");
       card.className = "hero-card";
       const himg = document.createElement("img");
-      himg.src = g.imgSrc || getFaviconUrl(g.link);
       himg.alt = g.title || "";
       himg.loading = "lazy";
+
+      // Use optimized image loading with WebP support
+      const imgSrc = g.imgSrc || getFaviconUrl(g.link);
+      optimizeImageLoading(himg, imgSrc);
+
       attachFaviconFallback(himg, g.link);
       card.appendChild(himg);
       card.addEventListener("click", () => showDetail(g));
@@ -395,6 +431,44 @@
     for (const g of list) $recentGrid.appendChild(createCard(g));
   }
 
+  /* ---------- Lazy Loading ---------- */
+  function loadMoreSections() {
+    const remainingTags = TAG_ORDER.slice(loadedSections);
+    if (remainingTags.length === 0) return;
+
+    const batchSize = 2; // Load 2 sections at a time
+    const tagsToLoad = remainingTags.slice(0, batchSize);
+
+    for (const tag of tagsToLoad) {
+      const sec = renderSection(tag, SECTION_LIMIT);
+      if (sec) $gameSections.appendChild(sec);
+      loadedSections++;
+    }
+
+    // If there are more sections, set up observer for the last loaded section
+    if (loadedSections < TAG_ORDER.length) {
+      setupLazyObserver();
+    }
+  }
+
+  function setupLazyObserver() {
+    if (lazyObserver) lazyObserver.disconnect();
+
+    const sections = $gameSections.querySelectorAll('.category-section');
+    if (sections.length === 0) return;
+
+    const lastSection = sections[sections.length - 1];
+    lazyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadMoreSections();
+        }
+      });
+    }, { rootMargin: '100px' }); // Trigger 100px before the element comes into view
+
+    lazyObserver.observe(lastSection);
+  }
+
   /* ---------- Views ---------- */
   function showHome() {
     currentView = "home";
@@ -404,10 +478,24 @@
     $gameSections.style.display = "";
     $skeleton.style.display = "none";
     renderRecentSection();
-    for (const tag of TAG_ORDER) {
+
+    // Reset lazy loading state
+    loadedSections = 0;
+    if (lazyObserver) lazyObserver.disconnect();
+
+    // Load initial sections
+    const initialTags = TAG_ORDER.slice(0, INITIAL_SECTIONS);
+    for (const tag of initialTags) {
       const sec = renderSection(tag, SECTION_LIMIT);
       if (sec) $gameSections.appendChild(sec);
+      loadedSections++;
     }
+
+    // Set up lazy loading if there are more sections
+    if (loadedSections < TAG_ORDER.length) {
+      setupLazyObserver();
+    }
+
     highlightSidebarItem(null);
     $searchInput.value = "";
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -535,6 +623,7 @@
   function showDetail(game) {
     pendingGame = game;
     $detailImg.src = game.imgSrc || getFaviconCandidates(game.link)[0];
+    $detailImg.loading = "lazy";
     attachFaviconFallback($detailImg, game.link);
     $detailTitle.textContent = game.title;
     $detailTags.innerHTML = (game.tags || [])
