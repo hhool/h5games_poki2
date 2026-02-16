@@ -153,8 +153,6 @@ input{font:inherit}
   display:flex;
   flex-direction:column;
   transition:margin-left .3s var(--ease);
-  /* ensure page content doesn't sit beneath the footer */
-  padding-bottom:var(--footer-h);
 }
 
 /* ---------- Topbar ---------- */
@@ -353,10 +351,7 @@ input{font:inherit}
 
 /* ---------- Footer ---------- */
 .site-footer{
-  position:fixed;
-  left:0;
-  right:0;
-  bottom:0;
+  position:relative;
   z-index:900;
   background:var(--sidebar-bg);
   color:var(--sidebar-text);
