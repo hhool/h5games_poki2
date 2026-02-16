@@ -743,6 +743,7 @@ input{font:inherit}
   transition:background .15s, transform .15s;
 }
 .detail-play-btn:hover{background:var(--brand-dark);transform:scale(1.04)}
+.detail-play-btn:disabled{opacity:.55;cursor:not-allowed;box-shadow:none;transform:none}
 .detail-close{
   position:absolute;top:10px;right:10px;
   width:32px;height:32px;border-radius:50%;

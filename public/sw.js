@@ -1,7 +1,8 @@
 // Service Worker for Poki2 - Caching and Offline Support
-const CACHE_NAME = 'poki2-v1.0.0';
-const STATIC_CACHE = 'poki2-static-v1.0.0';
-const DYNAMIC_CACHE = 'poki2-dynamic-v1.0.0';
+// Bump these values to force a fresh Service Worker install on deploy
+const CACHE_NAME = 'poki2-v20260216n';
+const STATIC_CACHE = 'poki2-static-v20260216n';
+const DYNAMIC_CACHE = 'poki2-dynamic-v20260216n';
 
 // Resources to cache immediately
 const STATIC_ASSETS = [

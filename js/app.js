@@ -5,6 +5,14 @@
 (() => {
   "use strict";
 
+  // Runtime marker for debug: indicates the app bundle executed
+  try {
+    window.__APP_BUNDLED = true;
+    console.log('[app] bundle loaded');
+  } catch (e) {
+    /* ignore */
+  }
+
   /* ---------- Category metadata ---------- */
   const TAG_META = {
     action: { emoji: "💥", label: "Action" },
@@ -87,6 +95,40 @@
     return true;
   }
 
+  /**
+   * Return true if the game can be played in the current environment.
+   * This is a stricter check than `canShow` (visibility): it verifies
+   * input compatibility, embedding capability, fullscreen requirements,
+   * and known webview limitations.
+   */
+  function isPlayable(game) {
+    // If the manifest explicitly marks the game as unplayable, honor that
+    if (game.playable === false) return false;
+
+    // Must be visible on this platform to be playable
+    if (!canShow(game)) return false;
+
+    // If the game explicitly forbids embedding (e.g. `embed: false`),
+    // we cannot load it inside the iframe overlay used by the site.
+    if (game.embed === false) return false;
+
+    // Input constraints: on mobile require touch if keyboard-only
+    if (Array.isArray(game.input)) {
+      if (isMobile && !game.input.includes("touch")) return false;
+      // On desktop, prefer keyboard/mouse/gamepad; if manifest lists only
+      // touch and we're on desktop, still allow (desktop can handle touch)
+    }
+
+    // Fullscreen/Orientation requirements: some in-app webviews (WeChat)
+    // do not support fullscreen or orientation lock reliably; if the game
+    // declares `requires_fullscreen` and we're inside such a webview, mark
+    // as not playable to avoid broken UX inside the overlay.
+    if (game.requires_fullscreen && isWeChat) return false;
+
+    // Default to playable if no blocking signal is present
+    return true;
+  }
+
   /* ---------- DOM refs ---------- */
   const $ = (id) => document.getElementById(id);
   const $sidebar = $("sidebar");
@@ -104,12 +146,12 @@
   const $recentSection = $("recently-played");
   const $recentGrid = $("recent-grid");
   const $clearRecent = $("clear-recent");
-  const $overlay = $("game-overlay");
-  const $overlayTitle = $("overlay-title");
-  const $overlayBar = $("overlay-bar");
-  const $barTrigger = $("bar-trigger");
-  const $overlayBack = $("overlay-back");
-  const $overlayFs = $("overlay-fs");
+  let $overlay = null;
+  let $overlayTitle = null;
+  let $overlayBar = null;
+  let $barTrigger = null;
+  let $overlayBack = null;
+  let $overlayFs = null;
 
   const BAR_SHOW_DURATION = 3000; // ms before auto-hide
   let barHideTimer = null;
@@ -138,33 +180,26 @@
   }
 
   // Trigger zone: mouse enter or touch
-  $barTrigger.addEventListener("mouseenter", showBar);
-  $barTrigger.addEventListener("touchstart", showBar, { passive: true });
-
-  // Also show bar on mouse move anywhere in overlay (for desktop)
-  $overlay.addEventListener("mousemove", () => {
-    if ($overlayBar.classList.contains("bar-hidden") && currentGame && currentGame.use_overlay_title !== false) {
-      showBar();
-    }
-  });
+  // (listeners are attached after DOM refs are initialized)
   const $iframe = $("game-iframe");
   const $content = $("content");
   const $skeleton = $("loading-skeleton");
   const $backToTop = $("back-to-top");
   const $shuffleBtn = $("shuffle-btn");
-  const $detail = $("game-detail");
-  const $detailImg = $("detail-img");
-  const $detailTitle = $("detail-title");
-  const $detailTags = $("detail-tags");
-  const $detailPlay = $("detail-play");
-  const $detailClose = $("detail-close");
-  const $detailBackdrop = $("detail-backdrop");
+  let $detail = null;
+  let $detailImg = null;
+  let $detailTitle = null;
+  let $detailTags = null;
+  let $detailPlay = null;
+  let $detailClose = null;
+  let $detailBackdrop = null;
   const $pauseOverlay = $("game-pause");
   const $pauseResume = $("pause-resume");
   const $pauseQuit = $("pause-quit");
 
   /* ---------- State ---------- */
   let allGames = [];
+  let rawGames = [];
   let tagMap = {};
   let currentView = "home";
   let pendingGame = null; // game waiting in detail interstitial
@@ -305,7 +340,7 @@
       try {
         const r = await fetch(url);
         if (!r.ok) continue;
-        allGames = await r.json();
+        rawGames = await r.json();
         break;
       } catch {
         /* next */
@@ -315,7 +350,7 @@
     // Deduplicate entries by `link` (preferred) or normalized title to avoid
     // duplicate game objects causing repeated cards in category grids.
     const seen = new Set();
-    allGames = (allGames || []).filter((g) => {
+    rawGames = (rawGames || []).filter((g) => {
       const key = (g.link || g.title || "").toString().toLowerCase().trim();
       if (!key) return false;
       if (seen.has(key)) return false;
@@ -323,8 +358,8 @@
       return true;
     });
 
-    // On mobile, filter out keyboard-only games
-    allGames = allGames.filter(canShow);
+    // On mobile, filter out keyboard-only games for the visible list
+    allGames = rawGames.filter(canShow);
 
     tagMap = {};
     for (const g of allGames) {
@@ -674,6 +709,27 @@
           `<span class="detail-tag">${(TAG_META[t] || {}).emoji || "🎲"} ${(TAG_META[t] || {}).label || t}</span>`,
       )
       .join("");
+    // Determine if the game is playable in this environment and update the Play button
+    try {
+      const playable = isPlayable(game);
+      if ($detailPlay) {
+        $detailPlay.disabled = !playable;
+        if (!playable) {
+          $detailPlay.setAttribute("aria-disabled", "true");
+          $detailPlay.title = "This game is not available on your device or browser.";
+        } else {
+          $detailPlay.removeAttribute("aria-disabled");
+          $detailPlay.title = "";
+        }
+      }
+    } catch (e) {
+      if ($detailPlay) {
+        $detailPlay.disabled = false;
+        $detailPlay.removeAttribute("aria-disabled");
+        $detailPlay.title = "";
+      }
+    }
+
     $detail.classList.add("open");
   }
   function hideDetail() {
@@ -790,7 +846,7 @@
   });
 
   // Rotate button: lock screen orientation
-  $orientRotateBtn.addEventListener("click", () => {
+  if ($orientRotateBtn) $orientRotateBtn.addEventListener("click", () => {
     // If we're inside WeChat or the API is unavailable, offer a fallback:
     // copy link to clipboard so user can open in system browser.
     if (isWeChat || !(screen.orientation && screen.orientation.lock)) {
@@ -815,11 +871,15 @@
     lockOrientation(currentGameOrientation);
   });
   // Skip button: dismiss hint
-  $orientSkipBtn.addEventListener("click", () => {
+  if ($orientSkipBtn) $orientSkipBtn.addEventListener("click", () => {
     $orientHint.classList.remove("show");
   });
 
   function openGame(game) {
+    if (!$overlay) {
+      console.error("Game overlay not found");
+      return;
+    }
     hideDetail();
     addRecent(game);
     $overlayTitle.textContent = game.title;
@@ -852,11 +912,9 @@
     gamePaused = false;
     userExitedFullscreen = false;
     $pauseOverlay.classList.remove("show");
-    history.pushState(
-      { view: "game", link: game.link, title: game.title },
-      "",
-      "#play-" + normalizeHref(game.link),
-    );
+    const playQuery = "play-" + normalizeHref(game.link);
+    const newUrl = location.pathname + "?" + playQuery;
+    history.pushState({ view: "game", link: game.link, title: game.title }, "", newUrl);
 
     // Load new game after a tick (ensures blank is rendered first)
     requestAnimationFrame(() => {
@@ -877,7 +935,7 @@
   }
 
   // Finish progress when iframe loads
-  $iframe.addEventListener("load", () => {
+  if ($iframe) $iframe.addEventListener("load", () => {
     if ($iframe.src !== "about:blank") {
       finishLoadingProgress();
     }
@@ -968,30 +1026,30 @@
   }
 
   /* ---------- Events ---------- */
-  $menuBtn.addEventListener("click", () =>
+  if ($menuBtn) $menuBtn.addEventListener("click", () =>
     $sidebar.classList.contains("open") ? closeSidebar() : openSidebar(),
   );
-  $sidebarOverlay.addEventListener("click", closeSidebar);
-  $overlayBack.addEventListener("click", closeGame);
-  $overlayFs.addEventListener("click", toggleFullscreen);
-  $pauseResume.addEventListener("click", resumeFullscreen);
-  $pauseQuit.addEventListener("click", closeGame);
-  $clearRecent.addEventListener("click", clearRecent);
-  $backToTop.addEventListener("click", () =>
+  if ($sidebarOverlay) $sidebarOverlay.addEventListener("click", closeSidebar);
+  if ($overlayBack) $overlayBack.addEventListener("click", closeGame);
+  if ($overlayFs) $overlayFs.addEventListener("click", toggleFullscreen);
+  if ($pauseResume) $pauseResume.addEventListener("click", resumeFullscreen);
+  if ($pauseQuit) $pauseQuit.addEventListener("click", closeGame);
+  if ($clearRecent) $clearRecent.addEventListener("click", clearRecent);
+  if ($backToTop) $backToTop.addEventListener("click", () =>
     window.scrollTo({ top: 0, behavior: "smooth" }),
   );
-  $shuffleBtn.addEventListener("click", () => {
+  if ($shuffleBtn) $shuffleBtn.addEventListener("click", () => {
     if (!allGames.length) return;
     const g = allGames[(Math.random() * allGames.length) | 0];
     showDetail(g);
   });
 
   /* detail interstitial */
-  $detailPlay.addEventListener("click", () => {
+  if ($detailPlay) $detailPlay.addEventListener("click", () => {
     if (pendingGame) openGame(pendingGame);
   });
-  $detailClose.addEventListener("click", hideDetail);
-  $detailBackdrop.addEventListener("click", hideDetail);
+  if ($detailClose) $detailClose.addEventListener("click", hideDetail);
+  if ($detailBackdrop) $detailBackdrop.addEventListener("click", hideDetail);
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
@@ -1040,15 +1098,85 @@
 
   /* ---------- Init ---------- */
   document.addEventListener("DOMContentLoaded", async () => {
+    console.log('[route] DOMContentLoaded fired');
+    // Ensure DOM refs are available
+    $overlay = document.getElementById("game-overlay");
+    $overlayTitle = document.getElementById("overlay-title");
+    $overlayBar = document.getElementById("overlay-bar");
+    $barTrigger = document.getElementById("bar-trigger");
+    $overlayBack = document.getElementById("overlay-back");
+    $overlayFs = document.getElementById("overlay-fs");
+    // Detail interstitial refs
+    $detail = document.getElementById("game-detail");
+    $detailImg = document.getElementById("detail-img");
+    $detailTitle = document.getElementById("detail-title");
+    $detailTags = document.getElementById("detail-tags");
+    $detailPlay = document.getElementById("detail-play");
+    $detailClose = document.getElementById("detail-close");
+    $detailBackdrop = document.getElementById("detail-backdrop");
+
+    // Attach overlay listeners now that refs exist
+    if ($barTrigger) {
+      $barTrigger.addEventListener("mouseenter", showBar);
+      $barTrigger.addEventListener("touchstart", showBar, { passive: true });
+    }
+    if ($overlay) {
+      $overlay.addEventListener("mousemove", () => {
+        if ($overlayBar && $overlayBar.classList.contains("bar-hidden") && currentGame && currentGame.use_overlay_title !== false) {
+          showBar();
+        }
+      });
+    }
+
+    // Attach detail interstitial listeners
+    if ($detailPlay) $detailPlay.addEventListener("click", () => { if (pendingGame) openGame(pendingGame); });
+    if ($detailClose) $detailClose.addEventListener("click", hideDetail);
+    if ($detailBackdrop) $detailBackdrop.addEventListener("click", hideDetail);
+
     await loadGames();
+    // Expose rawGames for interactive debugging in the console
+    try {
+      window.__RAW_GAMES = rawGames;
+      console.log('[route] rawGames loaded:', rawGames.length);
+    } catch (e) {
+      /* ignore */
+    }
     $skeleton.style.display = "none";
     buildSidebar();
     renderHeroFeatured();
 
+    const search = (location.search || "").replace("?", "");
     const hash = location.hash.replace("#", "");
-    if (hash && TAG_META[hash]) {
+    console.log('[route] init search/hash:', { search, hash });
+
+    // Prefer query param routing (e.g. https://poki2.online/?play-vex5)
+    if (search && search.startsWith("play-")) {
+      const slug = search.slice(5);
+      console.log('[route] detected play in search, slug:', slug);
+      const game = rawGames.find((g) => normalizeHref(g.link) === slug);
+      console.log('[route] game lookup result (search):', !!game, game && game.title);
+      if (game) {
+        showDetail(game);
+      } else {
+        console.warn('[route] no matching game for slug (search):', slug);
+        showHome();
+      }
+    } else if (hash && TAG_META[hash]) {
+      console.log('[route] detected category hash:', hash);
       showCategory(hash);
+    } else if (hash && hash.startsWith("play-")) {
+      const slug = hash.slice(5);
+      console.log('[route] detected play hash, slug:', slug);
+      const game = rawGames.find((g) => normalizeHref(g.link) === slug);
+      console.log('[route] game lookup result (hash):', !!game, game && game.title);
+      if (game) {
+        showDetail(game);
+      } else {
+        console.warn('[route] no matching game for slug (hash):', slug);
+        showHome();
+      }
     } else {
+      console.log('[route] no route, showing home');
       showHome();
     }
     // Remove early-hide class now that the correct view is rendered
