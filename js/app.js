@@ -507,6 +507,10 @@
   /* ---------- Views ---------- */
   function showHome() {
     currentView = "home";
+    // Remove pinned footer helper when returning to home
+    if (document && document.body) document.body.classList.remove('full-bleed-footer');
+    // remove any page spacer used for category views
+    try { const sp = document.querySelector('.page-spacer'); if (sp) sp.remove(); } catch(e){}
     $hero.style.display = "";
     $searchResults.style.display = "none";
     $gameSections.innerHTML = "";
@@ -539,6 +543,8 @@
 
   function showCategory(tag) {
     currentView = "category";
+    // Ensure category pages pin the footer to viewport bottom
+    if (document && document.body) document.body.classList.add('full-bleed-footer');
     $hero.style.display = "none";
     $recentSection.style.display = "none";
     $searchResults.style.display = "none";
@@ -571,6 +577,8 @@
       $gameSections.innerHTML = "";
       const sec = renderSection(tag, 0);
       if (sec) $gameSections.appendChild(sec);
+      // ensure footer spacer is applied for short content so footer sits flush
+      try { ensureFooterSpacer(); } catch (e) { /* ignore */ }
     }, 200);
     
     highlightSidebarItem(tag);
@@ -578,12 +586,75 @@
     history.pushState({ view: "category", tag }, "", "#" + tag);
   }
 
+  // Ensure a spacer exists under short category content so footer sits flush
+  function ensureFooterSpacer() {
+    try {
+      if (!document || !document.body || !document.body.classList.contains('full-bleed-footer')) {
+        const oldr = document.querySelector('.page-spacer');
+        if (oldr) oldr.remove();
+        return;
+      }
+      const footer = document.querySelector('.site-footer');
+      const header = document.querySelector('.topbar') || document.querySelector('.page-header');
+      const container = $gameSections;
+      if (!container || !footer) {
+        const old = document.querySelector('.page-spacer');
+        if (old) old.remove();
+        return;
+      }
+
+      // remove existing spacer if present; we'll recreate with updated size
+      let sp = document.querySelector('.page-spacer');
+      if (sp) sp.remove();
+
+      // measurements
+      const headerH = header ? header.offsetHeight : parseInt(getComputedStyle(document.documentElement).getPropertyValue('--page-header-height')) || 72;
+      const footerH = footer.offsetHeight || parseInt(getComputedStyle(document.documentElement).getPropertyValue('--measured-footer')) || 160;
+      const viewportH = window.innerHeight || document.documentElement.clientHeight;
+
+      // content height: use scrollHeight to include content not visible yet
+      const contentH = container.scrollHeight || container.getBoundingClientRect().height || 0;
+
+      const available = Math.max(0, viewportH - headerH - footerH);
+      const spacerH = Math.max(0, Math.ceil(available - contentH));
+
+      if (spacerH <= 0) return; // no spacer needed
+
+      sp = document.createElement('div');
+      sp.className = 'page-spacer';
+      sp.style.width = '100%';
+      sp.style.height = spacerH + 'px';
+      sp.style.pointerEvents = 'none';
+      sp.style.background = 'transparent';
+
+      // Insert after the game sections so footer is pushed down
+      if (container.parentNode) container.parentNode.insertBefore(sp, container.nextSibling);
+    } catch (e) {
+      /* ignore */
+    }
+  }
+
+  // Debounced resize handler for spacer
+  const __spacer_debounce = (fn, ms) => {
+    let t = null;
+    return (...args) => {
+      clearTimeout(t);
+      t = setTimeout(() => fn(...args), ms);
+    };
+  };
+  window.addEventListener('resize', __spacer_debounce(ensureFooterSpacer, 120), { passive: true });
+  window.addEventListener('orientationchange', () => setTimeout(ensureFooterSpacer, 150));
+
   function showSearch(query) {
     if (!query.trim()) {
       showHome();
       return;
     }
     currentView = "search";
+    // Remove pinned footer helper when leaving category/static views
+    if (document && document.body) document.body.classList.remove('full-bleed-footer');
+    // remove any category spacer
+    try { const sp = document.querySelector('.page-spacer'); if (sp) sp.remove(); } catch(e){}
     const q = query.toLowerCase();
     const matched = allGames.filter(
       (g) =>
@@ -1096,6 +1167,16 @@
     else showHome();
   });
 
+  /* Ensure hash-based navigation keeps footer pinned (fixes direct/hash navigation on mobile) */
+  window.addEventListener('hashchange', () => {
+    const h = (location.hash || '').replace('#', '');
+    if (h && TAG_META[h]) {
+      showCategory(h);
+    } else if (!h) {
+      showHome();
+    }
+  });
+
   /* ---------- Init ---------- */
   document.addEventListener("DOMContentLoaded", async () => {
     console.log('[route] DOMContentLoaded fired');
@@ -1141,6 +1222,49 @@
     } catch (e) {
       /* ignore */
     }
+
+    // Footer measurement & dynamic CSS variable so page content reserves exact footer height
+    try {
+      const $siteFooter = document.querySelector('.site-footer');
+      const setMeasuredFooter = (px) => {
+        try {
+          document.documentElement.style.setProperty('--measured-footer', px + 'px');
+        } catch (e) {}
+      };
+
+      const updateFooterHeight = () => {
+        try {
+          if ($siteFooter) {
+            const h = Math.max(0, $siteFooter.offsetHeight || 0);
+            setMeasuredFooter(h);
+          } else {
+            // fallback to base
+            const base = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--footer-base')) || 160;
+            setMeasuredFooter(base);
+          }
+        } catch (e) {
+          /* ignore */
+        }
+      };
+
+      // initial measure
+      updateFooterHeight();
+
+      // Keep updated on resize / orientation / visibility
+      window.addEventListener('resize', () => updateFooterHeight(), { passive: true });
+      window.addEventListener('orientationchange', () => setTimeout(updateFooterHeight, 150));
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') updateFooterHeight();
+      });
+
+      // Use ResizeObserver to detect footer content changes (consent banner, translations, etc.)
+      if (window.ResizeObserver && $siteFooter) {
+        const ro = new ResizeObserver(() => updateFooterHeight());
+        ro.observe($siteFooter);
+      }
+    } catch (e) {
+      /* ignore */
+    }
     $skeleton.style.display = "none";
     buildSidebar();
     renderHeroFeatured();
@@ -1179,6 +1303,50 @@
       console.log('[route] no route, showing home');
       showHome();
     }
+
+    // Defensive: if the initial URL hash is a category, ensure the body
+    // has the pinned-footer class — covers hash-only navigations and
+    // mitigates cases where the class could be removed later.
+    try {
+      const initialHash = (location.hash || '').replace('#', '');
+      if (initialHash && TAG_META[initialHash]) document.body.classList.add('full-bleed-footer');
+
+      // Android Chrome workaround: reflow the footer on viewport changes
+      // to avoid cases where the bottom UI (address/gesture bar) hides the
+      // fixed footer or changes viewport height unexpectedly.
+      const isAndroidChrome = typeof navigator !== 'undefined' && /Android/.test(navigator.userAgent) && /Chrome\/\d+/.test(navigator.userAgent) && !/OPR|SamsungBrowser|Edg\//.test(navigator.userAgent);
+      if (isAndroidChrome) {
+        const __ac_debounce = (fn, ms) => {
+          let t = null;
+          return (...args) => {
+            clearTimeout(t);
+            t = setTimeout(() => fn(...args), ms);
+          };
+        };
+
+        const reflowFooter = () => {
+          try {
+            if (document && document.body && document.body.classList.contains('full-bleed-footer')) {
+              document.body.classList.remove('full-bleed-footer');
+              // force reflow
+              void document.body.offsetHeight;
+              document.body.classList.add('full-bleed-footer');
+            }
+          } catch (e) {
+            /* ignore */
+          }
+        };
+
+        window.addEventListener('resize', __ac_debounce(reflowFooter, 150), { passive: true });
+        window.addEventListener('orientationchange', __ac_debounce(reflowFooter, 150));
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible') reflowFooter();
+        });
+      }
+    } catch (e) {
+      /* ignore */
+    }
+
     // Remove early-hide class now that the correct view is rendered
     document.documentElement.classList.remove("route-loading");
   });
@@ -1196,10 +1364,22 @@
             if (newWorker) {
               newWorker.addEventListener('statechange', () => {
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  // New version available
-                  if (confirm('New version available! Reload to update?')) {
-                    newWorker.postMessage({ type: 'SKIP_WAITING' });
-                    window.location.reload();
+                  // New version available — prompt no more than once per period
+                  try {
+                    const COOLDOWN_MS = 6 * 60 * 60 * 1000; // 6 hours
+                    const key = 'sw-last-prompt';
+                    const last = parseInt(localStorage.getItem(key) || '0', 10) || 0;
+                    const now = Date.now();
+                    // Only prompt if enough time has passed and page is visible
+                    if (document.visibilityState === 'visible' && (now - last) > COOLDOWN_MS) {
+                      // record prompt time immediately to avoid duplicate prompts from other tabs
+                      localStorage.setItem(key, String(now));
+                      // show a non-modal update banner with actions when DOM is ready and page visible
+                      scheduleUpdateBanner(newWorker);
+                    }
+                  } catch (e) {
+                    // If storage access fails, still schedule the banner (no modal fallback)
+                    scheduleUpdateBanner(newWorker);
                   }
                 }
               });
@@ -1212,3 +1392,121 @@
     });
   }
 })();
+
+/* Helper: show a non-modal update banner with Reload and Dismiss actions */
+function showUpdateBanner(newWorker) {
+  try {
+    if (document.getElementById('sw-update-banner')) return; // already shown
+    const banner = document.createElement('div');
+    banner.id = 'sw-update-banner';
+    banner.style.position = 'fixed';
+    banner.style.left = '16px';
+    banner.style.right = '16px';
+    banner.style.bottom = '16px';
+    banner.style.zIndex = '1600';
+    banner.style.display = 'flex';
+    banner.style.alignItems = 'center';
+    banner.style.justifyContent = 'space-between';
+    banner.style.padding = '12px 14px';
+    banner.style.background = 'linear-gradient(180deg,#ffffff,#fbfdff)';
+    banner.style.border = '1px solid rgba(15,23,42,0.06)';
+    banner.style.borderRadius = '10px';
+    banner.style.boxShadow = '0 8px 30px rgba(12,20,40,0.12)';
+    banner.style.fontSize = '.95rem';
+    banner.innerHTML = `<div style="flex:1;min-width:0;margin-right:12px;color:var(--text)">New version available — <strong>Reload</strong> to update.</div>`;
+
+    const actions = document.createElement('div');
+    actions.style.display = 'flex';
+    actions.style.gap = '8px';
+
+    const reloadBtn = document.createElement('button');
+    reloadBtn.textContent = 'Reload';
+    reloadBtn.style.padding = '8px 12px';
+    reloadBtn.style.borderRadius = '8px';
+    reloadBtn.style.border = '0';
+    reloadBtn.style.background = 'var(--brand)';
+    reloadBtn.style.color = '#fff';
+    reloadBtn.style.fontWeight = '700';
+    reloadBtn.addEventListener('click', () => {
+      try { newWorker.postMessage({ type: 'SKIP_WAITING' }); } catch (e) {}
+      // Wait for the new service worker to take control before reloading.
+      // This avoids reloading too early and then seeing the update prompt again.
+      let reloaded = false;
+      const doReload = () => {
+        if (reloaded) return;
+        reloaded = true;
+        try { window.location.reload(); } catch (e) { location.href = location.href; }
+      };
+
+      if (navigator.serviceWorker && typeof navigator.serviceWorker.addEventListener === 'function') {
+        const onControllerChange = () => {
+          try {
+            navigator.serviceWorker.removeEventListener('controllerchange', onControllerChange);
+          } catch (e) {}
+          doReload();
+        };
+        try {
+          navigator.serviceWorker.addEventListener('controllerchange', onControllerChange);
+        } catch (e) {
+          // fallback
+          setTimeout(doReload, 500);
+        }
+        // safety fallback: force reload after 3s if controllerchange wasn't fired
+        setTimeout(doReload, 3000);
+      } else {
+        // No SW API available — just reload quickly
+        setTimeout(doReload, 50);
+      }
+    });
+
+    const dismissBtn = document.createElement('button');
+    dismissBtn.textContent = 'Dismiss';
+    dismissBtn.style.padding = '8px 12px';
+    dismissBtn.style.borderRadius = '8px';
+    dismissBtn.style.border = '1px solid rgba(15,23,42,0.06)';
+    dismissBtn.style.background = 'transparent';
+    dismissBtn.addEventListener('click', () => {
+      try { localStorage.setItem('sw-last-prompt', String(Date.now())); } catch (e) {}
+      banner.remove();
+    });
+
+    actions.appendChild(dismissBtn);
+    actions.appendChild(reloadBtn);
+    banner.appendChild(actions);
+    document.body.appendChild(banner);
+  } catch (err) {
+    // last resort: log and skip showing modal to avoid modal loops
+    console.warn('Could not show update banner', err);
+  }
+}
+
+function scheduleUpdateBanner(newWorker) {
+  // If document is already ready and visible, show immediately
+  if (document.readyState !== 'loading' && document.visibilityState === 'visible' && document.body) {
+    try { showUpdateBanner(newWorker); } catch (e) { console.warn('scheduleUpdateBanner error', e); }
+    return;
+  }
+
+  // Otherwise wait for DOM ready and visibility change. Use one-time listeners.
+  const onReady = () => {
+    if (document.visibilityState === 'visible' && document.body) {
+      showUpdateBanner(newWorker);
+      cleanup();
+    }
+  };
+  const onVisibility = () => {
+    if (document.visibilityState === 'visible' && document.body) {
+      showUpdateBanner(newWorker);
+      cleanup();
+    }
+  };
+  const cleanup = () => {
+    document.removeEventListener('DOMContentLoaded', onReady);
+    document.removeEventListener('visibilitychange', onVisibility);
+    clearTimeout(timer);
+  };
+  document.addEventListener('DOMContentLoaded', onReady, { once: true });
+  document.addEventListener('visibilitychange', onVisibility);
+  // safety timeout: show banner after 10s even if visibility doesn't change
+  const timer = setTimeout(() => { try { showUpdateBanner(newWorker); } catch (e) { console.warn(e); } }, 10000);
+}

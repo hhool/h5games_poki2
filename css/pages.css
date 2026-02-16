@@ -26,6 +26,9 @@
   margin:0 auto;
   display:flex;flex-direction:column;
   /* avoid forcing an extra min-height that combines with body padding and causes overflow */
+  /* Reserve viewport minus footer and header so footer sits flush to viewport bottom */
+  min-height: calc(100dvh - var(--footer-h) - var(--page-header-height));
+
 }
 
 .page-header{
@@ -156,6 +159,15 @@ body{padding-top:var(--page-header-height,72px)}
 :root{--page-header-height:72px}
 @media(max-width:600px){:root{--page-header-height:64px}}
 @media(max-width:420px){:root{--page-header-height:56px}}
+/* Footer height used to reserve space in page content when footer is fixed */
+:root{
+  /* base footer height for static pages; add safe-area inset for mobile UI */
+  --footer-base:160px;
+  /* measured footer height will be set from JS into --measured-footer (px). */
+  --measured-footer: var(--footer-base);
+  /* final footer reservation includes safe-area inset */
+  --footer-h: calc(var(--measured-footer) + env(safe-area-inset-bottom, 0px));
+}
 .page-content{overflow-wrap:break-word;word-break:break-word;max-width:100%}
 .page-content img,.page-content iframe,.page-content video{max-width:100%;height:auto;display:block}
 .page-footer{flex-shrink:0}
@@ -216,31 +228,54 @@ body.about-page .site-footer .footer-inner{
   padding-right:12px;
 }
 
+/* Ensure footer inner width is consistent across informational pages */
+body.about-page .site-footer .footer-inner,
+body.contact-page .site-footer .footer-inner,
+body.privacy-page .site-footer .footer-inner,
+body.terms-page .site-footer .footer-inner,
+body.dmca-page .site-footer .footer-inner,
+body.static-page .site-footer .footer-inner {
+  max-width:780px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:12px;
+  padding-right:12px;
+}
+
 /* Semantic helper: pages that are static informational pages
    Should add `static-page` to the <body> (e.g. <body class="static-page">)
    This mirrors the previous `full-bleed-footer` behavior but is more semantic. */
 /* Keep a deprecated alias for compatibility */
 body.static-page,
 body.full-bleed-footer {
-  position:relative;min-height:100vh;
+  position:relative;
+  /* Use dynamic viewport units on modern Android Chrome to account for URL/toolbar
+     chrome changes; keep 100vh as a fallback for older browsers. */
+  min-height:100vh;
+  min-height:100dvh;
 }
 body.static-page .page-wrap,
 body.full-bleed-footer .page-wrap{position:static !important}
 body.static-page .site-footer,
 body.full-bleed-footer .site-footer{
-  position:absolute !important;
+  position:fixed !important;
   left:0 !important;
   right:0 !important;
   bottom:0 !important;
+  /* ensure footer sits flush to viewport bottom; account for safe-area on iOS
+     and allow Android UI overlays to not push visual content up */
+  padding-bottom: env(safe-area-inset-bottom, 0px);
   margin-left:0 !important;
   margin-right:0 !important;
-  width:100vw !important;
+  width:100% !important;
   box-sizing:border-box !important;
   border-radius:0 !important;
   transform:none !important;
+  z-index:1200 !important;
 }
+/* Reserve space for fixed footer using CSS variable so content isn't hidden */
 body.static-page .page-content,
-body.full-bleed-footer .page-content{padding-bottom:160px}
+body.full-bleed-footer .page-content{padding-bottom:var(--footer-h)}
 body.static-page .site-footer .footer-inner,
 body.full-bleed-footer .site-footer .footer-inner{
   max-width:780px;
@@ -297,5 +332,9 @@ body.consent-visible{padding-bottom:calc(var(--consent-height,96px) + 24px)}
 .ad-placeholder-accept{margin-left:12px;padding:6px 10px;border-radius:8px;border:0;background:var(--brand);color:#fff;cursor:pointer}
 .ad-fallback{padding:12px;border-radius:8px;background:linear-gradient(180deg,#f8f9fb,#ffffff);border:1px solid rgba(0,0,0,0.03);color:var(--text-muted)}
 .ad-collapsed{display:none!important;height:6px!important;margin:0!important;min-height:0!important;overflow:hidden!important;padding:0!important}
+
+
+/* Spacer used to reserve space on short category pages so footer sits flush */
+.page-spacer{display:block;width:100%;height:0;pointer-events:none;background:transparent}
 
 
