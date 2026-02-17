@@ -287,7 +287,12 @@ input{font:inherit}
   padding:2px 7px;border-radius:10px;
   min-width:22px;text-align:center;
 }
-.nav-item.active .nav-badge{background:rgba(255,255,255,.3);color:#fff}
+.nav-item.active .nav-badge{
+  /* Use an opaque light background with dark text to meet contrast requirements */
+  background: #ffffff;
+  color: var(--brand-dark);
+  border: 1px solid rgba(0,0,0,0.06);
+}
 
 /* ---- Game grid ---- */
 .game-grid{

@@ -37,7 +37,7 @@
   padding:1px 20px;
   border-bottom:1px solid var(--surface-2);
   position:fixed;top:0;left:0;
-  width:calc(100% - 2px);max-width:100%px;
+  width:calc(100% - 2px);max-width:100%;
   background:rgba(255,255,255,.95);
   -webkit-backdrop-filter:saturate(180%) blur(12px);
   backdrop-filter:saturate(180%) blur(12px);
