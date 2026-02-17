@@ -547,6 +547,8 @@
 
   function showCategory(tag) {
     currentView = "category";
+    // Update measured footer values before mutating layout to avoid visual jumps
+    try { if (window.footerMeasure && typeof window.footerMeasure.update === 'function') window.footerMeasure.update(); } catch (e) {}
     // Ensure category pages pin the footer to viewport bottom
     if (document && document.body) document.body.classList.add('full-bleed-footer');
     $hero.style.display = "none";

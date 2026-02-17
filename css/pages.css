@@ -353,6 +353,17 @@ body.consent-visible{padding-bottom:calc(var(--consent-height,96px) + 24px)}
 /* Spacer used to reserve space on short category pages so footer sits flush */
 .page-spacer{display:block;width:100%;height:0;pointer-events:none;background:transparent}
 
+/* Keep footer height stable during dynamic view swaps to avoid visual "shrinking" */
+.site-footer{
+  transition: none !important;
+  -webkit-transition: none !important;
+  /* Reserve a minimum height from measured value so layout doesn't jump while JS re-measures */
+  min-height: var(--measured-footer, 0px);
+}
+.site-footer .footer-inner{
+  min-height: var(--measured-footer, 0px);
+}
+
 /* ------------------------------------------------------------------
    Informational pages overrides
    Ensure About/Privacy/Terms/DMCA/Contact pages keep the footer
