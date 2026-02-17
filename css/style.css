@@ -410,6 +410,36 @@ input{font:inherit}
   transform:translateY(-100%);
   pointer-events:none;
 }
+/* When overlay is in pass-through mode, allow pointer events to reach the
+   iframe while keeping overlay visuals hidden. This enables touch/click
+   gestures to interact with the game when `use_overlay_title === false`. */
+.overlay-pass-through{
+  pointer-events: none;
+}
+.overlay-pass-through .game-iframe{
+  pointer-events: auto; /* re-enable iframe interaction */
+}
+.overlay-pass-through .game-overlay-bar{
+  display: none !important; /* hide the top bar when passing through */
+  pointer-events: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+}
+/* Ensure the invisible trigger zone does not intercept touches while passthrough is active */
+.overlay-pass-through .bar-trigger,
+.overlay-pass-through #bar-trigger,
+.overlay-pass-through .bar-trigger *{
+  pointer-events: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+}
+/* Restore iframe touch behavior explicitly for problematic webviews */
+.overlay-pass-through .game-iframe,
+.overlay-pass-through #game-iframe{
+  pointer-events: auto !important;
+  touch-action: auto !important;
+  -ms-touch-action: auto !important;
+}
 /* Invisible trigger zone at top to bring bar back */
 .bar-trigger{
   position:absolute;top:0;left:0;right:0;
@@ -577,7 +607,8 @@ input{font:inherit}
 .game-pause-overlay{
   display:none;
   position:absolute;inset:0;
-  z-index:10;
+  z-index:1100;
+  pointer-events:auto;
   background:rgba(0,0,0,.85);
   backdrop-filter:blur(6px);
   -webkit-backdrop-filter:blur(6px);

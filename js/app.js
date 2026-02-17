@@ -49,6 +49,10 @@
     ("ontouchstart" in window && window.innerWidth <= 1024);
   const isWeChat = /MicroMessenger/i.test(navigator.userAgent);
 
+  // Touch/pointer debug logging disabled. To re-enable, set this to true
+  // during local debugging (avoid leaving enabled in production).
+  const DEBUG_TOUCH = false;
+
   /** Return true if this game should be shown on the current device */
   function canShow(game) {
     // Prefer explicit `avalid` field when present: only show if it includes current platform
@@ -975,7 +979,30 @@
     // Hide bar by default, show only if enabled
     $overlayBar.classList.add("bar-hidden");
     if (game.use_overlay_title !== false) {
+      // show bar and ensure overlay accepts pointer events for controls
+      try { $overlay.classList.remove('overlay-pass-through'); } catch (e) {}
+      try { $overlayTitle.style.display = ''; } catch (e) {}
       showBar();
+    } else {
+      // Hide title and make overlay pass pointer events through to the iframe
+      try { $overlayTitle.style.display = 'none'; } catch (e) {}
+      try { $overlay.classList.add('overlay-pass-through'); } catch (e) {}
+      // Also disable the overlay bar trigger so it doesn't intercept touches
+      try {
+        if ($barTrigger) {
+          $barTrigger.style.pointerEvents = 'none';
+          // Collapse visual footprint in case styles rely on its height
+          $barTrigger.style.height = '0px';
+        }
+        if ($overlayBar) {
+          // hide the bar entirely while passthrough is active
+          $overlayBar.style.display = 'none';
+        }
+        if ($iframe) {
+          // ensure iframe receives pointer events
+          $iframe.style.pointerEvents = 'auto';
+        }
+      } catch (e) {}
     }
 
     $overlay.classList.add("open");
@@ -1018,6 +1045,21 @@
     clearInterval(loadingTimer);
     clearTimeout(barHideTimer);
     $overlayBar.classList.remove("bar-hidden");
+    // restore overlay interaction in case it was passthrough
+    try { $overlay.classList.remove('overlay-pass-through'); } catch (e) {}
+    try { $overlayTitle.style.display = ''; } catch (e) {}
+    try {
+      if ($barTrigger) {
+        $barTrigger.style.pointerEvents = '';
+        $barTrigger.style.height = '';
+      }
+      if ($overlayBar) {
+        $overlayBar.style.display = '';
+      }
+      if ($iframe) {
+        $iframe.style.pointerEvents = '';
+      }
+    } catch (e) {}
     $loadingOverlay.classList.remove("show");
     $orientHint.classList.remove("show");
     $pauseOverlay.classList.remove("show");
@@ -1073,6 +1115,15 @@
       })
       .catch(() => {});
     showBar(); // restart auto-hide timer
+    // After resuming, re-enable passthrough if the current game requested it
+    try {
+      if (currentGame && currentGame.use_overlay_title === false) {
+        $overlay.classList.add('overlay-pass-through');
+        if ($barTrigger) { $barTrigger.style.pointerEvents = 'none'; $barTrigger.style.height = '0px'; }
+        if ($overlayBar) { $overlayBar.style.display = 'none'; }
+        if ($iframe) { $iframe.style.pointerEvents = 'auto'; }
+      }
+    } catch (e) {}
   }
 
   /* ---------- Fullscreen change → pause ---------- */
@@ -1081,12 +1132,25 @@
     if (!document.fullscreenElement) {
       // Exited fullscreen while game is open → show pause
       gamePaused = true;
+      // Ensure the overlay accepts pointer events so pause buttons work
+      try { $overlay.classList.remove('overlay-pass-through'); } catch (e) {}
+      // Prevent iframe from capturing touches while paused
+      try { if ($iframe) $iframe.style.pointerEvents = 'none'; } catch (e) {}
       $pauseOverlay.classList.add("show");
       showBar(); // keep bar visible during pause
     } else {
       gamePaused = false;
       $pauseOverlay.classList.remove("show");
       showBar(); // restart auto-hide timer after resume
+      // Restore passthrough if the current game requested it
+      try {
+        if (currentGame && currentGame.use_overlay_title === false) {
+          $overlay.classList.add('overlay-pass-through');
+          if ($barTrigger) { $barTrigger.style.pointerEvents = 'none'; $barTrigger.style.height = '0px'; }
+          if ($overlayBar) { $overlayBar.style.display = 'none'; }
+          if ($iframe) { $iframe.style.pointerEvents = 'auto'; }
+        }
+      } catch (e) {}
     }
   });
 
@@ -1207,6 +1271,30 @@
           showBar();
         }
       });
+    }
+
+    // Debug: log touch/pointer events to console when enabled
+    if (DEBUG_TOUCH) {
+      const formatTouches = (ev) => {
+        if (ev.touches && ev.touches.length) return Array.from(ev.touches).map(t => `${t.clientX},${t.clientY}`).join(' | ');
+        if (ev.changedTouches && ev.changedTouches.length) return Array.from(ev.changedTouches).map(t => `${t.clientX},${t.clientY}`).join(' | ');
+        return `${ev.clientX || 0},${ev.clientY || 0}`;
+      };
+      const logEv = (scope) => (ev) => {
+        try {
+          console.log('[TOUCH]', ev.type, 'scope=', scope, 'target=', ev.target && (ev.target.id || ev.target.className || ev.target.tagName), 'coords=', formatTouches(ev), 'overlay-pass-through=', $overlay && $overlay.classList && $overlay.classList.contains('overlay-pass-through'));
+        } catch (e) { console.log('[TOUCH] log error', e); }
+      };
+
+      const events = ['touchstart','touchmove','touchend','pointerdown','pointermove','pointerup','click'];
+      // listen on document (capture) and on overlay element and iframe element
+      events.forEach(evt => {
+        document.addEventListener(evt, logEv('document'), { passive: true, capture: true });
+        if ($overlay) $overlay.addEventListener(evt, logEv('overlay'), { passive: true, capture: true });
+        if ($iframe) $iframe.addEventListener(evt, logEv('iframe-element'), { passive: true, capture: true });
+      });
+
+      console.log('[DEBUG] touch logging enabled — use ?debug-touch or set localStorage.debug-touch = "1"');
     }
 
     // Attach detail interstitial listeners
