@@ -18,6 +18,7 @@
     "inject-ldjson": "node scripts/inject-ldjson.js --dir=dist --config=scripts/ldconfig.json",
     "inject-ldjson:src": "node scripts/inject-ldjson.js --dir=. --config=scripts/ldconfig.json",
     "build:with-inject": "npm run build && npm run inject-ldjson"
+    ,"serve:compressed": "node scripts/serve-compressed.js -p 8080 -d dist"
   },
   "keywords": [],
   "author": "",
