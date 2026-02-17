@@ -161,8 +161,9 @@ body{padding-top:var(--page-header-height,72px)}
 @media(max-width:420px){:root{--page-header-height:56px}}
 /* Footer height used to reserve space in page content when footer is fixed */
 :root{
-  /* base footer height for static pages; add safe-area inset for mobile UI */
-  --footer-base:160px;
+    /* base footer height for static pages; start at 0 to avoid refresh jitter
+      JS will measure the real footer and write --measured-footer. */
+    --footer-base: 0px;
   /* measured footer height will be set from JS into --measured-footer (px). */
   --measured-footer: var(--footer-base);
   /* final footer reservation includes safe-area inset */
