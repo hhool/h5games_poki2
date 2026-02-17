@@ -82,3 +82,29 @@
     };
   } catch (e) { /* ignore attach errors */ }
 })();
+
+// Expose a simple footerMeasure API for runtime callers (app.js expects this)
+(function exposeFooterMeasure(){
+  try {
+    window.footerMeasure = window.footerMeasure || {};
+    window.footerMeasure.update = function() {
+      try {
+        const footer = document.querySelector('.site-footer');
+        if (!footer) return;
+        const h = Math.max(0, footer.offsetHeight || 0);
+        const measured = h + 'px';
+        try { document.documentElement.style.setProperty('--measured-footer', measured); } catch (e) {}
+        try { document.documentElement.style.setProperty('--footer-h', 'calc(' + measured + ' + env(safe-area-inset-bottom, 0px))'); } catch (e) {}
+
+        // Keep fallback padding in sync for non-full-bleed pages
+        try {
+          const body = document.body || document.documentElement;
+          if (body && body.classList && !body.classList.contains('full-bleed-footer')) {
+            const content = document.querySelector('.page-content') || document.getElementById('content') || document.querySelector('.page-wrap');
+            if (content) content.style.paddingBottom = 'calc(' + measured + ' + env(safe-area-inset-bottom, 0px))';
+          }
+        } catch (e) {}
+      } catch (e) { /* ignore */ }
+    };
+  } catch (e) {}
+})();
