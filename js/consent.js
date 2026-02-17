@@ -306,6 +306,10 @@ function createBanner(){
   `.trim();
 
   document.body.appendChild(banner);
+  // Reveal consent banner after it's inserted by marking page ready.
+  // `body.consent-ready` is used to avoid the banner being painted
+  // during initial load so it won't be selected as the LCP.
+  try{ document.body.classList.add('consent-ready'); }catch(e){}
   // expose height to CSS and prevent footer overlap
   const setHeight = ()=>{
     try{
@@ -347,7 +351,17 @@ function ensureConsent(){
   // remove any accidental ad script tags left in templates
   removeExistingAdScripts();
   // show banner if not decided
-  if(!status) createBanner();
+  if(!status){
+    // Defer banner creation until browser is idle or after a short timeout
+    const show = ()=>{
+      try{ createBanner(); }catch(e){ createBanner(); }
+    };
+    if('requestIdleCallback' in window){
+      requestIdleCallback(show,{timeout:600});
+    }else{
+      setTimeout(show, 600);
+    }
+  }
   // setup observer to handle ad slot changes
   setupAdSlotMutationObserver();
 }
