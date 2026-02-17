@@ -364,6 +364,9 @@ body.consent-visible{padding-bottom:calc(var(--consent-height,96px) + 24px)}
   min-height: var(--measured-footer, 0px);
 }
 
+/* Hide footer until positioned (used on home and during view swaps) */
+body.footer-hidden .site-footer{visibility:hidden !important;opacity:0 !important;pointer-events:none}
+
 /* ------------------------------------------------------------------
    Informational pages overrides
    Ensure About/Privacy/Terms/DMCA/Contact pages keep the footer

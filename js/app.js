@@ -511,8 +511,11 @@
   /* ---------- Views ---------- */
   function showHome() {
     currentView = "home";
-    // Remove pinned footer helper when returning to home
-    if (document && document.body) document.body.classList.remove('full-bleed-footer');
+    // Remove pinned footer helper when returning to home and hide footer until needed
+    if (document && document.body) {
+      document.body.classList.remove('full-bleed-footer');
+      document.body.classList.add('footer-hidden');
+    }
     // remove any page spacer used for category views
     try { const sp = document.querySelector('.page-spacer'); if (sp) sp.remove(); } catch(e){}
     $hero.style.display = "";
@@ -591,6 +594,14 @@
       if (sec) $gameSections.appendChild(sec);
       // ensure footer spacer is applied for short content so footer sits flush
       try { ensureFooterSpacer(); } catch (e) { /* ignore */ }
+      // Reveal footer only after spacer & measurements are applied to avoid jump
+      try {
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            try { document.body.classList.remove('footer-hidden'); } catch (e) {}
+          }, 40);
+        });
+      } catch (e) {}
       // remove the temporary min-height to allow natural layout after swap
       try {
         if ($gameSections.style.minHeight) {
