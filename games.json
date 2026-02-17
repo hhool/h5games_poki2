@@ -267,7 +267,7 @@
     "link": "https://b.poki2.online/blackknight/",
     "imgSrc": "https://b.poki2.online/blackknight/icon.png",
     "tags": ["action", "europe", "medieval", "singleplayer", "competitive"],
-    "input": ["keyboard"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape",
     "avalid": ["mobile"],
     "show": true,
@@ -468,7 +468,7 @@
     "imgSrc": "https://d.poki2.online/defend-the-tank/icon.png",
     "tags": ["shooting", "strategy"],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape",
+    "orientation": "portrait",
     "avalid": ["mobile", "desktop"],
     "show": true,
     "use_overlay_title": false
@@ -661,7 +661,7 @@
     "link": "https://k.poki2.online/krunker/",
     "imgSrc": "https://k.poki2.online/krunker/icon.png",
     "tags": ["strategy", "shooting", "io", "multiplayer"],
-    "input": ["keyboard"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape",
     "avalid": ["mobile", "desktop"],
     "show": true,
@@ -727,9 +727,9 @@
     "link": "https://m.poki2.online/motox3m/",
     "imgSrc": "https://m.poki2.online/motox3m/icon.png",
     "tags": ["racing", "sports", "taptap"],
-    "input": ["keyboard"],
+    "input": ["touch","keyboard"],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": ["mobile", "desktop"],
     "show": true,
     "use_overlay_title": false
   },
@@ -738,7 +738,7 @@
     "link": "https://m.poki2.online/motox3m-pool/",
     "imgSrc": "https://m.poki2.online/motox3m-pool/icon.png",
     "tags": ["racing", "sports"],
-    "input": ["keyboard"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape",
     "avalid": ["desktop"],
     "show": true,
@@ -749,7 +749,7 @@
     "link": "https://m.poki2.online/motox3m-spooky/",
     "imgSrc": "https://m.poki2.online/motox3m-spooky/icon.png",
     "tags": ["racing", "sports"],
-    "input": ["keyboard"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape",
     "avalid": ["desktop"],
     "show": true,
@@ -760,7 +760,7 @@
     "link": "https://m.poki2.online/motox3m-winter/",
     "imgSrc": "https://m.poki2.online/motox3m-winter/icon.png",
     "tags": ["racing", "sports"],
-    "input": ["keyboard"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape",
     "avalid": ["desktop"],
     "show": true,
@@ -782,7 +782,7 @@
     "link": "https://n.poki2.online/ns-shaft/",
     "imgSrc": "https://n.poki2.online/ns-shaft/icon.png",
     "tags": ["achievement", "jump", "idle"],
-    "input": ["keyboard"],
+    "input": ["touch", "keyboard"],
     "orientation": "portrait",
     "avalid": ["mobile", "desktop"],
     "show": true,
@@ -922,7 +922,7 @@
     "link": "https://s.poki2.online/stormthehouse2/",
     "imgSrc": "https://s.poki2.online/stormthehouse2/icon.png",
     "tags": ["shooting", "idle"],
-    "input": ["keyboard"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape",
     "avalid": ["mobile", "desktop"],
     "show": true,
@@ -974,7 +974,7 @@
     "link": "https://t.poki2.online/thebattle/",
     "imgSrc": "https://t.poki2.online/thebattle/icon.png",
     "tags": ["strategy", "competitive", "arcade"],
-    "input": ["keyboard"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape",
     "avalid": ["mobile", "desktop"],
     "show": true,
@@ -1059,7 +1059,7 @@
       "jump",
       "kizi"
     ],
-    "input": ["keyboard"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape",
     "avalid": ["mobile", "desktop"],
     "show": true,
@@ -1078,7 +1078,7 @@
       "jump",
       "kizi"
     ],
-    "input": ["keyboard"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape",
     "avalid": ["mobile", "desktop"],
     "show": true,
@@ -1097,7 +1097,7 @@
       "jump",
       "kizi"
     ],
-    "input": ["keyboard"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape",
     "avalid": ["mobile", "desktop"],
     "show": true,
@@ -1116,7 +1116,7 @@
       "jump",
       "kizi"
     ],
-    "input": ["keyboard"],
+    "input": ["touch", "keyboard"],
     "orientation": "landscape",
     "avalid": ["mobile", "desktop"],
     "show": true,
@@ -1401,7 +1401,7 @@
     "imgSrc": "https://mobileapp.poki2.online/mobile/cowboyrun/icon-128.png",
     "tags": ["achievement", "singleplayer", "shooting", "cowboy", "run"],
     "input": ["touch", "keyboard"],
-    "orientation": "both",
+    "orientation": "landscape",
     "avalid": ["mobile", "desktop"],
     "show": true,
     "use_overlay_title": false
@@ -1813,7 +1813,7 @@
     "imgSrc": "https://mobileapp.poki2.online/mobile/goingnuts/sprites/bg_preloader.jpg",
     "tags": ["idle", "singleplayer", "adventure", "squirrel", "nuts"],
     "input": ["touch", "keyboard"],
-    "orientation": "portrait",
+    "orientation": "landscape",
     "avalid": ["mobile", "desktop"],
     "show": true,
     "use_overlay_title": false
@@ -1836,7 +1836,7 @@
     "tags": ["idle", "singleplayer", "adventure", "plane", "green", "wings"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": ["desktop"],
     "show": true,
     "use_overlay_title": false
   },
@@ -1892,7 +1892,7 @@
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
     "avalid": ["mobile", "desktop"],
-    "show": true,
+    "show": false,
     "use_overlay_title": false
   },
   {
@@ -2015,7 +2015,7 @@
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
     "avalid": ["mobile", "desktop"],
-    "show": true,
+    "show": false,
     "use_overlay_title": false
   },
   {
@@ -2105,7 +2105,7 @@
       "logic"
     ],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape",
+    "orientation": "portrait",
     "avalid": ["mobile", "desktop"],
     "show": true,
     "use_overlay_title": false
@@ -2187,7 +2187,7 @@
       "taptap"
     ],
     "input": ["touch", "keyboard"],
-    "orientation": "both",
+    "orientation": "landscape",
     "avalid": ["mobile", "desktop"],
     "show": true,
     "use_overlay_title": false
@@ -2488,7 +2488,7 @@
       "html5game"
     ],
     "input": ["touch", "keyboard"],
-    "orientation": "landscape",
+    "orientation": "portrait",
     "avalid": ["mobile", "desktop"],
     "show": true,
     "use_overlay_title": false
@@ -2906,7 +2906,7 @@
     "title": "Wood Block",
     "tags": ["puzzle", "singleplayer"],
     "input": ["touch", "keyboard", "wood", "block"],
-    "orientation": "both",
+    "orientation": "landscape",
     "avalid": ["mobile", "desktop"],
     "show": true,
     "use_overlay_title": false
