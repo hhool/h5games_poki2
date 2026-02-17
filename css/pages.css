@@ -60,7 +60,7 @@
   border-radius:20px;
   font-size:.85rem;font-weight:500;
   color:var(--text-muted);
-  transition:background .15s, color .15s;
+  transition: background-color .15s;
   flex:0 0 auto; /* prevent shrinking when container is narrow */
 }
 .page-nav a:hover{background:var(--surface-2);color:var(--text)}
