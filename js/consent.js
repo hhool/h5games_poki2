@@ -288,7 +288,9 @@ function createBanner(){
     const s = document.createElement('style');
     s.id = 'consent-inline-style';
     s.textContent = `
-      .consent-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:1300;display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:10px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 8px 20px rgba(2,6,23,0.08);font-size:14px;color:#0b1220;max-width:1100px;margin:0 auto}
+      /* Inline consent styles: hidden by default, revealed when body.consent-ready is present */
+      .consent-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:1300;display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:10px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 8px 20px rgba(2,6,23,0.08);font-size:14px;color:#0b1220;max-width:1100px;margin:0 auto;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s}
+      body.consent-ready .consent-banner{opacity:1;visibility:visible;transform:none}
       .consent-banner .consent-actions{display:flex;gap:8px;margin-left:12px}
       .consent-accept{background:#1f6feb;color:#fff;padding:8px 12px;border-radius:8px;border:0}
       .consent-decline{background:transparent;color:#0b1220;padding:8px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
@@ -306,10 +308,6 @@ function createBanner(){
   `.trim();
 
   document.body.appendChild(banner);
-  // Reveal consent banner after it's inserted by marking page ready.
-  // `body.consent-ready` is used to avoid the banner being painted
-  // during initial load so it won't be selected as the LCP.
-  try{ document.body.classList.add('consent-ready'); }catch(e){}
   // expose height to CSS and prevent footer overlap
   const setHeight = ()=>{
     try{
