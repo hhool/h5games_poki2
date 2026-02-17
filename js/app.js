@@ -552,6 +552,12 @@
     $hero.style.display = "none";
     $recentSection.style.display = "none";
     $searchResults.style.display = "none";
+    // Preserve current height to avoid layout jumps while swapping content
+    try {
+      const prevH = $gameSections.getBoundingClientRect().height || 0;
+      if (prevH) $gameSections.style.minHeight = prevH + 'px';
+    } catch (e) { /* ignore */ }
+
     $gameSections.innerHTML = `
       <section class="category-section">
         <div class="section-header">
@@ -583,6 +589,12 @@
       if (sec) $gameSections.appendChild(sec);
       // ensure footer spacer is applied for short content so footer sits flush
       try { ensureFooterSpacer(); } catch (e) { /* ignore */ }
+      // remove the temporary min-height to allow natural layout after swap
+      try {
+        if ($gameSections.style.minHeight) {
+          requestAnimationFrame(() => { $gameSections.style.minHeight = ''; });
+        }
+      } catch (e) { /* ignore */ }
     }, 200);
     
     highlightSidebarItem(tag);
