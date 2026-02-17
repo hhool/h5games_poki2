@@ -248,6 +248,17 @@ input{font:inherit}
 }
 .hero-card:hover{transform:scale(1.1);box-shadow:0 6px 24px rgba(0,0,0,.35)}
 .hero-card img{width:100%;height:100%;object-fit:cover}
+/* Reserve layout space for hero and card thumbnails to avoid CLS */
+.hero-card,
+.hero-card img,
+.game-card-img{
+  display:block;
+  width:90px;
+  height:90px;
+  aspect-ratio:1 / 1;
+  object-fit:cover;
+  background-color:#f3f4f6;
+}
 
 /* ---- Recently Played ---- */
 .recently-played .clear-recent{

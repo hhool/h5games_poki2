@@ -473,14 +473,32 @@
   function renderHeroFeatured() {
     $heroFeatured.innerHTML = "";
     const picks = shuffle(allGames).slice(0, HERO_FEATURED_COUNT);
-    // populate during idle to avoid blocking
+    // Preload hero images to prioritize above-the-fold resources
+    try {
+      for (const g of picks) {
+        const url = g.imgSrc || getFaviconUrl(g.link);
+        if (!url) continue;
+        const l = document.createElement('link');
+        l.rel = 'preload';
+        l.as = 'image';
+        l.href = url;
+        document.head.appendChild(l);
+      }
+    } catch (e) {}
+
+    // populate during idle to avoid blocking; hero images are above-the-fold,
+    // so mark them eager and provide intrinsic dimensions to avoid CLS.
     (async () => {
       for (const g of picks) {
         const card = document.createElement("div");
         card.className = "hero-card";
         const himg = document.createElement("img");
         himg.alt = g.title || "";
-        himg.loading = "lazy";
+        // Prevent hero images from being lazy-loaded (they are above-the-fold)
+        himg.loading = "eager";
+        // Provide intrinsic size to avoid layout shifts
+        himg.width = 90;
+        himg.height = 90;
         const imgSrc = g.imgSrc || getFaviconUrl(g.link);
         optimizeImageLoading(himg, imgSrc);
         attachFaviconFallback(himg, g.link);
