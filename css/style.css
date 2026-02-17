@@ -394,8 +394,8 @@ input{font:inherit}
 }
 .footer-brand{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:10px}
 .footer-links{display:flex;justify-content:center;align-items:center;gap:16px;margin-bottom:10px;flex-wrap:wrap}
-.footer-links a{font-size:.85rem;transition:color .15s;white-space:nowrap}
-.footer-links a:hover{color:#fff}
+.footer-links a{font-size:.85rem;/* prefer opacity animation over color for compositing */transition:opacity .15s;white-space:nowrap;opacity:.95}
+.footer-links a:hover{color:#fff;opacity:1}
 .footer-copy{font-size:.75rem;color:#fff;opacity:1}
 
 /* Responsive: stack footer links on narrow screens */
@@ -622,10 +622,13 @@ input{font:inherit}
   background:transparent;
   color:rgba(255,255,255,.5);
   cursor:pointer;
-  transition:color .2s;
+  /* animate opacity instead of color for compositing */
+  transition:opacity .18s;
+  opacity:.95;
 }
 .orient-skip-btn:hover{
   color:#fff;
+  opacity:1;
 }
 @keyframes orientToLandscape{
   0%,15%{transform:rotate(0deg)}
