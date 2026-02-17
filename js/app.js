@@ -805,11 +805,68 @@
       }
     }
 
-    $detail.classList.add("open");
+    // Make detail interactive and trap input so underlying content doesn't receive events
+    try {
+      $detail.tabIndex = -1;
+      $detail.classList.add("open");
+      // focus the detail container to prevent keyboard events reaching iframe
+      if (typeof $detail.focus === "function") $detail.focus();
+      // disable pointer events and scrolling on main content while detail is open
+      try { if ($content) { $content.style.pointerEvents = 'none'; $content.setAttribute('aria-hidden','true'); } } catch (e) {}
+      try { document.body.style.overflow = 'hidden'; } catch (e) {}
+      // install capture listeners to stop pointer/keyboard events from leaking
+      document.addEventListener("keydown", blockDetailKeydown, true);
+      document.addEventListener("pointerdown", blockDetailPointer, true);
+      document.addEventListener("mousedown", blockDetailPointer, true);
+      document.addEventListener("touchstart", blockDetailPointer, true);
+    } catch (e) {
+      $detail.classList.add("open");
+    }
   }
   function hideDetail() {
     $detail.classList.remove("open");
+    // remove listeners and restore
+    try {
+      document.removeEventListener("keydown", blockDetailKeydown, true);
+      document.removeEventListener("pointerdown", blockDetailPointer, true);
+      document.removeEventListener("mousedown", blockDetailPointer, true);
+      document.removeEventListener("touchstart", blockDetailPointer, true);
+      document.removeEventListener("touchmove", blockDetailMove, { capture: true, passive: false });
+      document.removeEventListener("pointermove", blockDetailMove, { capture: true, passive: false });
+      document.removeEventListener("wheel", blockDetailWheel, { capture: true, passive: false });
+    } catch (e) {}
+    // restore content interaction and scrolling
+    try { if ($content) { $content.style.pointerEvents = ''; $content.removeAttribute('aria-hidden'); } } catch (e) {}
+    try { document.body.style.overflow = ''; } catch (e) {}
     pendingGame = null;
+  }
+
+  // Input blocking helpers for detail overlay
+  function blockDetailKeydown(e) {
+    // Allow Escape to close
+    if (e.key === "Escape") {
+      hideDetail();
+      e.stopPropagation();
+      e.preventDefault();
+      return;
+    }
+    e.stopPropagation();
+  }
+  function blockDetailPointer(e) {
+    // clicks on backdrop should close (handled by backdrop listener); otherwise stop propagation
+    e.stopPropagation();
+  }
+  function blockDetailMove(e) {
+    // Prevent touch/pointer move gestures from scrolling or panning the underlying page
+    try { e.preventDefault(); } catch (err) {}
+    e.stopPropagation();
+  }
+  function blockDetailWheel(e) {
+    // Prevent horizontal wheel/trackpad gestures from reaching the page
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+      try { e.preventDefault(); } catch (err) {}
+      e.stopPropagation();
+    }
   }
 
   /* ---------- Game overlay ---------- */
@@ -1036,6 +1093,12 @@
   if ($iframe) $iframe.addEventListener("load", () => {
     if ($iframe.src !== "about:blank") {
       finishLoadingProgress();
+      // Ensure iframe can receive keyboard and other focus-based input
+      try {
+        $iframe.tabIndex = 0;
+        if (typeof $iframe.focus === "function") $iframe.focus();
+        try { if ($iframe.contentWindow && typeof $iframe.contentWindow.focus === 'function') $iframe.contentWindow.focus(); } catch (e) {}
+      } catch (e) {}
     }
   });
   function closeGame() {

@@ -440,6 +440,16 @@ input{font:inherit}
   touch-action: auto !important;
   -ms-touch-action: auto !important;
 }
+
+/* Allow orientation hint and its buttons to remain interactive even when overlay is in passthrough mode */
+.overlay-pass-through .orient-hint,
+.overlay-pass-through .orient-hint * {
+  pointer-events: auto !important;
+  touch-action: auto !important;
+}
+.overlay-pass-through .orient-hint{
+  z-index: 30; /* above iframe but below other overlay chrome */
+}
 /* Invisible trigger zone at top to bring bar back */
 .bar-trigger{
   position:absolute;top:0;left:0;right:0;
@@ -714,12 +724,23 @@ input{font:inherit}
 /* ---------- Game detail interstitial ---------- */
 .game-detail{
   position:fixed;inset:0;
-  z-index:950;
+  /* ensure detail overlay sits above game iframe and other overlays */
+  z-index:1200;
   display:flex;align-items:center;justify-content:center;
   opacity:0;pointer-events:none;
   transition:opacity .25s var(--ease);
 }
 .game-detail.open{opacity:1;pointer-events:auto}
+
+/* Prevent touch/scroll gesture propagation when detail overlay is visible */
+.game-detail,
+.game-detail.open{
+  touch-action: none; /* disable default touch gestures */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  overscroll-behavior: none; /* prevent scroll chaining */
+}
 .detail-backdrop{
   position:absolute;inset:0;
   background:rgba(0,0,0,.55);
