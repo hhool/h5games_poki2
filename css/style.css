@@ -282,16 +282,18 @@ input{font:inherit}
 .nav-badge{
   margin-left:auto;
   font-size:.7rem;font-weight:600;
-  background:rgba(255,255,255,.18);
-  color:#fff;
-  padding:2px 7px;border-radius:10px;
+  /* Opaque white background with dark text for good contrast on the dark sidebar */
+  background:#ffffff;
+  color:var(--sidebar-bg);
+  padding:4px 8px;border-radius:10px;
   min-width:22px;text-align:center;
+  border:1px solid rgba(0,0,0,0.06);
 }
 .nav-item.active .nav-badge{
-  /* Use an opaque light background with dark text to meet contrast requirements */
-  background: #ffffff;
-  color: var(--brand-dark);
-  border: 1px solid rgba(0,0,0,0.06);
+  /* Keep badge white for consistent contrast; use brand-dark text on active rows */
+  background:#ffffff;
+  color:var(--brand-dark);
+  border:1px solid rgba(0,0,0,0.06);
 }
 
 /* ---- Game grid ---- */
