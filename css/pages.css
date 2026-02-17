@@ -60,10 +60,12 @@
   border-radius:20px;
   font-size:.85rem;font-weight:500;
   color:var(--text-muted);
-  transition: background-color .15s;
+  /* avoid transitioning color (non-composited) — animate opacity instead */
+  transition: background-color .15s, opacity .15s;
+  opacity:.96;
   flex:0 0 auto; /* prevent shrinking when container is narrow */
 }
-.page-nav a:hover{background:var(--surface-2);color:var(--text)}
+.page-nav a:hover{background:var(--surface-2);color:var(--text);opacity:1}
 .page-nav a.active{background:var(--brand);color:#fff;font-weight:600}
 
 /* ---- Content ---- */
@@ -111,8 +113,10 @@
   color:var(--brand);
   text-decoration:underline;
   text-underline-offset:2px;
+  transition: opacity .15s;
+  opacity:.98;
 }
-.page-content a:hover{color:var(--brand-dark)}
+.page-content a:hover{color:var(--brand-dark);opacity:1}
 
 /* ---- Footer ---- */
 .page-footer{
@@ -126,9 +130,11 @@
 }
 .page-footer .footer-links a{
   font-size:.85rem;color:var(--text-muted);
-  transition:color .15s;white-space:nowrap;
+  /* prefer opacity animation over color transition for compositing */
+  transition: opacity .15s;white-space:nowrap;
+  opacity:.95;
 }
-.page-footer .footer-links a:hover{color:var(--text)}
+.page-footer .footer-links a:hover{color:var(--text);opacity:1}
 .page-footer .footer-copy{
   font-size:.75rem;color:var(--text-muted);opacity:.6;
 }
