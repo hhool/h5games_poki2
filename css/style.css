@@ -529,7 +529,8 @@ input{font:inherit}
 
 /* ---------- Orientation hint ---------- */
 .orient-hint{
-  display:none;
+  /* collapsed by default to prevent visual remnants after refresh */
+  display:flex;
   position:absolute;inset:0;
   z-index:6;
   background:rgba(0,0,0,.92);
@@ -537,9 +538,16 @@ input{font:inherit}
   -webkit-backdrop-filter:blur(6px);
   align-items:center;justify-content:center;
   flex-direction:column;
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .18s var(--ease), max-height .25s var(--ease);
 }
 .orient-hint.show{
-  display:flex;
+  max-height:100vh;
+  opacity:1;
+  pointer-events:auto;
 }
 .orient-hint-inner{
   text-align:center;
