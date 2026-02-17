@@ -203,11 +203,10 @@ input{font:inherit}
   border-radius:24px;
   outline:none;
   background:var(--bg);
-  /* animate composited property (box-shadow) instead of border-color */
-  transition: box-shadow .18s var(--ease), background .2s var(--ease);
-  box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  /* prefer composited animations: animate box model via transform/opacity only */
+  transition: background .2s var(--ease), transform .18s var(--ease);
 }
-.search-input:focus{box-shadow: 0 0 0 4px rgba(0,107,179,0.08)}
+.search-input:focus{transform:translateZ(0)}
 
 /* ---- Shuffle button ---- */
 .shuffle-btn{
@@ -241,7 +240,9 @@ input{font:inherit}
   width:90px;height:90px;
   border-radius:14px;overflow:hidden;
   cursor:pointer;
-  transition:transform .2s var(--ease), box-shadow .2s var(--ease);
+  /* animate transform only for compositing; apply shadow instantly on hover */
+  transition: transform .2s var(--ease);
+  will-change: transform;
   box-shadow:0 4px 16px rgba(0,0,0,.25);
   flex-shrink:0;
 }
@@ -319,7 +320,9 @@ input{font:inherit}
   padding:1px;
   box-shadow:0 2px 8px rgba(0,0,0,.06);
   cursor:pointer;
-  transition:transform .2s var(--ease), box-shadow .2s var(--ease);
+  /* animate transform only (composited) to avoid box-shadow animations */
+  transition: transform .2s var(--ease);
+  will-change: transform;
 }
 .game-card:hover{
   transform:translateY(-4px);
@@ -699,12 +702,11 @@ input{font:inherit}
   background:transparent;
   color:#ccc;
   cursor:pointer;
-  /* animate composited box-shadow instead of border-color */
-  box-shadow: 0 0 0 0 rgba(255,255,255,0);
-  transition:background .2s, box-shadow .2s;
+  transition:background .2s, transform .15s;
 }
 .pause-quit-btn:hover{
   background:rgba(255,255,255,.08);
+  /* apply shadow instantly on hover; avoid animating box-shadow */
   box-shadow: 0 0 0 6px rgba(255,255,255,.06);
   color:#fff;
 }
