@@ -282,12 +282,12 @@ input{font:inherit}
 .nav-badge{
   margin-left:auto;
   font-size:.7rem;font-weight:600;
-  background:rgba(255,255,255,.12);
-  color:var(--sidebar-text);
+  background:rgba(255,255,255,.18);
+  color:#fff;
   padding:2px 7px;border-radius:10px;
   min-width:22px;text-align:center;
 }
-.nav-item.active .nav-badge{background:rgba(255,255,255,.25);color:#fff}
+.nav-item.active .nav-badge{background:rgba(255,255,255,.3);color:#fff}
 
 /* ---- Game grid ---- */
 .game-grid{
@@ -379,7 +379,7 @@ input{font:inherit}
 .footer-links{display:flex;justify-content:center;align-items:center;gap:16px;margin-bottom:10px;flex-wrap:wrap}
 .footer-links a{font-size:.85rem;transition:color .15s;white-space:nowrap}
 .footer-links a:hover{color:#fff}
-.footer-copy{font-size:.75rem;opacity:.6}
+.footer-copy{font-size:.75rem;color:#fff;opacity:1}
 
 /* Responsive: stack footer links on narrow screens */
 @media (max-width:600px){
