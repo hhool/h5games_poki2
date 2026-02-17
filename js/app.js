@@ -211,6 +211,24 @@
   let userExitedFullscreen = false; // track intentional exit vs close
 
   /* ---------- Helpers ---------- */
+  /** Schedule work to run during an idle period (fallback to setTimeout). Returns a Promise resolved after cb runs. */
+  function scheduleIdle(cb, opts = { timeout: 50 }) {
+    return new Promise((res) => {
+      try {
+        if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+          requestIdleCallback(() => {
+            try { cb(); } catch (e) { /* ignore */ }
+            res();
+          }, opts);
+        } else {
+          setTimeout(() => {
+            try { cb(); } catch (e) { /* ignore */ }
+            res();
+          }, opts.timeout || 50);
+        }
+      } catch (e) { try { cb(); } catch (e) {} res(); }
+    });
+  }
   function normalizeHref(link) {
     try {
       const u = new URL(link);
@@ -351,32 +369,31 @@
       }
     }
 
-    // Deduplicate entries by `link` (preferred) or normalized title to avoid
-    // duplicate game objects causing repeated cards in category grids.
-    const seen = new Set();
-    rawGames = (rawGames || []).filter((g) => {
-      const key = (g.link || g.title || "").toString().toLowerCase().trim();
-      if (!key) return false;
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
+    // Deduplicate and perform heavy normalization during idle time to avoid
+    // blocking the main thread during page load.
+    await scheduleIdle(() => {
+      const seen = new Set();
+      rawGames = (rawGames || []).filter((g) => {
+        const key = (g.link || g.title || "").toString().toLowerCase().trim();
+        if (!key) return false;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
 
-    // On mobile, filter out keyboard-only games for the visible list
-    allGames = rawGames.filter(canShow);
+      // On mobile, filter out keyboard-only games for the visible list
+      allGames = rawGames.filter(canShow);
 
-    tagMap = {};
-    for (const g of allGames) {
-      // Normalize tags: ensure an array, lowercase canonicalization where appropriate,
-      // and remove duplicate tag entries so a game isn't inserted multiple times
-      // into the same category grid.
-      const rawTags = Array.isArray(g.tags) ? g.tags : ["other"];
-      const uniqueTags = Array.from(new Set(rawTags.map((t) => String(t).trim())));
-      g.tags = uniqueTags.length ? uniqueTags : ["other"];
-      for (const t of g.tags) {
-        (tagMap[t] = tagMap[t] || []).push(g);
+      tagMap = {};
+      for (const g of allGames) {
+        const rawTags = Array.isArray(g.tags) ? g.tags : ["other"];
+        const uniqueTags = Array.from(new Set(rawTags.map((t) => String(t).trim())));
+        g.tags = uniqueTags.length ? uniqueTags : ["other"];
+        for (const t of g.tags) {
+          (tagMap[t] = tagMap[t] || []).push(g);
+        }
       }
-    }
+    }, { timeout: 100 });
   }
 
   /* ---------- Render helpers ---------- */
@@ -410,6 +427,8 @@
   }
 
   function renderSection(tag, limit) {
+    // Create a placeholder section quickly and populate its grid in small batches
+    // during idle to avoid long main-thread blocks caused by creating many DOM nodes.
     const meta = TAG_META[tag] || { emoji: "🎲", label: tag };
     const games = tagMap[tag] || [];
     if (!games.length) return null;
@@ -427,9 +446,23 @@
 
     const grid = document.createElement("div");
     grid.className = "game-grid";
-    const list = limit ? games.slice(0, limit) : games;
-    for (const g of list) grid.appendChild(createCard(g));
     section.appendChild(grid);
+
+    const list = limit ? games.slice(0, limit) : games;
+
+    // Populate in batches during idle time
+    (async () => {
+      const BATCH = 12;
+      for (let i = 0; i < list.length; i += BATCH) {
+        const frag = document.createDocumentFragment();
+        for (let j = i; j < Math.min(i + BATCH, list.length); j++) {
+          frag.appendChild(createCard(list[j]));
+        }
+        grid.appendChild(frag);
+        // yield to the browser
+        await scheduleIdle(() => {}, { timeout: 40 });
+      }
+    })();
 
     const btn = section.querySelector(".see-all");
     if (btn) btn.addEventListener("click", () => showCategory(tag));
@@ -440,22 +473,23 @@
   function renderHeroFeatured() {
     $heroFeatured.innerHTML = "";
     const picks = shuffle(allGames).slice(0, HERO_FEATURED_COUNT);
-    for (const g of picks) {
-      const card = document.createElement("div");
-      card.className = "hero-card";
-      const himg = document.createElement("img");
-      himg.alt = g.title || "";
-      himg.loading = "lazy";
-
-      // Use optimized image loading with WebP support
-      const imgSrc = g.imgSrc || getFaviconUrl(g.link);
-      optimizeImageLoading(himg, imgSrc);
-
-      attachFaviconFallback(himg, g.link);
-      card.appendChild(himg);
-      card.addEventListener("click", () => showDetail(g));
-      $heroFeatured.appendChild(card);
-    }
+    // populate during idle to avoid blocking
+    (async () => {
+      for (const g of picks) {
+        const card = document.createElement("div");
+        card.className = "hero-card";
+        const himg = document.createElement("img");
+        himg.alt = g.title || "";
+        himg.loading = "lazy";
+        const imgSrc = g.imgSrc || getFaviconUrl(g.link);
+        optimizeImageLoading(himg, imgSrc);
+        attachFaviconFallback(himg, g.link);
+        card.appendChild(himg);
+        card.addEventListener("click", () => showDetail(g));
+        $heroFeatured.appendChild(card);
+        await scheduleIdle(() => {}, { timeout: 30 });
+      }
+    })();
   }
 
   /* ---------- Recently Played ---------- */
@@ -467,7 +501,15 @@
     }
     $recentSection.style.display = "";
     $recentGrid.innerHTML = "";
-    for (const g of list) $recentGrid.appendChild(createCard(g));
+    (async () => {
+      const BATCH = 8;
+      for (let i = 0; i < list.length; i += BATCH) {
+        const frag = document.createDocumentFragment();
+        for (let j = i; j < Math.min(i + BATCH, list.length); j++) frag.appendChild(createCard(list[j]));
+        $recentGrid.appendChild(frag);
+        await scheduleIdle(() => {}, { timeout: 30 });
+      }
+    })();
   }
 
   /* ---------- Lazy Loading ---------- */
