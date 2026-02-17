@@ -988,15 +988,15 @@
           .writeText(text)
           .then(() => {
             $orientText.textContent =
-              "已复制页面链接，请在系统浏览器中打开以获得横屏/全屏体验。";
+              "Link copied to clipboard — please open it in your system browser for the best landscape/fullscreen experience.";
           })
           .catch(() => {
             $orientText.textContent =
-              "请长按页面并选择在浏览器中打开，或手动复制链接打开。";
+              "Long-press the page and choose 'Open in Browser', or manually copy the link to open it.";
           });
       } else {
         $orientText.textContent =
-          "请长按页面并选择在浏览器中打开，或手动复制链接打开。";
+          "Long-press the page and choose 'Open in Browser', or manually copy the link to open it.";
       }
       return;
     }
