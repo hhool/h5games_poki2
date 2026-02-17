@@ -728,9 +728,14 @@ input{font:inherit}
   z-index:1200;
   display:flex;align-items:center;justify-content:center;
   opacity:0;pointer-events:none;
-  transition:opacity .25s var(--ease);
+  /* prevent visual remnants on refresh by collapsing by default */
+  max-height: 0;
+  overflow: hidden;
+  transition:opacity .25s var(--ease), max-height .25s var(--ease);
 }
 .game-detail.open{opacity:1;pointer-events:auto}
+
+.game-detail.open{max-height:100vh;}
 
 /* Prevent touch/scroll gesture propagation when detail overlay is visible */
 .game-detail,
