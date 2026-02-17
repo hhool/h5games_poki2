@@ -352,14 +352,24 @@ function ensureConsent(){
   removeExistingAdScripts();
   // show banner if not decided
   if(!status){
-    // Defer banner creation until browser is idle or after a short timeout
-    const show = ()=>{
-      try{ createBanner(); }catch(e){ createBanner(); }
+    // Defer banner creation until after the page `load` event and an idle window
+    // so it won't be selected as the Largest Contentful Paint (LCP).
+    const scheduleCreate = ()=>{
+      const show = ()=>{
+        try{ createBanner(); }catch(e){ createBanner(); }
+      };
+      if('requestIdleCallback' in window){
+        requestIdleCallback(show, {timeout: 1500});
+      }else{
+        // fallback: slight delay after load to avoid racing with initial paint
+        setTimeout(show, 1200);
+      }
     };
-    if('requestIdleCallback' in window){
-      requestIdleCallback(show,{timeout:600});
+
+    if(document.readyState === 'complete'){
+      scheduleCreate();
     }else{
-      setTimeout(show, 600);
+      window.addEventListener('load', scheduleCreate, {once: true});
     }
   }
   // setup observer to handle ad slot changes
