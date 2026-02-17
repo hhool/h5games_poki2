@@ -633,8 +633,11 @@
       // content height: use scrollHeight to include content not visible yet
       const contentH = container.scrollHeight || container.getBoundingClientRect().height || 0;
 
-      const available = Math.max(0, viewportH - headerH - footerH);
-      const spacerH = Math.max(0, Math.ceil(available - contentH));
+          const available = Math.max(0, viewportH - headerH - footerH);
+          // Align spacer height to the device pixel grid to avoid 1-2px subpixel gaps
+          const rawNeeded = Math.max(0, available - contentH);
+          const dpr = window.devicePixelRatio || 1;
+          const spacerH = Math.max(0, Math.round(rawNeeded * dpr) / dpr);
 
       if (spacerH <= 0) return; // no spacer needed
 
