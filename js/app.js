@@ -719,8 +719,26 @@
       sp.style.pointerEvents = 'none';
       sp.style.background = 'transparent';
 
-      // Insert after the game sections so footer is pushed down
-      if (container.parentNode) container.parentNode.insertBefore(sp, container.nextSibling);
+      // Insert the spacer just before the footer so it reliably pushes the
+      // body-level footer down regardless of the sections' container hierarchy.
+      const footerEl = document.querySelector('.site-footer');
+      if (footerEl) {
+        try {
+          // Ensure footer is a direct child of body so inserting a spacer before it
+          // will reliably push it down regardless of other container hierarchies.
+          if (footerEl.parentNode !== document.body) {
+            document.body.appendChild(footerEl);
+          }
+          document.body.insertBefore(sp, footerEl);
+        } catch (e) {
+          // fallback to original behavior
+          if (footerEl.parentNode) footerEl.parentNode.insertBefore(sp, footerEl);
+          else if (container.parentNode) container.parentNode.insertBefore(sp, container.nextSibling);
+        }
+      } else if (container.parentNode) {
+        // Fallback: insert after container as before
+        container.parentNode.insertBefore(sp, container.nextSibling);
+      }
     } catch (e) {
       /* ignore */
     }
@@ -1423,6 +1441,64 @@
         }
       });
     }
+
+    // If this document contains the dynamic game sections area (index/category view),
+    // ensure the footer is pinned to the viewport and spacer/measurements are applied.
+    try{
+      if (document.getElementById('game-sections')){
+        if (document && document.body) {
+          document.body.classList.add('full-bleed-footer');
+          document.body.classList.remove('footer-hidden');
+        }
+        try{ ensureFooterSpacer(); }catch(e){}
+          try{ if(window.footerMeasure && typeof window.footerMeasure.update === 'function') window.footerMeasure.update(); }catch(e){}
+
+        // Enforce fixed footer at runtime for non-static pages so it behaves like the topbar
+        const enforceFixedFooter = ()=>{
+          try{
+            const footer = document.querySelector('.site-footer');
+            if(!footer) return;
+            const isStatic = document.body && document.body.classList && document.body.classList.contains('static-page');
+            if(!isStatic){
+              // move footer to body if needed
+              if(footer.parentNode !== document.body){
+                document.body.appendChild(footer);
+              }
+              // apply fixed positioning styles directly to avoid CSS specificity races
+              footer.style.position = 'fixed';
+              footer.style.left = '0';
+              footer.style.right = '0';
+              footer.style.bottom = '0';
+              footer.style.width = '100%';
+              footer.style.boxSizing = 'border-box';
+              footer.style.transform = 'none';
+              footer.style.zIndex = '1200';
+
+              // compute measured height and set CSS var + body padding to reserve space
+              const h = Math.max(0, footer.offsetHeight || 0);
+              try{ document.documentElement.style.setProperty('--measured-footer', h + 'px'); }catch(e){}
+              try{ document.documentElement.style.setProperty('--footer-h', 'calc(' + h + 'px + env(safe-area-inset-bottom, 0px))'); }catch(e){}
+              try{ document.body.style.paddingBottom = (h + 'px'); }catch(e){}
+            }else{
+              // static pages: remove forced styles
+              footer.style.position = '';
+              footer.style.left = '';
+              footer.style.right = '';
+              footer.style.bottom = '';
+              footer.style.width = '';
+              footer.style.boxSizing = '';
+              footer.style.transform = '';
+              footer.style.zIndex = '';
+              try{ document.body.style.paddingBottom = ''; }catch(e){}
+            }
+          }catch(e){}
+        };
+        // Run now and on resize/orientationchange
+        try{ enforceFixedFooter(); }catch(e){}
+        try{ window.addEventListener('resize', enforceFixedFooter, { passive: true }); }catch(e){}
+        try{ window.addEventListener('orientationchange', ()=> setTimeout(enforceFixedFooter, 120)); }catch(e){}
+      }
+    }catch(e){}
 
     // Debug: log touch/pointer events to console when enabled
     if (DEBUG_TOUCH) {
