@@ -1459,6 +1459,19 @@
             const footer = document.querySelector('.site-footer');
             if(!footer) return;
             const isStatic = document.body && document.body.classList && document.body.classList.contains('static-page');
+            // Treat these informational pages as pinned (like index/category) when requested
+            // so About/Privacy/Terms/Contact/DMCA use the same fixed-footer behavior.
+            const pinnedPages = ['about-page','privacy-page','terms-page','contact-page','dmca-page'];
+            // If body has any pinned page class, override isStatic -> false
+            if (document.body && document.body.classList) {
+              for (const c of pinnedPages) {
+                if (document.body.classList.contains(c)) {
+                  // force pin
+                  isStatic = false; // eslint-disable-line no-param-reassign
+                  break;
+                }
+              }
+            }
             if(!isStatic){
               // move footer to body if needed
               if(footer.parentNode !== document.body){
