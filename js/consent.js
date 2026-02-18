@@ -280,6 +280,31 @@ function renderAdSlot(selector, opts){
 }
 
 function createBanner(){
+  // If document.body isn't available yet (rare in snapshots/headless),
+  // defer banner creation until DOMContentLoaded so it will be appended
+  // inside the document body (prevents insertion outside <body/>).
+  if (!document.body) {
+    document.addEventListener('DOMContentLoaded', () => {
+      try{ if (!document.getElementById('consent-banner')) createBanner(); }catch(e){}
+    }, { once: true });
+    return;
+  }
+
+  // If an element with id exists, ensure it's in the body and wired; avoid creating duplicate
+  const _existingBanner = document.getElementById('consent-banner');
+  if (_existingBanner) {
+    // If it's already inside the body, nothing to do
+    try{
+      if (document.body && document.body.contains(_existingBanner)) return;
+      // If the element exists in the DOM but was rendered outside <body> (exported snapshot),
+      // move it into <body> and attach runtime behavior instead of creating a new one.
+      if (document.body) {
+        document.body.appendChild(_existingBanner);
+        try{ attachExistingBanner(_existingBanner); }catch(e){}
+      }
+    }catch(e){}
+    return;
+  }
   const banner = document.createElement('div');
   banner.id = 'consent-banner';
   banner.className = 'consent-banner';
@@ -309,22 +334,23 @@ function createBanner(){
 
   document.body.appendChild(banner);
   // expose height to CSS and prevent footer overlap
-  const setHeight = ()=>{
+    const setHeight = ()=>{
     try{
       const h = banner.offsetHeight;
       document.documentElement.style.setProperty('--consent-height', h + 'px');
-      document.body.classList.add('consent-visible');
+      // Add both classes to match CSS in different build outputs
+      document.body.classList.add('consent-visible', 'consent-ready');
     }catch(e){}
   };
   setHeight();
   window.addEventListener('resize', setHeight);
   const accept = banner.querySelector('.consent-accept');
   const decline = banner.querySelector('.consent-decline');
-  accept.addEventListener('click', ()=>{
+    accept.addEventListener('click', ()=>{
     setConsent('granted');
     banner.remove();
     // cleanup visual state then init ads
-    document.body.classList.remove('consent-visible');
+      document.body.classList.remove('consent-visible','consent-ready');
     document.documentElement.style.removeProperty('--consent-height');
     window.removeEventListener('resize', setHeight);
     initAds();
@@ -332,12 +358,72 @@ function createBanner(){
   decline.addEventListener('click', ()=>{
     setConsent('denied');
     banner.remove();
-    document.body.classList.remove('consent-visible');
+      document.body.classList.remove('consent-visible','consent-ready');
     document.documentElement.style.removeProperty('--consent-height');
     window.removeEventListener('resize', setHeight);
   });
   // focus accept for keyboard users
   accept.focus();
+}
+
+// If the page already contains a static `#consent-banner` (exported snapshot),
+// attach runtime behavior (listeners, sizing) so the buttons work and the
+// visual state is consistent with the dynamic banner created by createBanner().
+function attachExistingBanner(banner){
+  if(!banner) return;
+  try{
+    // ensure inline style exists for consistent visuals (createBanner would do this)
+    if(!document.getElementById('consent-inline-style')){
+      const s = document.createElement('style');
+      s.id = 'consent-inline-style';
+      s.textContent = `
+        .consent-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:1300;display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:10px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 8px 20px rgba(2,6,23,0.08);font-size:14px;color:#0b1220;max-width:1100px;margin:0 auto;}
+        .consent-banner .consent-actions{display:flex;gap:8px;margin-left:12px}
+        .consent-accept{background:#1f6feb;color:#fff;padding:8px 12px;border-radius:8px;border:0}
+        .consent-decline{background:transparent;color:#0b1220;padding:8px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
+      `;
+      try{ document.head.appendChild(s); }catch(e){}
+    }
+
+    const setHeight = ()=>{
+      try{
+        const h = banner.offsetHeight || 0;
+        document.documentElement.style.setProperty('--consent-height', h + 'px');
+        document.body.classList.add('consent-visible','consent-ready');
+      }catch(e){}
+    };
+    setHeight();
+    window.addEventListener('resize', setHeight);
+
+    const accept = banner.querySelector('.consent-accept');
+    const decline = banner.querySelector('.consent-decline');
+
+    const cleanup = ()=>{
+      try{
+        document.body.classList.remove('consent-visible','consent-ready');
+        document.documentElement.style.removeProperty('--consent-height');
+        window.removeEventListener('resize', setHeight);
+      }catch(e){}
+    };
+
+    if(accept){
+      accept.addEventListener('click', ()=>{
+        try{ setConsent('granted'); }catch(e){}
+        try{ banner.remove(); }catch(e){}
+        cleanup();
+        try{ initAds(); }catch(e){}
+      });
+    }
+    if(decline){
+      decline.addEventListener('click', ()=>{
+        try{ setConsent('denied'); }catch(e){}
+        try{ banner.remove(); }catch(e){}
+        cleanup();
+      });
+    }
+    // focus accept for keyboard users
+    try{ if(accept && typeof accept.focus === 'function') accept.focus(); }catch(e){}
+  }catch(e){}
 }
 
 function ensureConsent(){
@@ -364,15 +450,48 @@ function ensureConsent(){
       }
     };
 
-    if(document.readyState === 'complete'){
-      scheduleCreate();
+    // If a static banner already exists in the HTML (exported snapshot),
+    // wire it up immediately so the buttons are responsive instead of
+    // creating a duplicate banner. Otherwise schedule a dynamic banner.
+    const existing = document.getElementById('consent-banner');
+    if(existing){
+      if(document.readyState === 'complete' || document.body){
+        attachExistingBanner(existing);
+      }else{
+        document.addEventListener('DOMContentLoaded', ()=> attachExistingBanner(document.getElementById('consent-banner')),{once:true});
+      }
     }else{
-      window.addEventListener('load', scheduleCreate, {once: true});
+      if(document.readyState === 'complete'){
+        scheduleCreate();
+      }else{
+        window.addEventListener('load', scheduleCreate, {once: true});
+      }
     }
   }
   // setup observer to handle ad slot changes
   setupAdSlotMutationObserver();
 }
+
+// Ensure site footer is inside document.body. Some exported snapshots
+// or headless renderers may place the footer outside <body>; fix that
+// early so layout scripts and measurements behave consistently.
+(function ensureFooterInBody(){
+  try{
+    const fix = ()=>{
+      try{
+        const footer = document.querySelector('footer.site-footer');
+        if(footer && document.body && !document.body.contains(footer)){
+          document.body.appendChild(footer);
+        }
+      }catch(e){}
+    };
+    if(document.readyState === 'loading'){
+      document.addEventListener('DOMContentLoaded', fix, {once:true});
+    }else{
+      fix();
+    }
+  }catch(e){}
+})();
 
 // Expose API
 window.poki2Consent = {
