@@ -230,7 +230,9 @@ body.contact-page .site-footer {
   box-sizing:border-box !important;
   border-radius:0 !important;
   z-index:1200 !important;
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  /* match index footer padding so visual spacing is identical */
+  padding: 20px 18px;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
 }
 /* Reserve space in page content so it doesn't overlap the fixed footer */
 body.about-page .page-content,
@@ -286,7 +288,9 @@ body:not(.static-page) .site-footer{
   left:0 !important;
   right:0 !important;
   bottom:0 !important;
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  /* ensure pinned footers use the same padding as the index footer */
+  padding: 20px 18px;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   margin-left:0 !important;
   margin-right:0 !important;
   width:100% !important;
