@@ -1458,7 +1458,7 @@
           try{
             const footer = document.querySelector('.site-footer');
             if(!footer) return;
-            const isStatic = document.body && document.body.classList && document.body.classList.contains('static-page');
+            let isStatic = document.body && document.body.classList && document.body.classList.contains('static-page');
             // Treat these informational pages as pinned (like index/category) when requested
             // so About/Privacy/Terms/Contact/DMCA use the same fixed-footer behavior.
             const pinnedPages = ['about-page','privacy-page','terms-page','contact-page','dmca-page'];
@@ -1467,7 +1467,7 @@
               for (const c of pinnedPages) {
                 if (document.body.classList.contains(c)) {
                   // force pin
-                  isStatic = false; // eslint-disable-line no-param-reassign
+                  isStatic = false;
                   break;
                 }
               }
