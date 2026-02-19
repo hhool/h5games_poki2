@@ -10,6 +10,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Page Not Found — Poki2</title>
 
+  <!-- Auto-redirect to site root after 10 seconds -->
+  <meta http-equiv="refresh" content="10;url=/">
+
   <link rel="canonical" href="/404.html">
   <style>
     body {
@@ -90,7 +93,6 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#">Skip to content</a>
   <div class="card" style="text-align:center">
     <!-- Large illustrative SVG to express 404 visually -->
     <svg width="320" height="220" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -112,10 +114,25 @@
     </div>
     <div class="meta">If this was a game resource, please verify the resource exists or contact the site administrator.
     </div>
+    <div class="meta" style="margin-top:8px">Redirecting to site home in <span id="poki-404-count">10</span>s…</div>
   </div>
 
   <script src="js/consent.js" defer=""></script>
   <script src="js/fix-root-href.js" defer=""></script>
+
+  <script>
+    // JS countdown + fallback redirect (keeps behavior consistent even if meta refresh ignored)
+    (function(){
+      var t=10; var el=document.getElementById('poki-404-count');
+      if(!el) return;
+      el.textContent = t;
+      var iv = setInterval(function(){
+        t -= 1;
+        if(t <= 0){ clearInterval(iv); try{ window.location = '/'; }catch(e){}; return; }
+        el.textContent = t;
+      }, 1000);
+    })();
+  </script>
 
 </body>
 

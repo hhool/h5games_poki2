@@ -1760,34 +1760,9 @@ function showUpdateBanner(newWorker) {
     reloadBtn.style.fontWeight = '700';
     reloadBtn.addEventListener('click', () => {
       try { newWorker.postMessage({ type: 'SKIP_WAITING' }); } catch (e) {}
-      // Wait for the new service worker to take control before reloading.
-      // This avoids reloading too early and then seeing the update prompt again.
-      let reloaded = false;
-      const doReload = () => {
-        if (reloaded) return;
-        reloaded = true;
-        try { window.location.reload(); } catch (e) { location.href = location.href; }
-      };
-
-      if (navigator.serviceWorker && typeof navigator.serviceWorker.addEventListener === 'function') {
-        const onControllerChange = () => {
-          try {
-            navigator.serviceWorker.removeEventListener('controllerchange', onControllerChange);
-          } catch (e) {}
-          doReload();
-        };
-        try {
-          navigator.serviceWorker.addEventListener('controllerchange', onControllerChange);
-        } catch (e) {
-          // fallback
-          setTimeout(doReload, 500);
-        }
-        // safety fallback: force reload after 3s if controllerchange wasn't fired
-        setTimeout(doReload, 3000);
-      } else {
-        // No SW API available — just reload quickly
-        setTimeout(doReload, 50);
-      }
+      // Do not force a page reload here. Just dismiss the banner and record prompt time.
+      try { localStorage.setItem('sw-last-prompt', String(Date.now())); } catch (e) {}
+      try { banner.remove(); } catch (e) {}
     });
 
     const dismissBtn = document.createElement('button');
