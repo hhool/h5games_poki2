@@ -17,9 +17,110 @@
   width:100vw;
 }
 
-/* ============================================================
-   Poki2 — Static pages (About / Privacy / Terms)
-   ============================================================ */
+/* Poki2 — Static pages (About / Privacy / Terms) */
+
+/* ------------------------------------------------------------------
+   Consolidated footer parity rules
+   Ensure informational pages render identically whether footer content
+   is wrapped by `.footer-inner` or promoted as direct children of
+   `.site-footer`. These compact selectors override legacy `.footer-inner`
+   specific rules without removing the historical declarations above.
+-------------------------------------------------------------------*/
+/* Brand */
+body.about-page .site-footer .footer-brand,
+body.about-page .site-footer > .footer-brand,
+body.privacy-page .site-footer .footer-brand,
+body.privacy-page .site-footer > .footer-brand,
+body.terms-page .site-footer .footer-brand,
+body.terms-page .site-footer > .footer-brand,
+body.contact-page .site-footer .footer-brand,
+body.contact-page .site-footer > .footer-brand,
+body.dmca-page .site-footer .footer-brand,
+body.dmca-page .site-footer > .footer-brand,
+body.static-page .site-footer .footer-brand,
+body.static-page .site-footer > .footer-brand{
+  font-size:1.1rem !important;
+  font-weight:700 !important;
+  color:#fff !important;
+  margin-bottom:10px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:8px !important;
+  line-height:1 !important;
+}
+
+/* Links */
+body.about-page .site-footer .footer-links,
+body.about-page .site-footer > .footer-links,
+body.privacy-page .site-footer .footer-links,
+body.privacy-page .site-footer > .footer-links,
+body.terms-page .site-footer .footer-links,
+body.terms-page .site-footer > .footer-links,
+body.contact-page .site-footer .footer-links,
+body.contact-page .site-footer > .footer-links,
+body.dmca-page .site-footer .footer-links,
+body.dmca-page .site-footer > .footer-links,
+body.static-page .site-footer .footer-links,
+body.static-page .site-footer > .footer-links{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  gap:16px !important;
+  margin-bottom:10px !important;
+  flex-wrap:wrap !important;
+}
+
+body.about-page .site-footer .footer-links a,
+body.about-page .site-footer > .footer-links a,
+body.privacy-page .site-footer .footer-links a,
+body.privacy-page .site-footer > .footer-links a,
+body.terms-page .site-footer .footer-links a,
+body.terms-page .site-footer > .footer-links a,
+body.contact-page .site-footer .footer-links a,
+body.contact-page .site-footer > .footer-links a,
+body.dmca-page .site-footer .footer-links a,
+body.dmca-page .site-footer > .footer-links a,
+body.static-page .site-footer .footer-links a,
+body.static-page .site-footer > .footer-links a{
+  font-size:.85rem !important;
+  transition:opacity .15s !important;
+  white-space:nowrap !important;
+  opacity:.95 !important;
+}
+
+/* Copy */
+body.about-page .site-footer .footer-copy,
+body.about-page .site-footer > .footer-copy,
+body.privacy-page .site-footer .footer-copy,
+body.privacy-page .site-footer > .footer-copy,
+body.terms-page .site-footer .footer-copy,
+body.terms-page .site-footer > .footer-copy,
+body.contact-page .site-footer .footer-copy,
+body.contact-page .site-footer > .footer-copy,
+body.dmca-page .site-footer .footer-copy,
+body.dmca-page .site-footer > .footer-copy,
+body.static-page .site-footer .footer-copy,
+body.static-page .site-footer > .footer-copy{
+  font-size:.75rem !important;
+  color:#fff !important;
+  opacity:1 !important;
+  text-align:center !important;
+  margin:0 !important;
+}
+
+/* Make footer itself a centered column when `.footer-inner` is absent */
+body.about-page .site-footer,
+body.privacy-page .site-footer,
+body.terms-page .site-footer,
+body.contact-page .site-footer,
+body.dmca-page .site-footer,
+body.static-page .site-footer{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
 
 .page-wrap{
   max-width:780px;
@@ -34,17 +135,61 @@
 .page-header{
   /* Fixed header so it's identical between pages regardless of content height */
   display:flex;align-items:center;justify-content:space-between;
-  padding:1px 20px;
+  /* keep vertical padding at 0 so the explicit height controls total header size */
+  padding:0 0px;
   border-bottom:1px solid var(--surface-2);
   position:fixed;top:0;left:0;
-  width:calc(100% - 2px);max-width:100%;
+  width:100%;max-width:100%;
   background:rgba(255,255,255,.95);
   -webkit-backdrop-filter:saturate(180%) blur(12px);
   backdrop-filter:saturate(180%) blur(12px);
   z-index:1100;
   box-shadow:0 1px 0 rgba(0,0,0,0.04);
-  height:var(--page-header-height,72px);
+  height:var(--topbar-h);
 }
+
+/* If `.page-header` is moved inside `.page-wrap` or other containers, ensure
+   it stays pinned to the viewport (not bound to an ancestor stacking context).
+   We intentionally use `width:100vw` to keep its left origin at the viewport
+   left edge while content columns remain inset. */
+.page-wrap .page-header,
+body .page-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100vw !important;
+  box-sizing: border-box !important;
+  transform: none !important;
+  will-change: auto !important;
+  z-index: 1200 !important;
+}
+
+/* Force consistent header height on all informational pages to match the index topbar */
+body.about-page .page-header,
+body.privacy-page .page-header,
+body.terms-page .page-header,
+body.contact-page .page-header,
+body.dmca-page .page-header,
+body.static-page .page-header{
+  height: var(--topbar-h) !important;
+  min-height: var(--topbar-h) !important;
+  line-height: var(--topbar-h) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Ensure header children do not add extra vertical margins that increase computed height */
+.page-header *{margin-top:0;margin-bottom:0}
+
+/* If a transformed ancestor exists (JS animation may set transform), the
+   browser can make fixed children act like absolute. To reduce this risk,
+   ensure the header renders above transforms and avoid animations that set
+   transform on `.page-wrap` when possible. */
 .page-logo{
   font-size:1.2rem;font-weight:700;color:var(--brand);
 }
@@ -141,7 +286,8 @@
 
 /* ---- Responsive ---- */
 @media(max-width:600px){
-  .page-header{padding:12px 16px}
+  /* keep header vertical padding at 0 on small screens too so height stays consistent */
+  .page-header{padding:0 16px}
   .page-content{padding:24px 16px 36px}
   .page-content h1{font-size:1.4rem}
   .page-nav a{padding:4px 8px;font-size:.8rem}
@@ -160,11 +306,7 @@ html,body{box-sizing:border-box;min-height:100%}
 /* always show a vertical scrollbar gutter to avoid layout shift when pages differ in height */
 html{overflow-y:scroll;scrollbar-gutter:stable}
 /* ensure header spacing is consistent across pages */
-body{padding-top:var(--page-header-height,72px)}
-/* header height variables for different breakpoints */
-:root{--page-header-height:72px}
-@media(max-width:600px){:root{--page-header-height:64px}}
-@media(max-width:420px){:root{--page-header-height:56px}}
+body{padding-top:var(--topbar-h)}
 /* Footer height used to reserve space in page content when footer is fixed */
 :root{
     /* base footer height for static pages; start at 0 to avoid refresh jitter
@@ -185,26 +327,11 @@ body{padding-top:var(--page-header-height,72px)}
 }
 
 /* Contact page: make footer absolute at bottom of viewport when content is short */
+/* Contact page: keep normal document flow and rely on the shared
+   fixed-footer rules below so the contact page matches index behavior. */
 body.contact-page{
   position:relative;
   min-height:100vh;
-}
-body.contact-page .site-footer{
-  position:absolute;
-  /* reset full-bleed offsets applied globally so footer starts at viewport left */
-  left:0 !important;
-  right:0 !important;
-  bottom:0;
-  width:100% !important;
-  margin-left:0 !important;
-  margin-right:0 !important;
-  transform:none !important;
-  box-sizing:border-box;
-}
-body.contact-page .content,
-body.contact-page .page-content{
-  /* ensure content doesn't get hidden behind absolute footer */
-  padding-bottom:160px;
 }
 
 /* About page: footer absolute and centered to page width */
@@ -228,11 +355,21 @@ body.contact-page .site-footer {
   margin-right:0 !important;
   transform:none !important;
   box-sizing:border-box !important;
-  border-radius:0 !important;
   z-index:1200 !important;
   /* match index footer padding so visual spacing is identical */
   padding: 20px 18px;
   padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+}
+
+/* Make informational page footers visually match the index footer (rounded top corners) */
+body.about-page .site-footer,
+body.privacy-page .site-footer,
+body.terms-page .site-footer,
+body.dmca-page .site-footer,
+body.contact-page .site-footer,
+body.static-page .site-footer {
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
 }
 /* Reserve space in page content so it doesn't overlap the fixed footer */
 body.about-page .page-content,
@@ -269,6 +406,7 @@ body.static-page .site-footer .footer-inner {
    Should add `static-page` to the <body> (e.g. <body class="static-page">)
    This mirrors the previous `full-bleed-footer` behavior but is more semantic. */
 /* Keep a deprecated alias for compatibility */
+/* Default measured footer for static informational pages: align with index height */
 body.static-page,
 body.full-bleed-footer {
   position:relative;
@@ -276,6 +414,21 @@ body.full-bleed-footer {
      chrome changes; keep 100vh as a fallback for older browsers. */
   min-height:100vh;
   min-height:100dvh;
+}
+
+/* If we don't yet have a persisted index footer height, prefer this
+  default so informational pages visually match the index footer height. */
+/* Default measured footer for informational pages (match index) until JS measures
+   and writes the canonical value. This keeps About/Privacy/Terms/Contact/DMCA
+   visually identical to the index on first load. JS may override `--measured-footer`. */
+body.about-page,
+body.privacy-page,
+body.terms-page,
+body.contact-page,
+body.dmca-page,
+body.static-page {
+  --measured-footer: 114px;
+  --footer-h: calc(var(--measured-footer) + env(safe-area-inset-bottom, 0px));
 }
 body.static-page .page-wrap,
 body.full-bleed-footer .page-wrap{position:static !important}
@@ -295,16 +448,17 @@ body:not(.static-page) .site-footer{
   margin-right:0 !important;
   width:100% !important;
   box-sizing:border-box !important;
-  border-radius:0 !important;
+  /* do not force global 0 radius here; informational pages will opt-in below */
   transform:none !important;
   z-index:1200 !important;
 }
 
-/* For informational/static pages, place the footer after content (absolute at viewport bottom)
-   so it does not overlap page content and behaves like a normal document footer. */
-/* Keep footer in normal document flow for informational/static pages
-   so it always appears directly after content and cannot overlap it. */
-body.static-page .site-footer{
+/* For most pages we allow the footer to be static (in-flow). However,
+   informational pages like About/Privacy/Terms/Contact/DMCA should
+   behave like the index with a pinned footer. Exclude those pages from
+   the generic `static-page` override so their dedicated fixed rules
+   apply above. */
+body.static-page:not(.about-page):not(.privacy-page):not(.terms-page):not(.dmca-page):not(.contact-page) .site-footer{
   position:static !important;
   left:auto !important;
   right:auto !important;
@@ -314,7 +468,7 @@ body.static-page .site-footer{
   margin-right:0 !important;
   width:100% !important;
   box-sizing:border-box !important;
-  border-radius:0 !important;
+  /* keep default radius for informational pages */
   transform:none !important;
   z-index:1000 !important;
 }
@@ -356,6 +510,340 @@ body.full-bleed-footer .site-footer .footer-inner{
   font-size:.95rem;color:var(--text);
   max-width:1100px;
   margin:0 auto;
+}
+.consent-banner .consent-actions{display:flex;gap:10px;margin-left:12px}
+
+/* Ensure informational pages use the same top-corner radius as the index footer */
+body.about-page .site-footer,
+body.privacy-page .site-footer,
+body.terms-page .site-footer,
+body.contact-page .site-footer,
+body.dmca-page .site-footer,
+body.static-page .site-footer {
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+
+/* Make the footer-inner on informational pages follow index spacing exactly */
+body.about-page .site-footer .footer-inner,
+body.privacy-page .site-footer .footer-inner,
+body.terms-page .site-footer .footer-inner,
+body.contact-page .site-footer .footer-inner,
+body.dmca-page .site-footer .footer-inner,
+body.static-page .site-footer .footer-inner {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* Ensure informational pages footer typography and layout exactly match index footer */
+body.about-page .site-footer .footer-inner,
+body.privacy-page .site-footer .footer-inner,
+body.terms-page .site-footer .footer-inner,
+body.contact-page .site-footer .footer-inner,
+body.dmca-page .site-footer .footer-inner,
+body.static-page .site-footer .footer-inner {
+  max-width: 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body.about-page .site-footer .footer-inner > .footer-brand,
+body.about-page .site-footer .footer-inner > .footer-links,
+body.about-page .site-footer .footer-inner > .footer-copy,
+body.privacy-page .site-footer .footer-inner > .footer-brand,
+body.privacy-page .site-footer .footer-inner > .footer-links,
+body.privacy-page .site-footer .footer-inner > .footer-copy,
+body.terms-page .site-footer .footer-inner > .footer-brand,
+body.terms-page .site-footer .footer-inner > .footer-links,
+body.terms-page .site-footer .footer-inner > .footer-copy,
+body.contact-page .site-footer .footer-inner > .footer-brand,
+body.contact-page .site-footer .footer-inner > .footer-links,
+body.contact-page .site-footer .footer-inner > .footer-copy,
+body.dmca-page .site-footer .footer-inner > .footer-brand,
+body.dmca-page .site-footer .footer-inner > .footer-links,
+body.dmca-page .site-footer .footer-inner > .footer-copy,
+body.static-page .site-footer .footer-inner > .footer-brand,
+body.static-page .site-footer .footer-inner > .footer-links,
+body.static-page .site-footer .footer-inner > .footer-copy{
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Also support footer elements when `.footer-inner` is removed (direct children of .site-footer)
+   Keep exact parity with the global `.footer-links` rules used on the index. */
+body.about-page .site-footer > .footer-brand,
+body.about-page .site-footer > .footer-links,
+body.about-page .site-footer > .footer-copy,
+body.privacy-page .site-footer > .footer-brand,
+body.privacy-page .site-footer > .footer-links,
+body.privacy-page .site-footer > .footer-copy,
+body.terms-page .site-footer > .footer-brand,
+body.terms-page .site-footer > .footer-links,
+body.terms-page .site-footer > .footer-copy,
+body.contact-page .site-footer > .footer-brand,
+body.contact-page .site-footer > .footer-links,
+body.contact-page .site-footer > .footer-copy,
+body.dmca-page .site-footer > .footer-brand,
+body.dmca-page .site-footer > .footer-links,
+body.dmca-page .site-footer > .footer-copy,
+body.static-page .site-footer > .footer-brand,
+body.static-page .site-footer > .footer-links,
+body.static-page .site-footer > .footer-copy{
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* Brand styling (direct child) */
+body.about-page .site-footer > .footer-brand,
+body.privacy-page .site-footer > .footer-brand,
+body.terms-page .site-footer > .footer-brand,
+body.contact-page .site-footer > .footer-brand,
+body.dmca-page .site-footer > .footer-brand,
+body.static-page .site-footer > .footer-brand{
+  font-size:1.1rem;
+  font-weight:700;
+  color:#fff;
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  line-height:1;
+}
+
+/* Links (direct child) — exact copy of index `.footer-links` */
+body.about-page .site-footer > .footer-links,
+body.privacy-page .site-footer > .footer-links,
+body.terms-page .site-footer > .footer-links,
+body.contact-page .site-footer > .footer-links,
+body.dmca-page .site-footer > .footer-links,
+body.static-page .site-footer > .footer-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:16px;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+body.about-page .site-footer > .footer-links a,
+body.privacy-page .site-footer > .footer-links a,
+body.terms-page .site-footer > .footer-links a,
+body.contact-page .site-footer > .footer-links a,
+body.dmca-page .site-footer > .footer-links a,
+body.static-page .site-footer > .footer-links a{
+  font-size:.85rem;
+  transition:opacity .15s;
+  white-space:nowrap;
+  opacity:.95;
+}
+
+/* Copy (direct child) */
+body.about-page .site-footer > .footer-copy,
+body.privacy-page .site-footer > .footer-copy,
+body.terms-page .site-footer > .footer-copy,
+body.contact-page .site-footer > .footer-copy,
+body.dmca-page .site-footer > .footer-copy,
+body.static-page .site-footer > .footer-copy{
+  font-size:.75rem;
+  color:#fff;
+  opacity:1;
+  text-align:center;
+  margin:0;
+}
+
+/* When `.footer-inner` is removed, make the footer itself a centered column */
+body.about-page .site-footer,
+body.privacy-page .site-footer,
+body.terms-page .site-footer,
+body.contact-page .site-footer,
+body.dmca-page .site-footer,
+body.static-page .site-footer{
+  display:flex !important;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Ensure the footer copy is centered when it's a direct child */
+body.about-page .site-footer > .footer-copy,
+body.privacy-page .site-footer > .footer-copy,
+body.terms-page .site-footer > .footer-copy,
+body.contact-page .site-footer > .footer-copy,
+body.dmca-page .site-footer > .footer-copy,
+body.static-page .site-footer > .footer-copy{
+  text-align:center;
+  margin:0;
+}
+
+/* Same links layout when direct child */
+body.about-page .site-footer > .footer-links,
+body.privacy-page .site-footer > .footer-links,
+body.terms-page .site-footer > .footer-links,
+body.contact-page .site-footer > .footer-links,
+body.dmca-page .site-footer > .footer-links,
+body.static-page .site-footer > .footer-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:16px;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+body.about-page .site-footer .footer-inner .footer-links a,
+body.privacy-page .site-footer .footer-inner .footer-links a,
+body.terms-page .site-footer .footer-inner .footer-links a,
+body.contact-page .site-footer .footer-inner .footer-links a,
+body.dmca-page .site-footer .footer-inner .footer-links a,
+body.static-page .site-footer .footer-inner .footer-links a{
+  font-size:.85rem;
+  transition:opacity .15s;
+  white-space:nowrap;
+  opacity:.95;
+}
+
+body.about-page .site-footer .footer-inner .footer-copy,
+body.privacy-page .site-footer .footer-inner .footer-copy,
+body.terms-page .site-footer .footer-inner .footer-copy,
+body.contact-page .site-footer .footer-inner .footer-copy,
+body.dmca-page .site-footer .footer-inner .footer-copy,
+body.static-page .site-footer .footer-inner .footer-copy{
+  font-size:.75rem;
+  color:#fff;
+  opacity:1;
+}
+
+/* Strong parity block: make informational page footers match the index footer
+   in every relevant box-model and spacing property. These use `!important`
+   to override legacy or build-order rules that previously caused visual
+   mismatches (width/height differences). */
+body.about-page .site-footer,
+body.privacy-page .site-footer,
+body.terms-page .site-footer,
+body.contact-page .site-footer,
+body.dmca-page .site-footer,
+body.static-page .site-footer {
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  z-index: 1500 !important;
+  background: var(--sidebar-bg) !important;
+  color: var(--sidebar-text) !important;
+  padding: 20px 18px !important;
+  box-sizing: border-box !important;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+  min-height: var(--measured-footer, 0px) !important;
+  height: auto !important;
+  max-height: 360px !important;
+  overflow: hidden !important;
+}
+
+body.about-page .site-footer .footer-inner,
+body.privacy-page .site-footer .footer-inner,
+body.terms-page .site-footer .footer-inner,
+body.contact-page .site-footer .footer-inner,
+body.dmca-page .site-footer .footer-inner,
+body.static-page .site-footer .footer-inner {
+  max-width: 100% !important;
+  padding: 0 12px !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  height: auto !important;
+}
+
+body.about-page .site-footer .footer-inner > .footer-brand,
+body.about-page .site-footer .footer-inner > .footer-links,
+body.about-page .site-footer .footer-inner > .footer-copy,
+body.privacy-page .site-footer .footer-inner > .footer-brand,
+body.privacy-page .site-footer .footer-inner > .footer-links,
+body.privacy-page .site-footer .footer-inner > .footer-copy,
+body.terms-page .site-footer .footer-inner > .footer-brand,
+body.terms-page .site-footer .footer-inner > .footer-links,
+body.terms-page .site-footer .footer-inner > .footer-copy,
+body.contact-page .site-footer .footer-inner > .footer-brand,
+body.contact-page .site-footer .footer-inner > .footer-links,
+body.contact-page .site-footer .footer-inner > .footer-copy,
+body.dmca-page .site-footer .footer-inner > .footer-brand,
+body.dmca-page .site-footer .footer-inner > .footer-links,
+body.dmca-page .site-footer .footer-inner > .footer-copy,
+body.static-page .site-footer .footer-inner > .footer-brand,
+body.static-page .site-footer .footer-inner > .footer-links,
+body.static-page .site-footer .footer-inner > .footer-copy{
+  max-width:800px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* Brand visual parity */
+body.about-page .site-footer .footer-inner .footer-brand,
+body.privacy-page .site-footer .footer-inner .footer-brand,
+body.terms-page .site-footer .footer-inner .footer-brand,
+body.contact-page .site-footer .footer-inner .footer-brand,
+body.dmca-page .site-footer .footer-inner .footer-brand,
+body.static-page .site-footer .footer-inner .footer-brand{
+  font-size:1.1rem !important;
+  font-weight:700 !important;
+  color:#fff !important;
+  margin-bottom:10px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:8px !important;
+  line-height:1 !important;
+}
+
+/* Links & copy */
+body.about-page .site-footer .footer-inner .footer-links{display:flex;justify-content:center;align-items:center;gap:16px;margin-bottom:10px;flex-wrap:wrap}
+body.about-page .site-footer .footer-inner .footer-links a{font-size:.85rem;transition:opacity .15s;white-space:nowrap;opacity:.95}
+body.about-page .site-footer .footer-inner .footer-copy{font-size:.75rem;color:#fff;opacity:1}
+
+/* Exact-height fallback: force informational pages to use the canonical
+   index footer height (114px). This overrides inline CSS vars or JS that
+   might have written a different measured height, guaranteeing parity. */
+body.about-page,
+body.privacy-page,
+body.terms-page,
+body.contact-page,
+body.dmca-page,
+body.static-page {
+  --measured-footer: 114px !important;
+  --footer-h: calc(var(--measured-footer) + env(safe-area-inset-bottom, 0px)) !important;
+}
+
+body.about-page .site-footer,
+body.privacy-page .site-footer,
+body.terms-page .site-footer,
+body.contact-page .site-footer,
+body.dmca-page .site-footer,
+body.static-page .site-footer {
+  height: 114px !important;
+  min-height: 114px !important;
+  max-height: 114px !important;
+  overflow: hidden !important;
+}
+
+body.about-page .site-footer .footer-inner,
+body.privacy-page .site-footer .footer-inner,
+body.terms-page .site-footer .footer-inner,
+body.contact-page .site-footer .footer-inner,
+body.dmca-page .site-footer .footer-inner,
+body.static-page .site-footer .footer-inner {
+  /* center content vertically within the forced outer height */
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  align-items:center !important;
+  height: auto !important;
 }
 .consent-banner .consent-body{flex:1;min-width:0}
 .consent-banner p{margin:0;line-height:1.45;color:var(--text-muted)}
@@ -427,6 +915,39 @@ body.contact-page.consent-visible .page-content {
   min-height: var(--measured-footer, 0px);
 }
 
+/* Protective guard: prevent runaway footer height growth caused by
+   repeated mobile drag or misbehaving scripts. This caps the visual
+   height while JS diagnostics run. The cap is generous (360px).
+   JS may add inline max-height/overflow during an active incident. */
+.site-footer{
+  max-height:360px; /* safe upper bound */
+  overflow:hidden;
+}
+
+.site-footer{
+  /* prefer a flexible footer: reserve a minimum height from the measured value
+     but don't force a fixed height on the outer container. For most pages the
+     footer visually matches the index because padding and inner content
+     determine the final size. */
+  min-height: var(--measured-footer, 0px);
+  height: auto !important;
+}
+.site-footer .footer-inner{
+  /* Do not force a computed inner height — let the inner content and
+     the outer footer padding determine spacing. This avoids double-counting
+     padding and removes empty bars above the brand links. */
+  height: auto !important;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+}
+.site-footer .footer-inner > .footer-brand{margin-bottom:10px}
+.site-footer .footer-inner > .footer-links{margin-bottom:10px}
+.site-footer .footer-inner > .footer-copy{margin-bottom:0}
+
 /* Hide footer until positioned (used on home and during view swaps) */
 body.footer-hidden .site-footer{visibility:hidden !important;opacity:0 !important;pointer-events:none}
 
@@ -441,6 +962,62 @@ body.dmca-page .page-content,
 body.contact-page .page-content,
 body.static-page .page-content {
   padding-bottom: var(--footer-h) !important;
+}
+
+/* When content is short on informational pages, vertically center it between header and footer */
+.page-content.page-content--center{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  flex-direction:column !important;
+  /* Ensure the centering area accounts for header and footer heights */
+  min-height: calc(100dvh - var(--topbar-h) - var(--measured-footer, 0px)) !important;
+  padding-top: 12px !important;
+  padding-bottom: calc(var(--footer-h) + 12px) !important;
+}
+
+/* ------------------------------------------------------------------
+   Align informational page content with the app's main content column
+   - On wide screens where the sidebar is visible, make `.page-wrap`
+     share the same left origin as `.main-wrap` (sidebar width).
+   - Keep `.page-header` left starting coordinate unchanged (full-bleed).
+   - Ensure the page content area reserves the same vertical space as
+     the app's main area so heights match: `min-height: calc(100dvh - var(--footer-h))`.
+-------------------------------------------------------------------*/
+@media (min-width: 900px) {
+  .page-wrap{
+    /* match the app's left offset created by the sidebar */
+    margin-left: var(--sidebar-w);
+    margin-right: 0;
+    /* keep the same max width used elsewhere for page content */
+    max-width: 780px;
+    /* ensure consistent internal padding */
+    padding-left: 12px;
+    padding-right: 12px;
+    /* match the main-wrap available height so UI heights are identical */
+    min-height: calc(100dvh - var(--footer-h));
+  }
+
+  /* keep the page header starting at the viewport left edge (unchanged) */
+  .page-header{
+    left:0;
+    right:0;
+    width:100%;
+  }
+
+  /* ensure footer inner aligns visually with the content column */
+  body.static-page .site-footer .footer-inner,
+  body.about-page .site-footer .footer-inner,
+  body.privacy-page .site-footer .footer-inner,
+  body.terms-page .site-footer .footer-inner,
+  body.dmca-page .site-footer .footer-inner,
+  body.contact-page .site-footer .footer-inner{
+    max-width:780px;
+    margin-left:var(--sidebar-w);
+    margin-right:auto;
+    padding-left:12px;
+    padding-right:12px;
+  }
 }
 
 

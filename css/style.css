@@ -151,7 +151,7 @@ input{font:inherit}
 /* ---------- Main wrapper ---------- */
 .main-wrap{
   margin-left:var(--sidebar-w);
-  min-height:100dvh;
+  min-height:calc(100dvh - var(--footer-h)); /* 保证内容区不会被footer遮挡 */
   display:flex;
   flex-direction:column;
   /* prefer transform for composited animations; avoid transitioning margin-left */
@@ -270,8 +270,11 @@ input{font:inherit}
 .recently-played .clear-recent:hover{background:var(--surface-2);color:var(--text);opacity:1}
 
 /* ---------- Content ---------- */
-.content{
+.content, .page-content {
   padding:0;
+  padding-bottom:var(--footer-h); /* 固定footer时内容区留出空间 */
+  min-height:calc(100vh - var(--footer-h));
+  box-sizing:border-box;
   flex:1;
   display:flex;
   flex-direction:column;
@@ -364,23 +367,26 @@ input{font:inherit}
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
   gap:16px;
-  padding:0 20px 30px;
+  padding:0 20px calc(30px + var(--footer-h)); /* 增加底部空间防止footer遮挡 */
 }
 
 /* ---------- Search results ---------- */
-.search-results{padding:20px}
+.search-results{
+  padding:20px;
+  padding-bottom:var(--footer-h);
+}
 
 /* ---- Empty state ---- */
-.empty-state{
-  text-align:center;padding:60px 20px;
-}
 .empty-icon{font-size:3rem;margin-bottom:12px}
 .empty-text{color:var(--text-muted);font-size:1rem}
 
 /* ---------- Footer ---------- */
 .site-footer{
-  position:relative;
-  z-index:900;
+  position:fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  z-index:1500;
   background:var(--sidebar-bg);
   color:var(--sidebar-text);
   padding:20px 18px;
@@ -389,29 +395,159 @@ input{font:inherit}
   border-top-left-radius:12px;
   border-top-right-radius:12px;
 }
-.footer-inner{
+.site-footer .footer-inner,
+.site-footer > .footer-brand,
+.site-footer > .footer-links,
+.site-footer > .footer-copy{
   /* allow footer background to fill the container while keeping inner content centered */
   max-width:100%;
   padding:0 12px;
   box-sizing:border-box;
   text-align:center;
 }
-.footer-inner > .footer-brand,
-.footer-inner > .footer-links,
-.footer-inner > .footer-copy{
+.site-footer .footer-inner > .footer-brand,
+.site-footer .footer-inner > .footer-links,
+.site-footer .footer-inner > .footer-copy,
+.site-footer > .footer-brand,
+.site-footer > .footer-links,
+.site-footer > .footer-copy{
   max-width:800px;
   margin-left:auto;
   margin-right:auto;
 }
-.footer-brand{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:10px}
-.footer-links{display:flex;justify-content:center;align-items:center;gap:16px;margin-bottom:10px;flex-wrap:wrap}
-.footer-links a{font-size:.85rem;/* prefer opacity animation over color for compositing */transition:opacity .15s;white-space:nowrap;opacity:.95}
+.footer-brand{
+  font-size:1.1rem;
+  font-weight:700;
+  color:#fff;
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  line-height:1;
+}
+.footer-brand a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.logo-icon{line-height:1}
+.footer-links{display:flex;justify-content:center;align-items:center;gap:16px;margin-bottom:10px;flex-wrap:wrap;row-gap:16px;column-gap:16px;-webkit-text-size-adjust:100%}
+.footer-links a{font-size:.85rem;/* prefer opacity animation over color for compositing */transition:opacity .15s;white-space:nowrap;opacity:.95;flex:0 0 auto;min-width:0;line-height:1;-webkit-text-size-adjust:100%}
 .footer-links a:hover{color:#fff;opacity:1}
+/* Force consistent `.footer-links` sizing and gap across Index and About pages */
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links {
+  width: min(100%, 800px);
+  gap: 16px !important;
+  row-gap: 16px !important;
+  column-gap: 16px !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links {
+  -webkit-text-size-adjust: 100% !important;
+}
+
+.site-footer .footer-inner > .footer-links a,
+.site-footer > .footer-links a {
+  flex: 0 0 auto !important;
+  min-width: 0 !important;
+  white-space: nowrap !important;
+  -webkit-text-size-adjust: 100% !important;
+}
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links {
+  /* ensure mobile narrow rules don't collapse spacing */
+}
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links {
+  /* keep width centered and consistent */
+}
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links { }
+
 .footer-copy{font-size:.75rem;color:#fff;opacity:1}
+
+/* Enforce identical footer-links layout for Index + About (overrides earlier responsive collapse) */
+.site-footer .footer-inner > .footer-links,
+.site-footer > .footer-links {
+  width: min(100%, 800px) !important;
+  gap: 16px !important;
+  row-gap: 16px !important;
+  column-gap: 16px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  -webkit-text-size-adjust: 100% !important;
+}
+
+.site-footer .footer-inner > .footer-links a,
+.site-footer > .footer-links a {
+  flex: 0 0 auto !important;
+  min-width: 0 !important;
+  white-space: nowrap !important;
+  -webkit-text-size-adjust: 100% !important;
+}
 
 /* Responsive: stack footer links on narrow screens */
 @media (max-width:600px){
   .footer-links{gap:8px}
+}
+
+/* Ensure informational pages also get exact gap rules on mobile browsers */
+body.about-page .site-footer > .footer-links,
+body.privacy-page .site-footer > .footer-links,
+body.terms-page .site-footer > .footer-links,
+body.contact-page .site-footer > .footer-links,
+body.dmca-page .site-footer > .footer-links,
+body.static-page .site-footer > .footer-links {
+  gap: 16px !important;
+  column-gap: 16px !important;
+  row-gap: 16px !important;
+  -webkit-text-size-adjust: 100% !important;
 }
 
 /* ---------- Game overlay ---------- */

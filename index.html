@@ -97,18 +97,8 @@
         type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","url":"https://poki2.online/","name":"Poki2 — Free Online Games","inLanguage":"en"}</script>
 </head>
 
-<body>
+<body style="--measured-footer:114px">
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
-        <!-- Static consent banner for exported snapshots and first-load dialog -->
-        <div id="consent-banner" class="consent-banner" style="display:block;">
-            <div class="consent-body">
-                <p><strong>Poki2 uses ads</strong> — we display advertising to support the site. By clicking "Accept" you consent to loading advertising scripts and personalized ads. You can read more in our <a href="/privacy.html">Privacy Policy</a>.</p>
-            </div>
-            <div class="consent-actions">
-                <button class="consent-decline">Decline</button>
-                <button class="consent-accept">Accept</button>
-            </div>
-        </div>
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <a href="/" class="sidebar-logo">
@@ -256,20 +246,18 @@
 
     <!-- ===== GAME PLAY OVERLAY ===== -->
     <!-- Footer: moved to body level to avoid transform/containment affecting fixed positioning -->
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <span class="logo-icon">🎮</span> Poki2
-            </div>
-            <div class="footer-links">
-                <a href="about.html">About</a>
-                <a href="privacy.html">Privacy</a>
-                <a href="terms.html">Terms</a>
-                <a href="contact.html">Contact</a>
-                <a href="dmca.html">DMCA</a>
-            </div>
-            <p class="footer-copy">© 2026 Poki2. All rights reserved.</p>
+    <footer class="site-footer" style="height:114px !important; min-height:114px !important; max-height:114px !important; padding-bottom:calc(20px + env(safe-area-inset-bottom, 0px)); --measured-footer:114px;">
+        <div class="footer-brand">
+            <a href="/"><span class="logo-icon">🎮</span> Poki2</a>
         </div>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="contact.html">Contact</a>
+            <a href="dmca.html">DMCA</a>
+        </div>
+        <p class="footer-copy">© 2026 Poki2. All rights reserved.</p>
     </footer>
     <div class="game-overlay" id="game-overlay">
         <div class="bar-trigger" id="bar-trigger"></div>
@@ -379,5 +367,4 @@
 
 
 </body>
-
 </html>

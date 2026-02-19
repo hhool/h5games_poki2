@@ -1459,25 +1459,26 @@
             const footer = document.querySelector('.site-footer');
             if(!footer) return;
             let isStatic = document.body && document.body.classList && document.body.classList.contains('static-page');
-            // Treat these informational pages as pinned (like index/category) when requested
-            // so About/Privacy/Terms/Contact/DMCA use the same fixed-footer behavior.
             const pinnedPages = ['about-page','privacy-page','terms-page','contact-page','dmca-page'];
-            // If body has any pinned page class, override isStatic -> false
             if (document.body && document.body.classList) {
               for (const c of pinnedPages) {
                 if (document.body.classList.contains(c)) {
-                  // force pin
                   isStatic = false;
                   break;
                 }
               }
             }
+
+            // If already pinned, avoid re-appending or re-flowing unless necessary
+            const alreadyPinned = footer.dataset && footer.dataset.poki2Pinned === '1';
+
             if(!isStatic){
-              // move footer to body if needed
-              if(footer.parentNode !== document.body){
+              // move footer to body once if needed
+              if(!alreadyPinned && footer.parentNode !== document.body){
                 document.body.appendChild(footer);
               }
-              // apply fixed positioning styles directly to avoid CSS specificity races
+
+              // apply fixed positioning styles (idempotent)
               footer.style.position = 'fixed';
               footer.style.left = '0';
               footer.style.right = '0';
@@ -1487,11 +1488,13 @@
               footer.style.transform = 'none';
               footer.style.zIndex = '1200';
 
-              // compute measured height and set CSS var + body padding to reserve space
+              // compute measured height and set CSS vars (do NOT set body.paddingBottom to avoid layout feedback loops)
               const h = Math.max(0, footer.offsetHeight || 0);
               try{ document.documentElement.style.setProperty('--measured-footer', h + 'px'); }catch(e){}
               try{ document.documentElement.style.setProperty('--footer-h', 'calc(' + h + 'px + env(safe-area-inset-bottom, 0px))'); }catch(e){}
-              try{ document.body.style.paddingBottom = (h + 'px'); }catch(e){}
+
+              // mark pinned so subsequent calls are no-ops for append/DOM moves
+              try{ footer.dataset.poki2Pinned = '1'; }catch(e){}
             }else{
               // static pages: remove forced styles
               footer.style.position = '';
@@ -1502,7 +1505,7 @@
               footer.style.boxSizing = '';
               footer.style.transform = '';
               footer.style.zIndex = '';
-              try{ document.body.style.paddingBottom = ''; }catch(e){}
+              try{ delete footer.dataset.poki2Pinned; }catch(e){}
             }
           }catch(e){}
         };
