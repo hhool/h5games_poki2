@@ -339,7 +339,8 @@ body.full-bleed-footer .site-footer .footer-inner{
   right:16px;
   /* Position the consent banner above the footer when the footer is fixed */
   bottom: calc(var(--footer-h) + 16px);
-  z-index:1300;
+  /* Raise above game overlay (z-index 1400) so buttons are clickable */
+  z-index:1600;
   display:flex;
   align-items:center;
   gap:16px;
@@ -425,42 +426,17 @@ body.contact-page.consent-visible .page-content {
 /* Hide footer until positioned (used on home and during view swaps) */
 body.footer-hidden .site-footer{visibility:hidden !important;opacity:0 !important;pointer-events:none}
 
-/* ------------------------------------------------------------------
-   Informational pages overrides
-   Ensure About/Privacy/Terms/DMCA/Contact pages keep the footer
-   positioned after the page content (absolute at viewport bottom)
-   and reserve correct bottom padding using the measured footer height.
-   This overrides the generic `body.static-page .site-footer` fixed rule
-   which is intended for other layouts (index/category views).
--------------------------------------------------------------------*/
-body.about-page .site-footer,
-body.privacy-page .site-footer,
-body.terms-page .site-footer,
-body.dmca-page .site-footer,
-body.contact-page .site-footer {
-  position: absolute !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  width: 100% !important;
-  margin: 0 !important;
-  transform: none !important;
-  box-sizing: border-box !important;
-  z-index: 1000 !important;
-}
-
-/* Reserve space in page content for the footer using the measured value */
-/* Ensure static pages do not rely on padding to prevent overlap —
-   with footer in normal flow, clear extra bottom padding so content
-   sits directly above the footer. Keep index/category views using
-   `full-bleed-footer` untouched. */
+/* Informational pages (About/Privacy/Terms/Contact/DMCA) should use the
+   same footer styling and fixed behavior as the index/category views so
+   the footer remains visually consistent and pinned. Reserve content
+   space using the measured footer variable. */
 body.about-page .page-content,
 body.privacy-page .page-content,
 body.terms-page .page-content,
 body.dmca-page .page-content,
 body.contact-page .page-content,
 body.static-page .page-content {
-  padding-bottom: 0 !important;
+  padding-bottom: var(--footer-h) !important;
 }
 
 

@@ -99,6 +99,16 @@
 
 <body>
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        <!-- Static consent banner for exported snapshots and first-load dialog -->
+        <div id="consent-banner" class="consent-banner" style="display:block;">
+            <div class="consent-body">
+                <p><strong>Poki2 uses ads</strong> — we display advertising to support the site. By clicking "Accept" you consent to loading advertising scripts and personalized ads. You can read more in our <a href="/privacy.html">Privacy Policy</a>.</p>
+            </div>
+            <div class="consent-actions">
+                <button class="consent-decline">Decline</button>
+                <button class="consent-accept">Accept</button>
+            </div>
+        </div>
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <a href="/" class="sidebar-logo">
@@ -230,6 +240,19 @@
             <!-- Footer removed from here and placed at body level for layout stability -->
         </main>
     </div>
+        <script>
+            // If consent already stored, remove the static banner so it doesn't linger
+            (function(){
+                try{
+                    var s = null;
+                    try{ s = localStorage.getItem('poki2_consent_v1'); }catch(e){}
+                    if(s === 'granted' || s === 'denied'){
+                        var b = document.getElementById('consent-banner');
+                        if(b && b.parentNode) b.parentNode.removeChild(b);
+                    }
+                }catch(e){}
+            })();
+        </script>
 
     <!-- ===== GAME PLAY OVERLAY ===== -->
     <!-- Footer: moved to body level to avoid transform/containment affecting fixed positioning -->

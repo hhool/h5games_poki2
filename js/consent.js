@@ -6,6 +6,18 @@ function getConsent(){
 }
 function setConsent(v){
   try{ localStorage.setItem(CONSENT_KEY, v); }catch(e){}
+  try{
+    window.poki2Consent = window.poki2Consent || {};
+    window.poki2Consent.status = v;
+  }catch(e){}
+  try{
+    if(v === 'granted'){
+      try{ initAds(); }catch(e){}
+      try{ document.dispatchEvent(new CustomEvent('poki2:consent-granted')); }catch(e){}
+    }else if(v === 'denied'){
+      try{ document.dispatchEvent(new CustomEvent('poki2:consent-denied')); }catch(e){}
+    }
+  }catch(e){}
 }
 
 function removeExistingAdScripts(){
@@ -314,7 +326,8 @@ function createBanner(){
     s.id = 'consent-inline-style';
     s.textContent = `
       /* Inline consent styles: hidden by default, revealed when body.consent-ready is present */
-      .consent-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:1300;display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:10px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 8px 20px rgba(2,6,23,0.08);font-size:14px;color:#0b1220;max-width:1100px;margin:0 auto;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s}
+      /* Raised z-index so banner sits above the game overlay (z-index 1400) */
+      .consent-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:1600;display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:10px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 8px 20px rgba(2,6,23,0.08);font-size:14px;color:#0b1220;max-width:1100px;margin:0 auto;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s}
       body.consent-ready .consent-banner{opacity:1;visibility:visible;transform:none}
       .consent-banner .consent-actions{display:flex;gap:8px;margin-left:12px}
       .consent-accept{background:#1f6feb;color:#fff;padding:8px 12px;border-radius:8px;border:0}
@@ -354,6 +367,8 @@ function createBanner(){
     document.documentElement.style.removeProperty('--consent-height');
     window.removeEventListener('resize', setHeight);
     initAds();
+      try{ window.poki2Consent.status = 'granted'; }catch(e){}
+      try{ document.dispatchEvent(new CustomEvent('poki2:consent-granted')); }catch(e){}
   });
   decline.addEventListener('click', ()=>{
     setConsent('denied');
@@ -361,6 +376,8 @@ function createBanner(){
       document.body.classList.remove('consent-visible','consent-ready');
     document.documentElement.style.removeProperty('--consent-height');
     window.removeEventListener('resize', setHeight);
+      try{ window.poki2Consent.status = 'denied'; }catch(e){}
+      try{ document.dispatchEvent(new CustomEvent('poki2:consent-denied')); }catch(e){}
   });
   // focus accept for keyboard users
   accept.focus();
@@ -377,7 +394,8 @@ function attachExistingBanner(banner){
       const s = document.createElement('style');
       s.id = 'consent-inline-style';
       s.textContent = `
-        .consent-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:1300;display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:10px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 8px 20px rgba(2,6,23,0.08);font-size:14px;color:#0b1220;max-width:1100px;margin:0 auto;}
+        /* Raised z-index so banner sits above the game overlay (z-index 1400) */
+        .consent-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:1600;display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border-radius:10px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 8px 20px rgba(2,6,23,0.08);font-size:14px;color:#0b1220;max-width:1100px;margin:0 auto;}
         .consent-banner .consent-actions{display:flex;gap:8px;margin-left:12px}
         .consent-accept{background:#1f6feb;color:#fff;padding:8px 12px;border-radius:8px;border:0}
         .consent-decline{background:transparent;color:#0b1220;padding:8px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
@@ -412,6 +430,8 @@ function attachExistingBanner(banner){
         try{ banner.remove(); }catch(e){}
         cleanup();
         try{ initAds(); }catch(e){}
+        try{ window.poki2Consent.status = 'granted'; }catch(e){}
+        try{ document.dispatchEvent(new CustomEvent('poki2:consent-granted')); }catch(e){}
       });
     }
     if(decline){
@@ -419,12 +439,45 @@ function attachExistingBanner(banner){
         try{ setConsent('denied'); }catch(e){}
         try{ banner.remove(); }catch(e){}
         cleanup();
+        try{ window.poki2Consent.status = 'denied'; }catch(e){}
+        try{ document.dispatchEvent(new CustomEvent('poki2:consent-denied')); }catch(e){}
       });
     }
     // focus accept for keyboard users
     try{ if(accept && typeof accept.focus === 'function') accept.focus(); }catch(e){}
   }catch(e){}
 }
+
+// Fallback delegated click handler: ensures Accept/Decline work even if
+// individual buttons are not wired (e.g. due to script ordering or DOM swaps).
+(function ensureConsentDelegation(){
+  if(window._poki2_consent_delegation) return;
+  window._poki2_consent_delegation = true;
+  document.addEventListener('click', function(ev){
+    try{
+      const a = ev.target && ev.target.closest && ev.target.closest('.consent-accept');
+      const d = ev.target && ev.target.closest && ev.target.closest('.consent-decline');
+      if(a){
+        try{ setConsent('granted'); }catch(e){}
+        const b = document.getElementById('consent-banner'); if(b) try{ b.remove(); }catch(e){}
+        try{ document.body.classList.remove('consent-visible','consent-ready'); }catch(e){}
+        try{ document.documentElement.style.removeProperty('--consent-height'); }catch(e){}
+        try{ initAds(); }catch(e){}
+        try{ window.poki2Consent.status = 'granted'; }catch(e){}
+        try{ document.dispatchEvent(new CustomEvent('poki2:consent-granted')); }catch(e){}
+        ev.stopPropagation(); ev.preventDefault();
+      } else if(d){
+        try{ setConsent('denied'); }catch(e){}
+        const b = document.getElementById('consent-banner'); if(b) try{ b.remove(); }catch(e){}
+        try{ document.body.classList.remove('consent-visible','consent-ready'); }catch(e){}
+        try{ document.documentElement.style.removeProperty('--consent-height'); }catch(e){}
+        try{ window.poki2Consent.status = 'denied'; }catch(e){}
+        try{ document.dispatchEvent(new CustomEvent('poki2:consent-denied')); }catch(e){}
+        ev.stopPropagation(); ev.preventDefault();
+      }
+    }catch(e){}
+  }, true);
+})();
 
 function ensureConsent(){
   const status = getConsent();
@@ -499,6 +552,36 @@ window.poki2Consent = {
   grant(){ setConsent('granted'); initAds(); },
   deny(){ setConsent('denied'); }
 };
+
+// On startup remove any static banner if consent already stored so the UI
+// doesn't reappear on subsequent visits. Also ensure stored consent triggers
+// ad initialization when appropriate.
+(function enforceStoredConsent(){
+  try{
+    const status = getConsent();
+    if(status === 'granted'){
+      try{ initAds(); }catch(e){}
+    }
+    const cleanup = ()=>{
+      try{
+        const b = document.getElementById('consent-banner');
+        if(b && (status === 'granted' || status === 'denied')){
+          try{ b.remove(); }catch(e){}
+        }
+        if(status){
+          try{ document.body.classList.remove('consent-visible','consent-ready'); }catch(e){}
+          try{ document.documentElement.style.removeProperty('--consent-height'); }catch(e){}
+        }
+        try{ window.poki2Consent = window.poki2Consent || {}; window.poki2Consent.status = status; }catch(e){}
+      }catch(e){}
+    };
+    if(document.readyState === 'loading'){
+      document.addEventListener('DOMContentLoaded', cleanup, {once:true});
+    }else{
+      cleanup();
+    }
+  }catch(e){}
+})();
 
 // Expose ad-slot helper
 window.poki2RenderAd = {
