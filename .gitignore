@@ -62,3 +62,6 @@ dist/
 
 # Lighthouse reports file
 localhost*.report.html
+
+# assets
+assets

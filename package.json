@@ -14,14 +14,12 @@
     "build": "npm run build:css && npm run build:js && npm run build:copy && npm run build:images && npm run hash:assets && npm run copy:ads",
     "generate:icons": "node scripts/svg-to-raster.js",
     "generate:production-icons": "node scripts/generate-production-icons.js",
+    "generate:assets": "node tools/generate-assets.js",
     "publish:pages": "wrangler pages deploy ./dist --project-name \"${CF_PAGES_PROJECT:-h5games-poki2}\"",
     "inject-ldjson": "node scripts/inject-ldjson.js --dir=dist --config=scripts/ldconfig.json",
     "inject-ldjson:src": "node scripts/inject-ldjson.js --dir=. --config=scripts/ldconfig.json",
     "build:with-inject": "npm run build && npm run inject-ldjson"
     ,"serve:compressed": "node scripts/serve-compressed.js -p 8080 -d dist"
-  },
-  "scripts": {
-    "generate:assets": "node tools/generate-assets.js"
   },
   "keywords": [],
   "author": "",

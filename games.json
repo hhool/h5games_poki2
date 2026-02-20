@@ -75,7 +75,7 @@
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/zcj2",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/zcj2/zcj2/icon.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/zcj2/assets/icon-512.png",
     "title": "Zombies Can't Jump 2",
     "tags": ["platformer", "action", "defense", "singleplayer", "okijin"],
     "input": ["touch", "keyboard"],
@@ -87,7 +87,7 @@
   {
     "title": "Zombies Can't Jump",
     "link": "https://mobileapp.poki2.online/mobile/zombiescantjump",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/zombiescantjump/zombiescantjump/icon.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/zombiescantjump/assets/icon-512.png",
     "tags": ["platformer", "action", "defense", "singleplayer", "okijin"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -98,7 +98,7 @@
   {
     "title": "Runner Yodas",
     "link": "https://mobileapp.poki2.online/mobile/runneryodas/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/runneryodas/media/img/tutorial/screen_shot4.jpg",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/runneryodas/assets/icon-256.png",
     "tags": [
       "achievement",
       "action",
@@ -116,7 +116,7 @@
   {
     "title": "Cube Ninja",
     "link": "https://mobileapp.poki2.online/mobile/cubeninja/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/cubeninja/icon-128.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/cubeninja/assets/icon-256.png",
     "tags": ["action", "skill", "singleplayer", "ninja"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -138,7 +138,7 @@
   {
     "title": "Define Of Karmax 3",
     "link": "https://mobileapp.poki2.online/mobile/crkarmax/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/crkarmax/images/covertitle-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/crkarmax/images/imggamecompleted-sheet0.png",
     "tags": ["action", "singleplayer", "defense", "karmax"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -171,7 +171,7 @@
   {
     "title": "Sambogart",
     "link": "https://mobileapp.poki2.online/mobile/sambogart/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/sambogart/images/chapterfinishsprite-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/sambogart/assets/icon-512.png",
     "tags": [
       "action",
       "achievement",
@@ -208,7 +208,7 @@
   {
     "title": "Space Cowboy",
     "link": "https://mobileapp.poki2.online/mobile/spacecowboy/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/spacecowboy/images/sprite10-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/spacecowboy/assets/icon-512.png",
     "tags": [
       "achievement",
       "action",
@@ -227,7 +227,7 @@
   {
     "title": "Silver Arrow",
     "link": "https://mobileapp.poki2.online/mobile/silverarrow/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/silverarrow/images/cover_title-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/silverarrow/assets/icon-512.png",
     "tags": [
       "action",
       "achievement",
@@ -1189,7 +1189,7 @@
   {
     "title": "Blox Slider",
     "link": "https://mobileapp.poki2.online/mobile/bloxslider/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/bloxslider/img/menusprites.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/bloxslider/assets/icon-256.png",
     "tags": ["puzzle", "physics", "singleplayer"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
@@ -1255,7 +1255,7 @@
   {
     "title": "Candy Fusion",
     "link": "https://mobileapp.poki2.online/mobile/candyfusion/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/candyfusion/images/sprite-sheet1.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/candyfusion/assets/icon-512.png",
     "tags": ["puzzle", "candy", "2048", "singleplayer"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
@@ -1266,7 +1266,7 @@
   {
     "title": "Captain Roger",
     "link": "https://mobileapp.poki2.online/mobile/captainroger/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/captainroger/img/cover-logo.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/captainroger//img/cover-logo.png",
     "tags": ["shooting", "adventure", "singleplayer"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -1365,7 +1365,7 @@
   {
     "title": "Circle Pong",
     "link": "https://mobileapp.poki2.online/mobile/circlepong/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/circlepong/images/gamelogo-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/circlepong/assets/icon-256.png",
     "tags": ["achievement", "singleplayer", "skill", "circle", "pong"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
@@ -1387,7 +1387,7 @@
   {
     "title": "Crun Ching Ninjas",
     "link": "https://mobileapp.poki2.online/mobile/cninjas/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/cninjas/images/gametitle-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/cninjas/assets/icon-256.png",
     "tags": ["achievement", "singleplayer", "ninja", "taptap"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -1475,7 +1475,7 @@
   {
     "title": "Dot Game",
     "link": "https://mobileapp.poki2.online/mobile/dotgame/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/dotgame/img/bg_1.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/dotgame/assets/icon-256.png",
     "tags": ["puzzle", "singleplayer", "dot", "line"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -1530,7 +1530,7 @@
   {
     "title": "Evil Robot",
     "link": "https://mobileapp.poki2.online/mobile/evilrobot/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/evilrobot/images/cover_title-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/evilrobot/assets/icon-512.png",
     "tags": [
       "racing",
       "achievement",
@@ -1549,7 +1549,7 @@
   {
     "title": "Evil Wyrm",
     "link": "https://mobileapp.poki2.online/mobile/evilwyrm/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/evilwyrm/images/bmlogo2-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/evilwyrm/assets/icon-180.png",
     "tags": [
       "action",
       "arcade",
@@ -1689,7 +1689,7 @@
   {
     "title": "Foo Foo",
     "link": "https://mobileapp.poki2.online/mobile/foofoo/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/foofoo/images/title-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/foofoo/assets/icon-256.png",
     "tags": [
       "achievement",
       "singleplayer",
@@ -1766,7 +1766,7 @@
   {
     "title": "Funny Soccer",
     "link": "https://mobileapp.poki2.online/mobile/funnysoccer/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/funnysoccer/sprites/bg_menu.jpg",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/funnysoccer/assets/icon-256.png",
     "tags": ["sports", "singleplayer", "soccer", "football"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -1810,7 +1810,7 @@
   {
     "title": "Going Nuts",
     "link": "https://mobileapp.poki2.online/mobile/goingnuts/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/goingnuts/sprites/bg_preloader.jpg",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/goingnuts/assets/icon-256.png",
     "tags": ["idle", "singleplayer", "adventure", "squirrel", "nuts"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -1821,7 +1821,7 @@
   {
     "title": "Greedy Gnomes",
     "link": "https://mobileapp.poki2.online/mobile/greedygnomes/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/greedygnomes/images/gametitle-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/greedygnomes/assets/icon-512.png",
     "tags": ["puzzle", "singleplayer", "multiplayer", "greedy", "gnome"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -1832,7 +1832,7 @@
   {
     "title": "Green Wings",
     "link": "https://mobileapp.poki2.online/mobile/greenwings/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/greenwings/icon.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/greenwings/assets/icon-256.png",
     "tags": ["idle", "singleplayer", "adventure", "plane", "green", "wings"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -1843,7 +1843,7 @@
   {
     "title": "Groovy Ski",
     "link": "https://mobileapp.poki2.online/mobile/groovyski/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/groovyski/images/logo-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/groovyski/assets/icon-512.png",
     "tags": ["idle", "singleplayer", "adventure", "ski", "groovy"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
@@ -1865,7 +1865,7 @@
   {
     "title": "Gumball Race",
     "link": "https://mobileapp.poki2.online/mobile/gumballrace/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/gumballrace/assets/main_screen.jpg",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/gumballrace/assets/icon-256.png",
     "tags": ["idle", "singleplayer", "cartoon", "catch", "gumball"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -1920,7 +1920,7 @@
   {
     "title": "Ice Cream",
     "link": "https://mobileapp.poki2.online/mobile/icecream/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/icecream/img/bgmenu-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/icecream/assets/icon-256.png",
     "tags": ["puzzle", "singleplayer", "html5game", "ice", "cream"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -1931,7 +1931,7 @@
   {
     "title": "Jelly Doods",
     "link": "https://mobileapp.poki2.online/mobile/jellydoods/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/jellydoods/jellydoods/screen1.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/jellydoods/assets/icon-256.png",
     "tags": [
       "puzzle",
       "singleplayer",
@@ -2061,7 +2061,7 @@
   {
     "title": "Looney Roonks",
     "link": "https://mobileapp.poki2.online/mobile/looneyroonks/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/looneyroonks/icon-128.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/looneyroonks/assets/icon-512.png",
     "tags": ["idle", "achievement", "singleplayer", "loon", "roonk", "taptap"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -2072,7 +2072,7 @@
   {
     "title": "Manic",
     "link": "https://mobileapp.poki2.online/mobile/manic/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/manic/images/game/interface/instructions_1.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/manic/assets/icon-512.png",
     "tags": ["idle", "singleplayer", "manic", "taptap", "rabbit", "cartoon"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -2083,7 +2083,7 @@
   {
     "title": "Matching Time",
     "link": "https://mobileapp.poki2.online/mobile/matchtime/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/matchtime/assets/main_screen.jpg",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/matchtime/assets/icon-256.png",
     "tags": ["idle", "puzzle", "singleplayer", "matching", "time", "tetris"],
     "input": ["touch", "keyboard"],
     "orientation": "both",
@@ -2113,7 +2113,7 @@
   {
     "title": "Monster Candy",
     "link": "https://mobileapp.poki2.online/mobile/monstercandy/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/monstercandy/img/title.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/monstercandy/assets/icon-512.png",
     "tags": ["puzzle", "singleplayer", "monster", "candy"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
@@ -2135,7 +2135,7 @@
   {
     "title": "Mouse Jump",
     "link": "https://mobileapp.poki2.online/mobile/mousejump/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/mousejump/images/logo-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/mousejump/assets/icon-512.png",
     "tags": ["idle", "achievement", "singleplayer", "mouse", "jump"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
@@ -2176,7 +2176,7 @@
   {
     "title": "Ninja Way",
     "link": "https://mobileapp.poki2.online/mobile/ninjaway/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/ninjaway/html5game/NinjaWayHTML5_texture_2.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/ninjaway/assets/icon-180.png",
     "tags": [
       "idle",
       "achievement",
@@ -2355,7 +2355,7 @@
   {
     "title": "Popup",
     "link": "https://mobileapp.poki2.online/mobile/popup/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/popup/images/tutop-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/popup/assets/icon-512.png",
     "tags": [
       "idle",
       "achievement",
@@ -2374,7 +2374,7 @@
   {
     "title": "Portal Runner",
     "link": "https://mobileapp.poki2.online/mobile/portalrunner/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/portalrunner/loading-logo.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/portalrunner/assets/icon-256.png",
     "tags": [
       "idle",
       "achievement",
@@ -2554,7 +2554,7 @@
   {
     "title": "Sally BBQ",
     "link": "https://mobileapp.poki2.online/mobile/sallybbq/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/sallybbq/images/cover_title-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/sallybbq/assets/icon-512.png",
     "tags": [
       "idle",
       "achievement",
@@ -2621,7 +2621,7 @@
   {
     "title": "Slot Chicken",
     "link": "https://mobileapp.poki2.online/mobile/slotchicken/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/slotchicken/sprites/bg_menu.jpg",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/slotchicken/assets/icon-512.png",
     "tags": ["idle", "singleplayer", "slot", "chicken"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -2632,7 +2632,7 @@
   {
     "title": "Sort Bird",
     "link": "https://mobileapp.poki2.online/mobile/sortbird/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/sortbird/assets/birds2.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/sortbird/assets/icon-512.png",
     "tags": [
       "idle",
       "achievement",
@@ -2771,7 +2771,7 @@
   {
     "title": "Taptap Submarine",
     "link": "https://mobileapp.poki2.online/mobile/taptapsubmarine/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/taptapsubmarine/img/title.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/taptapsubmarine/assets/icon-512.png",
     "tags": ["idle", "multiplayer", "conie", "submarine", "taptap"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
@@ -2793,7 +2793,7 @@
   {
     "title": "Titan Runner",
     "link": "https://mobileapp.poki2.online/mobile/titanrunner/",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/titanrunner/icon-256.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/titanrunner/assets/icon-256.png",
     "tags": [
       "achievement",
       "racing",
@@ -2833,7 +2833,7 @@
   {
     "title": "Trailblazer",
     "link": "https://mobileapp.poki2.online/mobile/trailblazer",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/trailblazer/assets/images/hd/splash.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/trailblazer/assets/icon-512.png",
     "tags": ["idle", "multiplayer", "singleplayer"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -2885,7 +2885,7 @@
   {
     "title": "Veggi Rabbit",
     "link": "https://mobileapp.poki2.online/mobile/veggirabbit",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/veggirabbit/images/gametitle-sheet0.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/veggirabbit/assets/icon-512.png",
     "tags": [
       "puzzle",
       "achievement",
@@ -2913,7 +2913,7 @@
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/xtypesky",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/xtypesky/phobos.png",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/xtypesky/assets/icon-512.png",
     "title": "X Type Sky",
     "tags": [
       "shooting",

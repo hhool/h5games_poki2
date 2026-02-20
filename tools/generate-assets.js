@@ -19,6 +19,7 @@ const argv = yargs(hideBin(process.argv))
   .option('concurrency', { type: 'number', default: 4 })
   .option('timeout', { type: 'number', default: 15000 })
   .option('base', { type: 'string', describe: 'Base URL to resolve relative paths (e.g. http://localhost:8000)' })
+  .option('wait', { type: 'number', default: 9, describe: 'Seconds to wait after navigation before screenshot (default 9)' })
   .option('selector', { type: 'string', describe: 'CSS selector to screenshot (e.g. #game or canvas)' })
   .option('limit', { type: 'number', describe: 'Limit number of games to process (for testing)' })
   .option('force', { type: 'boolean', default: false, describe: 'Overwrite existing outputs' })
@@ -66,6 +67,11 @@ async function captureAndProcess(browser, game, opts){
     const response = await page.goto(targetUrl, { waitUntil: 'networkidle2', timeout: opts.timeout });
     meta.attemptedUrl = targetUrl;
     meta.status = response && response.status ? response.status() : 200;
+    // wait additional time for game to initialize (seconds)
+    const waitSeconds = Number(opts.wait || 9);
+    if (waitSeconds > 0){
+      await page.waitForTimeout(waitSeconds * 1000);
+    }
 
     let screenshotBuffer;
     if (opts.selector){
@@ -139,7 +145,7 @@ async function main(){
   const pLimitMod = await import('p-limit');
   const pLimit = pLimitMod.default || pLimitMod;
   const limit = pLimit(argv.concurrency);
-  const tasks = list.map(game => limit(() => captureAndProcess(browser, game, { out: argv.out, selector: argv.selector, timeout: argv.timeout, force: argv.force })));
+  const tasks = list.map(game => limit(() => captureAndProcess(browser, game, { out: argv.out, selector: argv.selector, timeout: argv.timeout, force: argv.force, base: argv.base, wait: argv.wait })));
 
   const results = await Promise.all(tasks);
   await browser.close();
