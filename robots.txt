@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /play/
 
 Sitemap: https://poki2.online/sitemap.xml
