@@ -1,3 +1,39 @@
+# tools
+
+Contains helper scripts. The `generate-assets.js` script captures screenshots of games listed in `games.json` and produces icons and cover screenshots.
+
+Quickstart
+
+1. Install dependencies:
+
+```bash
+npm install puppeteer sharp p-limit fs-extra yargs
+```
+
+2. Run for a small subset (test):
+
+```bash
+node tools/generate-assets.js --input games.json --out ./assets --concurrency 4 --limit 10
+```
+
+3. Full run:
+
+```bash
+node tools/generate-assets.js --input games.json --out ./assets --concurrency 4
+```
+
+Output layout example:
+
+```
+assets/
+  <game-id>/
+    capture.png
+    icon-512.png
+    icon-256.png
+    cover-1920x1080.png
+    meta.json
+  report.json
+```
 # Tools
 
 This folder contains small utility scripts used by the project.
