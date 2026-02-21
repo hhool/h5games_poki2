@@ -3,7 +3,7 @@
 
 name = "redirect-query-to-path"
 main = "workers/redirect-query-to-path/index.js"
-compatibility_date = "2026-02-22"
+compatibility_date = "2026-02-21"
 
 # Your Cloudflare account id (replace)
 account_id = "b40383bf3afb30ccc7c9a13d6c9b6868"
