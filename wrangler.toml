@@ -1,0 +1,20 @@
+# Wrangler config for deploying the redirect worker
+# Replace `YOUR_ACCOUNT_ID` and `poki2.online/*` with your values before publishing.
+
+name = "redirect-query-to-path"
+main = "workers/redirect-query-to-path/index.js"
+compatibility_date = "2026-02-22"
+
+# Your Cloudflare account id (replace)
+account_id = "b40383bf3afb30ccc7c9a13d6c9b6868"
+
+# If true, deploy to *.workers.dev; if false, will deploy to the route below
+workers_dev = false
+
+# Route to bind the worker to (replace with your domain)
+route = "poki2.online/*"
+
+# Optional: specify environment-specific overrides
+[env.production]
+route = "poki2.online/*"
+account_id = "b40383bf3afb30ccc7c9a13d6c9b6868"
