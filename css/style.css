@@ -898,7 +898,7 @@ body.static-page .site-footer > .footer-links {
   opacity:0;pointer-events:none;
   transform:translateY(12px);
   transition:opacity .25s, transform .25s;
-  z-index:850;
+  z-index:99999; /* ensure back-to-top sits above all overlays */
 }
 .back-to-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
 .back-to-top:hover{background:var(--brand-dark)}
