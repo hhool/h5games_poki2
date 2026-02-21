@@ -12,6 +12,38 @@ async function handle(request) {
     const to = `${url.protocol}//${url.host}/games/${slug}/`
     return Response.redirect(to, 301)
   }
-  // pass through for other requests
+  // For SPA-style paths (no file extension) serve the site root so the client
+  // router can handle the route. This avoids relying on Pages returning index
+  // for every path and prevents a 404 reaching the client.
+  const pathname = url.pathname || '/'
+  // Only attempt SPA fallback for GET requests
+  if (request.method === 'GET') {
+    // If the path looks like a static asset (has an extension), don't fallback
+    if (!pathname.includes('.')) {
+      // Avoid rewriting special files/folders (api, static-assets etc.)
+      const skipPrefixes = ['/api/', '/_/', '/.well-known/']
+      let skip = false
+      for (const p of skipPrefixes) {
+        if (pathname.startsWith(p)) { skip = true; break }
+      }
+      if (!skip) {
+        try {
+          // Fetch the Pages origin directly (avoid re-invoking this worker by using the
+          // Pages subdomain). This ensures we get the static `index.html`/`404.html` served
+          // by Pages rather than looping to this worker.
+          const pagesOrigin = 'https://h5games-poki2.pages.dev/'
+          const indexResp = await fetch(pagesOrigin, { redirect: 'follow' })
+          const body = await indexResp.arrayBuffer()
+          const headers = new Headers(indexResp.headers)
+          headers.set('content-type', 'text/html; charset=utf-8')
+          return new Response(body, { status: 200, statusText: 'OK', headers })
+        } catch (e) {
+          // if fetching index fails, fall through to proxying the original request
+        }
+      }
+    }
+  }
+
+  // Otherwise proxy the request to origin/pages
   return fetch(request)
 }

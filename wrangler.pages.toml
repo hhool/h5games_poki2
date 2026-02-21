@@ -1,0 +1,4 @@
+name = "h5games-poki2"
+pages_build_output_dir = "dist"
+
+# Use this config for Pages deployments to avoid mixing Worker config.

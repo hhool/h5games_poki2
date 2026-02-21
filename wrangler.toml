@@ -8,9 +8,6 @@ compatibility_date = "2026-02-21"
 # Your Cloudflare account id (replace)
 account_id = "b40383bf3afb30ccc7c9a13d6c9b6868"
 
-# Pages: directory of static files for `wrangler pages` commands
-pages_build_output_dir = "dist"
-
 # If true, deploy to *.workers.dev; if false, will deploy to the route below
 workers_dev = false
 
