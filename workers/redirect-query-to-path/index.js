@@ -33,10 +33,16 @@ async function handle(request) {
           // by Pages rather than looping to this worker.
           const pagesOrigin = 'https://h5games-poki2.pages.dev/'
           const indexResp = await fetch(pagesOrigin, { redirect: 'follow' })
-          const body = await indexResp.arrayBuffer()
+          let bodyText = await indexResp.text()
+          // If the document doesn't declare a <base>, inject one pointing to the site root.
+          // This makes relative asset paths like `css/style.css` resolve to `/css/...` when
+          // the page is served at nested paths such as `/games/2048`.
+          if (!/<base\s+href=/i.test(bodyText)) {
+            bodyText = bodyText.replace(/<head([^>]*)>/i, '<head$1><base href="/" />')
+          }
           const headers = new Headers(indexResp.headers)
           headers.set('content-type', 'text/html; charset=utf-8')
-          return new Response(body, { status: 200, statusText: 'OK', headers })
+          return new Response(bodyText, { status: 200, statusText: 'OK', headers })
         } catch (e) {
           // if fetching index fails, fall through to proxying the original request
         }

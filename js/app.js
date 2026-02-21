@@ -1618,6 +1618,9 @@
 
     const search = (location.search || "").replace("?", "");
     const hash = location.hash.replace("#", "");
+    // Support path-style routing: /games/<slug>/ should open that game directly.
+    // This complements query/hash routing and ensures direct links work.
+    const pathMatch = (location.pathname || '').match(/^\/games\/([^\/]+)\/??$/i);
     console.log('[route] init search/hash:', { search, hash });
 
     // Prefer query param routing (e.g. https://poki2.online/?play-vex5)
@@ -1647,8 +1650,23 @@
         showHome();
       }
     } else {
-      console.log('[route] no route, showing home');
-      showHome();
+      // If path-style matched earlier, it will open the game; otherwise show home
+      if (pathMatch && pathMatch[1]) {
+        const slug = pathMatch[1];
+        console.log('[route] detected play via path, slug:', slug);
+        const game = rawGames.find((g) => normalizeHref(g.link) === slug);
+        console.log('[route] game lookup result (path):', !!game, game && game.title);
+        if (game) {
+          // Open game immediately for direct path links
+          openGame(game);
+        } else {
+          console.warn('[route] no matching game for slug (path):', slug);
+          showHome();
+        }
+      } else {
+        console.log('[route] no route, showing home');
+        showHome();
+      }
     }
 
     // Defensive: if the initial URL hash is a category, ensure the body

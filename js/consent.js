@@ -359,6 +359,8 @@ function createBanner(){
   window.addEventListener('resize', setHeight);
   const accept = banner.querySelector('.consent-accept');
   const decline = banner.querySelector('.consent-decline');
+  // Ensure the banner sits above other overlays (game overlay z-index = 1400)
+  try{ banner.style.zIndex = '1600'; banner.style.position = 'fixed'; }catch(e){}
     accept.addEventListener('click', ()=>{
     setConsent('granted');
     banner.remove();
