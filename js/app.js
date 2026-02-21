@@ -499,9 +499,20 @@
         // Provide intrinsic size to avoid layout shifts
         himg.width = 90;
         himg.height = 90;
-        const imgSrc = g.imgSrc || getFaviconUrl(g.link);
+          const imgSrc = g.imgSrc || getFaviconCandidates(g.link)[0];
         optimizeImageLoading(himg, imgSrc);
         attachFaviconFallback(himg, g.link);
+        // Stretch-fit the hero image and center its content
+        himg.style.objectPosition = '50% 50%';
+        himg.style.objectFit = 'fill';
+        himg.addEventListener('load', () => {
+          try {
+            himg.style.objectFit = 'fill';
+            himg.style.objectPosition = '50% 50%';
+          } catch (e) {
+            himg.style.objectFit = 'fill';
+          }
+        });
         card.appendChild(himg);
         card.addEventListener("click", () => showDetail(g));
         $heroFeatured.appendChild(card);
