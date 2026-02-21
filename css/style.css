@@ -18,6 +18,50 @@
   /* Fallback for browsers without WebP support */
 }
 
+/* ===== Enforce final game-card layout (authoritative) ===== */
+/* Scope: applies to grid cards (not hero tiles) */
+.game-grid .game-card{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:0;
+  background:var(--surface);
+  border-radius:var(--card-radius);
+  overflow:hidden; /* clip image overflow so cover fills without spilling */
+  padding:0;
+}
+.game-grid .game-card img.game-card-img,
+.game-grid .game-card .game-card-img{
+  width:100%;
+  height:auto;
+  aspect-ratio:1 / 1; /* MUST be square */
+  object-fit:cover; /* scale up and fill, crop if necessary */
+  object-position:center center;
+  display:block;
+  border:0;
+  border-top-left-radius:var(--card-radius);
+  border-top-right-radius:var(--card-radius);
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+  background:transparent;
+}
+.game-grid .game-card .game-card-info{
+  padding:10px 12px;
+  background:var(--surface);
+  margin:0;
+  text-align:center;
+  border-top-left-radius:0;
+  border-top-right-radius:0;
+  border-bottom-left-radius:var(--card-radius);
+  border-bottom-right-radius:var(--card-radius);
+}
+
+/* Small screens: tighter info padding */
+@media(max-width:600px){
+  .game-grid .game-card .game-card-info{padding:6px 8px}
+}
+
+
 @media (orientation: landscape) {
   .detail-card .detail-img {
     /* In landscape interstitial prefer filling the left area so image feels immersive.
