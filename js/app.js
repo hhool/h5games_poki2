@@ -437,7 +437,7 @@
     section.className = "category-section";
     section.id = "section-" + tag;
 
-    const showAll = limit && games.length > limit;
+    const showAll = (typeof limit === 'number' && limit > 0) && games.length > limit;
     section.innerHTML = `
       <div class="section-header">
         <h2 class="section-title"><span class="emoji">${meta.emoji}</span> ${meta.label}</h2>
@@ -651,7 +651,12 @@
     setTimeout(() => {
       $gameSections.innerHTML = "";
       const sec = renderSection(tag, 0);
-      if (sec) $gameSections.appendChild(sec);
+      if (sec) {
+        $gameSections.appendChild(sec);
+        // Ensure no "See all" button appears on the full-category detail view
+        const stray = $gameSections.querySelectorAll('.see-all');
+        stray.forEach((el) => el.remove());
+      }
       // ensure footer spacer is applied for short content so footer sits flush
       try { ensureFooterSpacer(); } catch (e) { /* ignore */ }
       // Reveal footer only after spacer & measurements are applied to avoid jump
