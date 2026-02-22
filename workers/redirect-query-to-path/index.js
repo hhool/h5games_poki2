@@ -6,6 +6,10 @@ async function handle(request) {
   const url = new URL(request.url)
   const qs = url.search || ''
   const pathname = url.pathname || '/'
+  // Bypass worker for privacy paths: let Pages handle /privacy and /privacy/* directly.
+  if (pathname === '/privacy' || pathname.startsWith('/privacy/')) {
+    return fetch(request)
+  }
   // Normalize duplicate slashes in the pathname (e.g. // -> /, /a//b -> /a/b)
   const collapsed = pathname.replace(/\/\/{2,}/g, '/')
   if (collapsed !== pathname) {
