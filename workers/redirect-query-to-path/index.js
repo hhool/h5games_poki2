@@ -5,6 +5,7 @@ addEventListener('fetch', event => {
 async function handle(request) {
   const url = new URL(request.url)
   const qs = url.search || ''
+  const pathname = url.pathname || '/'
   // match ?play-xxx or ?play=xxx or ?game=xxx or ?id=123
   const m = qs.match(/play-([^&]+)/) || qs.match(/[?&](?:play|game|id)=([^&]+)/)
   if (m) {
@@ -24,7 +25,6 @@ async function handle(request) {
   // For SPA-style paths (no file extension) serve the site root so the client
   // router can handle the route. This avoids relying on Pages returning index
   // for every path and prevents a 404 reaching the client.
-  const pathname = url.pathname || '/'
   // Only attempt SPA fallback for GET requests
   if (request.method === 'GET') {
     // If the path looks like a static asset (has an extension), don't fallback
