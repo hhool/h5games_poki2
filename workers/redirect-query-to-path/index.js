@@ -45,6 +45,24 @@ async function handle(request) {
       }
     }
   }
+
+  // If the requested path ends with a 'privacy' segment (e.g. /privacy/zcj2/privacy
+  // or /privacy/zcj2/privacy/), try to serve a real privacy HTML page by
+  // attempting `{path}.html` and then `{path}/index.html` from the Pages origin.
+  if (request.method === 'GET' && /\/privacy\/?$/.test(pathname)) {
+    try {
+      const pagesOrigin = 'https://h5games-poki2.pages.dev'
+      // Try path.html first
+      const tryHtml = await fetch(pagesOrigin + pathname + '.html', { redirect: 'follow' })
+      if (tryHtml && tryHtml.status === 200) return tryHtml
+      // Then try path/index.html
+      const suffix = pathname.endsWith('/') ? 'index.html' : '/index.html'
+      const tryIndex = await fetch(pagesOrigin + pathname + suffix, { redirect: 'follow' })
+      if (tryIndex && tryIndex.status === 200) return tryIndex
+    } catch (e) {
+      // fall through to SPA fallback
+    }
+  }
   // For SPA-style paths (no file extension) serve the site root so the client
   // router can handle the route. This avoids relying on Pages returning index
   // for every path and prevents a 404 reaching the client.
