@@ -115,18 +115,16 @@ self.addEventListener('fetch', event => {
         .then(response => {
           // Cache successful responses
           if (response.ok) {
-            const cachePromise = caches.open(DYNAMIC_CACHE);
-            cachePromise.then(cache => {
-              try {
-                if (!response.bodyUsed) {
-                  cache.put(request, response.clone());
-                } else {
-                  console.warn('[SW] Response body already used; skipping cache put for', request.url);
-                }
-              } catch (e) {
-                console.warn('[SW] Cache put failed (html):', e);
-              }
-            });
+            try {
+              const respClone = response.clone();
+              caches.open(DYNAMIC_CACHE).then(cache => {
+                return cache.put(request, respClone).catch(e => {
+                  console.warn('[SW] Cache put failed (html):', e);
+                });
+              });
+            } catch (e) {
+              console.warn('[SW] Failed to clone response for caching (html):', e);
+            }
           }
           return response;
         })
@@ -159,11 +157,8 @@ async function cacheFirst(request) {
     if (networkResponse.ok) {
       try {
         const cache = await caches.open(STATIC_CACHE);
-        if (!networkResponse.bodyUsed) {
-          await cache.put(request, networkResponse.clone());
-        } else {
-          console.warn('[SW] networkResponse body already used; skipping static cache put for', request.url);
-        }
+        const clone = networkResponse.clone();
+        await cache.put(request, clone);
       } catch (e) {
         console.warn('[SW] Cache put failed (static):', e);
       }
@@ -186,11 +181,8 @@ async function networkFirst(request) {
     if (networkResponse.ok) {
       try {
         const cache = await caches.open(DYNAMIC_CACHE);
-        if (!networkResponse.bodyUsed) {
-          await cache.put(request, networkResponse.clone());
-        } else {
-          console.warn('[SW] networkResponse body already used; skipping cache put for', request.url);
-        }
+        const clone = networkResponse.clone();
+        await cache.put(request, clone);
       } catch (e) {
         console.warn('[SW] Cache put failed (networkFirst):', e);
       }
@@ -214,11 +206,10 @@ async function staleWhileRevalidate(request) {
   const fetchPromise = fetch(request).then(networkResponse => {
     if (networkResponse.ok) {
       try {
-        if (!networkResponse.bodyUsed) {
-          cache.put(request, networkResponse.clone());
-        } else {
-          console.warn('[SW] networkResponse body already used; skipping dynamic cache put for', request.url);
-        }
+        const clone = networkResponse.clone();
+        cache.put(request, clone).catch(e => {
+          console.warn('[SW] Cache put failed (dynamic):', e);
+        });
       } catch (e) {
         console.warn('[SW] Cache put failed (dynamic):', e);
       }

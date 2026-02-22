@@ -9,3 +9,8 @@ Usage
 Tips
 - Use a test subdomain before binding production.
 - Monitor Worker usage in Cloudflare dashboard to ensure it stays within free quota.
+
+
+# Deployment and maintenance tools
+
+wrangler deploy --config=wrangler.worker.toml --env production
