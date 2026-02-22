@@ -12,6 +12,15 @@ async function handle(request) {
     const to = `${url.protocol}//${url.host}/games/${slug}/`
     return Response.redirect(to, 301)
   }
+  // Normalize directory-style paths without trailing slash to include trailing slash
+  // e.g. /games/2048  -> /games/2048/
+  if (request.method === 'GET') {
+    const dirNoSlash = pathname.match(/^\/games\/([^\/\.?#]+)$/i)
+    if (dirNoSlash) {
+      const to = `${url.protocol}//${url.host}${pathname}/${url.search || ''}`
+      return Response.redirect(to, 301)
+    }
+  }
   // For SPA-style paths (no file extension) serve the site root so the client
   // router can handle the route. This avoids relying on Pages returning index
   // for every path and prevents a 404 reaching the client.
