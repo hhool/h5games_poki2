@@ -30,9 +30,25 @@ self.addEventListener('install', event => {
   console.log('[SW] Installing Service Worker');
   event.waitUntil(
     caches.open(STATIC_CACHE)
-      .then(cache => {
-        console.log('[SW] Caching static assets');
-        return cache.addAll(STATIC_ASSETS);
+      .then(async cache => {
+        console.log('[SW] Caching static assets (tolerant mode)');
+        const results = await Promise.allSettled(STATIC_ASSETS.map(asset =>
+          fetch(asset)
+            .then(resp => {
+              if (!resp || !resp.ok) throw new Error('Fetch failed for ' + asset);
+              try {
+                return cache.put(asset, resp.clone());
+              } catch (e) {
+                console.warn('[SW] Cache put failed during install for', asset, e);
+              }
+            })
+            .catch(err => {
+              // Swallow individual asset errors in tolerant mode
+              return Promise.reject(err);
+            })
+        ));
+        const failed = results.filter(r => r.status === 'rejected');
+        if (failed.length) console.warn('[SW] Some static assets failed to cache:', failed.length);
       })
       .then(() => {
         console.log('[SW] Service Worker installed');
@@ -99,8 +115,18 @@ self.addEventListener('fetch', event => {
         .then(response => {
           // Cache successful responses
           if (response.ok) {
-            const cache = caches.open(DYNAMIC_CACHE);
-            cache.then(cache => cache.put(request, response.clone()));
+            const cachePromise = caches.open(DYNAMIC_CACHE);
+            cachePromise.then(cache => {
+              try {
+                if (!response.bodyUsed) {
+                  cache.put(request, response.clone());
+                } else {
+                  console.warn('[SW] Response body already used; skipping cache put for', request.url);
+                }
+              } catch (e) {
+                console.warn('[SW] Cache put failed (html):', e);
+              }
+            });
           }
           return response;
         })
@@ -131,8 +157,16 @@ async function cacheFirst(request) {
 
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
-      const cache = await caches.open(STATIC_CACHE);
-      cache.put(request, networkResponse.clone());
+      try {
+        const cache = await caches.open(STATIC_CACHE);
+        if (!networkResponse.bodyUsed) {
+          await cache.put(request, networkResponse.clone());
+        } else {
+          console.warn('[SW] networkResponse body already used; skipping static cache put for', request.url);
+        }
+      } catch (e) {
+        console.warn('[SW] Cache put failed (static):', e);
+      }
     }
     return networkResponse;
   } catch (error) {
@@ -150,8 +184,16 @@ async function networkFirst(request) {
   try {
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
-      const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone());
+      try {
+        const cache = await caches.open(DYNAMIC_CACHE);
+        if (!networkResponse.bodyUsed) {
+          await cache.put(request, networkResponse.clone());
+        } else {
+          console.warn('[SW] networkResponse body already used; skipping cache put for', request.url);
+        }
+      } catch (e) {
+        console.warn('[SW] Cache put failed (networkFirst):', e);
+      }
     }
     return networkResponse;
   } catch (error) {
@@ -171,7 +213,15 @@ async function staleWhileRevalidate(request) {
 
   const fetchPromise = fetch(request).then(networkResponse => {
     if (networkResponse.ok) {
-      cache.put(request, networkResponse.clone());
+      try {
+        if (!networkResponse.bodyUsed) {
+          cache.put(request, networkResponse.clone());
+        } else {
+          console.warn('[SW] networkResponse body already used; skipping dynamic cache put for', request.url);
+        }
+      } catch (e) {
+        console.warn('[SW] Cache put failed (dynamic):', e);
+      }
     }
     return networkResponse;
   });
