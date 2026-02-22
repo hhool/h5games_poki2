@@ -72,6 +72,35 @@ async function handle(request) {
   // for every path and prevents a 404 reaching the client.
   // Only attempt SPA fallback for GET requests
   if (request.method === 'GET') {
+    // If this is a canonical game path like `/games/<slug>/`, try to proxy
+    // the shard host `c.poki2.online/<slug>/` and return its `index.html`
+    // when available. This lets the canonical page load the shard content
+    // without a client-side redirect.
+    const gameMatch = pathname.match(/^\/games\/([^\/]+)\/?$/i)
+    if (gameMatch) {
+      const slug = gameMatch[1]
+      try {
+        const shardOrigin = 'https://c.poki2.online'
+        const shardUrl = `${shardOrigin}/${encodeURIComponent(slug)}/`
+        const shardResp = await fetch(shardUrl, { redirect: 'follow' })
+        if (shardResp && shardResp.status === 200) {
+          // Ensure we return HTML and inject a base href so relative
+          // assets resolve against the shard origin/slug.
+          const contentType = shardResp.headers.get('content-type') || ''
+          if (contentType.toLowerCase().includes('text/html')) {
+            let bodyText = await shardResp.text()
+            if (!/<base\s+href=/i.test(bodyText)) {
+              bodyText = bodyText.replace(/<head([^>]*)>/i, `<head$1><base href="${shardUrl}" />`)
+            }
+            const headers = new Headers(shardResp.headers)
+            headers.set('content-type', 'text/html; charset=utf-8')
+            return new Response(bodyText, { status: shardResp.status, statusText: shardResp.statusText, headers })
+          }
+        }
+      } catch (e) {
+        // If shard fetch fails, fall through to normal SPA handling
+      }
+    }
     // If the path looks like a static asset (has an extension), don't fallback
     if (!pathname.includes('.')) {
       // Avoid rewriting special files/folders (api, static-assets etc.)
