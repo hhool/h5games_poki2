@@ -28,6 +28,23 @@ async function handle(request) {
       return Response.redirect(to, 301)
     }
   }
+
+  // Preserve certain top-level .html pages: fetch the real .html from Pages origin
+  // so that requests to /about.html, /contact.html, etc. return the standalone
+  // HTML file instead of being redirected or rewritten to the SPA root.
+  if (request.method === 'GET' && pathname.endsWith('.html')) {
+    const preserved = ['/about.html', '/contact.html', '/privacy.html', '/terms.html', '/dmca.html']
+    if (preserved.includes(pathname)) {
+      try {
+        const pagesOrigin = 'https://h5games-poki2.pages.dev'
+        const fileResp = await fetch(pagesOrigin + pathname, { redirect: 'follow' })
+        // Return the file response as-is (headers/status preserved)
+        return fileResp
+      } catch (e) {
+        // If fetching the specific file fails, fall through to normal handling
+      }
+    }
+  }
   // For SPA-style paths (no file extension) serve the site root so the client
   // router can handle the route. This avoids relying on Pages returning index
   // for every path and prevents a 404 reaching the client.
