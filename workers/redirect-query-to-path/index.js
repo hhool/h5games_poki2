@@ -6,6 +6,12 @@ async function handle(request) {
   const url = new URL(request.url)
   const qs = url.search || ''
   const pathname = url.pathname || '/'
+  // Normalize duplicate slashes in the pathname (e.g. // -> /, /a//b -> /a/b)
+  const collapsed = pathname.replace(/\/\/{2,}/g, '/')
+  if (collapsed !== pathname) {
+    const to = `${url.protocol}//${url.host}${collapsed}${url.search || ''}`
+    return Response.redirect(to, 301)
+  }
   // match ?play-xxx or ?play=xxx or ?game=xxx or ?id=123
   const m = qs.match(/play-([^&]+)/) || qs.match(/[?&](?:play|game|id)=([^&]+)/)
   if (m) {
@@ -46,9 +52,15 @@ async function handle(request) {
           // If the document doesn't declare a <base>, inject one pointing to the site root.
           // This makes relative asset paths like `css/style.css` resolve to `/css/...` when
           // the page is served at nested paths such as `/games/2048`.
+          // Inject a <base> if missing so relative assets resolve correctly when
+          // the index is returned at nested paths. Also inject a small client-side
+          // normalizer that collapses duplicate slashes in the address bar.
           if (!/<base\s+href=/i.test(bodyText)) {
             bodyText = bodyText.replace(/<head([^>]*)>/i, '<head$1><base href="/" />')
           }
+          // The client already contains an inline collapse-slashes normalizer in
+          // `index.html`. Do not inject a duplicate normalizer from the Worker
+          // to avoid duplicate execution and script-id collisions.
           const headers = new Headers(indexResp.headers)
           headers.set('content-type', 'text/html; charset=utf-8')
           return new Response(bodyText, { status: 200, statusText: 'OK', headers })
