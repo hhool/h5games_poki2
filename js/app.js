@@ -616,7 +616,59 @@
     highlightSidebarItem(null);
     $searchInput.value = "";
     window.scrollTo({ top: 0, behavior: "smooth" });
-    history.replaceState({ view: "home" }, "", location.pathname);
+    // Sanitize pathname to avoid protocol-relative edge cases like '//' which
+    // can be interpreted as a protocol-relative URL and cause SecurityError
+    // when passed to history.replaceState. Collapse repeated slashes first.
+    try {
+      // If the full href contains duplicate leading slashes after the origin
+      // (e.g. https://site.com//path), normalize by replacing the leading
+      // run of slashes with a single slash and navigate there. Using
+      // `location.replace` avoids history.replaceState throwing in some
+      // browser/webview combinations that reject protocol-relative URLs.
+      try {
+        const origin = (location.origin || (location.protocol + '//' + location.host));
+        const after = location.href.slice(origin.length);
+        if (after && after.indexOf('//') === 0) {
+          const cleaned = origin + after.replace(/^\/+/, '/');
+          if (cleaned !== location.href) {
+            window.location.replace(cleaned);
+            return;
+          }
+        }
+      } catch (e) {
+        /* ignore origin/URL parsing errors */
+      }
+
+      let safePath = (location.pathname || '').replace(/\/\/{2,}/g, '/');
+      if (!safePath.startsWith('/')) safePath = '/' + safePath;
+
+      // If the current pathname contains an abnormal leading '//' or other
+      // duplicate-slash situation that some third-party scripts handle by
+      // constructing absolute URLs, avoid calling replaceState which may
+      // throw in some browsers. Instead, perform a location.replace to
+      // reload at the cleaned canonical path which resolves the issue.
+      // If collapsing repeated slashes changes the pathname, perform a
+      // full navigation to the canonical path. This avoids calling
+      // history.replaceState with a malformed URL that some browsers reject.
+      const target = safePath + (location.search || '') + (location.hash || '');
+      // Debug help: log pathname vs safePath when collapse occurs
+      try {
+        if (safePath !== (location.pathname || '')) console.log('[route] safePath cleanup', { pathname: location.pathname, safePath: safePath, target: target });
+      } catch (e) {}
+      if (safePath !== (location.pathname || '')) {
+        // Only navigate if the target differs to avoid reload loops
+        if (target !== (location.pathname || '') + (location.search || '') + (location.hash || '')) {
+          window.location.replace(target);
+          return; // navigation scheduled
+        }
+      }
+
+      // Otherwise update history state using a path-only URL
+      history.replaceState({ view: "home" }, "", safePath);
+    } catch (e) {
+      // If replaceState still fails for any reason, fallback to no-op.
+      console.warn('[route] history.replaceState failed to set home state', e && e.message ? e.message : e);
+    }
   }
 
   function showCategory(tag) {
