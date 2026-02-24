@@ -485,17 +485,6 @@
     "use_overlay_title": false
   },
   {
-    "title": "Doge Miner",
-    "link": "https://d.poki2.online/DogeMiner/",
-    "imgSrc": "https://d.poki2.online/DogeMiner/icon.png",
-    "tags": ["other"],
-    "input": ["touch", "keyboard"],
-    "orientation": "landscape",
-    "avalid": ["desktop"],
-    "show": true,
-    "use_overlay_title": false
-  },
-  {
     "title": "Doodle Jump",
     "link": "https://d.poki2.online/doodle-jump/",
     "imgSrc": "https://d.poki2.online/doodle-jump/icon.png",
@@ -646,17 +635,6 @@
     "use_overlay_title": false
   },
   {
-    "title": "Kitten Cannon",
-    "link": "https://k.poki2.online/kittencannon/",
-    "imgSrc": "https://k.poki2.online/kittencannon/icon.png",
-    "tags": ["shooting", "competitive", "cannon"],
-    "input": ["touch", "keyboard"],
-    "orientation": "landscape",
-    "avalid": ["desktop"],
-    "show": true,
-    "use_overlay_title": false
-  },
-  {
     "title": "Krunker",
     "link": "https://k.poki2.online/krunker/",
     "imgSrc": "https://k.poki2.online/krunker/icon.png",
@@ -723,50 +701,6 @@
     "use_overlay_title": false
   },
   {
-    "title": "MotoX3M",
-    "link": "https://m.poki2.online/motox3m/",
-    "imgSrc": "https://m.poki2.online/motox3m/icon.png",
-    "tags": ["racing", "sports", "taptap"],
-    "input": ["touch","keyboard"],
-    "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
-    "show": true,
-    "use_overlay_title": false
-  },
-  {
-    "title": "MotoX3M Pool",
-    "link": "https://m.poki2.online/motox3m-pool/",
-    "imgSrc": "https://m.poki2.online/motox3m-pool/icon.png",
-    "tags": ["racing", "sports"],
-    "input": ["touch", "keyboard"],
-    "orientation": "landscape",
-    "avalid": ["desktop"],
-    "show": true,
-    "use_overlay_title": false
-  },
-  {
-    "title": "MotoX3M Spooky",
-    "link": "https://m.poki2.online/motox3m-spooky/",
-    "imgSrc": "https://m.poki2.online/motox3m-spooky/icon.png",
-    "tags": ["racing", "sports"],
-    "input": ["touch", "keyboard"],
-    "orientation": "landscape",
-    "avalid": ["desktop"],
-    "show": true,
-    "use_overlay_title": false
-  },
-  {
-    "title": "MotoX3M Winter",
-    "link": "https://m.poki2.online/motox3m-winter/",
-    "imgSrc": "https://m.poki2.online/motox3m-winter/icon.png",
-    "tags": ["racing", "sports"],
-    "input": ["touch", "keyboard"],
-    "orientation": "landscape",
-    "avalid": ["desktop"],
-    "show": true,
-    "use_overlay_title": false
-  },
-  {
     "title": "n-gon",
     "link": "https://n.poki2.online/n-gon/",
     "imgSrc": "https://n.poki2.online/n-gon/icon.png",
@@ -774,17 +708,6 @@
     "input": ["keyboard"],
     "orientation": "landscape",
     "avalid": ["desktop"],
-    "show": true,
-    "use_overlay_title": false
-  },
-  {
-    "title": "NS-Shaft",
-    "link": "https://n.poki2.online/ns-shaft/",
-    "imgSrc": "https://n.poki2.online/ns-shaft/icon.png",
-    "tags": ["achievement", "jump", "idle"],
-    "input": ["touch", "keyboard"],
-    "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
     "show": true,
     "use_overlay_title": false
   },
