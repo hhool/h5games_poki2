@@ -1068,6 +1068,17 @@
     "use_overlay_title": false
   },
   {
+    "title": "Alien Attack",
+    "link": "https://mobileapp.poki2.online/mobile/alienattack/",
+    "imgSrc": "https://mobileapp.poki2.online/mobile/alienattack/icon-256.png",
+    "tags": ["competitive", "io", "multiplayer"],
+    "input": ["touch", "keyboard"],
+    "orientation": "both",
+    "avalid": ["mobile", "desktop"],
+    "show": true,
+    "use_overlay_title": false
+  },
+  {
     "title": "Balance Ball",
     "link": "https://mobileapp.poki2.online/mobile/balanceball/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/balanceball/assets/conMain.png",
