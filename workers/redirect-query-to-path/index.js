@@ -6,23 +6,31 @@ async function handle(request) {
   const url = new URL(request.url);
   const pathname = url.pathname || "/";
 
-  // 透明代理: /games/<slug>/ -> pickShardOrigin(slug)/<slug>/index.html
+  // 透明代理: /games/<slug> -> pickShardOrigin(slug)/<slug>/index.html
   if (request.method === "GET") {
-    // 特殊映射：/games/mobileapp_mobile/<game>/  -> https://mobileapp.poki2.online/mobile/<mapped-game>/
-    const mMobile = pathname.match(
+    // get slug
+    // check slug with extension, if has ext, pass through
+    if (pathname.match(/^\/games\/[^\/]+\.[^\/]+$/)) {
+      return fetch(request);
+    }
+    // normalize /games/<slug>/ to /games/<slug>
+    const normalizedPath = pathname.replace(/\/$/, "");
+    // 特殊映射：/games/mobileapp_mobile/<slug>  -> https://mobileapp.poki2.online/mobile/<slug>/
+    const mMobile = normalizedPath.match(
       /^\/games\/mobileapp_mobile\/([^\/]+)(\/.*)?$/i,
     );
+    // mMobile[0] is the full match, mMobile[1] is slug, mMobile[2] is optional extra path (like /index.html), we should preserve it when redirecting
     if (mMobile) {
       const game = mMobile[1];
-      const rest = mMobile[2] || "/";
+      const extraPath = mMobile[2] || "/";
       const targetGame = game;
-      const fetchUrl = `https://mobileapp.poki2.online/mobile/${encodeURIComponent(targetGame)}${rest}`;
+      const fetchUrl = `https://mobileapp.poki2.online/mobile/${encodeURIComponent(targetGame)}${extraPath}`;
       // preserve query
       const finalUrl = url.search ? fetchUrl + url.search : fetchUrl;
       return fetch(finalUrl, { redirect: "follow" });
     }
 
-    const m = pathname.match(/^\/games\/([^\/]+)\/?$/i);
+    const m = normalizedPath.match(/^\/games\/([^\/]+)\/?$/i);
     if (m) {
       const slug = m[1];
       const shardOrigin = pickShardOrigin(slug);
