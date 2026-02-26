@@ -314,7 +314,7 @@
   {
     "title": "Cannon Basketball 4",
     "link": "https://c.poki2.online/cannon-basketball-4/",
-    "imgSrc": "https://c.poki2.online/cannon-basketball-4/icon.png",
+    "imgSrc": "https://c.poki2.online/cannon-basketball-4/img/splash.png",
     "tags": ["achievement", "idle", "cannon", "singleplayer", "competitive"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -325,7 +325,7 @@
   {
     "title": "Cell Machine",
     "link": "https://c.poki2.online/cell-machine/",
-    "imgSrc": "https://c.poki2.online/cell-machine/icon.png",
+    "imgSrc": "https://c.poki2.online/cell-machine/img/te9nDu.png",
     "tags": ["puzzle", "pixel", "idle", "singleplayer", "competitive"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -347,7 +347,7 @@
   {
     "title": "circlO",
     "link": "https://c.poki2.online/circlo/",
-    "imgSrc": "https://c.poki2.online/circlo/icon.png",
+    "imgSrc": "https://c.poki2.online/circlo/img/download.png",
     "tags": ["other"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
@@ -380,7 +380,7 @@
   {
     "title": "CS:GO Clicker",
     "link": "https://c.poki2.online/csgo-clicker/",
-    "imgSrc": "https://c.poki2.online/csgo-clicker/icon.png",
+    "imgSrc": "https://c.poki2.online/csgo-clicker/images/case1.png",
     "tags": ["shooting", "competitive"],
     "input": ["touch", "keyboard"],
     "orientation": "both",
@@ -602,13 +602,24 @@
     "use_overlay_title": false
   },
   {
-    "title": "Impossible Quiz",
-    "link": "https://i.poki2.online/impossiblequiz/",
-    "imgSrc": "https://i.poki2.online/impossiblequiz/icon.png",
+    "title": "Helicopter",
+    "link": "https://h.poki2.online/helicopter/",
+    "imgSrc": "https://h.poki2.online/helicopter/helicopter.png",
     "tags": ["other"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
     "avalid": ["mobile", "desktop"],
+    "show": true,
+    "use_overlay_title": false
+  },
+  {
+    "title": "HexGL",
+    "link": "https://h.poki2.online/hexgl/",
+    "imgSrc": "https://h.poki2.online/hexgl/icon.png",
+    "tags": ["racing", "futuristic", "webgl"],
+    "input": ["touch", "keyboard"],
+    "orientation": "landscape",
+    "avalid": ["desktop"],
     "show": true,
     "use_overlay_title": false
   },
@@ -648,7 +659,7 @@
   {
     "title": "Meme 2048",
     "link": "https://m.poki2.online/meme2048/",
-    "imgSrc": "https://m.poki2.online/meme2048/icon.png",
+    "imgSrc": "https://m.poki2.online/meme2048/img/honey_badger.jpg",
     "tags": ["puzzle", "2048"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
@@ -659,7 +670,7 @@
   {
     "title": "Eaglercraft",
     "link": "https://m.poki2.online/minecraft/",
-    "imgSrc": "https://m.poki2.online/minecraft/icon.png",
+    "imgSrc": "https://m.poki2.online/minecraft/splash.jpeg",
     "tags": ["arcade", "shooting", "pixel"],
     "input": ["keyboard"],
     "orientation": "landscape",
