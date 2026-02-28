@@ -325,6 +325,14 @@
         </svg>
     </button>
 
+    <style id="back-to-top-inline-style">
+        /* Keep fixed and topmost but do not force visibility — preserve original show/hide logic */
+        .back-to-top{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom, 0px));z-index:2147483647 !important;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:#1f6feb;color:#ffffff;box-shadow:0 10px 26px rgba(31,111,235,0.24);border:0;transition:transform .18s ease,box-shadow .18s ease,opacity .18s ease}
+        .back-to-top svg{stroke:currentColor}
+        .back-to-top:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(31,111,235,0.28)}
+        .back-to-top.hidden{opacity:0;pointer-events:none}
+    </style>
+
     <!-- Game detail interstitial -->
     <div class="game-detail" id="game-detail">
         <div class="detail-backdrop" id="detail-backdrop"></div>

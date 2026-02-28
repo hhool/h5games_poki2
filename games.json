@@ -336,7 +336,7 @@
   {
     "title": "Chrome Dino",
     "link": "https://c.poki2.online/chrome-dino/",
-    "imgSrc": "https://c.poki2.online/chrome-dino/icon.png",
+    "imgSrc": "https://c.poki2.online/chrome-dino/icons/icon-256.png",
     "tags": ["idle", "competitive", "chrome"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -358,7 +358,7 @@
   {
     "title": "Connect 3",
     "link": "https://c.poki2.online/connect3/",
-    "imgSrc": "https://c.poki2.online/connect3/icon.png",
+    "imgSrc": "https://c.poki2.online/connect3/connect3.png",
     "tags": ["puzzle", "idle"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
@@ -369,7 +369,7 @@
   {
     "title": "CraftMine",
     "link": "https://c.poki2.online/craftmine/",
-    "imgSrc": "https://c.poki2.online/craftmine/icon.png",
+    "imgSrc": "https://c.poki2.online/craftmine/images/craftmine.png",
     "tags": ["racing", "arcade"],
     "input": ["keyboard"],
     "orientation": "landscape",
@@ -391,7 +391,7 @@
   {
     "title": "Cut the Rope",
     "link": "https://c.poki2.online/ctr/",
-    "imgSrc": "https://c.poki2.online/ctr/icon.png",
+    "imgSrc": "https://c.poki2.online/ctr/logo.png",
     "tags": ["achievement", "strategy", "cut", "rope"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -402,7 +402,7 @@
   {
     "title": "Cut the Rope Holiday",
     "link": "https://c.poki2.online/ctr-holiday/",
-    "imgSrc": "https://c.poki2.online/ctr-holiday/icon.png",
+    "imgSrc": "https://c.poki2.online/ctr-holiday/images/1024/ui/ph_logo.png",
     "tags": ["achievement", "strategy", "holiday", "cut", "rope"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
@@ -413,7 +413,7 @@
   {
     "title": "Cut the Rope Time Travel",
     "link": "https://c.poki2.online/ctr-tr/",
-    "imgSrc": "https://c.poki2.online/ctr-tr/icon.png",
+    "imgSrc": "https://c.poki2.online/ctr-tr/logo.png",
     "tags": ["achievement", "strategy", "time", "travel", "cut", "rope"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
@@ -424,7 +424,7 @@
   {
     "title": "Cupcake 2048",
     "link": "https://c.poki2.online/cupcake2048/",
-    "imgSrc": "https://c.poki2.online/cupcake2048/icon.png",
+    "imgSrc": "https://c.poki2.online/cupcake2048/favicon.png",
     "tags": ["puzzle", "2048", "cupcake"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",
@@ -648,7 +648,7 @@
   {
     "title": "Krunker",
     "link": "https://k.poki2.online/krunker/",
-    "imgSrc": "https://k.poki2.online/krunker/icon.png",
+    "imgSrc": "https://k.poki2.online/krunker/img/krunker-io.jpg",
     "tags": ["strategy", "shooting", "io", "multiplayer"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -681,7 +681,7 @@
   {
     "title": "Minesweeper",
     "link": "https://m.poki2.online/minesweeper/",
-    "imgSrc": "https://m.poki2.online/minesweeper/icon.png",
+    "imgSrc": "https://m.poki2.online/minesweeper/img/minesweeper.png",
     "tags": ["puzzle", "idle", "sweeping", "classic"],
     "input": ["touch", "keyboard"],
     "orientation": "both",
@@ -692,7 +692,7 @@
   {
     "title": "Mini-putt",
     "link": "https://m.poki2.online/miniputt/",
-    "imgSrc": "https://m.poki2.online/miniputt/icon.png",
+    "imgSrc": "https://m.poki2.online/miniputt/miniputt.png",
     "tags": ["idle", "golf", "sports"],
     "input": ["touch", "keyboard"],
     "orientation": "landscape",
@@ -703,7 +703,7 @@
   {
     "title": "Missiles",
     "link": "https://m.poki2.online/missiles/",
-    "imgSrc": "https://m.poki2.online/missiles/icon.png",
+    "imgSrc": "https://m.poki2.online/missiles/miss.png",
     "tags": ["idle", "rocket", "singleplayer", "competitive"],
     "input": ["touch", "keyboard"],
     "orientation": "portrait",

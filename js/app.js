@@ -37,7 +37,8 @@
     "idle",
     "other",
   ];
-  const SECTION_LIMIT = 12;
+  // Maximum games to show per category section (configurable constant)
+  const SECTION_LIMIT = 9;
   const HERO_FEATURED_COUNT = 6;
   const RECENT_KEY = "poki2_recent";
   const MAX_RECENT = 12;
@@ -211,6 +212,15 @@
   let userExitedFullscreen = false; // track intentional exit vs close
 
   /* ---------- Helpers ---------- */
+  /** Escape text for safe insertion into innerHTML */
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
   /** Schedule work to run during an idle period (fallback to setTimeout). Returns a Promise resolved after cb runs. */
   function scheduleIdle(cb, opts = { timeout: 50 }) {
     return new Promise((res) => {
@@ -417,7 +427,10 @@
     info.className = "game-card-info";
     const title = document.createElement("div");
     title.className = "game-card-title";
-    title.textContent = game.title || "";
+    // Ensure a readable fallback title is always present in the DOM so
+    // category views reliably show a label under each icon.
+    title.textContent = game.title || normalizeHref(game.link) || "Untitled";
+    title.setAttribute('aria-label', title.textContent);
     info.appendChild(title);
 
     el.appendChild(img);
@@ -616,6 +629,9 @@
     highlightSidebarItem(null);
     $searchInput.value = "";
     window.scrollTo({ top: 0, behavior: "smooth" });
+    // Move keyboard focus to the search input for Home so screen readers
+    // announce primary content and keyboard users can start searching.
+    try { if ($searchInput && typeof $searchInput.focus === 'function') $searchInput.focus(); } catch (e) {}
     // Sanitize pathname to avoid protocol-relative edge cases like '//' which
     // can be interpreted as a protocol-relative URL and cause SecurityError
     // when passed to history.replaceState. Collapse repeated slashes first.
@@ -673,37 +689,58 @@
 
   function showCategory(tag) {
     currentView = "category";
-    // Update measured footer values before mutating layout to avoid visual jumps
+    // Normalize incoming tag to a canonical key present in TAG_ORDER.
+    // This handles cases where callers pass a visible label (e.g. "Competitive")
+    // or a hash with different casing. After mapping, `tag` will be the
+    // canonical lowercase key used across tagMap/TAG_ORDER.
+    try {
+      const inTag = String(tag || '').toLowerCase().trim();
+      let canonical = null;
+      if (TAG_ORDER.includes(inTag)) canonical = inTag;
+      else {
+        // Try to match by visible label in TAG_META or by substring match
+        for (const key of TAG_ORDER) {
+          const lbl = ((TAG_META[key] && TAG_META[key].label) || key).toString().toLowerCase();
+          if (lbl === inTag || lbl.indexOf(inTag) >= 0 || inTag.indexOf(lbl) >= 0) {
+            canonical = key;
+            break;
+          }
+        }
+      }
+      if (canonical) tag = canonical;
+    } catch (e) {
+      /* ignore and continue with original tag */
+    }
+    // Reflect selection in the sidebar so the clicked category appears active.
+    // Use the robust highlightSidebarItem (case-insensitive) and ensure the
+    // matching nav item receives focus where possible.
+    try {
+      highlightSidebarItem(tag);
+      if ($sidebarNav) {
+        const norm = String(tag || '').toLowerCase().trim();
+        const match = Array.from($sidebarNav.querySelectorAll('.nav-item')).find((el) => {
+          return (el.dataset.tag || '').toString().toLowerCase().trim() === norm;
+        });
+        if (match && typeof match.focus === 'function') match.focus();
+      }
+    } catch (e) {}
     try { if (window.footerMeasure && typeof window.footerMeasure.update === 'function') window.footerMeasure.update(); } catch (e) {}
-    // Ensure category pages pin the footer to viewport bottom
     if (document && document.body) document.body.classList.add('full-bleed-footer');
     $hero.style.display = "none";
     $recentSection.style.display = "none";
     $searchResults.style.display = "none";
-    // Preserve current height to avoid layout jumps while swapping content
-    try {
-      const prevH = $gameSections.getBoundingClientRect().height || 0;
-      if (prevH) $gameSections.style.minHeight = prevH + 'px';
-    } catch (e) { /* ignore */ }
 
+    // Build paged, full-screen sections. Each "page" contains up to SECTION_LIMIT games.
+    const games = tagMap[tag] || [];
+    if (!games.length) return;
+
+    
+
+    // Header + pages container
     $gameSections.innerHTML = `
       <section class="category-section">
         <div class="section-header">
-          <h2 class="section-title"><span class="skeleton skeleton-text" style="width:120px;height:22px"></span></h2>
-        </div>
-        <div class="game-grid">
-          <div class="skeleton skeleton-card"></div>
-          <div class="skeleton skeleton-card"></div>
-          <div class="skeleton skeleton-card"></div>
-          <div class="skeleton skeleton-card"></div>
-          <div class="skeleton skeleton-card"></div>
-          <div class="skeleton skeleton-card"></div>
-          <div class="skeleton skeleton-card"></div>
-          <div class="skeleton skeleton-card"></div>
-          <div class="skeleton skeleton-card"></div>
-          <div class="skeleton skeleton-card"></div>
-          <div class="skeleton skeleton-card"></div>
-          <div class="skeleton skeleton-card"></div>
+          <h2 class="section-title"><button class="category-refresh" type="button"><span class="emoji">${(TAG_META[tag]||{}).emoji||'🎲'}</span> ${(TAG_META[tag]||{}).label||tag}</button></h2>
         </div>
       </section>
     `;
@@ -736,11 +773,23 @@
           requestAnimationFrame(() => { $gameSections.style.minHeight = ''; });
         }
       } catch (e) { /* ignore */ }
-    }, 200);
-    
-    highlightSidebarItem(tag);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    history.pushState({ view: "category", tag }, "", "#" + tag);
+        // Recompute fixed-size/pager spacing now that pager was (re)rendered
+        try { if (pager.parentNode) computeAndApplyFixedSize(activeIndex); } catch (e) { /* ignore */ }
+        // Move focus to the category header button (if present) or the
+        // first focusable card so keyboard users land at the content.
+        try {
+          const hdrBtn = $gameSections.querySelector('.section-header .category-refresh');
+          if (hdrBtn && typeof hdrBtn.focus === 'function') {
+            hdrBtn.focus();
+          } else {
+            const firstCard = $gameSections.querySelector('.game-card, .game-card a, .game-card button');
+            if (firstCard) {
+              if (typeof firstCard.focus === 'function') firstCard.focus();
+              else { firstCard.tabIndex = -1; firstCard.focus(); }
+            }
+          }
+        } catch (e) {}
+    }, 300);
   }
 
   // Ensure a spacer exists under short category content so footer sits flush
@@ -868,6 +917,74 @@
     highlightSidebarItem(null);
   }
 
+  // Robust pager page switcher: safely show a page, hide others, pause media
+  // on hidden pages, set aria-hidden, and best-effort prefetch adjacent pages.
+  const showPage = async (idx) => {
+    try {
+      if (!pageEls || !pageEls.length) return;
+      idx = Number(idx) || 0;
+      if (idx < 0) idx = 0;
+      if (idx >= pageEls.length) idx = pageEls.length - 1;
+
+      const prev = typeof __currentPagerIndex === 'number' ? __currentPagerIndex : 0;
+
+      for (let i = 0; i < pageEls.length; i++) {
+        const el = pageEls[i];
+        const active = i === idx;
+        try { el.style.display = active ? '' : 'none'; } catch (e) {}
+        try { el.setAttribute && el.setAttribute('aria-hidden', active ? 'false' : 'true'); } catch (e) {}
+
+        // If we're hiding the previously-active page, attempt to pause heavy
+        // resources (video/audio/iframe) to free memory and stop playback.
+        if (!active && i === prev) {
+          try {
+            const medias = el.querySelectorAll && el.querySelectorAll('video,audio,iframe');
+            if (medias && medias.length) {
+              medias.forEach((m) => {
+                try {
+                  if (m.tagName === 'IFRAME') {
+                    // best-effort sandboxing: replace src to unload content
+                    if (m.src && !m.src.startsWith('about:blank')) m.dataset._poki_old_src = m.src;
+                    m.src = 'about:blank';
+                  } else if (typeof m.pause === 'function') {
+                    m.pause();
+                    try { m.currentTime = 0; } catch (e) {}
+                  }
+                } catch (e) {}
+              });
+            }
+          } catch (e) {}
+        }
+      }
+
+      __currentPagerIndex = idx;
+      try { renderPager && renderPager(idx); } catch (e) {}
+
+      // Ensure visible page is populated and prefetch neighbors; failures are non-fatal
+      try { if (typeof ensurePagePopulated === 'function') await ensurePagePopulated(pageEls[idx]); } catch (e) {}
+      try { if (pageEls[idx + 1] && typeof ensurePagePopulated === 'function') ensurePagePopulated(pageEls[idx + 1]); } catch (e) {}
+      try { if (pageEls[idx - 1] && typeof ensurePagePopulated === 'function') ensurePagePopulated(pageEls[idx - 1]); } catch (e) {}
+
+      try { pageEls[idx].scrollIntoView && pageEls[idx].scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) {}
+      // Update keyboard focus to the visible page: prefer a focusable control
+      // within the page, otherwise focus the page container itself.
+      try {
+        const page = pageEls[idx];
+        if (page) {
+          const focusable = page.querySelector && page.querySelector('button,a,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])');
+          if (focusable && typeof focusable.focus === 'function') {
+            focusable.focus();
+          } else {
+            page.tabIndex = -1;
+            if (typeof page.focus === 'function') page.focus();
+          }
+        }
+      } catch (e) {}
+    } catch (err) {
+      console.warn('[pager] showPage error', err && err.message ? err.message : err);
+    }
+  };
+
   /* ---------- Sidebar ---------- */
   function buildSidebar() {
     $sidebarNav.innerHTML = "";
@@ -901,13 +1018,34 @@
   }
 
   function highlightSidebarItem(tag) {
-    for (const el of $sidebarNav.querySelectorAll(".nav-item")) {
-      const isActive = tag
-        ? el.dataset.tag === tag
-        : el.dataset.tag === "__home";
-      el.classList.toggle("active", isActive);
-      if (isActive) el.setAttribute("aria-current", "page");
-      else el.removeAttribute("aria-current");
+    try {
+      const norm = tag ? String(tag).toLowerCase().trim() : "__home";
+      for (const el of $sidebarNav.querySelectorAll(".nav-item")) {
+        const dataTag = (el.dataset.tag || "").toString().toLowerCase().trim();
+        // Normalize visible label (remove counts/bad chars) for best-effort match
+        const rawLabel = (el.textContent || el.innerText || "").toString();
+        const normLabel = rawLabel.replace(/[0-9\(\)\s]+/g, ' ').replace(/[^a-z0-9 ]+/gi, ' ').trim().toLowerCase();
+        const isActive = norm === "__home"
+          ? dataTag === "__home" || normLabel === "home"
+          : dataTag === norm || normLabel === norm || normLabel.indexOf(norm) >= 0 || norm.indexOf(normLabel) >= 0;
+
+        // Debugging help: expose match diagnostics when dev flag enabled
+        try {
+          if (window && window.__POKI2_DEBUG_HIGHLIGHT) {
+            console.debug('[highlight] tag=', tag, 'norm=', norm, 'elTag=', dataTag, 'label=', normLabel, 'isActive=', isActive);
+          }
+        } catch (e) {}
+
+        el.classList.toggle("active", isActive);
+        if (isActive) {
+          try { el.setAttribute("aria-current", "page"); } catch (e) {}
+          try { if (typeof el.focus === 'function') el.focus(); } catch (e) {}
+        } else {
+          try { el.removeAttribute("aria-current"); } catch (e) {}
+        }
+      }
+    } catch (e) {
+      /* defensive - if sidebar isn't present yet, ignore */
     }
   }
 

@@ -4,10 +4,14 @@
   padding: 1px; /* inset effective drawing area by 1px */
 }
 .game-card-img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  aspect-ratio: 1 / 1; /* enforce square thumbnails */
+  object-fit: cover; /* crop to fill while keeping subject centered */
+  object-position: center center;
   background-color: #f3f4f6; /* neutral fallback while images load */
+  border-top-left-radius: calc(var(--card-radius) - 1px);
+  border-top-right-radius: calc(var(--card-radius) - 1px);
 }
 
 /* WebP support detection and optimization */
@@ -114,6 +118,11 @@
   --overlay-bar-h: 48px;
   /* footer spacing to prevent overlap with content and overlays */
   --footer-h: 120px;
+  /* row height used to compute 3-row category pages height
+     Adjusted in media queries below for responsiveness */
+  --category-row-h: 220px;
+  /* height reserved for the card title/info area inside each card */
+  --card-info-h: 48px;
 }
 
 html{font-size:16px;scroll-behavior:smooth}
@@ -281,7 +290,8 @@ input{font:inherit}
   margin-top:8px;
 }
 .hero-card{
-  width:90px;height:90px;
+  width: clamp(72px, 9vw, 120px);
+  height: clamp(72px, 9vw, 120px);
   border-radius:14px;overflow:hidden;
   cursor:pointer;
   /* animate transform only for compositing; apply shadow instantly on hover */
@@ -296,11 +306,15 @@ input{font:inherit}
 .hero-card,
 .game-card-img{
   display:block;
-  width:90px;
-  height:90px;
+  width: clamp(72px, 9vw, 120px);
+  height: clamp(72px, 9vw, 120px);
   aspect-ratio:1 / 1;
   object-position:center center !important;
   background-color:#f3f4f6;
+}
+.game-card-img{
+  display:block;
+  aspect-ratio:1 / 1;
 }
 
 /* ---- Recently Played ---- */
@@ -325,27 +339,47 @@ input{font:inherit}
 
 /* ---- Section ---- */
 .category-section{
-  padding:24px 20px 8px;
+  padding:12px 20px 8px;
+  /* constrain each category to a centered content column */
+  max-width:1200px;
+  margin:0 auto;
+  box-sizing:border-box;
 }
 .section-header{
-  display:flex;align-items:center;justify-content:space-between;
-  margin-bottom:14px;
+  display:flex;
+  align-items:baseline;
+  justify-content:flex-start;
+  gap:12px;
+  margin-bottom:12px; /* match index spacing */
 }
-.section-title{
-  font-size:1.15rem;font-weight:700;
-  display:flex;align-items:center;gap:8px;
+.section-header .section-title{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:0;
+  font-size:1.15rem;
+  font-weight:700;
 }
 .section-title .emoji{font-size:1.2rem}
-.see-all{
-  font-size:.85rem;font-weight:600;color:var(--brand);
-  padding:4px 10px;border-radius:16px;
+.section-header .see-all{
+  margin-left:6px;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  line-height:1;
+  vertical-align:baseline;
+  font-size:.85rem;
+  font-weight:600;
+  color:var(--brand);
+  padding:4px 10px;
+  border-radius:16px;
   transition:background .15s;
 }
 .see-all:hover{background:var(--brand-light)}
 
+
 /* ---- Sidebar badge ---- */
 .nav-badge{
-  margin-left:auto;
   font-size:.7rem;font-weight:600;
   /* Opaque white background with dark text for good contrast on the dark sidebar */
   background:#ffffff;
@@ -364,8 +398,11 @@ input{font:inherit}
 /* ---- Game grid ---- */
 .game-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(130px,1fr));
+  /* use fixed-ish column sizing so the grid can be centered
+     and not stretch every card to full width on large viewports */
+  grid-template-columns:repeat(auto-fill,minmax(140px,160px));
   gap:12px;
+  justify-content:center;
 }
 
 .game-card{
@@ -387,22 +424,34 @@ input{font:inherit}
 }
 .game-card-img{
   width:100%;
-  aspect-ratio:4 / 3;
-  /* show the entire game image (no cropping) */
-  object-fit:contain;
+  /* make the thumbnail square */
+  aspect-ratio:1 / 1;
+  /* crop to fill the square while keeping content centered */
+  object-fit:cover;
   object-position:center center;
-  /* use the card's default background (inherit from .game-card) */
   background:transparent;
-  /* round inner image corners to match inset area */
-  border-radius:calc(var(--card-radius) - 1px);
+  /* only round the top corners of the image */
+  border-top-left-radius: calc(var(--card-radius) - 1px);
+  border-top-right-radius: calc(var(--card-radius) - 1px);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  display:block;
 }
 .game-card-info{
   padding:8px 10px;
+  /* preserve shape but round only the bottom corners */
+  border-bottom-left-radius: calc(var(--card-radius) - 1px);
+  border-bottom-right-radius: calc(var(--card-radius) - 1px);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background: var(--surface-2);
+  color: var(--text);
 }
 .game-card-title{
   font-size:.82rem;font-weight:600;
   display:block;width:100%;text-align:center;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  color: inherit;
 }
 
 /* ---- Full category page (all games of one tag) ---- */
@@ -413,6 +462,304 @@ input{font:inherit}
   padding:0 20px calc(30px + var(--footer-h)); /* 增加底部空间防止footer遮挡 */
 }
 
+/* Category pages: present a single "page" per viewport and lazy-populate next pages */
+.category-pages{display:block}
+.category-page{
+  /* allow the page to size naturally (no fixed height) so image + title
+     never get clipped; JS controls pagination and visible page counts */
+  min-height: auto;
+  padding: 18px 20px 24px;
+  box-sizing: border-box;
+  display:block;
+}
+.category-page .game-grid{
+  width:100%;
+  /* match the index `.game-grid` sizing so visuals (card width/height/radius)
+     are identical between index and category views */
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px,160px));
+  gap:12px;
+  justify-content:center;
+}
+/* Cards inside category pages should use the same natural sizing as index
+   cards: square thumbnail (aspect-ratio) with title/info below. Do not
+   force a fixed total row height — this prevents clipping on small viewports. */
+.category-page .game-card {
+  position:relative;
+  border-radius:var(--card-radius);
+  overflow:hidden;
+  background:var(--surface);
+  padding:1px;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+  display:flex;
+  flex-direction:column;
+}
+.category-page .game-card .game-card-img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+}
+.category-page .game-card .game-card-info{
+  padding:8px 10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.category-summary{
+  margin:12px auto 20px;
+  color:var(--text-muted);
+  font-size:0.95rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+  border-radius:10px;
+  padding:10px 14px;
+  border:1px solid rgba(0,0,0,0.04);
+  box-shadow:0 6px 18px rgba(12,24,40,0.04);
+}
+.category-summary .category-desc{margin:0 0 6px;color:var(--text-muted)}
+.category-summary .category-meta{margin:0;font-size:0.9rem;color:var(--text-muted)}
+
+/* Tidy up section headers: title left, actions right */
+.section-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:12px;
+}
+/* ===== Category pages + summary (paginated view, CrazyGames-like) ===== */
+.category-pages {
+  max-width: 1180px;
+  margin: 0 auto 18px;
+  padding: 0 14px;
+  box-sizing: border-box;
+  /* Allow natural height so cards (image + title) can render without clipping.
+     JS still inserts the pager as a sibling and reserves space via padding-bottom. */
+  overflow: visible;
+  position: relative;
+}
+.category-page {
+  display: block;
+  margin: 8px 0 18px;
+  box-sizing: border-box;
+  padding: 8px 0;
+}
+.category-page .game-grid{
+  width:100%;
+  margin-top:0; /* remove extra gap so spacing equals index */
+}
+.category-summary {
+  max-width: 1180px;
+  margin: 6px auto 28px;
+  padding: 16px 18px;
+  background: #ffffff;
+  border: 1px solid rgba(11,18,32,0.06);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(2,6,23,0.04);
+  color: #0b1220;
+}
+.category-summary .category-desc { margin: 0 0 10px; color: #233; line-height:1.5 }
+.category-summary .category-stats { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:10px; font-size:14px }
+.category-summary .category-stats .stat { color:#556; }
+.category-summary .category-samples { margin: 0; color:#444; font-size:14px }
+
+.category-pager {
+  display:flex;
+  gap:var(--pager-gap,40px);
+  align-items:center;
+  justify-content:center;
+  margin: 12px 0 6px;
+  flex-wrap:nowrap;
+  /* slot sizing to prevent layout shift when active page changes */
+  --pager-slot-w: 44px;
+  --pager-gap: 40px;
+  --pager-max-visible: 9; /* prev + 7 numeric + next */
+  /* shrink total pager width by 20% to leave breathing room on smaller viewports */
+  width: calc((var(--pager-slot-w) * var(--pager-max-visible) + var(--pager-gap) * (var(--pager-max-visible) - 1)) * 0.8);
+  max-width: 100%;
+}
+.category-pager button {
+  background: #fff;
+  border: 1px solid rgba(11,18,32,0.08);
+  color: #0b1220;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: var(--pager-slot-w);
+  min-width: var(--pager-slot-w);
+  text-align: center;
+}
+
+/* Fixed slot wrappers so numeric positions remain stable */
+.category-pager .pager-slot{
+  display:inline-flex;
+  width: var(--pager-slot-w);
+  min-width: var(--pager-slot-w);
+  height: calc(var(--pager-slot-w) + 0px);
+  align-items:center;
+  justify-content:center;
+}
+.category-pager .pager-empty{opacity:0;display:inline-block;width:100%;height:100%}
+.category-pager .pager-num{min-width:0;padding:6px 8px;border-radius:8px}
+.category-pager .pager-num.active{background:#1f6feb;color:#fff}
+/* Removed: legacy descendant rule that forced the pager to be static
+  inside `.category-pages`. The pager is now inserted as a sibling and
+  controlled by the `.category-pages + .category-pager.pinned` rule. */
+
+/* If the pager is placed as a sibling immediately after `.category-pages`
+   (preferred), ensure it uses the in-flow 'pinned' styles and doesn't get
+   positioned absolutely by the descendant selector above. This selector
+   targets the common DOM order we enforce in JS and is high-specificity. */
+.category-pages + .category-pager.pinned {
+  position: relative !important;
+  left: auto !important;
+  transform: none !important;
+  bottom: auto !important;
+  /* Use the CSS variable so JS can tweak gap if needed */
+  margin-top: calc(var(--pager-gap, 24px)) !important;
+  z-index: 60 !important;
+  background: rgba(255,255,255,0.98) !important;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06) !important;
+  border: 1px solid rgba(11,18,32,0.06) !important;
+}
+
+/* When we want the pager to remain fixed on-screen during page switches,
+   add the `pinned` class which pins it to the viewport above the footer. */
+.category-pager.pinned {
+  /* Pager placed in the document flow immediately after .category-pages */
+  position: relative !important;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: auto;
+  z-index: 60;
+  background: rgba(255,255,255,0.98);
+  padding: 6px 10px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+  border: 1px solid rgba(11,18,32,0.06);
+  margin-top: 8px;
+}
+
+/* Fixed-size mode: when `.fixed-size` is applied the `.category-pages`
+   container reserves a fixed height based on CSS variables so the pager
+   position is stable and cannot overlap content. The JS sets
+   `--category-rows` and `--pager-gap` when rendering the pager. */
+.category-pages.fixed-size {
+  /* Allow natural height determined by children (images + titles).
+     Previously we forced an explicit height here; remove that so the
+     container can grow/shrink naturally. Keep padding/margin at 0 so
+     reserved spacing is controlled by sibling pager margin instead. */
+  /* Reserve exact space for the pager using measured vars so the
+     pinned pager cannot overlap the last visible row. JS sets
+     --pager-height, --pager-gap and --pager-buffer when rendering. */
+    /* When fixed-size is active we use an explicit inline `height` and a
+      small bottom margin. Avoid extra internal padding so the pager sits
+      cleanly below the container; JS will reserve space by setting the
+      container `height` and applying `margin-bottom`. */
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+  overflow: visible !important;
+}
+.category-pager button:hover { box-shadow: 0 6px 18px rgba(2,6,23,0.06); }
+.category-pager button:disabled { opacity:0.45; cursor:not-allowed }
+.category-pager .pager-num.active {
+  background: #1f6feb;
+  color:#fff;
+  border-color: transparent;
+}
+.category-pager .pager-ellipsis{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width: var(--pager-slot-w);
+  color: var(--text-muted, #556);
+}
+.category-pager .pager-prev, .category-pager .pager-next { font-weight:600 }
+.category-pager .pager-last { margin-left:6px; font-size:13px }
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .category-pages, .category-summary { padding-left:12px; padding-right:12px }
+  .category-page .game-grid { grid-template-columns: repeat(3, 1fr); gap:10px }
+  .category-section .game-grid { grid-template-columns: repeat(3, 1fr) !important; gap:10px !important; }
+  :root{ --category-row-h: 140px; --pager-slot-w:36px; --pager-max-visible:7; }
+  /* Ensure pager fits in narrow portrait: allow it to use full available width */
+  .category-pager { width: calc((var(--pager-slot-w) * var(--pager-max-visible) + var(--pager-gap) * (var(--pager-max-visible) - 1)) * 0.95); max-width: 100%; }
+}
+
+@media (max-width: 420px) {
+  /* Force 3 columns on narrow portrait to match product requirement (3 rows x 3 cols) */
+  .category-page .game-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .category-section .game-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  :root{ --category-row-h: 120px; }
+}
+
+/* Mobile landscape: constrain category pages to a single visible row */
+@media (orientation: landscape) and (max-width: 900px) {
+  /* Do not force the container height — let grid/cells size naturally.
+     But display 4 columns on narrow landscape to match requirement (1 row × 4 cols). */
+  .category-page .game-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+/* Add extra bottom padding on narrow viewports so an in-flow pager won't
+   overlap the last visible row. JS will set inline padding when it can,
+   but this CSS provides a safe fallback for slow JS or disabled JS. */
+@media (max-width: 640px) {
+  /* larger fallback padding for narrow portrait devices */
+  .category-pages { padding-bottom: 160px !important; }
+}
+@media (orientation: landscape) and (max-width: 900px) {
+  /* fallback padding for mobile landscape */
+  .category-pages { padding-bottom: 160px !important; }
+}
+  /* slightly smaller row height in landscape on narrow devices */
+  :root { --category-row-h: 120px; }
+}
+/* Stronger fallbacks and stacking to avoid pager overlapping cards on narrow viewports */
+@media (max-width: 640px) {
+  /* Ensure an ample fallback reserve so an in-flow pager cannot overlap the last row */
+  .category-pages { padding-bottom: 260px !important; }
+  .category-pages + .category-pager.pinned { margin-top: 20px !important; }
+}
+@media (orientation: landscape) and (max-width: 900px) {
+  .category-pages { padding-bottom: 160px !important; }
+  .category-pages + .category-pager.pinned { margin-top: 18px !important; }
+}
+
+/* Ensure cards and their titles render above the pager if overlap occurs */
+.category-page .game-card { position: relative; z-index: 80; }
+.category-page .game-card .game-card-info { position: relative; z-index: 90; }
+/* Ensure cards are stacked above the pager when necessary */
+.category-page .game-card { z-index: 1200 !important; }
+.category-page .game-card .game-card-info { z-index: 1210 !important; }
+.category-pages { z-index: 0; }
+.category-pager { z-index: 10; }
+.section-header .section-title{font-size:1.2rem}
+.section-header .see-all{margin-left:0}
+
+/* Make hero content centered and constrained */
+.hero-inner{max-width:1100px;margin:0 auto}
+
+/* Slightly larger gaps for a more open layout */
+.game-grid{gap:14px}
+.game-card{max-width:170px}
+.game-card-info{padding:10px 12px}
+
+/* Category refresh button (icon + label) inside the section title */
+.category-refresh{
+  all: unset;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+  font-weight:700;
+  color:var(--text);
+}
+.category-refresh .emoji{font-size:1.15rem}
+
 /* ---------- Search results ---------- */
 .search-results{
   padding:20px;
@@ -420,7 +767,9 @@ input{font:inherit}
 }
 
 /* ---- Empty state ---- */
-.empty-icon{font-size:3rem;margin-bottom:12px}
+.category-summary{margin-bottom:12px; color:var(--text-muted); font-size:0.95rem}
+.category-summary .category-desc{margin:0 0 6px}
+.category-summary .category-meta{margin:0;font-size:0.9rem;color:var(--text-muted)}
 .empty-text{color:var(--text-muted);font-size:1rem}
 
 /* ---------- Footer ---------- */
@@ -510,6 +859,23 @@ input{font:inherit}
 
 .site-footer .footer-inner > .footer-links,
 .site-footer > .footer-links { }
+
+/* Strong override: ensure section header → grid spacing matches exactly
+  across index and category pages. Use high specificity and !important
+  to avoid cascade conflicts from earlier rules. */
+.category-section > .section-header { margin-bottom: 12px !important; }
+.category-section { padding-top: 12px !important; }
+.category-section > .game-grid { margin-top: 0 !important; }
+
+/* Ensure the category-section grid matches the index `.game-grid` sizing
+   so spacing and card widths are visually identical across views. */
+.category-section .game-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(140px,160px));
+  gap: 14px !important;
+  justify-content: center;
+  margin-top: 0 !important;
+}
 
 .site-footer .footer-inner > .footer-links,
 .site-footer > .footer-links { }
@@ -922,7 +1288,9 @@ body.static-page .site-footer > .footer-links {
   /* animate transform (composited) instead of background-position */
   animation:shimmer-translate 1.4s infinite linear;
 }
-.skeleton-card{aspect-ratio:4/3}
+.skeleton-card{aspect-ratio:1/1}
+.grid-sentinel{width:1px;height:1px;opacity:0;pointer-events:none}
+.grid-placeholder{display:grid;grid-auto-flow:row;gap:12px}
 .skeleton-text{display:inline-block;border-radius:6px}
 .skeleton-pulse{
   animation:pulse 1.5s infinite ease-in-out;
@@ -1052,7 +1420,7 @@ body.static-page .site-footer > .footer-links {
   .hero-sub{font-size:.85rem;margin-bottom:12px}
   .hero-featured{gap:8px}
   .hero-card{width:56px;height:56px;border-radius:10px}
-  .category-section{padding:14px 10px 4px}
+  .category-section{padding:12px 12px 4px}
   .section-title{font-size:1rem}
   .see-all{font-size:.75rem;padding:3px 8px}
   .search-input{padding:7px 12px 7px 36px;font-size:.85rem}
