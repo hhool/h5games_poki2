@@ -734,6 +734,17 @@
     "use_overlay_title": false
   },
   {
+    "title": "Papaspizzaria",
+    "link": "https://p.poki2.online/papaspizzaria/",
+    "imgSrc": "https://p.poki2.online/papaspizzaria/icon.png",
+    "tags": ["cooking", "time management", "restaurant", "game", "online game", "html5 game"],
+    "input": ["touch", "keyboard"],
+    "orientation": "landscape",
+    "avalid": ["mobile", "desktop"],
+    "show": true,
+    "use_overlay_title": false
+  },
+  {
     "title": "Paper.io 2",
     "link": "https://p.poki2.online/paperio2/",
     "imgSrc": "https://p.poki2.online/paperio2/icon.png",
