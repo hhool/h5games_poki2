@@ -594,6 +594,11 @@
 
   /* ---------- Views ---------- */
   function showHome() {
+    // Guard: if the user is mid-search, any showHome() triggered by popstate /
+    // hashchange / init race conditions should be ignored. The search view
+    // handles its own display. Intentional Home navigation must clear the
+    // input first (see homeItem click handler below).
+    if ($searchInput && $searchInput.value.trim()) return;
     currentView = "home";
     // Remove pinned footer helper when returning to home and hide footer until needed
     if (document && document.body) {
@@ -895,25 +900,13 @@
     $skeleton.style.display = "none";
     $searchResults.style.display = "";
     $searchTitle.textContent = `Results for "${query}" (${matched.length})`;
-    
-    // Show skeleton while loading
-    $searchGrid.innerHTML = `
-      <div class="skeleton skeleton-card"></div>
-      <div class="skeleton skeleton-card"></div>
-      <div class="skeleton skeleton-card"></div>
-      <div class="skeleton skeleton-card"></div>
-      <div class="skeleton skeleton-card"></div>
-      <div class="skeleton skeleton-card"></div>
-    `;
-    $searchEmpty.style.display = "none";
-    
-    // Simulate loading delay for better UX (optional)
-    setTimeout(() => {
-      $searchGrid.innerHTML = "";
-      $searchEmpty.style.display = matched.length ? "none" : "";
-      for (const g of matched) $searchGrid.appendChild(createCard(g));
-    }, 300);
-    
+
+    // Render results synchronously — no setTimeout/rAF delay to avoid
+    // creating an async window where showHome() can interrupt.
+    $searchGrid.innerHTML = "";
+    $searchEmpty.style.display = matched.length ? "none" : "";
+    for (const g of matched) $searchGrid.appendChild(createCard(g));
+
     highlightSidebarItem(null);
   }
 
@@ -995,6 +988,9 @@
     homeItem.setAttribute("aria-current", "page");
     homeItem.innerHTML = `<span class="nav-emoji">🏠</span> Home <span class="nav-badge">${allGames.length}</span>`;
     homeItem.addEventListener("click", () => {
+      // Clear search first so the showHome() guard doesn't block this
+      // intentional user navigation back to the home page.
+      if ($searchInput) $searchInput.value = "";
       closeSidebar();
       showHome();
     });
@@ -1039,7 +1035,11 @@
         el.classList.toggle("active", isActive);
         if (isActive) {
           try { el.setAttribute("aria-current", "page"); } catch (e) {}
-          try { if (typeof el.focus === 'function') el.focus(); } catch (e) {}
+          // Do NOT call el.focus() here. highlightSidebarItem() is for visual
+          // highlighting only. On desktop the sidebar is always visible (no
+          // .open class), so any focus() call here unconditionally steals focus
+          // from the search input on every keystroke. Focus management when
+          // opening the sidebar is handled exclusively in openSidebar().
         } else {
           try { el.removeAttribute("aria-current"); } catch (e) {}
         }
@@ -1561,6 +1561,22 @@
   if ($detailClose) $detailClose.addEventListener("click", hideDetail);
   if ($detailBackdrop) $detailBackdrop.addEventListener("click", hideDetail);
 
+  // Sidebar focus guard: while the user is in search view, any nav-item in the
+  // sidebar must NOT steal focus from the search input. This covers ALL sources
+  // (programmatic focus, browser auto-focus on aria-current, etc.) because it
+  // reacts to the focusin event itself rather than trying to prevent each cause.
+  if ($sidebarNav) {
+    $sidebarNav.addEventListener("focusin", (e) => {
+      if (currentView === "search" && e.target && e.target.classList.contains("nav-item")) {
+        requestAnimationFrame(() => {
+          if (currentView === "search") {
+            try { $searchInput.focus(); } catch (_) {}
+          }
+        });
+      }
+    });
+  }
+
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       if (gamePaused && $pauseOverlay.classList.contains("show")) {
@@ -1582,12 +1598,42 @@
     }
   });
 
-  /* search */
-  let searchTimer;
+  /* search
+   * Call showSearch directly and synchronously.
+   * - No setTimeout/rAF: eliminates any async window where showHome() can run
+   * - Stores last query so it can be restored after init completes
+   */
+  let _lastSearchQuery = '';
   $searchInput.addEventListener("input", () => {
-    clearTimeout(searchTimer);
-    searchTimer = setTimeout(() => showSearch($searchInput.value), 250);
+    const q = $searchInput.value;
+    _lastSearchQuery = q;
+    showSearch(q);
   });
+
+  // On mobile, pressing the keyboard "Go/Search" button fires a 'search' event
+  // and some browsers (iOS Safari, some Android) then CLEAR the input value.
+  // Intercept this: persist the query, run the search, and prevent default clearing.
+  $searchInput.addEventListener("search", (e) => {
+    const q = $searchInput.value || _lastSearchQuery;
+    if (q.trim()) {
+      // Restore value in case browser already cleared it
+      $searchInput.value = q;
+      _lastSearchQuery = q;
+      showSearch(q);
+    } else {
+      showHome();
+    }
+    e.preventDefault();
+  });
+
+  // Prevent tapping search result cards from stealing focus from the input.
+  // pointerdown fires before blur/focus transfer; preventDefault() blocks the
+  // implicit blur while still allowing the click to fire normally.
+  if ($searchResults) {
+    $searchResults.addEventListener("pointerdown", (e) => {
+      if (document.activeElement === $searchInput) e.preventDefault();
+    });
+  }
 
   /* scroll */
   window.addEventListener("scroll", handleScroll, { passive: true });
@@ -1900,6 +1946,18 @@
       }
     } catch (e) {
       /* ignore */
+    }
+
+    // Repair: if the user typed a query while init/loadGames() was running,
+    // showHome() may have been called between the async steps and overridden
+    // the search view. Restore it now that all games are loaded.
+    if (_lastSearchQuery.trim() && currentView !== 'search') {
+      showSearch(_lastSearchQuery);
+    }
+    // If search is active, restore focus to input (may have been stolen by
+    // buildSidebar DOM mutations or footer measurement reflows).
+    if (currentView === 'search') {
+      try { $searchInput.focus(); } catch (_) {}
     }
 
     // Remove early-hide class now that the correct view is rendered
