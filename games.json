@@ -74,6 +74,28 @@
     "use_overlay_title": false
   },
   {
+    "title": "Blockclaim.io",
+    "link": "https://b.poki2.online/blockclaimio/",
+    "imgSrc": "https://b.poki2.online/blockclaimio/images/icon192.png",
+    "tags": ["action", "idle", "competitive", "io", "production", "blockclaim"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true,
+    "use_overlay_title": false
+  },
+  {
+    "title": "Crossy Road",
+    "link": "https://c.poki2.online/crossyroad/",
+    "imgSrc": "https://c.poki2.online/crossyroad/sprites/hipster-whale.png",
+    "tags": ["achievement", "singleplayer", "action", "castle", "crossyroad", "pixel", "taptap", "production"],
+    "input": ["touch", "keyboard"],
+    "orientation": "portrait",
+    "avalid": ["mobile", "desktop"],
+    "show": true,
+    "use_overlay_title": false
+  },
+  {
     "link": "https://mobileapp.poki2.online/mobile/zcj2",
     "imgSrc": "https://mobileapp.poki2.online/mobile/zcj2/assets/icon-512.png",
     "title": "Zombies Can't Jump 2",
