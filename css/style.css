@@ -469,7 +469,7 @@ input{font:inherit}
 
 /* ---- Category chip filter bar ---- */
 .tag-chips-bar{display:flex;justify-content:flex-start;overflow-x:auto;padding:0;-webkit-overflow-scrolling:touch;scrollbar-width:none;position:sticky;top:var(--topbar-h,56px);z-index:100;background:var(--bg,#f0f4f8);box-shadow:0 1px 6px rgba(0,0,0,.07)}
-.tag-chips-inner{display:flex;flex-wrap:nowrap;gap:8px;flex-shrink:0;padding:10px 20px 8px}
+.tag-chips-inner{display:flex;flex-wrap:nowrap;margin:0 auto;flex-shrink:0;padding:10px 20px 8px}
 .tag-chips-bar:empty{display:none}
 .tag-chips-bar::-webkit-scrollbar{display:none}
 .tag-chip{flex-shrink:0;scroll-snap-align:start;padding:6px 14px;border-radius:20px;border:1.5px solid rgba(0,0,0,.1);background:#fff;font-size:.82rem;font-weight:600;color:var(--text,#1a2332);cursor:pointer;white-space:nowrap;transition:background .15s,color .15s,border-color .15s,box-shadow .15s;line-height:1.5}
