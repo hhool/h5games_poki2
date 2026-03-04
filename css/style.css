@@ -1441,14 +1441,14 @@ body.static-page .site-footer > .footer-links {
 .detail-fav-btn.fav-active svg{fill:#ef4444}
 
 /* ---- Detail related games ---- */
-.detail-related-wrap{padding:0 14px 16px}
-.detail-related-title{font-size:.74rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
-.detail-related-row{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.detail-related-wrap{padding:0 12px 10px;border-top:1px solid var(--surface-2);margin-top:8px}
+.detail-related-title{font-size:.68rem;font-weight:600;color:var(--text-muted);letter-spacing:.03em;margin-bottom:6px;padding-top:8px}
+.detail-related-row{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
 .detail-related-row::-webkit-scrollbar{display:none}
-.detail-related-item{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:68px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:opacity .15s}
+.detail-related-item{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:48px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:opacity .15s}
 .detail-related-item:hover{opacity:.8}
-.detail-related-item img{width:58px;height:58px;border-radius:12px;object-fit:contain;background:var(--surface-2);display:block}
-.detail-related-item span{font-size:.66rem;font-weight:600;color:var(--text);max-width:68px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
+.detail-related-item img{width:44px;height:44px;border-radius:9px;object-fit:contain;background:var(--surface-2);display:block}
+.detail-related-item span{font-size:.6rem;font-weight:500;color:var(--text-muted);max-width:50px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
 
 /* ---- Favorites heart on game cards ---- */
 .fav-btn{position:absolute;top:5px;right:5px;width:26px;height:26px;border-radius:50%;background:rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.75);opacity:0;transition:opacity .15s,background .15s,color .15s;z-index:11;padding:0;line-height:1;flex-shrink:0}
@@ -1652,5 +1652,6 @@ body.static-page .site-footer > .footer-links {
   .detail-tags { justify-content: flex-start; }
   .detail-close { top: 8px; right: 8px; width: 28px; height: 28px; }
   .detail-fav-btn { padding: 6px 14px; font-size: .8rem; }
-  .detail-related-wrap { padding: 0 10px 10px; }
+  /* Hide YOU MAY ALSO LIKE in landscape — not enough vertical space */
+  .detail-related-wrap { display: none !important; }
 }

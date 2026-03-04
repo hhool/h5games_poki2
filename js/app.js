@@ -525,7 +525,7 @@
       const related = allGames.filter(g =>
         canShow(g) && g.link !== game.link &&
         (game.tags || []).some(t => (g.tags || []).includes(t))
-      ).slice(0, 4);
+      ).slice(0, 6);
       $detailRelated.innerHTML = '';
       if (!related.length) return;
       const titleEl = document.createElement('p');
