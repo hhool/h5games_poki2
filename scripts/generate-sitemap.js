@@ -14,7 +14,8 @@ const path = require('path');
 const BASE    = 'https://poki2.online';
 const DIST    = path.join(__dirname, '..', 'dist');
 const GAMES   = path.join(DIST, 'games.json');
-const OUT     = path.join(DIST, 'sitemap.xml');
+const OUT      = path.join(DIST, 'sitemap.xml');
+const SRC_OUT  = path.join(__dirname, '..', 'sitemap.xml');  // source copy, kept in sync
 const TODAY   = new Date().toISOString().slice(0, 10);
 
 function esc(s) {
@@ -89,5 +90,6 @@ lines.push('');
 lines.push('</urlset>');
 lines.push('');
 
-fs.writeFileSync(OUT, lines.join('\n'), 'utf8');
-console.log(`✅  Wrote sitemap.xml with ${count} game URLs → dist/sitemap.xml`);
+fs.writeFileSync(OUT,     lines.join('\n'), 'utf8');
+fs.writeFileSync(SRC_OUT, lines.join('\n'), 'utf8');
+console.log(`✅  Wrote sitemap.xml with ${count} game URLs → dist/ + source`);
