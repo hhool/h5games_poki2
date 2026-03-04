@@ -1462,6 +1462,8 @@
       } catch(e) { return ''; }
     })();
     const url   = _slug ? ('https://poki2.online/game/' + _slug.charAt(0) + '/' + _slug + '/') : (game.link || '');
+    // Page description (also updated so bots/crawlers see game-specific text)
+    _setMeta('meta[name="description"]',         'content', desc);
     // OG
     _setMeta('meta[property="og:title"]',       'content', title);
     _setMeta('meta[property="og:description"]',  'content', desc);
@@ -1509,6 +1511,7 @@
   }
 
   function _restoreDefaultMeta() {
+    _setMeta('meta[name="description"]',         'content', _defaultMeta.desc);
     _setMeta('meta[property="og:title"]',       'content', _defaultMeta.ogTitle);
     _setMeta('meta[property="og:description"]',  'content', _defaultMeta.ogDesc);
     _setMeta('meta[property="og:url"]',          'content', _defaultMeta.ogUrl);
