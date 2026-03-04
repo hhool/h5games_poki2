@@ -569,12 +569,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/trashndash/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://poki2.online/game/a/alienattack/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -1302,6 +1296,12 @@
   </url>
   <url>
     <loc>https://poki2.online/game/t/trailblazer/</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://poki2.online/game/t/trashndash/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

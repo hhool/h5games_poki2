@@ -2091,28 +2091,6 @@
     "description": "Guess the five-letter word in six tries. Each guess reveals which letters are correct, misplaced, or absent."
   },
   {
-    "title": "Troll Boxing",
-    "link": "https://mobileapp.poki2.online/mobile/trashndash",
-    "imgSrc": "https://mobileapp.poki2.online/mobile/trashndash/res/bg_title.png",
-    "tags": [
-      "idle",
-      "multiplayer"
-    ],
-    "input": [
-      "touch",
-      "keyboard"
-    ],
-    "orientation": "landscape",
-    "avalid": [
-      "mobile",
-      "desktop"
-    ],
-    "show": true,
-    "use_overlay_title": false,
-    "featured": false,
-    "description": "Two troll fighters enter the ring. Punch, duck, and uppercut your way to victory in this silly brawler."
-  },
-  {
     "title": "Alien Attack",
     "link": "https://mobileapp.poki2.online/mobile/alienattack/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/alienattack/icon-256.png",
