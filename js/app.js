@@ -873,17 +873,23 @@
     const section = document.createElement('section');
     section.className = 'category-section';
     section.id = 'section-trending';
-    section.innerHTML = `<div class="section-header"><h2 class="section-title"><span class="emoji">🔥</span> Trending Now</h2></div>`;
-    const grid = document.createElement('div');
-    grid.className = 'game-grid';
     const seen = new Set();
     const deduped = games.filter(g => {
       const k = g.link || g.title;
       if (seen.has(k)) return false;
       seen.add(k); return true;
     });
+    const showAll = deduped.length > SECTION_LIMIT;
+    section.innerHTML = `<div class="section-header"><h2 class="section-title"><span class="emoji">🔥</span> Trending Now</h2>${showAll ? `<button class="see-all" data-tag="trending">See all (${deduped.length})</button>` : ''}</div>`;
+    const grid = document.createElement('div');
+    grid.className = 'game-grid';
     for (const g of deduped.slice(0, SECTION_LIMIT)) grid.appendChild(createCard(g));
     section.appendChild(grid);
+    const btn = section.querySelector('.see-all');
+    if (btn) btn.addEventListener('click', () => {
+      for (const g of deduped.slice(SECTION_LIMIT)) grid.appendChild(createCard(g));
+      btn.remove();
+    });
     return section;
   }
 
