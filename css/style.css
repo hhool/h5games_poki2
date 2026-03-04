@@ -1580,3 +1580,77 @@ body.static-page .site-footer > .footer-links {
   .detail-play-btn{align-self:flex-start}
   .detail-close{top:12px;right:12px}
 }
+/* ========== Phone Landscape Optimizations ==========
+   Targets phones rotated to landscape (height ≤ 500px).
+   Typical: iPhone SE landscape 375×667 → 667×375; Galaxy S landscape ~360px tall.
+   Goal: reclaim vertical space so content is usable without scrolling. */
+@media (orientation: landscape) and (max-height: 500px) {
+  /* 1. Hide bottom nav — saves 56px of precious height */
+  .bottom-nav { display: none !important; }
+  .main-wrap { padding-bottom: 0 !important; }
+  .site-footer { padding-bottom: 0 !important; }
+  .back-to-top { bottom: 16px !important; }
+
+  /* 2. Compact topbar */
+  :root { --topbar-h: 44px; }
+  .topbar { height: 44px; min-height: 44px; }
+
+  /* 3. Smaller hero — clip to a compact banner */
+  .hero { padding: 12px 16px 10px; }
+  .hero-title { font-size: .95rem; margin-bottom: 2px; }
+  .hero-sub { font-size: .75rem; margin-bottom: 8px; }
+  .hero-featured { gap: 6px; }
+  .hero-card { width: 48px; height: 48px; border-radius: 8px; }
+
+  /* 4. Compact chip filter bar */
+  .tag-chips-bar { padding: 5px 12px 4px; gap: 6px; top: 44px; }
+  .tag-chip { padding: 4px 10px; font-size: .72rem; }
+
+  /* 5. More columns — better use of wide viewport */
+  .game-grid { grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .category-page .game-grid { grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .category-section { padding: 8px 14px 4px; }
+  .section-title { font-size: .88rem; }
+  .see-all { font-size: .72rem; padding: 3px 8px; }
+
+  /* 6. Detail card: force side-by-side even on narrow phones */
+  .detail-card {
+    width: min(740px, 96vw);
+    max-width: 96vw;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+    max-height: calc(100vh - 16px);
+    min-height: 0;
+  }
+  .detail-img {
+    flex: 0 0 40%;
+    width: 40%;
+    height: 100%;
+    object-fit: cover !important;
+    object-position: center center !important;
+    background: transparent;
+    display: block;
+    max-height: 100%;
+    border-radius: calc(20px - 1px) 0 0 calc(20px - 1px);
+    aspect-ratio: unset;
+  }
+  .detail-body {
+    flex: 1 1 60%;
+    padding: 14px 16px 14px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    min-height: 0;
+    border-radius: 0 calc(20px - 1px) calc(20px - 1px) 0;
+  }
+  .detail-title { font-size: .95rem; margin-bottom: 5px; }
+  .detail-play-btn { align-self: flex-start; padding: 9px 20px; font-size: .88rem; }
+  .detail-tags { justify-content: flex-start; }
+  .detail-close { top: 8px; right: 8px; width: 28px; height: 28px; }
+  .detail-fav-btn { padding: 6px 14px; font-size: .8rem; }
+  .detail-related-wrap { padding: 0 10px 10px; }
+}
