@@ -5521,5 +5521,32 @@
     "use_overlay_title": false,
     "featured": false,
     "description": "Stun the Zoons — alien creatures — using precise timing before they escape their enclosures."
+  },
+  {
+    "title": "Snakebird",
+    "link": "https://s.poki2.online/snakebird/",
+    "imgSrc": "https://s.poki2.online/snakebird/logo/icon_sb_512_512.png",
+    "tags": [
+      "puzzle",
+      "strategy",
+      "singleplayer",
+      "snakebird",
+      "action",
+      "production"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
+    "orientation": "landscape",
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
+    "show": true,
+    "use_overlay_title": false,
+    "featured": true,
+    "badge": "popular",
+    "description": "Guide a snake-bird hybrid through devious puzzles where every fruit you eat makes you longer and harder to maneuver."
   }
 ]
