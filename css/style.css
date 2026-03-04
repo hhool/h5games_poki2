@@ -667,9 +667,8 @@ input{font:inherit}
   .category-pages + .category-pager.pinned { margin-top: 18px !important; }
 }
 
-/* Ensure cards are stacked above the pager when necessary */
-.category-page .game-card { z-index: 1200 !important; }
-.category-page .game-card .game-card-info { z-index: 1210 !important; }
+/* Cards need position:relative to layer above pager (z-index:10) */
+.category-page .game-card { position: relative; z-index: 1; }
 .category-pages { z-index: 0; }
 .category-pager { z-index: 10; }
 .section-header .section-title{font-size:1.2rem}
@@ -1198,8 +1197,8 @@ body.static-page .site-footer > .footer-links {
 /* ---------- Game detail interstitial ---------- */
 .game-detail{
   position:fixed;inset:0;
-  /* ensure detail overlay sits above game iframe and other overlays */
-  z-index:1200;
+  /* well above all page elements including inflated z-index cards */
+  z-index:2000;
   display:flex;align-items:center;justify-content:center;
   opacity:0;pointer-events:none;
   /* prevent visual remnants on refresh by collapsing by default */
