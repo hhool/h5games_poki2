@@ -2,30 +2,57 @@
 /**
  * inject-version.js
  * Replaces all occurrences of ?v=__CACHE_VER__ in dist/index.html
- * with the current git short commit hash (e.g. ?v=a1b2c3d).
- * Run after build:copy so dist/index.html exists.
+ * with an 8-char SHA-1 hash derived from the actual content of the
+ * key asset files (css/style.css + js/app.js).  This guarantees:
+ *   - cache is busted whenever file content changes
+ *   - cache is NOT busted when only unrelated files change
+ * Falls back to git short hash → timestamp if files are missing.
  */
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const { execSync } = require('child_process');
 
-const distHtml = path.join(__dirname, '..', 'dist', 'index.html');
+const dist = path.join(__dirname, '..', 'dist');
+const distHtml = path.join(dist, 'index.html');
 
 if (!fs.existsSync(distHtml)) {
   console.error('dist/index.html not found — run build:copy first');
   process.exit(1);
 }
 
+function hashFile(filePath) {
+  if (!fs.existsSync(filePath)) return null;
+  const data = fs.readFileSync(filePath);
+  return crypto.createHash('sha1').update(data).digest('hex');
+}
+
+// Collect hashes of all key assets referenced by index.html
+const assetFiles = [
+  path.join(dist, 'css', 'style.css'),
+  path.join(dist, 'js', 'app.js'),
+];
+
+const hashes = assetFiles.map(hashFile).filter(Boolean);
+
 let version;
-try {
-  version = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim();
-} catch (e) {
-  // Fallback to timestamp if git is unavailable
-  version = Date.now().toString(36);
+if (hashes.length > 0) {
+  // Combine all individual hashes into one fingerprint
+  const combined = crypto.createHash('sha1').update(hashes.join('')).digest('hex');
+  version = combined.slice(0, 8);
+  console.log(`✅  Cache version from file hash: ${version}`);
+} else {
+  // Fallback: git short hash
+  try {
+    version = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim();
+    console.log(`⚠️   No asset files found — using git hash: ${version}`);
+  } catch (e) {
+    version = Date.now().toString(36);
+    console.log(`⚠️   No git — using timestamp: ${version}`);
+  }
 }
 
 const html = fs.readFileSync(distHtml, 'utf8');
 const replaced = html.replace(/__CACHE_VER__/g, version);
 fs.writeFileSync(distHtml, replaced);
 
-console.log(`✅  Cache version injected: ${version}`);
