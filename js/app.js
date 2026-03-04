@@ -638,6 +638,101 @@
     lazyObserver.observe(lastSection);
   }
 
+  /* ---------- Tag chip filter bar ---------- */
+  function renderTagChips() {
+    const bar = document.getElementById('tag-chips');
+    if (!bar) return;
+    bar.innerHTML = '';
+    const all = document.createElement('button');
+    all.type = 'button';
+    all.className = 'tag-chip active';
+    all.textContent = '🕹️ All';
+    all.dataset.chip = '__all';
+    all.addEventListener('click', () => { try { $searchInput.value = ''; } catch(e){} showHome(); });
+    bar.appendChild(all);
+    for (const tag of TAG_ORDER) {
+      const meta = TAG_META[tag] || { emoji: '🎲', label: tag };
+      const count = (tagMap[tag] || []).length;
+      if (!count) continue;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'tag-chip';
+      btn.textContent = `${meta.emoji} ${meta.label}`;
+      btn.dataset.chip = tag;
+      btn.addEventListener('click', () => showCategory(tag));
+      bar.appendChild(btn);
+    }
+  }
+  function updateChipActive(activeTag) {
+    try {
+      const bar = document.getElementById('tag-chips');
+      if (!bar) return;
+      bar.querySelectorAll('.tag-chip').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.chip === activeTag);
+      });
+      const active = bar.querySelector('.tag-chip.active');
+      if (active) active.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    } catch (e) {}
+  }
+
+  /* ---------- Trending Now section ---------- */
+  function renderTrendingSection() {
+    const games = allGames.filter(g => g.featured || g.badge === 'hot' || g.badge === 'popular');
+    if (!games.length) return null;
+    const section = document.createElement('section');
+    section.className = 'category-section';
+    section.id = 'section-trending';
+    section.innerHTML = `<div class="section-header"><h2 class="section-title"><span class="emoji">🔥</span> Trending Now</h2></div>`;
+    const grid = document.createElement('div');
+    grid.className = 'game-grid';
+    const seen = new Set();
+    const deduped = games.filter(g => {
+      const k = g.link || g.title;
+      if (seen.has(k)) return false;
+      seen.add(k); return true;
+    });
+    for (const g of deduped.slice(0, SECTION_LIMIT)) grid.appendChild(createCard(g));
+    section.appendChild(grid);
+    return section;
+  }
+
+  /* ---------- Page meta (title / canonical / description) ---------- */
+  function updatePageMeta(view, tag) {
+    try {
+      const CAT_DESC = {
+        action:      'Play free action games online — intense combat, platformers and fast-paced adventures.',
+        puzzle:      'Play free puzzle games online — brain teasers, logic challenges and mind-bending riddles.',
+        racing:      'Play free racing games online — kart racers, drag races and high-speed tracks.',
+        shooting:    'Play free shooting games online — FPS, top-down shooters and arcade blasters.',
+        sports:      'Play free sports games online — football, basketball, soccer and more.',
+        competitive: 'Play free competitive games online — prove your skills against opponents.',
+        strategy:    'Play free strategy games online — build empires, plan battles and conquer.',
+        idle:        'Play free idle games online — clickers, incremental and idle adventures.',
+        other:       'Discover more free browser games on Poki2 — a diverse mix of fun for everyone.',
+      };
+      const HOME_DESC  = 'Play 200+ free browser games: action, puzzle, racing and more — instant play on desktop and mobile. No downloads required.';
+      const HOME_TITLE = 'Poki2 — Play 200+ Free Online Games';
+      let desc, canonical, title;
+      if (view === 'category' && tag && TAG_META[tag]) {
+        const label = TAG_META[tag].label || tag;
+        desc      = CAT_DESC[tag] || `Play free ${label.toLowerCase()} games online on Poki2.`;
+        canonical = `https://poki2.online/#${tag}`;
+        title     = `${label} Games — Free Online | Poki2`;
+      } else {
+        desc = HOME_DESC; canonical = 'https://poki2.online/'; title = HOME_TITLE;
+      }
+      try { document.title = title; } catch(e){}
+      const set = (sel, attr, val) => { try { const el = document.querySelector(sel); if (el) el[attr] = val; } catch(e){} };
+      set('meta[name="description"]',         'content', desc);
+      set('meta[property="og:description"]',  'content', desc);
+      set('meta[property="og:title"]',        'content', title);
+      set('meta[property="og:url"]',          'content', canonical);
+      set('meta[name="twitter:title"]',       'content', title);
+      set('meta[name="twitter:description"]', 'content', desc);
+      set('link[rel="canonical"]',            'href',    canonical);
+    } catch(e){}
+  }
+
   /* ---------- Views ---------- */
   function showHome() {
     // Guard: if the user is mid-search, any showHome() triggered by popstate /
@@ -659,6 +754,9 @@
     $gameSections.style.display = "";
     $skeleton.style.display = "none";
     renderRecentSection();
+    // Trending Now — featured + badged games
+    const _tr = renderTrendingSection();
+    if (_tr) $gameSections.insertBefore(_tr, $gameSections.firstChild);
 
     // Reset lazy loading state
     loadedSections = 0;
@@ -678,6 +776,8 @@
     }
 
     highlightSidebarItem(null);
+    updateChipActive('__all');
+    updatePageMeta('home');
     $searchInput.value = "";
     window.scrollTo({ top: 0, behavior: "smooth" });
     // Move keyboard focus to the search input for Home so screen readers
@@ -775,6 +875,8 @@
         if (match && typeof match.focus === 'function') match.focus();
       }
     } catch (e) {}
+    updateChipActive(tag);
+    updatePageMeta('category', tag);
     try { if (window.footerMeasure && typeof window.footerMeasure.update === 'function') window.footerMeasure.update(); } catch (e) {}
     if (document && document.body) document.body.classList.add('full-bleed-footer');
     $hero.style.display = "none";
@@ -1963,6 +2065,7 @@
     $skeleton.style.display = "none";
     buildSidebar();
     renderHeroFeatured();
+    renderTagChips();
 
     const search = (location.search || "").replace("?", "");
     const hash = location.hash.replace("#", "");

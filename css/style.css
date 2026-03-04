@@ -467,6 +467,16 @@ input{font:inherit}
 .game-card-badge.badge-hot{background:#f97316;color:#fff}
 .game-card-badge.badge-popular{background:#3b82f6;color:#fff}
 
+/* ---- Category chip filter bar ---- */
+.tag-chips-bar{display:flex;gap:8px;overflow-x:auto;padding:10px 20px 8px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;position:sticky;top:var(--topbar-h,56px);z-index:100;background:var(--bg,#f0f4f8);box-shadow:0 1px 6px rgba(0,0,0,.07)}
+.tag-chips-bar:empty{display:none}
+.tag-chips-bar::-webkit-scrollbar{display:none}
+.tag-chip{flex-shrink:0;scroll-snap-align:start;padding:6px 14px;border-radius:20px;border:1.5px solid rgba(0,0,0,.1);background:#fff;font-size:.82rem;font-weight:600;color:var(--text,#1a2332);cursor:pointer;white-space:nowrap;transition:background .15s,color .15s,border-color .15s,box-shadow .15s;line-height:1.5}
+.tag-chip:hover{background:rgba(0,107,179,.08);border-color:var(--brand,#006bb3);color:var(--brand,#006bb3)}
+.tag-chip.active{background:var(--brand,#006bb3);color:#fff;border-color:var(--brand,#006bb3);box-shadow:0 2px 8px rgba(0,107,179,.25)}
+.tag-chip.active:hover{background:var(--brand,#006bb3);color:#fff}
+@media(hover:none){.tag-chip:hover{background:#fff;border-color:rgba(0,0,0,.1);color:var(--text,#1a2332)}}
+
 /* ---- Full category page (all games of one tag) ---- */
 .full-grid{
   display:grid;
