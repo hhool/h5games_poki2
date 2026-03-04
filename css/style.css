@@ -1,81 +1,3 @@
-/* ===== Added: game-card inset + safe background, and detail-img landscape behavior ===== */
-.game-card {
-  box-sizing: border-box;
-  padding: 1px; /* inset effective drawing area by 1px */
-}
-.game-card-img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1; /* enforce square thumbnails */
-  object-fit: cover; /* crop to fill while keeping subject centered */
-  object-position: center center;
-  background-color: #f3f4f6; /* neutral fallback while images load */
-  border-top-left-radius: calc(var(--card-radius) - 1px);
-  border-top-right-radius: calc(var(--card-radius) - 1px);
-}
-
-/* WebP support detection and optimization */
-.webp .game-card-img {
-  /* WebP supported - browser will handle format selection */
-}
-.no-webp .game-card-img {
-  /* Fallback for browsers without WebP support */
-}
-
-/* ===== Enforce final game-card layout (authoritative) ===== */
-/* Scope: applies to grid cards (not hero tiles) */
-.game-grid .game-card{
-  display:flex;
-  flex-direction:column;
-  align-items:stretch;
-  gap:0;
-  background:var(--surface);
-  border-radius:var(--card-radius);
-  overflow:hidden; /* clip image overflow so cover fills without spilling */
-  padding:0;
-}
-.game-grid .game-card img.game-card-img,
-.game-grid .game-card .game-card-img{
-  width:100%;
-  height:auto;
-  aspect-ratio:1 / 1; /* MUST be square */
-  object-fit:cover; /* scale up and fill, crop if necessary */
-  object-position:center center;
-  display:block;
-  border:0;
-  border-top-left-radius:var(--card-radius);
-  border-top-right-radius:var(--card-radius);
-  border-bottom-left-radius:0;
-  border-bottom-right-radius:0;
-  background:transparent;
-}
-.game-grid .game-card .game-card-info{
-  padding:10px 12px;
-  background:var(--surface);
-  margin:0;
-  text-align:center;
-  border-top-left-radius:0;
-  border-top-right-radius:0;
-  border-bottom-left-radius:var(--card-radius);
-  border-bottom-right-radius:var(--card-radius);
-}
-
-/* Small screens: tighter info padding */
-@media(max-width:600px){
-  .game-grid .game-card .game-card-info{padding:6px 8px}
-}
-
-
-@media (orientation: landscape) {
-  .detail-card .detail-img {
-    /* In landscape interstitial prefer filling the left area so image feels immersive.
-       Use cover to fill the media column while keeping important subject centered. */
-    object-fit: cover;
-    object-position: center center;
-    max-height: 90vh;
-  }
-}
-
 /* ============================================================
    Poki2 — Poki-style game portal
    ============================================================ */
@@ -302,19 +224,12 @@ input{font:inherit}
 }
 .hero-card:hover{transform:scale(1.1);box-shadow:0 6px 24px rgba(0,0,0,.35)}
 .hero-card img{width:100%;height:100%;object-fit:fill;object-position:center center}
-/* Reserve layout space for hero and card thumbnails to avoid CLS */
-.hero-card,
-.game-card-img{
+/* Reserve layout space for hero thumbnails to avoid CLS */
+.hero-card{
   display:block;
-  width: clamp(72px, 9vw, 120px);
-  height: clamp(72px, 9vw, 120px);
   aspect-ratio:1 / 1;
-  object-position:center center !important;
+  object-position:center center;
   background-color:#f3f4f6;
-}
-.game-card-img{
-  display:block;
-  aspect-ratio:1 / 1;
 }
 
 /* ---- Recently Played ---- */
@@ -376,7 +291,6 @@ input{font:inherit}
   transition:background .15s;
 }
 .see-all:hover{background:var(--brand-light)}
-
 
 /* ---- Sidebar badge ---- */
 .nav-badge{
@@ -753,9 +667,6 @@ input{font:inherit}
   .category-pages + .category-pager.pinned { margin-top: 18px !important; }
 }
 
-/* Ensure cards and their titles render above the pager if overlap occurs */
-.category-page .game-card { position: relative; z-index: 80; }
-.category-page .game-card .game-card-info { position: relative; z-index: 90; }
 /* Ensure cards are stacked above the pager when necessary */
 .category-page .game-card { z-index: 1200 !important; }
 .category-page .game-card .game-card-info { z-index: 1210 !important; }
@@ -871,19 +782,6 @@ input{font:inherit}
   -webkit-text-size-adjust: 100% !important;
 }
 
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links {
-  /* ensure mobile narrow rules don't collapse spacing */
-}
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links {
-  /* keep width centered and consistent */
-}
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
 /* Strong override: ensure section header → grid spacing matches exactly
   across index and category pages. Use high specificity and !important
   to avoid cascade conflicts from earlier rules. */
@@ -900,48 +798,6 @@ input{font:inherit}
   justify-content: center;
   margin-top: 0 !important;
 }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
-
-.site-footer .footer-inner > .footer-links,
-.site-footer > .footer-links { }
 
 .footer-copy{font-size:.75rem;color:#fff;opacity:1}
 
