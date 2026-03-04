@@ -1427,6 +1427,93 @@
     }
   }
 
+  /* ---------- P3.1 / P3.2 — Game meta injection (JSON-LD + OG/Twitter) ---------- */
+  const _defaultMeta = {
+    title:     document.title,
+    desc:      (document.querySelector('meta[name="description"]')         || {}).content || '',
+    ogTitle:   (document.querySelector('meta[property="og:title"]')        || {}).content || '',
+    ogDesc:    (document.querySelector('meta[property="og:description"]')  || {}).content || '',
+    ogUrl:     (document.querySelector('meta[property="og:url"]')          || {}).content || '',
+    ogImg:     (document.querySelector('meta[property="og:image"]')        || {}).content || '',
+    twTitle:   (document.querySelector('meta[name="twitter:title"]')       || {}).content || '',
+    twDesc:    (document.querySelector('meta[name="twitter:description"]') || {}).content || '',
+    twUrl:     (document.querySelector('meta[name="twitter:url"]')         || {}).content || '',
+    twImg:     (document.querySelector('meta[name="twitter:image"]')       || {}).content || '',
+    canonical: (document.querySelector('link[rel="canonical"]')           || {}).href    || '',
+  };
+
+  function _setMeta(sel, attr, val) {
+    try { const el = document.querySelector(sel); if (el && val) el.setAttribute(attr, val); } catch(e) {}
+  }
+
+  function _injectGameMeta(game) {
+    const title = game.title + ' — Play Free on Poki2';
+    const desc  = game.description || ('Play ' + game.title + ' for free online on Poki2 — no downloads required.');
+    const img   = game.imgSrc || '';
+    const url   = game.link  || '';
+    // OG
+    _setMeta('meta[property="og:title"]',       'content', title);
+    _setMeta('meta[property="og:description"]',  'content', desc);
+    _setMeta('meta[property="og:url"]',          'content', url);
+    _setMeta('meta[property="og:image"]',        'content', img);
+    _setMeta('meta[property="og:type"]',         'content', 'website');
+    // Twitter
+    _setMeta('meta[name="twitter:card"]',        'content', 'summary_large_image');
+    _setMeta('meta[name="twitter:url"]',         'content', url);
+    _setMeta('meta[name="twitter:image"]',       'content', img);
+    _setMeta('meta[name="twitter:title"]',       'content', title);
+    _setMeta('meta[name="twitter:description"]', 'content', desc);
+    // Canonical + page title
+    try { const c = document.querySelector('link[rel="canonical"]'); if (c) c.setAttribute('href', url); } catch(e) {}
+    try { document.title = title; } catch(e) {}
+    // P3.1 — VideoGame JSON-LD
+    try {
+      const tags      = game.tags || [];
+      const genreList = tags.map(t => (TAG_META[t] || {}).label || t);
+      const playMode  = tags.includes('multiplayer') ? 'MultiPlayer' : 'SinglePlayer';
+      const ld = {
+        '@context': 'https://schema.org',
+        '@type': 'VideoGame',
+        name: game.title,
+        url: url,
+        image: img,
+        thumbnailUrl: img,
+        description: desc,
+        genre: genreList.length ? genreList : ['Game'],
+        applicationCategory: 'Game',
+        playMode: playMode,
+        operatingSystem: 'Web Browser',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        publisher: { '@type': 'Organization', name: 'Poki2', url: 'https://poki2.online/' }
+      };
+      let ldEl = document.getElementById('game-jsonld');
+      if (!ldEl) {
+        ldEl = document.createElement('script');
+        ldEl.type = 'application/ld+json';
+        ldEl.id   = 'game-jsonld';
+        document.head.appendChild(ldEl);
+      }
+      ldEl.textContent = JSON.stringify(ld);
+    } catch(e) {}
+  }
+
+  function _restoreDefaultMeta() {
+    _setMeta('meta[property="og:title"]',       'content', _defaultMeta.ogTitle);
+    _setMeta('meta[property="og:description"]',  'content', _defaultMeta.ogDesc);
+    _setMeta('meta[property="og:url"]',          'content', _defaultMeta.ogUrl);
+    _setMeta('meta[property="og:image"]',        'content', _defaultMeta.ogImg);
+    _setMeta('meta[property="og:type"]',         'content', 'website');
+    _setMeta('meta[name="twitter:card"]',        'content', 'summary_large_image');
+    _setMeta('meta[name="twitter:url"]',         'content', _defaultMeta.twUrl);
+    _setMeta('meta[name="twitter:image"]',       'content', _defaultMeta.twImg);
+    _setMeta('meta[name="twitter:title"]',       'content', _defaultMeta.twTitle);
+    _setMeta('meta[name="twitter:description"]', 'content', _defaultMeta.twDesc);
+    try { const c = document.querySelector('link[rel="canonical"]'); if (c) c.setAttribute('href', _defaultMeta.canonical); } catch(e) {}
+    try { document.title = _defaultMeta.title; } catch(e) {}
+    // Remove VideoGame JSON-LD
+    try { const el = document.getElementById('game-jsonld'); if (el) el.remove(); } catch(e) {}
+  }
+
   /* ---------- Game detail interstitial ---------- */
   function showDetail(game) {
     pendingGame = game;
@@ -1474,6 +1561,8 @@
 
     // Render related games
     renderDetailRelated(game);
+    // P3.1 / P3.2 — inject VideoGame JSON-LD + update OG/Twitter meta
+    _injectGameMeta(game);
     // Make detail interactive and trap input so underlying content doesn't receive events
     try {
       $detail.tabIndex = -1;
@@ -1495,6 +1584,8 @@
   function hideDetail() {
     $detail.classList.remove("open");
     document.body.classList.remove('detail-open');
+    // P3.1 / P3.2 — restore default OG/Twitter meta + remove VideoGame JSON-LD
+    _restoreDefaultMeta();
     try {
       document.removeEventListener("keydown", blockDetailKeydown, true);
       document.removeEventListener("pointerdown", blockDetailPointer, true);
