@@ -816,13 +816,15 @@
     const bar = document.getElementById('tag-chips');
     if (!bar) return;
     bar.innerHTML = '';
+    const inner = document.createElement('div');
+    inner.className = 'tag-chips-inner';
     const all = document.createElement('button');
     all.type = 'button';
     all.className = 'tag-chip active';
     all.textContent = '🕹️ All';
     all.dataset.chip = '__all';
     all.addEventListener('click', () => { try { $searchInput.value = ''; } catch(e){} showHome(); });
-    bar.appendChild(all);
+    inner.appendChild(all);
     for (const tag of TAG_ORDER) {
       const meta = TAG_META[tag] || { emoji: '🎲', label: tag };
       const count = (tagMap[tag] || []).length;
@@ -833,14 +835,15 @@
       btn.textContent = `${meta.emoji} ${meta.label}`;
       btn.dataset.chip = tag;
       btn.addEventListener('click', () => showCategory(tag));
-      bar.appendChild(btn);
+      inner.appendChild(btn);
     }
+    bar.appendChild(inner);
   }
   function updateChipActive(activeTag) {
     try {
       const bar = document.getElementById('tag-chips');
       if (!bar) return;
-      bar.querySelectorAll('.tag-chip').forEach(btn => {
+      (bar.querySelector('.tag-chips-inner') || bar).querySelectorAll('.tag-chip').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.chip === activeTag);
       });
       const active = bar.querySelector('.tag-chip.active');
