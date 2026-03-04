@@ -95,7 +95,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Defend Gondor from Mordor's siege in this Lord of the Rings-inspired tower-defense game."
   },
   {
     "title": "Big Red Button",
@@ -115,7 +117,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "There's a big red button. The instructions say don't press it. You'll press it anyway."
   },
   {
     "title": "Blockclaim.io",
@@ -139,7 +143,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Paint tiles and claim territory in this competitive .io multiplayer game. Block your rivals and expand your domain."
   },
   {
     "title": "Crossy Road",
@@ -220,7 +226,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "The undead can't jump — use that to your advantage. Shoot hordes of zombies before they stack up and overwhelm you."
   },
   {
     "title": "Zombies Can't Jump",
@@ -243,7 +251,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Classic zombie defense: shoot the walking dead before they climb their way over the wall to reach you."
   },
   {
     "title": "Runner Yodas",
@@ -267,7 +277,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "An auto-runner featuring tiny Yoda clones. Jump, duck, and dodge through obstacle-filled levels."
   },
   {
     "title": "Cube Ninja",
@@ -289,7 +301,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Slice and dice cubes with your ninja blade in this satisfying physics puzzle."
   },
   {
     "title": "Battle Day Brawl",
@@ -310,7 +324,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Command your soldiers in chaotic battlefield skirmishes across multiple waves of enemies."
   },
   {
     "title": "Define Of Karmax 3",
@@ -332,7 +348,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Third installment of the Karmax defense series — protect your base against increasingly tough attackers."
   },
   {
     "title": "Drone Wars",
@@ -355,7 +373,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Pilot your combat drone through enemy formations. Dodge missiles and return fire in aerial dogfights."
   },
   {
     "title": "Luxahoy",
@@ -378,7 +398,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Navigate a ship through stormy waters, collecting treasures while avoiding deadly obstacles."
   },
   {
     "title": "Sambogart",
@@ -402,7 +424,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "An action platformer with gunplay inspired by classic run-and-gun games."
   },
   {
     "title": "Ninja Kid VS Zombies",
@@ -427,7 +451,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A young ninja must cut down wave after wave of zombies using lightning-fast blade combos."
   },
   {
     "title": "Space Cowboy",
@@ -452,7 +478,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Ride across the cosmos on horseback, lassoing enemies and dodging asteroids in this quirky space western."
   },
   {
     "title": "Silver Arrow",
@@ -477,7 +505,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A fast-paced archery game. Draw your bow, aim carefully, and pin targets before time runs out."
   },
   {
     "title": "Ninja Blade",
@@ -502,7 +532,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "React to oncoming attacks and slice them in half with your katana. Timing and precision are everything."
   },
   {
     "title": "Black Knight",
@@ -524,7 +556,9 @@
       "mobile"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Wield your sword as the Black Knight, defending your keep from relentless invaders."
   },
   {
     "title": "Breaking the Bank",
@@ -550,7 +584,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Plan the perfect heist — crack the vault, dodge guards, and escape with the loot in this stealth puzzler."
   },
   {
     "title": "Big Tower Tiny Square",
@@ -573,7 +609,9 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "description": "A super-hard precision platformer. Navigate a tiny square through a massive tower of traps."
+    "description": "A super-hard precision platformer. Navigate a tiny square through a massive tower of traps.",
+    "featured": false,
+    "badge": "popular"
   },
   {
     "title": "Cannon Basketball 4",
@@ -596,7 +634,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Angle and power your cannon shots to sink basketball after basketball into the hoop. Physics-based fun."
   },
   {
     "title": "Cell Machine",
@@ -620,7 +660,8 @@
     "show": true,
     "use_overlay_title": false,
     "badge": "new",
-    "description": "Design and build self-replicating cellular automata machines. An endlessly surprising sandbox."
+    "description": "Design and build self-replicating cellular automata machines. An endlessly surprising sandbox.",
+    "featured": false
   },
   {
     "title": "Chrome Dino",
@@ -662,7 +703,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A minimalist reflex game where you tap to switch a small circle's rotation direction, dodging obstacles."
   },
   {
     "title": "Connect 3",
@@ -682,7 +725,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Drop tokens to line up three in a row before your opponent does. A quicker twist on the classic Connect Four."
   },
   {
     "title": "CraftMine",
@@ -700,7 +745,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Mine blocks and craft tools in this browser-based Minecraft-inspired survival sandbox."
   },
   {
     "title": "CS:GO Clicker",
@@ -719,7 +766,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "An idle clicker themed around Counter-Strike. Buy guns, earn kills, and upgrade your arsenal."
   },
   {
     "title": "Cut the Rope",
@@ -765,7 +814,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Om Nom's favorite puzzle game gets a festive winter makeover with new holiday-themed levels."
   },
   {
     "title": "Cut the Rope Time Travel",
@@ -788,7 +839,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Om Nom travels through history! Cut ropes across ancient Egypt, medieval castles, and prehistoric jungles."
   },
   {
     "title": "Cupcake 2048",
@@ -809,7 +862,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "The 2048 slide puzzle re-skinned with delicious cupcakes. Merge matching treats to reach the ultimate dessert."
   },
   {
     "title": "Deal or No Deal",
@@ -827,7 +882,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Open briefcases and negotiate with the banker to win the most money in this TV game show classic."
   },
   {
     "title": "Death Run 3D",
@@ -850,7 +907,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Sprint through an endless 3D tunnel of spinning blades and moving obstacles. React fast or die instantly."
   },
   {
     "title": "Defend the Tank",
@@ -870,7 +929,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Position your troops and shoot down enemy waves before they destroy your precious tank."
   },
   {
     "title": "Doge 2048",
@@ -890,7 +951,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Wow. Such merge. A 2048 clone featuring the famous Doge meme. Very numbers. Much slide. So win."
   },
   {
     "title": "Doodle Jump",
@@ -937,7 +1000,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Draw a road with your finger and watch your car drive across it. Simple physics, endlessly creative."
   },
   {
     "title": "Edge Not Found",
@@ -957,7 +1022,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Navigate the Chrome dinosaur into a web-themed adventure of missing pages and 404 errors."
   },
   {
     "title": "Endless War 3",
@@ -974,7 +1041,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Command infantry, tanks, and air support across brutal World War II-inspired battlefields."
   },
   {
     "title": "Evil Glitch",
@@ -994,7 +1063,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A glitchy platformer where the game itself fights back — tiles disappear, colors invert, and the rules break."
   },
   {
     "title": "Flappy Bird",
@@ -1060,7 +1131,8 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "description": "Race your opponent to the getaway vehicle using wild leaps and power-ups. Fast chaotic fun."
+    "description": "Race your opponent to the getaway vehicle using wild leaps and power-ups. Fast chaotic fun.",
+    "featured": false
   },
   {
     "title": "Gimme the Airpod",
@@ -1080,7 +1152,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Quick physics puzzles where you maneuver to grab the missing AirPod from increasingly tricky situations."
   },
   {
     "title": "Grind Craft",
@@ -1100,7 +1174,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "An idle crafting incremental: combine resources, build machines, and work your way up from stone to steel."
   },
   {
     "title": "Helicopter",
@@ -1120,7 +1196,8 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "description": "Steer the helicopter through tight caves by holding the mouse button. A deceptively simple classic."
+    "description": "Steer the helicopter through tight caves by holding the mouse button. A deceptively simple classic.",
+    "featured": false
   },
   {
     "title": "HexGL",
@@ -1140,7 +1217,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A futuristic high-speed racing game inspired by F-Zero and WipeOut, running entirely in WebGL."
   },
   {
     "title": "Interactive Buddy",
@@ -1159,7 +1238,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A physics sandbox where you interact with a squishy buddy — throw it, bounce it, and apply ragdoll chaos."
   },
   {
     "title": "Just One Boss",
@@ -1177,7 +1258,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "You only have one boss to fight — but it has many phases. A challenging bullet-hell boss rush game."
   },
   {
     "title": "Krunker",
@@ -1199,7 +1282,10 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "badge": "hot",
+    "description": "A fast-paced browser-based FPS with blocky graphics and silky-smooth gunplay. No download needed."
   },
   {
     "title": "Meme 2048",
@@ -1219,7 +1305,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "The sliding tile puzzle with a meme twist — merge your favorite internet icons instead of plain numbers."
   },
   {
     "title": "Eaglercraft",
@@ -1238,7 +1326,10 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "badge": "popular",
+    "description": "Play Minecraft 1.8 directly in your browser with no Java, no downloads, and no plugins required."
   },
   {
     "title": "Minesweeper",
@@ -1259,7 +1350,10 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "badge": "popular",
+    "description": "The classic Windows game. Use logic to flag mines and reveal safe squares without triggering an explosion."
   },
   {
     "title": "Mini-putt",
@@ -1280,7 +1374,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Play miniature golf across quirky, physics-driven courses. Master angles and power to sink every hole."
   },
   {
     "title": "Missiles",
@@ -1302,7 +1398,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Intercept incoming missiles before they destroy your cities. A browser remake of the arcade classic."
   },
   {
     "title": "n-gon",
@@ -1319,7 +1417,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A minimal but brutally difficult dodging game. Navigate an n-sided polygon through a barrage of threats."
   },
   {
     "link": "https://o.poki2.online/om-bounce/",
@@ -1340,7 +1440,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Help Om Nom bounce on trampolines to gobble up candy high in the air. Timing-based physics fun."
   },
   {
     "title": "Papaspizzaria",
@@ -1364,7 +1466,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Run Papa's Pizzeria: take orders, prep dough, add toppings, bake, and serve to hungry customers."
   },
   {
     "title": "Paper.io 2",
@@ -1388,7 +1492,10 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "badge": "hot",
+    "description": "Expand your territory by drawing loops on the paper grid — but watch your back; rivals will cut your line."
   },
   {
     "title": "Papery Planes",
@@ -1412,7 +1519,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Fold and fly paper planes through tricky courses. Adjust lift, weight, and angle to glide perfectly."
   },
   {
     "title": "Push The Square",
@@ -1431,7 +1540,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Guide a square to its target by placing directional arrows on the grid to steer it through puzzles."
   },
   {
     "title": "Rolly Vortex",
@@ -1454,7 +1565,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Roll a ball through a spinning tube full of obstacles. Tilt, dodge, and keep rolling as far as you can."
   },
   {
     "title": "Snow Battle",
@@ -1475,7 +1588,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Throw snowballs at opponents in this winter multiplayer brawl. Build cover and eliminate your rivals."
   },
   {
     "title": "Soldier Legend",
@@ -1496,7 +1611,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Lead a lone soldier through war zones, blasting enemies and completing missions in this action platformer."
   },
   {
     "title": "Solitaire",
@@ -1518,7 +1635,10 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "badge": "popular",
+    "description": "The classic single-player card game. Stack suits in order from Ace to King to clear the tableau."
   },
   {
     "title": "Stack",
@@ -1539,7 +1659,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Tap to drop blocks onto a growing tower. The further from center you land, the smaller the next block."
   },
   {
     "title": "Stealing The Diamond",
@@ -1560,7 +1682,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A Henry Stickmin adventure — choose your approach to steal the world's largest diamond from a museum."
   },
   {
     "title": "Stick War",
@@ -1581,7 +1705,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Command an army of stickmen and conquer enemy territories in this real-time strategy classic."
   },
   {
     "title": "Storm The House 2",
@@ -1601,7 +1727,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Defend your house from waves of stick-figure attackers. Upgrade guns and barricades to hold the line."
   },
   {
     "title": "Superhot",
@@ -1620,7 +1748,10 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "badge": "hot",
+    "description": "Time moves only when you move. Plan each action carefully in this innovative first-person shooter."
   },
   {
     "title": "Swerve",
@@ -1644,7 +1775,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Steer a ball along a winding track without falling off. Tilt to swerve around tight curves at speed."
   },
   {
     "title": "Temple Run 2",
@@ -1666,7 +1799,10 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "badge": "popular",
+    "description": "Sprint through ancient ruins, swipe to turn, tilt to dodge, and jump over obstacles in this endless runner."
   },
   {
     "title": "The Battle",
@@ -1687,7 +1823,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Two armies clash in this physics-based strategy brawl. Deploy units and watch the chaos unfold."
   },
   {
     "title": "The Final Earth",
@@ -1708,7 +1846,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Build a city in space on a finite floating island. Manage resources and expand vertically into the sky."
   },
   {
     "title": "The Heist",
@@ -1725,7 +1865,9 @@
     "orientation": "landscape",
     "avalid": [],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Pull off an elaborate casino heist with Henry Stickmin by choosing the right gadget at each step."
   },
   {
     "title": "There Is No Game",
@@ -1744,7 +1886,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A comedy meta-game that constantly insists there is no game — while actually being a very clever one."
   },
   {
     "title": "This Is The Only Level",
@@ -1764,7 +1908,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "One level, played over and over — but the rules change every time. A clever puzzle within a puzzle."
   },
   {
     "title": "Toss The Turtle",
@@ -1786,7 +1932,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Launch a turtle from a cannon, bounce it off platforms, and rack up the biggest distance possible."
   },
   {
     "title": "Tube Jumpers",
@@ -1805,7 +1953,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Up to four players bounce on tubes floating above the water. Knock opponents off to be the last one standing."
   },
   {
     "title": "Vex 3",
@@ -1830,7 +1980,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A challenging stickman platformer packed with spikes, saw blades, and precision jumps."
   },
   {
     "title": "Vex 4",
@@ -1855,7 +2007,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "More vexing obstacles, more traps, more precision platforming — Vex 4 raises the difficulty to new levels."
   },
   {
     "title": "Vex 5",
@@ -1880,7 +2034,10 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "badge": "popular",
+    "description": "The latest mainline Vex platformer. New moves, new hazards, and the same addictive run-and-die gameplay."
   },
   {
     "title": "Vex 6",
@@ -1905,7 +2062,10 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "badge": "new",
+    "description": "The newest entry in the Vex series with fresh mechanics and more devilish level designs than ever before."
   },
   {
     "title": "Wordle",
@@ -1925,7 +2085,10 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "badge": "popular",
+    "description": "Guess the five-letter word in six tries. Each guess reveals which letters are correct, misplaced, or absent."
   },
   {
     "title": "Troll Boxing",
@@ -1945,7 +2108,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Two troll fighters enter the ring. Punch, duck, and uppercut your way to victory in this silly brawler."
   },
   {
     "title": "Alien Attack",
@@ -1966,7 +2131,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Classic Space Invaders-style shooting. Blast descending alien formations before they reach the ground."
   },
   {
     "title": "Balance Ball",
@@ -1991,7 +2158,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Tilt your device or use arrow keys to roll the ball along a narrow platform without falling off the edge."
   },
   {
     "title": "Bonncing Dot",
@@ -2012,7 +2181,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A simple but addictive game where you guide a bouncing dot through gaps in moving barriers."
   },
   {
     "title": "Black Bats",
@@ -2036,7 +2207,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Shoot down wave upon wave of swooping black bats before they overwhelm your defenses."
   },
   {
     "title": "Blox Slider",
@@ -2057,7 +2230,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Slide colored blocks across the grid to match them with their target positions in the fewest moves possible."
   },
   {
     "title": "Sir Bottomtight",
@@ -2078,7 +2253,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Help the dignified Sir Bottomtight navigate treacherous platforming gaps without soiling his trousers."
   },
   {
     "title": "Brave Bird",
@@ -2099,7 +2276,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Flap your wings bravely through a forest of obstacles. A charming take on the infinite flapper genre."
   },
   {
     "title": "Broken Horn",
@@ -2120,7 +2299,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A unicorn has lost its horn! Guide it through a magical puzzle-platformer to find the missing piece."
   },
   {
     "title": "Bubble It Steven",
@@ -2141,7 +2322,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Pop and match bubbles in this Steven Universe-themed bubble shooter. Aim and fire to clear the board."
   },
   {
     "title": "Bubble Fish",
@@ -2162,7 +2345,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Shoot colored bubbles upward to match groups of three and clear the aquatic playing field."
   },
   {
     "title": "Candy Fusion",
@@ -2184,7 +2369,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Merge matching candy pieces on the grid to create bigger sweets and rack up a high score."
   },
   {
     "title": "Captain Roger",
@@ -2205,7 +2392,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A top-down space shooter. Pilot Captain Roger through asteroid fields and alien swarms."
   },
   {
     "title": "Captain War",
@@ -2227,7 +2416,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Recruit soldiers and lead them into battle in this auto-brawler strategy game."
   },
   {
     "title": "Cat On Fire",
@@ -2249,7 +2440,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A cat is inexplicably on fire. Help it jump through platforms and collect water buckets to survive."
   },
   {
     "title": "Cave Jumper",
@@ -2271,7 +2464,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Jump from wall to wall inside an endless vertical cave shaft without touching the sides."
   },
   {
     "title": "cboxes",
@@ -2290,7 +2485,9 @@
       "mobile"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Tap to spawn colored boxes and stack them into matching groups before the screen fills up."
   },
   {
     "title": "Cheese Lab",
@@ -2313,7 +2510,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Guide a mouse through a laboratory maze to reach the cheese at the end of each puzzle level."
   },
   {
     "title": "Chip Man",
@@ -2334,7 +2533,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Eat chips and grow your Chip Man character while avoiding hazards in this casual snack-themed game."
   },
   {
     "title": "Christmas Balls",
@@ -2357,7 +2558,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Aim and shoot festive ornament balls to match three or more in a row. A holiday bubble-shooter."
   },
   {
     "title": "Circle Ball",
@@ -2380,7 +2583,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Keep your ball bouncing inside a rotating circle without letting it escape through the gap."
   },
   {
     "title": "Circle Pong",
@@ -2403,7 +2608,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A circular twist on Pong — two paddles curve around the inside of a ring to keep the ball in play."
   },
   {
     "title": "Circle Tris",
@@ -2426,7 +2633,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Rotate a circular board to drop falling Tetris-style pieces into the matching color zones around the edge."
   },
   {
     "title": "Crun Ching Ninjas",
@@ -2448,7 +2657,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Fast-paced ninja action where you crunch through waves of enemies with satisfying combo strikes."
   },
   {
     "title": "Super Cowboy Run",
@@ -2471,7 +2682,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Lasso enemies and sprint through the Wild West in this auto-running cowboy platformer."
   },
   {
     "title": "CowBoy2 Shot",
@@ -2494,7 +2707,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Quick-draw dueling game. React faster than your opponent and fire first in this western showdown."
   },
   {
     "title": "Craigen Stone",
@@ -2516,7 +2731,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A story-driven action-adventure following Craigen Stone through mysterious dungeons and boss battles."
   },
   {
     "title": "Dangerous",
@@ -2539,7 +2756,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "An aptly named reflex game. Dodge dangerous objects flying at you from all directions."
   },
   {
     "title": "Dark Ninja",
@@ -2563,7 +2782,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Become the ultimate shadow warrior, slipping through darkness and eliminating guards silently."
   },
   {
     "title": "Death Soul",
@@ -2586,7 +2807,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Play as a reaper navigating the underworld, collecting souls while evading the forces that pursue you."
   },
   {
     "title": "Dont Eat Trash",
@@ -2608,7 +2831,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A health-themed runner: jump over junk food and collect nutritious items to keep your score high."
   },
   {
     "title": "Dot Game",
@@ -2630,7 +2855,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Classic dots-and-boxes. Draw lines to complete squares and claim more territory than your opponent."
   },
   {
     "title": "Drop Circle",
@@ -2653,7 +2880,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Drop a circle through rotating rings, timing your falls to pass through the openings in each layer."
   },
   {
     "title": "Duck Water",
@@ -2677,7 +2906,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Guide a rubber duck through water-filled levels, navigating currents and obstacles to reach the drain."
   },
   {
     "title": "Scratch Card",
@@ -2700,7 +2931,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Virtually scratch lottery cards to reveal prizes. A relaxing and satisfying casual experience."
   },
   {
     "title": "Escape",
@@ -2724,7 +2957,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Solve environmental puzzles and find hidden items to escape each locked room. A browser escape game."
   },
   {
     "title": "Evil Robot",
@@ -2749,7 +2984,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Hack and slash through a factory overrun with rogue robots before they take over completely."
   },
   {
     "title": "Evil Wyrm",
@@ -2775,7 +3012,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A fire-breathing dragon is terrorizing the land — navigate the wyrm through dungeons and defeat it."
   },
   {
     "title": "Fast",
@@ -2798,7 +3037,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A minimalist speed game. React as quickly as possible to prompts before the timer runs out."
   },
   {
     "title": "Fire Brigade",
@@ -2824,7 +3065,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Coordinate your fire engines to douse burning buildings before entire city blocks go up in flames."
   },
   {
     "title": "Fishing Frenzy",
@@ -2846,7 +3089,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Cast your line, react to bites, and reel in as many fish as possible before time runs out."
   },
   {
     "title": "Flap Cat Copters",
@@ -2870,7 +3115,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Cats with helicopter ears! Flap to stay airborne and weave through obstacles in this cute flapper."
   },
   {
     "title": "Flap Cat Xmas",
@@ -2895,7 +3142,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Flap Cat gets a holiday upgrade with festive decorations and Christmas-themed obstacle courses."
   },
   {
     "title": "Flappy Dog",
@@ -2920,7 +3169,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Guide a flapping dog through pipe gaps. Same addictive one-tap gameplay with a canine twist."
   },
   {
     "title": "Flying School",
@@ -2946,7 +3197,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Attend flight school and complete aerial training missions to earn your wings."
   },
   {
     "title": "Foo Foo",
@@ -2971,7 +3224,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Little Foo Foo hops through the forest avoiding snakes and collecting mushrooms in this endless hopper."
   },
   {
     "title": "Fox Fury",
@@ -2995,7 +3250,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A swift fox battles through enchanted forests, dodging traps and defeating magical creatures."
   },
   {
     "title": "Freedom Road",
@@ -3019,7 +3276,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Drive your vehicle down an obstacle-laden highway, swerving between traffic to stay alive."
   },
   {
     "title": "Hungry Frog",
@@ -3043,7 +3302,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Flick your tongue to catch flies before they escape. Classic frog-feeding reflex action."
   },
   {
     "title": "Full Immersion",
@@ -3067,7 +3328,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A conceptual narrative experience that immerses you in an unexpected interactive story."
   },
   {
     "title": "Funny Soccer",
@@ -3089,7 +3352,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Ragdoll physics soccer with comically wobbly players. Score goals before the clock runs down."
   },
   {
     "title": "Get Twelve",
@@ -3111,7 +3376,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Merge numbered tiles to reach 12. A satisfying number-combination puzzle with a unique board twist."
   },
   {
     "title": "Goblin Machine",
@@ -3134,7 +3401,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Build and operate a goblin-powered contraption to solve Rube Goldberg-style mechanical puzzles."
   },
   {
     "title": "Go Fishing",
@@ -3156,7 +3425,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Drop your hook at just the right moment to snag fish swimming below the surface."
   },
   {
     "title": "Going Nuts",
@@ -3179,7 +3450,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A squirrel collects nuts by rolling through a tree-filled obstacle course. Physics-driven and charming."
   },
   {
     "title": "Greedy Gnomes",
@@ -3202,7 +3475,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Protect your garden from greedy gnomes trying to steal your vegetables. A comical tower defense."
   },
   {
     "title": "Green Wings",
@@ -3225,7 +3500,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Fly a little green bird through lush jungles, collecting seeds and dodging predators."
   },
   {
     "title": "Groovy Ski",
@@ -3248,7 +3525,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Slalom down a snowy mountain, dodging trees and flags while grooving to upbeat music."
   },
   {
     "title": "Grub Runner",
@@ -3270,7 +3549,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Play as a tiny grub speeding through underground tunnels, avoiding roots and rocks in this micro-runner."
   },
   {
     "title": "Gumball Race",
@@ -3293,7 +3574,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Race gumballs down colorful candy-coated tracks, bouncing off obstacles to reach the finish line."
   },
   {
     "title": "Hansel and Gretel",
@@ -3316,7 +3599,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A fairy-tale puzzle adventure. Help the two siblings navigate the witch's forest and outsmart her traps."
   },
   {
     "title": "Hero Jump",
@@ -3338,7 +3623,9 @@
       "desktop"
     ],
     "show": false,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A cape-wearing hero must jump over rooftops, collect coins, and dodge obstacles in this urban runner."
   },
   {
     "title": "Hidden",
@@ -3361,7 +3648,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A hidden-object game. Scour detailed scenes to find every item on the list before time expires."
   },
   {
     "title": "Hungry Bob",
@@ -3385,7 +3674,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Roll Bob the round character down the hill, gobbling up food items while avoiding hazards."
   },
   {
     "title": "Ice Cream",
@@ -3408,7 +3699,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Stack scoops of ice cream as high as possible without the tower toppling. A sweet balancing act."
   },
   {
     "title": "Jelly Doods",
@@ -3433,7 +3726,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Adorable jelly creatures need your help navigating a slippery world of physics-based puzzles."
   },
   {
     "title": "Jelly Slice",
@@ -3458,7 +3753,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Slice wobbly jelly blocks into equal portions to feed the exact number of critters waiting below."
   },
   {
     "title": "Jomjom",
@@ -3480,7 +3777,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A colorful match-and-pop puzzle where you connect same-colored Jomjom creatures to clear the board."
   },
   {
     "title": "Jump Kitty",
@@ -3503,7 +3802,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "An adventurous kitten leaps from platform to platform. Miss a jump and it's back to the start!"
   },
   {
     "title": "Fall Jump Roll",
@@ -3528,7 +3829,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A triple-threat platformer: choose to fall, jump, or roll to navigate every obstacle in sequence."
   },
   {
     "title": "Jumppy dog",
@@ -3551,7 +3854,9 @@
       "desktop"
     ],
     "show": false,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A springy dog bounces relentlessly upward — tap to steer and collect bones on the way up."
   },
   {
     "title": "Jumppy Dragon",
@@ -3574,7 +3879,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A young dragon bounces skyward, collecting gems and breathing fire at anything in the way."
   },
   {
     "title": "Knight Of The Day",
@@ -3597,7 +3904,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A chivalrous knight defends the realm through a series of turn-based combat encounters."
   },
   {
     "title": "Izard Rocket",
@@ -3621,7 +3930,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Launch a rocket lizard into the sky, upgrading engines and fins to reach greater and greater heights."
   },
   {
     "title": "Looney Roonks",
@@ -3645,7 +3956,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Help the Roonks, a family of goofy creatures, solve physics puzzles using their unique abilities."
   },
   {
     "title": "Manic",
@@ -3669,7 +3982,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A manic reflex-based game where everything accelerates. Keep up or be overwhelmed by the chaos."
   },
   {
     "title": "Matching Time",
@@ -3693,7 +4008,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Flip cards to find matching pairs before the timer runs out. A classic memory game."
   },
   {
     "title": "Math Game",
@@ -3718,7 +4035,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Click the correct answer to arithmetic questions as fast as possible. Great for mental math practice."
   },
   {
     "title": "Monster Candy",
@@ -3740,7 +4059,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Cute monsters need candy! Match colored sweets by drawing lines to satisfy each monster's sweet tooth."
   },
   {
     "title": "Monster Eater",
@@ -3763,7 +4084,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A massive monster roams the city devouring everything in sight. Guide it to eat as much as possible."
   },
   {
     "title": "Mouse Jump",
@@ -3786,7 +4109,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A tiny mouse must leap from platform to platform without slipping off the narrow ledges."
   },
   {
     "title": "NEST",
@@ -3808,7 +4133,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Build and maintain a bird's nest, collecting twigs and guarding eggs from predators."
   },
   {
     "title": "Ninja Run",
@@ -3833,7 +4160,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Sprint, wall-jump, and dash through obstacle courses as a fleet-footed ninja — speed is everything."
   },
   {
     "title": "Ninja Way",
@@ -3858,7 +4187,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Follow your ninja path through stealth and combat missions, mastering the way of the shadow warrior."
   },
   {
     "title": "Ojello",
@@ -3882,7 +4213,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Stretch and squish the Ojello blob to fit through tight gaps in this physics-based puzzle game."
   },
   {
     "title": "Pacman",
@@ -3905,7 +4238,10 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "badge": "popular",
+    "description": "The iconic arcade classic. Eat all the dots, dodge four ghosts, and use power pellets to turn the tables."
   },
   {
     "title": "Pancake Boss",
@@ -3931,7 +4267,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Stack pancakes as perfectly as possible for demanding breakfast customers before they lose patience."
   },
   {
     "title": "Panda Flash",
@@ -3955,7 +4293,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A flash-speed panda platformer — react faster than the eye can follow to navigate each level."
   },
   {
     "title": "Pebble Boy",
@@ -3979,7 +4319,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A young boy made of pebbles rolls through levels collecting gems and avoiding water that would dissolve him."
   },
   {
     "title": "Penguin",
@@ -4002,7 +4344,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Guide a waddling penguin safely across icy platforms, fishing holes, and polar-bear hazards."
   },
   {
     "title": "Pie Attack",
@@ -4026,7 +4370,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Defend your face from an endless barrage of incoming pies by dodging left and right."
   },
   {
     "title": "Pigeon",
@@ -4049,7 +4395,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Be a pigeon loose in the city. Poop on cars, steal sandwiches, and cause maximum urban chaos."
   },
   {
     "title": "Piggy Roll",
@@ -4073,7 +4421,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Roll a jolly pig down sloping levels, collecting coins and using its hefty weight to smash obstacles."
   },
   {
     "title": "Pirate Kid",
@@ -4098,7 +4448,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A pint-sized pirate sails from island to island, fighting sea monsters and collecting buried treasure."
   },
   {
     "title": "Pitana",
@@ -4122,7 +4474,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Swing a piñata-shaped character through candy-filled obstacle courses to reach the end goal."
   },
   {
     "title": "Popup",
@@ -4147,7 +4501,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Pop all the bubbles that appear on the screen as fast as possible. Satisfying and endlessly replayable."
   },
   {
     "title": "Portal Runner",
@@ -4173,7 +4529,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Sprint through levels and leap into portals to teleport around deadly hazards."
   },
   {
     "title": "Pyramid Jump",
@@ -4200,7 +4558,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Leap between the steps of an ancient pyramid, climbing higher with every well-timed jump."
   },
   {
     "title": "Raccoon Run",
@@ -4226,7 +4586,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A mischievous raccoon dashes through trash-can-lined streets collecting garbage bags in this runner."
   },
   {
     "title": "Rain Box",
@@ -4250,7 +4612,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Direct falling raindrops into colored buckets to score points. A calming but precise reflex game."
   },
   {
     "title": "Rapunzel Tower",
@@ -4276,7 +4640,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Help Rapunzel climb her tower by letting down her hair — and pulling her up through physics puzzles."
   },
   {
     "title": "Rec Tang Zings",
@@ -4299,7 +4665,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Bounce rectangular shapes off walls to destroy colored targets in this geometric puzzle game."
   },
   {
     "title": "Robotion",
@@ -4324,7 +4692,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Program a robot with simple movement commands to navigate mazes and reach the charging station."
   },
   {
     "title": "Rocket Pop",
@@ -4349,7 +4719,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Blast off ice-cream rockets and pop floating popsicle clusters by matching flavors."
   },
   {
     "title": "Rope Ninja",
@@ -4375,7 +4747,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Swing from rope to rope like a ninja, building huge momentum to fling yourself across chasms."
   },
   {
     "title": "Run Pixie Run",
@@ -4400,7 +4774,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A tiny pixie sprints through an enchanted forest. Avoid mushrooms and fly over tree roots to survive."
   },
   {
     "title": "Sally BBQ",
@@ -4425,7 +4801,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Help Sally manage a busy barbecue grill: take orders, flip patties, and serve before customers leave."
   },
   {
     "title": "Sky Lands",
@@ -4450,7 +4828,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Explore a world made of floating islands, hopping between them and uncovering secrets in the clouds."
   },
   {
     "title": "Sky Race",
@@ -4475,7 +4855,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Race your aircraft against opponents through cloud-filled sky courses, hitting boost pads to surge ahead."
   },
   {
     "title": "Sky Wire",
@@ -4499,7 +4881,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Drive a cable car along sky-high wires, collecting passengers and avoiding birds and power lines."
   },
   {
     "title": "Slot Chicken",
@@ -4521,7 +4905,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A slot-machine game starring a gambling chicken. Pull the lever and pray for matching symbols."
   },
   {
     "title": "Sort Bird",
@@ -4546,7 +4932,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Sort birds by color onto branches so no two of the same species share a perch. A relaxing logic puzzle."
   },
   {
     "title": "Spring Ninja",
@@ -4571,7 +4959,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Use a spring to launch a ninja between platforms. Time your release for the perfect landing angle."
   },
   {
     "title": "Square Crush",
@@ -4594,7 +4984,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Crush and merge falling squares of the same color to keep the grid clear and rack up a high score."
   },
   {
     "title": "Steven Kash",
@@ -4618,7 +5010,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A money-grabbing adventure: dodge obstacles and collect cash as Steven Kash speeds through the city."
   },
   {
     "title": "Stick Panda",
@@ -4642,7 +5036,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A panda made of sticks overcomes bamboo-themed obstacles in this charming precision platformer."
   },
   {
     "title": "Stick Panda Xmas",
@@ -4666,7 +5062,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Stick Panda dons a Santa hat for holiday-themed levels filled with snowflakes and gift obstacles."
   },
   {
     "title": "Stick Samurai",
@@ -4691,7 +5089,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Slice through enemy stickmen with a razor-sharp katana in this minimalist samurai action game."
   },
   {
     "title": "Sticky Goo",
@@ -4716,7 +5116,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A gooey blob sticks to surfaces and must stretch and fling itself through puzzle-filled levels."
   },
   {
     "title": "Strange Space",
@@ -4741,7 +5143,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Drift through outer space in a broken spaceship, solving physics puzzles to restore power and escape."
   },
   {
     "title": "Taptap Submarine",
@@ -4764,7 +5168,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Tap to dive and release to surface, guiding your submarine through underwater caverns."
   },
   {
     "title": "Target Tap",
@@ -4788,7 +5194,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Tap bullseyes as fast as they appear. Miss too many and the game ends. Pure tap-speed reflex training."
   },
   {
     "title": "Titan Runner",
@@ -4816,7 +5224,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A colossal mech stomps through a ruined city. Guide it forward, jumping over crumbling buildings."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/tooncup",
@@ -4840,7 +5250,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A cartoon-style soccer game featuring beloved animated characters. Score goals and win the Tooncup!"
   },
   {
     "title": "Trailblazer",
@@ -4861,7 +5273,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Blaze a new trail across unexplored territory — clear obstacles and pave the way for settlers."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/trashndash",
@@ -4883,7 +5297,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A raccoon dashes through alleys overflowing with trash, collecting bags and hurdling obstacles."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/trollboxing",
@@ -4908,7 +5324,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Two troll fighters enter the ring. Punch, duck, and uppercut your way to victory in this silly brawler."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/uforun",
@@ -4931,7 +5349,9 @@
       "desktop"
     ],
     "use_overlay_title": false,
-    "show": true
+    "show": true,
+    "featured": false,
+    "description": "Pilot a UFO through crop fields and city streets, abducting cows and dodging military jets."
   },
   {
     "title": "Veggi Rabbit",
@@ -4955,7 +5375,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "An energetic rabbit races through gardens, munching vegetables and leaping over farm machinery."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/woodblock",
@@ -4977,7 +5399,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Drag wooden blocks to fill every row and column on the board in this satisfying Tetris-style puzzle."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/xtypesky",
@@ -5001,7 +5425,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "A vertical space shooter with dynamic music — shoot in rhythm with the beat for bonus multipliers."
   },
   {
     "title": "Zapaliens",
@@ -5025,7 +5451,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Zap alien invaders before they land on Earth. A neon arcade shooter with escalating difficulty."
   },
   {
     "title": "Zombie Night",
@@ -5046,7 +5474,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Survive the night by shooting zombies that close in from all directions in this top-down horror game."
   },
   {
     "title": "Zombie World",
@@ -5066,7 +5496,9 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Build a survivor camp and fend off zombie hordes in this post-apocalyptic strategy defense game."
   },
   {
     "title": "Zoon Stuner",
@@ -5086,6 +5518,8 @@
       "desktop"
     ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": false,
+    "description": "Stun the Zoons — alien creatures — using precise timing before they escape their enclosures."
   }
 ]
