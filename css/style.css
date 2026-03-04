@@ -1436,7 +1436,9 @@ body.static-page .site-footer > .footer-links {
 .detail-close:hover{background:rgba(0,0,0,.6)}
 
 /* ---- Detail fav button ---- */
-.detail-fav-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 18px;margin-bottom:10px;border-radius:20px;border:1.5px solid rgba(255,77,109,.4);background:transparent;color:#ef4444;font-size:.84rem;font-weight:600;transition:background .15s,border-color .15s}
+.detail-btn-row{display:flex;justify-content:center;gap:12px;align-items:center;margin-bottom:8px}
+.detail-fav-wrap{width:116px;flex:0 0 116px;display:flex;justify-content:flex-start}
+.detail-fav-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:7px 18px;border-radius:20px;border:1.5px solid rgba(255,77,109,.4);background:transparent;color:#ef4444;font-size:.84rem;font-weight:600;white-space:nowrap;transition:background .15s,border-color .15s}
 .detail-fav-btn svg{stroke:#ef4444;transition:fill .15s}
 .detail-fav-btn.fav-active{background:rgba(239,68,68,.1);border-color:#ef4444}
 .detail-fav-btn.fav-active svg{fill:#ef4444}
@@ -1571,14 +1573,16 @@ body.static-page .site-footer > .footer-links {
     text-align:left;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-start;
     overflow:auto; /* allow scrolling when content is tall */
     min-height:0; /* allow flex child to shrink on small heights */
   }
   /* right-side body: round right corners matching inset */
   .detail-body{border-radius:0 calc(20px - 1px) calc(20px - 1px) 0}
   .detail-tags{justify-content:flex-start}
+  .detail-btn-row{justify-content:flex-start;margin:0 0 8px;gap:12px}
   .detail-play-btn{align-self:flex-start}
+  .detail-related-wrap{margin-top:auto;padding-top:12px}
   .detail-close{top:12px;right:12px}
 }
 /* ========== Phone Landscape Optimizations ==========
@@ -1653,7 +1657,12 @@ body.static-page .site-footer > .footer-links {
   .detail-play-btn { align-self: flex-start; padding: 9px 20px; font-size: .88rem; }
   .detail-tags { justify-content: flex-start; }
   .detail-close { top: 8px; right: 8px; width: 28px; height: 28px; }
-  .detail-fav-btn { padding: 6px 14px; font-size: .8rem; }
-  /* Hide YOU MAY ALSO LIKE in landscape — not enough vertical space */
-  .detail-related-wrap { display: none !important; }
+  .detail-fav-wrap { width: 96px; flex: 0 0 96px; display: flex; justify-content: flex-start; }
+  .detail-fav-btn { font-size: .8rem; padding: 6px 14px; }
+  .detail-btn-row { justify-content: flex-start; margin: 0 0 6px; gap: 10px; }
+  /* YOU MAY ALSO LIKE — compact in phone landscape */
+  .detail-related-wrap { margin-top: 6px; padding: 6px 10px 6px; }
+  .detail-related-title { padding-top: 4px; margin-bottom: 4px; }
+  .detail-related-item img { width: 36px; height: 36px; }
+  .detail-related-item { min-width: 38px; }
 }
