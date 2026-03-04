@@ -1437,17 +1437,17 @@ body.static-page .site-footer > .footer-links {
 
 /* ---- Detail fav button ---- */
 .detail-btn-row{display:flex;justify-content:center;gap:12px;align-items:center;margin-bottom:8px}
-.detail-fav-wrap{width:116px;flex:0 0 116px;display:flex;justify-content:flex-start}
-.detail-fav-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:7px 18px;border-radius:20px;border:1.5px solid rgba(255,77,109,.4);background:transparent;color:#ef4444;font-size:.84rem;font-weight:600;white-space:nowrap;transition:background .15s,border-color .15s}
+.detail-fav-wrap{display:flex;justify-content:flex-start}
+.detail-fav-btn{display:flex;align-items:center;justify-content:center;gap:6px;padding:7px 18px;border-radius:20px;border:1.5px solid rgba(255,77,109,.4);background:transparent;color:#ef4444;font-size:.84rem;font-weight:600;white-space:nowrap;transition:background .15s,border-color .15s;min-width:108px;width:108px}
 .detail-fav-btn svg{stroke:#ef4444;transition:fill .15s}
 .detail-fav-btn.fav-active{background:rgba(239,68,68,.1);border-color:#ef4444}
 .detail-fav-btn.fav-active svg{fill:#ef4444}
 
 /* ---- Detail related games ---- */
-.detail-related-wrap{padding:0 12px 10px;border-top:1px solid var(--surface-2);margin-top:8px}
-.detail-related-title{font-size:.68rem;font-weight:600;color:var(--text-muted);letter-spacing:.03em;margin-bottom:6px;padding-top:8px}
-.detail-related-row{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
-.detail-related-row::-webkit-scrollbar{display:none}
+.detail-related-wrap{padding:0 12px 10px;border-top:1px solid var(--surface-2);margin-top:8px;overflow-x:auto;scrollbar-width:none;text-align:center}
+.detail-related-title{font-size:.68rem;font-weight:600;color:var(--text-muted);letter-spacing:.03em;margin-bottom:6px;padding-top:8px;text-align:center}
+.detail-related-row{display:inline-flex;gap:7px;padding-bottom:2px;text-align:left}
+.detail-related-wrap::-webkit-scrollbar{display:none}
 .detail-related-item{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:48px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:opacity .15s}
 .detail-related-item:hover{opacity:.8}
 .detail-related-item img{width:44px;height:44px;border-radius:9px;object-fit:contain;background:var(--surface-2);display:block}
@@ -1460,6 +1460,8 @@ body.static-page .site-footer > .footer-links {
 .fav-btn.faved{opacity:1;color:#ef4444}
 .fav-btn.faved svg{fill:#ef4444;stroke:#ef4444}
 @media(hover:none){.fav-btn{opacity:.75}}
+/* Hide card overlay fav circles when detail modal is open — avoids visual bleed */
+body.detail-open .fav-btn{opacity:0!important;pointer-events:none}
 
 /* ---- Search history dropdown ---- */
 .search-history-dropdown{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--surface,#fff);border:1.5px solid var(--surface-2,#e5e7eb);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:999;overflow:hidden}
@@ -1657,8 +1659,8 @@ body.static-page .site-footer > .footer-links {
   .detail-play-btn { align-self: flex-start; padding: 9px 20px; font-size: .88rem; }
   .detail-tags { justify-content: flex-start; }
   .detail-close { top: 8px; right: 8px; width: 28px; height: 28px; }
-  .detail-fav-wrap { width: 96px; flex: 0 0 96px; display: flex; justify-content: flex-start; }
-  .detail-fav-btn { font-size: .8rem; padding: 6px 14px; }
+  .detail-fav-wrap { display: flex; justify-content: flex-start; }
+  .detail-fav-btn { font-size: .8rem; padding: 6px 14px; min-width: 96px; width: 96px; }
   .detail-btn-row { justify-content: flex-start; margin: 0 0 6px; gap: 10px; }
   /* YOU MAY ALSO LIKE — compact in phone landscape */
   .detail-related-wrap { margin-top: 6px; padding: 6px 10px 6px; }

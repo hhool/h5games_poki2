@@ -1479,7 +1479,7 @@
       if (typeof $detail.focus === "function") $detail.focus();
       // disable pointer events and scrolling on main content while detail is open
       try { if ($content) { $content.style.pointerEvents = 'none'; $content.setAttribute('aria-hidden','true'); } } catch (e) {}
-      try { document.body.style.overflow = 'hidden'; } catch (e) {}
+      try { document.body.style.overflow = 'hidden'; document.body.classList.add('detail-open'); } catch (e) {}
       // install capture listeners to stop pointer/keyboard events from leaking
       document.addEventListener("keydown", blockDetailKeydown, true);
       document.addEventListener("pointerdown", blockDetailPointer, true);
@@ -1491,7 +1491,7 @@
   }
   function hideDetail() {
     $detail.classList.remove("open");
-    // remove listeners and restore
+    document.body.classList.remove('detail-open');
     try {
       document.removeEventListener("keydown", blockDetailKeydown, true);
       document.removeEventListener("pointerdown", blockDetailPointer, true);
