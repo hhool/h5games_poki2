@@ -1434,6 +1434,38 @@ body.static-page .site-footer > .footer-links {
 }
 .detail-close:hover{background:rgba(0,0,0,.6)}
 
+/* ---- Detail fav button ---- */
+.detail-fav-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 18px;margin-bottom:10px;border-radius:20px;border:1.5px solid rgba(255,77,109,.4);background:transparent;color:#ef4444;font-size:.84rem;font-weight:600;transition:background .15s,border-color .15s}
+.detail-fav-btn svg{stroke:#ef4444;transition:fill .15s}
+.detail-fav-btn.fav-active{background:rgba(239,68,68,.1);border-color:#ef4444}
+.detail-fav-btn.fav-active svg{fill:#ef4444}
+
+/* ---- Detail related games ---- */
+.detail-related-wrap{padding:0 14px 16px}
+.detail-related-title{font-size:.74rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.detail-related-row{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.detail-related-row::-webkit-scrollbar{display:none}
+.detail-related-item{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:68px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:opacity .15s}
+.detail-related-item:hover{opacity:.8}
+.detail-related-item img{width:58px;height:58px;border-radius:12px;object-fit:contain;background:var(--surface-2);display:block}
+.detail-related-item span{font-size:.66rem;font-weight:600;color:var(--text);max-width:68px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
+
+/* ---- Favorites heart on game cards ---- */
+.fav-btn{position:absolute;top:5px;right:5px;width:26px;height:26px;border-radius:50%;background:rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.75);opacity:0;transition:opacity .15s,background .15s,color .15s;z-index:11;padding:0;line-height:1;flex-shrink:0}
+.fav-btn svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;pointer-events:none}
+.game-card:hover .fav-btn,.game-card:focus-within .fav-btn{opacity:1}
+.fav-btn.faved{opacity:1;color:#ef4444}
+.fav-btn.faved svg{fill:#ef4444;stroke:#ef4444}
+@media(hover:none){.fav-btn{opacity:.75}}
+
+/* ---- Search history dropdown ---- */
+.search-history-dropdown{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--surface,#fff);border:1.5px solid var(--surface-2,#e5e7eb);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:999;overflow:hidden}
+.search-hist-item{display:flex;align-items:center;gap:10px;padding:9px 14px;cursor:pointer}
+.search-hist-item:hover{background:var(--surface-2,#f3f4f6)}
+.search-hist-text{flex:1;font-size:.88rem;color:var(--text,#1a2332)}
+.search-hist-del{color:var(--text-muted,#9ca3af);font-size:.7rem;padding:2px 6px;border-radius:4px;flex-shrink:0;line-height:1.5}
+.search-hist-del:hover{background:var(--surface-2,#f3f4f6);color:var(--text,#1a2332)}
+
 /* ---------- Responsive ---------- */
 @media(max-width:900px){
   .sidebar{transform:translateX(-100%)}

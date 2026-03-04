@@ -42,6 +42,9 @@
   const HERO_FEATURED_COUNT = 6;
   const RECENT_KEY = "poki2_recent";
   const MAX_RECENT = 12;
+  const FAVS_KEY = 'poki2_favs';
+  const SEARCH_HIST_KEY = 'poki2_search_hist';
+  const MAX_SEARCH_HIST = 5;
   const INITIAL_SECTIONS = 3; // Number of sections to load initially for lazy loading
 
   /* ---------- Mobile detection ---------- */
@@ -199,6 +202,8 @@
   let $detailPlay = null;
   let $detailClose = null;
   let $detailBackdrop = null;
+  let $detailFavBtn = null;
+  let $detailRelated = null;
   const $pauseOverlay = $("game-pause");
   const $pauseResume = $("pause-resume");
   const $pauseQuit = $("pause-quit");
@@ -437,10 +442,158 @@
     } catch (e) {}
   }
 
+  /* ---------- Favorites helpers ---------- */
+  function getFavs() {
+    try { return JSON.parse(localStorage.getItem(FAVS_KEY) || '[]'); } catch(e) { return []; }
+  }
+  function setFavs(arr) {
+    try { localStorage.setItem(FAVS_KEY, JSON.stringify(arr)); } catch(e) {}
+  }
+  function isFav(link) { return getFavs().includes(link); }
+  function toggleFav(link) {
+    let favs = getFavs();
+    if (favs.includes(link)) favs = favs.filter(f => f !== link);
+    else favs.unshift(link);
+    setFavs(favs);
+    updateFavsNavBadge();
+  }
+  function updateFavsNavBadge() {
+    try {
+      const badge = document.getElementById('favs-nav-badge');
+      if (badge) badge.textContent = getFavs().length;
+    } catch(e) {}
+  }
+
+  /* ---------- Search history helpers ---------- */
+  function getSearchHistory() {
+    try { return JSON.parse(localStorage.getItem(SEARCH_HIST_KEY) || '[]'); } catch(e) { return []; }
+  }
+  function addSearchHistory(q) {
+    if (!q || !q.trim()) return;
+    try {
+      let hist = getSearchHistory().filter(h => h.toLowerCase() !== q.toLowerCase());
+      hist.unshift(q.trim());
+      hist = hist.slice(0, MAX_SEARCH_HIST);
+      localStorage.setItem(SEARCH_HIST_KEY, JSON.stringify(hist));
+    } catch(e) {}
+  }
+  function renderSearchHistoryDropdown() {
+    const dropdown = document.getElementById('search-history-dropdown');
+    if (!dropdown) return;
+    if ($searchInput.value.trim()) { dropdown.style.display = 'none'; return; }
+    const hist = getSearchHistory();
+    if (!hist.length) { dropdown.style.display = 'none'; return; }
+    dropdown.innerHTML = '';
+    hist.forEach(q => {
+      const item = document.createElement('div');
+      item.className = 'search-hist-item';
+      const text = document.createElement('span');
+      text.textContent = q;
+      text.className = 'search-hist-text';
+      text.addEventListener('mousedown', e => {
+        e.preventDefault();
+        $searchInput.value = q;
+        _lastSearchQuery = q;
+        clearTimeout(_searchDebounceTimer);
+        dropdown.style.display = 'none';
+        showSearch(q);
+      });
+      const del = document.createElement('button');
+      del.type = 'button';
+      del.className = 'search-hist-del';
+      del.textContent = '\u2715';
+      del.setAttribute('aria-label', 'Remove ' + q);
+      del.addEventListener('mousedown', e => {
+        e.preventDefault();
+        try {
+          const upd = getSearchHistory().filter(h => h !== q);
+          localStorage.setItem(SEARCH_HIST_KEY, JSON.stringify(upd));
+        } catch(_e) {}
+        renderSearchHistoryDropdown();
+      });
+      item.appendChild(text);
+      item.appendChild(del);
+      dropdown.appendChild(item);
+    });
+    dropdown.style.display = '';
+  }
+
+  /* ---------- Detail — related games ---------- */
+  function renderDetailRelated(game) {
+    if (!$detailRelated) return;
+    try {
+      const related = allGames.filter(g =>
+        canShow(g) && g.link !== game.link &&
+        (game.tags || []).some(t => (g.tags || []).includes(t))
+      ).slice(0, 4);
+      $detailRelated.innerHTML = '';
+      if (!related.length) return;
+      const titleEl = document.createElement('p');
+      titleEl.className = 'detail-related-title';
+      titleEl.textContent = 'You may also like';
+      $detailRelated.appendChild(titleEl);
+      const row = document.createElement('div');
+      row.className = 'detail-related-row';
+      related.forEach(g => {
+        const item = document.createElement('div');
+        item.className = 'detail-related-item';
+        const img = document.createElement('img');
+        img.alt = g.title || '';
+        img.loading = 'lazy';
+        const src = g.imgSrc || getFaviconCandidates(g.link)[0];
+        optimizeImageLoading(img, src);
+        attachFaviconFallback(img, g.link);
+        const name = document.createElement('span');
+        name.textContent = g.title || '';
+        item.appendChild(img);
+        item.appendChild(name);
+        item.addEventListener('click', () => showDetail(g));
+        row.appendChild(item);
+      });
+      $detailRelated.appendChild(row);
+    } catch(e) {}
+  }
+
+  /* ---------- Favorites view ---------- */
+  function showFavorites() {
+    currentView = 'favorites';
+    if (document && document.body) document.body.classList.remove('full-bleed-footer');
+    try { const sp = document.querySelector('.page-spacer'); if (sp) sp.remove(); } catch(e) {}
+    $hero.style.display = 'none';
+    $recentSection.style.display = 'none';
+    $searchResults.style.display = 'none';
+    $skeleton.style.display = 'none';
+    $gameSections.style.display = '';
+    $gameSections.innerHTML = '';
+    const favLinks = getFavs();
+    const favGames = favLinks.map(link => allGames.find(g => g.link === link)).filter(Boolean);
+    const section = document.createElement('section');
+    section.className = 'category-section';
+    section.innerHTML = '<div class="section-header"><h2 class="section-title"><span class="emoji">❤️</span> Favorites</h2></div>';
+    const grid = document.createElement('div');
+    grid.className = 'game-grid';
+    if (favGames.length) {
+      favGames.forEach(g => grid.appendChild(createCard(g)));
+    } else {
+      const empty = document.createElement('div');
+      empty.className = 'empty-state';
+      empty.style.gridColumn = '1 / -1';
+      empty.innerHTML = '<div class="empty-icon">❤️</div><p class="empty-text">No favorites yet — tap ♥ on any game card!</p>';
+      grid.appendChild(empty);
+    }
+    section.appendChild(grid);
+    $gameSections.appendChild(section);
+    updateChipActive(null);
+    highlightSidebarItem('__favs');
+    updateBnavActive();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   /* ---------- Render helpers ---------- */
   function createCard(game) {
     const el = document.createElement("div");
     el.className = "game-card";
+    el.dataset.link = game.link || '';
     el.setAttribute('tabindex', '0');
     el.setAttribute('role', 'button');
     el.addEventListener('keydown', (e) => {
@@ -453,6 +606,26 @@
       badge.textContent = game.badge;
       el.appendChild(badge);
     }
+    // Favorites heart button
+    const favBtn = document.createElement('button');
+    favBtn.type = 'button';
+    favBtn.className = 'fav-btn' + (isFav(game.link) ? ' faved' : '');
+    favBtn.setAttribute('aria-label', isFav(game.link) ? 'Remove from favorites' : 'Add to favorites');
+    favBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
+    favBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      toggleFav(game.link);
+      const faved = isFav(game.link);
+      favBtn.classList.toggle('faved', faved);
+      favBtn.setAttribute('aria-label', faved ? 'Remove from favorites' : 'Add to favorites');
+      // sync detail modal fav button if this game is currently shown
+      if ($detailFavBtn && pendingGame && pendingGame.link === game.link) {
+        $detailFavBtn.classList.toggle('fav-active', faved);
+        const favText = document.getElementById('detail-fav-text');
+        if (favText) favText.textContent = faved ? '\u2665 Saved' : '\u2665 Favorite';
+      }
+    });
+    el.appendChild(favBtn);
 
     const img = document.createElement("img");
     img.className = "game-card-img";
@@ -1055,7 +1228,7 @@
     _searchKbIdx = -1;
     $searchEmpty.style.display = matched.length ? "none" : "";
     for (const g of matched) $searchGrid.appendChild(createCard(g));
-
+    addSearchHistory(query.trim());
     highlightSidebarItem(null);
   }
 
@@ -1144,6 +1317,14 @@
       showHome();
     });
     $sidebarNav.appendChild(homeItem);
+    // Favorites
+    const favsItem = document.createElement('button');
+    favsItem.type = 'button';
+    favsItem.className = 'nav-item';
+    favsItem.dataset.tag = '__favs';
+    favsItem.innerHTML = `<span class="nav-emoji">❤️</span> Favorites <span class="nav-badge" id="favs-nav-badge">${getFavs().length}</span>`;
+    favsItem.addEventListener('click', () => { closeSidebar(); showFavorites(); });
+    $sidebarNav.appendChild(favsItem);
 
     for (const tag of TAG_ORDER) {
       const meta = TAG_META[tag] || { emoji: "🎲", label: tag };
@@ -1249,6 +1430,13 @@
     if ($detailDesc) {
       $detailDesc.textContent = game.description || "";
     }
+    // Sync fav button state
+    if ($detailFavBtn) {
+      const faved = isFav(game.link);
+      $detailFavBtn.classList.toggle('fav-active', faved);
+      const favText = document.getElementById('detail-fav-text');
+      if (favText) favText.textContent = faved ? '\u2665 Saved' : '\u2665 Favorite';
+    }
     // Determine if the game is playable in this environment and update the Play button
     try {
       const playable = isPlayable(game);
@@ -1270,6 +1458,8 @@
       }
     }
 
+    // Render related games
+    renderDetailRelated(game);
     // Make detail interactive and trap input so underlying content doesn't receive events
     try {
       $detail.tabIndex = -1;
@@ -1712,10 +1902,12 @@
   const $bnavSearch = $("bnav-search");
   const $bnavRandom = $("bnav-random");
   const $bnavMenu = $("bnav-menu");
+  const $bnavFavs = $("bnav-favs");
   function updateBnavActive() {
     try {
-      [$bnavHome, $bnavSearch, $bnavRandom, $bnavMenu].forEach(b => b && b.classList.remove('active'));
+      [$bnavHome, $bnavSearch, $bnavRandom, $bnavMenu, $bnavFavs].forEach(b => b && b.classList.remove('active'));
       if (currentView === 'search' && $bnavSearch) $bnavSearch.classList.add('active');
+      else if (currentView === 'favorites' && $bnavFavs) $bnavFavs.classList.add('active');
       else if (currentView === 'home' && $bnavHome) $bnavHome.classList.add('active');
     } catch (e) {}
   }
@@ -1736,6 +1928,9 @@
   if ($bnavMenu) $bnavMenu.addEventListener('click', () => {
     $sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
     updateBnavActive();
+  });
+  if ($bnavFavs) $bnavFavs.addEventListener('click', () => {
+    showFavorites();
   });
 
   /* detail interstitial */
@@ -1794,7 +1989,18 @@
     const q = $searchInput.value;
     _lastSearchQuery = q;
     clearTimeout(_searchDebounceTimer);
+    const dropdown = document.getElementById('search-history-dropdown');
+    if (dropdown) dropdown.style.display = 'none';
     _searchDebounceTimer = setTimeout(() => showSearch(q), 180);
+  });
+  $searchInput.addEventListener('focus', () => {
+    if (!$searchInput.value.trim()) renderSearchHistoryDropdown();
+  });
+  $searchInput.addEventListener('blur', () => {
+    setTimeout(() => {
+      const dropdown = document.getElementById('search-history-dropdown');
+      if (dropdown) dropdown.style.display = 'none';
+    }, 160);
   });
 
   // On mobile, pressing the keyboard "Go/Search" button fires a 'search' event
@@ -1892,6 +2098,8 @@
     $detailDesc = document.getElementById("detail-desc");
     $detailClose = document.getElementById("detail-close");
     $detailBackdrop = document.getElementById("detail-backdrop");
+    $detailFavBtn = document.getElementById("detail-fav");
+    $detailRelated = document.getElementById("detail-related");
 
     // Attach overlay listeners now that refs exist
     if ($barTrigger) {
@@ -2006,6 +2214,19 @@
 
     // Attach detail interstitial listeners
     if ($detailPlay) $detailPlay.addEventListener("click", () => { if (pendingGame) openGame(pendingGame); });
+    if ($detailFavBtn) $detailFavBtn.addEventListener('click', () => {
+      if (!pendingGame) return;
+      toggleFav(pendingGame.link);
+      const faved = isFav(pendingGame.link);
+      $detailFavBtn.classList.toggle('fav-active', faved);
+      const favText = document.getElementById('detail-fav-text');
+      if (favText) favText.textContent = faved ? '\u2665 Saved' : '\u2665 Favorite';
+      // sync all cards on screen
+      document.querySelectorAll(`.game-card[data-link="${pendingGame.link}"] .fav-btn`).forEach(b => {
+        b.classList.toggle('faved', faved);
+        b.setAttribute('aria-label', faved ? 'Remove from favorites' : 'Add to favorites');
+      });
+    });
     if ($detailClose) $detailClose.addEventListener("click", hideDetail);
     if ($detailBackdrop) $detailBackdrop.addEventListener("click", hideDetail);
 
