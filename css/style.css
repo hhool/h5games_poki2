@@ -1431,6 +1431,46 @@ body.static-page .site-footer > .footer-links {
    - make image cover the full card height (object-fit:cover)
    - make body scrollable if content exceeds available height
 */
+/* ---------- Mobile Bottom Navigation ---------- */
+.bottom-nav{
+  display:none;
+  position:fixed;
+  bottom:0;left:0;right:0;
+  z-index:800;
+  height:calc(56px + env(safe-area-inset-bottom,0px));
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  background:var(--surface-1);
+  border-top:1px solid var(--border);
+  flex-direction:row;
+  align-items:stretch;
+  box-shadow:0 -2px 12px rgba(0,0,0,.12);
+}
+.bottom-nav-item{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:3px;
+  background:none;
+  border:none;
+  color:var(--text-2);
+  font-size:.65rem;
+  font-weight:500;
+  cursor:pointer;
+  padding:6px 4px 4px;
+  transition:color .15s,background .15s;
+  -webkit-tap-highlight-color:transparent;
+}
+.bottom-nav-item:hover,.bottom-nav-item:active{color:var(--brand);background:rgba(0,107,179,.06)}
+.bottom-nav-item.active{color:var(--brand)}
+.bottom-nav-item svg{flex-shrink:0}
+@media(max-width:900px){
+  .bottom-nav{display:flex}
+  .main-wrap{padding-bottom:calc(56px + env(safe-area-inset-bottom,0px))}
+  .site-footer{padding-bottom:calc(56px + env(safe-area-inset-bottom,0px)) !important}
+  .back-to-top{bottom:calc(68px + env(safe-area-inset-bottom,0px))}
+}
 @media (orientation: landscape) and (min-width:700px) {
   .detail-card{
     width:min(1100px,92vw);

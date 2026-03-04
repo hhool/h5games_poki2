@@ -8,46 +8,32 @@
     <!-- Ads controlled by consent banner (do not load until user accepts) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Poki2 — Free Online Games</title>
+    <title>Poki2 — Play 200+ Free Online Games</title>
 
     <link rel="canonical" href="https://poki2.online/">
 
-    <meta name="og:image:width" content="400">
-    <meta name="og:image:height" content="400">
-    <meta name="og:title" content="Poki2 — Free Online Games">
-    <meta name="og:description"
-        content="Play the best free online games! Action, puzzle, racing, sports and more. No downloads — instant play in your browser on desktop and mobile.">
-    <meta name="og:type" content="website">
-    <meta name="og:url" content="https://poki2.online/">
-    <meta name="og:site_name" content="Poki2">
+    <meta property="og:image" content="https://poki2.online/assets/icon/icon-512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:title" content="Poki2 — Play 200+ Free Online Games">
+    <meta property="og:description" content="Play the best free online games! Action, puzzle, racing, sports and more. No downloads — instant play in your browser on desktop and mobile.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://poki2.online/">
+    <meta property="og:site_name" content="Poki2">
 
-    <meta name="twitter:image" content="https://poki2.online/favicon.png">
-
-
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://poki2.online/">
+    <meta name="twitter:image" content="https://poki2.online/assets/icon/icon-512.png">
 
-    <link rel="preload" href="css/style.css?v=20260207j" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/style.css?v=20260304a" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="css/style.css?v=20260207j">
+        <link rel="stylesheet" href="css/style.css?v=20260304a">
     </noscript>
     <script src="js/webp-detect.js" defer=""></script>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="/assets/icon/icon-192.png">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#006bb3">
-    <script>
-        // WebP favicon support
-        (function() {
-            if (document.documentElement.classList.contains('webp')) {
-                var link = document.querySelector('link[rel="icon"]');
-                if (link) {
-                    link.href = 'favicon.webp';
-                    link.type = 'image/webp';
-                }
-            }
-        })();
-    </script>
     <script>
         // WebP favicon support
         (function() {
@@ -74,20 +60,10 @@
     </style>
 
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    
     <!-- ===== SIDEBAR ===== -->
-    <meta name="description"
-        content="Play the best free browser games: action, puzzle, racing and more — instant play on desktop and mobile.">
-    <meta property="og:description"
-        content="Play the best free browser games: action, puzzle, racing and more — instant play on desktop and mobile.">
-    <meta name="twitter:description"
-        content="Play the best free browser games: action, puzzle, racing and more — instant play on desktop and mobile.">
-    <meta property="og:title" content="Poki2 — Free Online Games">
-    <meta name="twitter:title" content="Poki2 — Free Online Games">
-    <meta property="og:image" content="https://poki2.online/favicon.png">
-    <meta property="og:url" content="https://poki2.online/">
+    <meta name="description" content="Play 500+ free browser games: action, puzzle, racing and more — instant play on desktop and mobile. No downloads required.">
+    <meta name="twitter:title" content="Poki2 — Play 500+ Free Online Games">
+    <meta name="twitter:description" content="Play 500+ free browser games: action, puzzle, racing and more — instant play on desktop and mobile.">
     <script
         type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Poki2","url":"https://poki2.online/","logo":"https://poki2.online/favicon.png","contactPoint":[{"@type":"ContactPoint","contactType":"customer support","email":"contact@poki2.online"}]}</script>
 
@@ -347,7 +323,27 @@
         </div>
     </div>
 
-    <script defer="" src="js/app.js?v=20260303a"></script>
+    <!-- Mobile bottom navigation -->
+    <nav class="bottom-nav" id="bottom-nav" aria-label="Mobile navigation">
+      <button class="bottom-nav-item" id="bnav-home" aria-label="Home">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Home</span>
+      </button>
+      <button class="bottom-nav-item" id="bnav-search" aria-label="Search">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+      </button>
+      <button class="bottom-nav-item" id="bnav-random" aria-label="Random game">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+        <span>Random</span>
+      </button>
+      <button class="bottom-nav-item" id="bnav-menu" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <span>Menu</span>
+      </button>
+    </nav>
+
+    <script defer="" src="js/app.js?v=20260304a"></script>
     <script defer src="js/reload-guard.js"></script>
     <script src="js/consent.js" defer=""></script>
     <script src="js/fix-root-href.js" defer=""></script>

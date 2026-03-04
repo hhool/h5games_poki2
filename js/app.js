@@ -406,10 +406,43 @@
     }, { timeout: 100 });
   }
 
+  /* ---------- Structured data ---------- */
+  function injectItemListSchema(games) {
+    try {
+      const top = games.slice(0, 20);
+      const items = top.map((g, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": g.title || "",
+        "url": "https://poki2.online/games/" + (g.link || "").replace(/^\/+/, "")
+      }));
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Popular Free Online Games",
+        "url": "https://poki2.online/",
+        "numberOfItems": top.length,
+        "itemListElement": items
+      };
+      const existing = document.getElementById('ld-itemlist');
+      if (existing) existing.remove();
+      const s = document.createElement('script');
+      s.id = 'ld-itemlist';
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(schema);
+      document.head.appendChild(s);
+    } catch (e) {}
+  }
+
   /* ---------- Render helpers ---------- */
   function createCard(game) {
     const el = document.createElement("div");
     el.className = "game-card";
+    el.setAttribute('tabindex', '0');
+    el.setAttribute('role', 'button');
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showDetail(game); }
+    });
 
     const img = document.createElement("img");
     img.className = "game-card-img";
@@ -904,6 +937,7 @@
     // Render results synchronously — no setTimeout/rAF delay to avoid
     // creating an async window where showHome() can interrupt.
     $searchGrid.innerHTML = "";
+    _searchKbIdx = -1;
     $searchEmpty.style.display = matched.length ? "none" : "";
     for (const g of matched) $searchGrid.appendChild(createCard(g));
 
@@ -1554,6 +1588,37 @@
     showDetail(g);
   });
 
+  /* ---------- Mobile bottom navigation ---------- */
+  const $bnavHome = $("bnav-home");
+  const $bnavSearch = $("bnav-search");
+  const $bnavRandom = $("bnav-random");
+  const $bnavMenu = $("bnav-menu");
+  function updateBnavActive() {
+    try {
+      [$bnavHome, $bnavSearch, $bnavRandom, $bnavMenu].forEach(b => b && b.classList.remove('active'));
+      if (currentView === 'search' && $bnavSearch) $bnavSearch.classList.add('active');
+      else if (currentView === 'home' && $bnavHome) $bnavHome.classList.add('active');
+    } catch (e) {}
+  }
+  if ($bnavHome) $bnavHome.addEventListener('click', () => {
+    $searchInput.value = ''; _lastSearchQuery = '';
+    clearTimeout(_searchDebounceTimer);
+    showHome(); updateBnavActive();
+  });
+  if ($bnavSearch) $bnavSearch.addEventListener('click', () => {
+    try { $searchInput.focus(); $searchInput.select(); } catch(e) {}
+    updateBnavActive();
+  });
+  if ($bnavRandom) $bnavRandom.addEventListener('click', () => {
+    if (!allGames.length) return;
+    const g = allGames[(Math.random() * allGames.length) | 0];
+    showDetail(g);
+  });
+  if ($bnavMenu) $bnavMenu.addEventListener('click', () => {
+    $sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+    updateBnavActive();
+  });
+
   /* detail interstitial */
   if ($detailPlay) $detailPlay.addEventListener("click", () => {
     if (pendingGame) openGame(pendingGame);
@@ -1604,10 +1669,13 @@
    * - Stores last query so it can be restored after init completes
    */
   let _lastSearchQuery = '';
+  let _searchKbIdx = -1;
+  let _searchDebounceTimer = null;
   $searchInput.addEventListener("input", () => {
     const q = $searchInput.value;
     _lastSearchQuery = q;
-    showSearch(q);
+    clearTimeout(_searchDebounceTimer);
+    _searchDebounceTimer = setTimeout(() => showSearch(q), 180);
   });
 
   // On mobile, pressing the keyboard "Go/Search" button fires a 'search' event
@@ -1624,6 +1692,30 @@
       showHome();
     }
     e.preventDefault();
+  });
+
+  // Keyboard navigation: ↑↓ through search results, Escape to clear
+  $searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      $searchInput.value = '';
+      _lastSearchQuery = '';
+      clearTimeout(_searchDebounceTimer);
+      showHome();
+      return;
+    }
+    if (currentView !== 'search') return;
+    const cards = Array.from($searchGrid.querySelectorAll('.game-card'));
+    if (!cards.length) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      _searchKbIdx = Math.min(_searchKbIdx + 1, cards.length - 1);
+      cards[_searchKbIdx].focus();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      _searchKbIdx--;
+      if (_searchKbIdx < 0) { _searchKbIdx = -1; $searchInput.focus(); }
+      else cards[_searchKbIdx].focus();
+    }
   });
 
   // Prevent tapping search result cards from stealing focus from the input.
@@ -1805,6 +1897,8 @@
     } catch (e) {
       /* ignore */
     }
+    // Inject ItemList structured data for Google rich results
+    try { injectItemListSchema(allGames); } catch (e) {}
 
     // Footer measurement & dynamic CSS variable so page content reserves exact footer height
     try {
