@@ -3,7 +3,7 @@
 
 <head>
     <style id="preload-style">.preload-hide, .preload-hide *{visibility:hidden!important;height:0!important;max-height:0!important;overflow:hidden!important;opacity:0!important}</style>
-    <script id="preload-unhide">(function(){var done=false;function unhide(){if(done) return;done=true;document.documentElement.classList.remove('preload-hide');try{var s=document.getElementById('preload-style');s&&s.parentNode&&s.parentNode.removeChild(s);}catch(e){}try{var sc=document.getElementById('preload-unhide');sc&&sc.parentNode&&sc.parentNode.removeChild(sc);}catch(e){}};if(document.readyState==='complete'){unhide();return;}window.addEventListener('load',unhide,{once:true});setTimeout(unhide,2000);})();</script>
+    <script id="preload-unhide">(function(){var done=false;function unhide(){if(done)return;done=true;document.documentElement.classList.remove('preload-hide');var s=document.getElementById('preload-style');if(s&&s.parentNode)s.parentNode.removeChild(s);var sc=document.getElementById('preload-unhide');if(sc&&sc.parentNode)sc.parentNode.removeChild(sc);}window.__tryU=function(){if((window.__cssN||0)>=(window.__cssT||1))unhide();};if(document.readyState==='complete'){window.__tryU();return;}window.addEventListener('load',window.__tryU,{once:true});setTimeout(unhide,2500);})();</script>
     <!--Adsence-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -15,8 +15,9 @@
 
     <!--Adsence-->
     <!-- Ads controlled by consent banner (do not load until user accepts) -->
-    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/pages.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <script>window.__cssT=2;</script>
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet';window.__cssN=(window.__cssN||0)+1;typeof window.__tryU==='function'&&window.__tryU();">
+    <link rel="preload" href="css/pages.css" as="style" onload="this.onload=null;this.rel='stylesheet';window.__cssN=(window.__cssN||0)+1;typeof window.__tryU==='function'&&window.__tryU();">
     <noscript>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/pages.css">
