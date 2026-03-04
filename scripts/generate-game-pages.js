@@ -79,7 +79,7 @@ function buildPage(game, bodyTag, bodyInner) {
   const char     = slug[0].toLowerCase();
   const pageUrl  = `${BASE_URL}/game/${char}/${slug}/`;
   const tags     = game.tags || [];
-  const genres   = tags.map(t => TAG_LABELS[t] || t).filter(Boolean);
+  const genres   = tags.filter(t => TAG_LABELS[t]).map(t => TAG_LABELS[t]);
   const playMode = tags.includes('multiplayer') ? 'MultiPlayer' : 'SinglePlayer';
 
   const ld = JSON.stringify({

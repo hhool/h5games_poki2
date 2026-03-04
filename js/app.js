@@ -1488,7 +1488,7 @@
     // P3.1 — VideoGame JSON-LD
     try {
       const tags      = game.tags || [];
-      const genreList = tags.map(t => (TAG_META[t] || {}).label || t);
+      const genreList = tags.filter(t => TAG_META[t]).map(t => TAG_META[t].label);
       const playMode  = tags.includes('multiplayer') ? 'MultiPlayer' : 'SinglePlayer';
       const ld = {
         '@context': 'https://schema.org',
