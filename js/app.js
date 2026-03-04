@@ -195,6 +195,7 @@
   let $detailImg = null;
   let $detailTitle = null;
   let $detailTags = null;
+  let $detailDesc = null;
   let $detailPlay = null;
   let $detailClose = null;
   let $detailBackdrop = null;
@@ -409,7 +410,9 @@
   /* ---------- Structured data ---------- */
   function injectItemListSchema(games) {
     try {
-      const top = games.slice(0, 20);
+      // Featured games appear first in the list for better Rich Results coverage
+      const sorted = [...games.filter(g => g.featured), ...games.filter(g => !g.featured)];
+      const top = sorted.slice(0, 20);
       const items = top.map((g, i) => ({
         "@type": "ListItem",
         "position": i + 1,
@@ -443,6 +446,13 @@
     el.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showDetail(game); }
     });
+    // Badge (new/hot/popular)
+    if (game.badge) {
+      const badge = document.createElement('span');
+      badge.className = `game-card-badge badge-${game.badge}`;
+      badge.textContent = game.badge;
+      el.appendChild(badge);
+    }
 
     const img = document.createElement("img");
     img.className = "game-card-img";
@@ -518,7 +528,10 @@
   /* ---------- Hero featured ---------- */
   function renderHeroFeatured() {
     $heroFeatured.innerHTML = "";
-    const picks = shuffle(allGames).slice(0, HERO_FEATURED_COUNT);
+    // Prefer explicitly featured games; fill remaining slots with random picks
+    const featured = allGames.filter(g => g.featured);
+    const rest = shuffle(allGames.filter(g => !g.featured));
+    const picks = [...featured, ...rest].slice(0, HERO_FEATURED_COUNT);
     // Preload hero images to prioritize above-the-fold resources
     try {
       for (const g of picks) {
@@ -1130,6 +1143,10 @@
           `<span class="detail-tag">${(TAG_META[t] || {}).emoji || "🎲"} ${(TAG_META[t] || {}).label || t}</span>`,
       )
       .join("");
+    // Show description if available
+    if ($detailDesc) {
+      $detailDesc.textContent = game.description || "";
+    }
     // Determine if the game is playable in this environment and update the Play button
     try {
       const playable = isPlayable(game);
@@ -1770,6 +1787,7 @@
     $detailTitle = document.getElementById("detail-title");
     $detailTags = document.getElementById("detail-tags");
     $detailPlay = document.getElementById("detail-play");
+    $detailDesc = document.getElementById("detail-desc");
     $detailClose = document.getElementById("detail-close");
     $detailBackdrop = document.getElementById("detail-backdrop");
 

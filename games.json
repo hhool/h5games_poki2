@@ -3,12 +3,26 @@
     "title": "2048",
     "link": "https://2.poki2.online/2048/",
     "imgSrc": "https://2.poki2.online/2048/icon.png",
-    "tags": ["puzzle", "number", "singleplayer", "2048"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "number",
+      "singleplayer",
+      "2048"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": true,
+    "badge": "popular",
+    "description": "Slide numbered tiles on the grid to merge them and reach the 2048 tile. Simple to learn, hard to master."
   },
   {
     "title": "Among Us",
@@ -22,11 +36,19 @@
       "social",
       "among us"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": true,
+    "badge": "hot",
+    "description": "Work together to complete tasks aboard the spaceship — or deceive everyone as the impostor!"
   },
   {
     "title": "Basketball Stars",
@@ -39,11 +61,18 @@
       "competitive",
       "basketball"
     ],
-    "input": ["keyboard"],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": true,
+    "badge": "hot",
+    "description": "Intense 1v1 street basketball duels. Dribble, shoot, and block your way to victory."
   },
   {
     "title": "Battle for Gondor",
@@ -56,9 +85,15 @@
       "medieval",
       "lord of the rings"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -66,10 +101,19 @@
     "title": "Big Red Button",
     "link": "https://b.poki2.online/bigredbutton/",
     "imgSrc": "https://b.poki2.online/bigredbutton/icon.png",
-    "tags": ["other", "boring"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "other",
+      "boring"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -77,10 +121,23 @@
     "title": "Blockclaim.io",
     "link": "https://b.poki2.online/blockclaimio/",
     "imgSrc": "https://b.poki2.online/blockclaimio/images/icon192.png",
-    "tags": ["action", "idle", "competitive", "io", "production", "blockclaim"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "action",
+      "idle",
+      "competitive",
+      "io",
+      "production",
+      "blockclaim"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -88,32 +145,80 @@
     "title": "Crossy Road",
     "link": "https://c.poki2.online/crossyroad/",
     "imgSrc": "https://c.poki2.online/crossyroad/logo/icon_cy_512_512.png",
-    "tags": ["achievement", "singleplayer", "action", "castle", "crossyroad", "pixel", "taptap", "production"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "action",
+      "castle",
+      "crossyroad",
+      "pixel",
+      "taptap",
+      "production"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": true,
+    "badge": "popular",
+    "description": "How far can you hop without getting squashed? An infinite arcade-style hopper inspired by Frogger."
   },
   {
     "title": "BaBa Is You",
     "link": "https://b.poki2.online/babaisyou/",
     "imgSrc": "https://b.poki2.online/babaisyou/logo/ic_bb_512_512.png",
-    "tags": ["achievement", "strategy", "puzzle", "singleplayer", "competitive", "babaisyou", "action", "production"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "strategy",
+      "puzzle",
+      "singleplayer",
+      "competitive",
+      "babaisyou",
+      "action",
+      "production"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": true,
+    "badge": "new",
+    "description": "A mind-bending puzzle game where the rules themselves are objects you can push around to change reality."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/zcj2",
     "imgSrc": "https://mobileapp.poki2.online/mobile/zcj2/assets/icon-512.png",
     "title": "Zombies Can't Jump 2",
-    "tags": ["platformer", "action", "defense", "singleplayer", "okijin"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "platformer",
+      "action",
+      "defense",
+      "singleplayer",
+      "okijin"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -121,10 +226,22 @@
     "title": "Zombies Can't Jump",
     "link": "https://mobileapp.poki2.online/mobile/zombiescantjump",
     "imgSrc": "https://mobileapp.poki2.online/mobile/zombiescantjump/assets/icon-512.png",
-    "tags": ["platformer", "action", "defense", "singleplayer", "okijin"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "platformer",
+      "action",
+      "defense",
+      "singleplayer",
+      "okijin"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -140,9 +257,15 @@
       "runner",
       "okijin"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -150,10 +273,21 @@
     "title": "Cube Ninja",
     "link": "https://mobileapp.poki2.online/mobile/cubeninja/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/cubeninja/assets/icon-256.png",
-    "tags": ["action", "skill", "singleplayer", "ninja"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "action",
+      "skill",
+      "singleplayer",
+      "ninja"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -161,10 +295,20 @@
     "title": "Battle Day Brawl",
     "link": "https://mobileapp.poki2.online/mobile/battleday/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/battleday/res/titleScreen/titleScreen.png",
-    "tags": ["action", "battle", "singleplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "action",
+      "battle",
+      "singleplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -172,10 +316,21 @@
     "title": "Define Of Karmax 3",
     "link": "https://mobileapp.poki2.online/mobile/crkarmax/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/crkarmax/images/imggamecompleted-sheet0.png",
-    "tags": ["action", "singleplayer", "defense", "karmax"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "action",
+      "singleplayer",
+      "defense",
+      "karmax"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -183,10 +338,22 @@
     "title": "Drone Wars",
     "link": "https://mobileapp.poki2.online/mobile/dronewars/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/dronewars/assets/hd/LoadingScene/LoadingScene.png",
-    "tags": ["shooting", "action", "singleplayer", "machine", "drone"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "shooting",
+      "action",
+      "singleplayer",
+      "machine",
+      "drone"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -194,10 +361,22 @@
     "title": "Luxahoy",
     "link": "https://mobileapp.poki2.online/mobile/luxahoy/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/luxahoy/luxahoy.com/apple-touch-icon-114x114-precomposed.png",
-    "tags": ["action", "singleplayer", "adventure", "boat", "luxahoy"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "action",
+      "singleplayer",
+      "adventure",
+      "boat",
+      "luxahoy"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -213,9 +392,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -232,9 +417,15 @@
       "zombies",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -251,9 +442,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -270,9 +467,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -289,9 +492,15 @@
       "blade",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -299,10 +508,21 @@
     "title": "Black Knight",
     "link": "https://b.poki2.online/blackknight/",
     "imgSrc": "https://b.poki2.online/blackknight/icon.png",
-    "tags": ["action", "europe", "medieval", "singleplayer", "competitive"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "action",
+      "europe",
+      "medieval",
+      "singleplayer",
+      "competitive"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile"],
+    "avalid": [
+      "mobile"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -320,9 +540,15 @@
       "stickman-style",
       "stickman"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -338,20 +564,37 @@
       "stickman",
       "pixel"
     ],
-    "input": ["keyboard"],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "description": "A super-hard precision platformer. Navigate a tiny square through a massive tower of traps."
   },
   {
     "title": "Cannon Basketball 4",
     "link": "https://c.poki2.online/cannon-basketball-4/",
     "imgSrc": "https://c.poki2.online/cannon-basketball-4/img/splash.png",
-    "tags": ["achievement", "idle", "cannon", "singleplayer", "competitive"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "idle",
+      "cannon",
+      "singleplayer",
+      "competitive"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -359,32 +602,65 @@
     "title": "Cell Machine",
     "link": "https://c.poki2.online/cell-machine/",
     "imgSrc": "https://c.poki2.online/cell-machine/img/te9nDu.png",
-    "tags": ["puzzle", "pixel", "idle", "singleplayer", "competitive"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "pixel",
+      "idle",
+      "singleplayer",
+      "competitive"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "badge": "new",
+    "description": "Design and build self-replicating cellular automata machines. An endlessly surprising sandbox."
   },
   {
     "title": "Chrome Dino",
     "link": "https://c.poki2.online/chrome-dino/",
     "imgSrc": "https://c.poki2.online/chrome-dino/icons/icon-256.png",
-    "tags": ["idle", "competitive", "chrome"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "competitive",
+      "chrome"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": true,
+    "badge": "popular",
+    "description": "The classic infinite runner hidden in Chrome's offline page. Jump over cacti and duck under pterodactyls."
   },
   {
     "title": "circlO",
     "link": "https://c.poki2.online/circlo/",
     "imgSrc": "https://c.poki2.online/circlo/img/download.png",
-    "tags": ["other"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -392,10 +668,19 @@
     "title": "Connect 3",
     "link": "https://c.poki2.online/connect3/",
     "imgSrc": "https://c.poki2.online/connect3/connect3.png",
-    "tags": ["puzzle", "idle"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "idle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -403,10 +688,17 @@
     "title": "CraftMine",
     "link": "https://c.poki2.online/craftmine/",
     "imgSrc": "https://c.poki2.online/craftmine/images/craftmine.png",
-    "tags": ["racing", "arcade"],
-    "input": ["keyboard"],
+    "tags": [
+      "racing",
+      "arcade"
+    ],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -414,10 +706,18 @@
     "title": "CS:GO Clicker",
     "link": "https://c.poki2.online/csgo-clicker/",
     "imgSrc": "https://c.poki2.online/csgo-clicker/images/case1.png",
-    "tags": ["shooting", "competitive"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "shooting",
+      "competitive"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -425,21 +725,45 @@
     "title": "Cut the Rope",
     "link": "https://c.poki2.online/ctr/",
     "imgSrc": "https://c.poki2.online/ctr/logo.png",
-    "tags": ["achievement", "strategy", "cut", "rope"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "strategy",
+      "cut",
+      "rope"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": true,
+    "badge": "popular",
+    "description": "Cut the ropes at just the right moment to feed candy to the adorable little monster, Om Nom!"
   },
   {
     "title": "Cut the Rope Holiday",
     "link": "https://c.poki2.online/ctr-holiday/",
     "imgSrc": "https://c.poki2.online/ctr-holiday/images/1024/ui/ph_logo.png",
-    "tags": ["achievement", "strategy", "holiday", "cut", "rope"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "strategy",
+      "holiday",
+      "cut",
+      "rope"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -447,10 +771,22 @@
     "title": "Cut the Rope Time Travel",
     "link": "https://c.poki2.online/ctr-tr/",
     "imgSrc": "https://c.poki2.online/ctr-tr/logo.png",
-    "tags": ["achievement", "strategy", "time", "travel", "cut", "rope"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "strategy",
+      "time",
+      "travel",
+      "cut",
+      "rope"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -458,10 +794,20 @@
     "title": "Cupcake 2048",
     "link": "https://c.poki2.online/cupcake2048/",
     "imgSrc": "https://c.poki2.online/cupcake2048/favicon.png",
-    "tags": ["puzzle", "2048", "cupcake"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "2048",
+      "cupcake"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -469,10 +815,17 @@
     "title": "Deal or No Deal",
     "link": "https://d.poki2.online/deal-or-no-deal/",
     "imgSrc": "https://d.poki2.online/deal-or-no-deal/icon.png",
-    "tags": ["other"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -489,9 +842,13 @@
       "singleplayer",
       "competitive"
     ],
-    "input": ["keyboard"],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -499,10 +856,19 @@
     "title": "Defend the Tank",
     "link": "https://d.poki2.online/defend-the-tank/",
     "imgSrc": "https://d.poki2.online/defend-the-tank/icon.png",
-    "tags": ["shooting", "strategy"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "shooting",
+      "strategy"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -510,10 +876,19 @@
     "title": "Doge 2048",
     "link": "https://d.poki2.online/doge2048/",
     "imgSrc": "https://d.poki2.online/doge2048/icon.png",
-    "tags": ["puzzle", "2048", "doge"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "2048",
+      "doge"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -521,12 +896,24 @@
     "title": "Doodle Jump",
     "link": "https://d.poki2.online/doodle-jump/",
     "imgSrc": "https://d.poki2.online/doodle-jump/icon.png",
-    "tags": ["idle", "racing", "jump"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "racing",
+      "jump"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": true,
+    "badge": "popular",
+    "description": "Guide the Doodler ever upward on randomized platforms while avoiding monsters and bottomless gaps."
   },
   {
     "title": "Draw the Hill",
@@ -540,9 +927,15 @@
       "competitive",
       "drawing"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -550,10 +943,19 @@
     "title": "Edge Not Found",
     "link": "https://e.poki2.online/edgenotfound/",
     "imgSrc": "https://e.poki2.online/edgenotfound/icon.png",
-    "tags": ["puzzle", "idle", "strategy"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "idle",
+      "strategy"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -561,10 +963,16 @@
     "title": "Endless War 3",
     "link": "https://e.poki2.online/endlesswar3/",
     "imgSrc": "https://e.poki2.online/endlesswar3/icon.png",
-    "tags": ["shooting"],
-    "input": ["keyboard"],
+    "tags": [
+      "shooting"
+    ],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -572,10 +980,19 @@
     "title": "Evil Glitch",
     "link": "https://e.poki2.online/evil-glitch/",
     "imgSrc": "https://e.poki2.online/evil-glitch/icon.png",
-    "tags": ["idle", "shooting", "strategy"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "shooting",
+      "strategy"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -583,43 +1000,85 @@
     "title": "Flappy Bird",
     "link": "https://f.poki2.online/flappy-bird/",
     "imgSrc": "https://f.poki2.online/flappy-bird/icon.png",
-    "tags": ["idle", "competitive", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "competitive",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": true,
+    "badge": "popular",
+    "description": "Tap to keep the bird airborne through narrow gaps in the pipes. One tap at a time."
   },
   {
     "title": "Geometry Dash (Scratch)",
     "link": "https://g.poki2.online/geodash/",
     "imgSrc": "https://g.poki2.online/geodash/icon.png",
-    "tags": ["achievement", "dash", "idle"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "dash",
+      "idle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "featured": true,
+    "badge": "hot",
+    "description": "Rhythm-based action platformer. Jump, fly, and flip through increasingly dangerous levels."
   },
   {
     "title": "Getaway Shootout",
     "link": "https://g.poki2.online/getaway-shootout/",
     "imgSrc": "https://g.poki2.online/getaway-shootout/icon.png",
-    "tags": ["shooting"],
-    "input": ["keyboard"],
+    "tags": [
+      "shooting"
+    ],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "description": "Race your opponent to the getaway vehicle using wild leaps and power-ups. Fast chaotic fun."
   },
   {
     "title": "Gimme the Airpod",
     "link": "https://g.poki2.online/gimme-the-airpod/",
     "imgSrc": "https://g.poki2.online/gimme-the-airpod/icon.png",
-    "tags": ["competitive", "multiplayer", "idle", "battle"],
-    "input": ["keyboard"],
+    "tags": [
+      "competitive",
+      "multiplayer",
+      "idle",
+      "battle"
+    ],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -627,10 +1086,19 @@
     "title": "Grind Craft",
     "link": "https://g.poki2.online/grindcraft/",
     "imgSrc": "https://g.poki2.online/grindcraft/icon.png",
-    "tags": ["idle", "strategy", "pixel"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "strategy",
+      "pixel"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -638,21 +1106,39 @@
     "title": "Helicopter",
     "link": "https://h.poki2.online/helicopter/",
     "imgSrc": "https://h.poki2.online/helicopter/helicopter.png",
-    "tags": ["other"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
-    "use_overlay_title": false
+    "use_overlay_title": false,
+    "description": "Steer the helicopter through tight caves by holding the mouse button. A deceptively simple classic."
   },
   {
     "title": "HexGL",
     "link": "https://h.poki2.online/hexgl/",
     "imgSrc": "https://h.poki2.online/hexgl/icon.png",
-    "tags": ["racing", "futuristic", "webgl"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "racing",
+      "futuristic",
+      "webgl"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -660,10 +1146,18 @@
     "title": "Interactive Buddy",
     "link": "https://i.poki2.online/interactivebuddy/",
     "imgSrc": "https://i.poki2.online/interactivebuddy/icon.png",
-    "tags": ["other"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -671,10 +1165,17 @@
     "title": "Just One Boss",
     "link": "https://j.poki2.online/just-one-boss/",
     "imgSrc": "https://j.poki2.online/just-one-boss/icon.png",
-    "tags": ["other", "pixel"],
-    "input": ["keyboard"],
+    "tags": [
+      "other",
+      "pixel"
+    ],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -682,10 +1183,21 @@
     "title": "Krunker",
     "link": "https://k.poki2.online/krunker/",
     "imgSrc": "https://k.poki2.online/krunker/img/krunker-io.jpg",
-    "tags": ["strategy", "shooting", "io", "multiplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "strategy",
+      "shooting",
+      "io",
+      "multiplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -693,10 +1205,19 @@
     "title": "Meme 2048",
     "link": "https://m.poki2.online/meme2048/",
     "imgSrc": "https://m.poki2.online/meme2048/img/honey_badger.jpg",
-    "tags": ["puzzle", "2048"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "2048"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -704,10 +1225,18 @@
     "title": "Eaglercraft",
     "link": "https://m.poki2.online/minecraft/",
     "imgSrc": "https://m.poki2.online/minecraft/splash.jpeg",
-    "tags": ["arcade", "shooting", "pixel"],
-    "input": ["keyboard"],
+    "tags": [
+      "arcade",
+      "shooting",
+      "pixel"
+    ],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -715,10 +1244,20 @@
     "title": "Minesweeper",
     "link": "https://m.poki2.online/minesweeper/",
     "imgSrc": "https://m.poki2.online/minesweeper/img/minesweeper.png",
-    "tags": ["puzzle", "idle", "sweeping", "classic"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "idle",
+      "sweeping",
+      "classic"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -726,10 +1265,20 @@
     "title": "Mini-putt",
     "link": "https://m.poki2.online/miniputt/",
     "imgSrc": "https://m.poki2.online/miniputt/miniputt.png",
-    "tags": ["idle", "golf", "sports"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "golf",
+      "sports"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -737,10 +1286,21 @@
     "title": "Missiles",
     "link": "https://m.poki2.online/missiles/",
     "imgSrc": "https://m.poki2.online/missiles/miss.png",
-    "tags": ["idle", "rocket", "singleplayer", "competitive"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "rocket",
+      "singleplayer",
+      "competitive"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -748,10 +1308,16 @@
     "title": "n-gon",
     "link": "https://n.poki2.online/n-gon/",
     "imgSrc": "https://n.poki2.online/n-gon/icon.png",
-    "tags": ["puzzle"],
-    "input": ["keyboard"],
+    "tags": [
+      "puzzle"
+    ],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -759,10 +1325,20 @@
     "link": "https://o.poki2.online/om-bounce/",
     "imgSrc": "https://o.poki2.online/om-bounce/icon.png",
     "title": "Om Nom Bounce",
-    "tags": ["achievement", "strategy", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "strategy",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -770,10 +1346,23 @@
     "title": "Papaspizzaria",
     "link": "https://p.poki2.online/papaspizzaria/",
     "imgSrc": "https://p.poki2.online/papaspizzaria/icon.png",
-    "tags": ["cooking", "time management", "restaurant", "game", "online game", "html5 game"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "cooking",
+      "time management",
+      "restaurant",
+      "game",
+      "online game",
+      "html5 game"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -781,10 +1370,23 @@
     "title": "Paper.io 2",
     "link": "https://p.poki2.online/paperio2/",
     "imgSrc": "https://p.poki2.online/paperio2/icon.png",
-    "tags": ["competitive", "io", "singleplayer", "paperio", "yellow", "block"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "competitive",
+      "io",
+      "singleplayer",
+      "paperio",
+      "yellow",
+      "block"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -801,9 +1403,14 @@
       "paper",
       "planes"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -811,10 +1418,18 @@
     "title": "Push The Square",
     "link": "https://p.poki2.online/push-the-square/",
     "imgSrc": "https://p.poki2.online/push-the-square/icon.png",
-    "tags": ["puzzle", "idle"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "idle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -822,10 +1437,22 @@
     "title": "Rolly Vortex",
     "link": "https://r.poki2.online/rolly-vortex/",
     "imgSrc": "https://r.poki2.online/rolly-vortex/icon.png",
-    "tags": ["idle", "skill", "singleplayer", "achievement", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "skill",
+      "singleplayer",
+      "achievement",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -833,10 +1460,20 @@
     "title": "Snow Battle",
     "link": "https://s.poki2.online/snowbattle/",
     "imgSrc": "https://s.poki2.online/snowbattle/icon.png",
-    "tags": ["racing", "sports", "battle", "singleplayer", "competitive"],
-    "input": ["keyboard"],
+    "tags": [
+      "racing",
+      "sports",
+      "battle",
+      "singleplayer",
+      "competitive"
+    ],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -844,10 +1481,20 @@
     "title": "Soldier Legend",
     "link": "https://s.poki2.online/soldier-legend/",
     "imgSrc": "https://s.poki2.online/soldier-legend/icon.png",
-    "tags": ["competitive", "shooting", "taptap", "singleplayer", "qky"],
-    "input": ["keyboard"],
+    "tags": [
+      "competitive",
+      "shooting",
+      "taptap",
+      "singleplayer",
+      "qky"
+    ],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -855,10 +1502,21 @@
     "title": "Solitaire",
     "link": "https://s.poki2.online/solitaire/",
     "imgSrc": "https://s.poki2.online/solitaire/icon.png",
-    "tags": ["puzzle", "idle", "card", "classic"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "idle",
+      "card",
+      "classic"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -866,10 +1524,20 @@
     "title": "Stack",
     "link": "https://s.poki2.online/stack/",
     "imgSrc": "https://s.poki2.online/stack/icon.png",
-    "tags": ["idle", "skill", "singleplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "skill",
+      "singleplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -877,10 +1545,20 @@
     "title": "Stealing The Diamond",
     "link": "https://s.poki2.online/stealingthediamond/",
     "imgSrc": "https://s.poki2.online/stealingthediamond/icon.png",
-    "tags": ["idle", "puzzle", "stickman-style"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "puzzle",
+      "stickman-style"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -888,10 +1566,20 @@
     "title": "Stick War",
     "link": "https://s.poki2.online/stickwar/",
     "imgSrc": "https://s.poki2.online/stickwar/icon.png",
-    "tags": ["shooting", "idle", "action"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "shooting",
+      "idle",
+      "action"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -899,10 +1587,19 @@
     "title": "Storm The House 2",
     "link": "https://s.poki2.online/stormthehouse2/",
     "imgSrc": "https://s.poki2.online/stormthehouse2/icon.png",
-    "tags": ["shooting", "idle"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "shooting",
+      "idle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -910,10 +1607,18 @@
     "title": "Superhot",
     "link": "https://s.poki2.online/superhot/",
     "imgSrc": "https://s.poki2.online/superhot/icon.png",
-    "tags": ["puzzle", "shooting", "idle"],
-    "input": ["keyboard"],
+    "tags": [
+      "puzzle",
+      "shooting",
+      "idle"
+    ],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -930,9 +1635,14 @@
       "car",
       "achievement"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -940,10 +1650,21 @@
     "title": "Temple Run 2",
     "link": "https://t.poki2.online/temple-run-2/",
     "imgSrc": "https://t.poki2.online/temple-run-2/icon.png",
-    "tags": ["racing", "sports", "idle", "arcade"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "racing",
+      "sports",
+      "idle",
+      "arcade"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -951,10 +1672,20 @@
     "title": "The Battle",
     "link": "https://t.poki2.online/thebattle/",
     "imgSrc": "https://t.poki2.online/thebattle/icon.png",
-    "tags": ["strategy", "competitive", "arcade"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "strategy",
+      "competitive",
+      "arcade"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -962,10 +1693,20 @@
     "title": "The Final Earth",
     "link": "https://t.poki2.online/the-final-earth/",
     "imgSrc": "https://t.poki2.online/the-final-earth/icon.png",
-    "tags": ["strategy", "pixel", "idle"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "strategy",
+      "pixel",
+      "idle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -973,8 +1714,14 @@
     "title": "The Heist",
     "link": "https://t.poki2.online/theheist/",
     "imgSrc": "https://t.poki2.online/theheist/icon.png",
-    "tags": ["puzzle", "idle"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "idle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
     "avalid": [],
     "show": true,
@@ -984,10 +1731,18 @@
     "title": "There Is No Game",
     "link": "https://t.poki2.online/there-is-no-game/",
     "imgSrc": "https://t.poki2.online/there-is-no-game/icon.png",
-    "tags": ["other"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "other"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -995,10 +1750,19 @@
     "title": "This Is The Only Level",
     "link": "https://t.poki2.online/thisistheonlylevel/",
     "imgSrc": "https://t.poki2.online/thisistheonlylevel/icon.png",
-    "tags": ["other", "jump", "elephant", "idle"],
-    "input": ["keyboard"],
+    "tags": [
+      "other",
+      "jump",
+      "elephant",
+      "idle"
+    ],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1006,10 +1770,21 @@
     "title": "Toss The Turtle",
     "link": "https://t.poki2.online/tosstheturtle/",
     "imgSrc": "https://t.poki2.online/tosstheturtle/icon.png",
-    "tags": ["shooting", "competitive", "cannon", "idle"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "shooting",
+      "competitive",
+      "cannon",
+      "idle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1017,10 +1792,18 @@
     "title": "Tube Jumpers",
     "link": "https://t.poki2.online/tube-jumpers/",
     "imgSrc": "https://t.poki2.online/tube-jumpers/icon.png",
-    "tags": ["action", "multiplayer", "pixel"],
-    "input": ["keyboard"],
+    "tags": [
+      "action",
+      "multiplayer",
+      "pixel"
+    ],
+    "input": [
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1037,9 +1820,15 @@
       "jump",
       "kizi"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1056,9 +1845,15 @@
       "jump",
       "kizi"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1075,9 +1870,15 @@
       "jump",
       "kizi"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1094,9 +1895,15 @@
       "jump",
       "kizi"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1104,10 +1911,19 @@
     "title": "Wordle",
     "link": "https://w.poki2.online/wordle/",
     "imgSrc": "https://w.poki2.online/wordle/icon.png",
-    "tags": ["puzzle", "idle"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "idle"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1115,10 +1931,19 @@
     "title": "Troll Boxing",
     "link": "https://mobileapp.poki2.online/mobile/trashndash",
     "imgSrc": "https://mobileapp.poki2.online/mobile/trashndash/res/bg_title.png",
-    "tags": ["idle", "multiplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "multiplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1126,10 +1951,20 @@
     "title": "Alien Attack",
     "link": "https://mobileapp.poki2.online/mobile/alienattack/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/alienattack/icon-256.png",
-    "tags": ["competitive", "io", "multiplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "competitive",
+      "io",
+      "multiplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1147,9 +1982,14 @@
       "pixel",
       "8-bit"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1157,10 +1997,20 @@
     "title": "Bonncing Dot",
     "link": "https://mobileapp.poki2.online/mobile/bdot/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/bdot/icon-256.png",
-    "tags": ["idle", "skill", "singleplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "skill",
+      "singleplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1168,10 +2018,23 @@
     "title": "Black Bats",
     "link": "https://mobileapp.poki2.online/mobile/blackbats/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/blackbats/icon-256.png",
-    "tags": ["idle", "casual", "shooting", "singleplayer", "2d", "adventure"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "casual",
+      "shooting",
+      "singleplayer",
+      "2d",
+      "adventure"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1179,10 +2042,20 @@
     "title": "Blox Slider",
     "link": "https://mobileapp.poki2.online/mobile/bloxslider/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/bloxslider/assets/icon-256.png",
-    "tags": ["puzzle", "physics", "singleplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "physics",
+      "singleplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1190,10 +2063,20 @@
     "title": "Sir Bottomtight",
     "link": "https://mobileapp.poki2.online/mobile/bottomtight/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/bottomtight/images/bmchars-sheet0.png",
-    "tags": ["achievement", "singleplayer", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1201,10 +2084,20 @@
     "title": "Brave Bird",
     "link": "https://mobileapp.poki2.online/mobile/bravebird/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/bravebird/loading-logo.png",
-    "tags": ["skill", "singleplayer", "adventure"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "skill",
+      "singleplayer",
+      "adventure"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1212,10 +2105,20 @@
     "title": "Broken Horn",
     "link": "https://mobileapp.poki2.online/mobile/brokenhorn/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/brokenhorn/img/menuBack_img.jpg",
-    "tags": ["skill", "singleplayer", "adventure"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "skill",
+      "singleplayer",
+      "adventure"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1223,10 +2126,20 @@
     "title": "Bubble It Steven",
     "link": "https://mobileapp.poki2.online/mobile/bubblecn/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/bubblecn/res/ui_mainMenu_background.png",
-    "tags": ["achievement", "bubble", "singleplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "bubble",
+      "singleplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1234,10 +2147,20 @@
     "title": "Bubble Fish",
     "link": "https://mobileapp.poki2.online/mobile/bubblefish/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/bubblefish/icon_256.png",
-    "tags": ["skill", "fishing", "singleplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "skill",
+      "fishing",
+      "singleplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1245,10 +2168,21 @@
     "title": "Candy Fusion",
     "link": "https://mobileapp.poki2.online/mobile/candyfusion/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/candyfusion/assets/icon-512.png",
-    "tags": ["puzzle", "candy", "2048", "singleplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "candy",
+      "2048",
+      "singleplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1256,10 +2190,20 @@
     "title": "Captain Roger",
     "link": "https://mobileapp.poki2.online/mobile/captainroger/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/captainroger//img/cover-logo.png",
-    "tags": ["shooting", "adventure", "singleplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "shooting",
+      "adventure",
+      "singleplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1267,10 +2211,21 @@
     "title": "Captain War",
     "link": "https://mobileapp.poki2.online/mobile/captainwar/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/captainwar/images/splashplayer-sheet0.png",
-    "tags": ["shooting", "adventure", "singleplayer", "zombie"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "shooting",
+      "adventure",
+      "singleplayer",
+      "zombie"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1278,10 +2233,21 @@
     "title": "Cat On Fire",
     "link": "https://mobileapp.poki2.online/mobile/catonfire/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/catonfire/icon-128.png",
-    "tags": ["achievement", "adventure", "cat", "singleplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "adventure",
+      "cat",
+      "singleplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1289,10 +2255,21 @@
     "title": "Cave Jumper",
     "link": "https://mobileapp.poki2.online/mobile/cavejumper/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/cavejumper/icon-128.png",
-    "tags": ["achievement", "cave", "jumper", "singleplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "cave",
+      "jumper",
+      "singleplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1300,10 +2277,18 @@
     "title": "cboxes",
     "link": "https://mobileapp.poki2.online/mobile/cboxes/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/cboxes/icon-128.png",
-    "tags": ["achievement", "box", "singleplayer"],
-    "input": ["touch"],
+    "tags": [
+      "achievement",
+      "box",
+      "singleplayer"
+    ],
+    "input": [
+      "touch"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile"],
+    "avalid": [
+      "mobile"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1311,10 +2296,22 @@
     "title": "Cheese Lab",
     "link": "https://mobileapp.poki2.online/mobile/cheeselab/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/cheeselab/images/covertitle-sheet0.png",
-    "tags": ["achievement", "singleplayer", "jumper", "mouse", "cheese"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "jumper",
+      "mouse",
+      "cheese"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1322,10 +2319,20 @@
     "title": "Chip Man",
     "link": "https://mobileapp.poki2.online/mobile/chipman/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/chipman/media/title-logo.png",
-    "tags": ["achievement", "singleplayer", "jumper", "chip"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "jumper",
+      "chip"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1333,10 +2340,22 @@
     "title": "Christmas Balls",
     "link": "https://mobileapp.poki2.online/mobile/christmasballs/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/christmasballs/icon-128.png",
-    "tags": ["achievement", "singleplayer", "skill", "christmas", "ball"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "skill",
+      "christmas",
+      "ball"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1344,10 +2363,22 @@
     "title": "Circle Ball",
     "link": "https://mobileapp.poki2.online/mobile/circleball/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/circleball/icon-256.png",
-    "tags": ["achievement", "singleplayer", "skill", "circle", "ball"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "skill",
+      "circle",
+      "ball"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1355,10 +2386,22 @@
     "title": "Circle Pong",
     "link": "https://mobileapp.poki2.online/mobile/circlepong/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/circlepong/assets/icon-256.png",
-    "tags": ["achievement", "singleplayer", "skill", "circle", "pong"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "skill",
+      "circle",
+      "pong"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1366,10 +2409,22 @@
     "title": "Circle Tris",
     "link": "https://mobileapp.poki2.online/mobile/circletris/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/circletris/images/twitter-opengraph.png",
-    "tags": ["achievement", "singleplayer", "skill", "circle", "tris"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "skill",
+      "circle",
+      "tris"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1377,10 +2432,21 @@
     "title": "Crun Ching Ninjas",
     "link": "https://mobileapp.poki2.online/mobile/cninjas/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/cninjas/assets/icon-256.png",
-    "tags": ["achievement", "singleplayer", "ninja", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "ninja",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1388,10 +2454,22 @@
     "title": "Super Cowboy Run",
     "link": "https://mobileapp.poki2.online/mobile/cowboyrun/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/cowboyrun/icon-128.png",
-    "tags": ["achievement", "singleplayer", "shooting", "cowboy", "run"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "shooting",
+      "cowboy",
+      "run"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1399,10 +2477,22 @@
     "title": "CowBoy2 Shot",
     "link": "https://mobileapp.poki2.online/mobile/cowboyshot/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/cowboyshot/html5game/CowBoyZ_texture_0.png",
-    "tags": ["shooting", "singleplayer", "multiplayer", "cowboy", "pixel"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "shooting",
+      "singleplayer",
+      "multiplayer",
+      "cowboy",
+      "pixel"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1410,10 +2500,21 @@
     "title": "Craigen Stone",
     "link": "https://mobileapp.poki2.online/mobile/craigenstone/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/craigenstone/images/coverillustration-sheet0.png",
-    "tags": ["achievement", "singleplayer", "adventure", "stone"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "adventure",
+      "stone"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1421,10 +2522,22 @@
     "title": "Dangerous",
     "link": "https://mobileapp.poki2.online/mobile/dangerous/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/dangerous/images/sprite4-sheet0.png",
-    "tags": ["idle", "singleplayer", "car", "dash", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "car",
+      "dash",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1432,10 +2545,23 @@
     "title": "Dark Ninja",
     "link": "https://mobileapp.poki2.online/mobile/darkninja/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/darkninja/icon-128.png",
-    "tags": ["idle", "skill", "singleplayer", "ninja", "dark", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "skill",
+      "singleplayer",
+      "ninja",
+      "dark",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1443,10 +2569,22 @@
     "title": "Death Soul",
     "link": "https://mobileapp.poki2.online/mobile/deathsoul/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/deathsoul/images/logo-sheet0.png",
-    "tags": ["idle", "singleplayer", "skill", "death", "soul"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "skill",
+      "death",
+      "soul"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1454,10 +2592,21 @@
     "title": "Dont Eat Trash",
     "link": "https://mobileapp.poki2.online/mobile/donteattrash/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/donteattrash/images/introduction-sheet0.png",
-    "tags": ["idle", "singleplayer", "trash", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "trash",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1465,10 +2614,21 @@
     "title": "Dot Game",
     "link": "https://mobileapp.poki2.online/mobile/dotgame/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/dotgame/assets/icon-256.png",
-    "tags": ["puzzle", "singleplayer", "dot", "line"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "singleplayer",
+      "dot",
+      "line"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1476,10 +2636,22 @@
     "title": "Drop Circle",
     "link": "https://mobileapp.poki2.online/mobile/dropcircle/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/dropcircle/images/title-sheet0.png",
-    "tags": ["achievement", "singleplayer", "skill", "circle", "drop"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "skill",
+      "circle",
+      "drop"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1487,10 +2659,23 @@
     "title": "Duck Water",
     "link": "https://mobileapp.poki2.online/mobile/duckwater/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/duckwater/logo.png",
-    "tags": ["puzzle", "singleplayer", "skill", "duck", "water", "cartoon"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "singleplayer",
+      "skill",
+      "duck",
+      "water",
+      "cartoon"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1498,10 +2683,22 @@
     "title": "Scratch Card",
     "link": "https://mobileapp.poki2.online/mobile/elmore/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/elmore/logo.png",
-    "tags": ["achievement", "singleplayer", "scratch", "card", "cartoon"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "scratch",
+      "card",
+      "cartoon"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1509,10 +2706,23 @@
     "title": "Escape",
     "link": "https://mobileapp.poki2.online/mobile/escape/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/escape/loading-logo.png",
-    "tags": ["skill", "idle", "singleplayer", "escape", "circle", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "skill",
+      "idle",
+      "singleplayer",
+      "escape",
+      "circle",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1529,9 +2739,15 @@
       "robot",
       "evil"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1549,9 +2765,15 @@
       "wyrm",
       "dragon"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1559,10 +2781,22 @@
     "title": "Fast",
     "link": "https://mobileapp.poki2.online/mobile/fastgame/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/fastgame/images/sprite3-sheet0.png",
-    "tags": ["achievement", "singleplayer", "escape", "fast", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "escape",
+      "fast",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1580,9 +2814,15 @@
       "pixel",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1590,10 +2830,21 @@
     "title": "Fishing Frenzy",
     "link": "https://mobileapp.poki2.online/mobile/fishingfrenzy/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/fishingfrenzy/icon-256.png",
-    "tags": ["achievement", "fishing", "singleplayer", "boat"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "fishing",
+      "singleplayer",
+      "boat"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1610,9 +2861,14 @@
       "copters",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1629,9 +2885,15 @@
       "christmas",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1649,9 +2911,14 @@
       "flappy",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1669,9 +2936,15 @@
       "blackmoon",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1688,9 +2961,15 @@
       "foo",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1698,10 +2977,23 @@
     "title": "Fox Fury",
     "link": "https://mobileapp.poki2.online/mobile/foxfury/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/foxfury/loading-logo.png",
-    "tags": ["achievement", "singleplayer", "adventure", "fox", "fury", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "adventure",
+      "fox",
+      "fury",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1717,9 +3009,15 @@
       "road",
       "freedom"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1727,10 +3025,23 @@
     "title": "Hungry Frog",
     "link": "https://mobileapp.poki2.online/mobile/frog/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/frog/icon-256.png",
-    "tags": ["achievement", "singleplayer", "adventure", "frog", "hunger", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "adventure",
+      "frog",
+      "hunger",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1746,9 +3057,15 @@
       "immersion",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1756,10 +3073,21 @@
     "title": "Funny Soccer",
     "link": "https://mobileapp.poki2.online/mobile/funnysoccer/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/funnysoccer/assets/icon-256.png",
-    "tags": ["sports", "singleplayer", "soccer", "football"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "sports",
+      "singleplayer",
+      "soccer",
+      "football"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1767,10 +3095,21 @@
     "title": "Get Twelve",
     "link": "https://mobileapp.poki2.online/mobile/gettwelve/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/gettwelve/icon-128.png",
-    "tags": ["puzzle", "singleplayer", "twelve", "number"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "singleplayer",
+      "twelve",
+      "number"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1778,10 +3117,22 @@
     "title": "Goblin Machine",
     "link": "https://mobileapp.poki2.online/mobile/goblinmachine/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/goblinmachine/images/sprite6-sheet0.png",
-    "tags": ["racing", "singleplayer", "skill", "goblin", "machine"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "racing",
+      "singleplayer",
+      "skill",
+      "goblin",
+      "machine"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1789,10 +3140,21 @@
     "title": "Go Fishing",
     "link": "https://mobileapp.poki2.online/mobile/gofishing/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/gofishing/logo.png",
-    "tags": ["idle", "arcade", "fishing", "singleplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "arcade",
+      "fishing",
+      "singleplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1800,10 +3162,22 @@
     "title": "Going Nuts",
     "link": "https://mobileapp.poki2.online/mobile/goingnuts/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/goingnuts/assets/icon-256.png",
-    "tags": ["idle", "singleplayer", "adventure", "squirrel", "nuts"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "adventure",
+      "squirrel",
+      "nuts"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1811,10 +3185,22 @@
     "title": "Greedy Gnomes",
     "link": "https://mobileapp.poki2.online/mobile/greedygnomes/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/greedygnomes/assets/icon-512.png",
-    "tags": ["puzzle", "singleplayer", "multiplayer", "greedy", "gnome"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "singleplayer",
+      "multiplayer",
+      "greedy",
+      "gnome"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1822,10 +3208,22 @@
     "title": "Green Wings",
     "link": "https://mobileapp.poki2.online/mobile/greenwings/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/greenwings/assets/icon-256.png",
-    "tags": ["idle", "singleplayer", "adventure", "plane", "green", "wings"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "adventure",
+      "plane",
+      "green",
+      "wings"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1833,10 +3231,22 @@
     "title": "Groovy Ski",
     "link": "https://mobileapp.poki2.online/mobile/groovyski/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/groovyski/assets/icon-512.png",
-    "tags": ["idle", "singleplayer", "adventure", "ski", "groovy"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "adventure",
+      "ski",
+      "groovy"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1844,10 +3254,21 @@
     "title": "Grub Runner",
     "link": "https://mobileapp.poki2.online/mobile/grubhub/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/grubhub/media/characters.png",
-    "tags": ["idle", "singleplayer", "pixel", "adventure"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "pixel",
+      "adventure"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1855,10 +3276,22 @@
     "title": "Gumball Race",
     "link": "https://mobileapp.poki2.online/mobile/gumballrace/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/gumballrace/assets/icon-256.png",
-    "tags": ["idle", "singleplayer", "cartoon", "catch", "gumball"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "cartoon",
+      "catch",
+      "gumball"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1866,10 +3299,22 @@
     "title": "Hansel and Gretel",
     "link": "https://mobileapp.poki2.online/mobile/hanselandgretel/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/hanselandgretel/images/sprite6-sheet0.png",
-    "tags": ["puzzle", "singleplayer", "hansel", "gretel", "html5game"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "singleplayer",
+      "hansel",
+      "gretel",
+      "html5game"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1877,10 +3322,21 @@
     "title": "Hero Jump",
     "link": "https://mobileapp.poki2.online/mobile/herojump/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/herojump/sprites/bg_menu.jpg",
-    "tags": ["idle", "singleplayer", "jumper", "html5game"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "jumper",
+      "html5game"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": false,
     "use_overlay_title": false
   },
@@ -1888,10 +3344,22 @@
     "title": "Hidden",
     "link": "https://mobileapp.poki2.online/mobile/hidden/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/hidden/icon-128.png",
-    "tags": ["idle", "singleplayer", "rabbit", "ninja", "hidden"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "rabbit",
+      "ninja",
+      "hidden"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1899,10 +3367,23 @@
     "title": "Hungry Bob",
     "link": "https://mobileapp.poki2.online/mobile/hungrybob/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/hungrybob/icon-128.png",
-    "tags": ["idle", "singleplayer", "hungry", "bob", "taptap", "html5game"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "hungry",
+      "bob",
+      "taptap",
+      "html5game"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1910,10 +3391,22 @@
     "title": "Ice Cream",
     "link": "https://mobileapp.poki2.online/mobile/icecream/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/icecream/assets/icon-256.png",
-    "tags": ["puzzle", "singleplayer", "html5game", "ice", "cream"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "singleplayer",
+      "html5game",
+      "ice",
+      "cream"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1930,9 +3423,15 @@
       "html5game",
       "okijin"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1949,9 +3448,15 @@
       "html5game",
       "okijin"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1959,10 +3464,21 @@
     "title": "Jomjom",
     "link": "https://mobileapp.poki2.online/mobile/jomjom/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/jomjom/images/gametitle2-sheet0.png",
-    "tags": ["achievement", "singleplayer", "jumper", "jomjom"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "jumper",
+      "jomjom"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1970,10 +3486,22 @@
     "title": "Jump Kitty",
     "link": "https://mobileapp.poki2.online/mobile/jumpkitty/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/jumpkitty/loading-logo.png",
-    "tags": ["idle", "achievement", "singleplayer", "cat", "jump"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "achievement",
+      "singleplayer",
+      "cat",
+      "jump"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -1990,9 +3518,15 @@
       "fall",
       "stickman-style"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2000,10 +3534,22 @@
     "title": "Jumppy dog",
     "link": "https://mobileapp.poki2.online/mobile/jumppydog/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/jumppydog/icon-128.png",
-    "tags": ["idle", "achievement", "singleplayer", "dog", "jump"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "achievement",
+      "singleplayer",
+      "dog",
+      "jump"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": false,
     "use_overlay_title": false
   },
@@ -2011,10 +3557,22 @@
     "title": "Jumppy Dragon",
     "link": "https://mobileapp.poki2.online/mobile/jumppydragon/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/jumppydragon/icon-128.png",
-    "tags": ["idle", "achievement", "singleplayer", "dragon", "jump"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "achievement",
+      "singleplayer",
+      "dragon",
+      "jump"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2022,10 +3580,22 @@
     "title": "Knight Of The Day",
     "link": "https://mobileapp.poki2.online/mobile/knightnday/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/knightnday/assets/tile.png",
-    "tags": ["puzzle", "singleplayer", "knight", "day", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "singleplayer",
+      "knight",
+      "day",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2041,9 +3611,15 @@
       "lizard",
       "fishing"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2051,10 +3627,23 @@
     "title": "Looney Roonks",
     "link": "https://mobileapp.poki2.online/mobile/looneyroonks/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/looneyroonks/assets/icon-512.png",
-    "tags": ["idle", "achievement", "singleplayer", "loon", "roonk", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "achievement",
+      "singleplayer",
+      "loon",
+      "roonk",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2062,10 +3651,23 @@
     "title": "Manic",
     "link": "https://mobileapp.poki2.online/mobile/manic/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/manic/assets/icon-512.png",
-    "tags": ["idle", "singleplayer", "manic", "taptap", "rabbit", "cartoon"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "manic",
+      "taptap",
+      "rabbit",
+      "cartoon"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2073,10 +3675,23 @@
     "title": "Matching Time",
     "link": "https://mobileapp.poki2.online/mobile/matchtime/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/matchtime/assets/icon-256.png",
-    "tags": ["idle", "puzzle", "singleplayer", "matching", "time", "tetris"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "puzzle",
+      "singleplayer",
+      "matching",
+      "time",
+      "tetris"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2093,9 +3708,15 @@
       "taptap",
       "logic"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2103,10 +3724,21 @@
     "title": "Monster Candy",
     "link": "https://mobileapp.poki2.online/mobile/monstercandy/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/monstercandy/assets/icon-512.png",
-    "tags": ["puzzle", "singleplayer", "monster", "candy"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "singleplayer",
+      "monster",
+      "candy"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2114,10 +3746,22 @@
     "title": "Monster Eater",
     "link": "https://mobileapp.poki2.online/mobile/monstereater/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/monstereater/icon-128.png",
-    "tags": ["puzzle", "singleplayer", "monster", "eater", "2048"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "singleplayer",
+      "monster",
+      "eater",
+      "2048"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2125,10 +3769,22 @@
     "title": "Mouse Jump",
     "link": "https://mobileapp.poki2.online/mobile/mousejump/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/mousejump/assets/icon-512.png",
-    "tags": ["idle", "achievement", "singleplayer", "mouse", "jump"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "achievement",
+      "singleplayer",
+      "mouse",
+      "jump"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2136,10 +3792,21 @@
     "title": "NEST",
     "link": "https://mobileapp.poki2.online/mobile/nest/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/nest/images/gametitle2-sheet0.png",
-    "tags": ["puzzle", "singleplayer", "nest", "bird"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "singleplayer",
+      "nest",
+      "bird"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2156,9 +3823,15 @@
       "run",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2175,9 +3848,15 @@
       "way",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2185,10 +3864,23 @@
     "title": "Ojello",
     "link": "https://mobileapp.poki2.online/mobile/ojelloonline/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/ojelloonline/ojelloonline/icon.png",
-    "tags": ["puzzle", "idle", "singleplayer", "ojello", "okijin", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "idle",
+      "singleplayer",
+      "ojello",
+      "okijin",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2196,10 +3888,22 @@
     "title": "Pacman",
     "link": "https://mobileapp.poki2.online/mobile/pacman/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/pacman/img/preview.png",
-    "tags": ["puzzle", "arcade", "singleplayer", "pacman", "ghost", "classic"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "arcade",
+      "singleplayer",
+      "pacman",
+      "ghost",
+      "classic"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2218,9 +3922,14 @@
       "html5game",
       "food"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2228,10 +3937,23 @@
     "title": "Panda Flash",
     "link": "https://mobileapp.poki2.online/mobile/pandaflash/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/pandaflash/resource/assets/bg_common.jpg",
-    "tags": ["idle", "multiplayer", "panda", "flash", "taptap", "html5game"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "multiplayer",
+      "panda",
+      "flash",
+      "taptap",
+      "html5game"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2247,9 +3969,15 @@
       "okijin",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2257,10 +3985,22 @@
     "title": "Penguin",
     "link": "https://mobileapp.poki2.online/mobile/penguin/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/penguin/images/cover_title-sheet0.png",
-    "tags": ["achievement", "singleplayer", "penguin", "taptap", "html5game"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "singleplayer",
+      "penguin",
+      "taptap",
+      "html5game"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2276,9 +4016,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2286,10 +4032,22 @@
     "title": "Pigeon",
     "link": "https://mobileapp.poki2.online/mobile/pigeon/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/pigeon/icon-256.png",
-    "tags": ["shooting", "singleplayer", "pigeon", "taptap", "html5game"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "shooting",
+      "singleplayer",
+      "pigeon",
+      "taptap",
+      "html5game"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2297,10 +4055,23 @@
     "title": "Piggy Roll",
     "link": "https://mobileapp.poki2.online/mobile/piggyroll/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/piggyroll/images/sprite3-sheet0.png",
-    "tags": ["puzzle", "singleplayer", "piggy", "roll", "taptap", "candy"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "singleplayer",
+      "piggy",
+      "roll",
+      "taptap",
+      "candy"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2317,9 +4088,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2335,9 +4112,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2354,9 +4137,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2374,9 +4163,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2395,9 +4190,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2415,9 +4216,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2425,10 +4232,23 @@
     "title": "Rain Box",
     "link": "https://mobileapp.poki2.online/mobile/rainbox/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/rainbox/icon-256.png",
-    "tags": ["idle", "singleplayer", "rain", "box", "taptap", "html5game"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "rain",
+      "box",
+      "taptap",
+      "html5game"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2446,9 +4266,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2456,10 +4282,22 @@
     "title": "Rec Tang Zings",
     "link": "https://mobileapp.poki2.online/mobile/rectangzings/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/rectangzings/images/coverasset-sheet0.png",
-    "tags": ["puzzle", "singleplayer", "rectangzings", "taptap", "html5game"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "singleplayer",
+      "rectangzings",
+      "taptap",
+      "html5game"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2476,9 +4314,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2495,9 +4339,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2515,9 +4365,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2534,9 +4390,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2553,9 +4415,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2572,9 +4440,15 @@
       "taptap",
       "softgame"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2582,10 +4456,24 @@
     "title": "Sky Race",
     "link": "https://mobileapp.poki2.online/mobile/skyrace/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/skyrace/loading-logo.png",
-    "tags": ["idle", "skill", "singleplayer", "ball", "sky", "race", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "skill",
+      "singleplayer",
+      "ball",
+      "sky",
+      "race",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2601,9 +4489,15 @@
       "skywire",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2611,10 +4505,21 @@
     "title": "Slot Chicken",
     "link": "https://mobileapp.poki2.online/mobile/slotchicken/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/slotchicken/assets/icon-512.png",
-    "tags": ["idle", "singleplayer", "slot", "chicken"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "slot",
+      "chicken"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2631,9 +4536,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2650,9 +4561,15 @@
       "jump",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2660,10 +4577,22 @@
     "title": "Square Crush",
     "link": "https://mobileapp.poki2.online/mobile/squarecrush/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/squarecrush/images/logo-sheet0.png",
-    "tags": ["idle", "skill", "singleplayer", "square", "crush", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "skill",
+      "singleplayer",
+      "square",
+      "crush",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "both",
-    "avalid": ["desktop"],
+    "avalid": [
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2671,10 +4600,23 @@
     "title": "Steven Kash",
     "link": "https://mobileapp.poki2.online/mobile/stevenkash/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/stevenkash/Assets/images/logo.png",
-    "tags": ["achievement", "skill", "singleplayer", "ninja", "steven", "kash"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "skill",
+      "singleplayer",
+      "ninja",
+      "steven",
+      "kash"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2682,10 +4624,23 @@
     "title": "Stick Panda",
     "link": "https://mobileapp.poki2.online/mobile/stickpanda/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/stickpanda/icon-128.png",
-    "tags": ["idle", "skill", "singleplayer", "stick", "panda", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "skill",
+      "singleplayer",
+      "stick",
+      "panda",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2693,10 +4648,23 @@
     "title": "Stick Panda Xmas",
     "link": "https://mobileapp.poki2.online/mobile/stickpandaxmas/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/stickpandaxmas/icon-128.png",
-    "tags": ["idle", "skill", "singleplayer", "stick", "panda", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "skill",
+      "singleplayer",
+      "stick",
+      "panda",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2713,9 +4681,15 @@
       "panda",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2732,9 +4706,15 @@
       "goo",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2751,9 +4731,15 @@
       "jump",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2761,10 +4747,22 @@
     "title": "Taptap Submarine",
     "link": "https://mobileapp.poki2.online/mobile/taptapsubmarine/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/taptapsubmarine/assets/icon-512.png",
-    "tags": ["idle", "multiplayer", "conie", "submarine", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "multiplayer",
+      "conie",
+      "submarine",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2772,10 +4770,23 @@
     "title": "Target Tap",
     "link": "https://mobileapp.poki2.online/mobile/targetap/",
     "imgSrc": "https://mobileapp.poki2.online/mobile/targetap/icon-256.png",
-    "tags": ["idle", "singleplayer", "achievement", "target", "tap", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "singleplayer",
+      "achievement",
+      "target",
+      "tap",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2795,9 +4806,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2813,9 +4830,15 @@
       "cartoon",
       "cn"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2823,10 +4846,20 @@
     "title": "Trailblazer",
     "link": "https://mobileapp.poki2.online/mobile/trailblazer",
     "imgSrc": "https://mobileapp.poki2.online/mobile/trailblazer/assets/icon-512.png",
-    "tags": ["idle", "multiplayer", "singleplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "multiplayer",
+      "singleplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2834,10 +4867,21 @@
     "link": "https://mobileapp.poki2.online/mobile/trashndash",
     "imgSrc": "https://mobileapp.poki2.online/mobile/trashndash/res/bg_title.png",
     "title": "Trash Dash",
-    "tags": ["idle", "multiplayer", "singleplayer", "dash"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "multiplayer",
+      "singleplayer",
+      "dash"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2854,9 +4898,15 @@
       "blckmoon",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2864,10 +4914,22 @@
     "link": "https://mobileapp.poki2.online/mobile/uforun",
     "imgSrc": "https://mobileapp.poki2.online/mobile/uforun/icon-256.png",
     "title": "Ufo Run",
-    "tags": ["achievement", "racing", "singleplayer", "competitive", "taptap"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "achievement",
+      "racing",
+      "singleplayer",
+      "competitive",
+      "taptap"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "use_overlay_title": false,
     "show": true
   },
@@ -2883,9 +4945,15 @@
       "rabbit",
       "taptap"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2893,10 +4961,21 @@
     "link": "https://mobileapp.poki2.online/mobile/woodblock",
     "imgSrc": "https://mobileapp.poki2.online/mobile/woodblock/icon-128.png",
     "title": "Wood Block",
-    "tags": ["puzzle", "singleplayer"],
-    "input": ["touch", "keyboard", "wood", "block"],
+    "tags": [
+      "puzzle",
+      "singleplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard",
+      "wood",
+      "block"
+    ],
     "orientation": "landscape",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2912,9 +4991,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2930,9 +5015,15 @@
       "taptap",
       "html5game"
     ],
-    "input": ["touch", "keyboard"],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2940,10 +5031,20 @@
     "title": "Zombie Night",
     "link": "https://mobileapp.poki2.online/mobile/zombienight",
     "imgSrc": "https://mobileapp.poki2.online/mobile/zombienight/icon-128.png",
-    "tags": ["puzzle", "2048", "zombie"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "puzzle",
+      "2048",
+      "zombie"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2951,10 +5052,19 @@
     "title": "Zombie World",
     "link": "https://mobileapp.poki2.online/mobile/zombieworld",
     "imgSrc": "https://mobileapp.poki2.online/mobile/zombieworld/icon-128.png",
-    "tags": ["idle", "multiplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "multiplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   },
@@ -2962,10 +5072,19 @@
     "title": "Zoon Stuner",
     "link": "https://mobileapp.poki2.online/mobile/zoostuner",
     "imgSrc": "https://mobileapp.poki2.online/mobile/zoostuner/icon-128.png",
-    "tags": ["idle", "multiplayer"],
-    "input": ["touch", "keyboard"],
+    "tags": [
+      "idle",
+      "multiplayer"
+    ],
+    "input": [
+      "touch",
+      "keyboard"
+    ],
     "orientation": "portrait",
-    "avalid": ["mobile", "desktop"],
+    "avalid": [
+      "mobile",
+      "desktop"
+    ],
     "show": true,
     "use_overlay_title": false
   }
