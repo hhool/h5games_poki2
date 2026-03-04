@@ -2398,6 +2398,8 @@
     // Support path-style routing: /games/<slug>/ should open that game directly.
     // This complements query/hash routing and ensures direct links work.
     const pathMatch = (location.pathname || '').match(/^\/games\/([^\/]+)\/??$/i);
+    // /game/<slug>/ → per-game SEO page: auto-open the detail modal (not the iframe)
+    const gamePageMatch = (location.pathname || '').match(/^\/game\/([^\/]+)\/?$/i);
     console.log('[route] init search/hash:', { search, hash });
 
     // Prefer query param routing (e.g. https://poki2.online/?play-vex5)
@@ -2424,6 +2426,18 @@
         showDetail(game);
       } else {
         console.warn('[route] no matching game for slug (hash):', slug);
+        showHome();
+      }
+    } else if (gamePageMatch && gamePageMatch[1]) {
+      // /game/{slug}/ — SEO per-game page: open detail modal so OG meta is visible + interactive
+      const slug = gamePageMatch[1];
+      console.log('[route] detected game detail page, slug:', slug);
+      const game = rawGames.find((g) => normalizeHref(g.link) === slug);
+      if (game) {
+        showHome(); // render the home grid beneath the modal
+        showDetail(game);
+      } else {
+        console.warn('[route] no matching game for slug (game page):', slug);
         showHome();
       }
     } else {
