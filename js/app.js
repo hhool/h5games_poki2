@@ -583,7 +583,7 @@
     }
     section.appendChild(grid);
     $gameSections.appendChild(section);
-    updateChipActive(null);
+    updateChipActive('__favs');
     highlightSidebarItem('__favs');
     updateBnavActive();
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -825,6 +825,14 @@
     all.dataset.chip = '__all';
     all.addEventListener('click', () => { try { $searchInput.value = ''; } catch(e){} showHome(); });
     inner.appendChild(all);
+    // Favorites chip — quick access without opening sidebar
+    const favsChip = document.createElement('button');
+    favsChip.type = 'button';
+    favsChip.className = 'tag-chip';
+    favsChip.textContent = '❤️ Favorites';
+    favsChip.dataset.chip = '__favs';
+    favsChip.addEventListener('click', () => showFavorites());
+    inner.appendChild(favsChip);
     for (const tag of TAG_ORDER) {
       const meta = TAG_META[tag] || { emoji: '🎲', label: tag };
       const count = (tagMap[tag] || []).length;
