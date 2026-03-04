@@ -2398,8 +2398,8 @@
     // Support path-style routing: /games/<slug>/ should open that game directly.
     // This complements query/hash routing and ensures direct links work.
     const pathMatch = (location.pathname || '').match(/^\/games\/([^\/]+)\/??$/i);
-    // /game/<slug>/ → per-game SEO page: auto-open the detail modal (not the iframe)
-    const gamePageMatch = (location.pathname || '').match(/^\/game\/([^\/]+)\/?$/i);
+    // /game/{char}/{slug}/ → per-game SEO page: auto-open the detail modal (not the iframe)
+    const gamePageMatch = (location.pathname || '').match(/^\/game\/[^\/]+\/([^\/]+)\/?$/i);
     console.log('[route] init search/hash:', { search, hash });
 
     // Prefer query param routing (e.g. https://poki2.online/?play-vex5)

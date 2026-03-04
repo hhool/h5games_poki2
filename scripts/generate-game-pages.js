@@ -67,7 +67,8 @@ function buildPage(game) {
   const desc     = game.description ||
     `Play ${game.title} for free online on ${SITE_NAME} \u2014 no downloads required.`;
   const img      = game.imgSrc || `${BASE_URL}/assets/icon/icon-512.png`;
-  const pageUrl  = `${BASE_URL}/game/${slug}/`;
+  const char     = slug[0].toLowerCase();
+  const pageUrl  = `${BASE_URL}/game/${char}/${slug}/`;
   const tags     = game.tags || [];
   const genres   = tags.map(t => TAG_LABELS[t] || t).filter(Boolean);
   const playMode = tags.includes('multiplayer') ? 'MultiPlayer' : 'SinglePlayer';
@@ -153,7 +154,8 @@ for (const game of games) {
   if (!slug || seen.has(slug)) continue;
   seen.add(slug);
 
-  const dir = path.join(DIST, 'game', slug);
+  const char = slug[0].toLowerCase();
+  const dir = path.join(DIST, 'game', char, slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), buildPage(game), 'utf8');
   count++;
