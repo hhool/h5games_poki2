@@ -622,7 +622,7 @@
       if ($detailFavBtn && pendingGame && pendingGame.link === game.link) {
         $detailFavBtn.classList.toggle('fav-active', faved);
         const favText = document.getElementById('detail-fav-text');
-        if (favText) favText.textContent = faved ? '\u2665 Saved' : '\u2665 Favorite';
+        if (favText) favText.textContent = faved ? 'Saved' : 'Favorite';
       }
     });
     el.appendChild(favBtn);
@@ -1435,7 +1435,7 @@
       const faved = isFav(game.link);
       $detailFavBtn.classList.toggle('fav-active', faved);
       const favText = document.getElementById('detail-fav-text');
-      if (favText) favText.textContent = faved ? '\u2665 Saved' : '\u2665 Favorite';
+      if (favText) favText.textContent = faved ? 'Saved' : 'Favorite';
     }
     // Determine if the game is playable in this environment and update the Play button
     try {
@@ -2220,7 +2220,7 @@
       const faved = isFav(pendingGame.link);
       $detailFavBtn.classList.toggle('fav-active', faved);
       const favText = document.getElementById('detail-fav-text');
-      if (favText) favText.textContent = faved ? '\u2665 Saved' : '\u2665 Favorite';
+      if (favText) favText.textContent = faved ? 'Saved' : 'Favorite';
       // sync all cards on screen
       document.querySelectorAll(`.game-card[data-link="${pendingGame.link}"] .fav-btn`).forEach(b => {
         b.classList.toggle('faved', faved);
