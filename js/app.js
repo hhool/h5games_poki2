@@ -418,12 +418,16 @@
       // Featured games appear first in the list for better Rich Results coverage
       const sorted = [...games.filter(g => g.featured), ...games.filter(g => !g.featured)];
       const top = sorted.slice(0, 20);
-      const items = top.map((g, i) => ({
-        "@type": "ListItem",
-        "position": i + 1,
-        "name": g.title || "",
-        "url": "https://poki2.online/games/" + (g.link || "").replace(/^\/+/, "")
-      }));
+      const items = top.map((g, i) => {
+        const slug = (g.link || "").replace(/\/$/, "").split("/").pop() || "";
+        const char = slug.charAt(0) || "_";
+        return {
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": g.title || "",
+          "url": "https://poki2.online/game/" + char + "/" + slug + "/"
+        };
+      });
       const schema = {
         "@context": "https://schema.org",
         "@type": "ItemList",
