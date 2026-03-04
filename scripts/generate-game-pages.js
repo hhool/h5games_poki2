@@ -133,6 +133,8 @@ function buildPage(game, bodyTag, bodyInner) {
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#006bb3">
+  <!-- Base href ensures all relative paths in the SPA body resolve from root -->
+  <base href="/">
 </head>
 ${bodyTag}
   <!-- Static fallback for no-JS crawlers -->
