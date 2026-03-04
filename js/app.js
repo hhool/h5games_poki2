@@ -616,8 +616,11 @@
       e.stopPropagation();
       toggleFav(game.link);
       const faved = isFav(game.link);
-      favBtn.classList.toggle('faved', faved);
-      favBtn.setAttribute('aria-label', faved ? 'Remove from favorites' : 'Add to favorites');
+      // sync ALL cards showing this same game across every section
+      document.querySelectorAll(`.game-card[data-link="${game.link}"] .fav-btn`).forEach(b => {
+        b.classList.toggle('faved', faved);
+        b.setAttribute('aria-label', faved ? 'Remove from favorites' : 'Add to favorites');
+      });
       // sync detail modal fav button if this game is currently shown
       if ($detailFavBtn && pendingGame && pendingGame.link === game.link) {
         $detailFavBtn.classList.toggle('fav-active', faved);
