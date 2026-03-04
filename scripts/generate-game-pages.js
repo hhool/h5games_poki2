@@ -23,6 +23,15 @@ const SITE_NAME = 'Poki2';
 const DIST      = path.join(__dirname, '..', 'dist');
 const GAMES     = path.join(DIST, 'games.json');
 
+// Read the full <body> from dist/index.html so static game pages have all
+// the DOM elements that app.js expects (search input, game grid, overlays, etc.)
+function extractBody(htmlFile) {
+  const src = fs.readFileSync(htmlFile, 'utf8');
+  const m = src.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+  if (!m) throw new Error(`Could not extract <body> from ${htmlFile}`);
+  return { open: src.match(/<body([^>]*)>/i)[0], inner: m[1] };
+}
+
 // Mirror of TAG_META in app.js — used to map tag keys → genre labels
 const TAG_LABELS = {
   action:      'Action',
@@ -61,7 +70,7 @@ function esc(str) {
     .replace(/>/g, '&gt;');
 }
 
-function buildPage(game) {
+function buildPage(game, bodyTag, bodyInner) {
   const slug     = normalizeHref(game.link);
   const title    = `${game.title} \u2014 Play Free on ${SITE_NAME}`;
   const desc     = game.description ||
@@ -125,15 +134,14 @@ function buildPage(game) {
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#006bb3">
 </head>
-<body>
+${bodyTag}
   <!-- Static fallback for no-JS crawlers -->
   <noscript>
     <h1>${esc(game.title)}</h1>
     <p>${esc(desc)}</p>
     <p><a href="/">&#8592; Back to ${SITE_NAME}</a></p>
   </noscript>
-  <!-- SPA entry: app.js detects /game/{slug}/ and auto-opens the game detail modal -->
-  <script defer src="/js/app.js?v=__CACHE_VER__"></script>
+${bodyInner}
 </body>
 </html>`;
 }
@@ -143,6 +151,17 @@ if (!fs.existsSync(GAMES)) {
   console.error('dist/games.json not found — run build:copy first');
   process.exit(1);
 }
+
+const indexHtml = path.join(DIST, 'index.html');
+if (!fs.existsSync(indexHtml)) {
+  console.error('dist/index.html not found — run build:copy first');
+  process.exit(1);
+}
+
+// Extract full body from dist/index.html so all DOM elements app.js needs are present
+const { open: bodyTag, inner: bodyInner } = extractBody(indexHtml);
+// Strip the trailing </body> that may be included in 'inner' (it shouldn't be, but guard)
+const bodyContent = bodyInner.replace(/<\/body>\s*$/i, '');
 
 const games = JSON.parse(fs.readFileSync(GAMES, 'utf8'));
 let count = 0;
@@ -157,7 +176,7 @@ for (const game of games) {
   const char = slug[0].toLowerCase();
   const dir = path.join(DIST, 'game', char, slug);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), buildPage(game), 'utf8');
+  fs.writeFileSync(path.join(dir, 'index.html'), buildPage(game, bodyTag, bodyContent), 'utf8');
   count++;
 }
 
