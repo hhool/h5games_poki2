@@ -1454,7 +1454,14 @@
     const title = game.title + ' — Play Free on Poki2';
     const desc  = game.description || ('Play ' + game.title + ' for free online on Poki2 — no downloads required.');
     const img   = game.imgSrc || '';
-    const url   = game.link  || '';
+    // Compute the canonical poki2.online URL for this game (not the CDN iframe URL)
+    const _slug = (function() {
+      try {
+        const raw = (game.link || '').replace(/\/+$/, '').split('/').pop() || '';
+        return raw;
+      } catch(e) { return ''; }
+    })();
+    const url   = _slug ? ('https://poki2.online/game/' + _slug.charAt(0) + '/' + _slug + '/') : (game.link || '');
     // OG
     _setMeta('meta[property="og:title"]',       'content', title);
     _setMeta('meta[property="og:description"]',  'content', desc);
