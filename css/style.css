@@ -377,9 +377,9 @@ input{font:inherit}
   pointer-events:none;
   z-index:10;
 }
-.game-card-badge.badge-new{background:#22c55e;color:#fff}
-.game-card-badge.badge-hot{background:#f97316;color:#fff}
-.game-card-badge.badge-popular{background:#3b82f6;color:#fff}
+.game-card-badge.badge-new{background:#15803d;color:#fff}
+.game-card-badge.badge-hot{background:#c2410c;color:#fff}
+.game-card-badge.badge-popular{background:#1d4ed8;color:#fff}
 
 /* ---- Category chip filter bar ---- */
 .tag-chips-bar{display:flex;justify-content:flex-start;overflow-x:auto;padding:0;-webkit-overflow-scrolling:touch;scrollbar-width:none;position:sticky;top:var(--topbar-h,56px);z-index:100;background:var(--bg,#f0f4f8);box-shadow:0 1px 6px rgba(0,0,0,.07)}
