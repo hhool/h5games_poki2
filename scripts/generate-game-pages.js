@@ -82,13 +82,14 @@ function buildPage(game, bodyTag, bodyInner) {
   const genres   = tags.filter(t => TAG_LABELS[t]).map(t => TAG_LABELS[t]);
   const playMode = tags.includes('multiplayer') ? 'MultiPlayer' : 'SinglePlayer';
 
-  const ld = JSON.stringify({
+  const ldObj = {
     '@context': 'https://schema.org',
     '@type': 'VideoGame',
     name:                game.title,
     url:                 pageUrl,
     image:               img,
     thumbnailUrl:        img,
+    ...(img ? { screenshot: { '@type': 'ImageObject', url: img, width: 512, height: 512 } } : {}),
     description:         desc,
     genre:               genres.length ? genres : ['Game'],
     applicationCategory: 'Game',
@@ -96,7 +97,8 @@ function buildPage(game, bodyTag, bodyInner) {
     operatingSystem:     'Web Browser',
     offers:    { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     publisher: { '@type': 'Organization', name: SITE_NAME, url: `${BASE_URL}/` },
-  });
+  };
+  const ld = JSON.stringify(ldObj);
 
   return `<!DOCTYPE html>
 <html lang="en" class="preload-hide">

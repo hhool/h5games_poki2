@@ -1498,6 +1498,7 @@
         url: url,
         image: img,
         thumbnailUrl: img,
+        ...(img ? { screenshot: { '@type': 'ImageObject', url: img, width: 512, height: 512 } } : {}),
         description: desc,
         genre: genreList.length ? genreList : ['Game'],
         applicationCategory: 'Game',
