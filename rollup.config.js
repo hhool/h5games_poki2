@@ -4,7 +4,7 @@ import { terser } from 'rollup-plugin-terser';
 export default {
   input: 'js/app.js',
   output: {
-    file: 'dist/js/app.bundle.js',
+    file: 'dist/js/app.js',
     format: 'iife',
     sourcemap: true,
   },
