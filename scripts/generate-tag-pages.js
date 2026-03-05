@@ -176,6 +176,18 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags) {
   </ul>
 </section>`;
 
+  // Replace SPA hero text with tag-specific H1 + first sentence of desc
+  const heroSub = cfg.desc.split('.')[0] + '.';
+  const tagBodyInner = bodyInner
+    .replace(
+      '<p class="hero-title">What are you playing today?</p>',
+      `<h1 class="hero-title">${esc(cfg.headline)}</h1>`
+    )
+    .replace(
+      '<p class="hero-sub">Discover free games. No downloads. Instant play.</p>',
+      `<p class="hero-sub">${esc(heroSub)}</p>`
+    );
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -228,7 +240,7 @@ ${gameListHtml}
     </nav>
     <p><a href="/">&#8592; Back to ${esc(SITE_NAME)}</a></p>
   </noscript>
-${bodyInner}
+${tagBodyInner}
 ${relatedSectionHtml}
 </body>
 </html>`;
