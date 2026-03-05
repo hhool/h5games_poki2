@@ -13,7 +13,8 @@ const path = require('path');
 
 const BASE    = 'https://poki2.online';
 const DIST    = path.join(__dirname, '..', 'dist');
-const GAMES   = path.join(DIST, 'games.json');
+// Read from source root so edits to games.json take effect without a full build:copy
+const GAMES   = path.join(__dirname, '..', 'games.json');
 const OUT      = path.join(DIST, 'sitemap.xml');
 const SRC_OUT  = path.join(__dirname, '..', 'sitemap.xml');  // source copy, kept in sync
 const TODAY   = new Date().toISOString().slice(0, 10);
@@ -35,19 +36,27 @@ function normalizeHref(link) {
   } catch { return link; }
 }
 
-function url(loc, changefreq, priority, lastmod) {
+function url(loc, changefreq, priority, lastmod, imgSrc, imgTitle) {
+  const imageBlock = (imgSrc && imgTitle) ? [
+    '    <image:image>',
+    `      <image:loc>${esc(imgSrc)}</image:loc>`,
+    `      <image:title>${esc(imgTitle)}</image:title>`,
+    '    </image:image>',
+  ].join('\n') : null;
+
   return [
     '  <url>',
     `    <loc>${esc(loc)}</loc>`,
     `    <lastmod>${esc(lastmod)}</lastmod>`,
     `    <changefreq>${esc(changefreq)}</changefreq>`,
     `    <priority>${esc(priority)}</priority>`,
+    ...(imageBlock ? [imageBlock] : []),
     '  </url>',
   ].join('\n');
 }
 
 if (!fs.existsSync(GAMES)) {
-  console.error('dist/games.json not found — run build:copy first');
+  console.error('games.json not found');
   process.exit(1);
 }
 
@@ -55,7 +64,9 @@ const games = JSON.parse(fs.readFileSync(GAMES, 'utf8'));
 
 const lines = [
   '<?xml version="1.0" encoding="UTF-8"?>',
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
+  '        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
+  // Note: the closing angle bracket of <urlset> is on the xmlns:image line above
   '',
   '  <!-- Site pages -->',
   url(`${BASE}/`,             'daily',   '1.0', TODAY),
@@ -82,7 +93,7 @@ for (const game of games) {
 
   // Featured games get higher priority
   const priority = game.featured ? '0.9' : '0.7';
-  lines.push(url(loc, 'monthly', priority, TODAY));
+  lines.push(url(loc, 'monthly', priority, TODAY, game.imgSrc || null, game.title || null));
   count++;
 }
 
