@@ -150,6 +150,8 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(desc)}">
   <link rel="canonical" href="${pageUrl}">
+  <!-- Preload game icon — likely LCP element on game pages -->
+  <link rel="preload" as="image" href="${esc(img)}" fetchpriority="high">
 
   <!-- Open Graph -->
   <meta property="og:type"         content="website">
