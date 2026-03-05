@@ -169,6 +169,12 @@ if (!fs.existsSync(indexHtml)) {
 const { open: bodyTag, inner: bodyInner } = extractBody(indexHtml);
 // Strip the trailing </body> that may be included in 'inner' (it shouldn't be, but guard)
 const bodyContent = bodyInner.replace(/<\/body>\s*$/i, '');
+// On game pages the <h1> is the game title — demote the homepage hero heading
+// to <p> so each page has exactly one canonical H1 (avoids GSC "multiple H1" signal)
+const gameBodyContent = bodyContent.replace(
+  /<h1(\s[^>]*)?>What are you playing today\?<\/h1>/i,
+  '<p$1>What are you playing today?</p>'
+);
 
 const games = JSON.parse(fs.readFileSync(GAMES, 'utf8'));
 let count = 0;
@@ -183,7 +189,7 @@ for (const game of games) {
   const char = slug[0].toLowerCase();
   const dir = path.join(DIST, 'game', char, slug);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), buildPage(game, bodyTag, bodyContent), 'utf8');
+  fs.writeFileSync(path.join(dir, 'index.html'), buildPage(game, bodyTag, gameBodyContent), 'utf8');
   count++;
 }
 
