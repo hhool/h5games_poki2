@@ -3,7 +3,7 @@
    Version: v2
    ============================================================ */
 
-const CACHE_NAME = 'poki2-v2';
+const CACHE_NAME = 'poki2-v3';
 const STATIC_EXTS = /\.(css|js|png|webp|ico|svg|woff2?|ttf|eot|otf|gif|jpg|jpeg)(\?.*)?$/i;
 
 /* ---- Install: pre-cache shell ---- */
@@ -11,7 +11,7 @@ self.addEventListener('install', e => {
   self.skipWaiting();
   e.waitUntil(
     caches.open(CACHE_NAME).then(cache =>
-      cache.addAll(['/', '/index.html', '/css/style.css'])
+      cache.addAll(['/', '/index.html', '/css/style.css', '/js/app.js', '/manifest.json'])
         .catch(() => { /* non-fatal: versioned filenames may differ */ })
     )
   );
