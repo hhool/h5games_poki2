@@ -23,6 +23,7 @@
     "audit:seo": "node tools/audit/check-seo-meta.js",
     "enrich:desc": "node tools/content/enrich-descriptions.js",
     "enrich:desc:apply": "node tools/content/enrich-descriptions.js --apply",
+    "generate:howtoplay": "node scripts/generate-how-to-play.js",
     "publish:pages": "wrangler pages deploy ./dist --project-name \"${CF_PAGES_PROJECT:-h5games-poki2}\"",
     "serve:compressed": "node scripts/serve-compressed.js -p 8080 -d dist",
     "inject:version": "node scripts/inject-version.js",

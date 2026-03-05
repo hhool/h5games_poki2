@@ -22,7 +22,8 @@
     "use_overlay_title": false,
     "featured": true,
     "badge": "popular",
-    "description": "Slide numbered tiles on the grid to merge them and reach the 2048 tile. Simple to learn, hard to master. Supports keyboard and touch controls."
+    "description": "Slide numbered tiles on the grid to merge them and reach the 2048 tile. Simple to learn, hard to master. Supports keyboard and touch controls.",
+    "howToPlay": "Slide numbered tiles on the grid to merge them and reach the 2048 tile. Simple to learn, hard to master."
   },
   {
     "title": "Among Us",
@@ -48,7 +49,8 @@
     "use_overlay_title": false,
     "featured": true,
     "badge": "hot",
-    "description": "Work together to complete tasks aboard the spaceship — or deceive everyone as the impostor! Supports keyboard and touch controls. Best experienced on desktop."
+    "description": "Work together to complete tasks aboard the spaceship — or deceive everyone as the impostor! Supports keyboard and touch controls. Best experienced on desktop.",
+    "howToPlay": "Work together to complete tasks aboard the spaceship — or deceive everyone as the impostor!"
   },
   {
     "title": "Basketball Stars",
@@ -72,7 +74,8 @@
     "use_overlay_title": false,
     "featured": true,
     "badge": "hot",
-    "description": "Intense 1v1 street basketball duels. Dribble, shoot, and block your way to victory. Controlled entirely with your keyboard. Best experienced on desktop brows."
+    "description": "Intense 1v1 street basketball duels. Dribble, shoot, and block your way to victory. Controlled entirely with your keyboard. Best experienced on desktop brows.",
+    "howToPlay": "Intense 1v1 street basketball duels. Dribble, shoot, and block your way to victory."
   },
   {
     "title": "Battle for Gondor",
@@ -97,7 +100,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Defend Gondor from Mordor's siege in this Lord of the Rings-inspired tower-defense game. Supports keyboard and touch controls. Runs in any modern browser on ."
+    "description": "Defend Gondor from Mordor's siege in this Lord of the Rings-inspired tower-defense game. Supports keyboard and touch controls. Runs in any modern browser on .",
+    "howToPlay": "Defend Gondor from Mordor's siege in this Lord of the Rings-inspired tower-defense game."
   },
   {
     "title": "Big Red Button",
@@ -119,7 +123,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "There's a big red button. The instructions say don't press it. You'll press it anyway. Supports keyboard and touch controls. Runs in any modern browser on mo."
+    "description": "There's a big red button. The instructions say don't press it. You'll press it anyway. Supports keyboard and touch controls. Runs in any modern browser on mo.",
+    "howToPlay": "There's a big red button. The instructions say don't press it. You'll press it anyway."
   },
   {
     "title": "Blockclaim.io",
@@ -145,7 +150,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Paint tiles and claim territory in this competitive .io multiplayer game. Block your rivals and expand your domain. Supports keyboard and touch controls."
+    "description": "Paint tiles and claim territory in this competitive .io multiplayer game. Block your rivals and expand your domain. Supports keyboard and touch controls.",
+    "howToPlay": "Paint tiles and claim territory in this competitive .io multiplayer game. Block your rivals and expand your domain."
   },
   {
     "title": "Crossy Road",
@@ -174,7 +180,8 @@
     "use_overlay_title": false,
     "featured": true,
     "badge": "popular",
-    "description": "How far can you hop without getting squashed? An infinite arcade-style hopper inspired by Frogger. Supports keyboard and touch controls."
+    "description": "How far can you hop without getting squashed? An infinite arcade-style hopper inspired by Frogger. Supports keyboard and touch controls.",
+    "howToPlay": "How far can you hop without getting squashed? An infinite arcade-style hopper inspired by Frogger."
   },
   {
     "title": "BaBa Is You",
@@ -203,7 +210,8 @@
     "use_overlay_title": false,
     "featured": true,
     "badge": "new",
-    "description": "A mind-bending puzzle game where the rules themselves are objects you can push around to change reality. Supports keyboard and touch controls."
+    "description": "A mind-bending puzzle game where the rules themselves are objects you can push around to change reality. Supports keyboard and touch controls.",
+    "howToPlay": "A mind-bending puzzle game where the rules themselves are objects you can push around to change reality."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/zcj2/",
@@ -228,7 +236,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "The undead can't jump — use that to your advantage. Shoot hordes of zombies before they stack up and overwhelm you. Supports keyboard and touch controls."
+    "description": "The undead can't jump — use that to your advantage. Shoot hordes of zombies before they stack up and overwhelm you. Supports keyboard and touch controls.",
+    "howToPlay": "The undead can't jump — use that to your advantage. Shoot hordes of zombies before they stack up and overwhelm you."
   },
   {
     "title": "Zombies Can't Jump",
@@ -253,7 +262,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Classic zombie defense: shoot the walking dead before they climb their way over the wall to reach you. Supports keyboard and touch controls."
+    "description": "Classic zombie defense: shoot the walking dead before they climb their way over the wall to reach you. Supports keyboard and touch controls.",
+    "howToPlay": "Classic zombie defense: shoot the walking dead before they climb their way over the wall to reach you."
   },
   {
     "title": "Runner Yodas",
@@ -279,7 +289,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "An auto-runner featuring tiny Yoda clones. Jump, duck, and dodge through obstacle-filled levels. Supports keyboard and touch controls."
+    "description": "An auto-runner featuring tiny Yoda clones. Jump, duck, and dodge through obstacle-filled levels. Supports keyboard and touch controls.",
+    "howToPlay": "An auto-runner featuring tiny Yoda clones. Jump, duck, and dodge through obstacle-filled levels."
   },
   {
     "title": "Cube Ninja",
@@ -303,7 +314,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Slice and dice cubes with your ninja blade in this satisfying physics puzzle. Supports keyboard and touch controls. Runs in any modern browser on mobile and ."
+    "description": "Slice and dice cubes with your ninja blade in this satisfying physics puzzle. Supports keyboard and touch controls. Runs in any modern browser on mobile and .",
+    "howToPlay": "Slice and dice cubes with your ninja blade in this satisfying physics puzzle."
   },
   {
     "title": "Battle Day Brawl",
@@ -326,7 +338,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Command your soldiers in chaotic battlefield skirmishes across multiple waves of enemies. Supports keyboard and touch controls. Runs in any modern browser on."
+    "description": "Command your soldiers in chaotic battlefield skirmishes across multiple waves of enemies. Supports keyboard and touch controls. Runs in any modern browser on.",
+    "howToPlay": "Command your soldiers in chaotic battlefield skirmishes across multiple waves of enemies."
   },
   {
     "title": "Define Of Karmax 3",
@@ -350,7 +363,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Third installment of the Karmax defense series — protect your base against increasingly tough attackers. Supports keyboard and touch controls."
+    "description": "Third installment of the Karmax defense series — protect your base against increasingly tough attackers. Supports keyboard and touch controls.",
+    "howToPlay": "Third installment of the Karmax defense series — protect your base against increasingly tough attackers."
   },
   {
     "title": "Drone Wars",
@@ -375,7 +389,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Pilot your combat drone through enemy formations. Dodge missiles and return fire in aerial dogfights. Supports keyboard and touch controls."
+    "description": "Pilot your combat drone through enemy formations. Dodge missiles and return fire in aerial dogfights. Supports keyboard and touch controls.",
+    "howToPlay": "Pilot your combat drone through enemy formations. Dodge missiles and return fire in aerial dogfights."
   },
   {
     "title": "Luxahoy",
@@ -400,7 +415,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Navigate a ship through stormy waters, collecting treasures while avoiding deadly obstacles. Supports keyboard and touch controls."
+    "description": "Navigate a ship through stormy waters, collecting treasures while avoiding deadly obstacles. Supports keyboard and touch controls.",
+    "howToPlay": "Navigate a ship through stormy waters, collecting treasures while avoiding deadly obstacles."
   },
   {
     "title": "Sambogart",
@@ -426,7 +442,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "An action platformer with gunplay inspired by classic run-and-gun games. Supports keyboard and touch controls. Runs in any modern browser on mobile and deskt."
+    "description": "An action platformer with gunplay inspired by classic run-and-gun games. Supports keyboard and touch controls. Runs in any modern browser on mobile and deskt.",
+    "howToPlay": "An action platformer with gunplay inspired by classic run-and-gun games."
   },
   {
     "title": "Ninja Kid VS Zombies",
@@ -453,7 +470,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A young ninja must cut down wave after wave of zombies using lightning-fast blade combos. Supports keyboard and touch controls. Runs in any modern browser on."
+    "description": "A young ninja must cut down wave after wave of zombies using lightning-fast blade combos. Supports keyboard and touch controls. Runs in any modern browser on.",
+    "howToPlay": "A young ninja must cut down wave after wave of zombies using lightning-fast blade combos."
   },
   {
     "title": "Space Cowboy",
@@ -480,7 +498,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Ride across the cosmos on horseback, lassoing enemies and dodging asteroids in this quirky space western. Supports keyboard and touch controls."
+    "description": "Ride across the cosmos on horseback, lassoing enemies and dodging asteroids in this quirky space western. Supports keyboard and touch controls.",
+    "howToPlay": "Ride across the cosmos on horseback, lassoing enemies and dodging asteroids in this quirky space western."
   },
   {
     "title": "Silver Arrow",
@@ -507,7 +526,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A fast-paced archery game. Draw your bow, aim carefully, and pin targets before time runs out. Supports keyboard and touch controls."
+    "description": "A fast-paced archery game. Draw your bow, aim carefully, and pin targets before time runs out. Supports keyboard and touch controls.",
+    "howToPlay": "A fast-paced archery game. Draw your bow, aim carefully, and pin targets before time runs out."
   },
   {
     "title": "Ninja Blade",
@@ -534,7 +554,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "React to oncoming attacks and slice them in half with your katana. Timing and precision are everything. Supports keyboard and touch controls."
+    "description": "React to oncoming attacks and slice them in half with your katana. Timing and precision are everything. Supports keyboard and touch controls.",
+    "howToPlay": "React to oncoming attacks and slice them in half with your katana. Timing and precision are everything."
   },
   {
     "title": "Black Knight",
@@ -558,7 +579,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Wield your sword as the Black Knight, defending your keep from relentless invaders. Supports keyboard and touch controls. Optimized for mobile browsers — pla."
+    "description": "Wield your sword as the Black Knight, defending your keep from relentless invaders. Supports keyboard and touch controls. Optimized for mobile browsers — pla.",
+    "howToPlay": "Wield your sword as the Black Knight, defending your keep from relentless invaders."
   },
   {
     "title": "Breaking the Bank",
@@ -586,7 +608,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Plan the perfect heist — crack the vault, dodge guards, and escape with the loot in this stealth puzzler. Supports keyboard and touch controls."
+    "description": "Plan the perfect heist — crack the vault, dodge guards, and escape with the loot in this stealth puzzler. Supports keyboard and touch controls.",
+    "howToPlay": "Plan the perfect heist — crack the vault, dodge guards, and escape with the loot in this stealth puzzler."
   },
   {
     "title": "Big Tower Tiny Square",
@@ -611,7 +634,8 @@
     "use_overlay_title": false,
     "description": "A super-hard precision platformer. Navigate a tiny square through a massive tower of traps. Controlled entirely with your keyboard.",
     "featured": false,
-    "badge": "popular"
+    "badge": "popular",
+    "howToPlay": "A super-hard precision platformer. Navigate a tiny square through a massive tower of traps."
   },
   {
     "title": "Cannon Basketball 4",
@@ -636,7 +660,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Angle and power your cannon shots to sink basketball after basketball into the hoop. Physics-based fun. Supports keyboard and touch controls."
+    "description": "Angle and power your cannon shots to sink basketball after basketball into the hoop. Physics-based fun. Supports keyboard and touch controls.",
+    "howToPlay": "Angle and power your cannon shots to sink basketball after basketball into the hoop. Physics-based fun."
   },
   {
     "title": "Cell Machine",
@@ -661,7 +686,8 @@
     "use_overlay_title": false,
     "badge": "new",
     "description": "Design and build self-replicating cellular automata machines. An endlessly surprising sandbox. Supports keyboard and touch controls.",
-    "featured": false
+    "featured": false,
+    "howToPlay": "Design and build self-replicating cellular automata machines. An endlessly surprising sandbox."
   },
   {
     "title": "Chrome Dino",
@@ -685,7 +711,8 @@
     "use_overlay_title": false,
     "featured": true,
     "badge": "popular",
-    "description": "The classic infinite runner hidden in Chrome's offline page. Jump over cacti and duck under pterodactyls. Supports keyboard and touch controls."
+    "description": "The classic infinite runner hidden in Chrome's offline page. Jump over cacti and duck under pterodactyls. Supports keyboard and touch controls.",
+    "howToPlay": "The classic infinite runner hidden in Chrome's offline page. Jump over cacti and duck under pterodactyls."
   },
   {
     "title": "circlO",
@@ -705,7 +732,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A minimalist reflex game where you tap to switch a small circle's rotation direction, dodging obstacles. Best experienced on desktop browsers."
+    "description": "A minimalist reflex game where you tap to switch a small circle's rotation direction, dodging obstacles. Best experienced on desktop browsers.",
+    "howToPlay": "A minimalist reflex game where you tap to switch a small circle's rotation direction, dodging obstacles."
   },
   {
     "title": "Connect 3",
@@ -727,7 +755,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Drop tokens to line up three in a row before your opponent does. A quicker twist on the classic Connect Four. Supports keyboard and touch controls."
+    "description": "Drop tokens to line up three in a row before your opponent does. A quicker twist on the classic Connect Four. Supports keyboard and touch controls.",
+    "howToPlay": "Drop tokens to line up three in a row before your opponent does. A quicker twist on the classic Connect Four."
   },
   {
     "title": "CraftMine",
@@ -747,7 +776,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Mine blocks and craft tools in this browser-based Minecraft-inspired survival sandbox. Controlled entirely with your keyboard. Hit the gas, dodge obstacles, ."
+    "description": "Mine blocks and craft tools in this browser-based Minecraft-inspired survival sandbox. Controlled entirely with your keyboard. Hit the gas, dodge obstacles, .",
+    "howToPlay": "Mine blocks and craft tools in this browser-based Minecraft-inspired survival sandbox Hit the gas, dodge obstacles, ."
   },
   {
     "title": "CS:GO Clicker",
@@ -768,7 +798,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "An idle clicker themed around Counter-Strike. Buy guns, earn kills, and upgrade your arsenal. Best experienced on desktop browsers."
+    "description": "An idle clicker themed around Counter-Strike. Buy guns, earn kills, and upgrade your arsenal. Best experienced on desktop browsers.",
+    "howToPlay": "An idle clicker themed around Counter-Strike. Buy guns, earn kills, and upgrade your arsenal."
   },
   {
     "title": "Cut the Rope",
@@ -792,7 +823,8 @@
     "use_overlay_title": false,
     "featured": true,
     "badge": "popular",
-    "description": "Cut the ropes at just the right moment to feed candy to the adorable little monster, Om Nom! Supports keyboard and touch controls."
+    "description": "Cut the ropes at just the right moment to feed candy to the adorable little monster, Om Nom! Supports keyboard and touch controls.",
+    "howToPlay": "Cut the ropes at just the right moment to feed candy to the adorable little monster, Om Nom!"
   },
   {
     "title": "Cut the Rope Holiday",
@@ -816,7 +848,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Om Nom's favorite puzzle game gets a festive winter makeover with new holiday-themed levels. Supports keyboard and touch controls."
+    "description": "Om Nom's favorite puzzle game gets a festive winter makeover with new holiday-themed levels. Supports keyboard and touch controls.",
+    "howToPlay": "Om Nom's favorite puzzle game gets a festive winter makeover with new holiday-themed levels."
   },
   {
     "title": "Cut the Rope Time Travel",
@@ -841,7 +874,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Om Nom travels through history! Cut ropes across ancient Egypt, medieval castles, and prehistoric jungles. Supports keyboard and touch controls."
+    "description": "Om Nom travels through history! Cut ropes across ancient Egypt, medieval castles, and prehistoric jungles. Supports keyboard and touch controls.",
+    "howToPlay": "Om Nom travels through history! Cut ropes across ancient Egypt, medieval castles, and prehistoric jungles."
   },
   {
     "title": "Cupcake 2048",
@@ -864,7 +898,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "The 2048 slide puzzle re-skinned with delicious cupcakes. Merge matching treats to reach the ultimate dessert. Supports keyboard and touch controls."
+    "description": "The 2048 slide puzzle re-skinned with delicious cupcakes. Merge matching treats to reach the ultimate dessert. Supports keyboard and touch controls.",
+    "howToPlay": "The 2048 slide puzzle re-skinned with delicious cupcakes. Merge matching treats to reach the ultimate dessert."
   },
   {
     "title": "Deal or No Deal",
@@ -884,7 +919,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Open briefcases and negotiate with the banker to win the most money in this TV game show classic. Supports keyboard and touch controls."
+    "description": "Open briefcases and negotiate with the banker to win the most money in this TV game show classic. Supports keyboard and touch controls.",
+    "howToPlay": "Open briefcases and negotiate with the banker to win the most money in this TV game show classic."
   },
   {
     "title": "Death Run 3D",
@@ -909,7 +945,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Sprint through an endless 3D tunnel of spinning blades and moving obstacles. React fast or die instantly. Controlled entirely with your keyboard."
+    "description": "Sprint through an endless 3D tunnel of spinning blades and moving obstacles. React fast or die instantly. Controlled entirely with your keyboard.",
+    "howToPlay": "Sprint through an endless 3D tunnel of spinning blades and moving obstacles. React fast or die instantly."
   },
   {
     "title": "Defend the Tank",
@@ -931,7 +968,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Position your troops and shoot down enemy waves before they destroy your precious tank. Supports keyboard and touch controls. Runs in any modern browser on m."
+    "description": "Position your troops and shoot down enemy waves before they destroy your precious tank. Supports keyboard and touch controls. Runs in any modern browser on m.",
+    "howToPlay": "Position your troops and shoot down enemy waves before they destroy your precious tank."
   },
   {
     "title": "Doge 2048",
@@ -953,7 +991,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Wow. Such merge. A 2048 clone featuring the famous Doge meme. Very numbers. Much slide. So win. Supports keyboard and touch controls."
+    "description": "Wow. Such merge. A 2048 clone featuring the famous Doge meme. Very numbers. Much slide. So win. Supports keyboard and touch controls.",
+    "howToPlay": "Wow. Such merge. A 2048 clone featuring the famous Doge meme. Very numbers. Much slide. So win."
   },
   {
     "title": "Doodle Jump",
@@ -976,7 +1015,8 @@
     "use_overlay_title": false,
     "featured": true,
     "badge": "popular",
-    "description": "Guide the Doodler ever upward on randomized platforms while avoiding monsters and bottomless gaps. Supports keyboard and touch controls."
+    "description": "Guide the Doodler ever upward on randomized platforms while avoiding monsters and bottomless gaps. Supports keyboard and touch controls.",
+    "howToPlay": "Guide the Doodler ever upward on randomized platforms while avoiding monsters and bottomless gaps."
   },
   {
     "title": "Draw the Hill",
@@ -1002,7 +1042,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Draw a road with your finger and watch your car drive across it. Simple physics, endlessly creative. Supports keyboard and touch controls."
+    "description": "Draw a road with your finger and watch your car drive across it. Simple physics, endlessly creative. Supports keyboard and touch controls.",
+    "howToPlay": "Draw a road with your finger and watch your car drive across it. Simple physics, endlessly creative."
   },
   {
     "title": "Edge Not Found",
@@ -1024,7 +1065,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Navigate the Chrome dinosaur into a web-themed adventure of missing pages and 404 errors. Supports keyboard and touch controls. Best experienced on desktop b."
+    "description": "Navigate the Chrome dinosaur into a web-themed adventure of missing pages and 404 errors. Supports keyboard and touch controls. Best experienced on desktop b.",
+    "howToPlay": "Navigate the Chrome dinosaur into a web-themed adventure of missing pages and 404 errors."
   },
   {
     "title": "Endless War 3",
@@ -1043,7 +1085,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Command infantry, tanks, and air support across brutal World War II-inspired battlefields. Controlled entirely with your keyboard."
+    "description": "Command infantry, tanks, and air support across brutal World War II-inspired battlefields. Controlled entirely with your keyboard.",
+    "howToPlay": "Command infantry, tanks, and air support across brutal World War II-inspired battlefields."
   },
   {
     "title": "Evil Glitch",
@@ -1065,7 +1108,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A glitchy platformer where the game itself fights back — tiles disappear, colors invert, and the rules break. Supports keyboard and touch controls."
+    "description": "A glitchy platformer where the game itself fights back — tiles disappear, colors invert, and the rules break. Supports keyboard and touch controls.",
+    "howToPlay": "A glitchy platformer where the game itself fights back — tiles disappear, colors invert, and the rules break."
   },
   {
     "title": "Flappy Bird",
@@ -1089,7 +1133,8 @@
     "use_overlay_title": false,
     "featured": true,
     "badge": "popular",
-    "description": "Tap to keep the bird airborne through narrow gaps in the pipes. One tap at a time. Runs in any modern browser on mobile and desktop."
+    "description": "Tap to keep the bird airborne through narrow gaps in the pipes. One tap at a time. Runs in any modern browser on mobile and desktop.",
+    "howToPlay": "Tap to keep the bird airborne through narrow gaps in the pipes. One tap at a time."
   },
   {
     "title": "Geometry Dash (Scratch)",
@@ -1113,7 +1158,8 @@
     "use_overlay_title": false,
     "featured": true,
     "badge": "hot",
-    "description": "Rhythm-based action platformer. Jump, fly, and flip through increasingly dangerous levels. Supports keyboard and touch controls. Runs in any modern browser o."
+    "description": "Rhythm-based action platformer. Jump, fly, and flip through increasingly dangerous levels. Supports keyboard and touch controls. Runs in any modern browser o.",
+    "howToPlay": "Rhythm-based action platformer. Jump, fly, and flip through increasingly dangerous levels."
   },
   {
     "title": "Getaway Shootout",
@@ -1132,7 +1178,8 @@
     "show": true,
     "use_overlay_title": false,
     "description": "Race your opponent to the getaway vehicle using wild leaps and power-ups. Fast chaotic fun. Controlled entirely with your keyboard.",
-    "featured": false
+    "featured": false,
+    "howToPlay": "Race your opponent to the getaway vehicle using wild leaps and power-ups. Fast chaotic fun."
   },
   {
     "title": "Gimme the Airpod",
@@ -1154,7 +1201,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Quick physics puzzles where you maneuver to grab the missing AirPod from increasingly tricky situations. Controlled entirely with your keyboard."
+    "description": "Quick physics puzzles where you maneuver to grab the missing AirPod from increasingly tricky situations. Controlled entirely with your keyboard.",
+    "howToPlay": "Quick physics puzzles where you maneuver to grab the missing AirPod from increasingly tricky situations."
   },
   {
     "title": "Grind Craft",
@@ -1176,7 +1224,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "An idle crafting incremental: combine resources, build machines, and work your way up from stone to steel. Supports keyboard and touch controls."
+    "description": "An idle crafting incremental: combine resources, build machines, and work your way up from stone to steel. Supports keyboard and touch controls.",
+    "howToPlay": "An idle crafting incremental: combine resources, build machines, and work your way up from stone to steel."
   },
   {
     "title": "Helicopter",
@@ -1197,7 +1246,8 @@
     "show": true,
     "use_overlay_title": false,
     "description": "Steer the helicopter through tight caves by holding the mouse button. A deceptively simple classic. Runs in any modern browser on mobile and desktop.",
-    "featured": false
+    "featured": false,
+    "howToPlay": "Steer the helicopter through tight caves by holding the mouse button. A deceptively simple classic."
   },
   {
     "title": "HexGL",
@@ -1219,7 +1269,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A futuristic high-speed racing game inspired by F-Zero and WipeOut, running entirely in WebGL. Supports keyboard and touch controls."
+    "description": "A futuristic high-speed racing game inspired by F-Zero and WipeOut, running entirely in WebGL. Supports keyboard and touch controls.",
+    "howToPlay": "A futuristic high-speed racing game inspired by F-Zero and WipeOut, running entirely in WebGL."
   },
   {
     "title": "Interactive Buddy",
@@ -1240,7 +1291,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A physics sandbox where you interact with a squishy buddy — throw it, bounce it, and apply ragdoll chaos. Supports keyboard and touch controls."
+    "description": "A physics sandbox where you interact with a squishy buddy — throw it, bounce it, and apply ragdoll chaos. Supports keyboard and touch controls.",
+    "howToPlay": "A physics sandbox where you interact with a squishy buddy — throw it, bounce it, and apply ragdoll chaos."
   },
   {
     "title": "Just One Boss",
@@ -1260,7 +1312,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "You only have one boss to fight — but it has many phases. A challenging bullet-hell boss rush game. Controlled entirely with your keyboard."
+    "description": "You only have one boss to fight — but it has many phases. A challenging bullet-hell boss rush game. Controlled entirely with your keyboard.",
+    "howToPlay": "You only have one boss to fight — but it has many phases. A challenging bullet-hell boss rush game."
   },
   {
     "title": "Krunker",
@@ -1285,7 +1338,8 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "hot",
-    "description": "A fast-paced browser-based FPS with blocky graphics and silky-smooth gunplay. No download needed. Supports keyboard and touch controls."
+    "description": "A fast-paced browser-based FPS with blocky graphics and silky-smooth gunplay. No download needed. Supports keyboard and touch controls.",
+    "howToPlay": "A fast-paced browser-based FPS with blocky graphics and silky-smooth gunplay."
   },
   {
     "title": "Meme 2048",
@@ -1307,7 +1361,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "The sliding tile puzzle with a meme twist — merge your favorite internet icons instead of plain numbers. Supports keyboard and touch controls."
+    "description": "The sliding tile puzzle with a meme twist — merge your favorite internet icons instead of plain numbers. Supports keyboard and touch controls.",
+    "howToPlay": "The sliding tile puzzle with a meme twist — merge your favorite internet icons instead of plain numbers."
   },
   {
     "title": "Eaglercraft",
@@ -1329,7 +1384,8 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "popular",
-    "description": "Play Minecraft 1.8 directly in your browser with no Java, no downloads, and no plugins required. Controlled entirely with your keyboard."
+    "description": "Play Minecraft 1.8 directly in your browser with no Java, no downloads, and no plugins required. Controlled entirely with your keyboard.",
+    "howToPlay": "Play Minecraft 1.8 directly in your browser."
   },
   {
     "title": "Minesweeper",
@@ -1353,7 +1409,8 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "popular",
-    "description": "The classic Windows game. Use logic to flag mines and reveal safe squares without triggering an explosion. Supports keyboard and touch controls."
+    "description": "The classic Windows game. Use logic to flag mines and reveal safe squares without triggering an explosion. Supports keyboard and touch controls.",
+    "howToPlay": "The classic Windows game. Use logic to flag mines and reveal safe squares without triggering an explosion."
   },
   {
     "title": "Mini-putt",
@@ -1376,7 +1433,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Play miniature golf across quirky, physics-driven courses. Master angles and power to sink every hole. Supports keyboard and touch controls."
+    "description": "Play miniature golf across quirky, physics-driven courses. Master angles and power to sink every hole. Supports keyboard and touch controls.",
+    "howToPlay": "Play miniature golf across quirky, physics-driven courses. Master angles and power to sink every hole."
   },
   {
     "title": "Missiles",
@@ -1400,7 +1458,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Intercept incoming missiles before they destroy your cities. A browser remake of the arcade classic. Supports keyboard and touch controls."
+    "description": "Intercept incoming missiles before they destroy your cities. A browser remake of the arcade classic. Supports keyboard and touch controls.",
+    "howToPlay": "Intercept incoming missiles before they destroy your cities. A browser remake of the arcade classic."
   },
   {
     "title": "n-gon",
@@ -1419,7 +1478,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A minimal but brutally difficult dodging game. Navigate an n-sided polygon through a barrage of threats. Controlled entirely with your keyboard."
+    "description": "A minimal but brutally difficult dodging game. Navigate an n-sided polygon through a barrage of threats. Controlled entirely with your keyboard.",
+    "howToPlay": "A minimal but brutally difficult dodging game. Navigate an n-sided polygon through a barrage of threats."
   },
   {
     "link": "https://o.poki2.online/om-bounce/",
@@ -1442,7 +1502,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Help Om Nom bounce on trampolines to gobble up candy high in the air. Timing-based physics fun. Supports keyboard and touch controls."
+    "description": "Help Om Nom bounce on trampolines to gobble up candy high in the air. Timing-based physics fun. Supports keyboard and touch controls.",
+    "howToPlay": "Help Om Nom bounce on trampolines to gobble up candy high in the air. Timing-based physics fun."
   },
   {
     "title": "Papaspizzaria",
@@ -1468,7 +1529,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Run Papa's Pizzeria: take orders, prep dough, add toppings, bake, and serve to hungry customers. Supports keyboard and touch controls."
+    "description": "Run Papa's Pizzeria: take orders, prep dough, add toppings, bake, and serve to hungry customers. Supports keyboard and touch controls.",
+    "howToPlay": "Run Papa's Pizzeria: take orders, prep dough, add toppings, bake, and serve to hungry customers."
   },
   {
     "title": "Paper.io 2",
@@ -1495,7 +1557,8 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "hot",
-    "description": "Expand your territory by drawing loops on the paper grid — but watch your back; rivals will cut your line. Supports keyboard and touch controls."
+    "description": "Expand your territory by drawing loops on the paper grid — but watch your back; rivals will cut your line. Supports keyboard and touch controls.",
+    "howToPlay": "Expand your territory by drawing loops on the paper grid — but watch your back; rivals will cut your line."
   },
   {
     "title": "Papery Planes",
@@ -1521,7 +1584,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Fold and fly paper planes through tricky courses. Adjust lift, weight, and angle to glide perfectly. Supports keyboard and touch controls."
+    "description": "Fold and fly paper planes through tricky courses. Adjust lift, weight, and angle to glide perfectly. Supports keyboard and touch controls.",
+    "howToPlay": "Fold and fly paper planes through tricky courses. Adjust lift, weight, and angle to glide perfectly."
   },
   {
     "title": "Push The Square",
@@ -1542,7 +1606,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Guide a square to its target by placing directional arrows on the grid to steer it through puzzles. Supports keyboard and touch controls."
+    "description": "Guide a square to its target by placing directional arrows on the grid to steer it through puzzles. Supports keyboard and touch controls.",
+    "howToPlay": "Guide a square to its target by placing directional arrows on the grid to steer it through puzzles."
   },
   {
     "title": "Rolly Vortex",
@@ -1567,7 +1632,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Roll a ball through a spinning tube full of obstacles. Tilt, dodge, and keep rolling as far as you can. Supports keyboard and touch controls."
+    "description": "Roll a ball through a spinning tube full of obstacles. Tilt, dodge, and keep rolling as far as you can. Supports keyboard and touch controls.",
+    "howToPlay": "Roll a ball through a spinning tube full of obstacles. Tilt, dodge, and keep rolling as far as you can."
   },
   {
     "title": "Snow Battle",
@@ -1590,7 +1656,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Throw snowballs at opponents in this winter multiplayer brawl. Build cover and eliminate your rivals. Controlled entirely with your keyboard."
+    "description": "Throw snowballs at opponents in this winter multiplayer brawl. Build cover and eliminate your rivals. Controlled entirely with your keyboard.",
+    "howToPlay": "Throw snowballs at opponents in this winter multiplayer brawl. Build cover and eliminate your rivals."
   },
   {
     "title": "Soldier Legend",
@@ -1613,7 +1680,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Lead a lone soldier through war zones, blasting enemies and completing missions in this action platformer. Controlled entirely with your keyboard."
+    "description": "Lead a lone soldier through war zones, blasting enemies and completing missions in this action platformer. Controlled entirely with your keyboard.",
+    "howToPlay": "Lead a lone soldier through war zones, blasting enemies and completing missions in this action platformer."
   },
   {
     "title": "Solitaire",
@@ -1638,7 +1706,8 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "popular",
-    "description": "The classic single-player card game. Stack suits in order from Ace to King to clear the tableau. Supports keyboard and touch controls."
+    "description": "The classic single-player card game. Stack suits in order from Ace to King to clear the tableau. Supports keyboard and touch controls.",
+    "howToPlay": "The classic single-player card game. Stack suits in order from Ace to King to clear the tableau."
   },
   {
     "title": "Stack",
@@ -1661,7 +1730,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Tap to drop blocks onto a growing tower. The further from center you land, the smaller the next block. Runs in any modern browser on mobile and desktop."
+    "description": "Tap to drop blocks onto a growing tower. The further from center you land, the smaller the next block. Runs in any modern browser on mobile and desktop.",
+    "howToPlay": "Tap to drop blocks onto a growing tower. The further from center you land, the smaller the next block."
   },
   {
     "title": "Stealing The Diamond",
@@ -1684,7 +1754,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A Henry Stickmin adventure — choose your approach to steal the world's largest diamond from a museum. Supports keyboard and touch controls."
+    "description": "A Henry Stickmin adventure — choose your approach to steal the world's largest diamond from a museum. Supports keyboard and touch controls.",
+    "howToPlay": "A Henry Stickmin adventure — choose your approach to steal the world's largest diamond from a museum."
   },
   {
     "title": "Stick War",
@@ -1707,7 +1778,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Command an army of stickmen and conquer enemy territories in this real-time strategy classic. Supports keyboard and touch controls."
+    "description": "Command an army of stickmen and conquer enemy territories in this real-time strategy classic. Supports keyboard and touch controls.",
+    "howToPlay": "Command an army of stickmen and conquer enemy territories in this real-time strategy classic."
   },
   {
     "title": "Storm The House 2",
@@ -1729,7 +1801,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Defend your house from waves of stick-figure attackers. Upgrade guns and barricades to hold the line. Supports keyboard and touch controls."
+    "description": "Defend your house from waves of stick-figure attackers. Upgrade guns and barricades to hold the line. Supports keyboard and touch controls.",
+    "howToPlay": "Defend your house from waves of stick-figure attackers. Upgrade guns and barricades to hold the line."
   },
   {
     "title": "Swerve",
@@ -1755,7 +1828,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Steer a ball along a winding track without falling off. Tilt to swerve around tight curves at speed. Supports keyboard and touch controls."
+    "description": "Steer a ball along a winding track without falling off. Tilt to swerve around tight curves at speed. Supports keyboard and touch controls.",
+    "howToPlay": "Steer a ball along a winding track without falling off. Tilt to swerve around tight curves at speed."
   },
   {
     "title": "Temple Run 2",
@@ -1780,7 +1854,8 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "popular",
-    "description": "Sprint through ancient ruins, swipe to turn, tilt to dodge, and jump over obstacles in this endless runner. Runs in any modern browser on mobile and desktop."
+    "description": "Sprint through ancient ruins, swipe to turn, tilt to dodge, and jump over obstacles in this endless runner. Runs in any modern browser on mobile and desktop.",
+    "howToPlay": "Sprint through ancient ruins, swipe to turn, tilt to dodge, and jump over obstacles in this endless runner."
   },
   {
     "title": "The Battle",
@@ -1803,7 +1878,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Two armies clash in this physics-based strategy brawl. Deploy units and watch the chaos unfold. Supports keyboard and touch controls."
+    "description": "Two armies clash in this physics-based strategy brawl. Deploy units and watch the chaos unfold. Supports keyboard and touch controls.",
+    "howToPlay": "Two armies clash in this physics-based strategy brawl. Deploy units and watch the chaos unfold."
   },
   {
     "title": "The Final Earth",
@@ -1826,7 +1902,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Build a city in space on a finite floating island. Manage resources and expand vertically into the sky. Supports keyboard and touch controls."
+    "description": "Build a city in space on a finite floating island. Manage resources and expand vertically into the sky. Supports keyboard and touch controls.",
+    "howToPlay": "Build a city in space on a finite floating island. Manage resources and expand vertically into the sky."
   },
   {
     "title": "The Heist",
@@ -1845,7 +1922,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Pull off an elaborate casino heist with Henry Stickmin by choosing the right gadget at each step. Supports keyboard and touch controls."
+    "description": "Pull off an elaborate casino heist with Henry Stickmin by choosing the right gadget at each step. Supports keyboard and touch controls.",
+    "howToPlay": "Pull off an elaborate casino heist with Henry Stickmin by choosing the right gadget at each step."
   },
   {
     "title": "There Is No Game",
@@ -1866,7 +1944,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A comedy meta-game that constantly insists there is no game — while actually being a very clever one. Supports keyboard and touch controls."
+    "description": "A comedy meta-game that constantly insists there is no game — while actually being a very clever one. Supports keyboard and touch controls.",
+    "howToPlay": "A comedy meta-game that constantly insists there is no game — while actually being a very clever one."
   },
   {
     "title": "This Is The Only Level",
@@ -1888,7 +1967,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "One level, played over and over — but the rules change every time. A clever puzzle within a puzzle. Controlled entirely with your keyboard."
+    "description": "One level, played over and over — but the rules change every time. A clever puzzle within a puzzle. Controlled entirely with your keyboard.",
+    "howToPlay": "One level, played over and over — but the rules change every time. A clever puzzle within a puzzle."
   },
   {
     "title": "Toss The Turtle",
@@ -1912,7 +1992,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Launch a turtle from a cannon, bounce it off platforms, and rack up the biggest distance possible. Supports keyboard and touch controls."
+    "description": "Launch a turtle from a cannon, bounce it off platforms, and rack up the biggest distance possible. Supports keyboard and touch controls.",
+    "howToPlay": "Launch a turtle from a cannon, bounce it off platforms, and rack up the biggest distance possible."
   },
   {
     "title": "Tube Jumpers",
@@ -1933,7 +2014,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Up to four players bounce on tubes floating above the water. Knock opponents off to be the last one standing. Controlled entirely with your keyboard."
+    "description": "Up to four players bounce on tubes floating above the water. Knock opponents off to be the last one standing. Controlled entirely with your keyboard.",
+    "howToPlay": "Up to four players bounce on tubes floating above the water. Knock opponents off to be the last one standing."
   },
   {
     "title": "Vex 3",
@@ -1960,7 +2042,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A challenging stickman platformer packed with spikes, saw blades, and precision jumps. Supports keyboard and touch controls. Runs in any modern browser on mo."
+    "description": "A challenging stickman platformer packed with spikes, saw blades, and precision jumps. Supports keyboard and touch controls. Runs in any modern browser on mo.",
+    "howToPlay": "A challenging stickman platformer packed with spikes, saw blades, and precision jumps."
   },
   {
     "title": "Vex 4",
@@ -1987,7 +2070,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "More vexing obstacles, more traps, more precision platforming — Vex 4 raises the difficulty to new levels. Supports keyboard and touch controls."
+    "description": "More vexing obstacles, more traps, more precision platforming — Vex 4 raises the difficulty to new levels. Supports keyboard and touch controls.",
+    "howToPlay": "More vexing obstacles, more traps, more precision platforming — Vex 4 raises the difficulty to new levels."
   },
   {
     "title": "Vex 6",
@@ -2015,7 +2099,8 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "new",
-    "description": "The newest entry in the Vex series with fresh mechanics and more devilish level designs than ever before. Supports keyboard and touch controls."
+    "description": "The newest entry in the Vex series with fresh mechanics and more devilish level designs than ever before. Supports keyboard and touch controls.",
+    "howToPlay": "The newest entry in the Vex series with fresh mechanics and more devilish level designs than ever before."
   },
   {
     "title": "Wordle",
@@ -2038,7 +2123,8 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "popular",
-    "description": "Guess the five-letter word in six tries. Each guess reveals which letters are correct, misplaced, or absent. Supports keyboard and touch controls."
+    "description": "Guess the five-letter word in six tries. Each guess reveals which letters are correct, misplaced, or absent. Supports keyboard and touch controls.",
+    "howToPlay": "Guess the five-letter word in six tries. Each guess reveals which letters are correct, misplaced, or absent."
   },
   {
     "title": "Alien Attack",
@@ -2061,7 +2147,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Classic Space Invaders-style shooting. Blast descending alien formations before they reach the ground. Supports keyboard and touch controls."
+    "description": "Classic Space Invaders-style shooting. Blast descending alien formations before they reach the ground. Supports keyboard and touch controls.",
+    "howToPlay": "Classic Space Invaders-style shooting. Blast descending alien formations before they reach the ground."
   },
   {
     "title": "Balance Ball",
@@ -2088,7 +2175,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Tilt your device or use arrow keys to roll the ball along a narrow platform without falling off the edge. Progress even when you are away and unlock powerful."
+    "description": "Tilt your device or use arrow keys to roll the ball along a narrow platform without falling off the edge. Progress even when you are away and unlock powerful.",
+    "howToPlay": "Tilt your device or use arrow keys to roll the ball along a narrow platform without falling off the edge. Progress even when you are away and unlock powerful."
   },
   {
     "title": "Bonncing Dot",
@@ -2111,7 +2199,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A simple but addictive game where you guide a bouncing dot through gaps in moving barriers. Supports keyboard and touch controls. Runs in any modern browser ."
+    "description": "A simple but addictive game where you guide a bouncing dot through gaps in moving barriers. Supports keyboard and touch controls. Runs in any modern browser .",
+    "howToPlay": "A simple but addictive game where you guide a bouncing dot through gaps in moving barriers."
   },
   {
     "title": "Black Bats",
@@ -2137,7 +2226,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Shoot down wave upon wave of swooping black bats before they overwhelm your defenses. Supports keyboard and touch controls. Runs in any modern browser on mob."
+    "description": "Shoot down wave upon wave of swooping black bats before they overwhelm your defenses. Supports keyboard and touch controls. Runs in any modern browser on mob.",
+    "howToPlay": "Shoot down wave upon wave of swooping black bats before they overwhelm your defenses."
   },
   {
     "title": "Blox Slider",
@@ -2160,7 +2250,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Slide colored blocks across the grid to match them with their target positions in the fewest moves possible. Supports keyboard and touch controls."
+    "description": "Slide colored blocks across the grid to match them with their target positions in the fewest moves possible. Supports keyboard and touch controls.",
+    "howToPlay": "Slide colored blocks across the grid to match them with their target positions in the fewest moves possible."
   },
   {
     "title": "Sir Bottomtight",
@@ -2183,7 +2274,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Help the dignified Sir Bottomtight navigate treacherous platforming gaps without soiling his trousers. Supports keyboard and touch controls."
+    "description": "Help the dignified Sir Bottomtight navigate treacherous platforming gaps without soiling his trousers. Supports keyboard and touch controls.",
+    "howToPlay": "Help the dignified Sir Bottomtight navigate treacherous platforming gaps without soiling his trousers."
   },
   {
     "title": "Brave Bird",
@@ -2206,7 +2298,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Flap your wings bravely through a forest of obstacles. A charming take on the infinite flapper genre. Supports keyboard and touch controls."
+    "description": "Flap your wings bravely through a forest of obstacles. A charming take on the infinite flapper genre. Supports keyboard and touch controls.",
+    "howToPlay": "Flap your wings bravely through a forest of obstacles. A charming take on the infinite flapper genre."
   },
   {
     "title": "Broken Horn",
@@ -2229,7 +2322,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A unicorn has lost its horn! Guide it through a magical puzzle-platformer to find the missing piece. Supports keyboard and touch controls."
+    "description": "A unicorn has lost its horn! Guide it through a magical puzzle-platformer to find the missing piece. Supports keyboard and touch controls.",
+    "howToPlay": "A unicorn has lost its horn! Guide it through a magical puzzle-platformer to find the missing piece."
   },
   {
     "title": "Bubble It Steven",
@@ -2252,7 +2346,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Pop and match bubbles in this Steven Universe-themed bubble shooter. Aim and fire to clear the board. Supports keyboard and touch controls."
+    "description": "Pop and match bubbles in this Steven Universe-themed bubble shooter. Aim and fire to clear the board. Supports keyboard and touch controls.",
+    "howToPlay": "Pop and match bubbles in this Steven Universe-themed bubble shooter. Aim and fire to clear the board."
   },
   {
     "title": "Bubble Fish",
@@ -2275,7 +2370,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Shoot colored bubbles upward to match groups of three and clear the aquatic playing field. Supports keyboard and touch controls. Runs in any modern browser o."
+    "description": "Shoot colored bubbles upward to match groups of three and clear the aquatic playing field. Supports keyboard and touch controls. Runs in any modern browser o.",
+    "howToPlay": "Shoot colored bubbles upward to match groups of three and clear the aquatic playing field."
   },
   {
     "title": "Candy Fusion",
@@ -2299,7 +2395,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Merge matching candy pieces on the grid to create bigger sweets and rack up a high score. Supports keyboard and touch controls. Runs in any modern browser on."
+    "description": "Merge matching candy pieces on the grid to create bigger sweets and rack up a high score. Supports keyboard and touch controls. Runs in any modern browser on.",
+    "howToPlay": "Merge matching candy pieces on the grid to create bigger sweets and rack up a high score."
   },
   {
     "title": "Captain Roger",
@@ -2322,7 +2419,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A top-down space shooter. Pilot Captain Roger through asteroid fields and alien swarms. Supports keyboard and touch controls. Runs in any modern browser on m."
+    "description": "A top-down space shooter. Pilot Captain Roger through asteroid fields and alien swarms. Supports keyboard and touch controls. Runs in any modern browser on m.",
+    "howToPlay": "A top-down space shooter. Pilot Captain Roger through asteroid fields and alien swarms."
   },
   {
     "title": "Captain War",
@@ -2346,7 +2444,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Recruit soldiers and lead them into battle in this auto-brawler strategy game. Supports keyboard and touch controls. Runs in any modern browser on mobile and."
+    "description": "Recruit soldiers and lead them into battle in this auto-brawler strategy game. Supports keyboard and touch controls. Runs in any modern browser on mobile and.",
+    "howToPlay": "Recruit soldiers and lead them into battle in this auto-brawler strategy game."
   },
   {
     "title": "Cat On Fire",
@@ -2370,7 +2469,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A cat is inexplicably on fire. Help it jump through platforms and collect water buckets to survive. Supports keyboard and touch controls."
+    "description": "A cat is inexplicably on fire. Help it jump through platforms and collect water buckets to survive. Supports keyboard and touch controls.",
+    "howToPlay": "A cat is inexplicably on fire. Help it jump through platforms and collect water buckets to survive."
   },
   {
     "title": "Cave Jumper",
@@ -2394,7 +2494,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Jump from wall to wall inside an endless vertical cave shaft without touching the sides. Runs in any modern browser on mobile and desktop."
+    "description": "Jump from wall to wall inside an endless vertical cave shaft without touching the sides. Runs in any modern browser on mobile and desktop.",
+    "howToPlay": "Jump from wall to wall inside an endless vertical cave shaft without touching the sides."
   },
   {
     "title": "cboxes",
@@ -2415,7 +2516,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Tap to spawn colored boxes and stack them into matching groups before the screen fills up. Optimized for mobile browsers — play anywhere."
+    "description": "Tap to spawn colored boxes and stack them into matching groups before the screen fills up. Optimized for mobile browsers — play anywhere.",
+    "howToPlay": "Tap to spawn colored boxes and stack them into matching groups before the screen fills up.."
   },
   {
     "title": "Cheese Lab",
@@ -2440,7 +2542,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Guide a mouse through a laboratory maze to reach the cheese at the end of each puzzle level. Runs in any modern browser on mobile and desktop."
+    "description": "Guide a mouse through a laboratory maze to reach the cheese at the end of each puzzle level. Runs in any modern browser on mobile and desktop.",
+    "howToPlay": "Guide a mouse through a laboratory maze to reach the cheese at the end of each puzzle level."
   },
   {
     "title": "Chip Man",
@@ -2463,7 +2566,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Eat chips and grow your Chip Man character while avoiding hazards in this casual snack-themed game. Supports keyboard and touch controls."
+    "description": "Eat chips and grow your Chip Man character while avoiding hazards in this casual snack-themed game. Supports keyboard and touch controls.",
+    "howToPlay": "Eat chips and grow your Chip Man character while avoiding hazards in this casual snack-themed game."
   },
   {
     "title": "Christmas Balls",
@@ -2488,7 +2592,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Aim and shoot festive ornament balls to match three or more in a row. A holiday bubble-shooter. Supports keyboard and touch controls."
+    "description": "Aim and shoot festive ornament balls to match three or more in a row. A holiday bubble-shooter. Supports keyboard and touch controls.",
+    "howToPlay": "Aim and shoot festive ornament balls to match three or more in a row. A holiday bubble-shooter."
   },
   {
     "title": "Circle Ball",
@@ -2513,7 +2618,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Keep your ball bouncing inside a rotating circle without letting it escape through the gap. Supports keyboard and touch controls. Runs in any modern browser ."
+    "description": "Keep your ball bouncing inside a rotating circle without letting it escape through the gap. Supports keyboard and touch controls. Runs in any modern browser .",
+    "howToPlay": "Keep your ball bouncing inside a rotating circle without letting it escape through the gap."
   },
   {
     "title": "Circle Pong",
@@ -2538,7 +2644,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A circular twist on Pong — two paddles curve around the inside of a ring to keep the ball in play. Supports keyboard and touch controls."
+    "description": "A circular twist on Pong — two paddles curve around the inside of a ring to keep the ball in play. Supports keyboard and touch controls.",
+    "howToPlay": "A circular twist on Pong — two paddles curve around the inside of a ring to keep the ball in play."
   },
   {
     "title": "Circle Tris",
@@ -2563,7 +2670,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Rotate a circular board to drop falling Tetris-style pieces into the matching color zones around the edge. Supports keyboard and touch controls."
+    "description": "Rotate a circular board to drop falling Tetris-style pieces into the matching color zones around the edge. Supports keyboard and touch controls.",
+    "howToPlay": "Rotate a circular board to drop falling Tetris-style pieces into the matching color zones around the edge."
   },
   {
     "title": "Crun Ching Ninjas",
@@ -2587,7 +2695,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Fast-paced ninja action where you crunch through waves of enemies with satisfying combo strikes. Supports keyboard and touch controls."
+    "description": "Fast-paced ninja action where you crunch through waves of enemies with satisfying combo strikes. Supports keyboard and touch controls.",
+    "howToPlay": "Fast-paced ninja action where you crunch through waves of enemies with satisfying combo strikes."
   },
   {
     "title": "Super Cowboy Run",
@@ -2612,7 +2721,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Lasso enemies and sprint through the Wild West in this auto-running cowboy platformer. Supports keyboard and touch controls. Runs in any modern browser on mo."
+    "description": "Lasso enemies and sprint through the Wild West in this auto-running cowboy platformer. Supports keyboard and touch controls. Runs in any modern browser on mo.",
+    "howToPlay": "Lasso enemies and sprint through the Wild West in this auto-running cowboy platformer."
   },
   {
     "title": "CowBoy2 Shot",
@@ -2637,7 +2747,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Quick-draw dueling game. React faster than your opponent and fire first in this western showdown. Supports keyboard and touch controls."
+    "description": "Quick-draw dueling game. React faster than your opponent and fire first in this western showdown. Supports keyboard and touch controls.",
+    "howToPlay": "Quick-draw dueling game. React faster than your opponent and fire first in this western showdown."
   },
   {
     "title": "Craigen Stone",
@@ -2661,7 +2772,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A story-driven action-adventure following Craigen Stone through mysterious dungeons and boss battles. Supports keyboard and touch controls."
+    "description": "A story-driven action-adventure following Craigen Stone through mysterious dungeons and boss battles. Supports keyboard and touch controls.",
+    "howToPlay": "A story-driven action-adventure following Craigen Stone through mysterious dungeons and boss battles."
   },
   {
     "title": "Dangerous",
@@ -2686,7 +2798,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "An aptly named reflex game. Dodge dangerous objects flying at you from all directions. Supports keyboard and touch controls. Runs in any modern browser on mo."
+    "description": "An aptly named reflex game. Dodge dangerous objects flying at you from all directions. Supports keyboard and touch controls. Runs in any modern browser on mo.",
+    "howToPlay": "An aptly named reflex game. Dodge dangerous objects flying at you from all directions."
   },
   {
     "title": "Dark Ninja",
@@ -2712,7 +2825,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Become the ultimate shadow warrior, slipping through darkness and eliminating guards silently. Supports keyboard and touch controls."
+    "description": "Become the ultimate shadow warrior, slipping through darkness and eliminating guards silently. Supports keyboard and touch controls.",
+    "howToPlay": "Become the ultimate shadow warrior, slipping through darkness and eliminating guards silently."
   },
   {
     "title": "Death Soul",
@@ -2737,7 +2851,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Play as a reaper navigating the underworld, collecting souls while evading the forces that pursue you. Supports keyboard and touch controls."
+    "description": "Play as a reaper navigating the underworld, collecting souls while evading the forces that pursue you. Supports keyboard and touch controls.",
+    "howToPlay": "Play as a reaper navigating the underworld, collecting souls while evading the forces that pursue you."
   },
   {
     "title": "Dont Eat Trash",
@@ -2761,7 +2876,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A health-themed runner: jump over junk food and collect nutritious items to keep your score high. Supports keyboard and touch controls."
+    "description": "A health-themed runner: jump over junk food and collect nutritious items to keep your score high. Supports keyboard and touch controls.",
+    "howToPlay": "A health-themed runner: jump over junk food and collect nutritious items to keep your score high."
   },
   {
     "title": "Dot Game",
@@ -2785,7 +2901,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Classic dots-and-boxes. Draw lines to complete squares and claim more territory than your opponent. Supports keyboard and touch controls."
+    "description": "Classic dots-and-boxes. Draw lines to complete squares and claim more territory than your opponent. Supports keyboard and touch controls.",
+    "howToPlay": "Classic dots-and-boxes. Draw lines to complete squares and claim more territory than your opponent."
   },
   {
     "title": "Drop Circle",
@@ -2810,7 +2927,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Drop a circle through rotating rings, timing your falls to pass through the openings in each layer. Supports keyboard and touch controls."
+    "description": "Drop a circle through rotating rings, timing your falls to pass through the openings in each layer. Supports keyboard and touch controls.",
+    "howToPlay": "Drop a circle through rotating rings, timing your falls to pass through the openings in each layer."
   },
   {
     "title": "Duck Water",
@@ -2836,7 +2954,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Guide a rubber duck through water-filled levels, navigating currents and obstacles to reach the drain. Supports keyboard and touch controls."
+    "description": "Guide a rubber duck through water-filled levels, navigating currents and obstacles to reach the drain. Supports keyboard and touch controls.",
+    "howToPlay": "Guide a rubber duck through water-filled levels, navigating currents and obstacles to reach the drain."
   },
   {
     "title": "Scratch Card",
@@ -2861,7 +2980,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Virtually scratch lottery cards to reveal prizes. A relaxing and satisfying casual experience. Supports keyboard and touch controls."
+    "description": "Virtually scratch lottery cards to reveal prizes. A relaxing and satisfying casual experience. Supports keyboard and touch controls.",
+    "howToPlay": "Virtually scratch lottery cards to reveal prizes. A relaxing and satisfying casual experience."
   },
   {
     "title": "Escape",
@@ -2887,7 +3007,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Solve environmental puzzles and find hidden items to escape each locked room. A browser escape game. Supports keyboard and touch controls."
+    "description": "Solve environmental puzzles and find hidden items to escape each locked room. A browser escape game. Supports keyboard and touch controls.",
+    "howToPlay": "Solve environmental puzzles and find hidden items to escape each locked room. A browser escape game."
   },
   {
     "title": "Evil Robot",
@@ -2914,7 +3035,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Hack and slash through a factory overrun with rogue robots before they take over completely. Supports keyboard and touch controls."
+    "description": "Hack and slash through a factory overrun with rogue robots before they take over completely. Supports keyboard and touch controls.",
+    "howToPlay": "Hack and slash through a factory overrun with rogue robots before they take over completely."
   },
   {
     "title": "Evil Wyrm",
@@ -2942,7 +3064,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A fire-breathing dragon is terrorizing the land — navigate the wyrm through dungeons and defeat it. Supports keyboard and touch controls."
+    "description": "A fire-breathing dragon is terrorizing the land — navigate the wyrm through dungeons and defeat it. Supports keyboard and touch controls.",
+    "howToPlay": "A fire-breathing dragon is terrorizing the land — navigate the wyrm through dungeons and defeat it."
   },
   {
     "title": "Fast",
@@ -2967,7 +3090,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A minimalist speed game. React as quickly as possible to prompts before the timer runs out. Supports keyboard and touch controls. Runs in any modern browser ."
+    "description": "A minimalist speed game. React as quickly as possible to prompts before the timer runs out. Supports keyboard and touch controls. Runs in any modern browser .",
+    "howToPlay": "A minimalist speed game. React as quickly as possible to prompts before the timer runs out."
   },
   {
     "title": "Fire Brigade",
@@ -2995,7 +3119,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Coordinate your fire engines to douse burning buildings before entire city blocks go up in flames. Supports keyboard and touch controls."
+    "description": "Coordinate your fire engines to douse burning buildings before entire city blocks go up in flames. Supports keyboard and touch controls.",
+    "howToPlay": "Coordinate your fire engines to douse burning buildings before entire city blocks go up in flames."
   },
   {
     "title": "Fishing Frenzy",
@@ -3019,7 +3144,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Cast your line, react to bites, and reel in as many fish as possible before time runs out. Supports keyboard and touch controls. Runs in any modern browser o."
+    "description": "Cast your line, react to bites, and reel in as many fish as possible before time runs out. Supports keyboard and touch controls. Runs in any modern browser o.",
+    "howToPlay": "Cast your line, react to bites, and reel in as many fish as possible before time runs out."
   },
   {
     "title": "Flap Cat Copters",
@@ -3045,7 +3171,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Cats with helicopter ears! Flap to stay airborne and weave through obstacles in this cute flapper. Supports keyboard and touch controls."
+    "description": "Cats with helicopter ears! Flap to stay airborne and weave through obstacles in this cute flapper. Supports keyboard and touch controls.",
+    "howToPlay": "Cats with helicopter ears! Flap to stay airborne and weave through obstacles in this cute flapper."
   },
   {
     "title": "Flap Cat Xmas",
@@ -3072,7 +3199,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Flap Cat gets a holiday upgrade with festive decorations and Christmas-themed obstacle courses. Supports keyboard and touch controls."
+    "description": "Flap Cat gets a holiday upgrade with festive decorations and Christmas-themed obstacle courses. Supports keyboard and touch controls.",
+    "howToPlay": "Flap Cat gets a holiday upgrade with festive decorations and Christmas-themed obstacle courses."
   },
   {
     "title": "Flappy Dog",
@@ -3099,7 +3227,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Guide a flapping dog through pipe gaps. Same addictive one-tap gameplay with a canine twist. Best experienced on desktop browsers."
+    "description": "Guide a flapping dog through pipe gaps. Same addictive one-tap gameplay with a canine twist. Best experienced on desktop browsers.",
+    "howToPlay": "Guide a flapping dog through pipe gaps. Same addictive one-tap gameplay with a canine twist."
   },
   {
     "title": "Flying School",
@@ -3127,7 +3256,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Attend flight school and complete aerial training missions to earn your wings. Supports keyboard and touch controls. Runs in any modern browser on mobile and."
+    "description": "Attend flight school and complete aerial training missions to earn your wings. Supports keyboard and touch controls. Runs in any modern browser on mobile and.",
+    "howToPlay": "Attend flight school and complete aerial training missions to earn your wings."
   },
   {
     "title": "Foo Foo",
@@ -3154,7 +3284,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Little Foo Foo hops through the forest avoiding snakes and collecting mushrooms in this endless hopper. Supports keyboard and touch controls."
+    "description": "Little Foo Foo hops through the forest avoiding snakes and collecting mushrooms in this endless hopper. Supports keyboard and touch controls.",
+    "howToPlay": "Little Foo Foo hops through the forest avoiding snakes and collecting mushrooms in this endless hopper."
   },
   {
     "title": "Fox Fury",
@@ -3180,7 +3311,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A swift fox battles through enchanted forests, dodging traps and defeating magical creatures. Supports keyboard and touch controls."
+    "description": "A swift fox battles through enchanted forests, dodging traps and defeating magical creatures. Supports keyboard and touch controls.",
+    "howToPlay": "A swift fox battles through enchanted forests, dodging traps and defeating magical creatures."
   },
   {
     "title": "Freedom Road",
@@ -3206,7 +3338,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Drive your vehicle down an obstacle-laden highway, swerving between traffic to stay alive. Supports keyboard and touch controls. Runs in any modern browser o."
+    "description": "Drive your vehicle down an obstacle-laden highway, swerving between traffic to stay alive. Supports keyboard and touch controls. Runs in any modern browser o.",
+    "howToPlay": "Drive your vehicle down an obstacle-laden highway, swerving between traffic to stay alive."
   },
   {
     "title": "Hungry Frog",
@@ -3232,7 +3365,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Flick your tongue to catch flies before they escape. Classic frog-feeding reflex action. Supports keyboard and touch controls. Runs in any modern browser on ."
+    "description": "Flick your tongue to catch flies before they escape. Classic frog-feeding reflex action. Supports keyboard and touch controls. Runs in any modern browser on .",
+    "howToPlay": "Flick your tongue to catch flies before they escape. Classic frog-feeding reflex action."
   },
   {
     "title": "Full Immersion",
@@ -3258,7 +3392,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A conceptual narrative experience that immerses you in an unexpected interactive story. Supports keyboard and touch controls. Runs in any modern browser on m."
+    "description": "A conceptual narrative experience that immerses you in an unexpected interactive story. Supports keyboard and touch controls. Runs in any modern browser on m.",
+    "howToPlay": "A conceptual narrative experience that immerses you in an unexpected interactive story."
   },
   {
     "title": "Funny Soccer",
@@ -3282,7 +3417,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Ragdoll physics soccer with comically wobbly players. Score goals before the clock runs down. Supports keyboard and touch controls."
+    "description": "Ragdoll physics soccer with comically wobbly players. Score goals before the clock runs down. Supports keyboard and touch controls.",
+    "howToPlay": "Ragdoll physics soccer with comically wobbly players. Score goals before the clock runs down."
   },
   {
     "title": "Get Twelve",
@@ -3306,7 +3442,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Merge numbered tiles to reach 12. A satisfying number-combination puzzle with a unique board twist. Supports keyboard and touch controls."
+    "description": "Merge numbered tiles to reach 12. A satisfying number-combination puzzle with a unique board twist. Supports keyboard and touch controls.",
+    "howToPlay": "Merge numbered tiles to reach 12. A satisfying number-combination puzzle with a unique board twist."
   },
   {
     "title": "Goblin Machine",
@@ -3331,7 +3468,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Build and operate a goblin-powered contraption to solve Rube Goldberg-style mechanical puzzles. Supports keyboard and touch controls."
+    "description": "Build and operate a goblin-powered contraption to solve Rube Goldberg-style mechanical puzzles. Supports keyboard and touch controls.",
+    "howToPlay": "Build and operate a goblin-powered contraption to solve Rube Goldberg-style mechanical puzzles."
   },
   {
     "title": "Go Fishing",
@@ -3355,7 +3493,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Drop your hook at just the right moment to snag fish swimming below the surface. Supports keyboard and touch controls. Runs in any modern browser on mobile a."
+    "description": "Drop your hook at just the right moment to snag fish swimming below the surface. Supports keyboard and touch controls. Runs in any modern browser on mobile a.",
+    "howToPlay": "Drop your hook at just the right moment to snag fish swimming below the surface."
   },
   {
     "title": "Going Nuts",
@@ -3380,7 +3519,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A squirrel collects nuts by rolling through a tree-filled obstacle course. Physics-driven and charming. Supports keyboard and touch controls."
+    "description": "A squirrel collects nuts by rolling through a tree-filled obstacle course. Physics-driven and charming. Supports keyboard and touch controls.",
+    "howToPlay": "A squirrel collects nuts by rolling through a tree-filled obstacle course. Physics-driven and charming."
   },
   {
     "title": "Greedy Gnomes",
@@ -3405,7 +3545,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Protect your garden from greedy gnomes trying to steal your vegetables. A comical tower defense. Supports keyboard and touch controls."
+    "description": "Protect your garden from greedy gnomes trying to steal your vegetables. A comical tower defense. Supports keyboard and touch controls.",
+    "howToPlay": "Protect your garden from greedy gnomes trying to steal your vegetables. A comical tower defense."
   },
   {
     "title": "Green Wings",
@@ -3430,7 +3571,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Fly a little green bird through lush jungles, collecting seeds and dodging predators. Supports keyboard and touch controls. Best experienced on desktop brows."
+    "description": "Fly a little green bird through lush jungles, collecting seeds and dodging predators. Supports keyboard and touch controls. Best experienced on desktop brows.",
+    "howToPlay": "Fly a little green bird through lush jungles, collecting seeds and dodging predators."
   },
   {
     "title": "Groovy Ski",
@@ -3455,7 +3597,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Slalom down a snowy mountain, dodging trees and flags while grooving to upbeat music. Supports keyboard and touch controls. Runs in any modern browser on mob."
+    "description": "Slalom down a snowy mountain, dodging trees and flags while grooving to upbeat music. Supports keyboard and touch controls. Runs in any modern browser on mob.",
+    "howToPlay": "Slalom down a snowy mountain, dodging trees and flags while grooving to upbeat music."
   },
   {
     "title": "Grub Runner",
@@ -3479,7 +3622,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Play as a tiny grub speeding through underground tunnels, avoiding roots and rocks in this micro-runner. Supports keyboard and touch controls."
+    "description": "Play as a tiny grub speeding through underground tunnels, avoiding roots and rocks in this micro-runner. Supports keyboard and touch controls.",
+    "howToPlay": "Play as a tiny grub speeding through underground tunnels, avoiding roots and rocks in this micro-runner."
   },
   {
     "title": "Gumball Race",
@@ -3504,7 +3648,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Race gumballs down colorful candy-coated tracks, bouncing off obstacles to reach the finish line. Supports keyboard and touch controls."
+    "description": "Race gumballs down colorful candy-coated tracks, bouncing off obstacles to reach the finish line. Supports keyboard and touch controls.",
+    "howToPlay": "Race gumballs down colorful candy-coated tracks, bouncing off obstacles to reach the finish line."
   },
   {
     "title": "Hansel and Gretel",
@@ -3529,7 +3674,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A fairy-tale puzzle adventure. Help the two siblings navigate the witch's forest and outsmart her traps. Supports keyboard and touch controls."
+    "description": "A fairy-tale puzzle adventure. Help the two siblings navigate the witch's forest and outsmart her traps. Supports keyboard and touch controls.",
+    "howToPlay": "A fairy-tale puzzle adventure. Help the two siblings navigate the witch's forest and outsmart her traps."
   },
   {
     "title": "Hero Jump",
@@ -3553,7 +3699,8 @@
     "show": false,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A cape-wearing hero must jump over rooftops, collect coins, and dodge obstacles in this urban runner. Supports keyboard and touch controls."
+    "description": "A cape-wearing hero must jump over rooftops, collect coins, and dodge obstacles in this urban runner. Supports keyboard and touch controls.",
+    "howToPlay": "A cape-wearing hero must jump over rooftops, collect coins, and dodge obstacles in this urban runner."
   },
   {
     "title": "Hidden",
@@ -3578,7 +3725,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A hidden-object game. Scour detailed scenes to find every item on the list before time expires. Supports keyboard and touch controls."
+    "description": "A hidden-object game. Scour detailed scenes to find every item on the list before time expires. Supports keyboard and touch controls.",
+    "howToPlay": "A hidden-object game. Scour detailed scenes to find every item on the list before time expires."
   },
   {
     "title": "Hungry Bob",
@@ -3604,7 +3752,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Roll Bob the round character down the hill, gobbling up food items while avoiding hazards. Supports keyboard and touch controls. Runs in any modern browser o."
+    "description": "Roll Bob the round character down the hill, gobbling up food items while avoiding hazards. Supports keyboard and touch controls. Runs in any modern browser o.",
+    "howToPlay": "Roll Bob the round character down the hill, gobbling up food items while avoiding hazards."
   },
   {
     "title": "Ice Cream",
@@ -3629,7 +3778,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Stack scoops of ice cream as high as possible without the tower toppling. A sweet balancing act. Supports keyboard and touch controls."
+    "description": "Stack scoops of ice cream as high as possible without the tower toppling. A sweet balancing act. Supports keyboard and touch controls.",
+    "howToPlay": "Stack scoops of ice cream as high as possible without the tower toppling. A sweet balancing act."
   },
   {
     "title": "Jelly Doods",
@@ -3656,7 +3806,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Adorable jelly creatures need your help navigating a slippery world of physics-based puzzles. Supports keyboard and touch controls."
+    "description": "Adorable jelly creatures need your help navigating a slippery world of physics-based puzzles. Supports keyboard and touch controls.",
+    "howToPlay": "Adorable jelly creatures need your help navigating a slippery world of physics-based puzzles."
   },
   {
     "title": "Jelly Slice",
@@ -3683,7 +3834,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Slice wobbly jelly blocks into equal portions to feed the exact number of critters waiting below. Supports keyboard and touch controls."
+    "description": "Slice wobbly jelly blocks into equal portions to feed the exact number of critters waiting below. Supports keyboard and touch controls.",
+    "howToPlay": "Slice wobbly jelly blocks into equal portions to feed the exact number of critters waiting below."
   },
   {
     "title": "Jomjom",
@@ -3707,7 +3859,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A colorful match-and-pop puzzle where you connect same-colored Jomjom creatures to clear the board. Supports keyboard and touch controls."
+    "description": "A colorful match-and-pop puzzle where you connect same-colored Jomjom creatures to clear the board. Supports keyboard and touch controls.",
+    "howToPlay": "A colorful match-and-pop puzzle where you connect same-colored Jomjom creatures to clear the board."
   },
   {
     "title": "Jump Kitty",
@@ -3732,7 +3885,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "An adventurous kitten leaps from platform to platform. Miss a jump and it's back to the start! Supports keyboard and touch controls."
+    "description": "An adventurous kitten leaps from platform to platform. Miss a jump and it's back to the start! Supports keyboard and touch controls.",
+    "howToPlay": "An adventurous kitten leaps from platform to platform. Miss a jump and it's back to the start!"
   },
   {
     "title": "Fall Jump Roll",
@@ -3759,7 +3913,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A triple-threat platformer: choose to fall, jump, or roll to navigate every obstacle in sequence. Supports keyboard and touch controls."
+    "description": "A triple-threat platformer: choose to fall, jump, or roll to navigate every obstacle in sequence. Supports keyboard and touch controls.",
+    "howToPlay": "A triple-threat platformer: choose to fall, jump, or roll to navigate every obstacle in sequence."
   },
   {
     "title": "Jumppy dog",
@@ -3784,7 +3939,8 @@
     "show": false,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A springy dog bounces relentlessly upward — tap to steer and collect bones on the way up. Runs in any modern browser on mobile and desktop."
+    "description": "A springy dog bounces relentlessly upward — tap to steer and collect bones on the way up. Runs in any modern browser on mobile and desktop.",
+    "howToPlay": "A springy dog bounces relentlessly upward — tap to steer and collect bones on the way up."
   },
   {
     "title": "Jumppy Dragon",
@@ -3809,7 +3965,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A young dragon bounces skyward, collecting gems and breathing fire at anything in the way. Supports keyboard and touch controls. Runs in any modern browser o."
+    "description": "A young dragon bounces skyward, collecting gems and breathing fire at anything in the way. Supports keyboard and touch controls. Runs in any modern browser o.",
+    "howToPlay": "A young dragon bounces skyward, collecting gems and breathing fire at anything in the way."
   },
   {
     "title": "Knight Of The Day",
@@ -3834,7 +3991,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A chivalrous knight defends the realm through a series of turn-based combat encounters. Supports keyboard and touch controls. Runs in any modern browser on m."
+    "description": "A chivalrous knight defends the realm through a series of turn-based combat encounters. Supports keyboard and touch controls. Runs in any modern browser on m.",
+    "howToPlay": "A chivalrous knight defends the realm through a series of turn-based combat encounters."
   },
   {
     "title": "Izard Rocket",
@@ -3860,7 +4018,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Launch a rocket lizard into the sky, upgrading engines and fins to reach greater and greater heights. Supports keyboard and touch controls."
+    "description": "Launch a rocket lizard into the sky, upgrading engines and fins to reach greater and greater heights. Supports keyboard and touch controls.",
+    "howToPlay": "Launch a rocket lizard into the sky, upgrading engines and fins to reach greater and greater heights."
   },
   {
     "title": "Looney Roonks",
@@ -3886,7 +4045,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Help the Roonks, a family of goofy creatures, solve physics puzzles using their unique abilities. Supports keyboard and touch controls."
+    "description": "Help the Roonks, a family of goofy creatures, solve physics puzzles using their unique abilities. Supports keyboard and touch controls.",
+    "howToPlay": "Help the Roonks, a family of goofy creatures, solve physics puzzles using their unique abilities."
   },
   {
     "title": "Manic",
@@ -3912,7 +4072,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A manic reflex-based game where everything accelerates. Keep up or be overwhelmed by the chaos. Supports keyboard and touch controls."
+    "description": "A manic reflex-based game where everything accelerates. Keep up or be overwhelmed by the chaos. Supports keyboard and touch controls.",
+    "howToPlay": "A manic reflex-based game where everything accelerates. Keep up or be overwhelmed by the chaos."
   },
   {
     "title": "Matching Time",
@@ -3938,7 +4099,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Flip cards to find matching pairs before the timer runs out. A classic memory game. Supports keyboard and touch controls. Runs in any modern browser on mobil."
+    "description": "Flip cards to find matching pairs before the timer runs out. A classic memory game. Supports keyboard and touch controls. Runs in any modern browser on mobil.",
+    "howToPlay": "Flip cards to find matching pairs before the timer runs out. A classic memory game."
   },
   {
     "title": "Math Game",
@@ -3965,7 +4127,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Click the correct answer to arithmetic questions as fast as possible. Great for mental math practice. Runs in any modern browser on mobile and desktop."
+    "description": "Click the correct answer to arithmetic questions as fast as possible. Great for mental math practice. Runs in any modern browser on mobile and desktop.",
+    "howToPlay": "Click the correct answer to arithmetic questions as fast as possible. Great for mental math practice."
   },
   {
     "title": "Monster Candy",
@@ -3989,7 +4152,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Cute monsters need candy! Match colored sweets by drawing lines to satisfy each monster's sweet tooth. Supports keyboard and touch controls."
+    "description": "Cute monsters need candy! Match colored sweets by drawing lines to satisfy each monster's sweet tooth. Supports keyboard and touch controls.",
+    "howToPlay": "Cute monsters need candy! Match colored sweets by drawing lines to satisfy each monster's sweet tooth."
   },
   {
     "title": "Monster Eater",
@@ -4014,7 +4178,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A massive monster roams the city devouring everything in sight. Guide it to eat as much as possible. Supports keyboard and touch controls."
+    "description": "A massive monster roams the city devouring everything in sight. Guide it to eat as much as possible. Supports keyboard and touch controls.",
+    "howToPlay": "A massive monster roams the city devouring everything in sight. Guide it to eat as much as possible."
   },
   {
     "title": "Mouse Jump",
@@ -4039,7 +4204,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A tiny mouse must leap from platform to platform without slipping off the narrow ledges. Runs in any modern browser on mobile and desktop."
+    "description": "A tiny mouse must leap from platform to platform without slipping off the narrow ledges. Runs in any modern browser on mobile and desktop.",
+    "howToPlay": "A tiny mouse must leap from platform to platform without slipping off the narrow ledges."
   },
   {
     "title": "NEST",
@@ -4063,7 +4229,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Build and maintain a bird's nest, collecting twigs and guarding eggs from predators. Supports keyboard and touch controls. Runs in any modern browser on mobi."
+    "description": "Build and maintain a bird's nest, collecting twigs and guarding eggs from predators. Supports keyboard and touch controls. Runs in any modern browser on mobi.",
+    "howToPlay": "Build and maintain a bird's nest, collecting twigs and guarding eggs from predators."
   },
   {
     "title": "Ninja Run",
@@ -4090,7 +4257,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Sprint, wall-jump, and dash through obstacle courses as a fleet-footed ninja — speed is everything. Supports keyboard and touch controls."
+    "description": "Sprint, wall-jump, and dash through obstacle courses as a fleet-footed ninja — speed is everything. Supports keyboard and touch controls.",
+    "howToPlay": "Sprint, wall-jump, and dash through obstacle courses as a fleet-footed ninja — speed is everything."
   },
   {
     "title": "Ninja Way",
@@ -4117,7 +4285,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Follow your ninja path through stealth and combat missions, mastering the way of the shadow warrior. Supports keyboard and touch controls."
+    "description": "Follow your ninja path through stealth and combat missions, mastering the way of the shadow warrior. Supports keyboard and touch controls.",
+    "howToPlay": "Follow your ninja path through stealth and combat missions, mastering the way of the shadow warrior."
   },
   {
     "title": "Ojello",
@@ -4143,7 +4312,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Stretch and squish the Ojello blob to fit through tight gaps in this physics-based puzzle game. Supports keyboard and touch controls."
+    "description": "Stretch and squish the Ojello blob to fit through tight gaps in this physics-based puzzle game. Supports keyboard and touch controls.",
+    "howToPlay": "Stretch and squish the Ojello blob to fit through tight gaps in this physics-based puzzle game."
   },
   {
     "title": "Pacman",
@@ -4169,7 +4339,8 @@
     "use_overlay_title": false,
     "featured": false,
     "badge": "popular",
-    "description": "The iconic arcade classic. Eat all the dots, dodge four ghosts, and use power pellets to turn the tables. Supports keyboard and touch controls."
+    "description": "The iconic arcade classic. Eat all the dots, dodge four ghosts, and use power pellets to turn the tables. Supports keyboard and touch controls.",
+    "howToPlay": "The iconic arcade classic. Eat all the dots, dodge four ghosts, and use power pellets to turn the tables."
   },
   {
     "title": "Pancake Boss",
@@ -4197,7 +4368,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Stack pancakes as perfectly as possible for demanding breakfast customers before they lose patience. Supports keyboard and touch controls."
+    "description": "Stack pancakes as perfectly as possible for demanding breakfast customers before they lose patience. Supports keyboard and touch controls.",
+    "howToPlay": "Stack pancakes as perfectly as possible for demanding breakfast customers before they lose patience."
   },
   {
     "title": "Panda Flash",
@@ -4223,7 +4395,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A flash-speed panda platformer — react faster than the eye can follow to navigate each level. Supports keyboard and touch controls."
+    "description": "A flash-speed panda platformer — react faster than the eye can follow to navigate each level. Supports keyboard and touch controls.",
+    "howToPlay": "A flash-speed panda platformer — react faster than the eye can follow to navigate each level."
   },
   {
     "title": "Pebble Boy",
@@ -4249,7 +4422,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A young boy made of pebbles rolls through levels collecting gems and avoiding water that would dissolve him. Supports keyboard and touch controls."
+    "description": "A young boy made of pebbles rolls through levels collecting gems and avoiding water that would dissolve him. Supports keyboard and touch controls.",
+    "howToPlay": "A young boy made of pebbles rolls through levels collecting gems and avoiding water that would dissolve him."
   },
   {
     "title": "Penguin",
@@ -4274,7 +4448,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Guide a waddling penguin safely across icy platforms, fishing holes, and polar-bear hazards. Supports keyboard and touch controls."
+    "description": "Guide a waddling penguin safely across icy platforms, fishing holes, and polar-bear hazards. Supports keyboard and touch controls.",
+    "howToPlay": "Guide a waddling penguin safely across icy platforms, fishing holes, and polar-bear hazards."
   },
   {
     "title": "Pie Attack",
@@ -4300,7 +4475,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Defend your face from an endless barrage of incoming pies by dodging left and right. Supports keyboard and touch controls. Runs in any modern browser on mobi."
+    "description": "Defend your face from an endless barrage of incoming pies by dodging left and right. Supports keyboard and touch controls. Runs in any modern browser on mobi.",
+    "howToPlay": "Defend your face from an endless barrage of incoming pies by dodging left and right."
   },
   {
     "title": "Pigeon",
@@ -4325,7 +4501,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Be a pigeon loose in the city. Poop on cars, steal sandwiches, and cause maximum urban chaos. Supports keyboard and touch controls."
+    "description": "Be a pigeon loose in the city. Poop on cars, steal sandwiches, and cause maximum urban chaos. Supports keyboard and touch controls.",
+    "howToPlay": "Be a pigeon loose in the city. Poop on cars, steal sandwiches, and cause maximum urban chaos."
   },
   {
     "title": "Piggy Roll",
@@ -4351,7 +4528,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Roll a jolly pig down sloping levels, collecting coins and using its hefty weight to smash obstacles. Supports keyboard and touch controls."
+    "description": "Roll a jolly pig down sloping levels, collecting coins and using its hefty weight to smash obstacles. Supports keyboard and touch controls.",
+    "howToPlay": "Roll a jolly pig down sloping levels, collecting coins and using its hefty weight to smash obstacles."
   },
   {
     "title": "Pirate Kid",
@@ -4378,7 +4556,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A pint-sized pirate sails from island to island, fighting sea monsters and collecting buried treasure. Supports keyboard and touch controls."
+    "description": "A pint-sized pirate sails from island to island, fighting sea monsters and collecting buried treasure. Supports keyboard and touch controls.",
+    "howToPlay": "A pint-sized pirate sails from island to island, fighting sea monsters and collecting buried treasure."
   },
   {
     "title": "Pitana",
@@ -4404,7 +4583,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Swing a piñata-shaped character through candy-filled obstacle courses to reach the end goal. Supports keyboard and touch controls."
+    "description": "Swing a piñata-shaped character through candy-filled obstacle courses to reach the end goal. Supports keyboard and touch controls.",
+    "howToPlay": "Swing a piñata-shaped character through candy-filled obstacle courses to reach the end goal."
   },
   {
     "title": "Popup",
@@ -4431,7 +4611,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Pop all the bubbles that appear on the screen as fast as possible. Satisfying and endlessly replayable. Supports keyboard and touch controls."
+    "description": "Pop all the bubbles that appear on the screen as fast as possible. Satisfying and endlessly replayable. Supports keyboard and touch controls.",
+    "howToPlay": "Pop all the bubbles that appear on the screen as fast as possible. Satisfying and endlessly replayable."
   },
   {
     "title": "Portal Runner",
@@ -4459,7 +4640,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Sprint through levels and leap into portals to teleport around deadly hazards. Supports keyboard and touch controls. Runs in any modern browser on mobile and."
+    "description": "Sprint through levels and leap into portals to teleport around deadly hazards. Supports keyboard and touch controls. Runs in any modern browser on mobile and.",
+    "howToPlay": "Sprint through levels and leap into portals to teleport around deadly hazards."
   },
   {
     "title": "Pyramid Jump",
@@ -4488,7 +4670,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Leap between the steps of an ancient pyramid, climbing higher with every well-timed jump. Supports keyboard and touch controls. Runs in any modern browser on."
+    "description": "Leap between the steps of an ancient pyramid, climbing higher with every well-timed jump. Supports keyboard and touch controls. Runs in any modern browser on.",
+    "howToPlay": "Leap between the steps of an ancient pyramid, climbing higher with every well-timed jump."
   },
   {
     "title": "Raccoon Run",
@@ -4516,7 +4699,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A mischievous raccoon dashes through trash-can-lined streets collecting garbage bags in this runner. Supports keyboard and touch controls."
+    "description": "A mischievous raccoon dashes through trash-can-lined streets collecting garbage bags in this runner. Supports keyboard and touch controls.",
+    "howToPlay": "A mischievous raccoon dashes through trash-can-lined streets collecting garbage bags in this runner."
   },
   {
     "title": "Rain Box",
@@ -4542,7 +4726,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Direct falling raindrops into colored buckets to score points. A calming but precise reflex game. Supports keyboard and touch controls."
+    "description": "Direct falling raindrops into colored buckets to score points. A calming but precise reflex game. Supports keyboard and touch controls.",
+    "howToPlay": "Direct falling raindrops into colored buckets to score points. A calming but precise reflex game."
   },
   {
     "title": "Rapunzel Tower",
@@ -4570,7 +4755,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Help Rapunzel climb her tower by letting down her hair — and pulling her up through physics puzzles. Supports keyboard and touch controls."
+    "description": "Help Rapunzel climb her tower by letting down her hair — and pulling her up through physics puzzles. Supports keyboard and touch controls.",
+    "howToPlay": "Help Rapunzel climb her tower by letting down her hair — and pulling her up through physics puzzles."
   },
   {
     "title": "Rec Tang Zings",
@@ -4595,7 +4781,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Bounce rectangular shapes off walls to destroy colored targets in this geometric puzzle game. Supports keyboard and touch controls."
+    "description": "Bounce rectangular shapes off walls to destroy colored targets in this geometric puzzle game. Supports keyboard and touch controls.",
+    "howToPlay": "Bounce rectangular shapes off walls to destroy colored targets in this geometric puzzle game."
   },
   {
     "title": "Robotion",
@@ -4622,7 +4809,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Program a robot with simple movement commands to navigate mazes and reach the charging station. Supports keyboard and touch controls."
+    "description": "Program a robot with simple movement commands to navigate mazes and reach the charging station. Supports keyboard and touch controls.",
+    "howToPlay": "Program a robot with simple movement commands to navigate mazes and reach the charging station."
   },
   {
     "title": "Rocket Pop",
@@ -4649,7 +4837,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Blast off ice-cream rockets and pop floating popsicle clusters by matching flavors. Supports keyboard and touch controls. Runs in any modern browser on mobil."
+    "description": "Blast off ice-cream rockets and pop floating popsicle clusters by matching flavors. Supports keyboard and touch controls. Runs in any modern browser on mobil.",
+    "howToPlay": "Blast off ice-cream rockets and pop floating popsicle clusters by matching flavors."
   },
   {
     "title": "Rope Ninja",
@@ -4677,7 +4866,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Swing from rope to rope like a ninja, building huge momentum to fling yourself across chasms. Supports keyboard and touch controls."
+    "description": "Swing from rope to rope like a ninja, building huge momentum to fling yourself across chasms. Supports keyboard and touch controls.",
+    "howToPlay": "Swing from rope to rope like a ninja, building huge momentum to fling yourself across chasms."
   },
   {
     "title": "Run Pixie Run",
@@ -4704,7 +4894,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A tiny pixie sprints through an enchanted forest. Avoid mushrooms and fly over tree roots to survive. Supports keyboard and touch controls."
+    "description": "A tiny pixie sprints through an enchanted forest. Avoid mushrooms and fly over tree roots to survive. Supports keyboard and touch controls.",
+    "howToPlay": "A tiny pixie sprints through an enchanted forest. Avoid mushrooms and fly over tree roots to survive."
   },
   {
     "title": "Sally BBQ",
@@ -4731,7 +4922,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Help Sally manage a busy barbecue grill: take orders, flip patties, and serve before customers leave. Supports keyboard and touch controls."
+    "description": "Help Sally manage a busy barbecue grill: take orders, flip patties, and serve before customers leave. Supports keyboard and touch controls.",
+    "howToPlay": "Help Sally manage a busy barbecue grill: take orders, flip patties, and serve before customers leave."
   },
   {
     "title": "Sky Lands",
@@ -4758,7 +4950,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Explore a world made of floating islands, hopping between them and uncovering secrets in the clouds. Supports keyboard and touch controls."
+    "description": "Explore a world made of floating islands, hopping between them and uncovering secrets in the clouds. Supports keyboard and touch controls.",
+    "howToPlay": "Explore a world made of floating islands, hopping between them and uncovering secrets in the clouds."
   },
   {
     "title": "Sky Race",
@@ -4785,7 +4978,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Race your aircraft against opponents through cloud-filled sky courses, hitting boost pads to surge ahead. Supports keyboard and touch controls."
+    "description": "Race your aircraft against opponents through cloud-filled sky courses, hitting boost pads to surge ahead. Supports keyboard and touch controls.",
+    "howToPlay": "Race your aircraft against opponents through cloud-filled sky courses, hitting boost pads to surge ahead."
   },
   {
     "title": "Sky Wire",
@@ -4811,7 +5005,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Drive a cable car along sky-high wires, collecting passengers and avoiding birds and power lines. Supports keyboard and touch controls."
+    "description": "Drive a cable car along sky-high wires, collecting passengers and avoiding birds and power lines. Supports keyboard and touch controls.",
+    "howToPlay": "Drive a cable car along sky-high wires, collecting passengers and avoiding birds and power lines."
   },
   {
     "title": "Slot Chicken",
@@ -4835,7 +5030,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A slot-machine game starring a gambling chicken. Pull the lever and pray for matching symbols. Supports keyboard and touch controls."
+    "description": "A slot-machine game starring a gambling chicken. Pull the lever and pray for matching symbols. Supports keyboard and touch controls.",
+    "howToPlay": "A slot-machine game starring a gambling chicken. Pull the lever and pray for matching symbols."
   },
   {
     "title": "Sort Bird",
@@ -4862,7 +5058,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Sort birds by color onto branches so no two of the same species share a perch. A relaxing logic puzzle. Supports keyboard and touch controls."
+    "description": "Sort birds by color onto branches so no two of the same species share a perch. A relaxing logic puzzle. Supports keyboard and touch controls.",
+    "howToPlay": "Sort birds by color onto branches so no two of the same species share a perch. A relaxing logic puzzle."
   },
   {
     "title": "Spring Ninja",
@@ -4889,7 +5086,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Use a spring to launch a ninja between platforms. Time your release for the perfect landing angle. Supports keyboard and touch controls."
+    "description": "Use a spring to launch a ninja between platforms. Time your release for the perfect landing angle. Supports keyboard and touch controls.",
+    "howToPlay": "Use a spring to launch a ninja between platforms. Time your release for the perfect landing angle."
   },
   {
     "title": "Square Crush",
@@ -4914,7 +5112,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Crush and merge falling squares of the same color to keep the grid clear and rack up a high score. Supports keyboard and touch controls."
+    "description": "Crush and merge falling squares of the same color to keep the grid clear and rack up a high score. Supports keyboard and touch controls.",
+    "howToPlay": "Crush and merge falling squares of the same color to keep the grid clear and rack up a high score."
   },
   {
     "title": "Steven Kash",
@@ -4940,7 +5139,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A money-grabbing adventure: dodge obstacles and collect cash as Steven Kash speeds through the city. Supports keyboard and touch controls."
+    "description": "A money-grabbing adventure: dodge obstacles and collect cash as Steven Kash speeds through the city. Supports keyboard and touch controls.",
+    "howToPlay": "A money-grabbing adventure: dodge obstacles and collect cash as Steven Kash speeds through the city."
   },
   {
     "title": "Stick Panda",
@@ -4966,7 +5166,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A panda made of sticks overcomes bamboo-themed obstacles in this charming precision platformer. Supports keyboard and touch controls."
+    "description": "A panda made of sticks overcomes bamboo-themed obstacles in this charming precision platformer. Supports keyboard and touch controls.",
+    "howToPlay": "A panda made of sticks overcomes bamboo-themed obstacles in this charming precision platformer."
   },
   {
     "title": "Stick Panda Xmas",
@@ -4992,7 +5193,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Stick Panda dons a Santa hat for holiday-themed levels filled with snowflakes and gift obstacles. Supports keyboard and touch controls."
+    "description": "Stick Panda dons a Santa hat for holiday-themed levels filled with snowflakes and gift obstacles. Supports keyboard and touch controls.",
+    "howToPlay": "Stick Panda dons a Santa hat for holiday-themed levels filled with snowflakes and gift obstacles."
   },
   {
     "title": "Stick Samurai",
@@ -5019,7 +5221,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Slice through enemy stickmen with a razor-sharp katana in this minimalist samurai action game. Supports keyboard and touch controls."
+    "description": "Slice through enemy stickmen with a razor-sharp katana in this minimalist samurai action game. Supports keyboard and touch controls.",
+    "howToPlay": "Slice through enemy stickmen with a razor-sharp katana in this minimalist samurai action game."
   },
   {
     "title": "Sticky Goo",
@@ -5046,7 +5249,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A gooey blob sticks to surfaces and must stretch and fling itself through puzzle-filled levels. Supports keyboard and touch controls."
+    "description": "A gooey blob sticks to surfaces and must stretch and fling itself through puzzle-filled levels. Supports keyboard and touch controls.",
+    "howToPlay": "A gooey blob sticks to surfaces and must stretch and fling itself through puzzle-filled levels."
   },
   {
     "title": "Strange Space",
@@ -5073,7 +5277,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Drift through outer space in a broken spaceship, solving physics puzzles to restore power and escape. Supports keyboard and touch controls."
+    "description": "Drift through outer space in a broken spaceship, solving physics puzzles to restore power and escape. Supports keyboard and touch controls.",
+    "howToPlay": "Drift through outer space in a broken spaceship, solving physics puzzles to restore power and escape."
   },
   {
     "title": "Taptap Submarine",
@@ -5098,7 +5303,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Tap to dive and release to surface, guiding your submarine through underwater caverns. Runs in any modern browser on mobile and desktop."
+    "description": "Tap to dive and release to surface, guiding your submarine through underwater caverns. Runs in any modern browser on mobile and desktop.",
+    "howToPlay": "Tap to dive and release to surface, guiding your submarine through underwater caverns."
   },
   {
     "title": "Target Tap",
@@ -5124,7 +5330,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Tap bullseyes as fast as they appear. Miss too many and the game ends. Pure tap-speed reflex training. Runs in any modern browser on mobile and desktop."
+    "description": "Tap bullseyes as fast as they appear. Miss too many and the game ends. Pure tap-speed reflex training. Runs in any modern browser on mobile and desktop.",
+    "howToPlay": "Tap bullseyes as fast as they appear. Miss too many and the game ends. Pure tap-speed reflex training."
   },
   {
     "title": "Titan Runner",
@@ -5154,7 +5361,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A colossal mech stomps through a ruined city. Guide it forward, jumping over crumbling buildings. Supports keyboard and touch controls."
+    "description": "A colossal mech stomps through a ruined city. Guide it forward, jumping over crumbling buildings. Supports keyboard and touch controls.",
+    "howToPlay": "A colossal mech stomps through a ruined city. Guide it forward, jumping over crumbling buildings."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/tooncup/",
@@ -5180,7 +5388,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A cartoon-style soccer game featuring beloved animated characters. Score goals and win the Tooncup! Supports keyboard and touch controls."
+    "description": "A cartoon-style soccer game featuring beloved animated characters. Score goals and win the Tooncup! Supports keyboard and touch controls.",
+    "howToPlay": "A cartoon-style soccer game featuring beloved animated characters. Score goals and win the Tooncup!"
   },
   {
     "title": "Trailblazer",
@@ -5203,7 +5412,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Blaze a new trail across unexplored territory — clear obstacles and pave the way for settlers. Supports keyboard and touch controls."
+    "description": "Blaze a new trail across unexplored territory — clear obstacles and pave the way for settlers. Supports keyboard and touch controls.",
+    "howToPlay": "Blaze a new trail across unexplored territory — clear obstacles and pave the way for settlers."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/trashndash/",
@@ -5227,7 +5437,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A raccoon dashes through alleys overflowing with trash, collecting bags and hurdling obstacles. Supports keyboard and touch controls."
+    "description": "A raccoon dashes through alleys overflowing with trash, collecting bags and hurdling obstacles. Supports keyboard and touch controls.",
+    "howToPlay": "A raccoon dashes through alleys overflowing with trash, collecting bags and hurdling obstacles."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/trollboxing/",
@@ -5254,7 +5465,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Two troll fighters enter the ring. Punch, duck, and uppercut your way to victory in this silly brawler. Supports keyboard and touch controls."
+    "description": "Two troll fighters enter the ring. Punch, duck, and uppercut your way to victory in this silly brawler. Supports keyboard and touch controls.",
+    "howToPlay": "Two troll fighters enter the ring. Punch, duck, and uppercut your way to victory in this silly brawler."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/uforun/",
@@ -5279,7 +5491,8 @@
     "use_overlay_title": false,
     "show": true,
     "featured": false,
-    "description": "Pilot a UFO through crop fields and city streets, abducting cows and dodging military jets. Supports keyboard and touch controls. Runs in any modern browser ."
+    "description": "Pilot a UFO through crop fields and city streets, abducting cows and dodging military jets. Supports keyboard and touch controls. Runs in any modern browser .",
+    "howToPlay": "Pilot a UFO through crop fields and city streets, abducting cows and dodging military jets."
   },
   {
     "title": "Veggi Rabbit",
@@ -5305,7 +5518,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "An energetic rabbit races through gardens, munching vegetables and leaping over farm machinery. Supports keyboard and touch controls."
+    "description": "An energetic rabbit races through gardens, munching vegetables and leaping over farm machinery. Supports keyboard and touch controls.",
+    "howToPlay": "An energetic rabbit races through gardens, munching vegetables and leaping over farm machinery."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/woodblock/",
@@ -5329,7 +5543,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Drag wooden blocks to fill every row and column on the board in this satisfying Tetris-style puzzle. Supports keyboard and touch controls."
+    "description": "Drag wooden blocks to fill every row and column on the board in this satisfying Tetris-style puzzle. Supports keyboard and touch controls.",
+    "howToPlay": "Drag wooden blocks to fill every row and column on the board in this satisfying Tetris-style puzzle."
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/xtypesky/",
@@ -5355,7 +5570,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "A vertical space shooter with dynamic music — shoot in rhythm with the beat for bonus multipliers. Supports keyboard and touch controls."
+    "description": "A vertical space shooter with dynamic music — shoot in rhythm with the beat for bonus multipliers. Supports keyboard and touch controls.",
+    "howToPlay": "A vertical space shooter with dynamic music — shoot in rhythm with the beat for bonus multipliers."
   },
   {
     "title": "Zapaliens",
@@ -5381,7 +5597,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Zap alien invaders before they land on Earth. A neon arcade shooter with escalating difficulty. Supports keyboard and touch controls."
+    "description": "Zap alien invaders before they land on Earth. A neon arcade shooter with escalating difficulty. Supports keyboard and touch controls.",
+    "howToPlay": "Zap alien invaders before they land on Earth. A neon arcade shooter with escalating difficulty."
   },
   {
     "title": "Zombie Night",
@@ -5404,7 +5621,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Survive the night by shooting zombies that close in from all directions in this top-down horror game. Supports keyboard and touch controls."
+    "description": "Survive the night by shooting zombies that close in from all directions in this top-down horror game. Supports keyboard and touch controls.",
+    "howToPlay": "Survive the night by shooting zombies that close in from all directions in this top-down horror game."
   },
   {
     "title": "Zombie World",
@@ -5426,7 +5644,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Build a survivor camp and fend off zombie hordes in this post-apocalyptic strategy defense game. Supports keyboard and touch controls."
+    "description": "Build a survivor camp and fend off zombie hordes in this post-apocalyptic strategy defense game. Supports keyboard and touch controls.",
+    "howToPlay": "Build a survivor camp and fend off zombie hordes in this post-apocalyptic strategy defense game."
   },
   {
     "title": "Zoon Stuner",
@@ -5448,7 +5667,8 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "description": "Stun the Zoons — alien creatures — using precise timing before they escape their enclosures. Supports keyboard and touch controls."
+    "description": "Stun the Zoons — alien creatures — using precise timing before they escape their enclosures. Supports keyboard and touch controls.",
+    "howToPlay": "Stun the Zoons — alien creatures — using precise timing before they escape their enclosures."
   },
   {
     "title": "Snakebird",
@@ -5475,6 +5695,7 @@
     "use_overlay_title": false,
     "featured": true,
     "badge": "popular",
-    "description": "Guide a snake-bird hybrid through devious puzzles where every fruit you eat makes you longer and harder to maneuver. Supports keyboard and touch controls."
+    "description": "Guide a snake-bird hybrid through devious puzzles where every fruit you eat makes you longer and harder to maneuver. Supports keyboard and touch controls.",
+    "howToPlay": "Guide a snake-bird hybrid through devious puzzles where every fruit you eat makes you longer and harder to maneuver."
   }
 ]

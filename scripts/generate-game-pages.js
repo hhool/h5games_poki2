@@ -156,6 +156,33 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
     ],
   });
 
+  // ── FAQPage JSON-LD ──────────────────────────────────────────────────────
+  const availOn      = game.avalid || [];
+  const mobileAnswer = availOn.includes('mobile')
+    ? `Yes, ${game.title} is fully playable on mobile. Open it in your mobile browser — no app download needed.`
+    : `${game.title} is designed for desktop browsers and is best played on a computer with a keyboard.`;
+  const faqLd = game.howToPlay ? JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `How do you play ${game.title}?`,
+        acceptedAnswer: { '@type': 'Answer', text: game.howToPlay },
+      },
+      {
+        '@type': 'Question',
+        name: `Is ${game.title} free to play?`,
+        acceptedAnswer: { '@type': 'Answer', text: `Yes, ${game.title} is completely free to play on Poki2. No download or signup required — play instantly in your browser.` },
+      },
+      {
+        '@type': 'Question',
+        name: `Can I play ${game.title} on mobile?`,
+        acceptedAnswer: { '@type': 'Answer', text: mobileAnswer },
+      },
+    ],
+  }) : null;
+
   return `<!DOCTYPE html>
 <html lang="en" class="preload-hide">
 <head>
@@ -186,9 +213,10 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   <meta name="twitter:image"       content="${esc(img)}">
   <meta name="twitter:url"         content="${pageUrl}">
 
-  <!-- Structured data: VideoGame + BreadcrumbList -->
+  <!-- Structured data: VideoGame + BreadcrumbList + FAQPage -->
   <script type="application/ld+json">${ld}</script>
   <script type="application/ld+json">${breadcrumbLd}</script>
+  ${faqLd ? `<script type="application/ld+json">${faqLd}</script>` : ''}
 
   <!-- Assets (version token replaced by inject-version.js) -->
   <link rel="preload" href="/css/style.css?v=__CACHE_VER__" as="style" onload="this.onload=null;this.rel='stylesheet';window.__cssN=(window.__cssN||0)+1;typeof window.__tryU==='function'&&window.__tryU();">
