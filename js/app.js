@@ -602,6 +602,7 @@
     el.dataset.link = game.link || '';
     el.setAttribute('tabindex', '0');
     el.setAttribute('role', 'button');
+    el.setAttribute('aria-label', 'Play ' + (game.title || 'Game'));
     el.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showDetail(game); }
     });
@@ -639,7 +640,10 @@
     const img = document.createElement("img");
     img.className = "game-card-img";
     img.alt = game.title || "";
-    img.loading = "lazy";
+    // LCP: first 12 cards load eagerly; first 4 get fetchpriority=high
+    const _cardIdx = (window.__cardCount = (window.__cardCount || 0) + 1);
+    img.loading = _cardIdx <= 12 ? "eager" : "lazy";
+    if (_cardIdx <= 4) img.fetchPriority = "high";
 
     // Use optimized image loading with WebP support
     const imgSrc = game.imgSrc || getFaviconUrl(game.link);
@@ -940,6 +944,7 @@
     // input first (see homeItem click handler below).
     if ($searchInput && $searchInput.value.trim()) return;
     currentView = "home";
+    window.__cardCount = 0; // reset so first-N eager logic works on re-render
     // Remove pinned footer helper when returning to home and hide footer until needed
     if (document && document.body) {
       document.body.classList.remove('full-bleed-footer');
@@ -1542,6 +1547,7 @@
   function showDetail(game) {
     pendingGame = game;
     $detailImg.src = game.imgSrc || getFaviconCandidates(game.link)[0];
+    $detailImg.alt = game.title || "";
     $detailImg.loading = "lazy";
     attachFaviconFallback($detailImg, game.link);
     $detailTitle.textContent = game.title;
