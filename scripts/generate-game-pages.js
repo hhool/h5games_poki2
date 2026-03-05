@@ -126,13 +126,16 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   const ld = JSON.stringify(ldObj);
 
   // ── BreadcrumbList JSON-LD ───────────────────────────────────────────────
-  const primaryGenre = genres[0] || 'Games';
+  const genreTagKeys = tags.filter(t => TAG_LABELS[t]);
+  const primaryTagKey  = genreTagKeys[0] || null;
+  const primaryGenre   = primaryTagKey ? TAG_LABELS[primaryTagKey] : 'Games';
+  const genreTagUrl    = primaryTagKey ? `${BASE_URL}/tag/${primaryTagKey}/` : `${BASE_URL}/`;
   const breadcrumbLd = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home',       item: `${BASE_URL}/` },
-      { '@type': 'ListItem', position: 2, name: primaryGenre, item: `${BASE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: primaryGenre, item: genreTagUrl },
       { '@type': 'ListItem', position: 3, name: game.title,   item: pageUrl },
     ],
   });
@@ -184,20 +187,20 @@ ${bodyTag}
     <nav aria-label="Breadcrumb">
       <ol>
         <li><a href="/">${SITE_NAME}</a></li>
-        <li>${esc(primaryGenre)}</li>
+        ${primaryTagKey ? `<li><a href="/tag/${primaryTagKey}/">${esc(primaryGenre)}</a></li>` : `<li>${esc(primaryGenre)}</li>`}
         <li>${esc(game.title)}</li>
       </ol>
     </nav>
     <h1>${esc(game.title)}</h1>
     <p>${esc(desc)}</p>
-    ${genres.length ? `<p><strong>Genre:</strong> ${genres.map(esc).join(', ')}</p>` : ''}
+    ${genres.length ? `<p><strong>Genre:</strong> ${genreTagKeys.map(k => `<a href="/tag/${k}/">${esc(TAG_LABELS[k])}</a>`).join(', ')}</p>` : ''}
     ${inputs.length ? `<p><strong>Controls:</strong> ${inputs.map(esc).join(', ')}</p>` : ''}
     ${(relatedGames && relatedGames.length) ? `<p><strong>More games:</strong> ${relatedGames.map(r => {
       const rs = normalizeHref(r.link);
       const rc = rs[0].toLowerCase();
       return `<a href="/game/${rc}/${rs}/">${esc(r.title)}</a>`;
     }).join(', ')}</p>` : ''}
-    <p><a href="/">&#8592; Back to ${SITE_NAME}</a></p>
+    <p><a href="/">&#8592; All games</a></p>
   </noscript>
 ${bodyInner}
 </body>
