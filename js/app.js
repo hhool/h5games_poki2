@@ -15,27 +15,35 @@
 
   /* ---------- Category metadata ---------- */
   const TAG_META = {
-    action: { emoji: "💥", label: "Action" },
+    action:      { emoji: "💥", label: "Action" },
+    adventure:   { emoji: "🗺️", label: "Adventure" },
+    arcade:      { emoji: "👾", label: "Arcade" },
     competitive: { emoji: "🏆", label: "Competitive" },
-    idle: { emoji: "🕹️", label: "Idle" },
-    puzzle: { emoji: "🧩", label: "Puzzle" },
-    racing: { emoji: "🏎️", label: "Racing" },
-    shooting: { emoji: "🔫", label: "Shooting" },
-    sports: { emoji: "⚽", label: "Sports" },
-    strategy: { emoji: "♟️", label: "Strategy" },
-    other: { emoji: "🎲", label: "Other" },
+    idle:        { emoji: "🕹️", label: "Idle" },
+    multiplayer: { emoji: "👥", label: "Multiplayer" },
+    platformer:  { emoji: "🏃", label: "Platformer" },
+    puzzle:      { emoji: "🧩", label: "Puzzle" },
+    racing:      { emoji: "🏎️", label: "Racing" },
+    shooting:    { emoji: "🔫", label: "Shooting" },
+    sports:      { emoji: "⚽", label: "Sports" },
+    strategy:    { emoji: "♟️", label: "Strategy" },
+    // fallback label for non-standard tags (no tag page)
+    other:       { emoji: "🎲", label: "Other" },
   };
 
   const TAG_ORDER = [
     "action",
     "puzzle",
+    "adventure",
     "racing",
     "shooting",
-    "sports",
+    "multiplayer",
     "competitive",
     "strategy",
     "idle",
-    "other",
+    "arcade",
+    "sports",
+    "platformer",
   ];
   // Maximum games to show per category section (configurable constant)
   const SECTION_LIMIT = 9;
