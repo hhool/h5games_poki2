@@ -119,7 +119,7 @@ function extractBody(htmlFile) {
 }
 
 // ── Page builder ──────────────────────────────────────────────────────────────
-function buildTagPage(tag, cfg, games, bodyTag, bodyInner) {
+function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags) {
   const pageUrl  = `${BASE_URL}/tag/${tag}/`;
   const title    = `${cfg.headline} — ${SITE_NAME}`;
   const ogImg    = `${BASE_URL}/assets/icon/icon-512.png`;
@@ -163,6 +163,18 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner) {
     const href = `/game/${char}/${slug}/`;
     return `      <li><a href="${esc(href)}">${esc(g.title)}</a></li>`;
   }).join('\n');
+
+  // Related categories (all other tags)
+  const relatedTags = Object.entries(allTags).filter(([t]) => t !== tag);
+  const relatedLinksHtml = relatedTags
+    .map(([t, c]) => `<li><a href="/tag/${t}/">${esc(c.label)} Games</a></li>`)
+    .join('\n        ');
+  const relatedSectionHtml = `<section id="related-tags" class="related-tags-section">
+  <h2>More Game Categories</h2>
+  <ul class="related-tags-list">
+    ${relatedTags.map(([t, c]) => `<li><a href="/tag/${t}/">${esc(c.label)}</a></li>`).join('\n    ')}
+  </ul>
+</section>`;
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -208,9 +220,16 @@ ${bodyTag}
     <ul>
 ${gameListHtml}
     </ul>
+    <nav aria-label="Other Categories">
+      <p>Other Categories:</p>
+      <ul>
+        ${relatedLinksHtml}
+      </ul>
+    </nav>
     <p><a href="/">&#8592; Back to ${esc(SITE_NAME)}</a></p>
   </noscript>
 ${bodyInner}
+${relatedSectionHtml}
 </body>
 </html>`;
 }
@@ -244,7 +263,7 @@ for (const [tag, cfg] of Object.entries(TAG_CONFIG)) {
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(
     path.join(dir, 'index.html'),
-    buildTagPage(tag, cfg, tagGames, bodyTag, gameBodyContent),
+    buildTagPage(tag, cfg, tagGames, bodyTag, gameBodyContent, TAG_CONFIG),
     'utf8'
   );
   console.log(`  /tag/${tag}/  (${tagGames.length} games)`);

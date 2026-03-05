@@ -1537,3 +1537,12 @@ body.detail-open .fav-btn{opacity:0!important;pointer-events:none}
   .detail-related-item img { width: 36px; height: 36px; }
   .detail-related-item { min-width: 38px; }
 }
+
+/* ---- Related tag categories section (bottom of tag pages) ---- */
+.related-tags-section{padding:24px 20px 32px;border-top:1px solid var(--surface-2,#e8ecf0);margin-top:12px}
+.related-tags-section h2{font-size:.85rem;font-weight:700;color:var(--text-muted,#6b7a90);text-transform:uppercase;letter-spacing:.06em;margin:0 0 12px}
+.related-tags-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+.related-tags-list li a{display:inline-block;padding:6px 14px;border-radius:20px;border:1.5px solid rgba(0,0,0,.1);background:#fff;font-size:.82rem;font-weight:600;color:var(--text,#1a2332);text-decoration:none;transition:background .15s,color .15s,border-color .15s}
+.related-tags-list li a:hover{background:rgba(0,107,179,.08);border-color:var(--brand,#006bb3);color:var(--brand,#006bb3)}
+@media(prefers-color-scheme:dark){.related-tags-list li a{background:var(--surface,#1e2635);border-color:rgba(255,255,255,.1);color:var(--text,#e8ecf4)}}
+@media(max-width:480px){.related-tags-section{padding:16px 14px 24px}}
