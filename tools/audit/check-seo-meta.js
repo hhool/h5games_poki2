@@ -116,7 +116,15 @@ function getMetaProp(html, prop) {
 
 function getTitle(html) {
   const m = /<title[^>]*>([\s\S]*?)<\/title>/i.exec(html);
-  return m ? m[1].replace(/\s+/g, ' ').trim() : null;
+  if (!m) return null;
+  return m[1]
+    .replace(/\s+/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#\d+;/g, c => String.fromCharCode(parseInt(c.slice(2))))
+    .trim();
 }
 
 function getCanonical(html) {
@@ -299,20 +307,21 @@ function auditPage(html, filePath) {
       const ldType = parsedLd['@type'];
       if (!ldType) {
         flag('LD-TYPE', 'WARN', 'JSON-LD has no @type');
-      } else if (/VideoGame|VideoObject|Game/i.test(String(ldType))) {
+      } else if (/VideoGame|VideoObject|Game|CollectionPage|ItemList/i.test(String(ldType))) {
         flag('LD-TYPE', 'OK', ldType);
       } else {
-        flag('LD-TYPE', 'WARN', `@type="${ldType}" — expected VideoGame/Game`);
+        flag('LD-TYPE', 'WARN', `@type="${ldType}" — expected VideoGame/Game/CollectionPage`);
       }
 
-      // LD-NAME matches title
+      // LD-NAME matches title (skip for CollectionPage — title match not required)
       const ldName = parsedLd.name;
-      if (!ldName) {
+      const isCollection = /CollectionPage|ItemList/i.test(String(ldType || ''));
+      if (!ldName && !isCollection) {
         flag('LD-NAME', 'WARN', 'JSON-LD missing "name" field');
-      } else if (title && !title.toLowerCase().includes(ldName.toLowerCase().slice(0, 20))) {
+      } else if (ldName && title && !title.toLowerCase().includes(ldName.toLowerCase().slice(0, 20))) {
         flag('LD-NAME', 'WARN', `LD name "${ldName}" not found in title "${title}"`);
       } else {
-        flag('LD-NAME', 'OK', `"${ldName}"`);
+        flag('LD-NAME', 'OK', ldName ? `"${ldName}"` : 'CollectionPage (name check skipped)');
       }
     }
   }
