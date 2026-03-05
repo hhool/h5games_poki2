@@ -984,9 +984,9 @@
     updatePageMeta('home');
     $searchInput.value = "";
     window.scrollTo({ top: 0, behavior: "smooth" });
-    // Move keyboard focus to the search input for Home so screen readers
-    // announce primary content and keyboard users can start searching.
-    try { if ($searchInput && typeof $searchInput.focus === 'function') $searchInput.focus(); } catch (e) {}
+    // Move keyboard focus to the shuffle button on home load — avoids
+    // triggering the mobile virtual keyboard that $searchInput.focus() causes.
+    try { if ($shuffleBtn && typeof $shuffleBtn.focus === 'function') $shuffleBtn.focus(); } catch (e) {}
     // Sanitize pathname to avoid protocol-relative edge cases like '//' which
     // can be interpreted as a protocol-relative URL and cause SecurityError
     // when passed to history.replaceState. Collapse repeated slashes first.
