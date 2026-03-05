@@ -122,7 +122,8 @@ function extractBody(htmlFile) {
 function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags) {
   const pageUrl  = `${BASE_URL}/tag/${tag}/`;
   const title    = `${cfg.headline} — ${SITE_NAME}`;
-  const ogImg    = `${BASE_URL}/assets/icon/icon-512.png`;
+  const _ogImgGame = games.find(g => g.featured && g.imgSrc) || games.find(g => g.imgSrc);
+  const ogImg    = _ogImgGame ? _ogImgGame.imgSrc : `${BASE_URL}/assets/icon/icon-512.png`;
 
   // BreadcrumbList JSON-LD
   const breadcrumbLd = JSON.stringify({
