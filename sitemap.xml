@@ -1,1370 +1,1359 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Site pages -->
   <url>
-    <loc>https://poki2.online/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <loc>https://poki2.online/terms.html</loc>
+    <lastmod>2026-03-05T07:14:19.046Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://poki2.online/about.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <loc>https://poki2.online/privacy_anchors.html</loc>
+    <lastmod>2026-02-13T15:10:26.593Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://poki2.online/privacy.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-03-05T07:14:19.031Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://poki2.online/terms.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://poki2.online/contact.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://poki2.online</loc>
+    <lastmod>2026-03-05T07:14:19.028Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://poki2.online/dmca.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <lastmod>2026-03-05T07:14:19.026Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
-
-  <!-- Per-game pages (static, with full OG + VideoGame JSON-LD) -->
+  <url>
+    <loc>https://poki2.online/contact.html</loc>
+    <lastmod>2026-03-05T07:14:19.023Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://poki2.online/about.html</loc>
+    <lastmod>2026-03-05T07:14:19.023Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <url>
     <loc>https://poki2.online/game/2/2048/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/a/among-us/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/basketball-stars/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/battleforgondor/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/bigredbutton/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/blockclaimio/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/crossyroad/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/babaisyou/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/z/zcj2/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/z/zombiescantjump/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/r/runneryodas/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/cubeninja/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/battleday/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/crkarmax/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/dronewars/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/l/luxahoy/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/sambogart/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/n/ninjakidvszb/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/spacecowboy/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/silverarrow/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/n/ninjablade/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/blackknight/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/breakingthebank/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/btts/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/cannon-basketball-4/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/cell-machine/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/chrome-dino/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/circlo/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/connect3/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/craftmine/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/csgo-clicker/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/ctr/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/ctr-holiday/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/ctr-tr/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/cupcake2048/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/deal-or-no-deal/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/death-run-3d/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/defend-the-tank/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/doge2048/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/doodle-jump/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/draw-the-hill/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/e/edgenotfound/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/e/endlesswar3/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/e/evil-glitch/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/flappy-bird/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/g/geodash/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/g/getaway-shootout/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/g/gimme-the-airpod/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/g/grindcraft/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/h/helicopter/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/h/hexgl/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/i/interactivebuddy/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/j/just-one-boss/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/k/krunker/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/m/meme2048/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/m/minecraft/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/m/minesweeper/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/m/miniputt/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/m/missiles/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/n/n-gon/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/o/om-bounce/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/papaspizzaria/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/paperio2/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/papery-planes/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/push-the-square/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/r/rolly-vortex/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/snowbattle/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/soldier-legend/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/solitaire/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/stack/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/stealingthediamond/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/stickwar/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/stormthehouse2/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://poki2.online/game/s/superhot/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/swerve/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/temple-run-2/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/thebattle/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/the-final-earth/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/theheist/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/there-is-no-game/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/thisistheonlylevel/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/tosstheturtle/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/tube-jumpers/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/v/vex3/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/v/vex4/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://poki2.online/game/v/vex5/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/v/vex6/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/w/wordle/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/a/alienattack/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/balanceball/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/bdot/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/blackbats/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/bloxslider/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/bottomtight/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/bravebird/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/brokenhorn/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/bubblecn/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/b/bubblefish/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/candyfusion/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/captainroger/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/captainwar/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/catonfire/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/cavejumper/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/cboxes/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/cheeselab/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/chipman/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/christmasballs/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/circleball/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/circlepong/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/circletris/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/cninjas/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/cowboyrun/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/cowboyshot/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/c/craigenstone/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/dangerous/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/darkninja/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/deathsoul/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/donteattrash/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/dotgame/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/dropcircle/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/d/duckwater/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/e/elmore/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/e/escape/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/e/evilrobot/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/e/evilwyrm/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/fastgame/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/firebrigade/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/fishingfrenzy/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/flapcatcopters/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/flapcatxmas/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/flappydog/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/flyingschool/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/foofoo/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/foxfury/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/freedomroad/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/frog/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/fullimmersion/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/f/funnysoccer/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/g/gettwelve/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/g/goblinmachine/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/g/gofishing/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/g/goingnuts/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/g/greedygnomes/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/g/greenwings/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/g/groovyski/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/g/grubhub/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/g/gumballrace/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/h/hanselandgretel/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/h/hidden/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/h/hungrybob/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/i/icecream/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/j/jellydoods/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/j/jellyslice/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/j/jomjom/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/j/jumpkitty/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/j/jumpman/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/j/jumppydragon/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/k/knightnday/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/l/lizardrocket/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/l/looneyroonks/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/m/manic/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/m/matchtime/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/m/mathgame/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/m/monstercandy/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/m/monstereater/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/m/mousejump/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/n/nest/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/n/ninjarun/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/n/ninjaway/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/o/ojelloonline/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/pacman/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/pancakeboss/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/pandaflash/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/pebbleboy/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/penguin/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/pieattack/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/pigeon/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/piggyroll/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/piratekid/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/pitana/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/popup/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/portalrunner/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/p/pyramidjump/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/r/raccoonrun/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/r/rainbox/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/r/rapunzel/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/r/rectangzings/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/r/robotion/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/r/rocketpop/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/r/ropeninja/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/r/runpixierun/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/sallybbq/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/skylands/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/skyrace/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/skywire/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/slotchicken/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/sortbird/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/springninja/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/squarecrush/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/stevenkash/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/stickpanda/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/stickpandaxmas/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/sticksamurai/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/stickygoo/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/strangespace/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/taptapsubmarine/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/targetap/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/titanrunner/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/tooncup/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/trailblazer/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/trashndash/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/t/trollboxing/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/u/uforun/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/v/veggirabbit/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/w/woodblock/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/x/xtypesky/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/z/zapaliens/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/z/zombienight/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/z/zombieworld/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/z/zoostuner/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://poki2.online/game/s/snakebird/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-03-05T11:23:35.051Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
-
 </urlset>
