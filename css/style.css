@@ -1307,6 +1307,11 @@ body.static-page .site-footer > .footer-links {
 .share-fb:hover{background:rgba(24,119,242,.2);border-color:#1877f2;color:#1877f2}
 .share-copy.copied{border-color:var(--brand,#6c63ff);color:var(--brand,#6c63ff)}
 
+/* ---- P5: Official blog/site link ---- */
+.detail-blog-row{text-align:center;margin:2px 0 8px}
+.detail-blog-link{display:inline-flex;align-items:center;gap:5px;font-size:.75rem;font-weight:600;color:var(--brand,#6c63ff);text-decoration:none;opacity:.85;transition:opacity .15s}
+.detail-blog-link:hover{opacity:1;text-decoration:underline}
+
 /* ---- Detail related games ---- */
 .detail-related-wrap{padding:0 12px 10px;border-top:1px solid var(--surface-2);margin-top:8px;overflow-x:auto;scrollbar-width:none;text-align:center}
 .detail-related-title{font-size:.68rem;font-weight:600;color:var(--text-muted);letter-spacing:.03em;margin-bottom:6px;padding-top:8px;text-align:center}

@@ -97,6 +97,7 @@ function buildPage(game, bodyTag, bodyInner) {
     operatingSystem:     'Web Browser',
     offers:    { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     publisher: { '@type': 'Organization', name: SITE_NAME, url: `${BASE_URL}/` },
+    ...(game.blog ? { sameAs: [game.blog] } : {}),
   };
   const ld = JSON.stringify(ldObj);
 

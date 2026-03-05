@@ -205,6 +205,7 @@
   let $detailFavBtn = null;
   let $detailRelated = null;
   let $shareTw = null, $shareFb = null, $shareCopy = null;
+  let $detailBlogRow = null, $detailBlogLink = null;
   const $pauseOverlay = $("game-pause");
   const $pauseResume = $("pause-resume");
   const $pauseQuit = $("pause-quit");
@@ -1505,7 +1506,8 @@
         playMode: playMode,
         operatingSystem: 'Web Browser',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-        publisher: { '@type': 'Organization', name: 'Poki2', url: 'https://poki2.online/' }
+        publisher: { '@type': 'Organization', name: 'Poki2', url: 'https://poki2.online/' },
+        ...(game.blog ? { sameAs: [game.blog] } : {})
       };
       let ldEl = document.getElementById('game-jsonld');
       if (!ldEl) {
@@ -1593,6 +1595,15 @@
       if ($shareFb) $shareFb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + _shareEnc;
       if ($shareCopy) $shareCopy.dataset.url = _shareUrl;
     } catch(e) {}
+    // P5 — Official site / blog link
+    if ($detailBlogRow && $detailBlogLink) {
+      if (game.blog) {
+        $detailBlogLink.href = game.blog;
+        $detailBlogRow.style.display = '';
+      } else {
+        $detailBlogRow.style.display = 'none';
+      }
+    }
     // P3.1 / P3.2 — inject VideoGame JSON-LD + update OG/Twitter meta
     _injectGameMeta(game);
     // Make detail interactive and trap input so underlying content doesn't receive events
@@ -2240,6 +2251,8 @@
     $shareTw   = document.getElementById('share-tw');
     $shareFb   = document.getElementById('share-fb');
     $shareCopy = document.getElementById('share-copy');
+    $detailBlogRow  = document.getElementById('detail-blog-row');
+    $detailBlogLink = document.getElementById('detail-blog-link');
     if ($shareCopy) {
       $shareCopy.addEventListener('click', function() {
         const url = $shareCopy.dataset.url || location.href;
