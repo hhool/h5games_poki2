@@ -1,5 +1,28 @@
+# Allow all search engine crawlers
 User-agent: *
 Allow: /
 Disallow: /play/
+
+# Bing Webmaster: explicit crawl-delay to prevent rate-limiting (seconds)
+User-agent: Bingbot
+Allow: /
+Disallow: /play/
+Crawl-delay: 5
+
+# Block AI training scrapers (no search-ranking benefit, wastes crawl budget)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
 
 Sitemap: https://poki2.online/sitemap.xml
