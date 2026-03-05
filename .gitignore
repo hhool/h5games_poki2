@@ -69,3 +69,4 @@ assets
 # generated audit reports
 tools/*.csv
 tools/audit/*.csv
+README.roadmap.seo.zh.md
