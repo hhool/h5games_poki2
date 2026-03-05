@@ -65,3 +65,7 @@ localhost*.report.html
 
 # assets
 assets
+
+# generated audit reports
+tools/*.csv
+tools/audit/*.csv

@@ -20,6 +20,7 @@
   "audit:links": "node tools/audit/check-game-links.js",
   "audit:sitemap": "node tools/audit/check-sitemap-urls.js",
   "audit:imgs": "node tools/audit/check-img-src.js",
+  "audit:desc": "node tools/audit/check-descriptions.js",
     "publish:pages": "wrangler pages deploy ./dist --project-name \"${CF_PAGES_PROJECT:-h5games-poki2}\"",
     "inject-ldjson": "node scripts/inject-ldjson.js --dir=dist --config=scripts/ldconfig.json",
     "inject-ldjson:src": "node scripts/inject-ldjson.js --dir=. --config=scripts/ldconfig.json",
