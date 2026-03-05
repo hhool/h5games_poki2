@@ -1298,6 +1298,15 @@ body.static-page .site-footer > .footer-links {
 .detail-fav-btn.fav-active{background:rgba(239,68,68,.1);border-color:#ef4444}
 .detail-fav-btn.fav-active svg{fill:#ef4444}
 
+/* ---- P3: Share row ---- */
+.detail-share-row{display:flex;align-items:center;justify-content:center;gap:8px;margin:8px 0 6px;flex-wrap:wrap}
+.detail-share-label{font-size:.7rem;font-weight:600;color:var(--text-muted);letter-spacing:.03em;flex-shrink:0}
+.detail-share-btn{width:32px;height:32px;border-radius:50%;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s,border-color .15s,color .15s;flex-shrink:0;text-decoration:none;padding:0}
+.detail-share-btn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3)}
+.share-tw:hover{background:rgba(0,0,0,.8);border-color:#000;color:#fff}
+.share-fb:hover{background:rgba(24,119,242,.2);border-color:#1877f2;color:#1877f2}
+.share-copy.copied{border-color:var(--brand,#6c63ff);color:var(--brand,#6c63ff)}
+
 /* ---- Detail related games ---- */
 .detail-related-wrap{padding:0 12px 10px;border-top:1px solid var(--surface-2);margin-top:8px;overflow-x:auto;scrollbar-width:none;text-align:center}
 .detail-related-title{font-size:.68rem;font-weight:600;color:var(--text-muted);letter-spacing:.03em;margin-bottom:6px;padding-top:8px;text-align:center}

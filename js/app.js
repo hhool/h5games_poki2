@@ -204,6 +204,7 @@
   let $detailBackdrop = null;
   let $detailFavBtn = null;
   let $detailRelated = null;
+  let $shareTw = null, $shareFb = null, $shareCopy = null;
   const $pauseOverlay = $("game-pause");
   const $pauseResume = $("pause-resume");
   const $pauseQuit = $("pause-quit");
@@ -1581,6 +1582,16 @@
 
     // Render related games
     renderDetailRelated(game);
+    // P3 — Share button hrefs
+    try {
+      const _slug = (game.link || '').replace(/\/+$/, '').split('/').pop() || '';
+      const _shareUrl = _slug ? ('https://poki2.online/game/' + _slug[0] + '/' + _slug + '/') : 'https://poki2.online/';
+      const _shareTxt = encodeURIComponent((game.title || 'Play this game') + ' — Play free on Poki2!');
+      const _shareEnc = encodeURIComponent(_shareUrl);
+      if ($shareTw) $shareTw.href = 'https://twitter.com/intent/tweet?text=' + _shareTxt + '&url=' + _shareEnc;
+      if ($shareFb) $shareFb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + _shareEnc;
+      if ($shareCopy) $shareCopy.dataset.url = _shareUrl;
+    } catch(e) {}
     // P3.1 / P3.2 — inject VideoGame JSON-LD + update OG/Twitter meta
     _injectGameMeta(game);
     // Make detail interactive and trap input so underlying content doesn't receive events
@@ -2225,6 +2236,32 @@
     $detailBackdrop = document.getElementById("detail-backdrop");
     $detailFavBtn = document.getElementById("detail-fav");
     $detailRelated = document.getElementById("detail-related");
+    $shareTw   = document.getElementById('share-tw');
+    $shareFb   = document.getElementById('share-fb');
+    $shareCopy = document.getElementById('share-copy');
+    if ($shareCopy) {
+      $shareCopy.addEventListener('click', function() {
+        const url = $shareCopy.dataset.url || location.href;
+        if (navigator.share) {
+          navigator.share({ url: url }).catch(function(){});
+        } else if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(function() {
+            $shareCopy.classList.add('copied');
+            setTimeout(function(){ $shareCopy.classList.remove('copied'); }, 1500);
+          }).catch(function(){});
+        } else {
+          try {
+            const ta = document.createElement('textarea');
+            ta.value = url; ta.style.position='fixed'; ta.style.opacity='0';
+            document.body.appendChild(ta); ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            $shareCopy.classList.add('copied');
+            setTimeout(function(){ $shareCopy.classList.remove('copied'); }, 1500);
+          } catch(e){}
+        }
+      });
+    }
 
     // Attach overlay listeners now that refs exist
     if ($barTrigger) {
