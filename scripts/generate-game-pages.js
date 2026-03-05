@@ -34,6 +34,22 @@ function extractBody(htmlFile) {
   return { open: src.match(/<body([^>]*)>/i)[0], inner: m[1] };
 }
 
+// Tags that have a static /tag/* page (matches TAG_CONFIG in generate-tag-pages.js)
+const TAG_PAGES = [
+  ['action',      'Action'],
+  ['puzzle',      'Puzzle'],
+  ['adventure',   'Adventure'],
+  ['racing',      'Racing'],
+  ['shooting',    'Shooting'],
+  ['multiplayer', 'Multiplayer'],
+  ['competitive', 'Competitive'],
+  ['strategy',    'Strategy'],
+  ['idle',        'Idle'],
+  ['arcade',      'Arcade'],
+  ['sports',      'Sports'],
+  ['platformer',  'Platformer'],
+];
+
 // Mirror of TAG_META in app.js — used to map tag keys → genre labels
 const TAG_LABELS = {
   action:      'Action',
@@ -202,6 +218,11 @@ ${bodyTag}
       const rc = rs[0].toLowerCase();
       return `<a href="/game/${rc}/${rs}/">${esc(r.title)}</a>`;
     }).join(', ')}</p>` : ''}
+    <nav aria-label="Game Categories">
+      <ul>
+        ${TAG_PAGES.map(([k, l]) => `<li><a href="/tag/${k}/">${esc(l)} Games</a></li>`).join('\n        ')}
+      </ul>
+    </nav>
     <p><a href="/">&#8592; All games</a></p>
   </noscript>
 ${bodyInner}
