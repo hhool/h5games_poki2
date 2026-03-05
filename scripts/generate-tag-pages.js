@@ -178,6 +178,10 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags) {
 
   // Replace SPA hero text with tag-specific H1 + first sentence of desc
   const heroSub = cfg.desc.split('.')[0] + '.';
+  const tagIntroHtml = `<section class="tag-intro">
+              <p class="tag-intro-desc">${esc(cfg.desc)}</p>
+              <p class="tag-intro-count">Explore <strong>${games.length}</strong> free ${esc(cfg.label)} games — no download required.</p>
+            </section>`;
   const tagBodyInner = bodyInner
     .replace(
       '<p class="hero-title">What are you playing today?</p>',
@@ -186,6 +190,12 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags) {
     .replace(
       '<p class="hero-sub">Discover free games. No downloads. Instant play.</p>',
       `<p class="hero-sub">${esc(heroSub)}</p>`
+    )
+    .replace(
+      '<!-- Category chip filter bar (filled by JS) -->',
+      `${tagIntroHtml}
+
+            <!-- Category chip filter bar (filled by JS) -->`
     );
 
   return `<!DOCTYPE html>
