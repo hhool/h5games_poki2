@@ -267,7 +267,7 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
   <noscript><link rel="stylesheet" href="/css/style.css?v=__CACHE_VER__"></noscript>
   <!-- Preload main script and hero image to speed first meaningful paint -->
   <link rel="preload" href="/js/app.js?v=__CACHE_VER__" as="script">
-  <link rel="preload" href="${esc(ogImg)}" as="image">
+  <link rel="preload" href="${esc(ogImg)}" as="image" crossorigin="anonymous">
   <!-- Critical CSS inlined for faster first paint -->
   <style id="critical-css">${CRITICAL_CSS}</style>
   <link rel="icon" type="image/png" href="/favicon.png">

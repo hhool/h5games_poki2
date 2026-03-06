@@ -194,7 +194,7 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   <meta name="description" content="${esc(desc)}">
   <link rel="canonical" href="${pageUrl}">
   <!-- Preload game icon — likely LCP element on game pages -->
-  <link rel="preload" as="image" href="${esc(img)}" fetchpriority="high">
+  <link rel="preload" as="image" href="${esc(img)}" fetchpriority="high" crossorigin="anonymous">
 
   <!-- Open Graph -->
   <meta property="og:type"         content="website">

@@ -354,6 +354,7 @@
         const webpSrc = src.replace(/\.(png|jpg|jpeg)$/i, '.webp');
         // Check if WebP version exists by trying to load it
         const testImg = new Image();
+        try { testImg.crossOrigin = 'anonymous'; } catch (e) {}
         testImg.onload = () => {
           img.src = webpSrc;
         };
@@ -680,6 +681,7 @@
     const img = document.createElement("img");
     img.className = "game-card-img";
     img.alt = game.title || "";
+    try { img.crossOrigin = 'anonymous'; } catch (e) {}
     // LCP: first 12 cards load eagerly; first 4 get fetchpriority=high
     const _cardIdx = (window.__cardCount = (window.__cardCount || 0) + 1);
     img.loading = _cardIdx <= 12 ? "eager" : "lazy";
@@ -779,6 +781,7 @@
         card.className = "hero-card";
         const himg = document.createElement("img");
         himg.alt = g.title || "";
+        try { himg.crossOrigin = 'anonymous'; } catch (e) {}
         // Prevent hero images from being lazy-loaded (they are above-the-fold)
         himg.loading = "eager";
         // Provide intrinsic size to avoid layout shifts
