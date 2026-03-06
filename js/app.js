@@ -31,6 +31,22 @@
     other:       { emoji: "🎲", label: "Other" },
   };
 
+  /* ---------- Tag intros (headline + desc) — kept small for runtime use ---------- */
+  const TAG_INTRO = {
+    puzzle:      { headline: 'Free Online Puzzle Games', desc: 'Challenge your brain with the best free puzzle games online. Solve riddles, match tiles, and test your logic — all playable instantly in your browser.' },
+    adventure:   { headline: 'Free Online Adventure Games', desc: 'Embark on epic quests and explore unknown worlds in the best free adventure games online. Play instantly in your browser — no download or install required.' },
+    shooting:    { headline: 'Free Online Shooting Games', desc: 'Lock and load with the best free shooting games online. Aim, fire, and take down enemies in fast-paced action — playable in any browser on desktop and mobile.' },
+    action:      { headline: 'Free Online Action Games', desc: 'Dive into non-stop thrills with the best free action games online. Fast reflexes and epic battles await — all available to play instantly in your browser.' },
+    racing:      { headline: 'Free Online Racing Games', desc: 'Hit the gas with the best free racing games online. Speed through challenging tracks, dodge rivals, and chase first place — playable instantly in your browser.' },
+    sports:      { headline: 'Free Online Sports Games', desc: 'Compete in the best free online sports games — from basketball to soccer. Play solo or challenge opponents and climb the leaderboard. No download needed.' },
+    strategy:    { headline: 'Free Online Strategy Games', desc: 'Outthink your opponents with the best free strategy games online. Plan every move, manage resources, and dominate the battlefield. Play instantly in your browser.' },
+    multiplayer: { headline: 'Free Online Multiplayer Games', desc: 'Play with or against friends in the best free multiplayer games online. Challenge real players worldwide in real-time — no download, no install, just play instantly.' },
+    idle:        { headline: 'Free Online Idle & Clicker Games', desc: 'Sit back and let the numbers grow in the best free idle games online. Upgrade, automate, and unlock powerful boosts — instant play, no download required.' },
+    arcade:      { headline: 'Free Online Arcade Games', desc: 'Relive the golden age of gaming with the best free arcade games online. Simple controls, addictive gameplay, and high scores to chase. Play instantly in any browser.' },
+    platformer:  { headline: 'Free Online Platformer Games', desc: 'Jump, run, and dodge through dangerous levels in the best free platformer games online. Classic side-scrolling action playable instantly in your browser.' },
+    competitive: { headline: 'Free Online Competitive Games', desc: 'Rise to the top in the best free competitive games online. Go head-to-head, prove your skills, and claim the number one spot. Play now in your browser.' },
+  };
+
   const TAG_ORDER = [
     "action",
     "puzzle",
@@ -228,6 +244,22 @@
   let userExitedFullscreen = false; // track intentional exit vs close
 
   /* ---------- Helpers ---------- */
+
+  // Remove static noscript snapshots (H1/intro/nav/back link) injected
+  // by the static generator so JS-enabled clients do not render duplicate
+  // content. Static (crawler) output remains in the HTML source; this
+  // runtime pass removes those nodes for SPA clients only.
+  try {
+    document.querySelectorAll('noscript').forEach(ns => {
+      try {
+        const html = (ns.innerHTML || '').toLowerCase();
+        if (html.indexOf('<h1') !== -1 || html.indexOf('other categories:') !== -1 || html.indexOf('back to') !== -1 || html.indexOf('games in this category') !== -1) {
+          if (ns.parentNode) ns.parentNode.removeChild(ns);
+        }
+      } catch (e) { /* ignore individual noscript removal failures */ }
+    });
+  } catch (e) { /* ignore */ }
+
   /** Escape text for safe insertion into innerHTML */
   function escapeHtml(str) {
     return String(str)
@@ -1111,7 +1143,7 @@
     $searchResults.style.display = "none";
 
     // Build paged, full-screen sections. Each "page" contains up to SECTION_LIMIT games.
-    const allTagGames = tagMap[tag] || [];
+    let allTagGames = tagMap[tag] || [];
     if (!allTagGames.length) return;
     const totalCatPages = Math.ceil(allTagGames.length / CAT_PAGE_SIZE);
     const safePageNum = Math.min(Math.max(1, pageNum), totalCatPages);
@@ -1132,7 +1164,30 @@
     // Simulate loading delay for better UX
     setTimeout(() => {
       $gameSections.innerHTML = "";
-      // Temporarily slice tagMap for pagination
+      // Prefer generator's static ordering when available: parse CollectionPage JSON-LD
+      try {
+        const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+        let collection = null;
+        scripts.forEach(s => {
+          try {
+            const j = JSON.parse(s.textContent || s.innerText || '{}');
+            if (j && j['@type'] === 'CollectionPage' && Array.isArray(j.hasPart)) collection = j;
+          } catch (e) { /* ignore parse errors */ }
+        });
+        if (collection) {
+          const orderUrls = collection.hasPart.map(p => (p && p.url) ? p.url.replace(/\/$/, '') : null).filter(Boolean);
+          const ordered = [];
+          for (const u of orderUrls) {
+            const match = allTagGames.find(g => ((g.link || '').replace(/\/$/, '') === u) || (('/' + ((g.link||'').replace(/https?:\/\//, '').split('/').pop()) + '/') === u + '/'));
+            if (match) ordered.push(match);
+          }
+          // append any missing games preserving runtime order
+          for (const g of allTagGames) if (!ordered.includes(g)) ordered.push(g);
+          allTagGames = ordered;
+        }
+      } catch (e) { /* ignore ordering fallback errors */ }
+
+      // Temporarily slice tagMap for pagination using the (possibly reordered) list
       const _origGames = tagMap[tag];
       if (totalCatPages > 1) {
         tagMap[tag] = allTagGames.slice((safePageNum - 1) * CAT_PAGE_SIZE, safePageNum * CAT_PAGE_SIZE);
@@ -1145,6 +1200,15 @@
         const stray = $gameSections.querySelectorAll('.see-all');
         stray.forEach((el) => el.remove());
       }
+      // Remove any static `.tag-intro` emitted by the generator so JS-enabled
+      // clients do not display the crawler-facing intro. The SPA will not
+      // recreate a visible intro element for JS clients — crawlers keep the
+      // static content in the HTML source, but runtime removes it.
+      try {
+        document.querySelectorAll('.tag-intro').forEach(el => {
+          try { if (el && el.parentNode) el.parentNode.removeChild(el); } catch (e) { /* ignore */ }
+        });
+      } catch (e) { /* ignore */ }
       // Inject visible pagination nav when there are multiple pages
       if (totalCatPages > 1) {
         const prevPage = safePageNum === 1 ? null : safePageNum - 1;
@@ -2372,26 +2436,45 @@
       });
     }
 
-    // Intercept clicks on pagination links site-wide so the SPA handles
-    // page navigation dynamically (prevents full-page navigation to any
-    // static pagination the generator might emit). Keeps `href` intact
-    // for accessibility / shareable links while using client routing.
+    // Intercept clicks on tag-related anchors and pagination links so the
+    // SPA handles navigation dynamically (prevents full-page navigation to
+    // any static pages emitted in `dist/`). Honor modifier keys and
+    // external links — only intercept same-origin tag links.
     document.addEventListener('click', (ev) => {
       try {
+        // Respect user intent for new tab / download / modifier keys
+        if (ev.defaultPrevented) return;
+        if (ev.button && ev.button !== 0) return; // only left-click
+        if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+
         const a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
-        if (!a) return;
-        const pag = a.closest && a.closest('.pagination-nav');
-        if (!pag) return;
-        // Only handle tag pagination links like /tag/{tag}/ or /tag/{tag}/?page=N
+        if (!a || !a.href) return;
+
+        // Only intercept same-origin links
         const url = new URL(a.href, location.origin);
-        const m = url.pathname.match(/^\/tag\/([^\/]+)\//i);
-        if (!m) return;
-        ev.preventDefault();
-        const tagKey = m[1].toLowerCase();
-        const pageNum = parseInt(url.searchParams.get('page') || a.dataset.page || '1', 10) || 1;
-        // Use SPA navigation
-        showCategory(tagKey, pageNum);
-        return;
+        if (url.origin !== location.origin) return;
+
+        // Match tag base: /tag/{tag}/ (optionally trailing slash)
+        const tagMatch = url.pathname.match(/^\/tag\/([^\/]+)\/?$/i);
+        if (tagMatch) {
+          ev.preventDefault();
+          const tagKey = tagMatch[1].toLowerCase();
+          const pageNum = parseInt(url.searchParams.get('page') || a.dataset.page || '1', 10) || 1;
+          showCategory(tagKey, pageNum);
+          return;
+        }
+
+        // Fallback: handle pagination controls nested inside .pagination-nav
+        const pag = a.closest && a.closest('.pagination-nav');
+        if (pag) {
+          const m = url.pathname.match(/^\/tag\/([^\/]+)\//i);
+          if (!m) return; // not a tag pagination link
+          ev.preventDefault();
+          const tagKey = m[1].toLowerCase();
+          const pageNum = parseInt(url.searchParams.get('page') || a.dataset.page || '1', 10) || 1;
+          showCategory(tagKey, pageNum);
+          return;
+        }
       } catch (e) {
         /* ignore and allow default navigation on error */
       }

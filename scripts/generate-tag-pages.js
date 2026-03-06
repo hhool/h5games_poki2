@@ -148,12 +148,21 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
     publisher:   { '@type': 'Organization', name: SITE_NAME, url: `${BASE_URL}/` },
     hasPart:     allTagGames.map((g, i) => {
       const slug  = normalizeHref(g.link);
-      const char  = slug[0].toLowerCase();
+      const char  = (slug && slug[0]) ? slug[0].toLowerCase() : '';
+      // Prefer the game's manifest `link` if it's an absolute URL so the SPA
+      // can match LD+JSON ordering against runtime `g.link` exactly. Fallback
+      // to canonical site URL when `g.link` is not absolute.
+      let url = (g.link || '').toString();
+      if (!/^https?:\/\//i.test(url)) {
+        url = `${BASE_URL}/game/${char}/${slug}/`;
+      } else {
+        url = url.replace(/\/+$/, '');
+      }
       return {
         '@type':    'VideoGame',
         position:   i + 1,
         name:       g.title,
-        url:        `${BASE_URL}/game/${char}/${slug}/`,
+        url:        url,
         image:      g.imgSrc || ogImg,
         description: g.description || '',
       };
@@ -162,6 +171,15 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
 
   // Static game list (visible to crawlers + no-JS users) — include all tag games
   const gameListHtml = allTagGames.map(g => {
+    const slug = normalizeHref(g.link);
+    const char = slug[0].toLowerCase();
+    const href = `/game/${char}/${slug}/`;
+    return `      <li><a href="${esc(href)}">${esc(g.title)}</a></li>`;
+  }).join('\n');
+
+  // Featured games (short list at top). Matching rule: backend `featured === true` and a `badge` must exist.
+  const featuredGames = allTagGames.filter(g => g.featured === true && g.badge);
+  const featuredListHtml = featuredGames.map(g => {
     const slug = normalizeHref(g.link);
     const char = slug[0].toLowerCase();
     const href = `/game/${char}/${slug}/`;
@@ -197,11 +215,10 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
       '<p class="hero-sub">Discover free games. No downloads. Instant play.</p>',
       `<p class="hero-sub">${esc(heroSub)}</p>`
     )
+    // Ensure the tag intro is placed after the game sections placeholder
     .replace(
-      '<!-- Category chip filter bar (filled by JS) -->',
-      `${tagIntroHtml}
-
-            <!-- Category chip filter bar (filled by JS) -->`
+      '<div id="game-sections"></div>',
+      `<div id="game-sections"></div>\n\n${tagIntroHtml}`
     );
 
   return `<!DOCTYPE html>
@@ -237,16 +254,20 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#006bb3">
   <base href="/">
+  <!-- Client-only: hide/remove crawler-only intro for JS clients to prevent flash -->
+  <style>html.has-js .tag-intro, html.has-js noscript{display:none !important;visibility:hidden !important;}</style>
+  <script>try{document.documentElement.classList.add('has-js');(function(){try{function rm(){document.querySelectorAll('.tag-intro, noscript').forEach(e=>{try{e.remove();}catch(e){}});} if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',rm);else rm();}catch(e){}})();}catch(e){};</script>
 </head>
   ${bodyTag}
   <!-- Static content for crawlers / no-JS users -->
   <noscript>
-    <h1>${esc(cfg.headline)}</h1>
-    <p>${esc(cfg.desc)}</p>
     <p>${totalCount} games in this category:</p>
     <ul>
 ${gameListHtml}
     </ul>
+    <!-- Moved H1 and intro below the full games list for noscript users (per designer request) -->
+    <h1>${esc(cfg.headline)}</h1>
+    <p>${esc(cfg.desc)}</p>
     <nav aria-label="Other Categories">
       <p>Other Categories:</p>
       <ul>
@@ -284,18 +305,42 @@ function canShowDesktop(game) {
   return true;
 }
 
-const allGames = JSON.parse(fs.readFileSync(GAMES, 'utf8'))
-  .filter(canShowDesktop);
+// Mirror SPA behavior: load, deduplicate (by link/title), then apply visibility filter
+const rawGames = JSON.parse(fs.readFileSync(GAMES, 'utf8'));
+const seenKeys = new Set();
+const deduped = rawGames.filter(g => {
+  const key = ((g.link || g.title || '') + '').toString().toLowerCase().trim();
+  if (!key) return false;
+  if (seenKeys.has(key)) return false;
+  seenKeys.add(key);
+  return true;
+});
+const allGames = deduped.filter(canShowDesktop);
+
+// Build tagMap using the same normalization logic as the SPA so ordering
+// and tag membership match runtime behavior exactly.
+const tagMap = {};
+for (const g of allGames) {
+  const rawTags = Array.isArray(g.tags) ? g.tags : ["other"];
+  const uniqueTags = Array.from(new Set(rawTags.map((t) => String(t).trim())));
+  g.tags = uniqueTags.length ? uniqueTags : ["other"];
+  for (const t of g.tags) {
+    (tagMap[t] = tagMap[t] || []).push(g);
+  }
+}
 
 const { open: bodyTag, inner: bodyInner } = extractBody(indexHtml);
-const gameBodyContent = bodyInner
+// Remove any existing tag-intro sections from the template so generator
+// inserts a single intro in the desired location (after #game-sections).
+const sanitizedBody = bodyInner.replace(/<section class="tag-intro">[\s\S]*?<\/section>/gi, '');
+const gameBodyContent = sanitizedBody
   .replace(/<\/body>\s*$/i, '')
   .replace(/<h1(\s[^>]*)?>What are you playing today\?<\/h1>/i, '<p$1>What are you playing today?</p>');
 
 let count = 0;
 
 for (const [tag, cfg] of Object.entries(TAG_CONFIG)) {
-  const tagGames = allGames.filter(g => (g.tags || []).includes(tag));
+  const tagGames = tagMap[tag] || [];
   if (tagGames.length < MIN_GAMES) continue;
 
   // Only generate a single canonical tag page. Pagination is handled
