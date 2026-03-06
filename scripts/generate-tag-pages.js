@@ -29,6 +29,21 @@ const GAMES     = path.join(__dirname, '..', 'games.json');
 const MIN_GAMES  = 5;   // minimum games in a tag to warrant a page
 const PAGE_SIZE  = 24;  // games per page — only paginate when total > PAGE_SIZE
 
+// Load optional critical CSS (small file) to inline for faster first-paint.
+// If `css/critical.css` exists in project root, use it; otherwise fall
+// back to a compact built-in critical CSS string.
+const CRITICAL_CSS_PATH = path.join(__dirname, '..', 'css', 'critical.css');
+let CRITICAL_CSS = '';
+try {
+  if (fs.existsSync(CRITICAL_CSS_PATH)) {
+    CRITICAL_CSS = fs.readFileSync(CRITICAL_CSS_PATH, 'utf8');
+  } else {
+    CRITICAL_CSS = `html,body{height:100%}html:not(.css-ready) body{visibility:hidden;opacity:0}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:#f0f2f5;color:#1e1e2e;margin:0}h1, .hero-title{font-size:1.8rem;font-weight:800;margin:0 0 .5rem}p, .hero-sub{margin:0 0 1rem;opacity:.9} .hero{padding:28px 16px;text-align:center;color:#fff;background:linear-gradient(135deg,#009cff 0%,#6c3bff 100%)}.tag-intro{padding:12px 20px}html.has-js .tag-intro, html.has-js noscript{display:none !important;visibility:hidden !important;}`;
+  }
+} catch (e) {
+  CRITICAL_CSS = `html:not(.css-ready) body{visibility:hidden;opacity:0}html.has-js .tag-intro, html.has-js noscript{display:none !important;visibility:hidden !important;}`;
+}
+
 // ── Tag configuration ─────────────────────────────────────────────────────────
 // Only meaningful genre tags get pages. Internal/utility tags are excluded.
 const TAG_CONFIG = {
@@ -253,14 +268,13 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
   <!-- Preload main script and hero image to speed first meaningful paint -->
   <link rel="preload" href="/js/app.js?v=__CACHE_VER__" as="script">
   <link rel="preload" href="${esc(ogImg)}" as="image">
-  <!-- Prevent FOUC: hide body until critical CSS applied -->
-  <style>html:not(.css-ready) body{visibility:hidden;opacity:0}</style>
+  <!-- Critical CSS inlined for faster first paint -->
+  <style id="critical-css">${CRITICAL_CSS}</style>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#006bb3">
   <base href="/">
-  <!-- Client-only: hide/remove crawler-only intro for JS clients to prevent flash -->
-  <style>html.has-js .tag-intro, html.has-js noscript{display:none !important;visibility:hidden !important;}</style>
+  <!-- Client-only: JS marker + defensive removal of noscript/tag-intro -->
   <script>try{document.documentElement.classList.add('has-js');(function(){try{function rm(){document.querySelectorAll('.tag-intro, noscript').forEach(e=>{try{e.remove();}catch(e){}});} if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',rm);else rm();}catch(e){}})();}catch(e){};</script>
 </head>
   ${bodyTag}

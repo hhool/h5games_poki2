@@ -70,3 +70,10 @@ assets
 tools/*.csv
 tools/audit/*.csv
 README.roadmap.seo.zh.md
+
+# Local verification screenshots and generated binaries — do not commit
+tools/screenshots/
+tools/*.png
+tools/*.jpg
+tools/*.jpeg
+tools/*.gif
