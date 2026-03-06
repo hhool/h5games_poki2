@@ -927,7 +927,7 @@
       if (view === 'category' && tag && TAG_META[tag]) {
         const label = TAG_META[tag].label || tag;
         desc      = CAT_DESC[tag] || `Play free ${label.toLowerCase()} games online on Poki2.`;
-        canonical = `https://poki2.online/#${tag}`;
+        canonical = `https://poki2.online/tag/${tag}/`;
         title     = `${label} Games — Free Online | Poki2`;
       } else {
         desc = HOME_DESC; canonical = 'https://poki2.online/'; title = HOME_TITLE;
@@ -1076,7 +1076,16 @@
     } catch (e) {
       /* ignore and continue with original tag */
     }
-    // Reflect selection in the sidebar so the clicked category appears active.
+    // Update URL to /tag/{tag}/ when entering via chip/sidebar (not pagination URL).
+    // Only push if current path isn't already a /tag/ path (which means we came
+    // from a static pagination URL and the address bar is already correct).
+    try {
+      const alreadyOnTagPath = /^\/tag\//.test(location.pathname || '');
+      if (!alreadyOnTagPath) {
+        const tagUrl = `/tag/${tag}/`;
+        history.pushState({ view: 'category', tag, page: 1 }, '', tagUrl);
+      }
+    } catch(e) {}
     // Use the robust highlightSidebarItem (case-insensitive) and ensure the
     // matching nav item receives focus where possible.
     try {
@@ -1157,6 +1166,17 @@
           ? `<a href="${nextUrl}" class="page-btn" aria-label="Next page">Next &#8594;</a>`
           : `<span class="page-btn disabled" aria-disabled="true">Next &#8594;</span>`;
         paginav.innerHTML = phtml;
+        // Remove any existing pagination nav (could be static noscript output
+        // from the generator or a previous runtime insertion) so we don't
+        // render duplicate controls on the same page.
+        try {
+          const existing = document.querySelectorAll('.pagination-nav');
+          if (existing && existing.length) {
+            existing.forEach((el) => el.remove());
+          }
+        } catch (e) {
+          /* ignore DOM removal errors */
+        }
         $gameSections.appendChild(paginav);
       }
       // ensure footer spacer is applied for short content so footer sits flush
