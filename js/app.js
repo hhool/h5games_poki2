@@ -1050,7 +1050,9 @@
     }
   }
 
-  function showCategory(tag) {
+  function showCategory(tag, pageNum) {
+    pageNum = Math.max(1, parseInt(pageNum) || 1);
+    const CAT_PAGE_SIZE = 24;
     currentView = "category";
     // Normalize incoming tag to a canonical key present in TAG_ORDER.
     // This handles cases where callers pass a visible label (e.g. "Competitive")
@@ -1096,8 +1098,10 @@
     $searchResults.style.display = "none";
 
     // Build paged, full-screen sections. Each "page" contains up to SECTION_LIMIT games.
-    const games = tagMap[tag] || [];
-    if (!games.length) return;
+    const allTagGames = tagMap[tag] || [];
+    if (!allTagGames.length) return;
+    const totalCatPages = Math.ceil(allTagGames.length / CAT_PAGE_SIZE);
+    const safePageNum = Math.min(Math.max(1, pageNum), totalCatPages);
 
     
 
@@ -1115,12 +1119,45 @@
     // Simulate loading delay for better UX
     setTimeout(() => {
       $gameSections.innerHTML = "";
+      // Temporarily slice tagMap for pagination
+      const _origGames = tagMap[tag];
+      if (totalCatPages > 1) {
+        tagMap[tag] = allTagGames.slice((safePageNum - 1) * CAT_PAGE_SIZE, safePageNum * CAT_PAGE_SIZE);
+      }
       const sec = renderSection(tag, 0);
+      tagMap[tag] = _origGames; // always restore
       if (sec) {
         $gameSections.appendChild(sec);
         // Ensure no "See all" button appears on the full-category detail view
         const stray = $gameSections.querySelectorAll('.see-all');
         stray.forEach((el) => el.remove());
+      }
+      // Inject visible pagination nav when there are multiple pages
+      if (totalCatPages > 1) {
+        const tagBase = `/tag/${tag}/`;
+        const prevUrl = safePageNum === 1 ? null
+          : safePageNum === 2 ? tagBase
+          : `${tagBase}page/${safePageNum - 1}/`;
+        const nextUrl = safePageNum < totalCatPages ? `${tagBase}page/${safePageNum + 1}/` : null;
+        const paginav = document.createElement('nav');
+        paginav.className = 'pagination-nav';
+        paginav.setAttribute('aria-label', 'Page navigation');
+        let phtml = prevUrl
+          ? `<a href="${prevUrl}" class="page-btn" aria-label="Previous page">&#8592; Prev</a>`
+          : `<span class="page-btn disabled" aria-disabled="true">&#8592; Prev</span>`;
+        phtml += '<div class="page-nums">';
+        for (let _p = 1; _p <= totalCatPages; _p++) {
+          const _u = _p === 1 ? tagBase : `${tagBase}page/${_p}/`;
+          const _cls = _p === safePageNum ? 'page-num active' : 'page-num';
+          const _cur = _p === safePageNum ? ' aria-current="page"' : '';
+          phtml += `<a href="${_u}" class="${_cls}" aria-label="Page ${_p}"${_cur}>${_p}</a>`;
+        }
+        phtml += '</div>';
+        phtml += nextUrl
+          ? `<a href="${nextUrl}" class="page-btn" aria-label="Next page">Next &#8594;</a>`
+          : `<span class="page-btn disabled" aria-disabled="true">Next &#8594;</span>`;
+        paginav.innerHTML = phtml;
+        $gameSections.appendChild(paginav);
       }
       // ensure footer spacer is applied for short content so footer sits flush
       try { ensureFooterSpacer(); } catch (e) { /* ignore */ }
@@ -2485,6 +2522,8 @@
     const pathMatch = (location.pathname || '').match(/^\/games\/([^\/]+)\/??$/i);
     // /game/{char}/{slug}/ → per-game SEO page: auto-open the detail modal (not the iframe)
     const gamePageMatch = (location.pathname || '').match(/^\/game\/[^\/]+\/([^\/]+)\/?$/i);
+    // /tag/{tag}/ or /tag/{tag}/page/{n}/ → tag category page with pagination
+    const tagPageMatch = (location.pathname || '').match(/^\/tag\/([^\/]+)(?:\/page\/(\d+))?\/?$/i);
     console.log('[route] init search/hash:', { search, hash });
 
     // Prefer query param routing (e.g. https://poki2.online/?play-vex5)
@@ -2513,6 +2552,12 @@
         console.warn('[route] no matching game for slug (hash):', slug);
         showHome();
       }
+    } else if (tagPageMatch && tagPageMatch[1]) {
+      // /tag/{tag}/ or /tag/{tag}/page/{n}/ — tag category page
+      const tagKey = tagPageMatch[1].toLowerCase();
+      const tagPage = parseInt(tagPageMatch[2] || '1');
+      console.log('[route] detected tag page:', tagKey, 'page', tagPage);
+      showCategory(tagKey, tagPage);
     } else if (gamePageMatch && gamePageMatch[1]) {
       // /game/{slug}/ — SEO per-game page: open detail modal so OG meta is visible + interactive
       const slug = gamePageMatch[1];
