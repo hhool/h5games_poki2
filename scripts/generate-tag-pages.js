@@ -248,8 +248,13 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
   <script type="application/ld+json">${breadcrumbLd}</script>
 
   <!-- Assets -->
-  <link rel="preload" href="/css/style.css?v=__CACHE_VER__" as="style" onload="this.onload=null;this.rel='stylesheet';">
+  <link rel="preload" href="/css/style.css?v=__CACHE_VER__" as="style" onload="this.onload=null;this.rel='stylesheet';document.documentElement.classList.add('css-ready');">
   <noscript><link rel="stylesheet" href="/css/style.css?v=__CACHE_VER__"></noscript>
+  <!-- Preload main script and hero image to speed first meaningful paint -->
+  <link rel="preload" href="/js/app.js?v=__CACHE_VER__" as="script">
+  <link rel="preload" href="${esc(ogImg)}" as="image">
+  <!-- Prevent FOUC: hide body until critical CSS applied -->
+  <style>html:not(.css-ready) body{visibility:hidden;opacity:0}</style>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#006bb3">
