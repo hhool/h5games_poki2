@@ -26,7 +26,8 @@ const BASE_URL  = 'https://poki2.online';
 const SITE_NAME = 'Poki2';
 const DIST      = path.join(__dirname, '..', 'dist');
 const GAMES     = path.join(__dirname, '..', 'games.json');
-const MIN_GAMES = 5;  // minimum games in a tag to warrant a page
+const MIN_GAMES  = 5;   // minimum games in a tag to warrant a page
+const PAGE_SIZE  = 24;  // games per page — only paginate when total > PAGE_SIZE
 
 // ── Tag configuration ─────────────────────────────────────────────────────────
 // Only meaningful genre tags get pages. Internal/utility tags are excluded.
@@ -119,27 +120,46 @@ function extractBody(htmlFile) {
 }
 
 // ── Page builder ──────────────────────────────────────────────────────────────
-function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags) {
-  const pageUrl  = `${BASE_URL}/tag/${tag}/`;
-  const title    = `${cfg.headline} — ${SITE_NAME}`;
-  const _ogImgGame = games.find(g => g.featured && g.imgSrc) || games.find(g => g.imgSrc);
+// pageInfo: { current (1-based), total (pages), allGames (full tag list) }
+function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, pageInfo = { current: 1, total: 1, allGames: null }) {
+  const { current: pageNum, total: totalPages } = pageInfo;
+  const allTagGames = pageInfo.allGames || games;
+
+  const tagBase  = `${BASE_URL}/tag/${tag}/`;
+  const pageUrl  = pageNum === 1 ? tagBase : `${tagBase}page/${pageNum}/`;
+  const titleBase = `${cfg.headline} — ${SITE_NAME}`;
+  const title    = pageNum > 1 ? `${cfg.headline} — Page ${pageNum} — ${SITE_NAME}` : titleBase;
+  const _ogImgGame = allTagGames.find(g => g.featured && g.imgSrc) || allTagGames.find(g => g.imgSrc);
   const ogImg    = _ogImgGame ? _ogImgGame.imgSrc : `${BASE_URL}/assets/icon/icon-512.png`;
 
+  // Pagination head links
+  const prevUrl = pageNum === 1 ? null
+    : pageNum === 2 ? tagBase
+    : `${tagBase}page/${pageNum - 1}/`;
+  const nextUrl = pageNum < totalPages ? `${tagBase}page/${pageNum + 1}/` : null;
+  const prevLink = prevUrl ? `  <link rel="prev" href="${prevUrl}">` : '';
+  const nextLink = nextUrl ? `  <link rel="next" href="${nextUrl}">` : '';
+  const paginationLinks = [prevLink, nextLink].filter(Boolean).join('\n');
+
   // BreadcrumbList JSON-LD
+  const breadcrumbItems = [
+    { '@type': 'ListItem', position: 1, name: 'Home',       item: `${BASE_URL}/` },
+    { '@type': 'ListItem', position: 2, name: cfg.headline, item: tagBase },
+  ];
+  if (pageNum > 1) {
+    breadcrumbItems.push({ '@type': 'ListItem', position: 3, name: `Page ${pageNum}`, item: pageUrl });
+  }
   const breadcrumbLd = JSON.stringify({
     '@context': 'https://schema.org',
     '@type':    'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home',             item: `${BASE_URL}/` },
-      { '@type': 'ListItem', position: 2, name: cfg.headline,       item: pageUrl },
-    ],
+    itemListElement: breadcrumbItems,
   });
 
-  // CollectionPage + ItemList JSON-LD
+  // CollectionPage + ItemList JSON-LD (only games on this page)
   const itemListLd = JSON.stringify({
     '@context':  'https://schema.org',
     '@type':     'CollectionPage',
-    name:        cfg.headline,
+    name:        pageNum > 1 ? `${cfg.headline} — Page ${pageNum}` : cfg.headline,
     url:         pageUrl,
     description: cfg.desc,
     publisher:   { '@type': 'Organization', name: SITE_NAME, url: `${BASE_URL}/` },
@@ -156,6 +176,15 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags) {
       };
     }),
   });
+
+  // Static pagination nav visible to crawlers
+  const staticPrevNext = (() => {
+    const parts = [];
+    if (prevUrl) parts.push(`<a href="${prevUrl}">&larr; Previous page</a>`);
+    if (nextUrl) parts.push(`<a href="${nextUrl}">Next page &rarr;</a>`);
+    if (!parts.length) return '';
+    return `\n    <nav aria-label="Pagination">\n      ${parts.join(' &nbsp; ')}\n    </nav>`;
+  })();
 
   // Static game list (visible to crawlers + no-JS users)
   const gameListHtml = games.map(g => {
@@ -179,9 +208,13 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags) {
 
   // Replace SPA hero text with tag-specific H1 + first sentence of desc
   const heroSub = cfg.desc.split('.')[0] + '.';
+  const totalCount = allTagGames.length;
+  const pageCountNote = totalPages > 1
+    ? `Showing <strong>${games.length}</strong> of <strong>${totalCount}</strong> free ${esc(cfg.label)} games (page ${pageNum} of ${totalPages}).`
+    : `Explore <strong>${totalCount}</strong> free ${esc(cfg.label)} games — no download required.`;
   const tagIntroHtml = `<section class="tag-intro">
               <p class="tag-intro-desc">${esc(cfg.desc)}</p>
-              <p class="tag-intro-count">Explore <strong>${games.length}</strong> free ${esc(cfg.label)} games — no download required.</p>
+              <p class="tag-intro-count">${pageCountNote}</p>
             </section>`;
   const tagBodyInner = bodyInner
     .replace(
@@ -207,7 +240,7 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags) {
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(cfg.desc)}">
   <link rel="canonical" href="${pageUrl}">
-
+${paginationLinks ? paginationLinks + '\n' : ''}
   <!-- Open Graph -->
   <meta property="og:type"         content="website">
   <meta property="og:title"        content="${esc(title)}">
@@ -242,7 +275,7 @@ ${bodyTag}
     <p>${games.length} games in this category:</p>
     <ul>
 ${gameListHtml}
-    </ul>
+    </ul>${staticPrevNext}
     <nav aria-label="Other Categories">
       <p>Other Categories:</p>
       <ul>
@@ -282,15 +315,31 @@ for (const [tag, cfg] of Object.entries(TAG_CONFIG)) {
   const tagGames = allGames.filter(g => (g.tags || []).includes(tag));
   if (tagGames.length < MIN_GAMES) continue;
 
-  const dir = path.join(DIST, 'tag', tag);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(
-    path.join(dir, 'index.html'),
-    buildTagPage(tag, cfg, tagGames, bodyTag, gameBodyContent, TAG_CONFIG),
-    'utf8'
-  );
-  console.log(`  /tag/${tag}/  (${tagGames.length} games)`);
-  count++;
+  const totalPages = tagGames.length > PAGE_SIZE ? Math.ceil(tagGames.length / PAGE_SIZE) : 1;
+
+  for (let p = 1; p <= totalPages; p++) {
+    const pageGames = tagGames.slice((p - 1) * PAGE_SIZE, p * PAGE_SIZE);
+    const pageInfo  = { current: p, total: totalPages, allGames: tagGames };
+
+    let dir;
+    if (p === 1) {
+      dir = path.join(DIST, 'tag', tag);
+    } else {
+      dir = path.join(DIST, 'tag', tag, 'page', String(p));
+    }
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(
+      path.join(dir, 'index.html'),
+      buildTagPage(tag, cfg, pageGames, bodyTag, gameBodyContent, TAG_CONFIG, pageInfo),
+      'utf8'
+    );
+    if (p === 1) {
+      console.log(`  /tag/${tag}/  (${tagGames.length} games, ${totalPages} page${totalPages > 1 ? 's' : ''})`);
+    } else {
+      console.log(`  /tag/${tag}/page/${p}/  (${pageGames.length} games)`);
+    }
+    count++;
+  }
 }
 
 console.log(`\u2705  Generated ${count} tag pages in dist/tag/`);
