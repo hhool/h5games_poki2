@@ -177,7 +177,7 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, pageInfo = {
     }),
   });
 
-  // Static pagination nav visible to crawlers
+  // Static pagination nav visible to crawlers (noscript)
   const staticPrevNext = (() => {
     const parts = [];
     if (prevUrl) parts.push(`<a href="${prevUrl}">&larr; Previous page</a>`);
@@ -185,6 +185,30 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, pageInfo = {
     if (!parts.length) return '';
     return `\n    <nav aria-label="Pagination">\n      ${parts.join(' &nbsp; ')}\n    </nav>`;
   })();
+
+  // Visible pagination nav for all users
+  const paginationNavHtml = totalPages > 1 ? (() => {
+    const prevBtn = prevUrl
+      ? `<a href="${prevUrl}" class="page-btn" aria-label="Previous page">&#8592; Prev</a>`
+      : `<span class="page-btn disabled" aria-disabled="true">&#8592; Prev</span>`;
+    const nextBtn = nextUrl
+      ? `<a href="${nextUrl}" class="page-btn" aria-label="Next page">Next &#8594;</a>`
+      : `<span class="page-btn disabled" aria-disabled="true">Next &#8594;</span>`;
+    const pageLinks = [];
+    for (let i = 1; i <= totalPages; i++) {
+      const u = i === 1 ? tagBase : `${tagBase}page/${i}/`;
+      const cls = i === pageNum ? 'page-num active' : 'page-num';
+      const cur = i === pageNum ? ' aria-current="page"' : '';
+      pageLinks.push(`<a href="${u}" class="${cls}" aria-label="Page ${i}"${cur}>${i}</a>`);
+    }
+    return `
+<nav class="pagination-nav" aria-label="Page navigation">
+  ${prevBtn}
+  <div class="page-nums">${pageLinks.join('')}</div>
+  ${nextBtn}
+</nav>
+`;
+  })() : '';
 
   // Static game list (visible to crawlers + no-JS users)
   const gameListHtml = games.map(g => {
@@ -285,6 +309,7 @@ ${gameListHtml}
     <p><a href="/">&#8592; Back to ${esc(SITE_NAME)}</a></p>
   </noscript>
 ${tagBodyInner}
+${paginationNavHtml}
 ${relatedSectionHtml}
 </body>
 </html>`;
