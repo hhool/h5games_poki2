@@ -66,17 +66,9 @@ const games = JSON.parse(fs.readFileSync(GAMES, 'utf8'));
 const TAG_PAGES = ['puzzle','adventure','shooting','action','racing','sports',
                    'strategy','multiplayer','idle','arcade','platformer','competitive'];
 
-const PAGE_SIZE = 24;  // must match generate-tag-pages.js
-
-// Compute paginated sub-pages for large tags (page 2+)
 const allVisibleGames = JSON.parse(fs.readFileSync(GAMES, 'utf8')).filter(g => g.show !== false);
-const PAGINATED_TAGS = TAG_PAGES
-  .filter(t => allVisibleGames.filter(g => (g.tags || []).includes(t)).length > PAGE_SIZE)
-  .map(t => {
-    const count = allVisibleGames.filter(g => (g.tags || []).includes(t)).length;
-    const pages = Math.ceil(count / PAGE_SIZE);
-    return { tag: t, pages };
-  });
+// Tag pagination is handled dynamically on the client, so the sitemap only
+// includes the canonical /tag/{tag}/ URLs.
 
 const lines = [
   '<?xml version="1.0" encoding="UTF-8"?>',
@@ -93,11 +85,6 @@ const lines = [
   '',
   '  <!-- Tag / category pages -->',
   ...TAG_PAGES.map(t => url(`${BASE}/tag/${t}/`, 'weekly', '0.8', TODAY)),
-  '',
-  '  <!-- Paginated tag sub-pages (page 2+) -->',
-  ...PAGINATED_TAGS.flatMap(({ tag, pages }) =>
-    Array.from({ length: pages - 1 }, (_, i) => url(`${BASE}/tag/${tag}/page/${i + 2}/`, 'weekly', '0.5', TODAY))
-  ),
   '',
   '  <!-- Per-game pages (static, with full OG + VideoGame JSON-LD) -->',
 ];

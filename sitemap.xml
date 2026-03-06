@@ -114,32 +114,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Paginated tag sub-pages (page 2+) -->
-  <url>
-    <loc>https://poki2.online/tag/puzzle/page/2/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://poki2.online/tag/idle/page/2/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://poki2.online/tag/idle/page/3/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://poki2.online/tag/idle/page/4/</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
   <!-- Per-game pages (static, with full OG + VideoGame JSON-LD) -->
   <url>
     <loc>https://poki2.online/game/2/2048/</loc>

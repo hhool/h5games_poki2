@@ -120,50 +120,33 @@ function extractBody(htmlFile) {
 }
 
 // ── Page builder ──────────────────────────────────────────────────────────────
-// pageInfo: { current (1-based), total (pages), allGames (full tag list) }
-function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, pageInfo = { current: 1, total: 1, allGames: null }) {
-  const { current: pageNum, total: totalPages } = pageInfo;
-  const allTagGames = pageInfo.allGames || games;
-
-  const tagBase  = `${BASE_URL}/tag/${tag}/`;
-  const pageUrl  = pageNum === 1 ? tagBase : `${tagBase}page/${pageNum}/`;
-  const titleBase = `${cfg.headline} — ${SITE_NAME}`;
-  const title    = pageNum > 1 ? `${cfg.headline} — Page ${pageNum} — ${SITE_NAME}` : titleBase;
+function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames = games) {
+  const tagBase = `${BASE_URL}/tag/${tag}/`;
+  const pageUrl = tagBase;
+  const title   = `${cfg.headline} — ${SITE_NAME}`;
   const _ogImgGame = allTagGames.find(g => g.featured && g.imgSrc) || allTagGames.find(g => g.imgSrc);
   const ogImg    = _ogImgGame ? _ogImgGame.imgSrc : `${BASE_URL}/assets/icon/icon-512.png`;
-
-  // Pagination head links
-  const prevUrl = pageNum === 1 ? null
-    : pageNum === 2 ? tagBase
-    : `${tagBase}page/${pageNum - 1}/`;
-  const nextUrl = pageNum < totalPages ? `${tagBase}page/${pageNum + 1}/` : null;
-  const prevLink = prevUrl ? `  <link rel="prev" href="${prevUrl}">` : '';
-  const nextLink = nextUrl ? `  <link rel="next" href="${nextUrl}">` : '';
-  const paginationLinks = [prevLink, nextLink].filter(Boolean).join('\n');
 
   // BreadcrumbList JSON-LD
   const breadcrumbItems = [
     { '@type': 'ListItem', position: 1, name: 'Home',       item: `${BASE_URL}/` },
     { '@type': 'ListItem', position: 2, name: cfg.headline, item: tagBase },
   ];
-  if (pageNum > 1) {
-    breadcrumbItems.push({ '@type': 'ListItem', position: 3, name: `Page ${pageNum}`, item: pageUrl });
-  }
   const breadcrumbLd = JSON.stringify({
     '@context': 'https://schema.org',
     '@type':    'BreadcrumbList',
     itemListElement: breadcrumbItems,
   });
 
-  // CollectionPage + ItemList JSON-LD (only games on this page)
+  // CollectionPage + ItemList JSON-LD (include all games for this tag)
   const itemListLd = JSON.stringify({
     '@context':  'https://schema.org',
     '@type':     'CollectionPage',
-    name:        pageNum > 1 ? `${cfg.headline} — Page ${pageNum}` : cfg.headline,
+    name:        cfg.headline,
     url:         pageUrl,
     description: cfg.desc,
     publisher:   { '@type': 'Organization', name: SITE_NAME, url: `${BASE_URL}/` },
-    hasPart:     games.map((g, i) => {
+    hasPart:     allTagGames.map((g, i) => {
       const slug  = normalizeHref(g.link);
       const char  = slug[0].toLowerCase();
       return {
@@ -177,41 +160,8 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, pageInfo = {
     }),
   });
 
-  // Static pagination nav visible to crawlers (noscript)
-  const staticPrevNext = (() => {
-    const parts = [];
-    if (prevUrl) parts.push(`<a href="${prevUrl}">&larr; Previous page</a>`);
-    if (nextUrl) parts.push(`<a href="${nextUrl}">Next page &rarr;</a>`);
-    if (!parts.length) return '';
-    return `\n    <nav aria-label="Pagination">\n      ${parts.join(' &nbsp; ')}\n    </nav>`;
-  })();
-
-  // Visible pagination nav for all users
-  const paginationNavHtml = totalPages > 1 ? (() => {
-    const prevBtn = prevUrl
-      ? `<a href="${prevUrl}" class="page-btn" aria-label="Previous page">&#8592; Prev</a>`
-      : `<span class="page-btn disabled" aria-disabled="true">&#8592; Prev</span>`;
-    const nextBtn = nextUrl
-      ? `<a href="${nextUrl}" class="page-btn" aria-label="Next page">Next &#8594;</a>`
-      : `<span class="page-btn disabled" aria-disabled="true">Next &#8594;</span>`;
-    const pageLinks = [];
-    for (let i = 1; i <= totalPages; i++) {
-      const u = i === 1 ? tagBase : `${tagBase}page/${i}/`;
-      const cls = i === pageNum ? 'page-num active' : 'page-num';
-      const cur = i === pageNum ? ' aria-current="page"' : '';
-      pageLinks.push(`<a href="${u}" class="${cls}" aria-label="Page ${i}"${cur}>${i}</a>`);
-    }
-    return `
-<nav class="pagination-nav" aria-label="Page navigation">
-  ${prevBtn}
-  <div class="page-nums">${pageLinks.join('')}</div>
-  ${nextBtn}
-</nav>
-`;
-  })() : '';
-
-  // Static game list (visible to crawlers + no-JS users)
-  const gameListHtml = games.map(g => {
+  // Static game list (visible to crawlers + no-JS users) — include all tag games
+  const gameListHtml = allTagGames.map(g => {
     const slug = normalizeHref(g.link);
     const char = slug[0].toLowerCase();
     const href = `/game/${char}/${slug}/`;
@@ -233,9 +183,7 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, pageInfo = {
   // Replace SPA hero text with tag-specific H1 + first sentence of desc
   const heroSub = cfg.desc.split('.')[0] + '.';
   const totalCount = allTagGames.length;
-  const pageCountNote = totalPages > 1
-    ? `Showing <strong>${games.length}</strong> of <strong>${totalCount}</strong> free ${esc(cfg.label)} games (page ${pageNum} of ${totalPages}).`
-    : `Explore <strong>${totalCount}</strong> free ${esc(cfg.label)} games — no download required.`;
+  const pageCountNote = `Explore <strong>${totalCount}</strong> free ${esc(cfg.label)} games — no download required.`;
   const tagIntroHtml = `<section class="tag-intro">
               <p class="tag-intro-desc">${esc(cfg.desc)}</p>
               <p class="tag-intro-count">${pageCountNote}</p>
@@ -264,7 +212,6 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, pageInfo = {
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(cfg.desc)}">
   <link rel="canonical" href="${pageUrl}">
-${paginationLinks ? paginationLinks + '\n' : ''}
   <!-- Open Graph -->
   <meta property="og:type"         content="website">
   <meta property="og:title"        content="${esc(title)}">
@@ -291,15 +238,15 @@ ${paginationLinks ? paginationLinks + '\n' : ''}
   <meta name="theme-color" content="#006bb3">
   <base href="/">
 </head>
-${bodyTag}
+  ${bodyTag}
   <!-- Static content for crawlers / no-JS users -->
   <noscript>
     <h1>${esc(cfg.headline)}</h1>
     <p>${esc(cfg.desc)}</p>
-    <p>${games.length} games in this category:</p>
+    <p>${totalCount} games in this category:</p>
     <ul>
 ${gameListHtml}
-    </ul>${staticPrevNext}
+    </ul>
     <nav aria-label="Other Categories">
       <p>Other Categories:</p>
       <ul>
@@ -309,7 +256,6 @@ ${gameListHtml}
     <p><a href="/">&#8592; Back to ${esc(SITE_NAME)}</a></p>
   </noscript>
 ${tagBodyInner}
-${paginationNavHtml}
 ${relatedSectionHtml}
 </body>
 </html>`;
@@ -326,8 +272,20 @@ if (!fs.existsSync(indexHtml)) {
   process.exit(1);
 }
 
+// Mirror SPA visibility rules for desktop so static noscript/JSON-LD
+// match the client-side `canShow()` ordering and counts.
+function canShowDesktop(game) {
+  // SPA treats undefined/null/false `show` as hidden (strict opt-in)
+  if (game.show === undefined || game.show === null || game.show === false) return false;
+  // SPA defaults to strict opt-in for `avalid` as well
+  if (game.avalid === undefined || game.avalid === null) return false;
+  if (Array.isArray(game.avalid)) return game.avalid.includes('desktop');
+  // Fallback: non-array avalid is treated permissively for desktop
+  return true;
+}
+
 const allGames = JSON.parse(fs.readFileSync(GAMES, 'utf8'))
-  .filter(g => g.show !== false);
+  .filter(canShowDesktop);
 
 const { open: bodyTag, inner: bodyInner } = extractBody(indexHtml);
 const gameBodyContent = bodyInner
@@ -340,31 +298,18 @@ for (const [tag, cfg] of Object.entries(TAG_CONFIG)) {
   const tagGames = allGames.filter(g => (g.tags || []).includes(tag));
   if (tagGames.length < MIN_GAMES) continue;
 
-  const totalPages = tagGames.length > PAGE_SIZE ? Math.ceil(tagGames.length / PAGE_SIZE) : 1;
-
-  for (let p = 1; p <= totalPages; p++) {
-    const pageGames = tagGames.slice((p - 1) * PAGE_SIZE, p * PAGE_SIZE);
-    const pageInfo  = { current: p, total: totalPages, allGames: tagGames };
-
-    let dir;
-    if (p === 1) {
-      dir = path.join(DIST, 'tag', tag);
-    } else {
-      dir = path.join(DIST, 'tag', tag, 'page', String(p));
-    }
-    fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(
-      path.join(dir, 'index.html'),
-      buildTagPage(tag, cfg, pageGames, bodyTag, gameBodyContent, TAG_CONFIG, pageInfo),
-      'utf8'
-    );
-    if (p === 1) {
-      console.log(`  /tag/${tag}/  (${tagGames.length} games, ${totalPages} page${totalPages > 1 ? 's' : ''})`);
-    } else {
-      console.log(`  /tag/${tag}/page/${p}/  (${pageGames.length} games)`);
-    }
-    count++;
-  }
+  // Only generate a single canonical tag page. Pagination is handled
+  // dynamically by the SPA at runtime.
+  const pageGames = tagGames.slice(0, PAGE_SIZE);
+  const dir = path.join(DIST, 'tag', tag);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(
+    path.join(dir, 'index.html'),
+    buildTagPage(tag, cfg, pageGames, bodyTag, gameBodyContent, TAG_CONFIG, tagGames),
+    'utf8'
+  );
+  console.log(`  /tag/${tag}/  (${tagGames.length} games)`);
+  count++;
 }
 
 console.log(`\u2705  Generated ${count} tag pages in dist/tag/`);

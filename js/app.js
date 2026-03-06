@@ -1076,14 +1076,18 @@
     } catch (e) {
       /* ignore and continue with original tag */
     }
-    // Update URL to /tag/{tag}/ when entering via chip/sidebar (not pagination URL).
-    // Only push if current path isn't already a /tag/ path (which means we came
-    // from a static pagination URL and the address bar is already correct).
+    const buildTagUrl = (page) => {
+      const p = Math.max(1, parseInt(page) || 1);
+      return p > 1 ? `/tag/${tag}/?page=${p}` : `/tag/${tag}/`;
+    };
+
+    // Update URL to a single canonical tag page, keeping pagination in the
+    // query string.
     try {
-      const alreadyOnTagPath = /^\/tag\//.test(location.pathname || '');
-      if (!alreadyOnTagPath) {
-        const tagUrl = `/tag/${tag}/`;
-        history.pushState({ view: 'category', tag, page: 1 }, '', tagUrl);
+      const targetUrl = buildTagUrl(pageNum);
+      const currentUrl = (location.pathname || '') + (location.search || '');
+      if (currentUrl !== targetUrl) {
+        history.pushState({ view: 'category', tag, page: pageNum }, '', targetUrl);
       }
     } catch(e) {}
     // Use the robust highlightSidebarItem (case-insensitive) and ensure the
@@ -1143,27 +1147,24 @@
       }
       // Inject visible pagination nav when there are multiple pages
       if (totalCatPages > 1) {
-        const tagBase = `/tag/${tag}/`;
-        const prevUrl = safePageNum === 1 ? null
-          : safePageNum === 2 ? tagBase
-          : `${tagBase}page/${safePageNum - 1}/`;
-        const nextUrl = safePageNum < totalCatPages ? `${tagBase}page/${safePageNum + 1}/` : null;
+        const prevPage = safePageNum === 1 ? null : safePageNum - 1;
+        const nextPage = safePageNum < totalCatPages ? safePageNum + 1 : null;
         const paginav = document.createElement('nav');
         paginav.className = 'pagination-nav';
         paginav.setAttribute('aria-label', 'Page navigation');
-        let phtml = prevUrl
-          ? `<a href="${prevUrl}" class="page-btn" aria-label="Previous page">&#8592; Prev</a>`
+        let phtml = prevPage
+          ? `<a href="${buildTagUrl(prevPage)}" class="page-btn" data-page="${prevPage}" aria-label="Previous page">&#8592; Prev</a>`
           : `<span class="page-btn disabled" aria-disabled="true">&#8592; Prev</span>`;
         phtml += '<div class="page-nums">';
         for (let _p = 1; _p <= totalCatPages; _p++) {
-          const _u = _p === 1 ? tagBase : `${tagBase}page/${_p}/`;
+          const _u = buildTagUrl(_p);
           const _cls = _p === safePageNum ? 'page-num active' : 'page-num';
           const _cur = _p === safePageNum ? ' aria-current="page"' : '';
-          phtml += `<a href="${_u}" class="${_cls}" aria-label="Page ${_p}"${_cur}>${_p}</a>`;
+          phtml += `<a href="${_u}" class="${_cls}" data-page="${_p}" aria-label="Page ${_p}"${_cur}>${_p}</a>`;
         }
         phtml += '</div>';
-        phtml += nextUrl
-          ? `<a href="${nextUrl}" class="page-btn" aria-label="Next page">Next &#8594;</a>`
+        phtml += nextPage
+          ? `<a href="${buildTagUrl(nextPage)}" class="page-btn" data-page="${nextPage}" aria-label="Next page">Next &#8594;</a>`
           : `<span class="page-btn disabled" aria-disabled="true">Next &#8594;</span>`;
         paginav.innerHTML = phtml;
         // Remove any existing pagination nav (could be static noscript output
@@ -1177,6 +1178,16 @@
         } catch (e) {
           /* ignore DOM removal errors */
         }
+        paginav.addEventListener('click', (ev) => {
+          const link = ev.target && ev.target.closest ? ev.target.closest('a[data-page]') : null;
+          if (!link) return;
+          ev.preventDefault();
+          const next = parseInt(link.dataset.page || '1', 10) || 1;
+          showCategory(tag, next);
+          try {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          } catch (e) {}
+        });
         $gameSections.appendChild(paginav);
       }
       // ensure footer spacer is applied for short content so footer sits flush
@@ -2284,7 +2295,7 @@
       return;
     }
     const st = e.state;
-    if (st && st.view === "category") showCategory(st.tag);
+    if (st && st.view === "category") showCategory(st.tag, st.page || 1);
     else showHome();
   });
 
@@ -2360,6 +2371,31 @@
         }
       });
     }
+
+    // Intercept clicks on pagination links site-wide so the SPA handles
+    // page navigation dynamically (prevents full-page navigation to any
+    // static pagination the generator might emit). Keeps `href` intact
+    // for accessibility / shareable links while using client routing.
+    document.addEventListener('click', (ev) => {
+      try {
+        const a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
+        if (!a) return;
+        const pag = a.closest && a.closest('.pagination-nav');
+        if (!pag) return;
+        // Only handle tag pagination links like /tag/{tag}/ or /tag/{tag}/?page=N
+        const url = new URL(a.href, location.origin);
+        const m = url.pathname.match(/^\/tag\/([^\/]+)\//i);
+        if (!m) return;
+        ev.preventDefault();
+        const tagKey = m[1].toLowerCase();
+        const pageNum = parseInt(url.searchParams.get('page') || a.dataset.page || '1', 10) || 1;
+        // Use SPA navigation
+        showCategory(tagKey, pageNum);
+        return;
+      } catch (e) {
+        /* ignore and allow default navigation on error */
+      }
+    }, { passive: false });
 
     // If this document contains the dynamic game sections area (index/category view),
     // ensure the footer is pinned to the viewport and spacer/measurements are applied.
@@ -2536,14 +2572,15 @@
     renderTagChips();
 
     const search = (location.search || "").replace("?", "");
+    const searchParams = new URLSearchParams(location.search || '');
     const hash = location.hash.replace("#", "");
     // Support path-style routing: /games/<slug>/ should open that game directly.
     // This complements query/hash routing and ensures direct links work.
     const pathMatch = (location.pathname || '').match(/^\/games\/([^\/]+)\/??$/i);
     // /game/{char}/{slug}/ → per-game SEO page: auto-open the detail modal (not the iframe)
     const gamePageMatch = (location.pathname || '').match(/^\/game\/[^\/]+\/([^\/]+)\/?$/i);
-    // /tag/{tag}/ or /tag/{tag}/page/{n}/ → tag category page with pagination
-    const tagPageMatch = (location.pathname || '').match(/^\/tag\/([^\/]+)(?:\/page\/(\d+))?\/?$/i);
+    // /tag/{tag}/ → canonical tag page, with optional ?page=N handled client-side
+    const tagPageMatch = (location.pathname || '').match(/^\/tag\/([^\/]+)\/?$/i);
     console.log('[route] init search/hash:', { search, hash });
 
     // Prefer query param routing (e.g. https://poki2.online/?play-vex5)
@@ -2573,9 +2610,9 @@
         showHome();
       }
     } else if (tagPageMatch && tagPageMatch[1]) {
-      // /tag/{tag}/ or /tag/{tag}/page/{n}/ — tag category page
+      // /tag/{tag}/ + optional ?page=N — tag category page
       const tagKey = tagPageMatch[1].toLowerCase();
-      const tagPage = parseInt(tagPageMatch[2] || '1');
+      const tagPage = parseInt(searchParams.get('page') || '1', 10) || 1;
       console.log('[route] detected tag page:', tagKey, 'page', tagPage);
       showCategory(tagKey, tagPage);
     } else if (gamePageMatch && gamePageMatch[1]) {
