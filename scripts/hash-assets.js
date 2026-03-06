@@ -23,20 +23,40 @@ function revRename(filePath) {
   const dist = path.join(__dirname, '..', 'dist');
   if (!fs.existsSync(dist)) { console.error('dist not found — run build scripts first'); process.exit(1); }
   const map = {};
-  const files = [
-    path.join(dist, 'js', 'app.bundle.js'),
-    path.join(dist, 'css', 'styles.css'),
-    // Include PWA files
-    path.join(dist, 'sw.js'),
-    path.join(dist, 'manifest.json'),
-    // 包含图像文件
-    ...glob.sync('**/*.{png,jpg,jpeg,webp}', { cwd: dist }).map(f => path.join(dist, f))
+
+  // 扫描 dist 下的静态资源（排除 map、rev-manifest、.DS_Store 等）
+  const patterns = [
+    '**/*.{js,css,png,jpg,jpeg,webp,svg,gif,ico,json,html,woff,woff2,ttf,eot,otf}'
   ];
-  for (const f of files) {
-    if (!fs.existsSync(f)) continue;
-    const r = revRename(f);
-    map[path.relative(dist, r.original)] = path.relative(dist, r.rev);
+
+  let files = [];
+  for (const p of patterns) {
+    files = files.concat(glob.sync(p, { cwd: dist, nodir: true }));
   }
+
+  // 过滤：不要重命名已经是 rev 格式的文件，或 rev-manifest.json 自身，或 sourcemap 文件
+  files = files.filter(f => {
+    if (f === 'rev-manifest.json') return false;
+    if (f.endsWith('.map')) return false;
+    // 如果文件名已经包含 8 位十六进制哈希（例如 name.abcdef12.ext），跳过
+    const base = path.basename(f);
+    if (/\.[0-9a-f]{8}\./i.test(base)) return false;
+    if (base === '.DS_Store') return false;
+    return true;
+  });
+
+  for (const rel of files) {
+    const f = path.join(dist, rel);
+    if (!fs.existsSync(f)) continue;
+    try {
+      const r = revRename(f);
+      map[rel] = path.relative(dist, r.rev);
+      console.log(`Revved: ${rel} -> ${map[rel]}`);
+    } catch (err) {
+      console.error(`Failed to rev ${rel}:`, err.message);
+    }
+  }
+
   fs.writeFileSync(path.join(dist, 'rev-manifest.json'), JSON.stringify(map, null, 2));
   console.log('Wrote rev-manifest.json');
 })();
