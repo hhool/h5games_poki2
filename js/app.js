@@ -66,7 +66,7 @@
   ];
   // Maximum games to show per category section (configurable, computed per device/orientation)
   let SECTION_LIMIT; // set below after detecting mobile/orientation
-  const HERO_FEATURED_COUNT = 6;
+  const HERO_FEATURED_COUNT = 5;
   const RECENT_KEY = "poki2_recent";
   const MAX_RECENT = 12;
   const FAVS_KEY = 'poki2_favs';
