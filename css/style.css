@@ -45,6 +45,11 @@
   --category-row-h: 220px;
   /* height reserved for the card title/info area inside each card */
   --card-info-h: 48px;
+  /* bottom navigation surface (mobile) */
+  --bottom-nav-bg: #073047; /* deeper blue surface to contrast white page */
+  --bottom-nav-text: #ffffff;
+  --bottom-nav-border: rgba(255,255,255,0.06);
+  --bottom-nav-elevation: 0 -8px 28px rgba(3,12,24,0.22);
 }
 
 html{font-size:16px;scroll-behavior:smooth}
@@ -1419,11 +1424,12 @@ body.detail-open .fav-btn{opacity:0!important;pointer-events:none}
   z-index:800;
   height:calc(56px + env(safe-area-inset-bottom,0px));
   padding-bottom:env(safe-area-inset-bottom,0px);
-  background:var(--surface-1);
-  border-top:1px solid var(--border);
+  background:var(--bottom-nav-bg);
+  color:var(--bottom-nav-text);
+  border-top:1px solid var(--bottom-nav-border);
   flex-direction:row;
   align-items:stretch;
-  box-shadow:0 -2px 12px rgba(0,0,0,.12);
+  box-shadow:var(--bottom-nav-elevation);
 }
 .bottom-nav-item{
   flex:1;
@@ -1434,7 +1440,7 @@ body.detail-open .fav-btn{opacity:0!important;pointer-events:none}
   gap:3px;
   background:none;
   border:none;
-  color:var(--text-2);
+  color:var(--bottom-nav-text);
   font-size:.65rem;
   font-weight:500;
   cursor:pointer;
@@ -1442,8 +1448,8 @@ body.detail-open .fav-btn{opacity:0!important;pointer-events:none}
   transition:color .15s,background .15s;
   -webkit-tap-highlight-color:transparent;
 }
-.bottom-nav-item:hover,.bottom-nav-item:active{color:var(--brand);background:rgba(0,107,179,.06)}
-.bottom-nav-item.active{color:var(--brand)}
+.bottom-nav-item:hover,.bottom-nav-item:active{color:var(--bottom-nav-text);background:rgba(255,255,255,0.04)}
+.bottom-nav-item.active{color:var(--bottom-nav-text);background:rgba(255,255,255,0.06)}
 .bottom-nav-item svg{flex-shrink:0}
 @media(max-width:900px){
   .bottom-nav{display:flex}
