@@ -2,8 +2,11 @@
 /play/*       /  301
 /category/*   /  301
 
-# First, route file-like requests (contain a dot) to custom 404 so missing assets return 404
-/*.*  /404.html  404
+# First, route common static asset requests to custom 404 so missing assets return 404
+# Allow .html to fall through to the SPA fallback so client routes like
+# /tag/puzzle/about.html can be handled client-side instead of triggering
+# the static 404 page.
+/*.{js,css,png,jpg,jpeg,webp,svg,json,map,xml,txt,ico}  /404.html  404
 
 # SPA fallback: rewrite all other requests to index.html so client router handles paths
 /*    /index.html   200
