@@ -766,10 +766,25 @@
         const url = g.imgSrc || getFaviconUrl(g.link);
         if (!url) continue;
         const l = document.createElement('link');
-        l.rel = 'preload';
+        // Prefer preload for same-origin LCP images, but avoid aggressive
+        // preload for cross-origin assets (use prefetch instead) to prevent
+        // "preloaded but not used / credentials mode" warnings.
+        let originMatches = false;
+        try {
+          const linkUrl = new URL(url, location.href);
+          originMatches = linkUrl.origin === location.origin;
+        } catch (err) {
+          originMatches = false;
+        }
         l.as = 'image';
         l.href = url;
         try { l.crossOrigin = 'anonymous'; } catch (err) {}
+        if (originMatches) {
+          l.rel = 'preload';
+          try { l.setAttribute('fetchpriority', 'high'); } catch (e) {}
+        } else {
+          l.rel = 'prefetch';
+        }
         document.head.appendChild(l);
       }
     } catch (e) {}
