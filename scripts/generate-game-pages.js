@@ -193,8 +193,11 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(desc)}">
   <link rel="canonical" href="${pageUrl}">
-  <!-- Preload game icon — likely LCP element on game pages -->
-  <link rel="preload" as="image" href="${esc(img)}" fetchpriority="high" crossorigin="anonymous">
+    <!-- Prefetch game icon for crawlers; only the homepage uses rel=preload.
+      Keeping crossorigin to match asset CORS policy, but avoid aggressive
+      rel=preload on every static game page so only true LCP on the homepage
+      is preloaded. -->
+    <link rel="prefetch" as="image" href="${esc(img)}" crossorigin="anonymous">
 
   <!-- Open Graph -->
   <meta property="og:type"         content="website">
