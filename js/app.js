@@ -769,6 +769,7 @@
         l.rel = 'preload';
         l.as = 'image';
         l.href = url;
+        try { l.crossOrigin = 'anonymous'; } catch (err) {}
         document.head.appendChild(l);
       }
     } catch (e) {}
