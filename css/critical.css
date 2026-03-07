@@ -9,4 +9,4 @@ h1,.hero-title{font-size:1.8rem;font-weight:800;margin:0 0 .5rem}
 p,.hero-sub{margin:0 0 1rem;opacity:.9}
 .hero{padding:28px 16px;text-align:center;color:#fff;background:linear-gradient(135deg,#009cff 0%,#6c3bff 100%)}
 .tag-intro{padding:12px 20px}
-html.has-js .tag-intro, html.has-js noscript{display:none !important;visibility:hidden !important}
+html.has-js .tag-intro, html.has-js noscript, html.has-js #related-tags{display:none !important;visibility:hidden !important}

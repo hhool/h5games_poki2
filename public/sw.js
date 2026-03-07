@@ -1,8 +1,9 @@
 // Service Worker for Poki2 - Caching and Offline Support
-// Bump these values to force a fresh Service Worker install on deploy
-const CACHE_NAME = 'poki2-v3';
-const STATIC_CACHE = 'poki2-static-v3';
-const DYNAMIC_CACHE = 'poki2-dynamic-v3';
+// SW version - bump on deploy to force clients to update
+const SW_VERSION = '2026-03-07-v1';
+const CACHE_NAME = `poki2-${SW_VERSION}`;
+const STATIC_CACHE = `poki2-static-${SW_VERSION}`;
+const DYNAMIC_CACHE = `poki2-dynamic-${SW_VERSION}`;
 
 // Resources to cache immediately
 const STATIC_ASSETS = [
@@ -117,11 +118,23 @@ self.addEventListener('fetch', event => {
           if (response.ok) {
             try {
               const respClone = response.clone();
-              caches.open(DYNAMIC_CACHE).then(cache => {
-                return cache.put(request, respClone).catch(e => {
-                  console.warn('[SW] Cache put failed (html):', e);
+              // Normalize HTML caching key to pathname only (ignore query string)
+              try {
+                const url = new URL(request.url);
+                const key = new Request(url.pathname);
+                caches.open(DYNAMIC_CACHE).then(cache => {
+                  return cache.put(key, respClone).catch(e => {
+                    console.warn('[SW] Cache put failed (html, pathname key):', e);
+                  });
                 });
-              });
+              } catch (e) {
+                // Fallback to storing under the original request if URL parsing fails
+                caches.open(DYNAMIC_CACHE).then(cache => {
+                  return cache.put(request, respClone).catch(e => {
+                    console.warn('[SW] Cache put failed (html, fallback):', e);
+                  });
+                });
+              }
             } catch (e) {
               console.warn('[SW] Failed to clone response for caching (html):', e);
             }
@@ -129,12 +142,16 @@ self.addEventListener('fetch', event => {
           return response;
         })
         .catch(() => {
-          // Try cache first
+          // Try cache first. First try exact request, then try by pathname only
           return caches.match(request)
             .then(cachedResponse => {
               if (cachedResponse) return cachedResponse;
-              // Return offline page for HTML requests
-              return caches.match('/offline.html');
+              try {
+                const url = new URL(request.url);
+                return caches.match(new Request(url.pathname)).then(resp => resp || caches.match('/offline.html'));
+              } catch (e) {
+                return caches.match('/offline.html');
+              }
             });
         })
     );
@@ -148,7 +165,19 @@ self.addEventListener('fetch', event => {
 // Cache-first strategy for static assets
 async function cacheFirst(request) {
   try {
-    const cachedResponse = await caches.match(request);
+    // Prefer exact request match, but also fall back to matching by
+    // pathname only (ignoring query string). This helps when the
+    // site uses a cache-busting `?v=...` query on static assets while the
+    // SW stored a version without the query (common with build pipelines).
+    let cachedResponse = await caches.match(request);
+    if (!cachedResponse) {
+      try {
+        const reqUrl = new URL(request.url);
+        cachedResponse = await caches.match(new Request(reqUrl.pathname));
+      } catch (e) {
+        /* ignore URL parse/cache fallback errors */
+      }
+    }
     if (cachedResponse) {
       return cachedResponse;
     }

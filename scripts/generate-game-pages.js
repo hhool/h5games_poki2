@@ -247,7 +247,7 @@ ${bodyTag}
     ${(relatedGames && relatedGames.length) ? `<p><strong>More games:</strong> ${relatedGames.map(r => {
       const rs = normalizeHref(r.link);
       const rc = rs[0].toLowerCase();
-      return `<a href="/game/${rc}/${rs}/">${esc(r.title)}</a>`;
+      return `<a href="${BASE_URL}/game/${rc}/${rs}/">${esc(r.title)}</a>`;
     }).join(', ')}</p>` : ''}
     <nav aria-label="Game Categories">
       <ul>

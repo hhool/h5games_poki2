@@ -38,10 +38,10 @@ try {
   if (fs.existsSync(CRITICAL_CSS_PATH)) {
     CRITICAL_CSS = fs.readFileSync(CRITICAL_CSS_PATH, 'utf8');
   } else {
-    CRITICAL_CSS = `html,body{height:100%}html:not(.css-ready) body{visibility:hidden;opacity:0}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:#f0f2f5;color:#1e1e2e;margin:0}h1, .hero-title{font-size:1.8rem;font-weight:800;margin:0 0 .5rem}p, .hero-sub{margin:0 0 1rem;opacity:.9} .hero{padding:28px 16px;text-align:center;color:#fff;background:linear-gradient(135deg,#009cff 0%,#6c3bff 100%)}.tag-intro{padding:12px 20px}html.has-js .tag-intro, html.has-js noscript{display:none !important;visibility:hidden !important;}`;
+    CRITICAL_CSS = `html,body{height:100%}html:not(.css-ready) body{visibility:hidden;opacity:0}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:#f0f2f5;color:#1e1e2e;margin:0}h1, .hero-title{font-size:1.8rem;font-weight:800;margin:0 0 .5rem}p, .hero-sub{margin:0 0 1rem;opacity:.9} .hero{padding:28px 16px;text-align:center;color:#fff;background:linear-gradient(135deg,#009cff 0%,#6c3bff 100%)}.tag-intro{padding:12px 20px}html.has-js .tag-intro, html.has-js noscript, html.has-js #related-tags{display:none !important;visibility:hidden !important;}`;
   }
-} catch (e) {
-  CRITICAL_CSS = `html:not(.css-ready) body{visibility:hidden;opacity:0}html.has-js .tag-intro, html.has-js noscript{display:none !important;visibility:hidden !important;}`;
+  } catch (e) {
+  CRITICAL_CSS = `html:not(.css-ready) body{visibility:hidden;opacity:0}html.has-js .tag-intro, html.has-js noscript, html.has-js #related-tags{display:none !important;visibility:hidden !important;}`;
 }
 
 // ── Tag configuration ─────────────────────────────────────────────────────────

@@ -13,6 +13,9 @@
     /* ignore */
   }
 
+  // History instrumentation removed — production runtime should not log or
+  // mutate history here. Any history updates belong in the routing handlers.
+
   /* ---------- Category metadata ---------- */
   const TAG_META = {
     action:      { emoji: "💥", label: "Action" },
@@ -242,6 +245,9 @@
   let pendingGame = null; // game waiting in detail interstitial
   let gamePaused = false; // true when game is paused (exited fullscreen)
   let userExitedFullscreen = false; // track intentional exit vs close
+  // (historical) previously used a one-shot flag to coerce showHome()
+  // into forcing a canonical root; history updates are now handled by
+  // interaction handlers, so the flag is no longer required.
 
   /* ---------- Helpers ---------- */
 
@@ -415,8 +421,10 @@
 
   /* ---------- Data ---------- */
   async function loadGames() {
-    // Prefer local manifest; remove legacy fallback that caused 404s.
-    const urls = ["games.json"];
+    // Prefer local manifest; use absolute path so nested routes (e.g. /tag/...)
+    // correctly resolve the manifest instead of attempting a relative fetch
+    // which would request /tag/games.json and result in a 404.
+    const urls = ["/games.json"];
     for (const url of urls) {
       try {
         const r = await fetch(url);
@@ -895,7 +903,14 @@
     all.className = 'tag-chip active';
     all.textContent = '🕹️ All';
     all.dataset.chip = '__all';
-    all.addEventListener('click', () => { try { $searchInput.value = ''; } catch(e){} showHome(); });
+    all.addEventListener('click', () => {
+      try { $searchInput.value = ''; } catch(e){}
+      // Update the address bar to root and render home via SPA
+      try { history.replaceState({ view: 'home' }, '', '/'); } catch (e) {}
+      showHome();
+      // Delayed reinforcement in case other handlers run
+      setTimeout(() => { try { history.replaceState({ view: 'home' }, '', '/'); } catch(e){}; }, 120);
+    });
     inner.appendChild(all);
     // Favorites chip — quick access without opening sidebar
     const favsChip = document.createElement('button');
@@ -903,7 +918,12 @@
     favsChip.className = 'tag-chip';
     favsChip.textContent = '❤️ Favorites';
     favsChip.dataset.chip = '__favs';
-    favsChip.addEventListener('click', () => showFavorites());
+    favsChip.addEventListener('click', () => {
+      // Update address bar to the canonical favorites path and show favorites via SPA
+      try { history.replaceState({ view: 'favorites' }, '', '/favorites'); } catch (e) {}
+      showFavorites();
+      setTimeout(() => { try { history.replaceState({ view: 'favorites' }, '', '/favorites'); } catch(e){}; }, 120);
+    });
     inner.appendChild(favsChip);
     for (const tag of TAG_ORDER) {
       const meta = TAG_META[tag] || { emoji: '🎲', label: tag };
@@ -1001,7 +1021,13 @@
     // hashchange / init race conditions should be ignored. The search view
     // handles its own display. Intentional Home navigation must clear the
     // input first (see homeItem click handler below).
-    if ($searchInput && $searchInput.value.trim()) return;
+      // Note: history and navigation should be driven by the interaction
+      // handlers (buttons, links) and by popstate/init routing. Removing
+      // any automatic history.replaceState/location.replace calls from
+      // `showHome()` prevents it from overwriting intent set by callers
+      // (e.g. an All/Favorites button that wants the address bar to show
+      // '/'). Routing handlers that need to update the URL should do so
+      // themselves before calling `showHome()`.
     currentView = "home";
     window.__cardCount = 0; // reset so first-N eager logic works on re-render
     // Remove pinned footer helper when returning to home and hide footer until needed
@@ -1046,59 +1072,10 @@
     // Move keyboard focus to the shuffle button on home load — avoids
     // triggering the mobile virtual keyboard that $searchInput.focus() causes.
     try { if ($shuffleBtn && typeof $shuffleBtn.focus === 'function') $shuffleBtn.focus(); } catch (e) {}
-    // Sanitize pathname to avoid protocol-relative edge cases like '//' which
-    // can be interpreted as a protocol-relative URL and cause SecurityError
-    // when passed to history.replaceState. Collapse repeated slashes first.
-    try {
-      // If the full href contains duplicate leading slashes after the origin
-      // (e.g. https://site.com//path), normalize by replacing the leading
-      // run of slashes with a single slash and navigate there. Using
-      // `location.replace` avoids history.replaceState throwing in some
-      // browser/webview combinations that reject protocol-relative URLs.
-      try {
-        const origin = (location.origin || (location.protocol + '//' + location.host));
-        const after = location.href.slice(origin.length);
-        if (after && after.indexOf('//') === 0) {
-          const cleaned = origin + after.replace(/^\/+/, '/');
-          if (cleaned !== location.href) {
-            window.location.replace(cleaned);
-            return;
-          }
-        }
-      } catch (e) {
-        /* ignore origin/URL parsing errors */
-      }
-
-      let safePath = (location.pathname || '').replace(/\/\/{2,}/g, '/');
-      if (!safePath.startsWith('/')) safePath = '/' + safePath;
-
-      // If the current pathname contains an abnormal leading '//' or other
-      // duplicate-slash situation that some third-party scripts handle by
-      // constructing absolute URLs, avoid calling replaceState which may
-      // throw in some browsers. Instead, perform a location.replace to
-      // reload at the cleaned canonical path which resolves the issue.
-      // If collapsing repeated slashes changes the pathname, perform a
-      // full navigation to the canonical path. This avoids calling
-      // history.replaceState with a malformed URL that some browsers reject.
-      const target = safePath + (location.search || '') + (location.hash || '');
-      // Debug help: log pathname vs safePath when collapse occurs
-      try {
-        if (safePath !== (location.pathname || '')) console.log('[route] safePath cleanup', { pathname: location.pathname, safePath: safePath, target: target });
-      } catch (e) {}
-      if (safePath !== (location.pathname || '')) {
-        // Only navigate if the target differs to avoid reload loops
-        if (target !== (location.pathname || '') + (location.search || '') + (location.hash || '')) {
-          window.location.replace(target);
-          return; // navigation scheduled
-        }
-      }
-
-      // Otherwise update history state using a path-only URL
-      history.replaceState({ view: "home" }, "", safePath);
-    } catch (e) {
-      // If replaceState still fails for any reason, fallback to no-op.
-      console.warn('[route] history.replaceState failed to set home state', e && e.message ? e.message : e);
-    }
+    // Intentionally do not modify history here. URL/state changes are the
+    // responsibility of user interaction handlers (clicks) and the router
+    // initialization (popstate). This prevents `showHome()` from
+    // overwriting navigation intent set by callers.
   }
 
   function showCategory(tag, pageNum) {
@@ -1504,7 +1481,14 @@
       // intentional user navigation back to the home page.
       if ($searchInput) $searchInput.value = "";
       closeSidebar();
-      showHome();
+      // Navigate to canonical root and force a full reload so the
+      // address bar becomes the canonical site root (use absolute URL).
+      try {
+        window.location.href = 'https://poki2.online/';
+      } catch (e) {
+        // Fallback to in-app behavior if navigation is blocked
+        showHome();
+      }
     });
     $sidebarNav.appendChild(homeItem);
     // Favorites
@@ -1513,7 +1497,12 @@
     favsItem.className = 'nav-item';
     favsItem.dataset.tag = '__favs';
     favsItem.innerHTML = `<span class="nav-emoji">❤️</span> Favorites <span class="nav-badge" id="favs-nav-badge">${getFavs().length}</span>`;
-    favsItem.addEventListener('click', () => { closeSidebar(); showFavorites(); });
+    favsItem.addEventListener('click', () => {
+      closeSidebar();
+      try { history.replaceState({ view: 'favorites' }, '', '/favorites'); } catch (e) {}
+      showFavorites();
+      setTimeout(() => { try { history.replaceState({ view: 'favorites' }, '', '/favorites'); } catch(e){}; }, 120);
+    });
     $sidebarNav.appendChild(favsItem);
 
     for (const tag of TAG_ORDER) {
@@ -2475,11 +2464,18 @@
 
         // Match tag base: /tag/{tag}/ (optionally trailing slash)
         const tagMatch = url.pathname.match(/^\/tag\/([^\/]+)\/?$/i);
+        // Match favorites page: /favorites or /favorites/
+        const favsMatch = url.pathname.match(/^\/favorites\/?$/i);
         if (tagMatch) {
           ev.preventDefault();
           const tagKey = tagMatch[1].toLowerCase();
           const pageNum = parseInt(url.searchParams.get('page') || a.dataset.page || '1', 10) || 1;
           showCategory(tagKey, pageNum);
+          return;
+        }
+        if (favsMatch) {
+          ev.preventDefault();
+          showFavorites();
           return;
         }
 
@@ -2717,6 +2713,11 @@
       const tagPage = parseInt(searchParams.get('page') || '1', 10) || 1;
       console.log('[route] detected tag page:', tagKey, 'page', tagPage);
       showCategory(tagKey, tagPage);
+    } else if ((location.pathname || '').match(/^\/favorites\/?$/i)) {
+      // Favorites path — show saved favorites list
+      console.log('[route] detected favorites page');
+      try { history.replaceState({ view: 'favorites' }, '', '/favorites'); } catch (e) {}
+      showFavorites();
     } else if (gamePageMatch && gamePageMatch[1]) {
       // /game/{slug}/ — SEO per-game page: open detail modal so OG meta is visible + interactive
       const slug = gamePageMatch[1];
