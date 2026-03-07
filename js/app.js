@@ -219,6 +219,23 @@
   let loadedSections = 0;
   let lazyObserver = null;
 
+  // Ensure footer is hidden by default for JS-enabled clients unless a
+  // `full-bleed-footer` mode was intentionally added server-side. This
+  // allows `showSiteFooterTemporary()` to remove the class to reveal the
+  // footer briefly and then re-hide it. Use DOMContentLoaded fallback when
+  // `document.body` is not yet available.
+  try {
+    if (document && document.body) {
+      if (!document.body.classList.contains('full-bleed-footer')) {
+        document.body.classList.add('footer-hidden');
+      }
+    } else {
+      window.addEventListener('DOMContentLoaded', () => {
+        try { if (!document.body.classList.contains('full-bleed-footer')) document.body.classList.add('footer-hidden'); } catch (e) {}
+      }, { once: true });
+    }
+  } catch (e) {}
+
   function showBar() {
     if (!currentGame || currentGame.use_overlay_title === false) return;
     $overlayBar.classList.remove("bar-hidden");
@@ -1387,6 +1404,66 @@
   };
   window.addEventListener('resize', __spacer_debounce(ensureFooterSpacer, 120), { passive: true });
   window.addEventListener('orientationchange', () => setTimeout(ensureFooterSpacer, 150));
+
+  /* ---------- Site footer display rules ----------
+     1) On first page entry, show footer for 3s then hide.
+     2) When user scrolls to page bottom, show footer for 3s then hide.
+  */
+  try {
+    let __footerTimer = null;
+    let __lastFooterTrigger = 0;
+    const FOOTER_DISPLAY_MS = 3000;
+    const FOOTER_COOLDOWN_MS = 4000; // avoid immediate retriggers
+
+    function showSiteFooterTemporary(ms = FOOTER_DISPLAY_MS) {
+      try {
+        const body = document && document.body;
+        if (!body) return;
+        body.classList.remove('footer-hidden');
+        if (__footerTimer) { clearTimeout(__footerTimer); __footerTimer = null; }
+        __footerTimer = setTimeout(() => {
+          try { body.classList.add('footer-hidden'); } catch (e) {}
+          __footerTimer = null;
+        }, ms);
+        __lastFooterTrigger = Date.now();
+      } catch (e) {}
+    }
+
+    function isAtBottom(threshold = 12) {
+      try {
+        const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+        const vh = window.innerHeight || document.documentElement.clientHeight || 0;
+        const docH = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+        return (scrollY + vh) >= (docH - threshold);
+      } catch (e) { return false; }
+    }
+
+    // Throttled scroll handler: when user reaches bottom show footer temporarily
+    let __scrollThrottle = null;
+    window.addEventListener('scroll', () => {
+      try {
+        if (__scrollThrottle) return; // simple throttle
+        __scrollThrottle = setTimeout(() => { __scrollThrottle = null; }, 150);
+        if (!isAtBottom()) return;
+        const now = Date.now();
+        if (now - __lastFooterTrigger < FOOTER_COOLDOWN_MS) return;
+        showSiteFooterTemporary();
+      } catch (e) {}
+    }, { passive: true });
+
+    // First-load reveal: run on DOMContentLoaded (or immediately if already ready)
+    function _initFooterAutoShow() {
+      try {
+        // Only run once per load
+        if (window.__footerAutoShown) return;
+        window.__footerAutoShown = true;
+        // small defer so layout/spacer measurements run first
+        setTimeout(() => showSiteFooterTemporary(), 120);
+      } catch (e) {}
+    }
+    if (document.readyState === 'complete' || document.readyState === 'interactive') _initFooterAutoShow();
+    else window.addEventListener('DOMContentLoaded', _initFooterAutoShow, { once: true });
+  } catch (e) { /* ignore footer control failures */ }
 
   function showSearch(query) {
     if (!query.trim()) {

@@ -735,6 +735,32 @@ input{font:inherit}
   border-top-left-radius:12px;
   border-top-right-radius:12px;
 }
+/* Smooth show/hide for JS-controlled footer state. When `body.footer-hidden` is
+   present the footer is translated out of view and made non-interactive so
+   it does not block content or overlays. When `body.full-bleed-footer` is
+   present the footer intentionally overlays page content (no extra spacing). */
+.site-footer{
+  transition:transform .28s var(--ease), opacity .28s var(--ease);
+  will-change:transform, opacity;
+}
+body.footer-hidden .site-footer{
+  transform:translateY(calc(100% + 8px));
+  opacity:0;
+  pointer-events:none;
+}
+body:not(.footer-hidden) .site-footer{
+  transform:translateY(0);
+  opacity:1;
+  pointer-events:auto;
+}
+/* When full-bleed mode is active the footer intentionally overlays content.
+   Authors may toggle `body.full-bleed-footer` to enable overlap without
+   additional page padding. */
+body.full-bleed-footer .site-footer{
+  /* keep footer visible and overlapping content */
+  transform:translateY(0);
+  opacity:1;
+}
 .site-footer .footer-inner,
 .site-footer > .footer-brand,
 .site-footer > .footer-links,
