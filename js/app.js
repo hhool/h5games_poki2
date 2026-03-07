@@ -64,8 +64,8 @@
     "sports",
     "platformer",
   ];
-  // Maximum games to show per category section (configurable constant)
-  const SECTION_LIMIT = 9;
+  // Maximum games to show per category section (configurable, computed per device/orientation)
+  let SECTION_LIMIT; // set below after detecting mobile/orientation
   const HERO_FEATURED_COUNT = 6;
   const RECENT_KEY = "poki2_recent";
   const MAX_RECENT = 12;
@@ -79,6 +79,29 @@
     /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) ||
     ("ontouchstart" in window && window.innerWidth <= 1024);
   const isWeChat = /MicroMessenger/i.test(navigator.userAgent);
+
+  // Determine grid/page sizes per device + orientation:
+  // - Mobile portrait: 9 items (3 rows x 3 cols)
+  // - Mobile landscape: 4 items (1 row x 4 cols)
+  // - Desktop: 12 items (2 rows x 6 cols)
+  function computeGridPageSize() {
+    try {
+      if (!isMobile) return 12; // desktop: 2 rows x 6 cols
+      const isLandscape = window.innerWidth > window.innerHeight;
+      return isLandscape ? 4 : 9; // mobile landscape:4, portrait:9
+    } catch (e) {
+      return 9; // safe default
+    }
+  }
+
+  // initialize SECTION_LIMIT based on current viewport
+  SECTION_LIMIT = computeGridPageSize();
+
+  // Keep SECTION_LIMIT updated on resize/orientation changes
+  try {
+    window.addEventListener('resize', () => { SECTION_LIMIT = computeGridPageSize(); }, { passive: true });
+    window.addEventListener('orientationchange', () => { SECTION_LIMIT = computeGridPageSize(); });
+  } catch (e) {}
 
   // Touch/pointer debug logging disabled. To re-enable, set this to true
   // during local debugging (avoid leaving enabled in production).
@@ -1080,7 +1103,7 @@
 
   function showCategory(tag, pageNum) {
     pageNum = Math.max(1, parseInt(pageNum) || 1);
-    const CAT_PAGE_SIZE = 24;
+    const CAT_PAGE_SIZE = computeGridPageSize();
     currentView = "category";
     // Normalize incoming tag to a canonical key present in TAG_ORDER.
     // This handles cases where callers pass a visible label (e.g. "Competitive")

@@ -658,6 +658,20 @@ input{font:inherit}
 }
 /* Stronger fallbacks and stacking to avoid pager overlapping cards on narrow viewports */
 @media (max-width: 640px) {
+
+/* Desktop: enforce 6 columns for category pages so pagination shows
+   2 rows × 6 columns (12 items) per page when viewport is wide. This
+   ensures layout matches the JS per-device page-size logic. */
+@media (min-width: 900px) {
+  .category-page .game-grid,
+  .category-section .game-grid {
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 12px;
+    justify-content: center;
+  }
+  :root { --category-row-h: 160px; }
+}
+
   /* Ensure an ample fallback reserve so an in-flow pager cannot overlap the last row */
   .category-pages { padding-bottom: 260px !important; }
   .category-pages + .category-pager.pinned { margin-top: 20px !important; }
