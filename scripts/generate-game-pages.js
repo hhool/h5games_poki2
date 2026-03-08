@@ -104,6 +104,8 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
     `Play ${game.title} for free online on ${SITE_NAME} \u2014 no downloads required.`;
   const img      = game.imgSrc || `${BASE_URL}/assets/icon/icon-512.png`;
   const char     = slug[0].toLowerCase();
+  const ogImg    = `${BASE_URL}/og/${char}/${slug}-1200x628.png`;
+  
   const pageUrl  = `${BASE_URL}/game/${char}/${slug}/`;
   const playMode = tags.includes('multiplayer') ? 'MultiPlayer' : 'SinglePlayer';
   const inputs   = game.input || [];
@@ -203,9 +205,9 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   <meta property="og:type"         content="website">
   <meta property="og:title"        content="${esc(title)}">
   <meta property="og:description"  content="${esc(desc)}">
-  <meta property="og:image"        content="${esc(img)}">
-  <meta property="og:image:width"  content="512">
-  <meta property="og:image:height" content="512">
+  <meta property="og:image"        content="${esc(ogImg)}">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="628">
   <meta property="og:url"          content="${pageUrl}">
   <meta property="og:site_name"    content="${SITE_NAME}">
 
@@ -213,7 +215,7 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="${esc(title)}">
   <meta name="twitter:description" content="${esc(desc)}">
-  <meta name="twitter:image"       content="${esc(img)}">
+  <meta name="twitter:image"       content="${esc(ogImg)}">
   <meta name="twitter:url"         content="${pageUrl}">
 
   <!-- Structured data: VideoGame + BreadcrumbList + FAQPage -->

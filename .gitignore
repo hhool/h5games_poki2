@@ -77,3 +77,6 @@ tools/*.png
 tools/*.jpg
 tools/*.jpeg
 tools/*.gif
+
+# Generated OG images (don't commit)
+public/og/
