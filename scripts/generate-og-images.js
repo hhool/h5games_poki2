@@ -81,7 +81,20 @@ async function makeOgForGame(game) {
   }
 
   try {
-    const icon = await sharp(buf).resize({ width: 512, height: 512, fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer();
+    let icon;
+    try {
+      icon = await sharp(buf).resize({ width: 512, height: 512, fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer();
+    } catch (innerErr) {
+      // fallback: some PNG variants (indexed/ancillary chunks) may fail on first pass.
+      // Re-encode the source to a standard RGBA PNG and retry.
+      try {
+        const reencoded = await sharp(buf).rotate().png().toBuffer();
+        icon = await sharp(reencoded).resize({ width: 512, height: 512, fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer();
+        console.warn(`Re-encoded icon for ${game.title} and retried composition`);
+      } catch (e2) {
+        throw innerErr;
+      }
+    }
 
     // base background color — match site's accent
     const bg = { r: 7, g: 48, b: 71, alpha: 1 };
