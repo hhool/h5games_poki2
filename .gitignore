@@ -80,3 +80,6 @@ tools/*.gif
 
 # Generated OG images (don't commit)
 public/og/
+
+# ignore orig
+orig/
