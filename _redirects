@@ -2,6 +2,10 @@
 /play/*       /  301
 /category/*   /  301
 
+# Serve tag listing pages through the SPA so they get the full head/assets
+# This ensures URLs like /tag/adventure/ are handled by `index.html` (SPA).
+/tag/*        /index.html  200
+
 # First, route common static asset requests to custom 404 so missing assets return 404
 # Allow .html to fall through to the SPA fallback so client routes like
 # /tag/puzzle/about.html can be handled client-side instead of triggering
