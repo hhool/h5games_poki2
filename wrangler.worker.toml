@@ -9,12 +9,16 @@ compatibility_date = "2026-02-21"
 account_id = "b40383bf3afb30ccc7c9a13d6c9b6868"
 
 # If true, deploy to *.workers.dev; if false, will deploy to the route below
+
 workers_dev = false
 
 # Route to bind the worker to (replace with your domain)
-route = "poki2.online/*"
+# Narrow the route so the worker only intercepts legacy /games/* paths
+# This prevents accidental interception of /css/, /js/ and other static assets.
+route = "poki2.online/games/*"
 
 # Optional: specify environment-specific overrides
 [env.production]
-route = "poki2.online/*"
+# production should also be limited to /games/* only
+route = "poki2.online/games/*"
 account_id = "b40383bf3afb30ccc7c9a13d6c9b6868"
