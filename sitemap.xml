@@ -121,7 +121,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://2.poki2.online/2048/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/2/2048/icon-512.png</image:loc>
       <image:title>2048</image:title>
     </image:image>
   </url>
@@ -131,7 +131,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://a.poki2.online/among-us/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/a/among-us/icon-512.png</image:loc>
       <image:title>Among Us</image:title>
     </image:image>
   </url>
@@ -141,7 +141,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://b.poki2.online/basketball-stars/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/basketball-stars/icon-512.png</image:loc>
       <image:title>Basketball Stars</image:title>
     </image:image>
   </url>
@@ -151,7 +151,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://b.poki2.online/battleforgondor/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/battleforgondor/icon-512.png</image:loc>
       <image:title>Battle for Gondor</image:title>
     </image:image>
   </url>
@@ -161,7 +161,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://b.poki2.online/bigredbutton/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/bigredbutton/icon-512.png</image:loc>
       <image:title>Big Red Button</image:title>
     </image:image>
   </url>
@@ -171,7 +171,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://b.poki2.online/blockclaimio/images/icon192.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/blockclaimio/icon-512.png</image:loc>
       <image:title>Blockclaim.io</image:title>
     </image:image>
   </url>
@@ -181,7 +181,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://c.poki2.online/crossyroad/logo/icon_cy_512_512.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/crossyroad/icon-512.png</image:loc>
       <image:title>Crossy Road</image:title>
     </image:image>
   </url>
@@ -191,7 +191,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://b.poki2.online/babaisyou/logo/ic_bb_512_512.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/babaisyou/icon-512.png</image:loc>
       <image:title>BaBa Is You</image:title>
     </image:image>
   </url>
@@ -201,7 +201,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/zcj2/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/z/zcj2/icon-512.png</image:loc>
       <image:title>Zombies Can't Jump 2</image:title>
     </image:image>
   </url>
@@ -211,7 +211,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/zombiescantjump/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/z/zombiescantjump/icon-512.png</image:loc>
       <image:title>Zombies Can't Jump</image:title>
     </image:image>
   </url>
@@ -221,7 +221,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/runneryodas/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/r/runneryodas/icon-512.png</image:loc>
       <image:title>Runner Yodas</image:title>
     </image:image>
   </url>
@@ -231,7 +231,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/cubeninja/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/cubeninja/icon-512.png</image:loc>
       <image:title>Cube Ninja</image:title>
     </image:image>
   </url>
@@ -241,7 +241,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/battleday/res/titleScreen/titleScreen.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/battleday/icon-512.png</image:loc>
       <image:title>Battle Day Brawl</image:title>
     </image:image>
   </url>
@@ -251,7 +251,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/crkarmax/images/imggamecompleted-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/crkarmax/icon-512.png</image:loc>
       <image:title>Define Of Karmax 3</image:title>
     </image:image>
   </url>
@@ -261,7 +261,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/dronewars/assets/hd/LoadingScene/LoadingScene.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/dronewars/icon-512.png</image:loc>
       <image:title>Drone Wars</image:title>
     </image:image>
   </url>
@@ -271,7 +271,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/luxahoy/luxahoy.com/apple-touch-icon-114x114-precomposed.png</image:loc>
+      <image:loc>https://poki2.online/icons/l/luxahoy/icon-512.png</image:loc>
       <image:title>Luxahoy</image:title>
     </image:image>
   </url>
@@ -281,7 +281,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/sambogart/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/sambogart/icon-512.png</image:loc>
       <image:title>Sambogart</image:title>
     </image:image>
   </url>
@@ -291,7 +291,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/ninjakidvszb/images/slash-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/n/ninjakidvszb/icon-512.png</image:loc>
       <image:title>Ninja Kid VS Zombies</image:title>
     </image:image>
   </url>
@@ -301,7 +301,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/spacecowboy/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/spacecowboy/icon-512.png</image:loc>
       <image:title>Space Cowboy</image:title>
     </image:image>
   </url>
@@ -311,7 +311,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/silverarrow/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/silverarrow/icon-512.png</image:loc>
       <image:title>Silver Arrow</image:title>
     </image:image>
   </url>
@@ -321,7 +321,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/ninjablade/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/n/ninjablade/icon-512.png</image:loc>
       <image:title>Ninja Blade</image:title>
     </image:image>
   </url>
@@ -331,7 +331,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://b.poki2.online/blackknight/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/blackknight/icon-512.png</image:loc>
       <image:title>Black Knight</image:title>
     </image:image>
   </url>
@@ -341,7 +341,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://b.poki2.online/breakingthebank/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/breakingthebank/icon-512.png</image:loc>
       <image:title>Breaking the Bank</image:title>
     </image:image>
   </url>
@@ -351,7 +351,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://b.poki2.online/btts/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/btts/icon-512.png</image:loc>
       <image:title>Big Tower Tiny Square</image:title>
     </image:image>
   </url>
@@ -361,7 +361,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://c.poki2.online/cannon-basketball-4/img/splash.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/cannon-basketball-4/icon-512.png</image:loc>
       <image:title>Cannon Basketball 4</image:title>
     </image:image>
   </url>
@@ -371,7 +371,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://c.poki2.online/cell-machine/img/te9nDu.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/cell-machine/icon-512.png</image:loc>
       <image:title>Cell Machine</image:title>
     </image:image>
   </url>
@@ -381,7 +381,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://c.poki2.online/chrome-dino/icons/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/chrome-dino/icon-512.png</image:loc>
       <image:title>Chrome Dino</image:title>
     </image:image>
   </url>
@@ -391,7 +391,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://c.poki2.online/circlo/img/download.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/circlo/icon-512.png</image:loc>
       <image:title>circlO</image:title>
     </image:image>
   </url>
@@ -401,7 +401,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://c.poki2.online/connect3/connect3.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/connect3/icon-512.png</image:loc>
       <image:title>Connect 3</image:title>
     </image:image>
   </url>
@@ -411,7 +411,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://c.poki2.online/craftmine/images/craftmine.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/craftmine/icon-512.png</image:loc>
       <image:title>CraftMine</image:title>
     </image:image>
   </url>
@@ -421,7 +421,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://c.poki2.online/csgo-clicker/images/case1.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/csgo-clicker/icon-512.png</image:loc>
       <image:title>CS:GO Clicker</image:title>
     </image:image>
   </url>
@@ -431,7 +431,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://c.poki2.online/ctr/logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/ctr/icon-512.png</image:loc>
       <image:title>Cut the Rope</image:title>
     </image:image>
   </url>
@@ -441,7 +441,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://c.poki2.online/ctr-holiday/images/1024/ui/ph_logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/ctr-holiday/icon-512.png</image:loc>
       <image:title>Cut the Rope Holiday</image:title>
     </image:image>
   </url>
@@ -451,7 +451,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://c.poki2.online/ctr-tr/logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/ctr-tr/icon-512.png</image:loc>
       <image:title>Cut the Rope Time Travel</image:title>
     </image:image>
   </url>
@@ -461,7 +461,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://c.poki2.online/cupcake2048/meta/apple-touch-icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/cupcake2048/icon-512.png</image:loc>
       <image:title>Cupcake 2048</image:title>
     </image:image>
   </url>
@@ -471,7 +471,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://d.poki2.online/deal-or-no-deal/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/deal-or-no-deal/icon-512.png</image:loc>
       <image:title>Deal or No Deal</image:title>
     </image:image>
   </url>
@@ -481,7 +481,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://d.poki2.online/death-run-3d/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/death-run-3d/icon-512.png</image:loc>
       <image:title>Death Run 3D</image:title>
     </image:image>
   </url>
@@ -491,7 +491,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://d.poki2.online/defend-the-tank/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/defend-the-tank/icon-512.png</image:loc>
       <image:title>Defend the Tank</image:title>
     </image:image>
   </url>
@@ -501,7 +501,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://d.poki2.online/doge2048/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/doge2048/icon-512.png</image:loc>
       <image:title>Doge 2048</image:title>
     </image:image>
   </url>
@@ -511,7 +511,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://d.poki2.online/doodle-jump/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/doodle-jump/icon-512.png</image:loc>
       <image:title>Doodle Jump</image:title>
     </image:image>
   </url>
@@ -521,7 +521,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://d.poki2.online/draw-the-hill/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/draw-the-hill/icon-512.png</image:loc>
       <image:title>Draw the Hill</image:title>
     </image:image>
   </url>
@@ -531,7 +531,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://e.poki2.online/edgenotfound/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/e/edgenotfound/icon-512.png</image:loc>
       <image:title>Edge Not Found</image:title>
     </image:image>
   </url>
@@ -541,7 +541,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://e.poki2.online/endlesswar3/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/e/endlesswar3/icon-512.png</image:loc>
       <image:title>Endless War 3</image:title>
     </image:image>
   </url>
@@ -551,7 +551,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://e.poki2.online/evil-glitch/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/e/evil-glitch/icon-512.png</image:loc>
       <image:title>Evil Glitch</image:title>
     </image:image>
   </url>
@@ -561,7 +561,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://f.poki2.online/flappy-bird/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/f/flappy-bird/icon-512.png</image:loc>
       <image:title>Flappy Bird</image:title>
     </image:image>
   </url>
@@ -571,7 +571,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://g.poki2.online/geodash/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/g/geodash/icon-512.png</image:loc>
       <image:title>Geometry Dash (Scratch)</image:title>
     </image:image>
   </url>
@@ -581,7 +581,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://g.poki2.online/getaway-shootout/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/g/getaway-shootout/icon-512.png</image:loc>
       <image:title>Getaway Shootout</image:title>
     </image:image>
   </url>
@@ -591,7 +591,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://g.poki2.online/gimme-the-airpod/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/g/gimme-the-airpod/icon-512.png</image:loc>
       <image:title>Gimme the Airpod</image:title>
     </image:image>
   </url>
@@ -601,7 +601,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://g.poki2.online/grindcraft/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/g/grindcraft/icon-512.png</image:loc>
       <image:title>Grind Craft</image:title>
     </image:image>
   </url>
@@ -611,7 +611,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://h.poki2.online/helicopter/helicopter.png</image:loc>
+      <image:loc>https://poki2.online/icons/h/helicopter/icon-512.png</image:loc>
       <image:title>Helicopter</image:title>
     </image:image>
   </url>
@@ -621,7 +621,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://h.poki2.online/hexgl/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/h/hexgl/icon-512.png</image:loc>
       <image:title>HexGL</image:title>
     </image:image>
   </url>
@@ -631,7 +631,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://i.poki2.online/interactivebuddy/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/i/interactivebuddy/icon-512.png</image:loc>
       <image:title>Interactive Buddy</image:title>
     </image:image>
   </url>
@@ -641,7 +641,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://j.poki2.online/just-one-boss/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/j/just-one-boss/icon-512.png</image:loc>
       <image:title>Just One Boss</image:title>
     </image:image>
   </url>
@@ -651,7 +651,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://k.poki2.online/krunker/img/krunker-io.jpg</image:loc>
+      <image:loc>https://poki2.online/icons/k/krunker/icon-512.png</image:loc>
       <image:title>Krunker</image:title>
     </image:image>
   </url>
@@ -661,7 +661,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://m.poki2.online/meme2048/img/honey_badger.jpg</image:loc>
+      <image:loc>https://poki2.online/icons/m/meme2048/icon-512.png</image:loc>
       <image:title>Meme 2048</image:title>
     </image:image>
   </url>
@@ -671,7 +671,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://m.poki2.online/minecraft/splash.jpeg</image:loc>
+      <image:loc>https://poki2.online/icons/m/minecraft/icon-512.png</image:loc>
       <image:title>Eaglercraft</image:title>
     </image:image>
   </url>
@@ -681,7 +681,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://m.poki2.online/minesweeper/img/minesweeper.png</image:loc>
+      <image:loc>https://poki2.online/icons/m/minesweeper/icon-512.png</image:loc>
       <image:title>Minesweeper</image:title>
     </image:image>
   </url>
@@ -691,7 +691,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://m.poki2.online/miniputt/miniputt.png</image:loc>
+      <image:loc>https://poki2.online/icons/m/miniputt/icon-512.png</image:loc>
       <image:title>Mini-putt</image:title>
     </image:image>
   </url>
@@ -701,7 +701,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://m.poki2.online/missiles/miss.png</image:loc>
+      <image:loc>https://poki2.online/icons/m/missiles/icon-512.png</image:loc>
       <image:title>Missiles</image:title>
     </image:image>
   </url>
@@ -711,7 +711,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://n.poki2.online/n-gon/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/n/n-gon/icon-512.png</image:loc>
       <image:title>n-gon</image:title>
     </image:image>
   </url>
@@ -721,7 +721,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://o.poki2.online/om-bounce/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/o/om-bounce/icon-512.png</image:loc>
       <image:title>Om Nom Bounce</image:title>
     </image:image>
   </url>
@@ -731,7 +731,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://p.poki2.online/papaspizzaria/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/papaspizzaria/icon-512.png</image:loc>
       <image:title>Papaspizzaria</image:title>
     </image:image>
   </url>
@@ -741,7 +741,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://p.poki2.online/paperio2/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/paperio2/icon-512.png</image:loc>
       <image:title>Paper.io 2</image:title>
     </image:image>
   </url>
@@ -751,7 +751,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://p.poki2.online/papery-planes/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/papery-planes/icon-512.png</image:loc>
       <image:title>Papery Planes</image:title>
     </image:image>
   </url>
@@ -761,7 +761,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://p.poki2.online/push-the-square/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/push-the-square/icon-512.png</image:loc>
       <image:title>Push The Square</image:title>
     </image:image>
   </url>
@@ -771,7 +771,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://r.poki2.online/rolly-vortex/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/r/rolly-vortex/icon-512.png</image:loc>
       <image:title>Rolly Vortex</image:title>
     </image:image>
   </url>
@@ -781,7 +781,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://s.poki2.online/snowbattle/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/snowbattle/icon-512.png</image:loc>
       <image:title>Snow Battle</image:title>
     </image:image>
   </url>
@@ -791,7 +791,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://s.poki2.online/soldier-legend/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/soldier-legend/icon-512.png</image:loc>
       <image:title>Soldier Legend</image:title>
     </image:image>
   </url>
@@ -801,7 +801,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://s.poki2.online/solitaire/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/solitaire/icon-512.png</image:loc>
       <image:title>Solitaire</image:title>
     </image:image>
   </url>
@@ -811,7 +811,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://s.poki2.online/stack/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/stack/icon-512.png</image:loc>
       <image:title>Stack</image:title>
     </image:image>
   </url>
@@ -821,7 +821,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://s.poki2.online/stealingthediamond/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/stealingthediamond/icon-512.png</image:loc>
       <image:title>Stealing The Diamond</image:title>
     </image:image>
   </url>
@@ -831,7 +831,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://s.poki2.online/stickwar/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/stickwar/icon-512.png</image:loc>
       <image:title>Stick War</image:title>
     </image:image>
   </url>
@@ -841,7 +841,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://s.poki2.online/stormthehouse2/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/stormthehouse2/icon-512.png</image:loc>
       <image:title>Storm The House 2</image:title>
     </image:image>
   </url>
@@ -851,7 +851,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://s.poki2.online/swerve/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/swerve/icon-512.png</image:loc>
       <image:title>Swerve</image:title>
     </image:image>
   </url>
@@ -861,7 +861,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://t.poki2.online/temple-run-2/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/temple-run-2/icon-512.png</image:loc>
       <image:title>Temple Run 2</image:title>
     </image:image>
   </url>
@@ -871,7 +871,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://t.poki2.online/thebattle/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/thebattle/icon-512.png</image:loc>
       <image:title>The Battle</image:title>
     </image:image>
   </url>
@@ -881,7 +881,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://t.poki2.online/the-final-earth/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/the-final-earth/icon-512.png</image:loc>
       <image:title>The Final Earth</image:title>
     </image:image>
   </url>
@@ -891,7 +891,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://t.poki2.online/theheist/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/theheist/icon-512.png</image:loc>
       <image:title>The Heist</image:title>
     </image:image>
   </url>
@@ -901,7 +901,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://t.poki2.online/there-is-no-game/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/there-is-no-game/icon-512.png</image:loc>
       <image:title>There Is No Game</image:title>
     </image:image>
   </url>
@@ -911,7 +911,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://t.poki2.online/thisistheonlylevel/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/thisistheonlylevel/icon-512.png</image:loc>
       <image:title>This Is The Only Level</image:title>
     </image:image>
   </url>
@@ -921,7 +921,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://t.poki2.online/tosstheturtle/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/tosstheturtle/icon-512.png</image:loc>
       <image:title>Toss The Turtle</image:title>
     </image:image>
   </url>
@@ -931,7 +931,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://t.poki2.online/tube-jumpers/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/tube-jumpers/icon-512.png</image:loc>
       <image:title>Tube Jumpers</image:title>
     </image:image>
   </url>
@@ -941,7 +941,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://v.poki2.online/vex3/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/v/vex3/icon-512.png</image:loc>
       <image:title>Vex 3</image:title>
     </image:image>
   </url>
@@ -951,7 +951,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://v.poki2.online/vex4/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/v/vex4/icon-512.png</image:loc>
       <image:title>Vex 4</image:title>
     </image:image>
   </url>
@@ -961,7 +961,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://v.poki2.online/vex6/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/v/vex6/icon-512.png</image:loc>
       <image:title>Vex 6</image:title>
     </image:image>
   </url>
@@ -971,7 +971,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://w.poki2.online/wordle/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/w/wordle/icon-512.png</image:loc>
       <image:title>Wordle</image:title>
     </image:image>
   </url>
@@ -981,7 +981,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/alienattack/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/a/alienattack/icon-512.png</image:loc>
       <image:title>Alien Attack</image:title>
     </image:image>
   </url>
@@ -991,7 +991,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/balanceball/assets/conMain.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/balanceball/icon-512.png</image:loc>
       <image:title>Balance Ball</image:title>
     </image:image>
   </url>
@@ -1001,7 +1001,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/bdot/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/bdot/icon-512.png</image:loc>
       <image:title>Bonncing Dot</image:title>
     </image:image>
   </url>
@@ -1011,7 +1011,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/blackbats/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/blackbats/icon-512.png</image:loc>
       <image:title>Black Bats</image:title>
     </image:image>
   </url>
@@ -1021,7 +1021,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/bloxslider/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/bloxslider/icon-512.png</image:loc>
       <image:title>Blox Slider</image:title>
     </image:image>
   </url>
@@ -1031,7 +1031,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/bottomtight/images/bmchars-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/bottomtight/icon-512.png</image:loc>
       <image:title>Sir Bottomtight</image:title>
     </image:image>
   </url>
@@ -1041,7 +1041,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/bravebird/loading-logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/bravebird/icon-512.png</image:loc>
       <image:title>Brave Bird</image:title>
     </image:image>
   </url>
@@ -1051,7 +1051,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/brokenhorn/img/menuBack_img.jpg</image:loc>
+      <image:loc>https://poki2.online/icons/b/brokenhorn/icon-512.png</image:loc>
       <image:title>Broken Horn</image:title>
     </image:image>
   </url>
@@ -1061,7 +1061,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/bubblecn/res/ui_mainMenu_background.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/bubblecn/icon-512.png</image:loc>
       <image:title>Bubble It Steven</image:title>
     </image:image>
   </url>
@@ -1071,7 +1071,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/bubblefish/icon_256.png</image:loc>
+      <image:loc>https://poki2.online/icons/b/bubblefish/icon-512.png</image:loc>
       <image:title>Bubble Fish</image:title>
     </image:image>
   </url>
@@ -1081,7 +1081,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/candyfusion/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/candyfusion/icon-512.png</image:loc>
       <image:title>Candy Fusion</image:title>
     </image:image>
   </url>
@@ -1091,7 +1091,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/captainroger//img/cover-logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/captainroger/icon-512.png</image:loc>
       <image:title>Captain Roger</image:title>
     </image:image>
   </url>
@@ -1101,7 +1101,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/captainwar/images/splashplayer-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/captainwar/icon-512.png</image:loc>
       <image:title>Captain War</image:title>
     </image:image>
   </url>
@@ -1111,7 +1111,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/catonfire/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/catonfire/icon-512.png</image:loc>
       <image:title>Cat On Fire</image:title>
     </image:image>
   </url>
@@ -1121,7 +1121,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/cavejumper/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/cavejumper/icon-512.png</image:loc>
       <image:title>Cave Jumper</image:title>
     </image:image>
   </url>
@@ -1131,7 +1131,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/cboxes/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/cboxes/icon-512.png</image:loc>
       <image:title>cboxes</image:title>
     </image:image>
   </url>
@@ -1141,7 +1141,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/cheeselab/images/covertitle-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/cheeselab/icon-512.png</image:loc>
       <image:title>Cheese Lab</image:title>
     </image:image>
   </url>
@@ -1151,7 +1151,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/chipman/media/title-logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/chipman/icon-512.png</image:loc>
       <image:title>Chip Man</image:title>
     </image:image>
   </url>
@@ -1161,7 +1161,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/christmasballs/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/christmasballs/icon-512.png</image:loc>
       <image:title>Christmas Balls</image:title>
     </image:image>
   </url>
@@ -1171,7 +1171,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/circleball/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/circleball/icon-512.png</image:loc>
       <image:title>Circle Ball</image:title>
     </image:image>
   </url>
@@ -1181,7 +1181,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/circlepong/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/circlepong/icon-512.png</image:loc>
       <image:title>Circle Pong</image:title>
     </image:image>
   </url>
@@ -1191,7 +1191,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/circletris/images/twitter-opengraph.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/circletris/icon-512.png</image:loc>
       <image:title>Circle Tris</image:title>
     </image:image>
   </url>
@@ -1201,7 +1201,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/cninjas/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/cninjas/icon-512.png</image:loc>
       <image:title>Crun Ching Ninjas</image:title>
     </image:image>
   </url>
@@ -1211,7 +1211,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/cowboyrun/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/cowboyrun/icon-512.png</image:loc>
       <image:title>Super Cowboy Run</image:title>
     </image:image>
   </url>
@@ -1221,7 +1221,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/cowboyshot/html5game/CowBoyZ_texture_0.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/cowboyshot/icon-512.png</image:loc>
       <image:title>CowBoy2 Shot</image:title>
     </image:image>
   </url>
@@ -1231,7 +1231,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/craigenstone/images/coverillustration-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/c/craigenstone/icon-512.png</image:loc>
       <image:title>Craigen Stone</image:title>
     </image:image>
   </url>
@@ -1241,7 +1241,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/dangerous/images/sprite4-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/dangerous/icon-512.png</image:loc>
       <image:title>Dangerous</image:title>
     </image:image>
   </url>
@@ -1251,7 +1251,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/darkninja/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/darkninja/icon-512.png</image:loc>
       <image:title>Dark Ninja</image:title>
     </image:image>
   </url>
@@ -1261,7 +1261,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/deathsoul/images/logo-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/deathsoul/icon-512.png</image:loc>
       <image:title>Death Soul</image:title>
     </image:image>
   </url>
@@ -1271,7 +1271,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/donteattrash/images/introduction-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/donteattrash/icon-512.png</image:loc>
       <image:title>Dont Eat Trash</image:title>
     </image:image>
   </url>
@@ -1281,7 +1281,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/dotgame/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/dotgame/icon-512.png</image:loc>
       <image:title>Dot Game</image:title>
     </image:image>
   </url>
@@ -1291,7 +1291,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/dropcircle/images/title-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/dropcircle/icon-512.png</image:loc>
       <image:title>Drop Circle</image:title>
     </image:image>
   </url>
@@ -1301,7 +1301,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/duckwater/logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/d/duckwater/icon-512.png</image:loc>
       <image:title>Duck Water</image:title>
     </image:image>
   </url>
@@ -1311,7 +1311,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/elmore/logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/e/elmore/icon-512.png</image:loc>
       <image:title>Scratch Card</image:title>
     </image:image>
   </url>
@@ -1321,7 +1321,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/escape/loading-logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/e/escape/icon-512.png</image:loc>
       <image:title>Escape</image:title>
     </image:image>
   </url>
@@ -1331,7 +1331,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/evilrobot/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/e/evilrobot/icon-512.png</image:loc>
       <image:title>Evil Robot</image:title>
     </image:image>
   </url>
@@ -1341,7 +1341,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/evilwyrm/assets/icon-180.png</image:loc>
+      <image:loc>https://poki2.online/icons/e/evilwyrm/icon-512.png</image:loc>
       <image:title>Evil Wyrm</image:title>
     </image:image>
   </url>
@@ -1351,7 +1351,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/fastgame/images/sprite3-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/f/fastgame/icon-512.png</image:loc>
       <image:title>Fast</image:title>
     </image:image>
   </url>
@@ -1361,7 +1361,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/firebrigade/icon_128.png</image:loc>
+      <image:loc>https://poki2.online/icons/f/firebrigade/icon-512.png</image:loc>
       <image:title>Fire Brigade</image:title>
     </image:image>
   </url>
@@ -1371,7 +1371,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/fishingfrenzy/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/f/fishingfrenzy/icon-512.png</image:loc>
       <image:title>Fishing Frenzy</image:title>
     </image:image>
   </url>
@@ -1381,7 +1381,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/flapcatcopters/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/f/flapcatcopters/icon-512.png</image:loc>
       <image:title>Flap Cat Copters</image:title>
     </image:image>
   </url>
@@ -1391,7 +1391,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/flapcatxmas/images/airship-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/f/flapcatxmas/icon-512.png</image:loc>
       <image:title>Flap Cat Xmas</image:title>
     </image:image>
   </url>
@@ -1401,7 +1401,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/flappydog/assets/images/bgSplash.jpg</image:loc>
+      <image:loc>https://poki2.online/icons/f/flappydog/icon-512.png</image:loc>
       <image:title>Flappy Dog</image:title>
     </image:image>
   </url>
@@ -1411,7 +1411,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/flyingschool/images/gametitle2-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/f/flyingschool/icon-512.png</image:loc>
       <image:title>Flying School</image:title>
     </image:image>
   </url>
@@ -1421,7 +1421,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/foofoo/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/f/foofoo/icon-512.png</image:loc>
       <image:title>Foo Foo</image:title>
     </image:image>
   </url>
@@ -1431,7 +1431,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/foxfury/loading-logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/f/foxfury/icon-512.png</image:loc>
       <image:title>Fox Fury</image:title>
     </image:image>
   </url>
@@ -1441,7 +1441,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/freedomroad/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/f/freedomroad/icon-512.png</image:loc>
       <image:title>Freedom Road</image:title>
     </image:image>
   </url>
@@ -1451,7 +1451,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/frog/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/f/frog/icon-512.png</image:loc>
       <image:title>Hungry Frog</image:title>
     </image:image>
   </url>
@@ -1461,7 +1461,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/fullimmersion/img/game-immersion-square.png</image:loc>
+      <image:loc>https://poki2.online/icons/f/fullimmersion/icon-512.png</image:loc>
       <image:title>Full Immersion</image:title>
     </image:image>
   </url>
@@ -1471,7 +1471,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/funnysoccer/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/f/funnysoccer/icon-512.png</image:loc>
       <image:title>Funny Soccer</image:title>
     </image:image>
   </url>
@@ -1481,7 +1481,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/gettwelve/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/g/gettwelve/icon-512.png</image:loc>
       <image:title>Get Twelve</image:title>
     </image:image>
   </url>
@@ -1491,7 +1491,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/goblinmachine/images/sprite6-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/g/goblinmachine/icon-512.png</image:loc>
       <image:title>Goblin Machine</image:title>
     </image:image>
   </url>
@@ -1501,7 +1501,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/gofishing/logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/g/gofishing/icon-512.png</image:loc>
       <image:title>Go Fishing</image:title>
     </image:image>
   </url>
@@ -1511,7 +1511,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/goingnuts/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/g/goingnuts/icon-512.png</image:loc>
       <image:title>Going Nuts</image:title>
     </image:image>
   </url>
@@ -1521,7 +1521,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/greedygnomes/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/g/greedygnomes/icon-512.png</image:loc>
       <image:title>Greedy Gnomes</image:title>
     </image:image>
   </url>
@@ -1531,7 +1531,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/greenwings/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/g/greenwings/icon-512.png</image:loc>
       <image:title>Green Wings</image:title>
     </image:image>
   </url>
@@ -1541,7 +1541,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/groovyski/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/g/groovyski/icon-512.png</image:loc>
       <image:title>Groovy Ski</image:title>
     </image:image>
   </url>
@@ -1551,7 +1551,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/grubhub/media/characters.png</image:loc>
+      <image:loc>https://poki2.online/icons/g/grubhub/icon-512.png</image:loc>
       <image:title>Grub Runner</image:title>
     </image:image>
   </url>
@@ -1561,7 +1561,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/gumballrace/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/g/gumballrace/icon-512.png</image:loc>
       <image:title>Gumball Race</image:title>
     </image:image>
   </url>
@@ -1571,7 +1571,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/hanselandgretel/images/sprite6-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/h/hanselandgretel/icon-512.png</image:loc>
       <image:title>Hansel and Gretel</image:title>
     </image:image>
   </url>
@@ -1581,7 +1581,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/hidden/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/h/hidden/icon-512.png</image:loc>
       <image:title>Hidden</image:title>
     </image:image>
   </url>
@@ -1591,7 +1591,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/hungrybob/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/h/hungrybob/icon-512.png</image:loc>
       <image:title>Hungry Bob</image:title>
     </image:image>
   </url>
@@ -1601,7 +1601,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/icecream/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/i/icecream/icon-512.png</image:loc>
       <image:title>Ice Cream</image:title>
     </image:image>
   </url>
@@ -1611,7 +1611,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/jellydoods/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/j/jellydoods/icon-512.png</image:loc>
       <image:title>Jelly Doods</image:title>
     </image:image>
   </url>
@@ -1621,7 +1621,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/jellyslice/jellyslice/screen1.png</image:loc>
+      <image:loc>https://poki2.online/icons/j/jellyslice/icon-512.png</image:loc>
       <image:title>Jelly Slice</image:title>
     </image:image>
   </url>
@@ -1631,7 +1631,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/jomjom/images/gametitle2-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/j/jomjom/icon-512.png</image:loc>
       <image:title>Jomjom</image:title>
     </image:image>
   </url>
@@ -1641,7 +1641,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/jumpkitty/loading-logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/j/jumpkitty/icon-512.png</image:loc>
       <image:title>Jump Kitty</image:title>
     </image:image>
   </url>
@@ -1651,7 +1651,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/jumpman/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/j/jumpman/icon-512.png</image:loc>
       <image:title>Fall Jump Roll</image:title>
     </image:image>
   </url>
@@ -1661,7 +1661,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/jumppydragon/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/j/jumppydragon/icon-512.png</image:loc>
       <image:title>Jumppy Dragon</image:title>
     </image:image>
   </url>
@@ -1671,7 +1671,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/knightnday/assets/tile.png</image:loc>
+      <image:loc>https://poki2.online/icons/k/knightnday/icon-512.png</image:loc>
       <image:title>Knight Of The Day</image:title>
     </image:image>
   </url>
@@ -1681,7 +1681,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/lizardrocket/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/l/lizardrocket/icon-512.png</image:loc>
       <image:title>Izard Rocket</image:title>
     </image:image>
   </url>
@@ -1691,7 +1691,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/looneyroonks/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/l/looneyroonks/icon-512.png</image:loc>
       <image:title>Looney Roonks</image:title>
     </image:image>
   </url>
@@ -1701,7 +1701,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/manic/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/m/manic/icon-512.png</image:loc>
       <image:title>Manic</image:title>
     </image:image>
   </url>
@@ -1711,7 +1711,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/matchtime/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/m/matchtime/icon-512.png</image:loc>
       <image:title>Matching Time</image:title>
     </image:image>
   </url>
@@ -1721,7 +1721,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/mathgame/imgs/bgs/pause-bg.jpg</image:loc>
+      <image:loc>https://poki2.online/icons/m/mathgame/icon-512.png</image:loc>
       <image:title>Math Game</image:title>
     </image:image>
   </url>
@@ -1731,7 +1731,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/monstercandy/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/m/monstercandy/icon-512.png</image:loc>
       <image:title>Monster Candy</image:title>
     </image:image>
   </url>
@@ -1741,7 +1741,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/monstereater/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/m/monstereater/icon-512.png</image:loc>
       <image:title>Monster Eater</image:title>
     </image:image>
   </url>
@@ -1751,7 +1751,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/mousejump/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/m/mousejump/icon-512.png</image:loc>
       <image:title>Mouse Jump</image:title>
     </image:image>
   </url>
@@ -1761,7 +1761,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/nest/images/gametitle2-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/n/nest/icon-512.png</image:loc>
       <image:title>NEST</image:title>
     </image:image>
   </url>
@@ -1771,7 +1771,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/ninjarun/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/n/ninjarun/icon-512.png</image:loc>
       <image:title>Ninja Run</image:title>
     </image:image>
   </url>
@@ -1781,7 +1781,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/ninjaway/assets/icon-180.png</image:loc>
+      <image:loc>https://poki2.online/icons/n/ninjaway/icon-512.png</image:loc>
       <image:title>Ninja Way</image:title>
     </image:image>
   </url>
@@ -1791,7 +1791,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/ojelloonline/ojelloonline/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/o/ojelloonline/icon-512.png</image:loc>
       <image:title>Ojello</image:title>
     </image:image>
   </url>
@@ -1801,7 +1801,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/pacman/img/preview.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/pacman/icon-512.png</image:loc>
       <image:title>Pacman</image:title>
     </image:image>
   </url>
@@ -1811,7 +1811,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/pancakeboss/games/pancakes/img/background-1.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/pancakeboss/icon-512.png</image:loc>
       <image:title>Pancake Boss</image:title>
     </image:image>
   </url>
@@ -1821,7 +1821,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/pandaflash/resource/assets/bg_common.jpg</image:loc>
+      <image:loc>https://poki2.online/icons/p/pandaflash/icon-512.png</image:loc>
       <image:title>Panda Flash</image:title>
     </image:image>
   </url>
@@ -1831,7 +1831,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/pebbleboy/pebbleboy/screen1.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/pebbleboy/icon-512.png</image:loc>
       <image:title>Pebble Boy</image:title>
     </image:image>
   </url>
@@ -1841,7 +1841,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/penguin/images/cover_title-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/penguin/icon-512.png</image:loc>
       <image:title>Penguin</image:title>
     </image:image>
   </url>
@@ -1851,7 +1851,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/pieattack/images/logo-sheet1.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/pieattack/icon-512.png</image:loc>
       <image:title>Pie Attack</image:title>
     </image:image>
   </url>
@@ -1861,7 +1861,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/pigeon/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/pigeon/icon-512.png</image:loc>
       <image:title>Pigeon</image:title>
     </image:image>
   </url>
@@ -1871,7 +1871,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/piggyroll/images/sprite3-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/piggyroll/icon-512.png</image:loc>
       <image:title>Piggy Roll</image:title>
     </image:image>
   </url>
@@ -1881,7 +1881,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/piratekid/images/tutorialsprite-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/piratekid/icon-512.png</image:loc>
       <image:title>Pirate Kid</image:title>
     </image:image>
   </url>
@@ -1891,7 +1891,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/pitana/images/missions/paintings/paint4.jpg</image:loc>
+      <image:loc>https://poki2.online/icons/p/pitana/icon-512.png</image:loc>
       <image:title>Pitana</image:title>
     </image:image>
   </url>
@@ -1901,7 +1901,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/popup/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/popup/icon-512.png</image:loc>
       <image:title>Popup</image:title>
     </image:image>
   </url>
@@ -1911,7 +1911,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/portalrunner/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/portalrunner/icon-512.png</image:loc>
       <image:title>Portal Runner</image:title>
     </image:image>
   </url>
@@ -1921,7 +1921,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/pyramidjump/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/p/pyramidjump/icon-512.png</image:loc>
       <image:title>Pyramid Jump</image:title>
     </image:image>
   </url>
@@ -1931,7 +1931,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/raccoonrun/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/r/raccoonrun/icon-512.png</image:loc>
       <image:title>Raccoon Run</image:title>
     </image:image>
   </url>
@@ -1941,7 +1941,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/rainbox/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/r/rainbox/icon-512.png</image:loc>
       <image:title>Rain Box</image:title>
     </image:image>
   </url>
@@ -1951,7 +1951,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/rapunzel/images/cover_title-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/r/rapunzel/icon-512.png</image:loc>
       <image:title>Rapunzel Tower</image:title>
     </image:image>
   </url>
@@ -1961,7 +1961,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/rectangzings/images/coverasset-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/r/rectangzings/icon-512.png</image:loc>
       <image:title>Rec Tang Zings</image:title>
     </image:image>
   </url>
@@ -1971,7 +1971,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/robotion/images/ajzol1-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/r/robotion/icon-512.png</image:loc>
       <image:title>Robotion</image:title>
     </image:image>
   </url>
@@ -1981,7 +1981,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/rocketpop/img/rocket-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/r/rocketpop/icon-512.png</image:loc>
       <image:title>Rocket Pop</image:title>
     </image:image>
   </url>
@@ -1991,7 +1991,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/ropeninja/ropeninja/screen1.png</image:loc>
+      <image:loc>https://poki2.online/icons/r/ropeninja/icon-512.png</image:loc>
       <image:title>Rope Ninja</image:title>
     </image:image>
   </url>
@@ -2001,7 +2001,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/runpixierun/logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/r/runpixierun/icon-512.png</image:loc>
       <image:title>Run Pixie Run</image:title>
     </image:image>
   </url>
@@ -2011,7 +2011,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/sallybbq/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/sallybbq/icon-512.png</image:loc>
       <image:title>Sally BBQ</image:title>
     </image:image>
   </url>
@@ -2021,7 +2021,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/skylands/assets/button_play_big.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/skylands/icon-512.png</image:loc>
       <image:title>Sky Lands</image:title>
     </image:image>
   </url>
@@ -2031,7 +2031,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/skyrace/loading-logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/skyrace/icon-512.png</image:loc>
       <image:title>Sky Race</image:title>
     </image:image>
   </url>
@@ -2041,7 +2041,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/skywire/assets/logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/skywire/icon-512.png</image:loc>
       <image:title>Sky Wire</image:title>
     </image:image>
   </url>
@@ -2051,7 +2051,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/slotchicken/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/slotchicken/icon-512.png</image:loc>
       <image:title>Slot Chicken</image:title>
     </image:image>
   </url>
@@ -2061,7 +2061,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/sortbird/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/sortbird/icon-512.png</image:loc>
       <image:title>Sort Bird</image:title>
     </image:image>
   </url>
@@ -2071,7 +2071,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/springninja/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/springninja/icon-512.png</image:loc>
       <image:title>Spring Ninja</image:title>
     </image:image>
   </url>
@@ -2081,7 +2081,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/squarecrush/images/logo-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/squarecrush/icon-512.png</image:loc>
       <image:title>Square Crush</image:title>
     </image:image>
   </url>
@@ -2091,7 +2091,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/stevenkash/Assets/images/logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/stevenkash/icon-512.png</image:loc>
       <image:title>Steven Kash</image:title>
     </image:image>
   </url>
@@ -2101,7 +2101,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/stickpanda/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/stickpanda/icon-512.png</image:loc>
       <image:title>Stick Panda</image:title>
     </image:image>
   </url>
@@ -2111,7 +2111,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/stickpandaxmas/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/stickpandaxmas/icon-512.png</image:loc>
       <image:title>Stick Panda Xmas</image:title>
     </image:image>
   </url>
@@ -2121,7 +2121,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/sticksamurai/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/sticksamurai/icon-512.png</image:loc>
       <image:title>Stick Samurai</image:title>
     </image:image>
   </url>
@@ -2131,7 +2131,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/stickygoo/stickygoo/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/stickygoo/icon-512.png</image:loc>
       <image:title>Sticky Goo</image:title>
     </image:image>
   </url>
@@ -2141,7 +2141,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/strangespace/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/strangespace/icon-512.png</image:loc>
       <image:title>Strange Space</image:title>
     </image:image>
   </url>
@@ -2151,7 +2151,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/taptapsubmarine/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/taptapsubmarine/icon-512.png</image:loc>
       <image:title>Taptap Submarine</image:title>
     </image:image>
   </url>
@@ -2161,7 +2161,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/targetap/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/targetap/icon-512.png</image:loc>
       <image:title>Target Tap</image:title>
     </image:image>
   </url>
@@ -2171,7 +2171,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/titanrunner/assets/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/titanrunner/icon-512.png</image:loc>
       <image:title>Titan Runner</image:title>
     </image:image>
   </url>
@@ -2181,7 +2181,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/tooncup/assets/img/localisation/logo.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/tooncup/icon-512.png</image:loc>
       <image:title>Tooncup</image:title>
     </image:image>
   </url>
@@ -2191,7 +2191,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/trailblazer/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/trailblazer/icon-512.png</image:loc>
       <image:title>Trailblazer</image:title>
     </image:image>
   </url>
@@ -2201,7 +2201,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/trashndash/res/bg_title.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/trashndash/icon-512.png</image:loc>
       <image:title>Trash Dash</image:title>
     </image:image>
   </url>
@@ -2211,7 +2211,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/trollboxing/images/money-sheet0.png</image:loc>
+      <image:loc>https://poki2.online/icons/t/trollboxing/icon-512.png</image:loc>
       <image:title>Troll Boxing</image:title>
     </image:image>
   </url>
@@ -2221,7 +2221,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/uforun/icon-256.png</image:loc>
+      <image:loc>https://poki2.online/icons/u/uforun/icon-512.png</image:loc>
       <image:title>Ufo Run</image:title>
     </image:image>
   </url>
@@ -2231,7 +2231,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/veggirabbit/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/v/veggirabbit/icon-512.png</image:loc>
       <image:title>Veggi Rabbit</image:title>
     </image:image>
   </url>
@@ -2241,7 +2241,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/woodblock/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/w/woodblock/icon-512.png</image:loc>
       <image:title>Wood Block</image:title>
     </image:image>
   </url>
@@ -2251,7 +2251,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/xtypesky/assets/icon-512.png</image:loc>
+      <image:loc>https://poki2.online/icons/x/xtypesky/icon-512.png</image:loc>
       <image:title>X Type Sky</image:title>
     </image:image>
   </url>
@@ -2261,7 +2261,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/zapaliens/icon.png</image:loc>
+      <image:loc>https://poki2.online/icons/z/zapaliens/icon-512.png</image:loc>
       <image:title>Zapaliens</image:title>
     </image:image>
   </url>
@@ -2271,7 +2271,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/zombienight/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/z/zombienight/icon-512.png</image:loc>
       <image:title>Zombie Night</image:title>
     </image:image>
   </url>
@@ -2281,7 +2281,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/zombieworld/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/z/zombieworld/icon-512.png</image:loc>
       <image:title>Zombie World</image:title>
     </image:image>
   </url>
@@ -2291,7 +2291,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://mobileapp.poki2.online/mobile/zoostuner/icon-128.png</image:loc>
+      <image:loc>https://poki2.online/icons/z/zoostuner/icon-512.png</image:loc>
       <image:title>Zoon Stuner</image:title>
     </image:image>
   </url>
@@ -2301,7 +2301,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://s.poki2.online/snakebird/logo/icon_sb_512_512.png</image:loc>
+      <image:loc>https://poki2.online/icons/s/snakebird/icon-512.png</image:loc>
       <image:title>Snakebird</image:title>
     </image:image>
   </url>
