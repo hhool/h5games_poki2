@@ -24,7 +24,13 @@ async function handle(request) {
       const slug = mMobile[1];
       const char = slug[0].toLowerCase();
       // 301 redirect to the canonical per-game SEO page
-      return Response.redirect(`https://poki2.online/game/${char}/${slug}/`, 301);
+      return new Response(null, {
+        status: 301,
+        headers: {
+          Location: `https://poki2.online/game/${char}/${slug}/`,
+          "X-Worker-Redirect": "true"
+        }
+      });
     }
 
     const m = normalizedPath.match(/^\/games\/([^\/]+)\/?$/i);
@@ -32,7 +38,13 @@ async function handle(request) {
       const slug = m[1];
       const char  = slug[0].toLowerCase();
       // 301 redirect to the canonical per-game SEO page (replaces the old shard proxy)
-      return Response.redirect(`https://poki2.online/game/${char}/${slug}/`, 301);
+      return new Response(null, {
+        status: 301,
+        headers: {
+          Location: `https://poki2.online/game/${char}/${slug}/`,
+          "X-Worker-Redirect": "true"
+        }
+      });
     }
   }
 
