@@ -25,8 +25,8 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": true,
-    "badge": "popular",
+    "featured": false,
+    "badge": "",
     "description": "Slide numbered tiles on the grid to merge them and reach the 2048 tile. Simple to learn, hard to master. Supports keyboard and touch controls.",
     "howToPlay": "Slide numbered tiles on the grid to merge them and reach the 2048 tile. Simple to learn, hard to master."
   },
@@ -48,6 +48,7 @@
     ],
     "orientation": "landscape",
     "avalid": [
+      "mobile",
       "desktop"
     ],
     "show": true,
@@ -78,12 +79,13 @@
     ],
     "orientation": "landscape",
     "avalid": [
+      "mobile",
       "desktop"
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": true,
-    "badge": "hot",
+    "featured": false,
+    "badge": "",
     "description": "Intense 1v1 street basketball duels. Dribble, shoot, and block your way to victory. Controlled entirely with your keyboard. Best experienced on desktop brows.",
     "howToPlay": "Intense 1v1 street basketball duels. Dribble, shoot, and block your way to victory.",
     "icons": {
@@ -122,7 +124,7 @@
       "192": "https://poki2.online/icons/b/battleforgondor/icon-192.png",
       "512": "https://poki2.online/icons/b/battleforgondor/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Big Red Button",
@@ -151,7 +153,7 @@
       "192": "https://poki2.online/icons/b/bigredbutton/icon-192.png",
       "512": "https://poki2.online/icons/b/bigredbutton/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Blockclaim.io",
@@ -184,7 +186,7 @@
       "192": "https://poki2.online/icons/b/blockclaimio/icon-192.png",
       "512": "https://poki2.online/icons/b/blockclaimio/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Crossy Road",
@@ -211,8 +213,8 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": true,
-    "badge": "popular",
+    "featured": false,
+    "badge": "",
     "description": "How far can you hop without getting squashed? An infinite arcade-style hopper inspired by Frogger. Supports keyboard and touch controls.",
     "howToPlay": "How far can you hop without getting squashed? An infinite arcade-style hopper inspired by Frogger.",
     "icons": {
@@ -246,8 +248,8 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": true,
-    "badge": "new",
+    "featured": false,
+    "badge": "",
     "description": "A mind-bending puzzle game where the rules themselves are objects you can push around to change reality. Supports keyboard and touch controls.",
     "howToPlay": "A mind-bending puzzle game where the rules themselves are objects you can push around to change reality.",
     "icons": {
@@ -286,7 +288,7 @@
       "192": "https://poki2.online/icons/z/zcj2/icon-192.png",
       "512": "https://poki2.online/icons/z/zcj2/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Zombies Can't Jump",
@@ -310,7 +312,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": false,
+    "featured": true,
     "description": "Classic zombie defense: shoot the walking dead before they climb their way over the wall to reach you. Supports keyboard and touch controls.",
     "howToPlay": "Classic zombie defense: shoot the walking dead before they climb their way over the wall to reach you.",
     "icons": {
@@ -351,7 +353,7 @@
       "192": "https://poki2.online/icons/r/runneryodas/icon-192.png",
       "512": "https://poki2.online/icons/r/runneryodas/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Cube Ninja",
@@ -382,7 +384,7 @@
       "192": "https://poki2.online/icons/c/cubeninja/icon-192.png",
       "512": "https://poki2.online/icons/c/cubeninja/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Battle Day Brawl",
@@ -412,7 +414,7 @@
       "192": "https://poki2.online/icons/b/battleday/icon-192.png",
       "512": "https://poki2.online/icons/b/battleday/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Define Of Karmax 3",
@@ -443,7 +445,7 @@
       "192": "https://poki2.online/icons/c/crkarmax/icon-192.png",
       "512": "https://poki2.online/icons/c/crkarmax/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Drone Wars",
@@ -475,7 +477,7 @@
       "192": "https://poki2.online/icons/d/dronewars/icon-192.png",
       "512": "https://poki2.online/icons/d/dronewars/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Luxahoy",
@@ -507,7 +509,7 @@
       "192": "https://poki2.online/icons/l/luxahoy/icon-192.png",
       "512": "https://poki2.online/icons/l/luxahoy/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Sambogart",
@@ -540,7 +542,7 @@
       "192": "https://poki2.online/icons/s/sambogart/icon-192.png",
       "512": "https://poki2.online/icons/s/sambogart/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Ninja Kid VS Zombies",
@@ -574,7 +576,7 @@
       "192": "https://poki2.online/icons/n/ninjakidvszb/icon-192.png",
       "512": "https://poki2.online/icons/n/ninjakidvszb/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Space Cowboy",
@@ -608,7 +610,7 @@
       "192": "https://poki2.online/icons/s/spacecowboy/icon-192.png",
       "512": "https://poki2.online/icons/s/spacecowboy/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Silver Arrow",
@@ -642,7 +644,7 @@
       "192": "https://poki2.online/icons/s/silverarrow/icon-192.png",
       "512": "https://poki2.online/icons/s/silverarrow/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Ninja Blade",
@@ -668,7 +670,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": false,
+    "featured": true,
     "description": "React to oncoming attacks and slice them in half with your katana. Timing and precision are everything. Supports keyboard and touch controls.",
     "howToPlay": "React to oncoming attacks and slice them in half with your katana. Timing and precision are everything.",
     "icons": {
@@ -707,7 +709,7 @@
       "192": "https://poki2.online/icons/b/blackknight/icon-192.png",
       "512": "https://poki2.online/icons/b/blackknight/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Breaking the Bank",
@@ -742,7 +744,7 @@
       "192": "https://poki2.online/icons/b/breakingthebank/icon-192.png",
       "512": "https://poki2.online/icons/b/breakingthebank/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Big Tower Tiny Square",
@@ -766,7 +768,7 @@
     "show": true,
     "use_overlay_title": false,
     "description": "A super-hard precision platformer. Navigate a tiny square through a massive tower of traps. Controlled entirely with your keyboard.",
-    "featured": false,
+    "featured": true,
     "badge": "popular",
     "howToPlay": "A super-hard precision platformer. Navigate a tiny square through a massive tower of traps.",
     "icons": {
@@ -805,7 +807,7 @@
       "192": "https://poki2.online/icons/c/cannon-basketball-4/icon-192.png",
       "512": "https://poki2.online/icons/c/cannon-basketball-4/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Cell Machine",
@@ -828,7 +830,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "badge": "new",
+    "badge": "",
     "description": "Design and build self-replicating cellular automata machines. An endlessly surprising sandbox. Supports keyboard and touch controls.",
     "featured": false,
     "howToPlay": "Design and build self-replicating cellular automata machines. An endlessly surprising sandbox.",
@@ -858,8 +860,8 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": true,
-    "badge": "popular",
+    "featured": false,
+    "badge": "",
     "description": "The classic infinite runner hidden in Chrome's offline page. Jump over cacti and duck under pterodactyls. Supports keyboard and touch controls.",
     "howToPlay": "The classic infinite runner hidden in Chrome's offline page. Jump over cacti and duck under pterodactyls.",
     "icons": {
@@ -893,7 +895,7 @@
       "192": "https://poki2.online/icons/c/circlo/icon-192.png",
       "512": "https://poki2.online/icons/c/circlo/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Connect 3",
@@ -922,7 +924,7 @@
       "192": "https://poki2.online/icons/c/connect3/icon-192.png",
       "512": "https://poki2.online/icons/c/connect3/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "CraftMine",
@@ -949,7 +951,7 @@
       "192": "https://poki2.online/icons/c/craftmine/icon-192.png",
       "512": "https://poki2.online/icons/c/craftmine/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "CS:GO Clicker",
@@ -977,7 +979,7 @@
       "192": "https://poki2.online/icons/c/csgo-clicker/icon-192.png",
       "512": "https://poki2.online/icons/c/csgo-clicker/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Cut the Rope",
@@ -999,8 +1001,8 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": true,
-    "badge": "popular",
+    "featured": false,
+    "badge": "",
     "description": "Cut the ropes at just the right moment to feed candy to the adorable little monster, Om Nom! Supports keyboard and touch controls.",
     "howToPlay": "Cut the ropes at just the right moment to feed candy to the adorable little monster, Om Nom!",
     "icons": {
@@ -1038,7 +1040,7 @@
       "192": "https://poki2.online/icons/c/ctr-holiday/icon-192.png",
       "512": "https://poki2.online/icons/c/ctr-holiday/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Cut the Rope Time Travel",
@@ -1070,7 +1072,7 @@
       "192": "https://poki2.online/icons/c/ctr-tr/icon-192.png",
       "512": "https://poki2.online/icons/c/ctr-tr/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Cupcake 2048",
@@ -1100,7 +1102,7 @@
       "192": "https://poki2.online/icons/c/cupcake2048/icon-192.png",
       "512": "https://poki2.online/icons/c/cupcake2048/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Deal or No Deal",
@@ -1119,7 +1121,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": false,
+    "featured": true,
     "description": "Open briefcases and negotiate with the banker to win the most money in this TV game show classic. Supports keyboard and touch controls.",
     "howToPlay": "Open briefcases and negotiate with the banker to win the most money in this TV game show classic.",
     "icons": {
@@ -1159,7 +1161,7 @@
       "192": "https://poki2.online/icons/d/death-run-3d/icon-192.png",
       "512": "https://poki2.online/icons/d/death-run-3d/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Defend the Tank",
@@ -1188,7 +1190,7 @@
       "192": "https://poki2.online/icons/d/defend-the-tank/icon-192.png",
       "512": "https://poki2.online/icons/d/defend-the-tank/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Doge 2048",
@@ -1217,7 +1219,7 @@
       "192": "https://poki2.online/icons/d/doge2048/icon-192.png",
       "512": "https://poki2.online/icons/d/doge2048/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Doodle Jump",
@@ -1238,8 +1240,8 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": true,
-    "badge": "popular",
+    "featured": false,
+    "badge": "",
     "description": "Guide the Doodler ever upward on randomized platforms while avoiding monsters and bottomless gaps. Supports keyboard and touch controls.",
     "howToPlay": "Guide the Doodler ever upward on randomized platforms while avoiding monsters and bottomless gaps.",
     "icons": {
@@ -1279,7 +1281,7 @@
       "192": "https://poki2.online/icons/d/draw-the-hill/icon-192.png",
       "512": "https://poki2.online/icons/d/draw-the-hill/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Edge Not Found",
@@ -1308,7 +1310,7 @@
       "192": "https://poki2.online/icons/e/edgenotfound/icon-192.png",
       "512": "https://poki2.online/icons/e/edgenotfound/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Endless War 3",
@@ -1334,7 +1336,7 @@
       "192": "https://poki2.online/icons/e/endlesswar3/icon-192.png",
       "512": "https://poki2.online/icons/e/endlesswar3/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Evil Glitch",
@@ -1363,7 +1365,7 @@
       "192": "https://poki2.online/icons/e/evil-glitch/icon-192.png",
       "512": "https://poki2.online/icons/e/evil-glitch/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Flappy Bird",
@@ -1385,8 +1387,8 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": true,
-    "badge": "popular",
+    "featured": false,
+    "badge": "",
     "description": "Tap to keep the bird airborne through narrow gaps in the pipes. One tap at a time. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Tap to keep the bird airborne through narrow gaps in the pipes. One tap at a time.",
     "icons": {
@@ -1415,8 +1417,8 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": true,
-    "badge": "hot",
+    "featured": false,
+    "badge": "",
     "description": "Rhythm-based action platformer. Jump, fly, and flip through increasingly dangerous levels. Supports keyboard and touch controls. Runs in any modern browser o.",
     "howToPlay": "Rhythm-based action platformer. Jump, fly, and flip through increasingly dangerous levels.",
     "icons": {
@@ -1449,7 +1451,7 @@
       "192": "https://poki2.online/icons/g/getaway-shootout/icon-192.png",
       "512": "https://poki2.online/icons/g/getaway-shootout/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Gimme the Airpod",
@@ -1478,7 +1480,7 @@
       "192": "https://poki2.online/icons/g/gimme-the-airpod/icon-192.png",
       "512": "https://poki2.online/icons/g/gimme-the-airpod/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Grind Craft",
@@ -1507,7 +1509,7 @@
       "192": "https://poki2.online/icons/g/grindcraft/icon-192.png",
       "512": "https://poki2.online/icons/g/grindcraft/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Helicopter",
@@ -1535,7 +1537,7 @@
       "192": "https://poki2.online/icons/h/helicopter/icon-192.png",
       "512": "https://poki2.online/icons/h/helicopter/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "HexGL",
@@ -1556,7 +1558,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": false,
+    "featured": true,
     "description": "A futuristic high-speed racing game inspired by F-Zero and WipeOut, running entirely in WebGL. Supports keyboard and touch controls.",
     "howToPlay": "A futuristic high-speed racing game inspired by F-Zero and WipeOut, running entirely in WebGL.",
     "icons": {
@@ -1564,7 +1566,7 @@
       "192": "https://poki2.online/icons/h/hexgl/icon-192.png",
       "512": "https://poki2.online/icons/h/hexgl/icon-512.png"
     },
-    "badge": "popular"
+    "badge": "hot"
   },
   {
     "title": "Interactive Buddy",
@@ -1592,7 +1594,7 @@
       "192": "https://poki2.online/icons/i/interactivebuddy/icon-192.png",
       "512": "https://poki2.online/icons/i/interactivebuddy/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Just One Boss",
@@ -1619,7 +1621,7 @@
       "192": "https://poki2.online/icons/j/justoneboss/icon-192.png",
       "512": "https://poki2.online/icons/j/justoneboss/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Krunker",
@@ -1643,7 +1645,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "badge": "hot",
+    "badge": "",
     "description": "A fast-paced browser-based FPS with blocky graphics and silky-smooth gunplay. No download needed. Supports keyboard and touch controls.",
     "howToPlay": "A fast-paced browser-based FPS with blocky graphics and silky-smooth gunplay.",
     "icons": {
@@ -1679,7 +1681,7 @@
       "192": "https://poki2.online/icons/m/meme2048/icon-192.png",
       "512": "https://poki2.online/icons/m/meme2048/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Eaglercraft",
@@ -1699,7 +1701,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": false,
+    "featured": true,
     "badge": "popular",
     "description": "Play Minecraft 1.8 directly in your browser with no Java, no downloads, and no plugins required. Controlled entirely with your keyboard.",
     "howToPlay": "Play Minecraft 1.8 directly in your browser.",
@@ -1730,7 +1732,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "badge": "popular",
+    "badge": "",
     "description": "The classic Windows game. Use logic to flag mines and reveal safe squares without triggering an explosion. Supports keyboard and touch controls.",
     "howToPlay": "The classic Windows game. Use logic to flag mines and reveal safe squares without triggering an explosion.",
     "icons": {
@@ -1767,7 +1769,7 @@
       "192": "https://poki2.online/icons/m/miniputt/icon-192.png",
       "512": "https://poki2.online/icons/m/miniputt/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Missiles",
@@ -1798,7 +1800,7 @@
       "192": "https://poki2.online/icons/m/missiles/icon-192.png",
       "512": "https://poki2.online/icons/m/missiles/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "n-gon",
@@ -1824,7 +1826,7 @@
       "192": "https://poki2.online/icons/n/n-gon/icon-192.png",
       "512": "https://poki2.online/icons/n/n-gon/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "link": "https://o.poki2.online/om-bounce/",
@@ -1854,7 +1856,7 @@
       "192": "https://poki2.online/icons/o/om-bounce/icon-192.png",
       "512": "https://poki2.online/icons/o/om-bounce/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Papaspizzaria",
@@ -1879,7 +1881,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": false,
+    "featured": true,
     "description": "Run Papa's Pizzeria: take orders, prep dough, add toppings, bake, and serve to hungry customers. Supports keyboard and touch controls.",
     "howToPlay": "Run Papa's Pizzeria: take orders, prep dough, add toppings, bake, and serve to hungry customers.",
     "icons": {
@@ -1887,7 +1889,7 @@
       "192": "https://poki2.online/icons/p/papaspizzaria/icon-192.png",
       "512": "https://poki2.online/icons/p/papaspizzaria/icon-512.png"
     },
-    "badge": "popular"
+    "badge": "hot"
   },
   {
     "title": "Paper.io 2",
@@ -1913,7 +1915,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "badge": "hot",
+    "badge": "",
     "description": "Expand your territory by drawing loops on the paper grid — but watch your back; rivals will cut your line. Supports keyboard and touch controls.",
     "howToPlay": "Expand your territory by drawing loops on the paper grid — but watch your back; rivals will cut your line.",
     "icons": {
@@ -1953,7 +1955,7 @@
       "192": "https://poki2.online/icons/p/papery-planes/icon-192.png",
       "512": "https://poki2.online/icons/p/papery-planes/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Push The Square",
@@ -1981,7 +1983,7 @@
       "192": "https://poki2.online/icons/p/push-the-square/icon-192.png",
       "512": "https://poki2.online/icons/p/push-the-square/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Rolly Vortex",
@@ -2013,7 +2015,7 @@
       "192": "https://poki2.online/icons/r/rolly-vortex/icon-192.png",
       "512": "https://poki2.online/icons/r/rolly-vortex/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Snow Battle",
@@ -2043,7 +2045,7 @@
       "192": "https://poki2.online/icons/s/snowbattle/icon-192.png",
       "512": "https://poki2.online/icons/s/snowbattle/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Soldier Legend",
@@ -2073,7 +2075,7 @@
       "192": "https://poki2.online/icons/s/soldier-legend/icon-192.png",
       "512": "https://poki2.online/icons/s/soldier-legend/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Solitaire",
@@ -2097,7 +2099,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "badge": "popular",
+    "badge": "",
     "description": "The classic single-player card game. Stack suits in order from Ace to King to clear the tableau. Supports keyboard and touch controls.",
     "howToPlay": "The classic single-player card game. Stack suits in order from Ace to King to clear the tableau.",
     "icons": {
@@ -2134,7 +2136,7 @@
       "192": "https://poki2.online/icons/s/stack/icon-192.png",
       "512": "https://poki2.online/icons/s/stack/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Stealing The Diamond",
@@ -2156,7 +2158,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": false,
+    "featured": true,
     "description": "A Henry Stickmin adventure — choose your approach to steal the world's largest diamond from a museum. Supports keyboard and touch controls.",
     "howToPlay": "A Henry Stickmin adventure — choose your approach to steal the world's largest diamond from a museum.",
     "icons": {
@@ -2164,7 +2166,7 @@
       "192": "https://poki2.online/icons/s/stealingthediamond/icon-192.png",
       "512": "https://poki2.online/icons/s/stealingthediamond/icon-512.png"
     },
-    "badge": "popular"
+    "badge": "hot"
   },
   {
     "title": "Stick War",
@@ -2194,7 +2196,7 @@
       "192": "https://poki2.online/icons/s/stickwar/icon-192.png",
       "512": "https://poki2.online/icons/s/stickwar/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Storm The House 2",
@@ -2223,7 +2225,7 @@
       "192": "https://poki2.online/icons/s/stormthehouse2/icon-192.png",
       "512": "https://poki2.online/icons/s/stormthehouse2/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Swerve",
@@ -2256,7 +2258,7 @@
       "192": "https://poki2.online/icons/s/swerve/icon-192.png",
       "512": "https://poki2.online/icons/s/swerve/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Temple Run 2",
@@ -2280,7 +2282,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "badge": "popular",
+    "badge": "",
     "description": "Sprint through ancient ruins, swipe to turn, tilt to dodge, and jump over obstacles in this endless runner. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Sprint through ancient ruins, swipe to turn, tilt to dodge, and jump over obstacles in this endless runner.",
     "icons": {
@@ -2317,7 +2319,7 @@
       "192": "https://poki2.online/icons/t/thebattle/icon-192.png",
       "512": "https://poki2.online/icons/t/thebattle/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "The Final Earth",
@@ -2347,7 +2349,7 @@
       "192": "https://poki2.online/icons/t/the-final-earth/icon-192.png",
       "512": "https://poki2.online/icons/t/the-final-earth/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "The Heist",
@@ -2373,7 +2375,7 @@
       "192": "https://poki2.online/icons/t/theheist/icon-192.png",
       "512": "https://poki2.online/icons/t/theheist/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "There Is No Game",
@@ -2401,7 +2403,7 @@
       "192": "https://poki2.online/icons/t/there-is-no-game/icon-192.png",
       "512": "https://poki2.online/icons/t/there-is-no-game/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "This Is The Only Level",
@@ -2430,7 +2432,7 @@
       "192": "https://poki2.online/icons/t/thisistheonlylevel/icon-192.png",
       "512": "https://poki2.online/icons/t/thisistheonlylevel/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Toss The Turtle",
@@ -2453,7 +2455,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": false,
+    "featured": true,
     "description": "Launch a turtle from a cannon, bounce it off platforms, and rack up the biggest distance possible. Supports keyboard and touch controls.",
     "howToPlay": "Launch a turtle from a cannon, bounce it off platforms, and rack up the biggest distance possible.",
     "icons": {
@@ -2461,7 +2463,7 @@
       "192": "https://poki2.online/icons/t/tosstheturtle/icon-192.png",
       "512": "https://poki2.online/icons/t/tosstheturtle/icon-512.png"
     },
-    "badge": "popular"
+    "badge": "hot"
   },
   {
     "title": "Tube Jumpers",
@@ -2489,7 +2491,7 @@
       "192": "https://poki2.online/icons/t/tube-jumpers/icon-192.png",
       "512": "https://poki2.online/icons/t/tube-jumpers/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Vex 3",
@@ -2523,7 +2525,7 @@
       "192": "https://poki2.online/icons/v/vex3/icon-192.png",
       "512": "https://poki2.online/icons/v/vex3/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Vex 4",
@@ -2557,7 +2559,7 @@
       "192": "https://poki2.online/icons/v/vex4/icon-192.png",
       "512": "https://poki2.online/icons/v/vex4/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Vex 6",
@@ -2584,7 +2586,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "badge": "new",
+    "badge": "",
     "description": "The newest entry in the Vex series with fresh mechanics and more devilish level designs than ever before. Supports keyboard and touch controls.",
     "howToPlay": "The newest entry in the Vex series with fresh mechanics and more devilish level designs than ever before.",
     "icons": {
@@ -2613,7 +2615,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "badge": "popular",
+    "badge": "",
     "description": "Guess the five-letter word in six tries. Each guess reveals which letters are correct, misplaced, or absent. Supports keyboard and touch controls.",
     "howToPlay": "Guess the five-letter word in six tries. Each guess reveals which letters are correct, misplaced, or absent.",
     "icons": {
@@ -2650,7 +2652,7 @@
       "192": "https://poki2.online/icons/a/alienattack/icon-192.png",
       "512": "https://poki2.online/icons/a/alienattack/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Balance Ball",
@@ -2684,7 +2686,7 @@
       "192": "https://poki2.online/icons/b/balanceball/icon-192.png",
       "512": "https://poki2.online/icons/b/balanceball/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Bonncing Dot",
@@ -2714,7 +2716,7 @@
       "192": "https://poki2.online/icons/b/bdot/icon-192.png",
       "512": "https://poki2.online/icons/b/bdot/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Black Bats",
@@ -2747,7 +2749,7 @@
       "192": "https://poki2.online/icons/b/blackbats/icon-192.png",
       "512": "https://poki2.online/icons/b/blackbats/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Blox Slider",
@@ -2777,7 +2779,7 @@
       "192": "https://poki2.online/icons/b/bloxslider/icon-192.png",
       "512": "https://poki2.online/icons/b/bloxslider/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Sir Bottomtight",
@@ -2807,7 +2809,7 @@
       "192": "https://poki2.online/icons/b/bottomtight/icon-192.png",
       "512": "https://poki2.online/icons/b/bottomtight/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Brave Bird",
@@ -2837,7 +2839,7 @@
       "192": "https://poki2.online/icons/b/bravebird/icon-192.png",
       "512": "https://poki2.online/icons/b/bravebird/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Broken Horn",
@@ -2867,7 +2869,7 @@
       "192": "https://poki2.online/icons/b/brokenhorn/icon-192.png",
       "512": "https://poki2.online/icons/b/brokenhorn/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Bubble It Steven",
@@ -2897,7 +2899,7 @@
       "192": "https://poki2.online/icons/b/bubblecn/icon-192.png",
       "512": "https://poki2.online/icons/b/bubblecn/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Bubble Fish",
@@ -2919,7 +2921,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": false,
+    "featured": true,
     "description": "Shoot colored bubbles upward to match groups of three and clear the aquatic playing field. Supports keyboard and touch controls. Runs in any modern browser o.",
     "howToPlay": "Shoot colored bubbles upward to match groups of three and clear the aquatic playing field.",
     "icons": {
@@ -2958,7 +2960,7 @@
       "192": "https://poki2.online/icons/c/candyfusion/icon-192.png",
       "512": "https://poki2.online/icons/c/candyfusion/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Captain Roger",
@@ -2988,7 +2990,7 @@
       "192": "https://poki2.online/icons/c/captainroger/icon-192.png",
       "512": "https://poki2.online/icons/c/captainroger/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Captain War",
@@ -3019,7 +3021,7 @@
       "192": "https://poki2.online/icons/c/captainwar/icon-192.png",
       "512": "https://poki2.online/icons/c/captainwar/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Cat On Fire",
@@ -3050,7 +3052,7 @@
       "192": "https://poki2.online/icons/c/catonfire/icon-192.png",
       "512": "https://poki2.online/icons/c/catonfire/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Cave Jumper",
@@ -3081,7 +3083,7 @@
       "192": "https://poki2.online/icons/c/cavejumper/icon-192.png",
       "512": "https://poki2.online/icons/c/cavejumper/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "cboxes",
@@ -3109,7 +3111,7 @@
       "192": "https://poki2.online/icons/c/cboxes/icon-192.png",
       "512": "https://poki2.online/icons/c/cboxes/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Cheese Lab",
@@ -3141,7 +3143,7 @@
       "192": "https://poki2.online/icons/c/cheeselab/icon-192.png",
       "512": "https://poki2.online/icons/c/cheeselab/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Chip Man",
@@ -3171,7 +3173,7 @@
       "192": "https://poki2.online/icons/c/chipman/icon-192.png",
       "512": "https://poki2.online/icons/c/chipman/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Christmas Balls",
@@ -3203,7 +3205,7 @@
       "192": "https://poki2.online/icons/c/christmasballs/icon-192.png",
       "512": "https://poki2.online/icons/c/christmasballs/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Circle Ball",
@@ -3235,7 +3237,7 @@
       "192": "https://poki2.online/icons/c/circleball/icon-192.png",
       "512": "https://poki2.online/icons/c/circleball/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Circle Pong",
@@ -3267,7 +3269,7 @@
       "192": "https://poki2.online/icons/c/circlepong/icon-192.png",
       "512": "https://poki2.online/icons/c/circlepong/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Circle Tris",
@@ -3299,7 +3301,7 @@
       "192": "https://poki2.online/icons/c/circletris/icon-192.png",
       "512": "https://poki2.online/icons/c/circletris/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Crun Ching Ninjas",
@@ -3330,7 +3332,7 @@
       "192": "https://poki2.online/icons/c/cninjas/icon-192.png",
       "512": "https://poki2.online/icons/c/cninjas/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Super Cowboy Run",
@@ -3362,7 +3364,7 @@
       "192": "https://poki2.online/icons/c/cowboyrun/icon-192.png",
       "512": "https://poki2.online/icons/c/cowboyrun/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "CowBoy2 Shot",
@@ -3394,7 +3396,7 @@
       "192": "https://poki2.online/icons/c/cowboyshot/icon-192.png",
       "512": "https://poki2.online/icons/c/cowboyshot/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Craigen Stone",
@@ -3425,7 +3427,7 @@
       "192": "https://poki2.online/icons/c/craigenstone/icon-192.png",
       "512": "https://poki2.online/icons/c/craigenstone/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Dangerous",
@@ -3457,7 +3459,7 @@
       "192": "https://poki2.online/icons/d/dangerous/icon-192.png",
       "512": "https://poki2.online/icons/d/dangerous/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Dark Ninja",
@@ -3490,7 +3492,7 @@
       "192": "https://poki2.online/icons/d/darkninja/icon-192.png",
       "512": "https://poki2.online/icons/d/darkninja/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Death Soul",
@@ -3522,7 +3524,7 @@
       "192": "https://poki2.online/icons/d/deathsoul/icon-192.png",
       "512": "https://poki2.online/icons/d/deathsoul/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Dont Eat Trash",
@@ -3553,7 +3555,7 @@
       "192": "https://poki2.online/icons/d/donteattrash/icon-192.png",
       "512": "https://poki2.online/icons/d/donteattrash/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Dot Game",
@@ -3584,7 +3586,7 @@
       "192": "https://poki2.online/icons/d/dotgame/icon-192.png",
       "512": "https://poki2.online/icons/d/dotgame/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Drop Circle",
@@ -3616,7 +3618,7 @@
       "192": "https://poki2.online/icons/d/dropcircle/icon-192.png",
       "512": "https://poki2.online/icons/d/dropcircle/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Duck Water",
@@ -3649,7 +3651,7 @@
       "192": "https://poki2.online/icons/d/duckwater/icon-192.png",
       "512": "https://poki2.online/icons/d/duckwater/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Scratch Card",
@@ -3681,7 +3683,7 @@
       "192": "https://poki2.online/icons/e/elmore/icon-192.png",
       "512": "https://poki2.online/icons/e/elmore/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Escape",
@@ -3714,7 +3716,7 @@
       "192": "https://poki2.online/icons/e/escape/icon-192.png",
       "512": "https://poki2.online/icons/e/escape/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Evil Robot",
@@ -3748,7 +3750,7 @@
       "192": "https://poki2.online/icons/e/evilrobot/icon-192.png",
       "512": "https://poki2.online/icons/e/evilrobot/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Evil Wyrm",
@@ -3783,7 +3785,7 @@
       "192": "https://poki2.online/icons/e/evilwyrm/icon-192.png",
       "512": "https://poki2.online/icons/e/evilwyrm/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Fast",
@@ -3815,7 +3817,7 @@
       "192": "https://poki2.online/icons/f/fastgame/icon-192.png",
       "512": "https://poki2.online/icons/f/fastgame/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Fire Brigade",
@@ -3850,7 +3852,7 @@
       "192": "https://poki2.online/icons/f/firebrigade/icon-192.png",
       "512": "https://poki2.online/icons/f/firebrigade/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Fishing Frenzy",
@@ -3881,7 +3883,7 @@
       "192": "https://poki2.online/icons/f/fishingfrenzy/icon-192.png",
       "512": "https://poki2.online/icons/f/fishingfrenzy/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Flap Cat Copters",
@@ -3914,7 +3916,7 @@
       "192": "https://poki2.online/icons/f/flapcatcopters/icon-192.png",
       "512": "https://poki2.online/icons/f/flapcatcopters/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Flap Cat Xmas",
@@ -3948,7 +3950,7 @@
       "192": "https://poki2.online/icons/f/flapcatxmas/icon-192.png",
       "512": "https://poki2.online/icons/f/flapcatxmas/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Flappy Dog",
@@ -3982,7 +3984,7 @@
       "192": "https://poki2.online/icons/f/flappydog/icon-192.png",
       "512": "https://poki2.online/icons/f/flappydog/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Flying School",
@@ -4017,7 +4019,7 @@
       "192": "https://poki2.online/icons/f/flyingschool/icon-192.png",
       "512": "https://poki2.online/icons/f/flyingschool/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Foo Foo",
@@ -4043,7 +4045,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": false,
+    "featured": true,
     "description": "Little Foo Foo hops through the forest avoiding snakes and collecting mushrooms in this endless hopper. Supports keyboard and touch controls.",
     "howToPlay": "Little Foo Foo hops through the forest avoiding snakes and collecting mushrooms in this endless hopper.",
     "icons": {
@@ -4084,7 +4086,7 @@
       "192": "https://poki2.online/icons/f/foxfury/icon-192.png",
       "512": "https://poki2.online/icons/f/foxfury/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Freedom Road",
@@ -4117,7 +4119,7 @@
       "192": "https://poki2.online/icons/f/freedomroad/icon-192.png",
       "512": "https://poki2.online/icons/f/freedomroad/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Hungry Frog",
@@ -4150,7 +4152,7 @@
       "192": "https://poki2.online/icons/f/frog/icon-192.png",
       "512": "https://poki2.online/icons/f/frog/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Full Immersion",
@@ -4183,7 +4185,7 @@
       "192": "https://poki2.online/icons/f/fullimmersion/icon-192.png",
       "512": "https://poki2.online/icons/f/fullimmersion/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Funny Soccer",
@@ -4214,7 +4216,7 @@
       "192": "https://poki2.online/icons/f/funnysoccer/icon-192.png",
       "512": "https://poki2.online/icons/f/funnysoccer/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Get Twelve",
@@ -4245,7 +4247,7 @@
       "192": "https://poki2.online/icons/g/gettwelve/icon-192.png",
       "512": "https://poki2.online/icons/g/gettwelve/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Goblin Machine",
@@ -4277,7 +4279,7 @@
       "192": "https://poki2.online/icons/g/goblinmachine/icon-192.png",
       "512": "https://poki2.online/icons/g/goblinmachine/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Go Fishing",
@@ -4308,7 +4310,7 @@
       "192": "https://poki2.online/icons/g/gofishing/icon-192.png",
       "512": "https://poki2.online/icons/g/gofishing/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Going Nuts",
@@ -4340,7 +4342,7 @@
       "192": "https://poki2.online/icons/g/goingnuts/icon-192.png",
       "512": "https://poki2.online/icons/g/goingnuts/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Greedy Gnomes",
@@ -4372,7 +4374,7 @@
       "192": "https://poki2.online/icons/g/greedygnomes/icon-192.png",
       "512": "https://poki2.online/icons/g/greedygnomes/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Green Wings",
@@ -4404,7 +4406,7 @@
       "192": "https://poki2.online/icons/g/greenwings/icon-192.png",
       "512": "https://poki2.online/icons/g/greenwings/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Groovy Ski",
@@ -4436,7 +4438,7 @@
       "192": "https://poki2.online/icons/g/groovyski/icon-192.png",
       "512": "https://poki2.online/icons/g/groovyski/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Grub Runner",
@@ -4467,7 +4469,7 @@
       "192": "https://poki2.online/icons/g/grubhub/icon-192.png",
       "512": "https://poki2.online/icons/g/grubhub/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Gumball Race",
@@ -4499,7 +4501,7 @@
       "192": "https://poki2.online/icons/g/gumballrace/icon-192.png",
       "512": "https://poki2.online/icons/g/gumballrace/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Hansel and Gretel",
@@ -4531,7 +4533,7 @@
       "192": "https://poki2.online/icons/h/hanselandgretel/icon-192.png",
       "512": "https://poki2.online/icons/h/hanselandgretel/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Hero Jump",
@@ -4562,7 +4564,7 @@
       "192": "https://poki2.online/icons/h/herojump/icon-192.png",
       "512": "https://poki2.online/icons/h/herojump/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Hidden",
@@ -4594,7 +4596,7 @@
       "192": "https://poki2.online/icons/h/hidden/icon-192.png",
       "512": "https://poki2.online/icons/h/hidden/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Hungry Bob",
@@ -4627,7 +4629,7 @@
       "192": "https://poki2.online/icons/h/hungrybob/icon-192.png",
       "512": "https://poki2.online/icons/h/hungrybob/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Ice Cream",
@@ -4659,7 +4661,7 @@
       "192": "https://poki2.online/icons/i/icecream/icon-192.png",
       "512": "https://poki2.online/icons/i/icecream/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Jelly Doods",
@@ -4693,7 +4695,7 @@
       "192": "https://poki2.online/icons/j/jellydoods/icon-192.png",
       "512": "https://poki2.online/icons/j/jellydoods/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Jelly Slice",
@@ -4727,7 +4729,7 @@
       "192": "https://poki2.online/icons/j/jellyslice/icon-192.png",
       "512": "https://poki2.online/icons/j/jellyslice/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Jomjom",
@@ -4758,7 +4760,7 @@
       "192": "https://poki2.online/icons/j/jomjom/icon-192.png",
       "512": "https://poki2.online/icons/j/jomjom/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Jump Kitty",
@@ -4790,7 +4792,7 @@
       "192": "https://poki2.online/icons/j/jumpkitty/icon-192.png",
       "512": "https://poki2.online/icons/j/jumpkitty/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Fall Jump Roll",
@@ -4824,7 +4826,7 @@
       "192": "https://poki2.online/icons/j/jumpman/icon-192.png",
       "512": "https://poki2.online/icons/j/jumpman/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Jumppy dog",
@@ -4856,7 +4858,7 @@
       "192": "https://poki2.online/icons/j/jumppydog/icon-192.png",
       "512": "https://poki2.online/icons/j/jumppydog/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Jumppy Dragon",
@@ -4888,7 +4890,7 @@
       "192": "https://poki2.online/icons/j/jumppydragon/icon-192.png",
       "512": "https://poki2.online/icons/j/jumppydragon/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Knight Of The Day",
@@ -4920,7 +4922,7 @@
       "192": "https://poki2.online/icons/k/knightnday/icon-192.png",
       "512": "https://poki2.online/icons/k/knightnday/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Izard Rocket",
@@ -4953,7 +4955,7 @@
       "192": "https://poki2.online/icons/l/lizardrocket/icon-192.png",
       "512": "https://poki2.online/icons/l/lizardrocket/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Looney Roonks",
@@ -4986,7 +4988,7 @@
       "192": "https://poki2.online/icons/l/looneyroonks/icon-192.png",
       "512": "https://poki2.online/icons/l/looneyroonks/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Manic",
@@ -5019,7 +5021,7 @@
       "192": "https://poki2.online/icons/m/manic/icon-192.png",
       "512": "https://poki2.online/icons/m/manic/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Matching Time",
@@ -5052,7 +5054,7 @@
       "192": "https://poki2.online/icons/m/matchtime/icon-192.png",
       "512": "https://poki2.online/icons/m/matchtime/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Math Game",
@@ -5078,7 +5080,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": false,
+    "featured": true,
     "description": "Click the correct answer to arithmetic questions as fast as possible. Great for mental math practice. Runs in any modern browser on mobile and desktop.",
     "howToPlay": "Click the correct answer to arithmetic questions as fast as possible. Great for mental math practice.",
     "icons": {
@@ -5086,7 +5088,7 @@
       "192": "https://poki2.online/icons/m/mathgame/icon-192.png",
       "512": "https://poki2.online/icons/m/mathgame/icon-512.png"
     },
-    "badge": "popular"
+    "badge": "hot"
   },
   {
     "title": "Monster Candy",
@@ -5117,7 +5119,7 @@
       "192": "https://poki2.online/icons/m/monstercandy/icon-192.png",
       "512": "https://poki2.online/icons/m/monstercandy/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Monster Eater",
@@ -5149,7 +5151,7 @@
       "192": "https://poki2.online/icons/m/monstereater/icon-192.png",
       "512": "https://poki2.online/icons/m/monstereater/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Mouse Jump",
@@ -5181,7 +5183,7 @@
       "192": "https://poki2.online/icons/m/mousejump/icon-192.png",
       "512": "https://poki2.online/icons/m/mousejump/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "NEST",
@@ -5212,7 +5214,7 @@
       "192": "https://poki2.online/icons/n/nest/icon-192.png",
       "512": "https://poki2.online/icons/n/nest/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Ninja Run",
@@ -5246,7 +5248,7 @@
       "192": "https://poki2.online/icons/n/ninjarun/icon-192.png",
       "512": "https://poki2.online/icons/n/ninjarun/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Ninja Way",
@@ -5280,7 +5282,7 @@
       "192": "https://poki2.online/icons/n/ninjaway/icon-192.png",
       "512": "https://poki2.online/icons/n/ninjaway/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Ojello",
@@ -5313,7 +5315,7 @@
       "192": "https://poki2.online/icons/o/ojelloonline/icon-192.png",
       "512": "https://poki2.online/icons/o/ojelloonline/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Pacman",
@@ -5338,7 +5340,7 @@
     "show": true,
     "use_overlay_title": false,
     "featured": false,
-    "badge": "popular",
+    "badge": "",
     "description": "The iconic arcade classic. Eat all the dots, dodge four ghosts, and use power pellets to turn the tables. Supports keyboard and touch controls.",
     "howToPlay": "The iconic arcade classic. Eat all the dots, dodge four ghosts, and use power pellets to turn the tables.",
     "icons": {
@@ -5380,7 +5382,7 @@
       "192": "https://poki2.online/icons/p/pancakeboss/icon-192.png",
       "512": "https://poki2.online/icons/p/pancakeboss/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Panda Flash",
@@ -5413,7 +5415,7 @@
       "192": "https://poki2.online/icons/p/pandaflash/icon-192.png",
       "512": "https://poki2.online/icons/p/pandaflash/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Pebble Boy",
@@ -5446,7 +5448,7 @@
       "192": "https://poki2.online/icons/p/pebbleboy/icon-192.png",
       "512": "https://poki2.online/icons/p/pebbleboy/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Penguin",
@@ -5478,7 +5480,7 @@
       "192": "https://poki2.online/icons/p/penguin/icon-192.png",
       "512": "https://poki2.online/icons/p/penguin/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Pie Attack",
@@ -5511,7 +5513,7 @@
       "192": "https://poki2.online/icons/p/pieattack/icon-192.png",
       "512": "https://poki2.online/icons/p/pieattack/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Pigeon",
@@ -5543,7 +5545,7 @@
       "192": "https://poki2.online/icons/p/pigeon/icon-192.png",
       "512": "https://poki2.online/icons/p/pigeon/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Piggy Roll",
@@ -5576,7 +5578,7 @@
       "192": "https://poki2.online/icons/p/piggyroll/icon-192.png",
       "512": "https://poki2.online/icons/p/piggyroll/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Pirate Kid",
@@ -5610,7 +5612,7 @@
       "192": "https://poki2.online/icons/p/piratekid/icon-192.png",
       "512": "https://poki2.online/icons/p/piratekid/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Pitana",
@@ -5643,7 +5645,7 @@
       "192": "https://poki2.online/icons/p/pitana/icon-192.png",
       "512": "https://poki2.online/icons/p/pitana/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Popup",
@@ -5677,7 +5679,7 @@
       "192": "https://poki2.online/icons/p/popup/icon-192.png",
       "512": "https://poki2.online/icons/p/popup/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Portal Runner",
@@ -5712,7 +5714,7 @@
       "192": "https://poki2.online/icons/p/portalrunner/icon-192.png",
       "512": "https://poki2.online/icons/p/portalrunner/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Pyramid Jump",
@@ -5748,7 +5750,7 @@
       "192": "https://poki2.online/icons/p/pyramidjump/icon-192.png",
       "512": "https://poki2.online/icons/p/pyramidjump/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Raccoon Run",
@@ -5783,7 +5785,7 @@
       "192": "https://poki2.online/icons/r/raccoonrun/icon-192.png",
       "512": "https://poki2.online/icons/r/raccoonrun/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Rain Box",
@@ -5816,7 +5818,7 @@
       "192": "https://poki2.online/icons/r/rainbox/icon-192.png",
       "512": "https://poki2.online/icons/r/rainbox/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Rapunzel Tower",
@@ -5851,7 +5853,7 @@
       "192": "https://poki2.online/icons/r/rapunzel/icon-192.png",
       "512": "https://poki2.online/icons/r/rapunzel/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Rec Tang Zings",
@@ -5883,7 +5885,7 @@
       "192": "https://poki2.online/icons/r/rectangzings/icon-192.png",
       "512": "https://poki2.online/icons/r/rectangzings/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Robotion",
@@ -5917,7 +5919,7 @@
       "192": "https://poki2.online/icons/r/robotion/icon-192.png",
       "512": "https://poki2.online/icons/r/robotion/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Rocket Pop",
@@ -5951,7 +5953,7 @@
       "192": "https://poki2.online/icons/r/rocketpop/icon-192.png",
       "512": "https://poki2.online/icons/r/rocketpop/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Rope Ninja",
@@ -5986,7 +5988,7 @@
       "192": "https://poki2.online/icons/r/ropeninja/icon-192.png",
       "512": "https://poki2.online/icons/r/ropeninja/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Run Pixie Run",
@@ -6020,7 +6022,7 @@
       "192": "https://poki2.online/icons/r/runpixierun/icon-192.png",
       "512": "https://poki2.online/icons/r/runpixierun/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Sally BBQ",
@@ -6054,7 +6056,7 @@
       "192": "https://poki2.online/icons/s/sallybbq/icon-192.png",
       "512": "https://poki2.online/icons/s/sallybbq/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Sky Lands",
@@ -6088,7 +6090,7 @@
       "192": "https://poki2.online/icons/s/skylands/icon-192.png",
       "512": "https://poki2.online/icons/s/skylands/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Sky Race",
@@ -6122,7 +6124,7 @@
       "192": "https://poki2.online/icons/s/skyrace/icon-192.png",
       "512": "https://poki2.online/icons/s/skyrace/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Sky Wire",
@@ -6155,7 +6157,7 @@
       "192": "https://poki2.online/icons/s/skywire/icon-192.png",
       "512": "https://poki2.online/icons/s/skywire/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Slot Chicken",
@@ -6186,7 +6188,7 @@
       "192": "https://poki2.online/icons/s/slotchicken/icon-192.png",
       "512": "https://poki2.online/icons/s/slotchicken/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Sort Bird",
@@ -6220,7 +6222,7 @@
       "192": "https://poki2.online/icons/s/sortbird/icon-192.png",
       "512": "https://poki2.online/icons/s/sortbird/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Spring Ninja",
@@ -6254,7 +6256,7 @@
       "192": "https://poki2.online/icons/s/springninja/icon-192.png",
       "512": "https://poki2.online/icons/s/springninja/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Square Crush",
@@ -6286,7 +6288,7 @@
       "192": "https://poki2.online/icons/s/squarecrush/icon-192.png",
       "512": "https://poki2.online/icons/s/squarecrush/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Steven Kash",
@@ -6319,7 +6321,7 @@
       "192": "https://poki2.online/icons/s/stevenkash/icon-192.png",
       "512": "https://poki2.online/icons/s/stevenkash/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Stick Panda",
@@ -6352,7 +6354,7 @@
       "192": "https://poki2.online/icons/s/stickpanda/icon-192.png",
       "512": "https://poki2.online/icons/s/stickpanda/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Stick Panda Xmas",
@@ -6385,7 +6387,7 @@
       "192": "https://poki2.online/icons/s/stickpandaxmas/icon-192.png",
       "512": "https://poki2.online/icons/s/stickpandaxmas/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Stick Samurai",
@@ -6419,7 +6421,7 @@
       "192": "https://poki2.online/icons/s/sticksamurai/icon-192.png",
       "512": "https://poki2.online/icons/s/sticksamurai/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Sticky Goo",
@@ -6453,7 +6455,7 @@
       "192": "https://poki2.online/icons/s/stickygoo/icon-192.png",
       "512": "https://poki2.online/icons/s/stickygoo/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Strange Space",
@@ -6487,7 +6489,7 @@
       "192": "https://poki2.online/icons/s/strangespace/icon-192.png",
       "512": "https://poki2.online/icons/s/strangespace/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Taptap Submarine",
@@ -6519,7 +6521,7 @@
       "192": "https://poki2.online/icons/t/taptapsubmarine/icon-192.png",
       "512": "https://poki2.online/icons/t/taptapsubmarine/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Target Tap",
@@ -6552,7 +6554,7 @@
       "192": "https://poki2.online/icons/t/targetap/icon-192.png",
       "512": "https://poki2.online/icons/t/targetap/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Titan Runner",
@@ -6589,7 +6591,7 @@
       "192": "https://poki2.online/icons/t/titanrunner/icon-192.png",
       "512": "https://poki2.online/icons/t/titanrunner/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/tooncup/",
@@ -6622,7 +6624,7 @@
       "192": "https://poki2.online/icons/t/tooncup/icon-192.png",
       "512": "https://poki2.online/icons/t/tooncup/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Trailblazer",
@@ -6652,7 +6654,7 @@
       "192": "https://poki2.online/icons/t/trailblazer/icon-192.png",
       "512": "https://poki2.online/icons/t/trailblazer/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/trashndash/",
@@ -6683,7 +6685,7 @@
       "192": "https://poki2.online/icons/t/trashndash/icon-192.png",
       "512": "https://poki2.online/icons/t/trashndash/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/trollboxing/",
@@ -6709,7 +6711,7 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": false,
+    "featured": true,
     "description": "Two troll fighters enter the ring. Punch, duck, and uppercut your way to victory in this silly brawler. Supports keyboard and touch controls.",
     "howToPlay": "Two troll fighters enter the ring. Punch, duck, and uppercut your way to victory in this silly brawler.",
     "icons": {
@@ -6749,7 +6751,7 @@
       "192": "https://poki2.online/icons/u/uforun/icon-192.png",
       "512": "https://poki2.online/icons/u/uforun/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Veggi Rabbit",
@@ -6782,7 +6784,7 @@
       "192": "https://poki2.online/icons/v/veggirabbit/icon-192.png",
       "512": "https://poki2.online/icons/v/veggirabbit/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/woodblock/",
@@ -6813,7 +6815,7 @@
       "192": "https://poki2.online/icons/w/woodblock/icon-192.png",
       "512": "https://poki2.online/icons/w/woodblock/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "link": "https://mobileapp.poki2.online/mobile/xtypesky/",
@@ -6846,7 +6848,7 @@
       "192": "https://poki2.online/icons/x/xtypesky/icon-192.png",
       "512": "https://poki2.online/icons/x/xtypesky/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Zapaliens",
@@ -6879,7 +6881,7 @@
       "192": "https://poki2.online/icons/z/zapaliens/icon-192.png",
       "512": "https://poki2.online/icons/z/zapaliens/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Zombie Night",
@@ -6909,7 +6911,7 @@
       "192": "https://poki2.online/icons/z/zombienight/icon-192.png",
       "512": "https://poki2.online/icons/z/zombienight/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Zombie World",
@@ -6938,7 +6940,7 @@
       "192": "https://poki2.online/icons/z/zombieworld/icon-192.png",
       "512": "https://poki2.online/icons/z/zombieworld/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Zoon Stuner",
@@ -6967,7 +6969,7 @@
       "192": "https://poki2.online/icons/z/zoostuner/icon-192.png",
       "512": "https://poki2.online/icons/z/zoostuner/icon-512.png"
     },
-    "badge": "popular"
+    "badge": ""
   },
   {
     "title": "Snakebird",
@@ -6992,8 +6994,8 @@
     ],
     "show": true,
     "use_overlay_title": false,
-    "featured": true,
-    "badge": "popular",
+    "featured": false,
+    "badge": "",
     "description": "Guide a snake-bird hybrid through devious puzzles where every fruit you eat makes you longer and harder to maneuver. Supports keyboard and touch controls.",
     "howToPlay": "Guide a snake-bird hybrid through devious puzzles where every fruit you eat makes you longer and harder to maneuver.",
     "icons": {
