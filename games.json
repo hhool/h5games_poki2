@@ -48,7 +48,6 @@
     ],
     "orientation": "landscape",
     "avalid": [
-      "mobile",
       "desktop"
     ],
     "show": true,
@@ -75,6 +74,7 @@
       "basketball"
     ],
     "input": [
+      "touch",
       "keyboard"
     ],
     "orientation": "landscape",
