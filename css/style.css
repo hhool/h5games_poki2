@@ -1463,7 +1463,7 @@ body.detail-open .fav-btn{opacity:0!important;pointer-events:none}
     max-width:1100px;
     display:flex;
     flex-direction:row;
-    align-items:stretch;
+    align-items:center;
     gap:0;
     /* ensure card doesn't exceed viewport height */
     /* slightly larger safe area and consistent cap for better scrolling on mobile landscape */
@@ -1542,7 +1542,7 @@ body.detail-open .fav-btn{opacity:0!important;pointer-events:none}
     max-width: 96vw;
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
     gap: 0;
     max-height: calc(100vh - 16px);
     min-height: 0;
