@@ -186,12 +186,12 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
   // Related categories (all other tags)
   const relatedTags = Object.entries(allTags).filter(([t]) => t !== tag);
   const relatedLinksHtml = relatedTags
-    .map(([t, c]) => `<li><a href="/tag/${t}/">${esc(c.label)} Games</a></li>`)
+    .map(([t, c]) => `<li><a href="/tag/${t}/"><img class="tag-icon" src="/icons/categories/${t}.svg" alt="${esc(c.label)}" width="20" height="20" style="vertical-align:middle;margin-right:8px"> ${esc(c.label)} Games</a></li>`)
     .join('\n        ');
   const relatedSectionHtml = `<section id="related-tags" class="related-tags-section">
   <h2>More Game Categories</h2>
   <ul class="related-tags-list">
-    ${relatedTags.map(([t, c]) => `<li><a href="/tag/${t}/">${esc(c.label)}</a></li>`).join('\n    ')}
+    ${relatedTags.map(([t, c]) => `<li><a href="/tag/${t}/"><img class="tag-icon" src="/icons/categories/${t}.svg" alt="${esc(c.label)}" width="24" height="24" style="vertical-align:middle;margin-right:8px"> ${esc(c.label)}</a></li>`).join('\n    ')}
   </ul>
 </section>`;
 
@@ -206,7 +206,7 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
   const tagBodyInner = bodyInner
     .replace(
       '<p class="hero-title">What are you playing today?</p>',
-      `<h1 class="hero-title">${esc(cfg.headline)}</h1>`
+      `<h1 class="hero-title"><img class="tag-icon" src="/icons/categories/${tag}.svg" alt="${esc(cfg.label)}" width="40" height="40" style="vertical-align:middle;margin-right:10px"> ${esc(cfg.headline)}</h1>`
     )
     .replace(
       '<p class="hero-sub">Discover free games. No downloads. Instant play.</p>',
