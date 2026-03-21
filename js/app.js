@@ -726,6 +726,16 @@
     });
     el.appendChild(favBtn);
 
+    // Overlay category icon (primary tag) on the card
+    const primaryTag = (game.tags && game.tags.length) ? game.tags[0] : null;
+    if (primaryTag) {
+      const tagBadge = document.createElement('img');
+      tagBadge.className = 'game-card-tag';
+      tagBadge.alt = (TAG_META[primaryTag] && TAG_META[primaryTag].label) ? TAG_META[primaryTag].label : primaryTag;
+      tagBadge.src = `/icons/categories/${primaryTag}.svg`;
+      el.appendChild(tagBadge);
+    }
+
     const img = document.createElement("img");
     img.className = "game-card-img";
     img.alt = game.title || "";
@@ -972,7 +982,7 @@
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'tag-chip';
-      btn.textContent = `${meta.emoji} ${meta.label}`;
+      btn.innerHTML = `<img class="tag-icon" src="/icons/categories/${tag}.svg" alt="${meta.label}"> <span class="tag-label">${meta.label}</span>`;
       btn.dataset.chip = tag;
       btn.addEventListener('click', () => showCategory(tag));
       inner.appendChild(btn);

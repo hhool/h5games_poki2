@@ -397,6 +397,38 @@ input{font:inherit}
 .tag-chip.active:hover{background:var(--brand,#006bb3);color:#fff}
 @media(hover:none){.tag-chip:hover{background:#fff;border-color:rgba(0,0,0,.1);color:var(--text,#1a2332)}}
 
+/* Category icon inside tag chips */
+.tag-chip .tag-icon{
+  width:20px;
+  height:20px;
+  vertical-align:middle;
+  margin-right:8px;
+  border-radius:6px;
+  display:inline-block;
+  object-fit:cover;
+}
+
+.tag-chip .tag-label{vertical-align:middle}
+
+/* Overlay tag badge on game cards */
+.game-card .game-card-tag{
+  position:absolute;
+  top:8px;
+  right:8px;
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.12);
+  background:#fff;
+  padding:4px;
+  z-index:12;
+  object-fit:contain;
+}
+
+@media (max-width:420px){
+  .game-card .game-card-tag{ width:28px; height:28px; top:6px; right:6px; }
+}
+
 /* ---- Full category page (all games of one tag) ---- */
 .full-grid{
   display:grid;
