@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Strategy">
+  <title>Strategy</title>
+  <rect rx="12" ry="12" width="64" height="64" fill="hsl(227deg 70% 50%)" />
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, 'Segoe UI', Inter, system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial" font-size="34" font-weight="700" fill="#ffffff">♟️</text>
+</svg>
