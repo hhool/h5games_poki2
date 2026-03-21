@@ -1576,19 +1576,16 @@
     homeItem.dataset.tag = "__home";
     homeItem.setAttribute("aria-current", "page");
     homeItem.innerHTML = `<span class="nav-emoji">🏠</span> Home <span class="nav-badge">${allGames.length}</span>`;
-    homeItem.addEventListener("click", () => {
+    homeItem.addEventListener('click', () => {
       // Clear search first so the showHome() guard doesn't block this
       // intentional user navigation back to the home page.
       if ($searchInput) $searchInput.value = "";
       closeSidebar();
-      // Navigate to canonical root and force a full reload so the
-      // address bar becomes the canonical site root (use absolute URL).
-      try {
-        window.location.href = 'https://poki2.online/';
-      } catch (e) {
-        // Fallback to in-app behavior if navigation is blocked
-        showHome();
-      }
+      // Prefer in-app navigation and update the address bar to root
+      try { history.replaceState({ view: 'home' }, '', '/'); } catch (e) {}
+      showHome();
+      // Reinforce history state in case other handlers run
+      setTimeout(() => { try { history.replaceState({ view: 'home' }, '', '/'); } catch (e) {}; }, 120);
     });
     $sidebarNav.appendChild(homeItem);
     // Favorites
@@ -2314,9 +2311,13 @@
     } catch (e) {}
   }
   if ($bnavHome) $bnavHome.addEventListener('click', () => {
-    $searchInput.value = ''; _lastSearchQuery = '';
+    try { $searchInput.value = ''; _lastSearchQuery = ''; } catch (e) {}
     clearTimeout(_searchDebounceTimer);
-    showHome(); updateBnavActive();
+    try { history.replaceState({ view: 'home' }, '', '/'); } catch (e) {}
+    showHome();
+    updateBnavActive();
+    // Reinforce history state in case other handlers run
+    setTimeout(() => { try { history.replaceState({ view: 'home' }, '', '/'); } catch (e) {}; }, 120);
   });
   if ($bnavSearch) $bnavSearch.addEventListener('click', () => {
     try { $searchInput.focus(); $searchInput.select(); } catch(e) {}
