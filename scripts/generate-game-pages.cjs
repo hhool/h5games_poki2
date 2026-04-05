@@ -6,7 +6,7 @@
 const fs   = require('fs');
 const path = require('path');
 
-const BASE_URL  = 'https://poki2.online';
+const BASE_URL  = 'https://play.poki2.online';
 const SITE_NAME = 'Poki2';
 const DIST      = path.join(__dirname, '..', 'dist');
 const GAMES     = path.join(__dirname, '..', 'games.json');
@@ -83,7 +83,10 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   const desc     = game.description ||
     `Play ${game.title} for free online on ${SITE_NAME} \u2014 no downloads required.`;
   const char     = slug[0].toLowerCase();
-  const game_icon =`${BASE_URL}/icons/${char}/${slug}/icon-192.png`;
+  const _iconRel = (game.icons && (game.icons['192'] || game.icons['512'])) || game.imgSrc;
+  const game_icon = _iconRel
+    ? (_iconRel.startsWith('http') ? _iconRel : `${BASE_URL}${_iconRel}`)
+    : `${BASE_URL}/icons/${char}/${slug}/icon-192.png`;
   const img      = game_icon || `${BASE_URL}/assets/icon/icon-512.png`;
   const ogImg    = `${BASE_URL}/og/${char}/${slug}-1200x628.png`;
   
