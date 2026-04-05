@@ -4,2304 +4,2304 @@
 
   <!-- Site pages -->
   <url>
-    <loc>https://poki2.online/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://poki2.online/about.html</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/about.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://poki2.online/privacy.html</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/privacy.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://poki2.online/terms.html</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/terms.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://poki2.online/contact.html</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/contact.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://poki2.online/dmca.html</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/dmca.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
 
   <!-- Tag / category pages -->
   <url>
-    <loc>https://poki2.online/tag/puzzle/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/tag/puzzle/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poki2.online/tag/adventure/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/tag/adventure/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poki2.online/tag/shooting/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/tag/shooting/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poki2.online/tag/action/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/tag/action/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poki2.online/tag/racing/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/tag/racing/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poki2.online/tag/sports/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/tag/sports/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poki2.online/tag/strategy/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/tag/strategy/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poki2.online/tag/multiplayer/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/tag/multiplayer/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poki2.online/tag/idle/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/tag/idle/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poki2.online/tag/arcade/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/tag/arcade/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poki2.online/tag/platformer/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/tag/platformer/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://poki2.online/tag/competitive/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/tag/competitive/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Per-game pages (static, with full OG + VideoGame JSON-LD) -->
   <url>
-    <loc>https://poki2.online/game/2/2048/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/2/2048/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/2/2048/icon-512.png</image:loc>
+      <image:loc>/icons/2/2048/icon-512.png</image:loc>
       <image:title>2048</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/a/among-us/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/a/among-us/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/a/among-us/icon-512.png</image:loc>
+      <image:loc>/icons/a/among-us/icon-512.png</image:loc>
       <image:title>Among Us</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/basketball-stars/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/basketball-stars/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/basketball-stars/icon-512.png</image:loc>
+      <image:loc>/icons/b/basketball-stars/icon-512.png</image:loc>
       <image:title>Basketball Stars</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/battleforgondor/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/battleforgondor/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/battleforgondor/icon-512.png</image:loc>
+      <image:loc>/icons/b/battleforgondor/icon-512.png</image:loc>
       <image:title>Battle for Gondor</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/bigredbutton/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/bigredbutton/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/bigredbutton/icon-512.png</image:loc>
+      <image:loc>/icons/b/bigredbutton/icon-512.png</image:loc>
       <image:title>Big Red Button</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/blockclaimio/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/blockclaimio/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/blockclaimio/icon-512.png</image:loc>
+      <image:loc>/icons/b/blockclaimio/icon-512.png</image:loc>
       <image:title>Blockclaim.io</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/crossyroad/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/crossyroad/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/crossyroad/icon-512.png</image:loc>
+      <image:loc>/icons/c/crossyroad/icon-512.png</image:loc>
       <image:title>Crossy Road</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/babaisyou/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/babaisyou/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/babaisyou/icon-512.png</image:loc>
+      <image:loc>/icons/b/babaisyou/icon-512.png</image:loc>
       <image:title>BaBa Is You</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/z/zcj2/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/z/zcj2/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/z/zcj2/icon-512.png</image:loc>
+      <image:loc>/icons/z/zcj2/icon-512.png</image:loc>
       <image:title>Zombies Can't Jump 2</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/z/zombiescantjump/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/z/zombiescantjump/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/z/zombiescantjump/icon-512.png</image:loc>
+      <image:loc>/icons/z/zombiescantjump/icon-512.png</image:loc>
       <image:title>Zombies Can't Jump</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/r/runneryodas/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/r/runneryodas/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/r/runneryodas/icon-512.png</image:loc>
+      <image:loc>/icons/r/runneryodas/icon-512.png</image:loc>
       <image:title>Runner Yodas</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/cubeninja/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/cubeninja/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/cubeninja/icon-512.png</image:loc>
+      <image:loc>/icons/c/cubeninja/icon-512.png</image:loc>
       <image:title>Cube Ninja</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/battleday/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/battleday/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/battleday/icon-512.png</image:loc>
+      <image:loc>/icons/b/battledaybrawl/icon-512.png</image:loc>
       <image:title>Battle Day Brawl</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/crkarmax/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/crkarmax/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/crkarmax/icon-512.png</image:loc>
+      <image:loc>/icons/d/defineofkarmax3/icon-512.png</image:loc>
       <image:title>Define Of Karmax 3</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/dronewars/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/dronewars/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/dronewars/icon-512.png</image:loc>
+      <image:loc>/icons/d/dronewars/icon-512.png</image:loc>
       <image:title>Drone Wars</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/l/luxahoy/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/l/luxahoy/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/l/luxahoy/icon-512.png</image:loc>
+      <image:loc>/icons/l/luxahoy/icon-512.png</image:loc>
       <image:title>Luxahoy</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/sambogart/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/sambogart/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/sambogart/icon-512.png</image:loc>
+      <image:loc>/icons/s/sambogart/icon-512.png</image:loc>
       <image:title>Sambogart</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/n/ninjakidvszb/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/n/ninjakidvszb/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/n/ninjakidvszb/icon-512.png</image:loc>
+      <image:loc>/icons/n/ninjakidvszombies/icon-512.png</image:loc>
       <image:title>Ninja Kid VS Zombies</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/spacecowboy/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/spacecowboy/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/spacecowboy/icon-512.png</image:loc>
+      <image:loc>/icons/s/spacecowboy/icon-512.png</image:loc>
       <image:title>Space Cowboy</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/silverarrow/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/silverarrow/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/silverarrow/icon-512.png</image:loc>
+      <image:loc>/icons/s/silverarrow/icon-512.png</image:loc>
       <image:title>Silver Arrow</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/n/ninjablade/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/n/ninjablade/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/n/ninjablade/icon-512.png</image:loc>
+      <image:loc>/icons/n/ninjablade/icon-512.png</image:loc>
       <image:title>Ninja Blade</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/blackknight/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/blackknight/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/blackknight/icon-512.png</image:loc>
+      <image:loc>/icons/b/blackknight/icon-512.png</image:loc>
       <image:title>Black Knight</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/breakingthebank/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/breakingthebank/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/breakingthebank/icon-512.png</image:loc>
+      <image:loc>/icons/b/breakingthebank/icon-512.png</image:loc>
       <image:title>Breaking the Bank</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/btts/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/btts/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/btts/icon-512.png</image:loc>
+      <image:loc>/icons/b/bigtowertinysquare/icon-512.png</image:loc>
       <image:title>Big Tower Tiny Square</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/cannon-basketball-4/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/cannon-basketball-4/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/cannon-basketball-4/icon-512.png</image:loc>
+      <image:loc>/icons/c/cannon-basketball-4/icon-512.png</image:loc>
       <image:title>Cannon Basketball 4</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/cell-machine/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/cell-machine/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/cell-machine/icon-512.png</image:loc>
+      <image:loc>/icons/c/cell-machine/icon-512.png</image:loc>
       <image:title>Cell Machine</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/chrome-dino/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/chrome-dino/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/chrome-dino/icon-512.png</image:loc>
+      <image:loc>/icons/c/chrome-dino/icon-512.png</image:loc>
       <image:title>Chrome Dino</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/circlo/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/circlo/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/circlo/icon-512.png</image:loc>
+      <image:loc>/icons/c/circlo/icon-512.png</image:loc>
       <image:title>circlO</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/connect3/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/connect3/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/connect3/icon-512.png</image:loc>
+      <image:loc>/icons/c/connect3/icon-512.png</image:loc>
       <image:title>Connect 3</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/craftmine/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/craftmine/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/craftmine/icon-512.png</image:loc>
+      <image:loc>/icons/c/craftmine/icon-512.png</image:loc>
       <image:title>CraftMine</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/csgo-clicker/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/csgo-clicker/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/csgo-clicker/icon-512.png</image:loc>
+      <image:loc>/icons/c/csgo-clicker/icon-512.png</image:loc>
       <image:title>CS:GO Clicker</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/ctr/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/ctr/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/ctr/icon-512.png</image:loc>
+      <image:loc>/icons/c/cuttherope/icon-512.png</image:loc>
       <image:title>Cut the Rope</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/ctr-holiday/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/ctr-holiday/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/ctr-holiday/icon-512.png</image:loc>
+      <image:loc>/icons/c/cuttheropeholiday/icon-512.png</image:loc>
       <image:title>Cut the Rope Holiday</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/ctr-tr/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/ctr-tr/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/ctr-tr/icon-512.png</image:loc>
+      <image:loc>/icons/c/cuttheropetimetravel/icon-512.png</image:loc>
       <image:title>Cut the Rope Time Travel</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/cupcake2048/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/cupcake2048/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/cupcake2048/icon-512.png</image:loc>
+      <image:loc>/icons/c/cupcake2048/icon-512.png</image:loc>
       <image:title>Cupcake 2048</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/deal-or-no-deal/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/deal-or-no-deal/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/deal-or-no-deal/icon-512.png</image:loc>
+      <image:loc>/icons/d/deal-or-no-deal/icon-512.png</image:loc>
       <image:title>Deal or No Deal</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/death-run-3d/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/death-run-3d/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/death-run-3d/icon-512.png</image:loc>
+      <image:loc>/icons/d/death-run-3d/icon-512.png</image:loc>
       <image:title>Death Run 3D</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/defend-the-tank/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/defend-the-tank/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/defend-the-tank/icon-512.png</image:loc>
+      <image:loc>/icons/d/defend-the-tank/icon-512.png</image:loc>
       <image:title>Defend the Tank</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/doge2048/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/doge2048/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/doge2048/icon-512.png</image:loc>
+      <image:loc>/icons/d/doge2048/icon-512.png</image:loc>
       <image:title>Doge 2048</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/doodle-jump/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/doodle-jump/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/doodle-jump/icon-512.png</image:loc>
+      <image:loc>/icons/d/doodle-jump/icon-512.png</image:loc>
       <image:title>Doodle Jump</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/draw-the-hill/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/draw-the-hill/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/draw-the-hill/icon-512.png</image:loc>
+      <image:loc>/icons/d/draw-the-hill/icon-512.png</image:loc>
       <image:title>Draw the Hill</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/e/edgenotfound/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/e/edgenotfound/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/e/edgenotfound/icon-512.png</image:loc>
+      <image:loc>/icons/e/edgenotfound/icon-512.png</image:loc>
       <image:title>Edge Not Found</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/e/endlesswar3/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/e/endlesswar3/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/e/endlesswar3/icon-512.png</image:loc>
+      <image:loc>/icons/e/endlesswar3/icon-512.png</image:loc>
       <image:title>Endless War 3</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/e/evil-glitch/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/e/evil-glitch/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/e/evil-glitch/icon-512.png</image:loc>
+      <image:loc>/icons/e/evil-glitch/icon-512.png</image:loc>
       <image:title>Evil Glitch</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/flappy-bird/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/flappy-bird/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/flappy-bird/icon-512.png</image:loc>
+      <image:loc>/icons/f/flappy-bird/icon-512.png</image:loc>
       <image:title>Flappy Bird</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/g/geodash/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/g/geodash/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/g/geodash/icon-512.png</image:loc>
+      <image:loc>/icons/g/geometrydashscratch/icon-512.png</image:loc>
       <image:title>Geometry Dash (Scratch)</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/g/getaway-shootout/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/g/getaway-shootout/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/g/getaway-shootout/icon-512.png</image:loc>
+      <image:loc>/icons/g/getaway-shootout/icon-512.png</image:loc>
       <image:title>Getaway Shootout</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/g/gimme-the-airpod/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/g/gimme-the-airpod/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/g/gimme-the-airpod/icon-512.png</image:loc>
+      <image:loc>/icons/g/gimme-the-airpod/icon-512.png</image:loc>
       <image:title>Gimme the Airpod</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/g/grindcraft/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/g/grindcraft/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/g/grindcraft/icon-512.png</image:loc>
+      <image:loc>/icons/g/grindcraft/icon-512.png</image:loc>
       <image:title>Grind Craft</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/h/helicopter/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/h/helicopter/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/h/helicopter/icon-512.png</image:loc>
+      <image:loc>/icons/h/helicopter/icon-512.png</image:loc>
       <image:title>Helicopter</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/h/hexgl/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/h/hexgl/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/h/hexgl/icon-512.png</image:loc>
+      <image:loc>/icons/h/hexgl/icon-512.png</image:loc>
       <image:title>HexGL</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/i/interactivebuddy/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/i/interactivebuddy/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/i/interactivebuddy/icon-512.png</image:loc>
+      <image:loc>/icons/i/interactivebuddy/icon-512.png</image:loc>
       <image:title>Interactive Buddy</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/j/just-one-boss/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/j/just-one-boss/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/j/just-one-boss/icon-512.png</image:loc>
+      <image:loc>/icons/j/just-one-boss/icon-512.png</image:loc>
       <image:title>Just One Boss</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/k/krunker/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/k/krunker/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/k/krunker/icon-512.png</image:loc>
+      <image:loc>/icons/k/krunker/icon-512.png</image:loc>
       <image:title>Krunker</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/m/meme2048/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/m/meme2048/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/m/meme2048/icon-512.png</image:loc>
+      <image:loc>/icons/m/meme2048/icon-512.png</image:loc>
       <image:title>Meme 2048</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/m/minecraft/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/m/minecraft/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/m/minecraft/icon-512.png</image:loc>
+      <image:loc>/icons/e/eaglercraft/icon-512.png</image:loc>
       <image:title>Eaglercraft</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/m/minesweeper/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/m/minesweeper/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/m/minesweeper/icon-512.png</image:loc>
+      <image:loc>/icons/m/minesweeper/icon-512.png</image:loc>
       <image:title>Minesweeper</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/m/miniputt/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/m/miniputt/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/m/miniputt/icon-512.png</image:loc>
+      <image:loc>/icons/m/miniputt/icon-512.png</image:loc>
       <image:title>Mini-putt</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/m/missiles/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/m/missiles/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/m/missiles/icon-512.png</image:loc>
+      <image:loc>/icons/m/missiles/icon-512.png</image:loc>
       <image:title>Missiles</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/n/n-gon/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/n/n-gon/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/n/n-gon/icon-512.png</image:loc>
+      <image:loc>/icons/n/n-gon/icon-512.png</image:loc>
       <image:title>n-gon</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/o/om-bounce/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/o/om-bounce/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/o/om-bounce/icon-512.png</image:loc>
+      <image:loc>/icons/o/omnombounce/icon-512.png</image:loc>
       <image:title>Om Nom Bounce</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/papaspizzaria/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/papaspizzaria/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/papaspizzaria/icon-512.png</image:loc>
+      <image:loc>/icons/p/papaspizzaria/icon-512.png</image:loc>
       <image:title>Papaspizzaria</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/paperio2/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/paperio2/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/paperio2/icon-512.png</image:loc>
+      <image:loc>/icons/p/paperio2/icon-512.png</image:loc>
       <image:title>Paper.io 2</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/papery-planes/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/papery-planes/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/papery-planes/icon-512.png</image:loc>
+      <image:loc>/icons/p/papery-planes/icon-512.png</image:loc>
       <image:title>Papery Planes</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/push-the-square/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/push-the-square/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/push-the-square/icon-512.png</image:loc>
+      <image:loc>/icons/p/push-the-square/icon-512.png</image:loc>
       <image:title>Push The Square</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/r/rolly-vortex/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/r/rolly-vortex/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/r/rolly-vortex/icon-512.png</image:loc>
+      <image:loc>/icons/r/rolly-vortex/icon-512.png</image:loc>
       <image:title>Rolly Vortex</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/snowbattle/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/snowbattle/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/snowbattle/icon-512.png</image:loc>
+      <image:loc>/icons/s/snowbattle/icon-512.png</image:loc>
       <image:title>Snow Battle</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/soldier-legend/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/soldier-legend/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/soldier-legend/icon-512.png</image:loc>
+      <image:loc>/icons/s/soldier-legend/icon-512.png</image:loc>
       <image:title>Soldier Legend</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/solitaire/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/solitaire/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/solitaire/icon-512.png</image:loc>
+      <image:loc>/icons/s/solitaire/icon-512.png</image:loc>
       <image:title>Solitaire</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/stack/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/stack/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/stack/icon-512.png</image:loc>
+      <image:loc>/icons/s/stack/icon-512.png</image:loc>
       <image:title>Stack</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/stealingthediamond/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/stealingthediamond/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/stealingthediamond/icon-512.png</image:loc>
+      <image:loc>/icons/s/stealingthediamond/icon-512.png</image:loc>
       <image:title>Stealing The Diamond</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/stickwar/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/stickwar/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/stickwar/icon-512.png</image:loc>
+      <image:loc>/icons/s/stickwar/icon-512.png</image:loc>
       <image:title>Stick War</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/stormthehouse2/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/stormthehouse2/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/stormthehouse2/icon-512.png</image:loc>
+      <image:loc>/icons/s/stormthehouse2/icon-512.png</image:loc>
       <image:title>Storm The House 2</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/swerve/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/swerve/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/swerve/icon-512.png</image:loc>
+      <image:loc>/icons/s/swerve/icon-512.png</image:loc>
       <image:title>Swerve</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/temple-run-2/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/temple-run-2/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/temple-run-2/icon-512.png</image:loc>
+      <image:loc>/icons/t/temple-run-2/icon-512.png</image:loc>
       <image:title>Temple Run 2</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/thebattle/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/thebattle/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/thebattle/icon-512.png</image:loc>
+      <image:loc>/icons/t/thebattle/icon-512.png</image:loc>
       <image:title>The Battle</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/the-final-earth/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/the-final-earth/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/the-final-earth/icon-512.png</image:loc>
+      <image:loc>/icons/t/the-final-earth/icon-512.png</image:loc>
       <image:title>The Final Earth</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/theheist/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/theheist/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/theheist/icon-512.png</image:loc>
+      <image:loc>/icons/t/theheist/icon-512.png</image:loc>
       <image:title>The Heist</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/there-is-no-game/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/there-is-no-game/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/there-is-no-game/icon-512.png</image:loc>
+      <image:loc>/icons/t/there-is-no-game/icon-512.png</image:loc>
       <image:title>There Is No Game</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/thisistheonlylevel/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/thisistheonlylevel/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/thisistheonlylevel/icon-512.png</image:loc>
+      <image:loc>/icons/t/thisistheonlylevel/icon-512.png</image:loc>
       <image:title>This Is The Only Level</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/tosstheturtle/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/tosstheturtle/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/tosstheturtle/icon-512.png</image:loc>
+      <image:loc>/icons/t/tosstheturtle/icon-512.png</image:loc>
       <image:title>Toss The Turtle</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/tube-jumpers/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/tube-jumpers/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/tube-jumpers/icon-512.png</image:loc>
+      <image:loc>/icons/t/tube-jumpers/icon-512.png</image:loc>
       <image:title>Tube Jumpers</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/v/vex3/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/v/vex3/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/v/vex3/icon-512.png</image:loc>
+      <image:loc>/icons/v/vex3/icon-512.png</image:loc>
       <image:title>Vex 3</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/v/vex4/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/v/vex4/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/v/vex4/icon-512.png</image:loc>
+      <image:loc>/icons/v/vex4/icon-512.png</image:loc>
       <image:title>Vex 4</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/v/vex6/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/v/vex6/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/v/vex6/icon-512.png</image:loc>
+      <image:loc>/icons/v/vex6/icon-512.png</image:loc>
       <image:title>Vex 6</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/w/wordle/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/w/wordle/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/w/wordle/icon-512.png</image:loc>
+      <image:loc>/icons/w/wordle/icon-512.png</image:loc>
       <image:title>Wordle</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/a/alienattack/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/a/alienattack/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/a/alienattack/icon-512.png</image:loc>
+      <image:loc>/icons/a/alienattack/icon-512.png</image:loc>
       <image:title>Alien Attack</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/balanceball/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/balanceball/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/balanceball/icon-512.png</image:loc>
+      <image:loc>/icons/b/balanceball/icon-512.png</image:loc>
       <image:title>Balance Ball</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/bdot/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/bdot/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/bdot/icon-512.png</image:loc>
+      <image:loc>/icons/b/bdot/icon-512.png</image:loc>
       <image:title>Bonncing Dot</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/blackbats/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/blackbats/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/blackbats/icon-512.png</image:loc>
+      <image:loc>/icons/b/blackbats/icon-512.png</image:loc>
       <image:title>Black Bats</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/bloxslider/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/bloxslider/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/bloxslider/icon-512.png</image:loc>
+      <image:loc>/icons/b/bloxslider/icon-512.png</image:loc>
       <image:title>Blox Slider</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/bottomtight/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/bottomtight/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/bottomtight/icon-512.png</image:loc>
+      <image:loc>/icons/s/sirbottomtight/icon-512.png</image:loc>
       <image:title>Sir Bottomtight</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/bravebird/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/bravebird/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/bravebird/icon-512.png</image:loc>
+      <image:loc>/icons/b/bravebird/icon-512.png</image:loc>
       <image:title>Brave Bird</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/brokenhorn/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/brokenhorn/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/brokenhorn/icon-512.png</image:loc>
+      <image:loc>/icons/b/brokenhorn/icon-512.png</image:loc>
       <image:title>Broken Horn</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/bubblecn/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/bubblecn/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/bubblecn/icon-512.png</image:loc>
+      <image:loc>/icons/b/bubbleitsteven/icon-512.png</image:loc>
       <image:title>Bubble It Steven</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/b/bubblefish/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/b/bubblefish/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/b/bubblefish/icon-512.png</image:loc>
+      <image:loc>/icons/b/bubblefish/icon-512.png</image:loc>
       <image:title>Bubble Fish</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/candyfusion/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/candyfusion/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/candyfusion/icon-512.png</image:loc>
+      <image:loc>/icons/c/candyfusion/icon-512.png</image:loc>
       <image:title>Candy Fusion</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/captainroger/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/captainroger/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/captainroger/icon-512.png</image:loc>
+      <image:loc>/icons/c/captainroger/icon-512.png</image:loc>
       <image:title>Captain Roger</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/captainwar/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/captainwar/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/captainwar/icon-512.png</image:loc>
+      <image:loc>/icons/c/captainwar/icon-512.png</image:loc>
       <image:title>Captain War</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/catonfire/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/catonfire/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/catonfire/icon-512.png</image:loc>
+      <image:loc>/icons/c/catonfire/icon-512.png</image:loc>
       <image:title>Cat On Fire</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/cavejumper/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/cavejumper/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/cavejumper/icon-512.png</image:loc>
+      <image:loc>/icons/c/cavejumper/icon-512.png</image:loc>
       <image:title>Cave Jumper</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/cboxes/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/cboxes/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/cboxes/icon-512.png</image:loc>
+      <image:loc>/icons/c/cboxes/icon-512.png</image:loc>
       <image:title>cboxes</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/cheeselab/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/cheeselab/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/cheeselab/icon-512.png</image:loc>
+      <image:loc>/icons/c/cheeselab/icon-512.png</image:loc>
       <image:title>Cheese Lab</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/chipman/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/chipman/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/chipman/icon-512.png</image:loc>
+      <image:loc>/icons/c/chipman/icon-512.png</image:loc>
       <image:title>Chip Man</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/christmasballs/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/christmasballs/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/christmasballs/icon-512.png</image:loc>
+      <image:loc>/icons/c/christmasballs/icon-512.png</image:loc>
       <image:title>Christmas Balls</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/circleball/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/circleball/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/circleball/icon-512.png</image:loc>
+      <image:loc>/icons/c/circleball/icon-512.png</image:loc>
       <image:title>Circle Ball</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/circlepong/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/circlepong/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/circlepong/icon-512.png</image:loc>
+      <image:loc>/icons/c/circlepong/icon-512.png</image:loc>
       <image:title>Circle Pong</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/circletris/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/circletris/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/circletris/icon-512.png</image:loc>
+      <image:loc>/icons/c/circletris/icon-512.png</image:loc>
       <image:title>Circle Tris</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/cninjas/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/cninjas/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/cninjas/icon-512.png</image:loc>
+      <image:loc>/icons/c/crunchingninjas/icon-512.png</image:loc>
       <image:title>Crun Ching Ninjas</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/cowboyrun/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/cowboyrun/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/cowboyrun/icon-512.png</image:loc>
+      <image:loc>/icons/s/supercowboyrun/icon-512.png</image:loc>
       <image:title>Super Cowboy Run</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/cowboyshot/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/cowboyshot/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/cowboyshot/icon-512.png</image:loc>
+      <image:loc>/icons/c/cowboy2shot/icon-512.png</image:loc>
       <image:title>CowBoy2 Shot</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/c/craigenstone/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/c/craigenstone/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/c/craigenstone/icon-512.png</image:loc>
+      <image:loc>/icons/c/craigenstone/icon-512.png</image:loc>
       <image:title>Craigen Stone</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/dangerous/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/dangerous/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/dangerous/icon-512.png</image:loc>
+      <image:loc>/icons/d/dangerous/icon-512.png</image:loc>
       <image:title>Dangerous</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/darkninja/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/darkninja/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/darkninja/icon-512.png</image:loc>
+      <image:loc>/icons/d/darkninja/icon-512.png</image:loc>
       <image:title>Dark Ninja</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/deathsoul/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/deathsoul/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/deathsoul/icon-512.png</image:loc>
+      <image:loc>/icons/d/deathsoul/icon-512.png</image:loc>
       <image:title>Death Soul</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/donteattrash/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/donteattrash/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/donteattrash/icon-512.png</image:loc>
+      <image:loc>/icons/d/donteattrash/icon-512.png</image:loc>
       <image:title>Dont Eat Trash</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/dotgame/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/dotgame/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/dotgame/icon-512.png</image:loc>
+      <image:loc>/icons/d/dotgame/icon-512.png</image:loc>
       <image:title>Dot Game</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/dropcircle/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/dropcircle/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/dropcircle/icon-512.png</image:loc>
+      <image:loc>/icons/d/dropcircle/icon-512.png</image:loc>
       <image:title>Drop Circle</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/d/duckwater/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/d/duckwater/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/d/duckwater/icon-512.png</image:loc>
+      <image:loc>/icons/d/duckwater/icon-512.png</image:loc>
       <image:title>Duck Water</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/e/elmore/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/e/elmore/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/e/elmore/icon-512.png</image:loc>
+      <image:loc>/icons/s/scratchcard/icon-512.png</image:loc>
       <image:title>Scratch Card</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/e/escape/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/e/escape/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/e/escape/icon-512.png</image:loc>
+      <image:loc>/icons/e/escape/icon-512.png</image:loc>
       <image:title>Escape</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/e/evilrobot/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/e/evilrobot/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/e/evilrobot/icon-512.png</image:loc>
+      <image:loc>/icons/e/evilrobot/icon-512.png</image:loc>
       <image:title>Evil Robot</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/e/evilwyrm/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/e/evilwyrm/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/e/evilwyrm/icon-512.png</image:loc>
+      <image:loc>/icons/e/evilwyrm/icon-512.png</image:loc>
       <image:title>Evil Wyrm</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/fastgame/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/fastgame/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/fastgame/icon-512.png</image:loc>
+      <image:loc>/icons/f/fast/icon-512.png</image:loc>
       <image:title>Fast</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/firebrigade/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/firebrigade/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/firebrigade/icon-512.png</image:loc>
+      <image:loc>/icons/f/firebrigade/icon-512.png</image:loc>
       <image:title>Fire Brigade</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/fishingfrenzy/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/fishingfrenzy/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/fishingfrenzy/icon-512.png</image:loc>
+      <image:loc>/icons/f/fishingfrenzy/icon-512.png</image:loc>
       <image:title>Fishing Frenzy</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/flapcatcopters/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/flapcatcopters/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/flapcatcopters/icon-512.png</image:loc>
+      <image:loc>/icons/f/flapcatcopters/icon-512.png</image:loc>
       <image:title>Flap Cat Copters</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/flapcatxmas/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/flapcatxmas/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/flapcatxmas/icon-512.png</image:loc>
+      <image:loc>/icons/f/flapcatxmas/icon-512.png</image:loc>
       <image:title>Flap Cat Xmas</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/flappydog/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/flappydog/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/flappydog/icon-512.png</image:loc>
+      <image:loc>/icons/f/flappydog/icon-512.png</image:loc>
       <image:title>Flappy Dog</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/flyingschool/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/flyingschool/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/flyingschool/icon-512.png</image:loc>
+      <image:loc>/icons/f/flyingschool/icon-512.png</image:loc>
       <image:title>Flying School</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/foofoo/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/foofoo/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/foofoo/icon-512.png</image:loc>
+      <image:loc>/icons/f/foofoo/icon-512.png</image:loc>
       <image:title>Foo Foo</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/foxfury/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/foxfury/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/foxfury/icon-512.png</image:loc>
+      <image:loc>/icons/f/foxfury/icon-512.png</image:loc>
       <image:title>Fox Fury</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/freedomroad/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/freedomroad/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/freedomroad/icon-512.png</image:loc>
+      <image:loc>/icons/f/freedomroad/icon-512.png</image:loc>
       <image:title>Freedom Road</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/frog/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/frog/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/frog/icon-512.png</image:loc>
+      <image:loc>/icons/h/hungryfrog/icon-512.png</image:loc>
       <image:title>Hungry Frog</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/fullimmersion/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/fullimmersion/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/fullimmersion/icon-512.png</image:loc>
+      <image:loc>/icons/f/fullimmersion/icon-512.png</image:loc>
       <image:title>Full Immersion</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/f/funnysoccer/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/f/funnysoccer/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/f/funnysoccer/icon-512.png</image:loc>
+      <image:loc>/icons/f/funnysoccer/icon-512.png</image:loc>
       <image:title>Funny Soccer</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/g/gettwelve/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/g/gettwelve/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/g/gettwelve/icon-512.png</image:loc>
+      <image:loc>/icons/g/gettwelve/icon-512.png</image:loc>
       <image:title>Get Twelve</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/g/goblinmachine/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/g/goblinmachine/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/g/goblinmachine/icon-512.png</image:loc>
+      <image:loc>/icons/g/goblinmachine/icon-512.png</image:loc>
       <image:title>Goblin Machine</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/g/gofishing/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/g/gofishing/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/g/gofishing/icon-512.png</image:loc>
+      <image:loc>/icons/g/gofishing/icon-512.png</image:loc>
       <image:title>Go Fishing</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/g/goingnuts/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/g/goingnuts/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/g/goingnuts/icon-512.png</image:loc>
+      <image:loc>/icons/g/goingnuts/icon-512.png</image:loc>
       <image:title>Going Nuts</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/g/greedygnomes/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/g/greedygnomes/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/g/greedygnomes/icon-512.png</image:loc>
+      <image:loc>/icons/g/greedygnomes/icon-512.png</image:loc>
       <image:title>Greedy Gnomes</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/g/greenwings/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/g/greenwings/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/g/greenwings/icon-512.png</image:loc>
+      <image:loc>/icons/g/greenwings/icon-512.png</image:loc>
       <image:title>Green Wings</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/g/groovyski/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/g/groovyski/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/g/groovyski/icon-512.png</image:loc>
+      <image:loc>/icons/g/groovyski/icon-512.png</image:loc>
       <image:title>Groovy Ski</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/g/grubhub/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/g/grubhub/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/g/grubhub/icon-512.png</image:loc>
+      <image:loc>/icons/g/grubrunner/icon-512.png</image:loc>
       <image:title>Grub Runner</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/g/gumballrace/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/g/gumballrace/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/g/gumballrace/icon-512.png</image:loc>
+      <image:loc>/icons/g/gumballrace/icon-512.png</image:loc>
       <image:title>Gumball Race</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/h/hanselandgretel/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/h/hanselandgretel/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/h/hanselandgretel/icon-512.png</image:loc>
+      <image:loc>/icons/h/hanselandgretel/icon-512.png</image:loc>
       <image:title>Hansel and Gretel</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/h/hidden/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/h/hidden/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/h/hidden/icon-512.png</image:loc>
+      <image:loc>/icons/h/hidden/icon-512.png</image:loc>
       <image:title>Hidden</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/h/hungrybob/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/h/hungrybob/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/h/hungrybob/icon-512.png</image:loc>
+      <image:loc>/icons/h/hungrybob/icon-512.png</image:loc>
       <image:title>Hungry Bob</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/i/icecream/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/i/icecream/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/i/icecream/icon-512.png</image:loc>
+      <image:loc>/icons/i/icecream/icon-512.png</image:loc>
       <image:title>Ice Cream</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/j/jellydoods/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/j/jellydoods/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/j/jellydoods/icon-512.png</image:loc>
+      <image:loc>/icons/j/jellydoods/icon-512.png</image:loc>
       <image:title>Jelly Doods</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/j/jellyslice/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/j/jellyslice/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/j/jellyslice/icon-512.png</image:loc>
+      <image:loc>/icons/j/jellyslice/icon-512.png</image:loc>
       <image:title>Jelly Slice</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/j/jomjom/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/j/jomjom/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/j/jomjom/icon-512.png</image:loc>
+      <image:loc>/icons/j/jomjom/icon-512.png</image:loc>
       <image:title>Jomjom</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/j/jumpkitty/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/j/jumpkitty/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/j/jumpkitty/icon-512.png</image:loc>
+      <image:loc>/icons/j/jumpkitty/icon-512.png</image:loc>
       <image:title>Jump Kitty</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/j/jumpman/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/j/jumpman/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/j/jumpman/icon-512.png</image:loc>
+      <image:loc>/icons/f/falljumproll/icon-512.png</image:loc>
       <image:title>Fall Jump Roll</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/j/jumppydragon/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/j/jumppydragon/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/j/jumppydragon/icon-512.png</image:loc>
+      <image:loc>/icons/j/jumppydragon/icon-512.png</image:loc>
       <image:title>Jumppy Dragon</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/k/knightnday/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/k/knightnday/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/k/knightnday/icon-512.png</image:loc>
+      <image:loc>/icons/k/knightoftheday/icon-512.png</image:loc>
       <image:title>Knight Of The Day</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/l/lizardrocket/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/l/lizardrocket/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/l/lizardrocket/icon-512.png</image:loc>
+      <image:loc>/icons/i/izardrocket/icon-512.png</image:loc>
       <image:title>Izard Rocket</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/l/looneyroonks/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/l/looneyroonks/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/l/looneyroonks/icon-512.png</image:loc>
+      <image:loc>/icons/l/looneyroonks/icon-512.png</image:loc>
       <image:title>Looney Roonks</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/m/manic/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/m/manic/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/m/manic/icon-512.png</image:loc>
+      <image:loc>/icons/m/manic/icon-512.png</image:loc>
       <image:title>Manic</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/m/matchtime/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/m/matchtime/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/m/matchtime/icon-512.png</image:loc>
+      <image:loc>/icons/m/matchingtime/icon-512.png</image:loc>
       <image:title>Matching Time</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/m/mathgame/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/m/mathgame/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/m/mathgame/icon-512.png</image:loc>
+      <image:loc>/icons/m/mathgame/icon-512.png</image:loc>
       <image:title>Math Game</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/m/monstercandy/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/m/monstercandy/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/m/monstercandy/icon-512.png</image:loc>
+      <image:loc>/icons/m/monstercandy/icon-512.png</image:loc>
       <image:title>Monster Candy</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/m/monstereater/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/m/monstereater/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/m/monstereater/icon-512.png</image:loc>
+      <image:loc>/icons/m/monstereater/icon-512.png</image:loc>
       <image:title>Monster Eater</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/m/mousejump/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/m/mousejump/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/m/mousejump/icon-512.png</image:loc>
+      <image:loc>/icons/m/mousejump/icon-512.png</image:loc>
       <image:title>Mouse Jump</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/n/nest/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/n/nest/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/n/nest/icon-512.png</image:loc>
+      <image:loc>/icons/n/nest/icon-512.png</image:loc>
       <image:title>NEST</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/n/ninjarun/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/n/ninjarun/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/n/ninjarun/icon-512.png</image:loc>
+      <image:loc>/icons/n/ninjarun/icon-512.png</image:loc>
       <image:title>Ninja Run</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/n/ninjaway/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/n/ninjaway/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/n/ninjaway/icon-512.png</image:loc>
+      <image:loc>/icons/n/ninjaway/icon-512.png</image:loc>
       <image:title>Ninja Way</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/o/ojelloonline/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/o/ojelloonline/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/o/ojelloonline/icon-512.png</image:loc>
+      <image:loc>/icons/o/ojello/icon-512.png</image:loc>
       <image:title>Ojello</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/pacman/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/pacman/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/pacman/icon-512.png</image:loc>
+      <image:loc>/icons/p/pacman/icon-512.png</image:loc>
       <image:title>Pacman</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/pancakeboss/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/pancakeboss/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/pancakeboss/icon-512.png</image:loc>
+      <image:loc>/icons/p/pancakeboss/icon-512.png</image:loc>
       <image:title>Pancake Boss</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/pandaflash/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/pandaflash/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/pandaflash/icon-512.png</image:loc>
+      <image:loc>/icons/p/pandaflash/icon-512.png</image:loc>
       <image:title>Panda Flash</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/pebbleboy/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/pebbleboy/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/pebbleboy/icon-512.png</image:loc>
+      <image:loc>/icons/p/pebbleboy/icon-512.png</image:loc>
       <image:title>Pebble Boy</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/penguin/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/penguin/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/penguin/icon-512.png</image:loc>
+      <image:loc>/icons/p/penguin/icon-512.png</image:loc>
       <image:title>Penguin</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/pieattack/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/pieattack/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/pieattack/icon-512.png</image:loc>
+      <image:loc>/icons/p/pieattack/icon-512.png</image:loc>
       <image:title>Pie Attack</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/pigeon/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/pigeon/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/pigeon/icon-512.png</image:loc>
+      <image:loc>/icons/p/pigeon/icon-512.png</image:loc>
       <image:title>Pigeon</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/piggyroll/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/piggyroll/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/piggyroll/icon-512.png</image:loc>
+      <image:loc>/icons/p/piggyroll/icon-512.png</image:loc>
       <image:title>Piggy Roll</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/piratekid/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/piratekid/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/piratekid/icon-512.png</image:loc>
+      <image:loc>/icons/p/piratekid/icon-512.png</image:loc>
       <image:title>Pirate Kid</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/pitana/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/pitana/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/pitana/icon-512.png</image:loc>
+      <image:loc>/icons/p/pitana/icon-512.png</image:loc>
       <image:title>Pitana</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/popup/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/popup/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/popup/icon-512.png</image:loc>
+      <image:loc>/icons/p/popup/icon-512.png</image:loc>
       <image:title>Popup</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/portalrunner/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/portalrunner/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/portalrunner/icon-512.png</image:loc>
+      <image:loc>/icons/p/portalrunner/icon-512.png</image:loc>
       <image:title>Portal Runner</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/p/pyramidjump/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/p/pyramidjump/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/p/pyramidjump/icon-512.png</image:loc>
+      <image:loc>/icons/p/pyramidjump/icon-512.png</image:loc>
       <image:title>Pyramid Jump</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/r/raccoonrun/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/r/raccoonrun/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/r/raccoonrun/icon-512.png</image:loc>
+      <image:loc>/icons/r/raccoonrun/icon-512.png</image:loc>
       <image:title>Raccoon Run</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/r/rainbox/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/r/rainbox/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/r/rainbox/icon-512.png</image:loc>
+      <image:loc>/icons/r/rainbox/icon-512.png</image:loc>
       <image:title>Rain Box</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/r/rapunzel/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/r/rapunzel/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/r/rapunzel/icon-512.png</image:loc>
+      <image:loc>/icons/r/rapunzeltower/icon-512.png</image:loc>
       <image:title>Rapunzel Tower</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/r/rectangzings/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/r/rectangzings/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/r/rectangzings/icon-512.png</image:loc>
+      <image:loc>/icons/r/rectangzings/icon-512.png</image:loc>
       <image:title>Rec Tang Zings</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/r/robotion/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/r/robotion/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/r/robotion/icon-512.png</image:loc>
+      <image:loc>/icons/r/robotion/icon-512.png</image:loc>
       <image:title>Robotion</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/r/rocketpop/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/r/rocketpop/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/r/rocketpop/icon-512.png</image:loc>
+      <image:loc>/icons/r/rocketpop/icon-512.png</image:loc>
       <image:title>Rocket Pop</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/r/ropeninja/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/r/ropeninja/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/r/ropeninja/icon-512.png</image:loc>
+      <image:loc>/icons/r/ropeninja/icon-512.png</image:loc>
       <image:title>Rope Ninja</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/r/runpixierun/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/r/runpixierun/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/r/runpixierun/icon-512.png</image:loc>
+      <image:loc>/icons/r/runpixierun/icon-512.png</image:loc>
       <image:title>Run Pixie Run</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/sallybbq/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/sallybbq/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/sallybbq/icon-512.png</image:loc>
+      <image:loc>/icons/s/sallybbq/icon-512.png</image:loc>
       <image:title>Sally BBQ</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/skylands/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/skylands/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/skylands/icon-512.png</image:loc>
+      <image:loc>/icons/s/skylands/icon-512.png</image:loc>
       <image:title>Sky Lands</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/skyrace/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/skyrace/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/skyrace/icon-512.png</image:loc>
+      <image:loc>/icons/s/skyrace/icon-512.png</image:loc>
       <image:title>Sky Race</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/skywire/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/skywire/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/skywire/icon-512.png</image:loc>
+      <image:loc>/icons/s/skywire/icon-512.png</image:loc>
       <image:title>Sky Wire</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/slotchicken/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/slotchicken/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/slotchicken/icon-512.png</image:loc>
+      <image:loc>/icons/s/slotchicken/icon-512.png</image:loc>
       <image:title>Slot Chicken</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/sortbird/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/sortbird/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/sortbird/icon-512.png</image:loc>
+      <image:loc>/icons/s/sortbird/icon-512.png</image:loc>
       <image:title>Sort Bird</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/springninja/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/springninja/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/springninja/icon-512.png</image:loc>
+      <image:loc>/icons/s/springninja/icon-512.png</image:loc>
       <image:title>Spring Ninja</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/squarecrush/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/squarecrush/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/squarecrush/icon-512.png</image:loc>
+      <image:loc>/icons/s/squarecrush/icon-512.png</image:loc>
       <image:title>Square Crush</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/stevenkash/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/stevenkash/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/stevenkash/icon-512.png</image:loc>
+      <image:loc>/icons/s/stevenkash/icon-512.png</image:loc>
       <image:title>Steven Kash</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/stickpanda/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/stickpanda/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/stickpanda/icon-512.png</image:loc>
+      <image:loc>/icons/s/stickpanda/icon-512.png</image:loc>
       <image:title>Stick Panda</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/stickpandaxmas/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/stickpandaxmas/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/stickpandaxmas/icon-512.png</image:loc>
+      <image:loc>/icons/s/stickpandaxmas/icon-512.png</image:loc>
       <image:title>Stick Panda Xmas</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/sticksamurai/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/sticksamurai/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/sticksamurai/icon-512.png</image:loc>
+      <image:loc>/icons/s/sticksamurai/icon-512.png</image:loc>
       <image:title>Stick Samurai</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/stickygoo/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/stickygoo/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/stickygoo/icon-512.png</image:loc>
+      <image:loc>/icons/s/stickygoo/icon-512.png</image:loc>
       <image:title>Sticky Goo</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/strangespace/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/strangespace/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/strangespace/icon-512.png</image:loc>
+      <image:loc>/icons/s/strangespace/icon-512.png</image:loc>
       <image:title>Strange Space</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/taptapsubmarine/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/taptapsubmarine/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/taptapsubmarine/icon-512.png</image:loc>
+      <image:loc>/icons/t/taptapsubmarine/icon-512.png</image:loc>
       <image:title>Taptap Submarine</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/targetap/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/targetap/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/targetap/icon-512.png</image:loc>
+      <image:loc>/icons/t/targettap/icon-512.png</image:loc>
       <image:title>Target Tap</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/titanrunner/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/titanrunner/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/titanrunner/icon-512.png</image:loc>
+      <image:loc>/icons/t/titanrunner/icon-512.png</image:loc>
       <image:title>Titan Runner</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/tooncup/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/tooncup/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/tooncup/icon-512.png</image:loc>
+      <image:loc>/icons/t/tooncup/icon-512.png</image:loc>
       <image:title>Tooncup</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/trailblazer/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/trailblazer/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/trailblazer/icon-512.png</image:loc>
+      <image:loc>/icons/t/trailblazer/icon-512.png</image:loc>
       <image:title>Trailblazer</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/trashndash/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/trashndash/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/trashndash/icon-512.png</image:loc>
+      <image:loc>/icons/t/trashdash/icon-512.png</image:loc>
       <image:title>Trash Dash</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/t/trollboxing/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/t/trollboxing/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/t/trollboxing/icon-512.png</image:loc>
+      <image:loc>/icons/t/trollboxing/icon-512.png</image:loc>
       <image:title>Troll Boxing</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/u/uforun/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/u/uforun/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/u/uforun/icon-512.png</image:loc>
+      <image:loc>/icons/u/uforun/icon-512.png</image:loc>
       <image:title>Ufo Run</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/v/veggirabbit/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/v/veggirabbit/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/v/veggirabbit/icon-512.png</image:loc>
+      <image:loc>/icons/v/veggirabbit/icon-512.png</image:loc>
       <image:title>Veggi Rabbit</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/w/woodblock/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/w/woodblock/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/w/woodblock/icon-512.png</image:loc>
+      <image:loc>/icons/w/woodblock/icon-512.png</image:loc>
       <image:title>Wood Block</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/x/xtypesky/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/x/xtypesky/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/x/xtypesky/icon-512.png</image:loc>
+      <image:loc>/icons/x/xtypesky/icon-512.png</image:loc>
       <image:title>X Type Sky</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/z/zapaliens/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/z/zapaliens/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/z/zapaliens/icon-512.png</image:loc>
+      <image:loc>/icons/z/zapaliens/icon-512.png</image:loc>
       <image:title>Zapaliens</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/z/zombienight/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/z/zombienight/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/z/zombienight/icon-512.png</image:loc>
+      <image:loc>/icons/z/zombienight/icon-512.png</image:loc>
       <image:title>Zombie Night</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/z/zombieworld/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/z/zombieworld/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/z/zombieworld/icon-512.png</image:loc>
+      <image:loc>/icons/z/zombieworld/icon-512.png</image:loc>
       <image:title>Zombie World</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/z/zoostuner/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/z/zoostuner/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/z/zoostuner/icon-512.png</image:loc>
+      <image:loc>/icons/z/zoonstuner/icon-512.png</image:loc>
       <image:title>Zoon Stuner</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://poki2.online/game/s/snakebird/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://play.poki2.online/game/s/snakebird/</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://poki2.online/icons/s/snakebird/icon-512.png</image:loc>
+      <image:loc>/icons/s/snakebird/icon-512.png</image:loc>
       <image:title>Snakebird</image:title>
     </image:image>
   </url>

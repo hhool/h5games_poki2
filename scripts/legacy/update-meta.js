@@ -62,10 +62,10 @@ const metaMap = JSON.parse(fs.readFileSync(META_FILE, 'utf8'));
     upsert('meta[name="twitter:title"]', { name: 'twitter:title', content: title });
 
     // ensure og:image points to favicon
-    upsert('meta[property="og:image"]', { property: 'og:image', content: 'https://poki2.online/favicon.png' });
+    upsert('meta[property="og:image"]', { property: 'og:image', content: 'https://play.poki2.online/favicon.png' });
 
     // ensure og:url is absolute
-    const url = `https://poki2.online/${slug === 'home' ? '' : slug + '.html'}`;
+    const url = `https://play.poki2.online/${slug === 'home' ? '' : slug + '.html'}`;
     upsert('meta[property="og:url"]', { property: 'og:url', content: url });
 
     // write back

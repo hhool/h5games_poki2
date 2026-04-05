@@ -25,4 +25,4 @@ Disallow: /
 User-agent: Claude-Web
 Disallow: /
 
-Sitemap: https://poki2.online/sitemap.xml
+Sitemap: https://play.poki2.online/sitemap.xml

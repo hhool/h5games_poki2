@@ -32,7 +32,7 @@ for (let i = 0; i < data.length; i++) {
   if (!g.title) continue;
   const slug = slugify(g.title);
   const first = firstCharOfSlug(slug);
-  const base = `https://poki2.online/icons/${first}/${slug}`;
+  const base = `https://play.poki2.online/icons/${first}/${slug}`;
   const img512 = `${base}/icon-512.png`;
   if (g.imgSrc !== img512) {
     g.imgSrc = img512;

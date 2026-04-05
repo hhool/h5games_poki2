@@ -4,7 +4,7 @@ const path = require('path');
 const glob = require('glob');
 const args = require('minimist')(process.argv.slice(2));
 
-const BASE = (args.base || process.env.BASE_URL || 'https://poki2.online').replace(/\/$/, '');
+const BASE = (args.base || process.env.BASE_URL || 'https://play.poki2.online').replace(/\/$/, '');
 const OUT = args.out || path.join(process.cwd(), 'sitemap.xml');
 
 function iso(d){ return new Date(d).toISOString(); }
@@ -37,7 +37,7 @@ function getSlug(g){
     entries.push({ loc, lastmod: iso(stat.mtime), changefreq: 'weekly', priority });
   }
 
-  // 2. Game pages from games.json → https://poki2.online/game/{char}/{slug}/
+  // 2. Game pages from games.json → https://play.poki2.online/game/{char}/{slug}/
   const gamesJsonPath = path.join(process.cwd(), 'games.json');
   if (fs.existsSync(gamesJsonPath)){
     try{

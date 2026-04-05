@@ -24,7 +24,7 @@ not_in_sitemap = {s: g for s, g in game_slugs.items() if s not in sitemap_slugs}
 not_in_games   = sitemap_slugs - set(game_slugs)
 missing_pages  = []
 for url in re.findall(r'<loc>(https://poki2\.online/game/[^<]+)</loc>', sitemap):
-    path = url.replace('https://poki2.online', '').strip('/')
+    path = url.replace('https://play.poki2.online', '').strip('/')
     page = os.path.join(ROOT, 'dist', path, 'index.html')
     if not os.path.exists(page):
         missing_pages.append(url)

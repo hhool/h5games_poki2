@@ -9,7 +9,7 @@ This project includes a small utility to standardize and inject SEO meta into yo
 	- `<meta property="og:description">`
 	- `<meta name="twitter:description">`
 	- `<meta property="og:title">` and `<meta name="twitter:title">`
-	- `<meta property="og:image">` (points to `https://poki2.online/favicon.png`)
+	- `<meta property="og:image">` (points to `https://play.poki2.online/favicon.png`)
 	- `<meta property="og:url">` (absolute URL derived from slug)
 
 Usage

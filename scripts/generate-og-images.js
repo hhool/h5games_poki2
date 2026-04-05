@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
-const BASE_URL = 'https://poki2.online';
+const BASE_URL = 'https://play.poki2.online';
 const OUT_DIR = path.join(__dirname, '..', 'public', 'og');
 const GAMES = path.join(__dirname, '..', 'games.json');
 

@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
 async function run() {
-  const url = process.argv[2] || 'https://poki2.online/games/2048/';
+  const url = process.argv[2] || 'https://play.poki2.online/games/2048/';
   console.log('Visiting', url);
 
   const browser = await puppeteer.launch({args: ['--no-sandbox','--disable-setuid-sandbox']});

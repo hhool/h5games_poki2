@@ -27,7 +27,7 @@ async function handle(request) {
       return new Response(null, {
         status: 301,
         headers: {
-          Location: `https://poki2.online/game/${char}/${slug}/`,
+          Location: `https://play.poki2.online/game/${char}/${slug}/`,
           "X-Worker-Redirect": "true"
         }
       });
@@ -41,7 +41,7 @@ async function handle(request) {
       return new Response(null, {
         status: 301,
         headers: {
-          Location: `https://poki2.online/game/${char}/${slug}/`,
+          Location: `https://play.poki2.online/game/${char}/${slug}/`,
           "X-Worker-Redirect": "true"
         }
       });

@@ -22,7 +22,7 @@
 const fs   = require('fs');
 const path = require('path');
 
-const BASE_URL  = 'https://poki2.online';
+const BASE_URL  = 'https://play.poki2.online';
 const SITE_NAME = 'Poki2';
 const DIST      = path.join(__dirname, '..', 'dist');
 const GAMES     = path.join(__dirname, '..', 'games.json');

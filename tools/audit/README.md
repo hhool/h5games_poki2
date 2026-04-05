@@ -74,7 +74,7 @@ npm run audit:imgs
 
 # 只看失败项
 npm run audit:links -- --only-errors
-npm run audit:sitemap -- --only-errors --sitemap=https://poki2.online/sitemap.xml
+npm run audit:sitemap -- --only-errors --sitemap=https://play.poki2.online/sitemap.xml
 
 # JSON 输出（便于管道处理）
 npm run audit:links -- --json > /tmp/link-audit.json

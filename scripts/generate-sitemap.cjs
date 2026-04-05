@@ -2,7 +2,7 @@
 const fs   = require('fs');
 const path = require('path');
 
-const BASE    = 'https://poki2.online';
+const BASE    = 'https://play.poki2.online';
 const DIST    = path.join(__dirname, '..', 'dist');
 const GAMES   = path.join(__dirname, '..', 'games.json');
 const OUT     = path.join(DIST, 'sitemap.xml');

@@ -358,11 +358,11 @@
         origin + "/favicon.ico",
         origin + "/favicon.svg",
         // Useful site-wide fallback
-        "https://poki2.online/favicon.png",
+        "https://play.poki2.online/favicon.png",
         fallbackSvg,
       ];
     } catch {
-      return ["https://poki2.online/favicon.png"];
+      return ["https://play.poki2.online/favicon.png"];
     }
   }
 
@@ -516,14 +516,14 @@
           "@type": "ListItem",
           "position": i + 1,
           "name": g.title || "",
-          "url": "https://poki2.online/game/" + char + "/" + slug + "/"
+          "url": "https://play.poki2.online/game/" + char + "/" + slug + "/"
         };
       });
       const schema = {
         "@context": "https://schema.org",
         "@type": "ItemList",
         "name": "Popular Free Online Games",
-        "url": "https://poki2.online/",
+        "url": "https://play.poki2.online/",
         "numberOfItems": top.length,
         "itemListElement": items
       };
@@ -1038,10 +1038,10 @@
       if (view === 'category' && tag && TAG_META[tag]) {
         const label = TAG_META[tag].label || tag;
         desc      = CAT_DESC[tag] || `Play free ${label.toLowerCase()} games online on Poki2.`;
-        canonical = `https://poki2.online/tag/${tag}/`;
+        canonical = `https://play.poki2.online/tag/${tag}/`;
         title     = `${label} Games — Free Online | Poki2`;
       } else {
-        desc = HOME_DESC; canonical = 'https://poki2.online/'; title = HOME_TITLE;
+        desc = HOME_DESC; canonical = 'https://play.poki2.online/'; title = HOME_TITLE;
       }
       try { document.title = title; } catch(e){}
       const set = (sel, attr, val) => { try { const el = document.querySelector(sel); if (el) el[attr] = val; } catch(e){} };
@@ -1719,7 +1719,7 @@
         return raw;
       } catch(e) { return ''; }
     })();
-    const url   = _slug ? ('https://poki2.online/game/' + _slug.charAt(0) + '/' + _slug + '/') : (game.link || '');
+    const url   = _slug ? ('https://play.poki2.online/game/' + _slug.charAt(0) + '/' + _slug + '/') : (game.link || '');
     // Page description (also updated so bots/crawlers see game-specific text)
     _setMeta('meta[name="description"]',         'content', desc);
     // OG
@@ -1756,7 +1756,7 @@
         playMode: playMode,
         operatingSystem: 'Web Browser',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-        publisher: { '@type': 'Organization', name: 'Poki2', url: 'https://poki2.online/' },
+        publisher: { '@type': 'Organization', name: 'Poki2', url: 'https://play.poki2.online/' },
         ...(game.blog ? { sameAs: [game.blog] } : {})
       };
       let ldEl = document.getElementById('game-jsonld');
@@ -1839,7 +1839,7 @@
     // P3 — Share button hrefs
     try {
       const _slug = (game.link || '').replace(/\/+$/, '').split('/').pop() || '';
-      const _shareUrl = _slug ? ('https://poki2.online/game/' + _slug[0] + '/' + _slug + '/') : 'https://poki2.online/';
+      const _shareUrl = _slug ? ('https://play.poki2.online/game/' + _slug[0] + '/' + _slug + '/') : 'https://play.poki2.online/';
       const _shareTxt = encodeURIComponent((game.title || 'Play this game') + ' — Play free on Poki2!');
       const _shareEnc = encodeURIComponent(_shareUrl);
       if ($shareTw) $shareTw.href = 'https://twitter.com/intent/tweet?text=' + _shareTxt + '&url=' + _shareEnc;
@@ -2782,7 +2782,7 @@
     const tagPageMatch = (location.pathname || '').match(/^\/tag\/([^\/]+)\/?$/i);
     console.log('[route] init search/hash:', { search, hash });
 
-    // Prefer query param routing (e.g. https://poki2.online/?play-vex5)
+    // Prefer query param routing (e.g. https://play.poki2.online/?play-vex5)
     if (search && search.startsWith("play-")) {
       const slug = search.slice(5);
       console.log('[route] detected play in search, slug:', slug);

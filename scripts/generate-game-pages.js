@@ -18,7 +18,7 @@
 const fs   = require('fs');
 const path = require('path');
 
-const BASE_URL  = 'https://poki2.online';
+const BASE_URL  = 'https://play.poki2.online';
 const SITE_NAME = 'Poki2';
 const DIST      = path.join(__dirname, '..', 'dist');
 // Read games from source root (always up to date) rather than dist/ copy,
@@ -102,7 +102,7 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
 
   const desc     = game.description ||
     `Play ${game.title} for free online on ${SITE_NAME} \u2014 no downloads required.`;
-  const img      = game.imgSrc || `${BASE_URL}/assets/icon/icon-512.png`;
+  const img      = game.imgSrc || `https://play.poki2.online/assets/icon/icon-512.png`;
   const char     = slug[0].toLowerCase();
   const ogImg    = `${BASE_URL}/og/${char}/${slug}-1200x628.png`;
   

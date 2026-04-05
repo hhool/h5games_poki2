@@ -1,10 +1,10 @@
 {
-  "siteUrl": "https://poki2.online",
+  "siteUrl": "https://play.poki2.online",
   "siteName": "Poki2",
   "organization": {
     "name": "Poki2",
-    "url": "https://poki2.online/",
-    "logo": "https://poki2.online/favicon.png",
+    "url": "https://play.poki2.online/",
+    "logo": "https://play.poki2.online/favicon.png",
     "contactEmail": "contact@poki2.online"
   }
 }

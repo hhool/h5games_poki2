@@ -86,7 +86,7 @@ def main():
     tgt = args.target
 
     # canonical target on the main site (adjust if your main-site path differs)
-    MAIN_CANONICAL_PREFIX = 'https://poki2.online/games/'
+    MAIN_CANONICAL_PREFIX = 'https://play.poki2.online/games/'
 
     if not os.path.isdir(src):
         print('source not found:', src)

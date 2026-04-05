@@ -11,7 +11,7 @@
 const fs   = require('fs');
 const path = require('path');
 
-const BASE    = 'https://poki2.online';
+const BASE    = 'https://play.poki2.online';
 const DIST    = path.join(__dirname, '..', 'dist');
 // Read from source root so edits to games.json take effect without a full build:copy
 const GAMES   = path.join(__dirname, '..', 'games.json');
