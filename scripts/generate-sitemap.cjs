@@ -11,8 +11,18 @@ const TODAY   = new Date().toISOString().slice(0,10);
 
 function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 function normalizeHref(link){ try{ const u=new URL(link); let p=u.pathname.replace(/\/+$/,''); if(!p)p=u.hostname.split('.')[0]; return p.split('/').pop()||link;}catch{return link;} }
+
+function absoluteImageUrl(imgSrc){
+	if(!imgSrc) return null;
+	const src = String(imgSrc).trim();
+	if(!src) return null;
+	if(/^https?:\/\//i.test(src)) return src;
+	return src.startsWith('/') ? `${BASE}${src}` : `${BASE}/${src}`;
+}
+
 function url(loc, changefreq, priority, lastmod, imgSrc, imgTitle){
-	const imageBlock = (imgSrc && imgTitle) ? ['    <image:image>', `      <image:loc>${esc(imgSrc)}</image:loc>`, `      <image:title>${esc(imgTitle)}</image:title>`, '    </image:image>'].join('\n') : null;
+	const imageUrl = absoluteImageUrl(imgSrc);
+	const imageBlock = (imageUrl && imgTitle) ? ['    <image:image>', `      <image:loc>${esc(imageUrl)}</image:loc>`, `      <image:title>${esc(imgTitle)}</image:title>`, '    </image:image>'].join('\n') : null;
 	return ['  <url>', `    <loc>${esc(loc)}</loc>`, `    <lastmod>${esc(lastmod)}</lastmod>`, `    <changefreq>${esc(changefreq)}</changefreq>`, `    <priority>${esc(priority)}</priority>`, ...(imageBlock ? [imageBlock] : []), '  </url>'].join('\n');
 }
 
