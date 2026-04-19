@@ -1,5 +1,11 @@
 const CONSENT_KEY = 'poki2_consent_v1';
 const ADS_SRC = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6199549323873133';
+const GA_CONSENT_GRANTED = {'analytics_storage':'granted','ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'};
+const GA_CONSENT_DENIED  = {'analytics_storage':'denied', 'ad_storage':'denied', 'ad_user_data':'denied', 'ad_personalization':'denied'};
+
+function _updateGaConsent(params){
+  try{ if(typeof gtag==='function') gtag('consent','update',params); }catch(e){}
+}
 
 function getConsent(){
   try{ return localStorage.getItem(CONSENT_KEY); }catch(e){return null}
@@ -12,9 +18,11 @@ function setConsent(v){
   }catch(e){}
   try{
     if(v === 'granted'){
+      _updateGaConsent(GA_CONSENT_GRANTED);
       try{ initAds(); }catch(e){}
       try{ document.dispatchEvent(new CustomEvent('poki2:consent-granted')); }catch(e){}
     }else if(v === 'denied'){
+      _updateGaConsent(GA_CONSENT_DENIED);
       try{ document.dispatchEvent(new CustomEvent('poki2:consent-denied')); }catch(e){}
     }
   }catch(e){}
@@ -563,6 +571,7 @@ window.poki2Consent = {
     const status = getConsent();
     if(status === 'granted'){
       try{ initAds(); }catch(e){}
+      _updateGaConsent(GA_CONSENT_GRANTED);
     }
     const cleanup = ()=>{
       try{
