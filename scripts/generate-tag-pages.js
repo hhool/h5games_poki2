@@ -276,8 +276,9 @@ function buildTagPage(tag, cfg, games, bodyTag, bodyInner, allTags, allTagGames 
   <meta name="theme-color" content="#006bb3">
   <base href="/">
   <!-- Client-only: JS marker + defensive removal of noscript/tag-intro -->
-  <script>try{document.documentElement.classList.add('has-js');(function(){try{function rm(){document.querySelectorAll('.tag-intro, noscript').forEach(e=>{try{e.remove();}catch(e){}});} if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',rm);else rm();}catch(e){}})();}catch(e){};</script>
-</head>
+  <script>try{document.documentElement.classList.add('has-js');(function(){try{function rm(){document.querySelectorAll('.tag-intro, noscript').forEach(e=>{try{e.remove();}catch(e){}});} if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',rm);else rm();}catch(e){}})();}catch(e){};</script>  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTE3BWDVHC"><\/script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KTE3BWDVHC');<\/script></head>
   ${bodyTag}
   <!-- Static content for crawlers / no-JS users -->
   <noscript>

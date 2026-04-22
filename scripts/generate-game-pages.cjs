@@ -207,6 +207,9 @@ function buildPage(game, bodyTag, bodyInner, relatedGames) {
   <meta name="theme-color" content="#006bb3">
   <!-- Base href ensures all relative paths in the SPA body resolve from root -->
   <base href="/">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KTE3BWDVHC"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KTE3BWDVHC');<\/script>
 </head>
 ${bodyTag}
   <!-- Static fallback for no-JS crawlers -->
